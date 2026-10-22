@@ -1,0 +1,47 @@
+{
+  "plan": {
+    "arm": "B",
+    "backbone": "gru",
+    "geometry": "attention",
+    "frames": 16,
+    "updates": 12,
+    "batch": 2048,
+    "micro_batch": 512,
+    "source_steps": 8,
+    "lr": 0.0001,
+    "environment_lr": 1e-05,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "path_loss_weight": 0.25,
+    "seed": 2333,
+    "validation_per_category": 32,
+    "device": "cuda:3"
+  },
+  "contract_sha256": "119405df40ca18fb4689df39ede2ba70f211539854d345d26669c648e24a78fa",
+  "updates": 12,
+  "window_exposures": 24576,
+  "training_seconds": 1622.6404900820926,
+  "evaluation_seconds": 13.911820619017817,
+  "peak_memory_mb": 14717.9599609375,
+  "trainable_parameters": 2408779,
+  "loss_first": 0.436827190220356,
+  "loss_last": 0.2867793142795563,
+  "initial": {
+    "root_delta": 0.05724808057614913,
+    "body_fk": 0.038592055439949036,
+    "rotation": 0.0005866283803091695,
+    "boundary_joint_velocity": 0.5025334308544794,
+    "contact": 0.6923742095629374,
+    "path": 0.13751380890607834,
+    "total": 0.3251480298737685
+  },
+  "final": {
+    "root_delta": 0.03237330447882414,
+    "body_fk": 0.03813574556261301,
+    "rotation": 0.0005869562252579877,
+    "boundary_joint_velocity": 0.39883536100387573,
+    "contact": 0.6893725693225861,
+    "path": 0.1260758270509541,
+    "total": 0.2707328051328659
+  }
+}

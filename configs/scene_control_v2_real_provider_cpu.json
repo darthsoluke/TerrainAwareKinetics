@@ -1,0 +1,86 @@
+{
+  "budget": {
+    "approval_id": "",
+    "batch_size": 1,
+    "clip_norm": 0.0,
+    "kind": "diagnostic",
+    "learning_rate": 0.0,
+    "max_adam_updates": 0,
+    "max_batches": 3,
+    "max_exposures": 3
+  },
+  "curriculum": {
+    "horizon_probabilities": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "phases": [
+      {
+        "source_history_probability": 1.0,
+        "source_root_probability": 1.0,
+        "start_exposure": 0,
+        "token_probabilities": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "source_history_probability": 0.5,
+        "source_root_probability": 0.5,
+        "start_exposure": 3,
+        "token_probabilities": [
+          0.34,
+          0.33,
+          0.33
+        ]
+      }
+    ]
+  },
+  "label_lineage": {
+    "codebook_sha256": "c2236b99fc8532c3332046b38a9c44d524852bfe1ab7f0e5f4700e8c57a69e53",
+    "codec_sha256": "42e42d4763a550ca0e0cb93b9dbb9ddbdf26e3be66379e74c439c91c13d47fab",
+    "data_kind": "engineering",
+    "encoder_sha256": "1fa4c6855607567f5983a07150467431604d40d0322438ca319d6418d37f65f4",
+    "entries_per_head": 10,
+    "final": true,
+    "frames_per_token": 4,
+    "frozen": true,
+    "heads": 8,
+    "label_manifest_sha256": "96cacdfc0413d5854a21ef8d2e5be3f81029a2961b97f3e9cced5b6cbb04029e",
+    "normalization_sha256": "407eff483f40d7beffa3218853e03f2a8e975ec1d97bfcbd395206d6cf736250",
+    "representation_id": "somaskel30_dual_root_global_joints",
+    "scene_encoder_sha256": "da193f8911d86548af5b60edac759482198e40deca8688521c4eebc37da3d157",
+    "schema": "motionbricks.scene_control_v2.final_codec_labels.v1",
+    "vocabulary_id": "33891bd8d38450e9148d3432d2d6dec6f1a1bf7953085d4db54a5b27e5addd43"
+  },
+  "policy_id": "motionbricks.scene_control_v2.legacy_heightfield_source_root.engineering.v1",
+  "provider": {
+    "accepted_path": "out/parc_training_20261009/native_pilot_v1/accepted.json",
+    "artifacts": {
+      "architecture_bundle": "out/a100_live_20261010/a100-terrain.pt",
+      "bundle_sha256": "0672abe1edbe47dd2328b3bc6700598932e4228b7c98448ffb7d5a537b592f0d",
+      "checkpoint": "out/pfnn_mixed_20261015/final_acceptance_flat_v1/weights.pt",
+      "checkpoint_sha256": "0f5d8e2b05b8ec518a104a4979cca70f23efa64080abfc843f874634de5a9646"
+    },
+    "cpu_threads": 2,
+    "motion_path": "out/parc_curated_20261009/reference_soma_v3/three_stair_flights/retarget.npz",
+    "scene_path": "out/parc_training_20261009/native_pilot_v1/terrain_geometry/generated_f733c63c38e13f58-30c4d74c84_paired_heightfield.npz",
+    "schema": "motionbricks.scene_control_v2.real_engineering_provider.v1",
+    "source_id": "generated_f733c63c38e13f58",
+    "upstream_path": "out/parc_training_20261009/native_pilot_v1/upstream_manifests/generated_f733c63c38e13f58-30c4d74c84_upstream.json",
+    "window_starts": {
+      "12": [
+        1
+      ],
+      "16": [
+        1
+      ],
+      "8": [
+        1
+      ]
+    }
+  },
+  "schema": "motionbricks.scene_control_v2.training_config.v1"
+}

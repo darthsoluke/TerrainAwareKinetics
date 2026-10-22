@@ -1,0 +1,82 @@
+diff --git a/PARC/motion_generator/gen_util.py b/PARC/motion_generator/gen_util.py
+index 647052d..22c5ff5 100644
+--- a/PARC/motion_generator/gen_util.py
++++ b/PARC/motion_generator/gen_util.py
+@@ -118,6 +118,10 @@ def gen_mdm_motion(target_world_pos: Optional[torch.Tensor],
+         conds[MDMKeyType.PREV_STATE_FLAG_KEY] = mdm_settings.prev_state_ind_key
+     else:
+         conds[MDMKeyType.PREV_STATE_FLAG_KEY] = torch.tensor([mdm_settings.prev_state_ind_key], dtype=torch.bool, device=mdm_device).expand(batch_size)
++
++    # Blended denoising writes these flags in-place; expanded views alias rows.
++    conds[MDMKeyType.PREV_STATE_NOISE_IND_KEY] = conds[MDMKeyType.PREV_STATE_NOISE_IND_KEY].clone()
++    conds[MDMKeyType.PREV_STATE_FLAG_KEY] = conds[MDMKeyType.PREV_STATE_FLAG_KEY].clone()
+     
+     guidance_params = MDMCustomGuidance()
+     if mdm_settings.use_cfg:
+@@ -150,4 +154,4 @@ def gen_mdm_motion(target_world_pos: Optional[torch.Tensor],
+                                      body_rot = None,
+                                      contacts = new_contacts)
+     
+-    return ret_motion_frames
+\ No newline at end of file
++    return ret_motion_frames
+diff --git a/PARC/motion_synthesis/procgen/mdm_path.py b/PARC/motion_synthesis/procgen/mdm_path.py
+index 34585eb..60d0572 100644
+--- a/PARC/motion_synthesis/procgen/mdm_path.py
++++ b/PARC/motion_synthesis/procgen/mdm_path.py
+@@ -353,20 +353,18 @@ def generate_frames_until_end_of_path(path_nodes: torch.Tensor,
+                                                              path_settings=mdm_path_settings,
+                                                              verbose=verbose)
+ 
+-        total_num_frames += start_frame - num_prev_states
++        # done refers to the last history frame, already in full_motion_frames.
++        # Record its exclusive end before adding a new, unexecuted prediction.
++        new_done_indices = torch.logical_and(~final_frame_found, done)
++        final_frame[new_done_indices] = total_num_frames
++        final_frame_found = torch.logical_or(final_frame_found, done)
+ 
+-        if torch.all(done):
+-            full_motion_frames.append(gen_motion_frames.get_slice(slice(num_prev_states, mdm_model._seq_len)))#[:, num_prev_states:])
++        if torch.all(final_frame_found):
+             if verbose:
+                 print("reached end of path for all motions")
+             break
+ 
+-        # for each motion, check if the done flag is true. If yes, then we note that is where the motion ends
+-        # if final frame not found AND done, then we input the final frame
+-        new_done_indices = torch.nonzero(torch.logical_and(~final_frame_found, done))
+-        final_frame[new_done_indices] = total_num_frames
+-
+-        final_frame_found = torch.logical_or(final_frame_found, done)
++        total_num_frames += start_frame - num_prev_states
+ 
+         if total_num_frames * dt > mdm_path_settings.max_motion_length:
+             full_motion_frames.append(gen_motion_frames.get_slice(slice(num_prev_states, mdm_model._seq_len)))
+@@ -377,6 +375,8 @@ def generate_frames_until_end_of_path(path_nodes: torch.Tensor,
+         full_motion_frames.append(gen_motion_frames.get_slice(slice(num_prev_states, start_frame)))
+ 
+     full_motion_frames = motion_util.cat_motion_frames(full_motion_frames)
++    # A timed-out candidate retains its final sample instead of slicing at -1.
++    final_frame[~final_frame_found] = full_motion_frames.root_pos.shape[1]
+     if final_frame_found.any():
+         min_num_frames = torch.min(final_frame[final_frame_found]).item()
+     else:
+@@ -426,10 +426,12 @@ def generate_frames_until_end_of_path(path_nodes: torch.Tensor,
+         sorted_motion_terrains.append(sliced_terrains[id])
+ 
+     info = dict()
+-    info["losses"] = sorted_losses.squeeze()
+-
+-    info["contact_losses"] = contact_losses[sorted_ids.squeeze()]
+-    info["pen_losses"] = pen_losses[sorted_ids.squeeze()]
++    info["losses"] = sorted_losses
++    info["contact_losses"] = contact_losses[sorted_ids]
++    info["pen_losses"] = pen_losses[sorted_ids]
++    info["completed"] = final_frame_found[sorted_ids]
++    info["frame_counts"] = final_frame[sorted_ids]
++    info["candidate_ids"] = sorted_ids
+ 
+ 
+-    return sorted_motion_frames, sorted_motion_terrains, info
+\ No newline at end of file
++    return sorted_motion_frames, sorted_motion_terrains, info

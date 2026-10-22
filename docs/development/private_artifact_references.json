@@ -1,0 +1,218 @@
+[
+  {
+    "document": "docs/records/mb_sonic_asset_audit_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/mb_sonic_asset_audit_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/artifacts/index.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_asset_audit_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_failure_analysis_v1.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_asset_audit_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v2/analyzed_report.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_asset_audit_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v2/execution.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_asset_audit_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_fullplan_v2/episode_0001_000.jsonl"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${UPSTREAM_ROOT}/gear_sonic_deploy/src/g1/g1_deploy_onnx_ref/src/g1_deploy_onnx_ref.cpp:589"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${UPSTREAM_ROOT}/gear_sonic/envs/manager_env/mdp/observations.py:1567"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${UPSTREAM_ROOT}/gear_sonic/envs/manager_env/mdp/commands.py:1309"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${UPSTREAM_ROOT}/gear_sonic/trl/utils/torch_transform.py:595"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${UPSTREAM_ROOT}/gear_sonic/scripts/pico_manager_thread_server.py:449"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${PROJECT_ROOT}/out/vendor/kimodo/kimodo/skeleton/definitions.py:182"
+  },
+  {
+    "document": "docs/records/mb_sonic_smpl_bridge_review_20261019.md",
+    "reference": "${UPSTREAM_ROOT}/legal/THIRD-PARTY SOFTWARE NOTICES AND ASSET LICENSES - GEAR-SONIC.txt:1"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/artifacts/E3/index.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e1_browser_receipt_v3.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e1_browser_desktop_v3.png"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_failure_analysis_v1.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v1/execution.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v1/report.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_fullplan_v1/episode_0001_000.jsonl"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v2/analyzed_report.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v2/execution.json"
+  },
+  {
+    "document": "docs/records/mb_sonic_viewer_20261018.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/e3_b1_fullplan_v2/episode_0001_000.jsonl"
+  },
+  {
+    "document": "docs/records/pfnn_final_candidate_review_20261016.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_final_candidate_review_20261016.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_final_candidate_review_20261016.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_final_candidate_review_20261016.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_full_train_inference_review_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_full_train_inference_review_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_full_train_inference_review_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_full_train_inference_review_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_mixed_training_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_mixed_training_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_mixed_training_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/pfnn_mixed_training_20261015.md",
+    "reference": "../out/mb_sonic_e0_e3_20261018/task_artifacts/STATUS.md"
+  },
+  {
+    "document": "docs/records/training_inference_architecture_review_20261018.md",
+    "reference": "${PROJECT_ROOT}/docs/training_inference_config_snapshot_20261018.json"
+  },
+  {
+    "document": "docs/records/training_inference_architecture_review_20261018.md",
+    "reference": "${PROJECT_ROOT}/out/pfnn_mixed_20261015/final_acceptance_flat_v1/acceptance.json"
+  },
+  {
+    "document": "docs/records/training_inference_architecture_review_20261018.md",
+    "reference": "${PROJECT_ROOT}/out/pfnn_mixed_20261015/final_codec_objective_v1-summary.json"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/teaser_animation.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/teaser_robotics.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_zombie.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_injured_leg.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_injured_torso.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_skipping.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_strafing.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_crouch_strafing.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_freestyle.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/loco_idle_walk_jog_run.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/obj_pickup_sword.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/obj_falling.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/obj_jump_bench.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/obj_sitting.gif"
+  },
+  {
+    "document": "docs/upstream/MotionBricks.md",
+    "reference": "assets/gifs/obj_interactive_authoring.gif"
+  }
+]

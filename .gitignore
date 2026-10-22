@@ -1,0 +1,46 @@
+# Local Python environment and generated files
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+wandb/
+
+# Private/runtime artifacts; source package motionbricks/data remains tracked
+/out/
+/runs/
+/data/
+/artifacts/
+/recordings/
+/private/
+/secrets/
+.env
+.env.*
+*.pem
+*.key
+*.conf
+
+# Model, motion and scene payloads are stored separately
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.npz
+*.npy
+*.bvh
+*.usd
+*.usda
+*.usdc
+*.fbx
+*.mp4
+*.tar
+*.tar.gz
+*.zip
+
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

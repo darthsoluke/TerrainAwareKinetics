@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MotionBricks 参数控制台</title>
+  <link rel="stylesheet" href="/tuning.css?v=20261017-horizons-v1">
+  <script defer src="/vendor/lucide.min.js"></script>
+  <script type="module" src="/tuning.js?v=20261017-dual-v1"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="identity"><i data-lucide="sliders-horizontal"></i><div><strong>MotionBricks</strong><span>参数控制台</span></div><span class="tag">实验运行参数</span></div>
+    <div class="connection"><span id="connection-dot"></span><span id="connection-text">等待场景连接</span><select id="viewer" aria-label="连接的场景"></select></div>
+  </header>
+  <main>
+    <section class="metrics" aria-label="实时运行状态">
+      <div><span>播放帧率</span><strong id="metric-fps">—</strong><small>fps</small></div>
+      <div><span>最近模型计算</span><strong id="metric-inference">—</strong><small>ms</small></div>
+      <div><span>观察年龄</span><strong id="metric-age">—</strong><small>ms</small></div>
+      <div><span>缓冲不足</span><strong id="metric-underruns">—</strong><small>次</small></div>
+      <div><span>当前地图</span><strong id="metric-map">—</strong><small>PFNN</small></div>
+    </section>
+    <div class="workspace">
+      <form id="parameters">
+        <nav class="section-nav" aria-label="参数分类"><a href="#response">响应</a><a href="#terrain">地形观察</a><a href="#generation">动作生成</a><a href="#view">操控与镜头</a><a href="#fixed">固定约定</a></nav>
+        <section id="response" class="parameter-section">
+          <div class="section-heading"><h1>响应与移动</h1><span id="response-frequency"></span></div>
+          <fieldset id="horizon-controls" class="horizon-controls" hidden>
+            <legend id="horizon-label">预测时长</legend>
+            <div class="horizon-segments">
+              <label><input type="radio" name="horizon" data-horizon="8"><span>8 <small>0.80 s</small></span></label>
+              <label><input type="radio" name="horizon" data-horizon="12"><span>12 <small>1.33 s</small></span></label>
+              <label><input type="radio" name="horizon" data-horizon="16"><span>16 <small>1.87 s</small></span></label>
+            </div>
+            <output id="applied-horizon">等待动作</output>
+          </fieldset>
+          <label class="select-row"><span>预设</span><select id="preset"><option value="original">原始 · 24 帧</option><option value="responsive">低延迟 · 8 帧</option><option value="sensitive">高频观察 · 4 帧</option><option value="per_frame">逐帧实验 · 1 帧</option><option value="custom">自定义</option></select></label>
+          <label class="select-row" title="改变一包八帧动作内部重新观察和预测的频率；逐帧档会增加计算量。"><span>地形重规划间隔</span><select id="refresh_frames" data-runtime><option value="1">1 帧 · 33 ms</option><option value="2">2 帧 · 67 ms</option><option value="4">4 帧 · 133 ms</option><option value="8">8 帧 · 267 ms</option><option value="16">16 帧 · 533 ms</option><option value="24">24 帧 · 800 ms</option></select></label>
+          <div class="parameter-row"><label for="speed_mps">移动速度</label><input id="speed_mps" data-extra type="range" min="0.3" max="12" step="0.1"><input data-number-for="speed_mps" type="number" min="0.3" max="12" step="0.1" aria-label="移动速度数值"><span>m/s</span></div>
+          <div class="parameter-row"><label for="run_multiplier">Shift 速度倍率</label><input id="run_multiplier" data-extra type="range" min="1" max="3" step="0.1"><input data-number-for="run_multiplier" type="number" min="1" max="3" step="0.1" aria-label="Shift 速度倍率数值"><span>倍</span></div>
+        </section>
+        <section id="terrain" class="parameter-section">
+          <div id="speed-governor-controls" hidden>
+            <div class="section-heading"><h2>前瞻减速</h2><span id="governor-status">—</span></div>
+            <label class="toggle-row"><span>地形速度调节</span><input id="governor-enabled" data-governor="enabled" type="checkbox" role="switch"></label>
+            <div class="parameter-row"><label for="governor-strength">动作余量</label><input id="governor-strength" data-governor="strength" type="range" min="0" max="1" step="0.05"><input data-number-for="governor-strength" type="number" min="0" max="1" step="0.05" aria-label="动作余量数值"><span></span></div>
+            <div class="governor-scale"><span>速度优先</span><span>动作余量优先</span></div>
+            <div class="parameter-row"><label for="governor-minimum">最低目标速度</label><input id="governor-minimum" data-governor="minimum_speed" type="range" min="0.3" max="1.5" step="0.1"><input data-number-for="governor-minimum" type="number" min="0.3" max="1.5" step="0.1" aria-label="最低目标速度数值"><span>m/s</span></div>
+            <div class="parameter-row"><label for="governor-recovery">恢复加速度</label><input id="governor-recovery" data-governor="recovery_acceleration" type="range" min="0.25" max="3" step="0.25"><input data-number-for="governor-recovery" type="number" min="0.25" max="3" step="0.25" aria-label="恢复加速度数值"><span>m/s²</span></div>
+            <dl class="governor-speeds"><div><dt>请求速度</dt><dd id="governor-requested">—</dd></div><div><dt>目标速度</dt><dd id="governor-target">—</dd></div><div><dt>实际速度</dt><dd id="governor-actual">—</dd></div></dl>
+          </div>
+          <div class="section-heading"><h2>地形观察</h2><span id="lookahead-preview"></span></div>
+          <label class="toggle-row"><span>按速度和预测长度调整前视距离</span><input id="auto_lookahead" type="checkbox" role="switch"></label>
+          <div class="parameter-row"><label for="lookahead_m">高度图前视距离</label><input id="lookahead_m" data-runtime type="range" min="0.8" max="20" step="0.1"><input data-number-for="lookahead_m" type="number" min="0.8" max="20" step="0.1" aria-label="高度图前视距离数值"><span>m</span></div>
+          <div class="parameter-row"><label for="lookahead_gain">速度前视系数</label><input id="lookahead_gain" data-runtime type="range" min="0" max="4" step="0.05"><input data-number-for="lookahead_gain" type="number" min="0" max="4" step="0.05" aria-label="速度前视系数数值"><span>倍</span></div>
+          <div class="parameter-row"><label for="lookahead_base_m">基础前视距离</label><input id="lookahead_base_m" data-runtime type="range" min="0" max="10" step="0.1"><input data-number-for="lookahead_base_m" type="number" min="0" max="10" step="0.1" aria-label="基础前视距离数值"><span>m</span></div>
+          <div class="parameter-row"><label for="lateral_halfwidth_m">高度观察半宽</label><input id="lateral_halfwidth_m" data-runtime type="range" min="0.3" max="6" step="0.1"><input data-number-for="lateral_halfwidth_m" type="number" min="0.3" max="6" step="0.1" aria-label="高度观察半宽数值"><span>m</span></div>
+        </section>
+        <section id="generation" class="parameter-section">
+          <div class="section-heading"><h2>动作生成</h2><span id="horizon-preview"></span></div>
+          <div class="parameter-row"><label for="num_tokens">预测编码数</label><input id="num_tokens" data-runtime type="range" min="6" max="16" step="1"><input data-number-for="num_tokens" type="number" min="6" max="16" step="1" aria-label="预测编码数数值"><span>个</span></div>
+          <div class="parameter-row"><label for="inference_steps">Pose 生成轮数</label><input id="inference_steps" data-runtime type="range" min="1" max="8" step="1"><input data-number-for="inference_steps" type="number" min="1" max="8" step="1" aria-label="Pose 生成轮数数值"><span>轮</span></div>
+          <dl class="inline-facts"><div><dt>预计模型调用</dt><dd id="calls-per-packet">—</dd></div><div><dt>运行路径</dt><dd id="execution-path">—</dd></div></dl>
+        </section>
+        <section id="view" class="parameter-section">
+          <div class="section-heading"><h2>操控与镜头</h2></div>
+          <div class="parameter-row"><label for="mouse_sensitivity">鼠标灵敏度</label><input id="mouse_sensitivity" data-extra type="range" min="0.2" max="3" step="0.1"><input data-number-for="mouse_sensitivity" type="number" min="0.2" max="3" step="0.1" aria-label="鼠标灵敏度数值"><span>倍</span></div>
+          <div class="parameter-row"><label for="field_of_view">垂直视野</label><input id="field_of_view" data-extra type="range" min="30" max="90" step="1"><input data-number-for="field_of_view" type="number" min="30" max="90" step="1" aria-label="垂直视野数值"><span>°</span></div>
+          <label class="toggle-row"><span>反转镜头 Y 轴</span><input id="invert_y" type="checkbox" role="switch"></label>
+        </section>
+        <section id="fixed" class="parameter-section">
+          <div class="section-heading"><h2>固定约定</h2><i data-lucide="lock-keyhole"></i></div>
+          <dl class="fixed-grid"><div><dt>动作历史</dt><dd>4 帧</dd></div><div><dt>传输动作包</dt><dd>8 帧</dd></div><div><dt>播放时钟</dt><dd>30 Hz</dd></div><div><dt>三维观察</dt><dd>3 × 512 点</dd></div><div><dt>路径修正</dt><dd>0 轮</dd></div><div><dt>IK / 输出修正</dt><dd>关闭</dd></div></dl>
+          <p class="model-id" id="model-id"></p>
+        </section>
+      </form>
+      <aside class="comparison">
+        <div class="section-heading"><h2>生效状态</h2><span id="apply-state" class="tag">等待连接</span></div>
+        <table><thead><tr><th>参数</th><th>待应用</th><th>实际</th></tr></thead><tbody id="comparison-rows"></tbody></table>
+        <div class="actions"><button id="apply" class="primary" disabled><i data-lucide="check"></i>应用参数</button><button id="restore" title="恢复原始参数" aria-label="恢复原始参数"><i data-lucide="rotate-ccw"></i></button></div>
+        <div class="scene-actions"><button id="pause" disabled><i data-lucide="pause"></i><span>暂停</span></button><button id="reset-character" disabled><i data-lucide="refresh-cw"></i>重置角色</button></div>
+        <div class="saved-presets"><h3>我的预设</h3><div class="save-row"><input id="preset-name" placeholder="预设名称" maxlength="40" aria-label="预设名称"><button id="save-preset" title="保存预设" aria-label="保存预设"><i data-lucide="save"></i></button></div><div class="save-row"><select id="saved-preset" aria-label="已保存预设"><option value="">选择预设</option></select><button id="delete-preset" title="删除选中预设" aria-label="删除选中预设"><i data-lucide="trash-2"></i></button></div></div>
+        <div class="file-actions"><button id="export"><i data-lucide="download"></i>导出 JSON</button><button id="import"><i data-lucide="upload"></i>导入 JSON</button><input id="import-file" type="file" accept=".json,application/json" hidden></div>
+        <p id="message" role="status"></p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

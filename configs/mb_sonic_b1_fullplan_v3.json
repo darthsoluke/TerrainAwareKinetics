@@ -1,0 +1,48 @@
+{
+  "schema": "motionbricks.mb_sonic.runtime_config.v1",
+  "mode": "mb",
+  "scene_root": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/scenes",
+  "initial_scene_id": "000",
+  "enabled_scene_ids": ["000"],
+  "scene_manifest_sha256": {
+    "000": "910ab7a41009a6e5c50e9c73fdd4cfe4344466952b787597de95333b7dfddb73"
+  },
+  "robot_model": "${UPSTREAM_ROOT}/gear_sonic/data/robot_model/model_data/g1/g1_29dof_with_hand.xml",
+  "robot_model_sha256": "c2d4835079c54ac8bfdfa6010ff802095e6d4bf5d9e88652e0540eff0ed122b5",
+  "policy_dir": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/sonic_6733128",
+  "encoder_sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
+  "decoder_sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
+  "observation_config_sha256": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b",
+  "policy_threads": 1,
+  "physics_dt_s": 0.005,
+  "duration_s": 5.0,
+  "clock": {
+    "strategy": "windows_event_wait_1ms",
+    "timer_resolution_ms": 1
+  },
+  "recording_dir": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/e3_b1_fullplan_v3",
+  "mb_artifact": "${PROJECT_ROOT}/out/pfnn_mixed_20261015/final_acceptance_flat_v1",
+  "mb_artifact_sha256": "0f5d8e2b05b8ec518a104a4979cca70f23efa64080abfc843f874634de5a9646",
+  "mb_bundle": "${PROJECT_ROOT}/out/a100_live_20261010/a100-terrain.pt",
+  "mb_bundle_sha256": "0672abe1edbe47dd2328b3bc6700598932e4228b7c98448ffb7d5a537b592f0d",
+  "mb_seed_path": "${PROJECT_ROOT}/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz",
+  "mb_seed_sha256": "5c4b2049a2801f8be4268da42dec730f5094e9b992910acd661d0c21027f1464",
+  "calibration_path": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/retarget_calibration_v1.json",
+  "calibration_sha256": "6be2cc02ae225c81a1ec28b6af59239c1656660d0f88b592ee4d725235d0bc6c",
+  "mb_device": "cuda:0",
+  "mb_execution": "full_plan",
+  "mb_conditioning_mode": "B1",
+  "estimate_actual_diagnostics": false,
+  "consumer_horizon_s": 1.12,
+  "mb_replan_interval_s": 0.1,
+  "max_generation_state_age_s": 0.1,
+  "max_plan_wall_age_s": 0.1,
+  "max_pending_intent_age_s": 0.1,
+  "mb_initial_reference_timeout_s": 5.0,
+  "raw_log_pending_plans": 2,
+  "body_onset": {
+    "linear_threshold_mps": 0.05,
+    "heading_threshold_rad": 0.02,
+    "sustained_samples": 12
+  }
+}

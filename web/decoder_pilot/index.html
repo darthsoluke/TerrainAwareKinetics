@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Decoder Pilot</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"/web/soma_lab/vendor/three.module.js"}}</script>
+  <script src="/web/soma_lab/vendor/lucide.min.js"></script>
+</head>
+<body>
+<header><h1>Decoder Pilot</h1><span id="status">Loading recordings</span></header>
+<nav aria-label="Comparison controls">
+  <label>Sequence <select id="clip"></select></label>
+  <label>Left <select id="left"></select></label>
+  <label>Right <select id="right"></select></label>
+  <label><input id="transparent" type="checkbox"> Transparent ground</label>
+  <label><input id="trail" type="checkbox" checked> Root path</label>
+  <button id="reset" title="Reset camera" aria-label="Reset camera"><i data-lucide="rotate-ccw"></i></button>
+</nav>
+<main><section class="viewport" id="view0"><div class="caption" id="label0"></div></section>
+<section class="viewport" id="view1"><div class="caption" id="label1"></div></section></main>
+<footer>
+  <button id="previous" title="Previous frame" aria-label="Previous frame"><i data-lucide="skip-back"></i></button>
+  <button id="play" title="Play or pause" aria-label="Play or pause"><i data-lucide="pause"></i></button>
+  <button id="next" title="Next frame" aria-label="Next frame"><i data-lucide="skip-forward"></i></button>
+  <input id="timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Frame">
+  <output id="time">0.00 s</output>
+  <select id="speed" aria-label="Playback speed"><option value=".25">0.25x</option><option value=".5">0.5x</option><option value="1" selected>1x</option></select>
+</footer>
+<script type="module" src="app.js?v=joint-sdf-review-1"></script>
+</body></html>

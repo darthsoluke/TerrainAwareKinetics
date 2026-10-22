@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SOMA | Scene Control v3 Performance</title>
+  <link rel="stylesheet" href="/scene-control-v3/styles.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+  <script defer src="/vendor/lucide.min.js"></script>
+  <script type="module" src="/scene-control-v3/app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="identity"><strong>SOMA</strong><span>Scene Control v3 / Performance</span></div>
+      <span id="status" role="status">Connecting</span>
+      <div class="actions">
+        <button id="play" disabled title="Play reference" aria-label="Play reference"><i data-lucide="play"></i></button>
+        <button id="camera" title="Center camera" aria-label="Center camera"><i data-lucide="focus"></i></button>
+        <button id="reference-check" disabled title="Compare all 18,056 reference vertices" aria-label="Compare all 18,056 reference vertices"><i data-lucide="scan-line"></i></button>
+        <button id="receipt" title="Download performance receipt" aria-label="Download performance receipt"><i data-lucide="download"></i></button>
+        <button id="reconnect" title="New session" aria-label="New session"><i data-lucide="rotate-ccw"></i></button>
+      </div>
+    </header>
+    <div class="classification"><b id="role">SOURCE REPLAY / REFERENCE</b><span>Actor: UNTRAINED</span><span>Quality response: unmeasured</span><span>Optimizer updates: 0</span></div>
+    <section class="workspace">
+      <div class="stage"><canvas id="stage" aria-label="Official SOMA full-body reference and bound source scene"></canvas><div id="error" role="alert" hidden></div></div>
+      <aside aria-label="Performance controls and measurements">
+        <h1 id="stream-title">Reference Stream</h1>
+        <dl class="facts"><div><dt id="identity-label">Record</dt><dd id="source-name">-</dd></div><div><dt>Geometry</dt><dd>18,056 vertices / SOMA77</dd></div><div><dt>Delivery</dt><dd>1 frame / 30 Hz</dd></div><div><dt>Scene</dt><dd id="scene-name">Record-bound world</dd></div></dl>
+        <fieldset id="command-controls" disabled><legend>Command Association</legend>
+          <label for="vx">vx <output id="vx-value">0.0 m/s</output></label><input id="vx" type="range" min="-2" max="2" step="0.1" value="0">
+          <label for="vz">vz <output id="vz-value">0.0 m/s</output></label><input id="vz" type="range" min="-2" max="2" step="0.1" value="0">
+          <label for="heading">Heading <output id="heading-value">0.0 rad</output></label><input id="heading" type="range" min="-3.14" max="3.14" step="0.01" value="0">
+        </fieldset>
+        <p id="scope" class="scope">Reference motion ignores commands. No learned WASD.</p>
+        <h2>Measured</h2><dl class="facts numeric">
+          <div><dt>Unique rendered Hz</dt><dd id="hz">-</dd></div><div><dt>Frame</dt><dd id="frame">-</dd></div>
+          <div><dt>Input / frame command</dt><dd id="command">0 / -</dd></div><div><dt>Committed frames</dt><dd id="committed">0</dd></div>
+          <div><dt>Association P95</dt><dd id="latency">-</dd></div><div><dt>Render submission P95</dt><dd id="render-time">-</dd></div>
+          <div><dt>Native rig P99</dt><dd id="rig-time">-</dd></div><div><dt>Necessary pipeline P99</dt><dd id="inference-time">N/A (source replay)</dd></div>
+        </dl>
+        <h2 id="budget-title">Transport Budget</h2><dl class="facts numeric"><div><dt>Inference P99</dt><dd id="inference-budget">N/A (source replay)</dd></div><div><dt>Association P95</dt><dd>&le; 100 ms</dd></div><div><dt>Target</dt><dd>RTX 3080 / sustained 30 Hz</dd></div></dl>
+        <output id="reference-parity" role="status">Reference: not compared</output>
+        <textarea id="receipt-snapshot" readonly hidden rows="6" spellcheck="false" wrap="off" aria-label="Performance receipt snapshot JSON"></textarea>
+      </aside>
+    </section>
+    <footer><span>Metres / Y-up / 30 Hz</span><span>All native skin influences</span><span>ACK: rendered submission</span></footer>
+  </main>
+</body>
+</html>

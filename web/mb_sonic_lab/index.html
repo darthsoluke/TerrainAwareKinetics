@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MB + SONIC | G1 Physics Lab</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+  <script defer src="/vendor/lucide.min.js"></script>
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <main class="lab">
+    <header class="toolbar">
+      <div class="identity"><strong id="tracker-title">MB + SONIC</strong><span>G1 Physics Lab</span></div>
+      <span id="status" role="status">Connecting</span>
+      <output id="gamepad-status" class="gamepad-status" title="No standard gamepad detected" data-connected="false"><i data-lucide="gamepad-2"></i><span id="gamepad-name">No gamepad</span></output>
+      <span id="mode" class="mode"></span>
+      <label class="scene-select" title="Scene"><i data-lucide="mountain"></i><select id="scene" aria-label="Scene" disabled><option>Awaiting runtime</option></select></label>
+      <button id="start" class="start" title="Start physical episode" disabled><i data-lucide="play"></i><span>Start</span></button>
+      <button id="reset" class="icon" title="Reset episode" aria-label="Reset episode" disabled><i data-lucide="rotate-ccw"></i></button>
+      <button id="camera" class="icon" title="Focus actual G1" aria-label="Focus actual G1"><i data-lucide="focus"></i></button>
+      <button id="receipt" class="icon" title="Download measurements" aria-label="Download measurements" disabled><i data-lucide="download"></i></button>
+    </header>
+    <section class="viewport" aria-label="G1 physics scene">
+      <canvas id="stage" tabindex="0" aria-label="Actual MuJoCo G1 and G1 reference"></canvas>
+      <div class="layers">
+        <label><input id="actual-visible" type="checkbox" checked><span class="swatch actual"></span>G1 actual</label>
+        <label><input id="reference-visible" type="checkbox" checked><span class="swatch reference"></span><span id="reference-label">Reference</span></label>
+        <label><input id="contacts-visible" type="checkbox" checked><i data-lucide="circle-dot"></i>Contacts</label>
+        <label title="Follow actual G1"><input id="follow" type="checkbox" checked>Follow</label>
+      </div>
+      <section id="drive" class="drive" aria-label="Movement and facing">
+        <div class="move-controls" role="group" aria-label="Movement">
+          <div id="joystick" class="joystick" role="slider" tabindex="0" aria-label="Velocity joystick" title="Movement" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="stick"></span></div>
+          <label class="speed"><i data-lucide="gauge"></i><input id="speed" type="number" min="0" max="3" step="0.1" value="1.2" aria-label="Intent speed"><span>m/s</span></label>
+          <output id="intent">0.00, 0.00 m/s</output>
+        </div>
+        <label class="yaw" title="Facing: turn left or right"><i data-lucide="rotate-cw"></i><input id="yaw" type="range" min="-1.5" max="1.5" step="0.05" value="0" aria-label="Yaw rate"><output id="yaw-value">0.00 rad/s</output></label>
+      </section>
+      <div id="error" class="error" role="alert" hidden></div>
+    </section>
+    <aside class="measurements" aria-label="Physics measurements">
+      <h1>Live Measurements</h1>
+      <dl class="stats">
+        <dt>Simulation</dt><dd id="sim-time">Unknown</dd>
+        <dt id="rates-label">Physics / SONIC</dt><dd id="rates">Unknown</dd>
+        <dt>Physics / control ticks</dt><dd id="ticks">Unknown</dd>
+        <dt>Real-time factor</dt><dd id="rtf">Unknown</dd>
+        <dt title="Unique physics frames over the active render window; Ready idle excluded">Active display</dt><dd id="display-rate">Unknown</dd>
+      </dl>
+      <h2>Response</h2>
+      <dl class="stats">
+        <dt>Chain P99</dt><dd id="chain">Unknown</dd>
+        <dt>First visual P95</dt><dd id="visual">Unknown</dd>
+        <dt title="Browser input to the first rendered runtime-measured onset">Onset display P95</dt><dd id="onset">Unknown</dd>
+        <dt title="Server intent receipt to measured physical onset">Body onset srv P95</dt><dd id="onset-server">Unknown</dd>
+        <dt>Body onset sim time</dt><dd id="onset-sim">Unknown</dd>
+        <dt>Consumed input</dt><dd id="consumed">None</dd>
+        <dt title="Actual minus reference world Root position; diagnostic, not a directly consumed G1-mode target">Root XYZ error</dt><dd id="tracking">Unknown</dd>
+        <dt>Heading error</dt><dd id="heading-error">Unknown</dd>
+      </dl>
+      <h2>Reference</h2>
+      <dl class="stats reference-stats">
+        <dt>Version</dt><dd id="reference-version">Unknown</dd>
+        <dt>Coverage</dt><dd id="coverage">Unknown</dd>
+        <dt>Current time</dt><dd id="reference-time">Unknown</dd>
+        <dt>Source</dt><dd id="reference-source">Unknown</dd>
+      </dl>
+      <h2>Scene</h2>
+      <dl class="stats reference-stats">
+        <dt>Manifest</dt><dd id="manifest">Unknown</dd>
+        <dt>SHA256</dt><dd id="manifest-hash">Unknown</dd>
+        <dt>Contacts</dt><dd id="contact-count">Unknown</dd>
+        <dt>Optimizer updates</dt><dd id="optimizer">Unknown</dd>
+      </dl>
+      <ol id="contacts" class="contacts"></ol>
+      <label class="receipt-label" for="receipt-snapshot" hidden>Measurement Receipt</label>
+      <textarea id="receipt-snapshot" readonly hidden aria-label="Measurement receipt"></textarea>
+    </aside>
+    <footer><span id="robot-source">Awaiting official G1 geometry</span><span id="clock-summary">30 Hz display · 50 Hz control</span></footer>
+  </main>
+</body>
+</html>

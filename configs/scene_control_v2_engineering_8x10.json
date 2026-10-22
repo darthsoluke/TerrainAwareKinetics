@@ -1,0 +1,21 @@
+{
+  "schema": "motionbricks.scene_control_v2.run.v1",
+  "profile": "engineering_legacy_8x10",
+  "execution": {"mode": "preflight", "device": "cpu", "read_only": true, "optimizer": null, "resume": false, "auto_expand": false},
+  "artifacts": {
+    "architecture_bundle": "out/a100_live_20261010/a100-terrain.pt",
+    "checkpoint": "out/pfnn_mixed_20261015/final_acceptance_flat_v1/weights.pt",
+    "bundle_sha256": "0672abe1edbe47dd2328b3bc6700598932e4228b7c98448ffb7d5a537b592f0d",
+    "checkpoint_sha256": "0f5d8e2b05b8ec518a104a4979cca70f23efa64080abfc843f874634de5a9646"
+  },
+  "model": {"skeleton": "SOMASkeleton30", "representation": "somaskel30_dual_root_global_joints", "fps": 30, "global_features": 366, "dual_features": 370, "statistics_features": 370, "encoder_features": 268, "decoder_features": 365, "history_frames": 4, "frames_per_token": 4, "legacy_trained_tokens": 8, "window_frame": "heading_retained_translate_xz_and_observed_vertical_origin", "reuse": ["skeleton", "representation", "native_codec_encoder", "native_codec_decoder", "frozen_normalization"]},
+  "codec": {"num_heads": 8, "entries_per_head": 10, "code_dim": 256, "index_layout": "B,L,H", "decay": 0.99, "initialization": "legacy_exact", "new_contact_head": "untrained", "label_identity": null, "pose_labels": "requires_final_frozen_identity"},
+  "training": {"config_schema": "motionbricks.scene_control_v2.training_config.v1", "status": "unallocated_no_final_label_receipt", "label_data_kind": null, "label_lineage": null, "current_runner_objective": "focused_valid_codec_code_ce_including_latent0", "code_ce_positions": "all valid codec positions are eligible; token-mode focus is independent", "motion_loss_mask": "independent_decoded_motion_prefix_frame_mask", "codec_physical_objective_training_allocated": false},
+  "normalization": {"source": "architecture_bundle", "mean_key": "stats_mean", "std_key": "stats_std", "identity_key": "stats_tensor_sha256", "frozen": true},
+  "sampling": {"policy_id": "scene_control_v2.global_body_time_contact.fixed_quota.v1", "query_budget": {"global_points": 128, "body_points": 256, "contact_points": 128}, "actor_guidance_sources": ["factual_history", "model_prediction"], "paired_future_role": "loss_labels_only", "fixture_guidance": "explicit_offline_synthetic_oracle", "distance_semantics": "minimum_component_sdf_not_exact_union_inside_overlap"},
+  "contacts": {"schema": "motionbricks.scene_control_v2.paired.v1", "kinds": {"support": 0, "brace": 1, "grasp": 2, "touch": 3, "slide": 4}, "supervision_state": "actual_state", "supervision_valid": "actual_valid", "unknown": "masked", "parc15": "source_sidecar_not_native_labels"},
+  "sources": {"preflight": ["synthetic_paired_fixture", "existing_bundle_real_seed_4frames"], "accepted_real_training_manifest": null, "candidates": ["PARC", "LINGO", "TRUMANS", "CIRCLE"], "provenance_required": ["recording_id", "scene_id", "license", "parent_recording_ids"], "split_grouping": ["recording_family", "scene_family", "derivative_parents"]},
+  "budget": {"ledger_id": "scene_control_v2_20261018_new_unallocated", "legacy_completed_exposures": 38400000, "accounts": {"cpu_preflight": {"adam_updates": 0, "training_exposures": 0}, "diagnostic": {"adam_updates": 0, "training_exposures": 0}, "formal": {"adam_updates": 0, "training_exposures": 0}}, "approval_id": null},
+  "quality_gates": {"quality_approved": false, "fixture_can_approve": false, "fullskin": {"vertices": 18056, "substeps": 8, "peak_penetration_m": 0.02, "required": true, "preflight_can_approve": false}, "real_data_required": ["source_codec_reconstruction", "contact_gap_and_relative_slip", "whole_body_clearance", "complete_route_success", "command_latency_p50_p95_p99"], "unmeasured_gate_action": "not_approved"},
+  "runtime": {"publish": false, "postprocessing": null, "ports_untouched": [28943, 28944]}
+}

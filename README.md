@@ -1,0 +1,68 @@
+# TerrainAwareKinetics
+
+面向三维环境的实时人体动作生成研究：用手柄控制移动方向与身体朝向，让角色连续地走、跑、停、转向，并适应地形。
+
+本仓库汇集了基于 MotionBricks 的改造、逐帧 GRU / Transformer 实验、人体与 G1 物理执行的接入代码，以及完整研究记录。源码基础来自 [NVIDIA GR00T / MotionBricks](https://github.com/NVlabs/GR00T-WholeBodyControl)。
+
+**第一次接触这个项目，请从 [零基础项目全景](docs/START_HERE.md) 开始。** 它解释我们要做什么、有哪些数据、各代模型怎样运行、实验进展到哪里。
+
+## 当前进展
+
+最近完成的结果复核：**2026-10-22**；本仓库整理日期：2026-10-23。
+
+- 已处理 BONES、LAFAN、PARC、PFNN 等动作来源，已有动作与地形配对、SOMA30 人体表示和 15 张 PFNN 演示地图。
+- 地形感知 MotionBricks、逐帧 P1 GRU、A/B/C 小规模结构对照均有实际训练记录。
+- 浏览器控制、WASD、Xbox 双摇杆、快速切图和同窗口调参已有实现与实测记录。
+- 最新评估显示：单步动作拟合改善，连续生成的支撑稳定性与穿透质量仍未通过交付标准。
+- P2 闭环训练目标已有部分实现；更完整的轻量 Transformer 和物理关系建模仍在研究中。
+
+最新结论从 [A/B/C 复核](docs/records/pfnn_physics_findings_20261022.md) 和 [最新交接](docs/records/pfnn_physics_audit_status_20261022.md) 查看。
+
+## 按你的问题阅读
+
+| 你想知道什么 | 入口 |
+| --- | --- |
+| 我没有相关经验，项目到底在做什么？ | [从零开始](docs/START_HERE.md) |
+| 我们拥有哪些动作、场景和训练样本？ | [数据说明](docs/data/README.md) |
+| MotionBricks、GRU、Transformer 有什么关系？ | [架构说明](docs/architecture/README.md) |
+| 历史上尝试过哪些路线？ | [历史与账本](docs/history/README.md) |
+| 当前重点研究什么？ | [研究方向](docs/research/README.md) |
+| 我想运行源码或复现结果表 | [开发与复现](docs/development/README.md) |
+| 我需要原始详细执行记录 | [历史记录索引](docs/records/README.md) |
+
+## 目录
+
+```text
+TerrainAwareKinetics/
+  docs/                 入门、数据、架构、历史、研究和详细记录
+  motionbricks/         Python 模块：表示、模型、地形感知、控制器接入
+  scripts/              数据准备、训练、评估、浏览器服务与历史实验入口
+  configs/              版本化实验配置
+  tests/                模型合同、数学、时钟、协议与评估检查
+  web/                  浏览器界面源码
+  examples/results/     可以直接读取的精简数值结果
+  tools/                仓库检查和旧工作区导入工具
+  patches/              外部依赖的已有适配补丁
+  setup.py              Python 包安装入口
+  LICENSE               上游源码与模型许可说明
+```
+
+`scripts/` 内保留已有模块名，使 `scripts.<name>` 导入仍然成立。每个顶层目录都提供 README，列出常用入口；详细实验按 `docs/records/` 追溯。
+
+## 先复现一张表
+
+有 Python 就可以读取仓库内的精简结果，无需下载模型和动捕：
+
+```bash
+python scripts/compare_arms.py --root examples/results/ablation_v3 --fixed-review examples/results/fixed_masks_summary.json
+```
+
+输出包括 A/B/C 三臂和持久性基线。各指标的单位、评分时序与限制见 [结果说明](examples/results/README.md)。
+
+运行模型和训练需要另外准备相应权重、动作数据、场景与官方人体资源；说明见 [开发与复现](docs/development/README.md)。
+
+## 来源与许可
+
+项目保留了上游源码、版权与许可信息，见 [LICENSE](LICENSE)、[来源说明](NOTICE.md) 和 [原始 MotionBricks 说明](docs/upstream/MotionBricks.md)。数据集、人体资源、第三方跟踪器和模型权重按各自来源管理。
+
+公开仓库同步源码、文档与精简统计结果。模型权重、动捕、场景数据、训练缓存和私人运行配置位于独立制品存储。

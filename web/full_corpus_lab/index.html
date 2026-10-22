@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#e8ebe8">
+    <title>SOMA Motion Lab</title>
+  <link rel="stylesheet" href="/styles.css?v=20261021-reactive-v3">
+    <script type="importmap">
+      {"imports":{"three":"/vendor/three.module.js"}}
+    </script>
+    <script defer src="/vendor/lucide.min.js"></script>
+  <script type="module" src="/app.js?v=20261021-reactive-v4"></script>
+  </head>
+  <body>
+    <main class="lab" aria-label="SOMA motion lab">
+      <div id="stage" class="stage" aria-label="3D SOMA motion stage">
+        <canvas id="scene-canvas" tabindex="0" aria-label="Third-person camera"></canvas>
+      </div>
+
+      <header class="toolbar">
+        <div class="brand" aria-label="SOMA Motion Lab">
+          <span class="brand-mark" aria-hidden="true"><i data-lucide="scan-line"></i></span>
+          <span class="brand-copy"><strong>SOMA</strong><small>MOTION LAB</small></span>
+          <span id="connection-state" class="connection-state" data-state="connecting">
+            <span class="state-dot"></span><span id="connection-label">CONNECTING</span>
+          </span>
+        </div>
+
+        <div class="toolbar-controls">
+          <span id="gamepad-status" class="gamepad-status" role="status" title="Connect Xbox and press a button" data-connected="false"><i data-lucide="gamepad-2" aria-hidden="true"></i><span id="gamepad-label">No gamepad</span></span>
+          <label id="reactive-step-control" class="select-control reactive-control" hidden title="Replan interval">
+            <i data-lucide="timer" aria-hidden="true"></i>
+            <select id="reactive-step" aria-label="Replan interval" disabled>
+              <option value="4">4 frames</option>
+              <option value="2">2 frames</option>
+              <option value="1">1 frame</option>
+            </select>
+          </label>
+          <div class="segmented" role="group" aria-label="Scene mode">
+            <button id="live-mode" class="segment-button is-active" type="button" data-scene-mode="live" aria-pressed="true" title="Live model output">
+              <i data-lucide="activity" aria-hidden="true"></i><span>Flat Live</span>
+            </button>
+            <button id="terrain-mode" class="segment-button" type="button" data-scene-mode="terrain" aria-pressed="false" title="Experimental terrain-conditioned visual preview only; not approved and does not actuate" disabled>
+              <i data-lucide="mountain" aria-hidden="true"></i><span>Terrain</span>
+            </button>
+            <button id="replay-mode" class="segment-button" type="button" data-scene-mode="replay" aria-pressed="false" title="Offline motion replay" disabled>
+              <i data-lucide="film" aria-hidden="true"></i><span>Replay</span>
+            </button>
+          </div>
+          <span id="terrain-warning" class="terrain-warning" hidden title="Experimental model output">EXPERIMENTAL · NOT APPROVED</span>
+
+          <label id="map-select-control" class="select-control" hidden title="PFNN map">
+            <i data-lucide="map" aria-hidden="true"></i>
+            <select id="map-select" aria-label="PFNN map"></select>
+          </label>
+          <label id="world-select-control" class="select-control" hidden title="Reset at a terrain entry point">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <select id="world-select" aria-label="Terrain area"></select>
+          </label>
+          <button id="world-map-toggle" class="icon-button" type="button" hidden title="World map" aria-label="World map" aria-pressed="false"><i data-lucide="map" aria-hidden="true"></i></button>
+
+          <label class="select-control clip-control" title="Offline motion clip">
+            <i data-lucide="clapperboard" aria-hidden="true"></i>
+            <span class="sr-only">Offline motion clip</span>
+            <select id="clip-select" aria-label="Offline motion clip" disabled>
+              <option value="">NO CLIPS</option>
+            </select>
+          </label>
+
+          <label class="speed-control" title="Movement speed in meters per second">
+            <i data-lucide="gauge" aria-hidden="true"></i>
+            <span class="sr-only">Movement speed in meters per second</span>
+            <input id="speed-input" type="number" min="0.3" max="3" step="0.1" value="1.6" inputmode="decimal" aria-label="Movement speed in meters per second">
+            <span class="unit">m/s</span>
+          </label>
+
+          <button id="intent-toggle" class="icon-button" type="button" aria-pressed="false" title="Show movement intent" aria-label="Show movement intent">
+            <i data-lucide="navigation" aria-hidden="true"></i>
+          </button>
+          <button id="depth-toggle" class="icon-button" type="button" aria-pressed="false" title="Show depth observation preview" aria-label="Show depth observation preview">
+            <i data-lucide="eye" aria-hidden="true"></i>
+          </button>
+          <button id="diagnostics-toggle" class="icon-button" type="button" aria-expanded="true" aria-controls="diagnostics-panel" title="Trajectory layers" aria-label="Trajectory layers">
+            <i data-lucide="route" aria-hidden="true"></i>
+          </button>
+          <button id="runtime-toggle" class="icon-button" type="button" hidden aria-expanded="false" aria-controls="runtime-panel" title="Inference settings" aria-label="Inference settings"><i data-lucide="sliders-horizontal" aria-hidden="true"></i></button>
+
+          <span class="toolbar-divider" aria-hidden="true"></span>
+
+          <button id="reset-button" class="icon-button" type="button" title="Reset live model" aria-label="Reset live model" disabled>
+            <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+          </button>
+          <button id="pause-button" class="icon-button" type="button" aria-pressed="false" title="Pause motion" aria-label="Pause motion">
+            <i data-lucide="pause" aria-hidden="true"></i>
+          </button>
+          <button id="camera-button" class="icon-button" type="button" title="Reset camera" aria-label="Reset camera">
+            <i data-lucide="crosshair" aria-hidden="true"></i>
+          </button>
+          <button id="mouse-look-button" class="icon-button" type="button" aria-pressed="false" title="Capture mouse; Esc releases. Right-drag also controls the camera" aria-label="Capture mouse">
+            <i data-lucide="mouse-pointer-2" aria-hidden="true"></i>
+          </button>
+          <button id="look-invert-toggle" class="icon-button" type="button" aria-pressed="false" title="Invert mouse Y" aria-label="Invert mouse Y">
+            <i data-lucide="arrow-up-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </header>
+
+      <aside id="tuning-dock" class="tuning-dock" hidden aria-label="实时调参">
+        <header><div><i data-lucide="sliders-horizontal" aria-hidden="true"></i><strong>实时调参</strong></div><button id="tuning-close" class="icon-button" type="button" title="收起调参" aria-label="收起调参"><i data-lucide="panel-right-close" aria-hidden="true"></i></button></header>
+        <iframe id="tuning-frame" title="实时调参面板"></iframe>
+      </aside>
+
+      <section id="diagnostics-panel" class="diagnostics-panel" aria-label="Trajectory layers">
+        <header><strong>TRAJECTORIES</strong><span id="prediction-horizon">-- s</span></header>
+        <label title="Current planar input preview; no future height supplied"><input type="checkbox" data-debug-layer="intent" checked><span class="line-key dashed" style="--key:#bd6914"></span><span>Input XZ</span></label>
+        <label title="Planar endpoint actually submitted for this generation"><input type="checkbox" data-debug-layer="submitted" checked><span class="line-key dashed" style="--key:#737b82"></span><span>Submitted XZ</span></label>
+        <label title="Actual Root backbone output, restored to world coordinates"><input type="checkbox" data-debug-layer="root" checked><span class="line-key" style="--key:#0069db"></span><span>Root prediction</span></label>
+        <label title="Independent long Root hypothesis; not the executed Root"><input type="checkbox" data-debug-layer="previewRoot" checked><span class="line-key" style="--key:#25815a"></span><span>前瞻 Root</span></label>
+        <label title="Actual final decoded future motion; no IK or correction"><input type="checkbox" data-debug-layer="decoded" checked><span class="line-key" style="--key:#c12983"></span><span>Decoded prediction</span></label>
+        <label title="Only frames already played, up to five seconds"><input type="checkbox" data-debug-layer="history" checked><span class="line-key" style="--key:#0b7b51"></span><span>Played path</span></label>
+        <label title="Actual valid near-support samples provided to the model"><input type="checkbox" data-debug-layer="near" checked><span class="line-key dotted" style="--key:#0b788b"></span><span>Near observation</span></label>
+        <label title="Actual sampled terrain provided to the model along input or predicted route"><input type="checkbox" data-debug-layer="terrainIntent" checked><span class="line-key dotted" style="--key:#a0630c"></span><span>Terrain corridor</span></label>
+        <label title="Terrain point limiting the current target speed"><input type="checkbox" data-debug-layer="speedRisk" checked><span class="line-key dotted" style="--key:#d54032"></span><span>减速风险点</span></label>
+        <label title="Extended terrain samples supplied to the model"><input type="checkbox" data-debug-layer="survey" checked><span class="line-key dotted" style="--key:#667a1c"></span><span>Far survey</span></label>
+        <label title="Official SOMA30 joint hierarchy for the current played frame"><input type="checkbox" data-debug-layer="skeleton"><span class="line-key" style="--key:#54477d"></span><span>SOMA skeleton</span></label>
+        <label data-unified-sdf hidden title="Actual generation-time three-dimensional body-volume samples supplied to the environment encoder"><input type="checkbox" data-debug-layer="sdfBody"><span class="line-key dotted" style="--key:#148da0"></span><span>Body SDF input</span></label>
+        <label data-unified-sdf hidden title="Actual three-dimensional samples along the requested movement direction"><input type="checkbox" data-debug-layer="sdfIntent"><span class="line-key dotted" style="--key:#d18416"></span><span>Intent SDF input</span></label>
+        <label data-unified-sdf hidden title="Actual three-dimensional samples along the observed movement direction"><input type="checkbox" data-debug-layer="sdfVelocity"><span class="line-key dotted" style="--key:#4074d5"></span><span>Motion SDF input</span></label>
+        <label data-unified-sdf hidden title="All displayed joint centers queried against the scene. Diagnostic only, not model conditioning or skin collision proof. Red means inside the scene solid."><input type="checkbox" data-debug-layer="boneSdf"><span class="line-key" style="--key:#54477d"></span><span>Skeleton SDF check</span></label>
+        <div id="sdf-summary" data-unified-sdf hidden></div>
+        <footer id="observation-age">No model observation</footer>
+      </section>
+
+      <section id="world-map-panel" class="world-map-panel" hidden aria-label="Terrain map">
+        <header><strong id="world-map-title">WORLD MAP</strong><span id="world-map-size"></span></header>
+        <canvas id="world-map" width="256" height="256" aria-label="Select a terrain region"></canvas>
+        <div id="world-map-label"></div>
+      </section>
+
+      <section id="runtime-panel" class="runtime-panel" hidden aria-label="Inference settings">
+        <header><strong>INFERENCE</strong><button id="runtime-reset" class="icon-button" type="button" title="Reset settings" aria-label="Reset settings"><i data-lucide="rotate-ccw" aria-hidden="true"></i></button></header>
+        <label class="runtime-preset">Profile<select id="runtime-preset" aria-label="Inference profile"><option value="responsive">Responsive</option><option value="original">Original</option><option value="long">Long view</option><option value="custom" disabled>Custom</option></select></label>
+        <label class="runtime-slider" for="runtime-speed"><span>Movement speed</span><output id="runtime-speed-value"></output><input id="runtime-speed" type="range" min="0.3" max="12" step="0.1" value="1.6"></label>
+        <label class="runtime-slider" for="runtime-horizon"><span>Prediction horizon</span><output id="runtime-horizon-value"></output><input id="runtime-horizon" type="range" min="6" max="16" step="1" value="12"></label>
+        <label class="runtime-slider" for="runtime-steps"><span>Denoising passes</span><output id="runtime-steps-value"></output><input id="runtime-steps" type="range" min="1" max="8" step="1" value="4"></label>
+        <label class="runtime-auto"><input id="runtime-auto" type="checkbox" checked>Speed-based lookahead</label>
+        <label class="runtime-slider" for="runtime-ahead"><span>Survey distance</span><output id="runtime-ahead-value"></output><input id="runtime-ahead" type="range" min="0.8" max="20" step="0.1" value="2.8" disabled></label>
+        <label class="runtime-slider" for="runtime-gain"><span>Speed / horizon gain</span><output id="runtime-gain-value"></output><input id="runtime-gain" type="range" min="0" max="4" step="0.05" value="1"></label>
+        <label class="runtime-slider" for="runtime-base"><span>Base lookahead</span><output id="runtime-base-value"></output><input id="runtime-base" type="range" min="0" max="10" step="0.1" value="0.4"></label>
+        <label class="runtime-slider" for="runtime-width"><span>Survey half-width</span><output id="runtime-width-value"></output><input id="runtime-width" type="range" min="0.3" max="6" step="0.1" value="0.6"></label>
+        <label class="runtime-slider" for="runtime-refresh"><span>Replan interval</span><output id="runtime-refresh-value"></output><input id="runtime-refresh" type="range" min="8" max="56" step="8" value="8"></label>
+        <label class="runtime-slider" for="runtime-path"><span>Path refinement</span><output id="runtime-path-value"></output><input id="runtime-path" type="range" min="0" max="2" step="1" value="1"></label>
+        <footer id="runtime-applied">Waiting for model</footer>
+      </section>
+
+      <section class="telemetry" aria-label="Motion telemetry" aria-live="polite">
+        <span class="telemetry-state"><span id="run-dot" class="run-dot"></span><span id="run-status">Loading</span></span>
+        <span class="telemetry-item"><span class="telemetry-key">FRAME</span><strong id="frame-readout">0</strong></span>
+        <span class="telemetry-item" title="Actual played frames per second"><span class="telemetry-key">FPS</span><strong id="fps-readout">--</strong></span>
+        <span class="telemetry-item"><span class="telemetry-key">ROOT</span><strong id="root-readout">0.00, 0.00, 0.00</strong></span>
+        <span class="telemetry-item telemetry-style"><span class="telemetry-key">STYLE</span><strong id="style-readout">--</strong></span>
+        <span class="telemetry-item reactive-metric" hidden><span class="telemetry-key">UPDATE</span><strong id="reactive-rate-readout">-- Hz</strong></span>
+        <span class="telemetry-item reactive-metric" hidden><span class="telemetry-key">LEAD</span><strong id="reactive-lead-readout">--</strong></span>
+        <span class="telemetry-item telemetry-network"><span class="telemetry-key">INFER</span><strong id="infer-readout">-- ms</strong></span>
+        <span class="telemetry-item telemetry-network"><span class="telemetry-key">SKIN</span><strong id="skin-readout">-- ms</strong></span>
+        <span class="telemetry-item telemetry-errors"><span class="telemetry-key">UNDERRUN</span><strong id="underrun-readout">0</strong></span>
+      </section>
+
+      <div id="touch-pad" class="touch-pad" aria-label="Movement">
+        <button class="pad-button pad-up" type="button" data-pad="w" aria-label="Move forward" title="Move forward"><i data-lucide="arrow-up"></i></button>
+        <button class="pad-button pad-left" type="button" data-pad="a" aria-label="Move left" title="Move left"><i data-lucide="arrow-left"></i></button>
+        <button class="pad-button pad-down" type="button" data-pad="s" aria-label="Move backward" title="Move backward"><i data-lucide="arrow-down"></i></button>
+        <button class="pad-button pad-right" type="button" data-pad="d" aria-label="Move right" title="Move right"><i data-lucide="arrow-right"></i></button>
+      </div>
+
+      <section id="depth-inset" class="depth-inset" aria-label="Debug depth observation preview" hidden>
+        <div id="depth-frame" class="depth-frame" aria-hidden="true"></div>
+        <div class="depth-caption"><strong>DEPTH</strong><span>DEBUG / NOT INPUT</span></div>
+      </section>
+
+      <div id="error-toast" class="error-toast" role="status" aria-live="assertive" hidden></div>
+    </main>
+  </body>
+</html>

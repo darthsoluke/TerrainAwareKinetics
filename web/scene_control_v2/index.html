@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#edf0f0">
+  <title>SOMA | Scene Control v2 Candidate</title>
+  <link rel="stylesheet" href="/scene-control-v2/styles.css">
+  <script type="importmap">{"imports":{"three":"/vendor/three.module.js"}}</script>
+  <script defer src="/vendor/lucide.min.js"></script>
+  <script type="module" src="/scene-control-v2/app.js"></script>
+</head>
+<body>
+  <main aria-label="SOMA scene control candidate">
+    <canvas id="stage" tabindex="0" aria-label="SOMA scene camera"></canvas>
+    <header class="toolbar">
+      <div class="identity"><strong>SOMA</strong><span>Scene Control v2</span></div>
+      <span class="candidate">CANDIDATE / ORIGINAL MODEL</span>
+      <span id="status" role="status">Connecting</span>
+      <div class="actions">
+        <label class="scene-picker"><span class="sr-only">Scene</span><select id="scene" disabled></select></label>
+        <button id="pause" type="button" title="Pause playback" aria-label="Pause playback" disabled><i data-lucide="pause"></i></button>
+        <button id="camera" type="button" title="Center camera" aria-label="Center camera"><i data-lucide="focus"></i></button>
+        <button id="reconnect" type="button" title="Reconnect session" aria-label="Reconnect session"><i data-lucide="plug-zap"></i></button>
+        <button id="settings-toggle" type="button" title="Settings" aria-label="Settings" aria-expanded="false" aria-controls="settings"><i data-lucide="sliders-horizontal"></i></button>
+      </div>
+    </header>
+    <aside id="settings" aria-label="Runtime settings" hidden>
+      <div class="settings-title"><h1>Settings</h1><div class="settings-tools">
+        <button id="diagnostics-export" type="button" title="Export diagnostics JSON" aria-label="Export diagnostics JSON" aria-controls="diagnostics-snapshot"><i data-lucide="file-json"></i></button>
+        <button id="settings-close" type="button" title="Close settings" aria-label="Close settings"><i data-lucide="x"></i></button>
+      </div></div>
+      <fieldset id="packet-options"><legend>Packet / frames</legend><div class="segments">
+        <label><input type="radio" name="packet" value="4" checked><span>4</span></label>
+        <label><input type="radio" name="packet" value="8"><span>8</span></label>
+      </div></fieldset>
+      <fieldset id="preview-options"><legend>Preview / tokens</legend><div class="segments">
+        <label><input type="radio" name="preview" value="8" checked><span>8</span></label>
+        <label><input type="radio" name="preview" value="12"><span>12</span></label>
+        <label><input type="radio" name="preview" value="16"><span>16</span></label>
+      </div></fieldset>
+      <label class="speed-label" for="speed">Speed <output id="speed-value" for="speed">1.6 m/s</output></label>
+      <input id="speed" type="range" min="0" max="3" value="1.6" step="0.1">
+      <dl class="settings-facts"><div><dt>Playback</dt><dd>30 Hz</dd></div><div><dt>Geometry</dt><dd>full18056</dd></div><div><dt>Replan / Pose passes</dt><dd>4 / 4</dd></div></dl>
+      <output id="settings-status">Revision 0</output>
+      <textarea id="diagnostics-snapshot" readonly hidden wrap="off" spellcheck="false" aria-label="Diagnostics snapshot JSON"></textarea>
+    </aside>
+    <div id="error" role="alert" hidden></div>
+    <div class="drive-pad" aria-label="Movement controls">
+      <button type="button" data-key="w" class="forward" title="Forward (W)" aria-label="Forward"><i data-lucide="arrow-up"></i></button>
+      <button type="button" data-key="a" class="left" title="Left (A)" aria-label="Left"><i data-lucide="arrow-left"></i></button>
+      <button type="button" data-key="s" class="back" title="Backward (S)" aria-label="Backward"><i data-lucide="arrow-down"></i></button>
+      <button type="button" data-key="d" class="right" title="Right (D)" aria-label="Right"><i data-lucide="arrow-right"></i></button>
+      <button type="button" data-key="shift" class="run" title="Run (Shift)" aria-label="Run" aria-pressed="false"><i data-lucide="chevrons-up"></i></button>
+    </div>
+    <footer class="telemetry" aria-label="Playback telemetry">
+      <span>FRAME <b id="frame">0</b></span><span>CMD <b id="command">0</b></span><span>ACK <b id="ack">-</b></span>
+      <span>SCENE / SET <b id="revision">0 / 0</b></span><span>PACKET <b id="packet">-</b></span><span>HZ <b id="hz">0.0</b></span>
+    </footer>
+  </main>
+</body>
+</html>

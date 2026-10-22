@@ -1,0 +1,15 @@
+{
+  "arm": "A",
+  "frames": 16,
+  "updates": 12,
+  "teacher_forced": true,
+  "rollouts": 48,
+  "feet_error_p50_m": 0.01700340211391449,
+  "feet_error_p90_m": 0.07039814889431001,
+  "body_error_p50_m": 0.015235021710395813,
+  "body_error_p90_m": 0.03905066996812822,
+  "feet_stance_p50_m": 0.011169664561748505,
+  "feet_stance_values": 1484,
+  "feet_swing_p50_m": 0.030674941837787628,
+  "feet_swing_values": 1780
+}

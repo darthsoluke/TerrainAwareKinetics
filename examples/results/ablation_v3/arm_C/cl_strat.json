@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "arm": "C",
+    "frames": 16,
+    "updates": 12,
+    "random_init": false,
+    "teacher_forced": false,
+    "rollouts": 48,
+    "dropped": 0,
+    "stance_frames": 378,
+    "motion_amplitude_p50": 0.3841968923807144,
+    "root_amplitude_p50": 0.26227879524230957,
+    "wrench_mu": 1.0,
+    "wrench_linear_p50": 0.8768727334552777,
+    "wrench_linear_p90": 2.4471574886440792,
+    "wrench_angular_p50": 0.5024274518871727,
+    "wrench_angular_p90": 1.4890565422634952,
+    "wrench_feasible_fraction": 0.007936507936507936,
+    "rollout_stance_p10": 0.3117047905921936,
+    "rollout_stance_median": 0.3348618447780609,
+    "rollout_stance_p90": 0.338084352016449,
+    "rollout_stance_p95": 0.33936659097671507,
+    "rollout_stance_mean": 0.33074575662612915,
+    "rollout_stance_over_5cmps": 1.0,
+    "rollout_stance_over_10cmps": 1.0
+  }
+}

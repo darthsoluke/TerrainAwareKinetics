@@ -1,0 +1,4 @@
+mink==0.0.13
+qpsolvers==4.13.0
+daqp==0.10.3
+mujoco==3.8.0

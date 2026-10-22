@@ -1,0 +1,57 @@
+:root { --toolbar-height: 62px; color-scheme: light; font: 12px/1.45 system-ui, sans-serif; color: #263238; background: #dde6e7; letter-spacing: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; overflow: hidden; }
+main { height: 100dvh; min-height: 260px; }
+button, select, input { font: inherit; color: inherit; }
+button { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 8px; border: 1px solid #c7d0d1; border-radius: 5px; background: #f9fbfc; cursor: pointer; flex-shrink: 0; }
+button:hover { background: #e3ebeb; border-color: #7c9094; }
+button:disabled { opacity: .45; cursor: default; }
+button:focus-visible, select:focus-visible, input:focus-visible { outline: 2px solid #167b78; outline-offset: 2px; }
+button svg { width: 19px; height: 19px; flex-shrink: 0; }
+button[aria-pressed="true"], button.is-down { color: #fff; background: #276e70; border-color: #276e70; }
+[hidden] { display: none !important; }
+#stage { display: block; width: 100%; height: 100%; outline: none; touch-action: none; }
+.toolbar { position: absolute; top: 0; inset-inline: 0; display: flex; align-items: center; gap: 14px; min-height: 62px; padding: max(10px, env(safe-area-inset-top)) 16px 10px; border-bottom: 1px solid #c8d2d3; background: #f4f7f8f5; }
+.identity { display: flex; align-items: baseline; gap: 9px; white-space: nowrap; }
+.identity strong { font-size: 21px; font-weight: 750; color: #20494d; }
+.identity span { font-size: 12px; }
+.candidate { font-size: 10px; color: #8f3f22; font-weight: 650; }
+#status { color: #476067; font-size: 11px; min-width: 0; overflow-wrap: anywhere; }
+.actions { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+.scene-picker { min-width: 0; }
+select { max-width: 215px; width: 100%; min-width: 90px; height: 36px; border: 1px solid #c7d0d1; border-radius: 5px; background: #fff; padding: 0 26px 0 9px; text-overflow: ellipsis; }
+#settings { position: absolute; top: calc(var(--toolbar-height) + 10px); right: 12px; width: 264px; max-width: calc(100vw - 24px); max-height: calc(100dvh - var(--toolbar-height) - 64px); overflow-y: auto; padding: 13px 16px 16px; background: #f6f9faf7; border: 1px solid #becbcc; border-radius: 5px; }
+.settings-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.settings-tools { display: flex; gap: 4px; }
+h1 { font-size: 14px; margin: 0; font-weight: 650; }
+.settings-title button { width: 28px; height: 28px; padding: 5px; }
+fieldset { border: 0; margin: 0 0 15px; padding: 0; min-width: 0; }
+legend { padding: 0; margin-bottom: 6px; font-weight: 600; }
+.segments { display: flex; border: 1px solid #bdcccd; border-radius: 5px; overflow: hidden; }
+.segments label { flex: 1; position: relative; cursor: pointer; }
+.segments label + label { border-left: 1px solid #bdcccd; }
+.segments input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.segments span { display: block; text-align: center; padding: 6px; background: #fff; }
+.segments input:checked + span { background: #286d70; color: #fff; }
+.segments input:focus-visible + span { outline: 2px solid #bd682e; outline-offset: -3px; }
+.segments input:disabled + span { opacity: .55; cursor: default; }
+.speed-label { display: flex; justify-content: space-between; font-weight: 600; }
+#speed { width: 100%; margin: 10px 0 7px; accent-color: #286d70; }
+.settings-facts { font-size: 11px; border-top: 1px solid #d4ddde; padding-top: 10px; margin: 10px 0; }
+.settings-facts div { display: flex; justify-content: space-between; gap: 12px; margin: 6px 0; }
+dt { color: #62777b; } dd { margin: 0; font-variant-numeric: tabular-nums; }
+#settings-status { font-size: 11px; color: #63777a; }
+#diagnostics-snapshot { display: block; width: 100%; height: 112px; margin-top: 10px; padding: 6px; resize: vertical; border: 1px solid #bdcccd; border-radius: 4px; background: #fff; color: #29494f; font: 11px/1.4 ui-monospace, monospace; }
+#error { position: absolute; top: calc(var(--toolbar-height) + 14px); left: 14px; max-width: min(580px, calc(100vw - 28px)); padding: 9px 12px; border-left: 3px solid #b34839; background: #fff2eef5; color: #823b31; overflow-wrap: anywhere; }
+.drive-pad { position: absolute; left: max(16px, env(safe-area-inset-left)); bottom: calc(52px + env(safe-area-inset-bottom)); display: grid; grid-template: repeat(2, 40px) / repeat(4, 40px); gap: 5px; }
+.drive-pad button { width: 40px; height: 40px; background: #f7fafbcc; touch-action: none; user-select: none; }
+.drive-pad button.is-down { background: #276e70; }
+.forward { grid-area: 1 / 2; } .left { grid-area: 2 / 1; } .back { grid-area: 2 / 2; } .right { grid-area: 2 / 3; } .run { grid-area: 1 / 4; }
+.telemetry { position: absolute; bottom: 0; inset-inline: 0; display: flex; flex-wrap: wrap; gap: 5px 20px; padding: 9px 16px calc(9px + env(safe-area-inset-bottom)); background: #f4f7f8ed; border-top: 1px solid #c8d2d3; color: #637a80; font-size: 10px; }
+.telemetry span { white-space: nowrap; } .telemetry b { font-weight: 600; color: #29494f; font-variant-numeric: tabular-nums; margin-left: 5px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+@media (max-width: 1000px) { .toolbar { gap: 10px; flex-wrap: wrap; } .candidate { margin-right: auto; } #status { order: 4; } .actions { order: 5; margin-left: auto; } }
+@media (max-width: 580px) { .toolbar { padding-inline: 10px; gap: 6px 10px; } .identity strong { font-size: 18px; } .identity span { font-size: 11px; } .candidate { font-size: 9px; } #status { flex: 1; font-size: 10px; } .actions { gap: 4px; } .actions button { width: 32px; height: 32px; padding: 6px; } select { max-width: 125px; min-width: 60px; height: 32px; font-size: 11px; } .telemetry { gap: 3px 12px; padding-inline: 10px; font-size: 9px; } .drive-pad { left: 10px; bottom: calc(62px + env(safe-area-inset-bottom)); } #settings { right: 10px; } }
+@media (max-width: 370px) { .identity span { font-size: 10px; } .candidate { font-size: 8px; } select { max-width: 92px; } .toolbar { column-gap: 6px; } }
+@media (max-width: 580px), (max-height: 480px) { .settings-open .drive-pad { visibility: hidden; } }
+@media (max-height: 480px) { .drive-pad { grid-template-rows: repeat(2, 32px); grid-template-columns: repeat(4, 32px); } .drive-pad button { width: 32px; height: 32px; padding: 5px; } }

@@ -1,0 +1,21 @@
+{
+  "schema": "motionbricks.mb_sonic.runtime_config.v1",
+  "mode": "official_reference",
+  "scene_root": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/scenes",
+  "initial_scene_id": "000",
+  "enabled_scene_ids": ["000"],
+  "robot_model": "${UPSTREAM_ROOT}/gear_sonic/data/robot_model/model_data/g1/g1_29dof_with_hand.xml",
+  "reference_dir": "${UPSTREAM_ROOT}/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428",
+  "policy_dir": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/sonic_6733128",
+  "encoder_sha256": "013ab0287236aa2721e13f1e936d699db982302d0de0bfcdae76d5c3245362d3",
+  "decoder_sha256": "c7241a123eaa36b5d64bad19540efde93cac1ad443bd4572fd12ca99898118ed",
+  "observation_config_sha256": "466d05947c78af6c76388adfb86e3a2a77b2a1d921a64883ed3d085ebf58de1b",
+  "policy_threads": 1,
+  "physics_dt_s": 0.005,
+  "duration_s": 5.0,
+  "clock": {
+    "strategy": "windows_event_wait_1ms",
+    "timer_resolution_ms": 1
+  },
+  "recording_dir": "${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/e1_live_v4"
+}

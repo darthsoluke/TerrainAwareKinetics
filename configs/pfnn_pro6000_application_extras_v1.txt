@@ -1,0 +1,16 @@
+iniconfig==2.3.1
+pluggy==1.6.0
+regex==2026.9.29
+frozendict==2.4.7
+huggingface_hub==1.33.0
+lightning-utilities==0.15.3
+tokenizers==0.22.2
+safetensors==0.8.0
+typer==0.27.3
+einx==0.4.3
+hf-xet==1.7.0
+httpx==0.28.1
+httpcore==1.0.9
+anyio==4.15.1
+h11==0.16.0
+shellingham==1.5.4
