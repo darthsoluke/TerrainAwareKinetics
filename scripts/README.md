@@ -7,6 +7,7 @@
 | 查看三臂结果表 | [compare_arms.py](compare_arms.py) | 可使用仓库内精简结果直接运行 |
 | 最新统一源支撑评估 | [review_pfnn_ablation_fixed_masks.py](review_pfnn_ablation_fixed_masks.py) | 需要相应checkpoint与数据 |
 | PFNN全量索引审计 | [audit_pfnn_full_coverage.py](audit_pfnn_full_coverage.py) | 需要既有数据/cache |
+| BONES地形拟合候选摸底 | [survey_bones_terrain_candidates.py](survey_bones_terrain_candidates.py) | 只读时间轴/元数据标注；见[计划](../docs/records/bones_terrain_fitting_plan_20261022.md) |
 | P1训练 | [train_pfnn_frame_actor.py](train_pfnn_frame_actor.py) | 旧P1已结束，不应重复执行 |
 | A/B/C小试 | [train_pfnn_frame_ablation.py](train_pfnn_frame_ablation.py) | v3三臂已完成 |
 | 逐帧模型评估 | [evaluate_pfnn_frame_actor.py](evaluate_pfnn_frame_actor.py) | 已用于P1零训练对照 |

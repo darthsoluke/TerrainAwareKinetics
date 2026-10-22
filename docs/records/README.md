@@ -10,6 +10,7 @@
 - [Adding Your Own Dataset](adding_your_own_dataset.md)
 - [BONES-SEED Locomotion Training Plan](bones_seed_locomotion_training_plan.md)
 - [BONES-SEED Training Execution](bones_seed_training_execution_20261004.md)
+- [BONES-SEED 地形拟合：阶段计划与第一步](bones_terrain_fitting_plan_20261022.md)
 - [Training Asset Inventory: taku-g3](dataset_inventory_takug3.md)
 - [LAFAN Resolved -> SOMA -> Native MotionBricks](lafan_mb_training_20261006.md)
 - [Long-Route Mixed Continuation](long_route_mixed_training_20261010.md)
