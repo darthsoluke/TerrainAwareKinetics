@@ -9,6 +9,7 @@
 | PFNN全量索引审计 | [audit_pfnn_full_coverage.py](audit_pfnn_full_coverage.py) | 需要既有数据/cache |
 | BONES地形拟合候选摸底 | [survey_bones_terrain_candidates.py](survey_bones_terrain_candidates.py) | 只读标注；[PRO6000真实数据结果](../docs/records/bones_terrain_survey_pro6000_20261023.md)已完成 |
 | BONES地形几何筛查 | [screen_bones_terrain_geometry.py](screen_bones_terrain_geometry.py) | 读BVH、不改动作；组定义见[配置](../configs/bones_terrain_screen_v1.json) |
+| BONES支撑几何拟合与可视化 | [fit_bones_terrain_support.py](fit_bones_terrain_support.py) | 需要筛查结果目录；输出拟合JSON、图片和[浏览器查看页](../web/terrain_fit_review/index.html)数据 |
 | BONES原始BVH迁移 | [transfer_bones_originals.py](transfer_bones_originals.py) | 逐文件清单、按日期打包、私有Drive与目标全量哈希校验；[执行记录](../docs/records/bones_terrain_survey_v2_pro6000_20261023.md) |
 | P1训练 | [train_pfnn_frame_actor.py](train_pfnn_frame_actor.py) | 旧P1已结束，不应重复执行 |
 | A/B/C小试 | [train_pfnn_frame_ablation.py](train_pfnn_frame_ablation.py) | v3三臂已完成 |

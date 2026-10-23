@@ -71,13 +71,16 @@ def _init_worker():
     reference = skeleton30.neutral_joints[skeleton30.foot_joint_idx] + offsets
     standing_hip = float(-reference[:, 1].median())
     surfaces, _, _, _ = official_sole_surfaces(skeleton30)
-    _STATE.update(full=full, landmark_index={name: names.index(name) for name in LANDMARKS},
+    _STATE.update(full=full, names=names, landmark_index={name: names.index(name) for name in LANDMARKS},
                   skinner=load_official_skinner(full), surfaces=surfaces,
                   standing_hip=standing_hip, np=np, torch=torch)
 
 
-def convert(path):
-    """Official BVH -> 30 Hz SOMA77 joints and sole regions, in source world coordinates."""
+def convert(path, extra_names=()):
+    """Official BVH -> 30 Hz SOMA77 joints and sole regions, in source world coordinates.
+
+    Returns LANDMARKS plus any extra SOMA77 joint names that exist (for review drawings).
+    """
     from kimodo.exports.bvh import bvh_to_kimodo_motion
     from kimodo.exports.motion_io import complete_motion_dict
     from kimodo.skeleton.bvh import Bvh, SkeletonBvh
@@ -108,6 +111,9 @@ def convert(path):
     posed = motion["posed_joints"].cpu().numpy().astype(np.float32)
     soles, _, parity = _skin_sole_regions(rotations, posed, _STATE["skinner"], _STATE["surfaces"])
     joints = {name: posed[:, index].astype(np.float64) for name, index in _STATE["landmark_index"].items()}
+    for name in extra_names:
+        if name in _STATE["names"] and name not in joints:
+            joints[name] = posed[:, _STATE["names"].index(name)].astype(np.float64)
     return soles, joints, root.astype(np.float64), float(source_fps), parity
 
 

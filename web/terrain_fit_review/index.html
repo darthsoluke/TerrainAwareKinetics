@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Terrain Fit Review</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"/web/soma_lab/vendor/three.module.js"}}</script>
+</head>
+<body>
+<header>
+  <h1>Terrain Fit Review</h1>
+  <label>Clip <select id="clip"></select></label>
+  <label>Boxes <select id="variant"><option value="minimal">minimal</option><option value="maximal">maximal</option><option value="both" selected>both</option></select></label>
+  <label><input id="trail" type="checkbox" checked> Hip path</label>
+  <label class="file">Open JSON <input id="file" type="file" accept=".json" multiple></label>
+  <span id="status">Loading</span>
+</header>
+<main><section id="view"></section><aside id="info"></aside></main>
+<footer>
+  <button id="play" aria-label="Play or pause">Pause</button>
+  <input id="timeline" type="range" min="0" max="1" value="0" step="1" aria-label="Frame">
+  <output id="time">0.00 s</output>
+  <select id="speed" aria-label="Playback speed"><option value=".25">0.25x</option><option value=".5">0.5x</option><option value="1" selected>1x</option></select>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
