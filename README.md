@@ -27,6 +27,8 @@
 
 后续 [BONES 几何筛查](docs/records/bones_terrain_screen_pro6000_20261023.md) 的试运行、全量结果和逐片段紧凑表见 [结果目录](examples/results/bones_terrain_screen_v1_20261023/README.md)。
 
+[支撑几何拟合与可视化](examples/results/bones_terrain_fit_v1_20261023/README.md) 已完成 6,788 条拟合，发布 221 张接触图、38 条 viewer 数据及完整分组指标。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

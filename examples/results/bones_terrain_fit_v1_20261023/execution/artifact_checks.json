@@ -1,0 +1,52 @@
+{
+  "pngs_decoded": 221,
+  "png_dimensions": [
+    [
+      1320,
+      572
+    ]
+  ],
+  "gifs_checked_on_pro6000": 221,
+  "source_fit_jsons": 6788,
+  "viewer_clips": 38,
+  "viewer_groups": {
+    "box_support": 3,
+    "crouch": 4,
+    "flat_control": 1,
+    "kneel": 4,
+    "known_dimension_support": 5,
+    "ladder": 2,
+    "obstacle_clearance": 3,
+    "prone": 5,
+    "quadruped": 4,
+    "stairs": 4,
+    "wall_contact": 3
+  },
+  "viewer_stems": {
+    "come_down_50cm_box": 2,
+    "come_up_50cm_box": 2,
+    "crawl": 2,
+    "crouch": 4,
+    "h_b_w_crouch_to_stand": 1,
+    "h_b_w_stand_to_crouch": 1,
+    "idle_crawl": 2,
+    "idle_turn": 1,
+    "jump_on_box_230cm": 1,
+    "jump_over_obstacle_1.5m": 1,
+    "jump_over_obstacle_1m": 1,
+    "jump_over_obstacle_2m": 1,
+    "jump_to_shoulder_roll": 3,
+    "kneeling": 4,
+    "ladder_climbing_stepdown": 1,
+    "ladder_slip": 1,
+    "mohak_forward": 2,
+    "mohak_turn": 1,
+    "on_all_fours_turn": 1,
+    "stairs_climbing_down": 1,
+    "stairs_climbing_jog_up": 1,
+    "stairs_climbing_up": 2,
+    "turn_crawl": 1,
+    "wall_leaning_idle": 1
+  },
+  "private_payloads_in_publication": 0
+}

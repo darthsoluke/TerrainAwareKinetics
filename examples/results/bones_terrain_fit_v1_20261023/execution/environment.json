@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-10-23T12:53:52.463393+00:00",
+  "python": "${PFNN_PROJECT}/env/bin/python",
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.7.1+cu128",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1",
+    "matplotlib": "3.11.2",
+    "Pillow": "12.3.0"
+  },
+  "kimodo_file": "${KIMODO_ROOT}/kimodo/__init__.py",
+  "cpu_affinity_count": 72,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "${KIMODO_ROOT}"
+  },
+  "sha256": {
+    "runs/bones_screen_v1_full/report.json": "06df1e9c76a9b8b1a3c2f1b7cf5de4218294da0aa44478d33d34cdd03a316e0c",
+    "runs/bones_screen_v1_full/selection.jsonl": "b7493518f2911116651b4387f22ce75096ad95e8d1004776e589e062e99422be",
+    "runs/bones_screen_v1_full/clips.jsonl": "c5f0aabd936a6101dfec2d91550aaffbd7f0d28230090222a891f824e98df98d",
+    "scripts/screen_bones_terrain_geometry.py": "f7d8617af9a437257aed527784fa02a808eba871690e88387d0ae2fab22d9fa8",
+    "${KIMODO_ROOT}/kimodo/assets/skeletons/somaskel77/skin_standard.npz": "90ee2cdf50f168382a7dd7e9c88b118298aba0aca4b72022080c89c4bab0ceb2"
+  },
+  "workers": 16
+}

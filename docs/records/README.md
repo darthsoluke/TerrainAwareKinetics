@@ -12,6 +12,7 @@
 - [BONES-SEED Training Execution](bones_seed_training_execution_20261004.md)
 - [BONES-SEED 地形拟合：阶段计划与第一步](bones_terrain_fitting_plan_20261022.md)
 - [BONES-SEED 几何筛查：PRO6000 试运行与全量结果](bones_terrain_screen_pro6000_20261023.md)
+- [BONES-SEED 支撑几何拟合与可视化：PRO6000 执行结果](bones_terrain_fit_pro6000_20261023.md)
 - [BONES-SEED 地形候选调查：PRO6000 执行结果](bones_terrain_survey_pro6000_20261023.md)
 - [BONES-SEED survey v2：词干清单与原始BVH迁移](bones_terrain_survey_v2_pro6000_20261023.md)
 - [Training Asset Inventory: taku-g3](dataset_inventory_takug3.md)

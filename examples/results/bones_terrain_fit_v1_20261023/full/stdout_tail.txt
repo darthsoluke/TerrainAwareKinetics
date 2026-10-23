@@ -1,0 +1,80 @@
+ },
+ "quadruped": {
+  "clips": 831,
+  "fitted": 831,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 696,
+   "1": 129,
+   "2": 5,
+   "3": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 830,
+   "penetration_max_p95_m": 0.1298
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 830,
+   "penetration_max_p95_m": 0.1298
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 830,
+   "evidence_conflicts_with_body": 99,
+   "no_usable_support": 23
+  }
+ },
+ "stairs": {
+  "clips": 49,
+  "fitted": 49,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 8,
+   "1": 12,
+   "2": 1,
+   "4": 4,
+   "5": 3,
+   "6": 1,
+   "7": 7,
+   "8": 7,
+   "9": 3,
+   "10": 3
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 21,
+   "penetration_max_p95_m": 0.7385
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 21,
+   "penetration_max_p95_m": 0.7385
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 21,
+   "evidence_conflicts_with_body": 24
+  }
+ },
+ "wall_contact": {
+  "clips": 350,
+  "fitted": 350,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 345,
+   "1": 5
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 36,
+   "penetration_max_p95_m": 0.0694
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 36,
+   "penetration_max_p95_m": 0.0694
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 36,
+   "evidence_conflicts_with_body": 5
+  }
+ }
+}
+FIT_EXIT=0

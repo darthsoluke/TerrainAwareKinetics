@@ -1,0 +1,265 @@
+{
+  "box_support": {
+    "clips": 48,
+    "fitted": 48,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "1": 35,
+      "2": 12,
+      "3": 1
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 22,
+      "penetration_max_p95_m": 0.5966
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 22,
+      "penetration_max_p95_m": 0.5966
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 22,
+      "evidence_conflicts_with_body": 11
+    }
+  },
+  "crouch": {
+    "clips": 1143,
+    "fitted": 1143,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 1131,
+      "1": 12
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 36,
+      "penetration_max_p95_m": 0.0091
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 36,
+      "penetration_max_p95_m": 0.0091
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 36,
+      "evidence_conflicts_with_body": 4
+    }
+  },
+  "flat_control": {
+    "clips": 900,
+    "fitted": 900,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 869,
+      "1": 31
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.002
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.002
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "evidence_conflicts_with_body": 8
+    }
+  },
+  "kneel": {
+    "clips": 638,
+    "fitted": 638,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 384,
+      "1": 246,
+      "2": 8
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 619,
+      "penetration_max_p95_m": 0.0962
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 619,
+      "penetration_max_p95_m": 0.0962
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "no_usable_support": 103,
+      "penetration_over_report": 619,
+      "evidence_conflicts_with_body": 126
+    }
+  },
+  "known_dimension_support": {
+    "clips": 1760,
+    "fitted": 1760,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 11,
+      "1": 1739,
+      "2": 10
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 32,
+      "penetration_max_p95_m": 0.0004
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 32,
+      "penetration_max_p95_m": 0.0004
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "evidence_conflicts_with_body": 79,
+      "penetration_over_report": 32
+    }
+  },
+  "ladder": {
+    "clips": 64,
+    "fitted": 64,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 45,
+      "1": 15,
+      "2": 4
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 16,
+      "penetration_max_p95_m": 0.7135
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 16,
+      "penetration_max_p95_m": 0.7135
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "no_usable_support": 13,
+      "penetration_over_report": 16,
+      "evidence_conflicts_with_body": 13
+    }
+  },
+  "obstacle_clearance": {
+    "clips": 86,
+    "fitted": 86,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 73,
+      "1": 8,
+      "2": 3,
+      "3": 1,
+      "4": 1
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 4,
+      "penetration_max_p95_m": 0.0156
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 4,
+      "penetration_max_p95_m": 0.0156
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "evidence_conflicts_with_body": 12,
+      "penetration_over_report": 4
+    }
+  },
+  "prone": {
+    "clips": 919,
+    "fitted": 919,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 542,
+      "1": 367,
+      "2": 10
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 904,
+      "penetration_max_p95_m": 0.1261
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 904,
+      "penetration_max_p95_m": 0.1261
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 904,
+      "evidence_conflicts_with_body": 349,
+      "no_usable_support": 31
+    }
+  },
+  "quadruped": {
+    "clips": 831,
+    "fitted": 831,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 696,
+      "1": 129,
+      "2": 5,
+      "3": 1
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 830,
+      "penetration_max_p95_m": 0.1298
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 830,
+      "penetration_max_p95_m": 0.1298
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 830,
+      "evidence_conflicts_with_body": 99,
+      "no_usable_support": 23
+    }
+  },
+  "stairs": {
+    "clips": 49,
+    "fitted": 49,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 8,
+      "1": 12,
+      "2": 1,
+      "4": 4,
+      "5": 3,
+      "6": 1,
+      "7": 7,
+      "8": 7,
+      "9": 3,
+      "10": 3
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 21,
+      "penetration_max_p95_m": 0.7385
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 21,
+      "penetration_max_p95_m": 0.7385
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 21,
+      "evidence_conflicts_with_body": 24
+    }
+  },
+  "wall_contact": {
+    "clips": 350,
+    "fitted": 350,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 345,
+      "1": 5
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 36,
+      "penetration_max_p95_m": 0.0694
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 36,
+      "penetration_max_p95_m": 0.0694
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 36,
+      "evidence_conflicts_with_body": 5
+    }
+  }
+}

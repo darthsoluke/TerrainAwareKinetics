@@ -22,6 +22,7 @@ SECRETS = (
 )
 PAYLOADS = {'.pt', '.pth', '.ckpt', '.onnx', '.npz', '.npy', '.bvh', '.fbx',
             '.usd', '.usda', '.usdc', '.mp4', '.zip', '.tar', '.pem', '.key'}
+PNG_SIGNATURE = b'\x89PNG\r\n\x1a\n'
 
 
 def package_version(text, match):
@@ -51,7 +52,8 @@ def main():
     ).decode('utf-8').split('\0')
     paths = sorted({ROOT / name for name in names if name})
     errors = []
-    counts = dict(files=0, python=0, json=0, markdown=0, local_links=0)
+    counts = dict(files=0, python=0, json=0, markdown=0, png=0, local_links=0)
+    result_png_bytes = {}
     for path in paths:
         relative = path.relative_to(ROOT).as_posix()
         if not path.is_file():
@@ -61,6 +63,14 @@ def main():
         if path.suffix.lower() in PAYLOADS or path.name.endswith('.tar.gz'):
             errors.append(f'{relative}: private artifact type in source tree')
         raw = path.read_bytes()
+        parts = Path(relative).parts
+        if path.suffix.lower() == '.png' and parts[:2] == ('examples', 'results') and len(parts) > 3:
+            counts['png'] += 1
+            result_png_bytes[parts[2]] = result_png_bytes.get(parts[2], 0) + len(raw)
+            if (not raw.startswith(PNG_SIGNATURE) or raw[12:16] != b'IHDR'
+                    or len(raw) > 3 * 1024**2):
+                errors.append(f'{relative}: invalid or oversized review PNG')
+            continue
         if b'\0' in raw or len(raw) > 3 * 1024**2:
             errors.append(f'{relative}: binary or oversized source file')
             continue
@@ -103,6 +113,9 @@ def main():
                 counts['local_links'] += 1
                 if local.startswith('/') or not (path.parent / local).exists():
                     errors.append(f'{relative}:{number}: missing local link {local}')
+    for result, size in result_png_bytes.items():
+        if size > 40_000_000:
+            errors.append(f'examples/results/{result}: review PNGs exceed 40 MB')
     print(json.dumps(counts, sort_keys=True))
     if errors:
         print('\n'.join(errors))

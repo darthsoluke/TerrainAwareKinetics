@@ -1,0 +1,299 @@
+{
+  "source_commit": "50c1bf175626383a449835a01ab1022e36d72631",
+  "pngs": {
+    "generated": 221,
+    "generated_bytes": 33887479,
+    "published": 221,
+    "published_bytes": 33887479,
+    "limit_bytes": 40000000,
+    "omitted": []
+  },
+  "viewer": {
+    "published": 38,
+    "limit": 40,
+    "worst_penetration_clips": 25,
+    "requested_stems": {
+      "come_up_50cm_box": {
+        "requested": 2,
+        "available": 3,
+        "selected_required": 2
+      },
+      "jump_on_box_230cm": {
+        "requested": 1,
+        "available": 2,
+        "selected_required": 1
+      },
+      "stairs_climbing_up": {
+        "requested": 2,
+        "available": 3,
+        "selected_required": 2
+      },
+      "stairs_climbing_down": {
+        "requested": 1,
+        "available": 3,
+        "selected_required": 1
+      },
+      "mohak_forward": {
+        "requested": 2,
+        "available": 4,
+        "selected_required": 2
+      },
+      "crawl": {
+        "requested": 2,
+        "available": 2,
+        "selected_required": 2
+      },
+      "crouch": {
+        "requested": 2,
+        "available": 5,
+        "selected_required": 2
+      },
+      "kneeling": {
+        "requested": 1,
+        "available": 5,
+        "selected_required": 1
+      },
+      "h_b_w_stand_to_crouch": {
+        "requested": 1,
+        "available": 3,
+        "selected_required": 1
+      }
+    },
+    "clips": [
+      {
+        "file": "come_down_50cm_box_R_005__A053.json",
+        "stem": "come_down_50cm_box",
+        "group": "known_dimension_support",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "come_down_50cm_box_R_006__A053.json",
+        "stem": "come_down_50cm_box",
+        "group": "known_dimension_support",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "come_up_50cm_box_R_001__A206.json",
+        "stem": "come_up_50cm_box",
+        "group": "known_dimension_support",
+        "render_reason": "sample"
+      },
+      {
+        "file": "come_up_50cm_box_R_002__A053.json",
+        "stem": "come_up_50cm_box",
+        "group": "known_dimension_support",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "crawl_ff_loop_270_R_001__A216.json",
+        "stem": "crawl",
+        "group": "prone",
+        "render_reason": "sample"
+      },
+      {
+        "file": "crawl_ff_loop_315_005__A131.json",
+        "stem": "crawl",
+        "group": "prone",
+        "render_reason": "sample"
+      },
+      {
+        "file": "crouch_ff_start_315_003__A148.json",
+        "stem": "crouch",
+        "group": "crouch",
+        "render_reason": "sample"
+      },
+      {
+        "file": "crouch_ff_stop_225_001__A146.json",
+        "stem": "crouch",
+        "group": "crouch",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "crouch_ff_stop_225_002__A148.json",
+        "stem": "crouch",
+        "group": "crouch",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "crouch_ff_stop_315_001__A148.json",
+        "stem": "crouch",
+        "group": "crouch",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "h_b_w_crouch_to_stand_270_stop_002__A341.json",
+        "stem": "h_b_w_crouch_to_stand",
+        "group": "wall_contact",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "h_b_w_stand_to_crouch_270_start_001__A342.json",
+        "stem": "h_b_w_stand_to_crouch",
+        "group": "wall_contact",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "idle_crawl_stop_001__A215.json",
+        "stem": "idle_crawl",
+        "group": "prone",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "idle_crawl_stop_002__A233.json",
+        "stem": "idle_crawl",
+        "group": "prone",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "idle_turn_360_001__A066.json",
+        "stem": "idle_turn",
+        "group": "flat_control",
+        "render_reason": "sample"
+      },
+      {
+        "file": "jump_on_box_230cm_102__A305.json",
+        "stem": "jump_on_box_230cm",
+        "group": "known_dimension_support",
+        "render_reason": "sample"
+      },
+      {
+        "file": "jump_over_obstacle_1_5m_R_103__A305.json",
+        "stem": "jump_over_obstacle_1.5m",
+        "group": "obstacle_clearance",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "jump_over_obstacle_1m_R_102__A305.json",
+        "stem": "jump_over_obstacle_1m",
+        "group": "obstacle_clearance",
+        "render_reason": "sample"
+      },
+      {
+        "file": "jump_over_obstacle_2m_R_001__A304.json",
+        "stem": "jump_over_obstacle_2m",
+        "group": "obstacle_clearance",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "jump_to_shoulder_roll_R_002__A305.json",
+        "stem": "jump_to_shoulder_roll",
+        "group": "box_support",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "jump_to_shoulder_roll_R_003__A305.json",
+        "stem": "jump_to_shoulder_roll",
+        "group": "box_support",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "jump_to_shoulder_roll_R_102__A416.json",
+        "stem": "jump_to_shoulder_roll",
+        "group": "box_support",
+        "render_reason": "sample"
+      },
+      {
+        "file": "kneeling_loop_001__A101.json",
+        "stem": "kneeling",
+        "group": "kneel",
+        "render_reason": "sample"
+      },
+      {
+        "file": "kneeling_loop_003__A062.json",
+        "stem": "kneeling",
+        "group": "kneel",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "kneeling_start_002__A035.json",
+        "stem": "kneeling",
+        "group": "kneel",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "kneeling_start_003__A035.json",
+        "stem": "kneeling",
+        "group": "kneel",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "ladder_climbing_stepdown_R_101__A301.json",
+        "stem": "ladder_climbing_stepdown",
+        "group": "ladder",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "ladder_slip_R_002__A300.json",
+        "stem": "ladder_slip",
+        "group": "ladder",
+        "render_reason": "sample"
+      },
+      {
+        "file": "mohak_forward_loop_001__A033.json",
+        "stem": "mohak_forward",
+        "group": "quadruped",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "mohak_forward_stop_002__A036.json",
+        "stem": "mohak_forward",
+        "group": "quadruped",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "mohak_turn_090_001__A033.json",
+        "stem": "mohak_turn",
+        "group": "quadruped",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "on_all_fours_turn_270_R_003__A202.json",
+        "stem": "on_all_fours_turn",
+        "group": "quadruped",
+        "render_reason": "sample"
+      },
+      {
+        "file": "stairs_climbing_down_stop_R_102__A301.json",
+        "stem": "stairs_climbing_down",
+        "group": "stairs",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "stairs_climbing_jog_up_start_R_102__A301.json",
+        "stem": "stairs_climbing_jog_up",
+        "group": "stairs",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "stairs_climbing_up_start_R_003__A300.json",
+        "stem": "stairs_climbing_up",
+        "group": "stairs",
+        "render_reason": "sample"
+      },
+      {
+        "file": "stairs_climbing_up_start_R_101__A301.json",
+        "stem": "stairs_climbing_up",
+        "group": "stairs",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "turn_crawl_360_R_003__A233.json",
+        "stem": "turn_crawl",
+        "group": "prone",
+        "render_reason": "worst_penetration"
+      },
+      {
+        "file": "wall_leaning_idle_360_R_003__A285.json",
+        "stem": "wall_leaning_idle",
+        "group": "wall_contact",
+        "render_reason": "sample"
+      }
+    ]
+  },
+  "private_outputs": {
+    "pilot": "runs/bones_fit_v1_pilot",
+    "full": "runs/bones_fit_v1_full",
+    "gifs": "viz/<group>/*.gif",
+    "fits": "fits/*.json"
+  }
+}

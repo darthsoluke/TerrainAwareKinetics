@@ -1,0 +1,1646 @@
+{
+  "schema": "bones-terrain-fit-publication-v1",
+  "execution_host": "PRO6000",
+  "source_commit": "50c1bf175626383a449835a01ab1022e36d72631",
+  "transformation": "Private paths replaced with role placeholders; PNGs, viewer motion and scientific values unchanged.",
+  "files": [
+    {
+      "file": "execution/artifact_checks.json",
+      "original_sha256": "fe003f370bac63f10fb78d6b15525faeb63c35def21b79d8a1bb5239aba11b9c",
+      "published_sha256": "fe003f370bac63f10fb78d6b15525faeb63c35def21b79d8a1bb5239aba11b9c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "execution/environment.json",
+      "original_sha256": "7a2695b46d5600026b7fac33ee3720242a3a411c17190d796effdba73c33bff6",
+      "published_sha256": "9075581b466cf1b6f84eecb980de83fb7096f5a89a4830d1a0a8c3d31106efca",
+      "machine_path_substitutions": true
+    },
+    {
+      "file": "execution/imports.txt",
+      "original_sha256": "7b953977c1fa47790c999f37392ad9d05b12c3c05255755e6b344f8561099e6b",
+      "published_sha256": "7b953977c1fa47790c999f37392ad9d05b12c3c05255755e6b344f8561099e6b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "execution/tests.txt",
+      "original_sha256": "cae031faa8b299ee5c009ce1e6e8704f75602d81b7102502e7a32a734b6cb4f7",
+      "published_sha256": "cae031faa8b299ee5c009ce1e6e8704f75602d81b7102502e7a32a734b6cb4f7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/actor_scale.json",
+      "original_sha256": "350cc1d47de2b86c3bf595843440d12a887c74343d71d8adcf1d4ddcc2eba027",
+      "published_sha256": "350cc1d47de2b86c3bf595843440d12a887c74343d71d8adcf1d4ddcc2eba027",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/by_group.json",
+      "original_sha256": "582c1c5edeaf4672fa557f74edebf85e3115490fd36b2d82dafa368fcb2a20ca",
+      "published_sha256": "582c1c5edeaf4672fa557f74edebf85e3115490fd36b2d82dafa368fcb2a20ca",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/fits_compact.tsv",
+      "original_sha256": "49e0144cc88235a09bfbf973852c247481f1455c1eb21fdb3200ff361f37571c",
+      "published_sha256": "49e0144cc88235a09bfbf973852c247481f1455c1eb21fdb3200ff361f37571c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/report.json",
+      "original_sha256": "562999baf5bae3cd186ff90d8d4f23f14d0ce899885106e63668e49f4a70cb19",
+      "published_sha256": "562999baf5bae3cd186ff90d8d4f23f14d0ce899885106e63668e49f4a70cb19",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/stdout_tail.txt",
+      "original_sha256": "d199f76ac4e6fc2f04cf32e75769ce1424920f01a602bd3cfb9d7ef81ca69a5d",
+      "published_sha256": "d199f76ac4e6fc2f04cf32e75769ce1424920f01a602bd3cfb9d7ef81ca69a5d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/come_down_50cm_box_R_005__A053.json",
+      "original_sha256": "2cc15fcb6e08eee5b896f78d68fc5c9dc961479e863ddd8c26cf278eb856d3b3",
+      "published_sha256": "2cc15fcb6e08eee5b896f78d68fc5c9dc961479e863ddd8c26cf278eb856d3b3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/come_down_50cm_box_R_006__A053.json",
+      "original_sha256": "5c3a1d69b21c6d780f289e0ddd1b539a3c5666f9606a47912eede8659bc9eee3",
+      "published_sha256": "5c3a1d69b21c6d780f289e0ddd1b539a3c5666f9606a47912eede8659bc9eee3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/come_up_50cm_box_R_001__A206.json",
+      "original_sha256": "2488cf596027770ac3ef759de0d13e2c3a3b7a1bf4309cb4011e03658393c650",
+      "published_sha256": "2488cf596027770ac3ef759de0d13e2c3a3b7a1bf4309cb4011e03658393c650",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/come_up_50cm_box_R_002__A053.json",
+      "original_sha256": "08782faa0cc3854224bf48c16fc176516eb502715ee637648266f52cf5dc7a9b",
+      "published_sha256": "08782faa0cc3854224bf48c16fc176516eb502715ee637648266f52cf5dc7a9b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/crawl_ff_loop_270_R_001__A216.json",
+      "original_sha256": "7995cebc7c307e28ad848b3c1a6cf5a94311eb548b876ae9fa6b75d391289295",
+      "published_sha256": "7995cebc7c307e28ad848b3c1a6cf5a94311eb548b876ae9fa6b75d391289295",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/crawl_ff_loop_315_005__A131.json",
+      "original_sha256": "1ce0162401c9bf54a588f5b57e4599406359d2a2761707d77ebaeea40354ce47",
+      "published_sha256": "1ce0162401c9bf54a588f5b57e4599406359d2a2761707d77ebaeea40354ce47",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/crouch_ff_start_315_003__A148.json",
+      "original_sha256": "79bfef0e6f9bfef4c0883d1ecd7b7427b5a3be60283f425ac1f5c40fbdf5024e",
+      "published_sha256": "79bfef0e6f9bfef4c0883d1ecd7b7427b5a3be60283f425ac1f5c40fbdf5024e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/crouch_ff_stop_225_001__A146.json",
+      "original_sha256": "45c896f23dcafcf3546b10f035045310d80c15dc75ba65979d04da6b367039c3",
+      "published_sha256": "45c896f23dcafcf3546b10f035045310d80c15dc75ba65979d04da6b367039c3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/crouch_ff_stop_225_002__A148.json",
+      "original_sha256": "953fd632ed807c5e90be5f06ad832b63c34a7d019cc50e5717ebb9b572af2927",
+      "published_sha256": "953fd632ed807c5e90be5f06ad832b63c34a7d019cc50e5717ebb9b572af2927",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/crouch_ff_stop_315_001__A148.json",
+      "original_sha256": "e74ab7b7c3b4ae2972b2cf713181ae356e37f792a655c703da16634103153372",
+      "published_sha256": "e74ab7b7c3b4ae2972b2cf713181ae356e37f792a655c703da16634103153372",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/h_b_w_crouch_to_stand_270_stop_002__A341.json",
+      "original_sha256": "e64f2028aeaa7858a183808abff45a7e173d2f138e4fb4b000f26dd04846fde4",
+      "published_sha256": "e64f2028aeaa7858a183808abff45a7e173d2f138e4fb4b000f26dd04846fde4",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/h_b_w_stand_to_crouch_270_start_001__A342.json",
+      "original_sha256": "58837307e4ec545576fe62c9a5f20f962b80749c5dfd50f94ab755831bdfd73d",
+      "published_sha256": "58837307e4ec545576fe62c9a5f20f962b80749c5dfd50f94ab755831bdfd73d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/idle_crawl_stop_001__A215.json",
+      "original_sha256": "21f622fbb2d63449865e21a667f9c32324d516439ece337527a8b5ac656a6b9f",
+      "published_sha256": "21f622fbb2d63449865e21a667f9c32324d516439ece337527a8b5ac656a6b9f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/idle_crawl_stop_002__A233.json",
+      "original_sha256": "3b355d6124eaef0b8b90a16d4e397fecde4c748ccc7564387ffcae85be9dfb2a",
+      "published_sha256": "3b355d6124eaef0b8b90a16d4e397fecde4c748ccc7564387ffcae85be9dfb2a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/idle_turn_360_001__A066.json",
+      "original_sha256": "49932d7946f92cf80e9d10c78af58f9ead26c969ab40f64e617496ebf5f71055",
+      "published_sha256": "49932d7946f92cf80e9d10c78af58f9ead26c969ab40f64e617496ebf5f71055",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/index.json",
+      "original_sha256": "00bb2bbfb279fa22091e6204638f2d7edab168a71243d4babfbe5ab7d7013f99",
+      "published_sha256": "00bb2bbfb279fa22091e6204638f2d7edab168a71243d4babfbe5ab7d7013f99",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_on_box_230cm_102__A305.json",
+      "original_sha256": "397ffa8afd18f48b5cf8e4001f2cff307234e7cafe0029e36b657c12c5129715",
+      "published_sha256": "397ffa8afd18f48b5cf8e4001f2cff307234e7cafe0029e36b657c12c5129715",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_over_obstacle_1_5m_R_103__A305.json",
+      "original_sha256": "8630dd672af4b9ee86b1fd7885aa6edc0a802f88a489bef0fbb231e84cb7d295",
+      "published_sha256": "8630dd672af4b9ee86b1fd7885aa6edc0a802f88a489bef0fbb231e84cb7d295",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_over_obstacle_1m_R_102__A305.json",
+      "original_sha256": "9b99ced1b252ce311f7d172574daeccd6db58eec403a506cc885537929fd4037",
+      "published_sha256": "9b99ced1b252ce311f7d172574daeccd6db58eec403a506cc885537929fd4037",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_over_obstacle_2m_R_001__A304.json",
+      "original_sha256": "bfe87f52964c9af386b44a7ea8e114a5f42c9b3af8f89c3e89f619c2f1dc461a",
+      "published_sha256": "bfe87f52964c9af386b44a7ea8e114a5f42c9b3af8f89c3e89f619c2f1dc461a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_to_shoulder_roll_R_002__A305.json",
+      "original_sha256": "6f02f1e74e389e3fcbd79831b8a83a7792bbcefa8b7d28ae17b6528a91a12a54",
+      "published_sha256": "6f02f1e74e389e3fcbd79831b8a83a7792bbcefa8b7d28ae17b6528a91a12a54",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_to_shoulder_roll_R_003__A305.json",
+      "original_sha256": "b71d26d10076e30dacb8c8b7b34623f7f9b71cc0a14b7ac242c718770b8b3947",
+      "published_sha256": "b71d26d10076e30dacb8c8b7b34623f7f9b71cc0a14b7ac242c718770b8b3947",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/jump_to_shoulder_roll_R_102__A416.json",
+      "original_sha256": "ee16f373152fb9ad27bf7d24a4b6dcaf1b3a0626c2d6a1f470c1331614deadf5",
+      "published_sha256": "ee16f373152fb9ad27bf7d24a4b6dcaf1b3a0626c2d6a1f470c1331614deadf5",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/kneeling_loop_001__A101.json",
+      "original_sha256": "0f96631f292fe5a1ee82162d0053cdfea148a23dfa2b3314b6bf90da62817196",
+      "published_sha256": "0f96631f292fe5a1ee82162d0053cdfea148a23dfa2b3314b6bf90da62817196",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/kneeling_loop_003__A062.json",
+      "original_sha256": "dd16af1d65b7af05dc7688ee91d90c6a0d1ecc736af51f3289cd30f3565d3086",
+      "published_sha256": "dd16af1d65b7af05dc7688ee91d90c6a0d1ecc736af51f3289cd30f3565d3086",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/kneeling_start_002__A035.json",
+      "original_sha256": "e8acdac3d5b7380864416d537b7d15408c95f8eafa8b8210bb1ec17898304f2d",
+      "published_sha256": "e8acdac3d5b7380864416d537b7d15408c95f8eafa8b8210bb1ec17898304f2d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/kneeling_start_003__A035.json",
+      "original_sha256": "e334890463da0242c34d8b8f8cc8d4427b01862ae1da946104196edc5ea0b0a7",
+      "published_sha256": "e334890463da0242c34d8b8f8cc8d4427b01862ae1da946104196edc5ea0b0a7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/ladder_climbing_stepdown_R_101__A301.json",
+      "original_sha256": "ad5ee429db9f1eb2f7ea3204ec4c63c8b1f58f008d2dec5d981fd15b2bf5c2e5",
+      "published_sha256": "ad5ee429db9f1eb2f7ea3204ec4c63c8b1f58f008d2dec5d981fd15b2bf5c2e5",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/ladder_slip_R_002__A300.json",
+      "original_sha256": "ea36466eb2ee8cafc187748d224b95d77d00e5407cb3f446f90691421c795443",
+      "published_sha256": "ea36466eb2ee8cafc187748d224b95d77d00e5407cb3f446f90691421c795443",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/mohak_forward_loop_001__A033.json",
+      "original_sha256": "805b3161d8e9b3a48358741496f78803320cc6afbe3dc90a488aa26d132c6fbe",
+      "published_sha256": "805b3161d8e9b3a48358741496f78803320cc6afbe3dc90a488aa26d132c6fbe",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/mohak_forward_stop_002__A036.json",
+      "original_sha256": "3bf1f44549bd1db3fb24871085d1970c337fcebb46c9aca6f530069e624bb8f9",
+      "published_sha256": "3bf1f44549bd1db3fb24871085d1970c337fcebb46c9aca6f530069e624bb8f9",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/mohak_turn_090_001__A033.json",
+      "original_sha256": "f2f381d0d064760ffec683e2952a815fd912cde39d84d37e0501f113e05fbb54",
+      "published_sha256": "f2f381d0d064760ffec683e2952a815fd912cde39d84d37e0501f113e05fbb54",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/on_all_fours_turn_270_R_003__A202.json",
+      "original_sha256": "ee8aa623e077e4fdcb6715a5ef4281a048e46e3a9c447336d8b91df02460ff3a",
+      "published_sha256": "ee8aa623e077e4fdcb6715a5ef4281a048e46e3a9c447336d8b91df02460ff3a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/stairs_climbing_down_stop_R_102__A301.json",
+      "original_sha256": "f4371865cbd65f4c49fa4a2bbdc910f8b509551438fa89f7a2439de61ca90fe0",
+      "published_sha256": "f4371865cbd65f4c49fa4a2bbdc910f8b509551438fa89f7a2439de61ca90fe0",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/stairs_climbing_jog_up_start_R_102__A301.json",
+      "original_sha256": "24f27f71938858e4b8edc8a9b2617d7b99048f73559b662919cc92d49b582a2a",
+      "published_sha256": "24f27f71938858e4b8edc8a9b2617d7b99048f73559b662919cc92d49b582a2a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/stairs_climbing_up_start_R_003__A300.json",
+      "original_sha256": "9ab0b878924dc18a7f55056dc771ff645b39312b17bce0026f49f553311b82aa",
+      "published_sha256": "9ab0b878924dc18a7f55056dc771ff645b39312b17bce0026f49f553311b82aa",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/stairs_climbing_up_start_R_101__A301.json",
+      "original_sha256": "b1766f6548f0a239c891f2b2fce30af4963857f5f17cdd142b41b5ff92d26a96",
+      "published_sha256": "b1766f6548f0a239c891f2b2fce30af4963857f5f17cdd142b41b5ff92d26a96",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/turn_crawl_360_R_003__A233.json",
+      "original_sha256": "1d55871491c03859bfb0126e5a3ccf9ed49fc34dcf343c70c145127d9c6c8323",
+      "published_sha256": "1d55871491c03859bfb0126e5a3ccf9ed49fc34dcf343c70c145127d9c6c8323",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viewer/wall_leaning_idle_360_R_003__A285.json",
+      "original_sha256": "2c680500b0db66c718281dd21bceb46f14e80a9653a3668a0178af43df7997dc",
+      "published_sha256": "2c680500b0db66c718281dd21bceb46f14e80a9653a3668a0178af43df7997dc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/README.md",
+      "original_sha256": "a0bce1789b737a27161f3e588b8fd96583ff9c23fec8131a909f677c4f514cfe",
+      "published_sha256": "a0bce1789b737a27161f3e588b8fd96583ff9c23fec8131a909f677c4f514cfe",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/box_jump_001__A361.png",
+      "original_sha256": "5a1e5724cffd74ab4ea4a29fa97e23c906df141da7fe3fa7b3320a96f08e764e",
+      "published_sha256": "5a1e5724cffd74ab4ea4a29fa97e23c906df141da7fe3fa7b3320a96f08e764e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/box_jump_003__A361.png",
+      "original_sha256": "d5d227077f682b6e9fe8144062987cb19121b522612ece910d6b3a2b6731f626",
+      "published_sha256": "d5d227077f682b6e9fe8144062987cb19121b522612ece910d6b3a2b6731f626",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/box_jump_down_360_002__A359.png",
+      "original_sha256": "a62cedcf60af1649732eabff05153522ed59cd96f6db9012c1b9c8edc7f97ed8",
+      "published_sha256": "a62cedcf60af1649732eabff05153522ed59cd96f6db9012c1b9c8edc7f97ed8",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/box_jump_down_360_002__A361.png",
+      "original_sha256": "37b25568f7176b63815e17d56c37599165180a04210fafaf10d31cff1680ca00",
+      "published_sha256": "37b25568f7176b63815e17d56c37599165180a04210fafaf10d31cff1680ca00",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/jump_form_box_to_safety_roll_360_R_001__A500.png",
+      "original_sha256": "d17790afc61d4a6f995eb4f0bdd7c4aa61a10e967fa0eacc9f8726bc539f459a",
+      "published_sha256": "d17790afc61d4a6f995eb4f0bdd7c4aa61a10e967fa0eacc9f8726bc539f459a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/jump_form_box_to_safety_roll_360_R_001__A501.png",
+      "original_sha256": "a0a7006ed38d577ba750c0dfd5a3633c7a911c7f83d1803d01b9f4f1b7c9700d",
+      "published_sha256": "a0a7006ed38d577ba750c0dfd5a3633c7a911c7f83d1803d01b9f4f1b7c9700d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/jump_to_shoulder_roll_R_001__A305.png",
+      "original_sha256": "10b3d0cf63186b6ba355c74dfdc71c05a5119ebc2aec1f64229a646beb357033",
+      "published_sha256": "10b3d0cf63186b6ba355c74dfdc71c05a5119ebc2aec1f64229a646beb357033",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/jump_to_shoulder_roll_R_002__A305.png",
+      "original_sha256": "8f171150a87329513abca40af2818485520eb25a129edcf3bb9f1b084195b723",
+      "published_sha256": "8f171150a87329513abca40af2818485520eb25a129edcf3bb9f1b084195b723",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/jump_to_shoulder_roll_R_003__A305.png",
+      "original_sha256": "46079495ace782ce5a02edada2af45d55359e1c2a7ef23058f1302103346fe4f",
+      "published_sha256": "46079495ace782ce5a02edada2af45d55359e1c2a7ef23058f1302103346fe4f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/box_support/jump_to_shoulder_roll_R_102__A416.png",
+      "original_sha256": "1eb8eeb51cf6bd3141c40c4a7ca232afa47048acfd4be298ed50d8c2c29d50d6",
+      "published_sha256": "1eb8eeb51cf6bd3141c40c4a7ca232afa47048acfd4be298ed50d8c2c29d50d6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/change_idle_crouch_right_to_idle_crouch_102__A127.png",
+      "original_sha256": "656bc789a7854ac3cc6f130dea6b0b7091345e2d9a90938295be0d8983b2c4c3",
+      "published_sha256": "656bc789a7854ac3cc6f130dea6b0b7091345e2d9a90938295be0d8983b2c4c3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/change_idle_crouch_right_to_idle_crouch_103__A125.png",
+      "original_sha256": "bc26bae7954b01ec5342485c4ef21d31235b44da0d53cbe69f1a0d0c55418c97",
+      "published_sha256": "bc26bae7954b01ec5342485c4ef21d31235b44da0d53cbe69f1a0d0c55418c97",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_ff_start_315_003__A148.png",
+      "original_sha256": "d731dbd530f9efcf57c2d8e4fe8285db70edbf095f231977c95aaab587f05ad4",
+      "published_sha256": "d731dbd530f9efcf57c2d8e4fe8285db70edbf095f231977c95aaab587f05ad4",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_ff_start_360_R_003__A197.png",
+      "original_sha256": "49213e82907ad446a8365591e141a359300e6ec695b4cbe0ee7df13c1ce40e76",
+      "published_sha256": "49213e82907ad446a8365591e141a359300e6ec695b4cbe0ee7df13c1ce40e76",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_ff_stop_225_001__A146.png",
+      "original_sha256": "0035f66e78893aaa73e73d5fce71df6de775768f26ca95f8b5c08933e5b4dc3b",
+      "published_sha256": "0035f66e78893aaa73e73d5fce71df6de775768f26ca95f8b5c08933e5b4dc3b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_ff_stop_225_002__A148.png",
+      "original_sha256": "3710f652e8d195a0db65fe8fa1b17ba963dc5fb1be512c2d7dd4e1740df7cfcc",
+      "published_sha256": "3710f652e8d195a0db65fe8fa1b17ba963dc5fb1be512c2d7dd4e1740df7cfcc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_ff_stop_315_001__A148.png",
+      "original_sha256": "36e840a1972f01081a55b881c3bf645723885a14538c25d0265861720123161b",
+      "published_sha256": "36e840a1972f01081a55b881c3bf645723885a14538c25d0265861720123161b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_002__A248.png",
+      "original_sha256": "dfe5a10cd0b35c0b2ba3b2a07e1cb9ffd3432939758fcefb9ebf0c808ecaaf5f",
+      "published_sha256": "dfe5a10cd0b35c0b2ba3b2a07e1cb9ffd3432939758fcefb9ebf0c808ecaaf5f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_004__A248.png",
+      "original_sha256": "68edfe371c202daee1e88a3740dcbc4a61bdd0b6e85f31721b22541d5ec90e8a",
+      "published_sha256": "68edfe371c202daee1e88a3740dcbc4a61bdd0b6e85f31721b22541d5ec90e8a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_right_R_002__A245.png",
+      "original_sha256": "a2a3de9f7151496d12ac7220cf98eade12a4af359fc1d52c2bacc8124be52e36",
+      "published_sha256": "a2a3de9f7151496d12ac7220cf98eade12a4af359fc1d52c2bacc8124be52e36",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_right_R_003__A245.png",
+      "original_sha256": "b895e424a0387af0fe7fc3a1c812a901cae023944ac8ba04b099218397883693",
+      "published_sha256": "b895e424a0387af0fe7fc3a1c812a901cae023944ac8ba04b099218397883693",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_right_to_crouch_idle_R_001__A531.png",
+      "original_sha256": "d38ff4e1cdadb6239b2801681131c20a03d153847357149dd96a501956a1a6e7",
+      "published_sha256": "d38ff4e1cdadb6239b2801681131c20a03d153847357149dd96a501956a1a6e7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_right_to_crouch_idle_R_003__A245.png",
+      "original_sha256": "497a9a1e19e89bb018a4ee398f11132b8f93f703048a68fc53b0efefd2bae994",
+      "published_sha256": "497a9a1e19e89bb018a4ee398f11132b8f93f703048a68fc53b0efefd2bae994",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_to_crouch_idle_right_R_002__A244.png",
+      "original_sha256": "cd5a03cf4b6078689d73159c6975817a5d29bc2f51b2bf57ec812338c37b6e2c",
+      "published_sha256": "cd5a03cf4b6078689d73159c6975817a5d29bc2f51b2bf57ec812338c37b6e2c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_idle_to_crouch_idle_right_R_002__A248.png",
+      "original_sha256": "745f74b2f257b3b160ac1703df821d746871bd41e386d2c8d1e56d3b0c8253c5",
+      "published_sha256": "745f74b2f257b3b160ac1703df821d746871bd41e386d2c8d1e56d3b0c8253c5",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492.png",
+      "original_sha256": "9d64bb90b42f8b535feea5be5b0a76755592753f568eb081818e79c027e7f312",
+      "published_sha256": "9d64bb90b42f8b535feea5be5b0a76755592753f568eb081818e79c027e7f312",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493.png",
+      "original_sha256": "150e2b70dd07d686bdcd3a2d6710240ee8892c6b6fa83ae47c954ab98503c872",
+      "published_sha256": "150e2b70dd07d686bdcd3a2d6710240ee8892c6b6fa83ae47c954ab98503c872",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_loop_001__A197.png",
+      "original_sha256": "5d03eaf469f61bb930b742f63619eca6932288f9f8b08c7d28e97196e54ba960",
+      "published_sha256": "5d03eaf469f61bb930b742f63619eca6932288f9f8b08c7d28e97196e54ba960",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_loop_002__A196.png",
+      "original_sha256": "ee3794241d0ea153b2240a062ce6d0e41cb1b61770bc461efead7ef3b40936e7",
+      "published_sha256": "ee3794241d0ea153b2240a062ce6d0e41cb1b61770bc461efead7ef3b40936e7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_right_loop_101__A129.png",
+      "original_sha256": "1fcdfcb0730a40d06cefdf99d4d6778d4515d69f14dd42bd58c74bb33b824186",
+      "published_sha256": "1fcdfcb0730a40d06cefdf99d4d6778d4515d69f14dd42bd58c74bb33b824186",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_right_loop_103__A126.png",
+      "original_sha256": "e644d3a3b4884fd17d398679c0555fbff10c0e03794470cdfee2a8766ed29eca",
+      "published_sha256": "e644d3a3b4884fd17d398679c0555fbff10c0e03794470cdfee2a8766ed29eca",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_right_to_idle_crouch_R_001__A197.png",
+      "original_sha256": "e94a2b816ca0cc2d05a19adf2b33533889917e3d39887fd3e1ad388abfb9ea26",
+      "published_sha256": "e94a2b816ca0cc2d05a19adf2b33533889917e3d39887fd3e1ad388abfb9ea26",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_right_to_idle_crouch_R_004__A194.png",
+      "original_sha256": "c987038c17289dfe61be8571ea4b0eccce6c3987937b8c437d50cc14b3c6f145",
+      "published_sha256": "c987038c17289dfe61be8571ea4b0eccce6c3987937b8c437d50cc14b3c6f145",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_to_idle_crouch_right_002__A146.png",
+      "original_sha256": "b1d5e4fc3d18866374146f9ff6a644e600eb0555cbbce1249b75d71c13a6ba65",
+      "published_sha256": "b1d5e4fc3d18866374146f9ff6a644e600eb0555cbbce1249b75d71c13a6ba65",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/idle_crouch_to_idle_crouch_right_R_002__A195.png",
+      "original_sha256": "693f5b4aa7cc2bc67f84d1220008148a84788f8a79016b58304933a139f93d29",
+      "published_sha256": "693f5b4aa7cc2bc67f84d1220008148a84788f8a79016b58304933a139f93d29",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/item_pick_up_crouch_idle_R_001__A550.png",
+      "original_sha256": "586e21aee085dfd8084c9fdffa2a2abf0269ee9cbff95ec3e02e743558b541d3",
+      "published_sha256": "586e21aee085dfd8084c9fdffa2a2abf0269ee9cbff95ec3e02e743558b541d3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/item_pick_up_crouch_idle_R_002__A548.png",
+      "original_sha256": "4508b270b766355d7462a3bd62250a6aecd49e8665c0301f0178021788cfe9ae",
+      "published_sha256": "4508b270b766355d7462a3bd62250a6aecd49e8665c0301f0178021788cfe9ae",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/item_pick_up_crouch_walk_R_001__A350.png",
+      "original_sha256": "4a996f3810110da08eafe32fbec7d5b4254a1dbc791c4607cb5a52353b3ec014",
+      "published_sha256": "4a996f3810110da08eafe32fbec7d5b4254a1dbc791c4607cb5a52353b3ec014",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/item_pick_up_crouch_walk_R_003__A412.png",
+      "original_sha256": "19953df3ecdf3c70de4fcc69dca3f33a53340f91d72c2b70e8f10fed731eaf61",
+      "published_sha256": "19953df3ecdf3c70de4fcc69dca3f33a53340f91d72c2b70e8f10fed731eaf61",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/patches_crouch_R_001__A428.png",
+      "original_sha256": "e858f02d57a656527a0dc6dddab2731f5c1b73a835150d6b855e08c80432d11c",
+      "published_sha256": "e858f02d57a656527a0dc6dddab2731f5c1b73a835150d6b855e08c80432d11c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/patches_crouch_R_002__A430.png",
+      "original_sha256": "01ce9b33974a8b2de60b952ec0086e91a50444d782ae1e0141ebd4fc4144bef6",
+      "published_sha256": "01ce9b33974a8b2de60b952ec0086e91a50444d782ae1e0141ebd4fc4144bef6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/turn_crouch_360_R_001__A194.png",
+      "original_sha256": "58927c5fc1b9459ca70d4efd3186284091f3de8de05b20740c19bfdf28a8094a",
+      "published_sha256": "58927c5fc1b9459ca70d4efd3186284091f3de8de05b20740c19bfdf28a8094a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/turn_crouch_360_R_003__A198.png",
+      "original_sha256": "efc0d74b6413d3f3bd9b0608fb0fec2b0b4ac8a64759190398caa85802975957",
+      "published_sha256": "efc0d74b6413d3f3bd9b0608fb0fec2b0b4ac8a64759190398caa85802975957",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A472.png",
+      "original_sha256": "7940ecb88dc4d7829ce459d06ee3b2fad15062ce421c26ac5859ed13ef23bbff",
+      "published_sha256": "7940ecb88dc4d7829ce459d06ee3b2fad15062ce421c26ac5859ed13ef23bbff",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/crouch/yawn_R_walk_ff_start_360_R_crouch_idle_R_002__A475.png",
+      "original_sha256": "6775d3fbecb1cee980146559c85d31c616ae4ed27199b88c95338983bccf9847",
+      "published_sha256": "6775d3fbecb1cee980146559c85d31c616ae4ed27199b88c95338983bccf9847",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/idle_turn_270_001__A046.png",
+      "original_sha256": "5899f08701a3fa7540b132ccfb19261b203788d57a4afc80a91354d4ec437c0d",
+      "published_sha256": "5899f08701a3fa7540b132ccfb19261b203788d57a4afc80a91354d4ec437c0d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/idle_turn_360_001__A066.png",
+      "original_sha256": "57b35430496d5b944740ad90293e7cf2c022a4862c1246e414835799ce825918",
+      "published_sha256": "57b35430496d5b944740ad90293e7cf2c022a4862c1246e414835799ce825918",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_arc_cw_stop_R_001__A266.png",
+      "original_sha256": "2e3bcf2a901efc772a6016d020fc00bd8a38a409efb97c84a457759724f065c4",
+      "published_sha256": "2e3bcf2a901efc772a6016d020fc00bd8a38a409efb97c84a457759724f065c4",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_arc_cw_stop_R_005__A216.png",
+      "original_sha256": "973b77b3b217282639f2605b23490d472fedd55ca0f04dafb9bbe25ae87d5de1",
+      "published_sha256": "973b77b3b217282639f2605b23490d472fedd55ca0f04dafb9bbe25ae87d5de1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_backward_start_001__A038.png",
+      "original_sha256": "0ffeb269b5fb1fea1742ac1374ba0e3c413c815c28e2d50752a214ce28bf764b",
+      "published_sha256": "0ffeb269b5fb1fea1742ac1374ba0e3c413c815c28e2d50752a214ce28bf764b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_backward_stop_004__A034.png",
+      "original_sha256": "5291043e1451d4d6e1ddba5bdf058cb15e2949448715c1e7248983705f963611",
+      "published_sha256": "5291043e1451d4d6e1ddba5bdf058cb15e2949448715c1e7248983705f963611",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_ff_loop_180_R_003__A105.png",
+      "original_sha256": "a2370bb397829ba803b5901923a20f1efeb383a202ccc083ae20baf8622be989",
+      "published_sha256": "a2370bb397829ba803b5901923a20f1efeb383a202ccc083ae20baf8622be989",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_ff_start_180_R_001__A298.png",
+      "original_sha256": "55f9b1cab2d4399963568b5c759802042faef4a58d1be70e29553b4fa456b728",
+      "published_sha256": "55f9b1cab2d4399963568b5c759802042faef4a58d1be70e29553b4fa456b728",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_forward_start_003__A032.png",
+      "original_sha256": "f2e37e194b2dead6779eb5a4cdbbdfc5a580a4ea6849b282f4cdc2324aa495f1",
+      "published_sha256": "f2e37e194b2dead6779eb5a4cdbbdfc5a580a4ea6849b282f4cdc2324aa495f1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_forward_stop_001__A040.png",
+      "original_sha256": "10ecdba235714a0dd683a99d7bbe092461437636bb62ede0602701409ba0d01d",
+      "published_sha256": "10ecdba235714a0dd683a99d7bbe092461437636bb62ede0602701409ba0d01d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_sideway_045_stop_001__A028.png",
+      "original_sha256": "dd460ef7c84eacd6885b79da81325d2c2457cff9434876cfa81464f049429943",
+      "published_sha256": "dd460ef7c84eacd6885b79da81325d2c2457cff9434876cfa81464f049429943",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_sideway_045_stop_002__A040.png",
+      "original_sha256": "91251f740438c9e5720391dc4ccfef5d3ad3b3874591f13b4d0e5302ffd4f72d",
+      "published_sha256": "91251f740438c9e5720391dc4ccfef5d3ad3b3874591f13b4d0e5302ffd4f72d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_sideway_135_start_001__A031.png",
+      "original_sha256": "55e7206b504970d7c822221a6cd0006c195e20b6eae763dde119368f402ae0e1",
+      "published_sha256": "55e7206b504970d7c822221a6cd0006c195e20b6eae763dde119368f402ae0e1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/jog_sideway_135_stop_002__A025.png",
+      "original_sha256": "6cc13e60be24c779161261a1d61cd2ecb445827fff0909114ae251bd7195942f",
+      "published_sha256": "6cc13e60be24c779161261a1d61cd2ecb445827fff0909114ae251bd7195942f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/neutral_idle_loop_002__A105.png",
+      "original_sha256": "3c574404e6dbea032b8e08289be869c99567884403c99adac83f777980d05616",
+      "published_sha256": "3c574404e6dbea032b8e08289be869c99567884403c99adac83f777980d05616",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/neutral_idle_loop_003__A104.png",
+      "original_sha256": "d3c9434bfccb0b2aa68eea53a6964e4ad4dceffa6f6c3c1d6a822325fd1cb8af",
+      "published_sha256": "d3c9434bfccb0b2aa68eea53a6964e4ad4dceffa6f6c3c1d6a822325fd1cb8af",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/turn_jog_270_R_003__A255.png",
+      "original_sha256": "e331d6399e90d960f014a0d5a41579814fbbf04ca505037f781dbb488cafff38",
+      "published_sha256": "e331d6399e90d960f014a0d5a41579814fbbf04ca505037f781dbb488cafff38",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/turn_start_jog_0135_002__A028.png",
+      "original_sha256": "93b873641d4a5439a53fb0e50f51ea266cfb4af7851f478ed3209adedd9ac347",
+      "published_sha256": "93b873641d4a5439a53fb0e50f51ea266cfb4af7851f478ed3209adedd9ac347",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_arc_cw_loop_001__A046.png",
+      "original_sha256": "4e7228ef312ec7b6edf717fd3a8c74a41cbcd53fa5889ee40d3d8c20803d4d57",
+      "published_sha256": "4e7228ef312ec7b6edf717fd3a8c74a41cbcd53fa5889ee40d3d8c20803d4d57",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_arc_cw_stop_R_002__A229.png",
+      "original_sha256": "886282c1ad8fe161e5070ef08e55bafec7f28a8851b08e27a0984db1b91a3cbd",
+      "published_sha256": "886282c1ad8fe161e5070ef08e55bafec7f28a8851b08e27a0984db1b91a3cbd",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_backward_loop_003__A039.png",
+      "original_sha256": "ad207def46b6da6932573bf74c97f603b5414344499a7cb908515fc40b38e988",
+      "published_sha256": "ad207def46b6da6932573bf74c97f603b5414344499a7cb908515fc40b38e988",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_backward_start_001__A029.png",
+      "original_sha256": "55632d4badf98556322d3bbd2833008eefc3f4386a546f2985efd6bd11620413",
+      "published_sha256": "55632d4badf98556322d3bbd2833008eefc3f4386a546f2985efd6bd11620413",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_ff_start_180_R_002__A048.png",
+      "original_sha256": "881b956ca7906df460f180b5708b7e29a7647edda8258367e885073e0a522875",
+      "published_sha256": "881b956ca7906df460f180b5708b7e29a7647edda8258367e885073e0a522875",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_ff_stop_360_004__A066.png",
+      "original_sha256": "98e0e092b3f67fef1ccd542959869d2c0406ce3f0e6442efbdddf1a0ca54a0c2",
+      "published_sha256": "98e0e092b3f67fef1ccd542959869d2c0406ce3f0e6442efbdddf1a0ca54a0c2",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_forward_stop_003__A039.png",
+      "original_sha256": "93312fbe7d00c800710ae2054c9799bbf59bafecec6d68a04e7dc035a9ec9162",
+      "published_sha256": "93312fbe7d00c800710ae2054c9799bbf59bafecec6d68a04e7dc035a9ec9162",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_forward_stop_005__A026.png",
+      "original_sha256": "6f8aa04c38fc4dcff762c9abf806620f9e959cae5a214bbfebec64863c6c9894",
+      "published_sha256": "6f8aa04c38fc4dcff762c9abf806620f9e959cae5a214bbfebec64863c6c9894",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_sideway_045_loop_005__A040.png",
+      "original_sha256": "eb241671c925b0feef1ca489cbeb430f78a0a9b2ca7ae1690c15cda7cbbb264f",
+      "published_sha256": "eb241671c925b0feef1ca489cbeb430f78a0a9b2ca7ae1690c15cda7cbbb264f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_sideway_045_stop_002__A030.png",
+      "original_sha256": "1bcd45596128b55cc4aba78507243d9542d3f01583b3b632a6e51a884e7f48a0",
+      "published_sha256": "1bcd45596128b55cc4aba78507243d9542d3f01583b3b632a6e51a884e7f48a0",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_sideway_090_loop_002__A033.png",
+      "original_sha256": "d16af6532d70ba30c146e6fa290d46726733076fc24ebe7ec4784d824c2ec1a1",
+      "published_sha256": "d16af6532d70ba30c146e6fa290d46726733076fc24ebe7ec4784d824c2ec1a1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/flat_control/walk_sideway_090_stop_001__A025.png",
+      "original_sha256": "b99777199f7b987549540f14c0b600d72eaa16ad8ec99ca8fb7b9fbd2dde0ee6",
+      "published_sha256": "b99777199f7b987549540f14c0b600d72eaa16ad8ec99ca8fb7b9fbd2dde0ee6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/kneel/kneeling_loop_001__A101.png",
+      "original_sha256": "5a214181791b3396e142ecc1b285bf679ca38e6ddd0178827a97773851090a2a",
+      "published_sha256": "5a214181791b3396e142ecc1b285bf679ca38e6ddd0178827a97773851090a2a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/kneel/kneeling_loop_003__A062.png",
+      "original_sha256": "99e19417784b5141356107f61f00300292f78628e9b2ef195af4047a47efc831",
+      "published_sha256": "99e19417784b5141356107f61f00300292f78628e9b2ef195af4047a47efc831",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/kneel/kneeling_start_002__A035.png",
+      "original_sha256": "a10f5a894e14a2bf9855ca4d1cd3ccbb9eee884b2b3be94d8e98b0762a66c86f",
+      "published_sha256": "a10f5a894e14a2bf9855ca4d1cd3ccbb9eee884b2b3be94d8e98b0762a66c86f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/kneel/kneeling_start_003__A035.png",
+      "original_sha256": "4f42d67b3651bf91a4196456dcf5bc08b5c18a109d9b965c04642e491d33b8f7",
+      "published_sha256": "4f42d67b3651bf91a4196456dcf5bc08b5c18a109d9b965c04642e491d33b8f7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/kneel/kneeling_stop_003__A097.png",
+      "original_sha256": "892b10c8eb12468ba3232b78d66c0f4b4b3c1fbd80786c2e7f97a51d50bb5ff7",
+      "published_sha256": "892b10c8eb12468ba3232b78d66c0f4b4b3c1fbd80786c2e7f97a51d50bb5ff7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_down_50cm_box_R_001__A371.png",
+      "original_sha256": "c41522e309afd8baab2f86c70370ababa4cd78805cc62aea7c6b862afde17cfc",
+      "published_sha256": "c41522e309afd8baab2f86c70370ababa4cd78805cc62aea7c6b862afde17cfc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_down_50cm_box_R_003__A045.png",
+      "original_sha256": "ccd95cc729c4e0f8c912e6b72699e29e041881603bfe6d163cd5b16621940d30",
+      "published_sha256": "ccd95cc729c4e0f8c912e6b72699e29e041881603bfe6d163cd5b16621940d30",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_down_50cm_box_R_005__A053.png",
+      "original_sha256": "25392dcac9552ef9c8b2f79089cad07314bfea6b1c06957c549b39efe1112488",
+      "published_sha256": "25392dcac9552ef9c8b2f79089cad07314bfea6b1c06957c549b39efe1112488",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_down_50cm_box_R_006__A053.png",
+      "original_sha256": "65ccbee510b3b6ee9e20e4516ea39d3c1447632efd9e92b8c35929c112c3d8c2",
+      "published_sha256": "65ccbee510b3b6ee9e20e4516ea39d3c1447632efd9e92b8c35929c112c3d8c2",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_up_50cm_box_R_001__A206.png",
+      "original_sha256": "6acb5b95fc4df05f3e1444dedb6eabc2257274aa59d42c17f2febeaef413a3aa",
+      "published_sha256": "6acb5b95fc4df05f3e1444dedb6eabc2257274aa59d42c17f2febeaef413a3aa",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_up_50cm_box_R_002__A053.png",
+      "original_sha256": "0928e69304f3622bf79110c95413fd1a54c3da57ab5c35adfdc03a1860ec4f9e",
+      "published_sha256": "0928e69304f3622bf79110c95413fd1a54c3da57ab5c35adfdc03a1860ec4f9e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/come_up_50cm_box_R_002__A282.png",
+      "original_sha256": "808027f4177f332c682f12c67281cf5500fc04d75a52f1811c7d980c25260477",
+      "published_sha256": "808027f4177f332c682f12c67281cf5500fc04d75a52f1811c7d980c25260477",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_off_1m_R_003__A415.png",
+      "original_sha256": "309e2757befd10c4870d328196fc7e8e09c2c1e227dc159407c57ebec7f89aef",
+      "published_sha256": "309e2757befd10c4870d328196fc7e8e09c2c1e227dc159407c57ebec7f89aef",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_off_1m_R_103__A301.png",
+      "original_sha256": "e7e9390063dc605b9b3bfde8ff3324e2f7a9749609c5b2b7d1e44c2fd6c1e099",
+      "published_sha256": "e7e9390063dc605b9b3bfde8ff3324e2f7a9749609c5b2b7d1e44c2fd6c1e099",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_off_50cm_R_002__A415.png",
+      "original_sha256": "dfdb516f951512ed16fa6725d8560bc33268044bfa40df7285c37adbcf784bc3",
+      "published_sha256": "dfdb516f951512ed16fa6725d8560bc33268044bfa40df7285c37adbcf784bc3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_off_50cm_R_002__A416.png",
+      "original_sha256": "4ddb40187b3ee2d12fbe25b21487f695e1744bad1d6435c34f6a9294d40d2be1",
+      "published_sha256": "4ddb40187b3ee2d12fbe25b21487f695e1744bad1d6435c34f6a9294d40d2be1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_off_front_50cm_001__A416.png",
+      "original_sha256": "437eefd2ae7ff3b2d8abf9c48c53d5a9da03b4f001a0c175986024690ba59224",
+      "published_sha256": "437eefd2ae7ff3b2d8abf9c48c53d5a9da03b4f001a0c175986024690ba59224",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_off_front_50cm_R_002__A415.png",
+      "original_sha256": "5f149ed9fbf0b257c9cafd0f74607a87b50bea453845704c31d1e4b8d5128453",
+      "published_sha256": "5f149ed9fbf0b257c9cafd0f74607a87b50bea453845704c31d1e4b8d5128453",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_on_1m_R_004__A300.png",
+      "original_sha256": "bb651257f502e176796f68b67182cd548c4ee079f7f6ce12010d6a792ff42cf3",
+      "published_sha256": "bb651257f502e176796f68b67182cd548c4ee079f7f6ce12010d6a792ff42cf3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_on_1m_R_102__A301.png",
+      "original_sha256": "6196cdfe9357844316bb8c4f20169ccd1cd5d603fb39f038a862059c4b553788",
+      "published_sha256": "6196cdfe9357844316bb8c4f20169ccd1cd5d603fb39f038a862059c4b553788",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_on_50cm_001__A415.png",
+      "original_sha256": "c0e60ec6893878d97018780751179d2490cd787919306999bda21ec2f516ce3f",
+      "published_sha256": "c0e60ec6893878d97018780751179d2490cd787919306999bda21ec2f516ce3f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_on_50cm_R_003__A415.png",
+      "original_sha256": "9c103fea8e5345fd5ed7e24bc2ceef7b42d2980fa6863045c57f9fdb895e3623",
+      "published_sha256": "9c103fea8e5345fd5ed7e24bc2ceef7b42d2980fa6863045c57f9fdb895e3623",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_on_box_230cm_102__A305.png",
+      "original_sha256": "f4be34cc535dc3d06aa55ab9ba20f4f7e1f612f2dc01a8ec14da8ed3e9c8fdb3",
+      "published_sha256": "f4be34cc535dc3d06aa55ab9ba20f4f7e1f612f2dc01a8ec14da8ed3e9c8fdb3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/jump_on_box_230cm_104__A305.png",
+      "original_sha256": "72ea39f42f13772c9556a355f25ad268065273827e5fce49d2b7d3b7da923c5e",
+      "published_sha256": "72ea39f42f13772c9556a355f25ad268065273827e5fce49d2b7d3b7da923c5e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/lift_crate_come_down_50cm_box_R_002__A249.png",
+      "original_sha256": "df739d158c225b352b7c140d3f5fcb071ce81e34e530a6582e7ba986e8ed0195",
+      "published_sha256": "df739d158c225b352b7c140d3f5fcb071ce81e34e530a6582e7ba986e8ed0195",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/lift_crate_come_down_50cm_box_R_003__A161.png",
+      "original_sha256": "d0a6149e024b3cab341c688d0f63fde11f330c410ba5838483fa97dc0d1353c1",
+      "published_sha256": "d0a6149e024b3cab341c688d0f63fde11f330c410ba5838483fa97dc0d1353c1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A201.png",
+      "original_sha256": "a2b637649e30d42a50b0a81c1d0925715268eee7138e22b3deebf344727c7b4c",
+      "published_sha256": "a2b637649e30d42a50b0a81c1d0925715268eee7138e22b3deebf344727c7b4c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png",
+      "original_sha256": "b7bf080acec50591aedd4815d0be69607d49615e996ff71bff7db98a2a03763f",
+      "published_sha256": "b7bf080acec50591aedd4815d0be69607d49615e996ff71bff7db98a2a03763f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_down_start_R_003__A300.png",
+      "original_sha256": "f4efbe92e939145b26265e77a92fb0ae8865584cf177ca3088ea69e1494a8582",
+      "published_sha256": "f4efbe92e939145b26265e77a92fb0ae8865584cf177ca3088ea69e1494a8582",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_down_start_R_103__A301.png",
+      "original_sha256": "2b9ff8ed9e6edfac1efa54f72e3a4724434b94ebacca9377da47b9b6998e8e91",
+      "published_sha256": "2b9ff8ed9e6edfac1efa54f72e3a4724434b94ebacca9377da47b9b6998e8e91",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_down_start_over_R_001__A300.png",
+      "original_sha256": "88c12cf17fd62ad0fa6e8f19fed0de743cadaa3a804bd62d3ab3729a2c44707d",
+      "published_sha256": "88c12cf17fd62ad0fa6e8f19fed0de743cadaa3a804bd62d3ab3729a2c44707d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_down_start_over_R_102__A301.png",
+      "original_sha256": "ed03331ba85fd47624d16a276538f8402f1f2d28162ce46bdfd559c3c9689e52",
+      "published_sha256": "ed03331ba85fd47624d16a276538f8402f1f2d28162ce46bdfd559c3c9689e52",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_down_start_through_R_101__A301.png",
+      "original_sha256": "8949e6559d10541c54f0322db0ad4fc7820f0812df08297bc1c3a6b28021b585",
+      "published_sha256": "8949e6559d10541c54f0322db0ad4fc7820f0812df08297bc1c3a6b28021b585",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_down_start_through_R_103__A301.png",
+      "original_sha256": "44dcf73830ca035827c4789ed81bd2c06dbd19767318cb94e838dc7685575bbf",
+      "published_sha256": "44dcf73830ca035827c4789ed81bd2c06dbd19767318cb94e838dc7685575bbf",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_idle_R_001__A300.png",
+      "original_sha256": "30cbc1a1d81d1c5fb193671783ef5175c27517c3b5c22107157bbe6a511eac20",
+      "published_sha256": "30cbc1a1d81d1c5fb193671783ef5175c27517c3b5c22107157bbe6a511eac20",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_idle_R_101__A301.png",
+      "original_sha256": "e2ffbbaf44b7f685fdc9778b80535e6355db1390aa59ec93e2bf19f95bf282cc",
+      "published_sha256": "e2ffbbaf44b7f685fdc9778b80535e6355db1390aa59ec93e2bf19f95bf282cc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_jumpdown_R_004__A300.png",
+      "original_sha256": "11f52d8b22cae90cb37a738fbe916dd364afed70372d154f0ca05340df8f9970",
+      "published_sha256": "11f52d8b22cae90cb37a738fbe916dd364afed70372d154f0ca05340df8f9970",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_jumpdown_R_102__A301.png",
+      "original_sha256": "14a6cc051c65049d97f0c9ba834ea1a9953827cb3f1123aa650fa1730a406d7c",
+      "published_sha256": "14a6cc051c65049d97f0c9ba834ea1a9953827cb3f1123aa650fa1730a406d7c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_stepdown_R_003__A300.png",
+      "original_sha256": "29adfbb5d1adfb3f5ee48c8de72d1705bfe705384a5e8e7d82b1c19c9f4618d8",
+      "published_sha256": "29adfbb5d1adfb3f5ee48c8de72d1705bfe705384a5e8e7d82b1c19c9f4618d8",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_stepdown_R_101__A301.png",
+      "original_sha256": "50b25ecb04006cf8797893b05001e2c5d6a3060da437dfcc7d0efd487c748145",
+      "published_sha256": "50b25ecb04006cf8797893b05001e2c5d6a3060da437dfcc7d0efd487c748145",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_stepdown_R_103__A301.png",
+      "original_sha256": "796bc8b6bac7a965a5702c81a594c95a5eb5aa398e9fe7c26a4786716a93011e",
+      "published_sha256": "796bc8b6bac7a965a5702c81a594c95a5eb5aa398e9fe7c26a4786716a93011e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_up_start_R_102__A301.png",
+      "original_sha256": "df4fe39e7b41640590048e6eb3ce5e0467dfa55db3b0a85a204330bf34b12624",
+      "published_sha256": "df4fe39e7b41640590048e6eb3ce5e0467dfa55db3b0a85a204330bf34b12624",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_climbing_up_start_R_103__A301.png",
+      "original_sha256": "471ce78c5bcef77726d466a0e59fd45b235e2b08e8ec65b1170a55cf05fe6972",
+      "published_sha256": "471ce78c5bcef77726d466a0e59fd45b235e2b08e8ec65b1170a55cf05fe6972",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_jump_on_R_003__A300.png",
+      "original_sha256": "1996cdfec1505d87e2570774e9a9d9878346720096d4241018396b72a023530c",
+      "published_sha256": "1996cdfec1505d87e2570774e9a9d9878346720096d4241018396b72a023530c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_jump_on_R_005__A300.png",
+      "original_sha256": "d21354045e0e1bba7a68ddff312e6577d83e65fe37550f5fd8a2afe3122ca195",
+      "published_sha256": "d21354045e0e1bba7a68ddff312e6577d83e65fe37550f5fd8a2afe3122ca195",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_slide_down_R_002__A300.png",
+      "original_sha256": "e61d605d9c46c9164c19e4c459afceb44a9cf3ad579caee3bc3aa73db088e7c3",
+      "published_sha256": "e61d605d9c46c9164c19e4c459afceb44a9cf3ad579caee3bc3aa73db088e7c3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_slide_down_R_004__A300.png",
+      "original_sha256": "b749791db4a96d870837b7a03ddbb2ef549e1e2f5bcdc8fddd5bf5e9c8b9e069",
+      "published_sha256": "b749791db4a96d870837b7a03ddbb2ef549e1e2f5bcdc8fddd5bf5e9c8b9e069",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_slip_R_002__A300.png",
+      "original_sha256": "86980d5cb4a7dcd7548face48a5ea52c283e2a7e7ef6cef141fcbbd4cad8e98e",
+      "published_sha256": "86980d5cb4a7dcd7548face48a5ea52c283e2a7e7ef6cef141fcbbd4cad8e98e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/ladder/ladder_slip_R_104__A301.png",
+      "original_sha256": "aec49bb6f5a727bc055ff6cf841cfacf60b3d782893d5b601ee6fb84b3097aa7",
+      "published_sha256": "aec49bb6f5a727bc055ff6cf841cfacf60b3d782893d5b601ee6fb84b3097aa7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/avoid_obstacle_jump_run_ff_180_R_002__A500.png",
+      "original_sha256": "7b0d5c4d95b51f9b9533a93f705cbd443bd0b329620a4c0013e5108b8a14ecf8",
+      "published_sha256": "7b0d5c4d95b51f9b9533a93f705cbd443bd0b329620a4c0013e5108b8a14ecf8",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/avoid_obstacle_jump_run_ff_180_R_002__A502.png",
+      "original_sha256": "fe81c1471fb9feb155415802f2e196ff2ef433a54a557999c0c9447d6c08e6a0",
+      "published_sha256": "fe81c1471fb9feb155415802f2e196ff2ef433a54a557999c0c9447d6c08e6a0",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_0_5m_R_002__A415.png",
+      "original_sha256": "ac2dc1738551d20afc490f39446ead65ac30216b9dca4eb78eca54ed88e7ce9d",
+      "published_sha256": "ac2dc1738551d20afc490f39446ead65ac30216b9dca4eb78eca54ed88e7ce9d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_0_5m_R_003__A415.png",
+      "original_sha256": "ec962ec9bfe3e72db333db81b6489cb49c9bb01154ed4a2e2022fa939425d61e",
+      "published_sha256": "ec962ec9bfe3e72db333db81b6489cb49c9bb01154ed4a2e2022fa939425d61e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_0_75m_R_102__A416.png",
+      "original_sha256": "a8f36c71597cfb15c2395561ff4376aa263a8c172a3cf2277389d04c3917f833",
+      "published_sha256": "a8f36c71597cfb15c2395561ff4376aa263a8c172a3cf2277389d04c3917f833",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_0_75m_R_103__A305.png",
+      "original_sha256": "e3ca70dcea831f78ddf7d4cfd2f332003862ca82efd797f01d4e6dbc714abb84",
+      "published_sha256": "e3ca70dcea831f78ddf7d4cfd2f332003862ca82efd797f01d4e6dbc714abb84",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_1_5m_L_101__A416.png",
+      "original_sha256": "2505d179c775959f2434eb47a50166fbfaedbbd2f52ae49b7922ab5621ae3790",
+      "published_sha256": "2505d179c775959f2434eb47a50166fbfaedbbd2f52ae49b7922ab5621ae3790",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_1_5m_R_101__A305.png",
+      "original_sha256": "a51dc8c3b135326610a329b94c33a865777dad028e5ebb7bb360e25adeeb8538",
+      "published_sha256": "a51dc8c3b135326610a329b94c33a865777dad028e5ebb7bb360e25adeeb8538",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_1_5m_R_103__A305.png",
+      "original_sha256": "9652ff41aadccafd9903400d51255f7595825171d8eb0315809d98949885811d",
+      "published_sha256": "9652ff41aadccafd9903400d51255f7595825171d8eb0315809d98949885811d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_1m_R_102__A305.png",
+      "original_sha256": "d80f994bbfb1130ed42695867c4d9f9b596a30d80184282ecb642d7786722c01",
+      "published_sha256": "d80f994bbfb1130ed42695867c4d9f9b596a30d80184282ecb642d7786722c01",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_1m_R_104__A305.png",
+      "original_sha256": "8795cca70b285f73b1b1ad56a6c80ec847ecaf55744f14a3183d352d5849fb6b",
+      "published_sha256": "8795cca70b285f73b1b1ad56a6c80ec847ecaf55744f14a3183d352d5849fb6b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_2m_L_003__A415.png",
+      "original_sha256": "f48a77819a4076c37230f84730778d226296942b56b241baaae14701672cb832",
+      "published_sha256": "f48a77819a4076c37230f84730778d226296942b56b241baaae14701672cb832",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_2m_R_001__A304.png",
+      "original_sha256": "bfa3220b912c27d115120ab3e94b8bb572b331f88c0ed5aaf5967fbfd6ef6684",
+      "published_sha256": "bfa3220b912c27d115120ab3e94b8bb572b331f88c0ed5aaf5967fbfd6ef6684",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_2m_R_003__A304.png",
+      "original_sha256": "a3c1552bd6f5a1a9c9940146ce4e0207b1476bd424e67dc47f7e0049d314ddd5",
+      "published_sha256": "a3c1552bd6f5a1a9c9940146ce4e0207b1476bd424e67dc47f7e0049d314ddd5",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_no_hand_0_75m_R_002__A415.png",
+      "original_sha256": "d4704f5543cb664b988c3dbda3eefd9e237cd15a36d6c28323f27378f220a785",
+      "published_sha256": "d4704f5543cb664b988c3dbda3eefd9e237cd15a36d6c28323f27378f220a785",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/jump_over_obstacle_no_hand_0_75m_R_101__A416.png",
+      "original_sha256": "1a827b7bc80f48f6223edf4b4eb03a11fcd20b70466f7021f5121db97665731f",
+      "published_sha256": "1a827b7bc80f48f6223edf4b4eb03a11fcd20b70466f7021f5121db97665731f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/monkey_jump_003__A304.png",
+      "original_sha256": "335d5fb0ea21f15ed052d6351da3afa1a9a2a0d0368c92d95a19f5565119455a",
+      "published_sha256": "335d5fb0ea21f15ed052d6351da3afa1a9a2a0d0368c92d95a19f5565119455a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/monkey_jump_006__A416.png",
+      "original_sha256": "5ac87f355eb534906811b7d14f7e08f080feec4220a75ac563712f117d286b6e",
+      "published_sha256": "5ac87f355eb534906811b7d14f7e08f080feec4220a75ac563712f117d286b6e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/vault_over_R_001__A533.png",
+      "original_sha256": "3edaf96c071339d06a33092b6a4ee0e5966845bff7e7cced2f174917aeb0bbdf",
+      "published_sha256": "3edaf96c071339d06a33092b6a4ee0e5966845bff7e7cced2f174917aeb0bbdf",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/obstacle_clearance/vault_over_R_003__A533.png",
+      "original_sha256": "541d1590186b1b42384afbcba21eeb35bc2918f222a16f92f310805043d29277",
+      "published_sha256": "541d1590186b1b42384afbcba21eeb35bc2918f222a16f92f310805043d29277",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/change_idle_crawl_to_idle_crawl_right_001__A127.png",
+      "original_sha256": "c80687b5ac08a084bc3f9c0bb0dc6275f0727ad2887c4283b0eee4e37478aa2d",
+      "published_sha256": "c80687b5ac08a084bc3f9c0bb0dc6275f0727ad2887c4283b0eee4e37478aa2d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/change_idle_crawl_to_idle_crawl_right_003__A127.png",
+      "original_sha256": "2e9c60872c547e0f194440f15fa35ea030f7cbc3fbf891fc52ab836476f71fc8",
+      "published_sha256": "2e9c60872c547e0f194440f15fa35ea030f7cbc3fbf891fc52ab836476f71fc8",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/crawl_ff_loop_270_R_001__A216.png",
+      "original_sha256": "9e443b883454d4ac189f0903eac24f28d191cafcd62b2ade115383744e4b5800",
+      "published_sha256": "9e443b883454d4ac189f0903eac24f28d191cafcd62b2ade115383744e4b5800",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/crawl_ff_loop_315_005__A131.png",
+      "original_sha256": "2016752f905bfbdb4233c8dfbd8453b380b7fb196dc8adb2fd83df0ddb8e82f4",
+      "published_sha256": "2016752f905bfbdb4233c8dfbd8453b380b7fb196dc8adb2fd83df0ddb8e82f4",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_right_loop_R_002__A230.png",
+      "original_sha256": "88c2a27a9caca4207cabd1f0eeacb9c3826bc49865e9ef3a3c94fe1c6678fc46",
+      "published_sha256": "88c2a27a9caca4207cabd1f0eeacb9c3826bc49865e9ef3a3c94fe1c6678fc46",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_right_loop_R_003__A216.png",
+      "original_sha256": "fa4b243d1bf780c1da4d12e89750377948481fa98c216634246c50d704fec6c6",
+      "published_sha256": "fa4b243d1bf780c1da4d12e89750377948481fa98c216634246c50d704fec6c6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_right_to_idle_crawl_R_001__A215.png",
+      "original_sha256": "2a36d954dcbe112d4f8cb2b5dfffc7da207b5169d2af5849718d30e9e917363d",
+      "published_sha256": "2a36d954dcbe112d4f8cb2b5dfffc7da207b5169d2af5849718d30e9e917363d",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_right_to_idle_crawl_R_003__A229.png",
+      "original_sha256": "93580e1bb28964ffdd932e4e38655b94621ff51feeb2d58ea192aac590583486",
+      "published_sha256": "93580e1bb28964ffdd932e4e38655b94621ff51feeb2d58ea192aac590583486",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_start_001__A233.png",
+      "original_sha256": "56aa4da2988e9d0afeccce571f92dd2e62b0dd398d929967125b5b6de8f915df",
+      "published_sha256": "56aa4da2988e9d0afeccce571f92dd2e62b0dd398d929967125b5b6de8f915df",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_stop_001__A128.png",
+      "original_sha256": "3b87e1d22e0670b5dc249f1cabc2de7c52aa6c264521b0be8a039bbe42112074",
+      "published_sha256": "3b87e1d22e0670b5dc249f1cabc2de7c52aa6c264521b0be8a039bbe42112074",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_stop_001__A215.png",
+      "original_sha256": "caa99993ac15f775ca1a6cc57337995a0e1921ec258ced71080ccfddb585b8f3",
+      "published_sha256": "caa99993ac15f775ca1a6cc57337995a0e1921ec258ced71080ccfddb585b8f3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_stop_002__A233.png",
+      "original_sha256": "ddd9ac248cd1edfad88256e750036c20ce1052e8c60384e78b45421a9ecf937e",
+      "published_sha256": "ddd9ac248cd1edfad88256e750036c20ce1052e8c60384e78b45421a9ecf937e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_to_idle_crawl_right_R_003__A216.png",
+      "original_sha256": "500232e6238233619ab58866fcd9258307b39e6da0e48e264410112fcc1ae099",
+      "published_sha256": "500232e6238233619ab58866fcd9258307b39e6da0e48e264410112fcc1ae099",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/idle_crawl_to_idle_crawl_right_R_003__A232.png",
+      "original_sha256": "8140c0dc5ceafa2642d1911c1cf0d8e659bcd570d76bb76d14f6b3cff1448686",
+      "published_sha256": "8140c0dc5ceafa2642d1911c1cf0d8e659bcd570d76bb76d14f6b3cff1448686",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/turn_crawl_270_R_002__A232.png",
+      "original_sha256": "95070323092cb57dedff84d4a4caca395d9733de9355c9d61954ec44f8a1f09c",
+      "published_sha256": "95070323092cb57dedff84d4a4caca395d9733de9355c9d61954ec44f8a1f09c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/turn_crawl_270_R_003__A229.png",
+      "original_sha256": "4f8ebe6465fcfd8f9acc12d215e60633d9c07aff0baf2903d3f87d25cb26c586",
+      "published_sha256": "4f8ebe6465fcfd8f9acc12d215e60633d9c07aff0baf2903d3f87d25cb26c586",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/prone/turn_crawl_360_R_003__A233.png",
+      "original_sha256": "73884c95121a82a1f0983cf8faf41fc1085dfba4df3d69550248ea76d4df83e7",
+      "published_sha256": "73884c95121a82a1f0983cf8faf41fc1085dfba4df3d69550248ea76d4df83e7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/idle_to_on_all_fours_idle_001__A332.png",
+      "original_sha256": "30b7fce09ba9f5eea18c71f1ea79c335361b91413760172ee4a633b2eb90ac5a",
+      "published_sha256": "30b7fce09ba9f5eea18c71f1ea79c335361b91413760172ee4a633b2eb90ac5a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/idle_to_on_all_fours_idle_002__A334.png",
+      "original_sha256": "e5846f8328856f733b71bbb872b553904244e191e40050750ed16d123c9fd5c0",
+      "published_sha256": "e5846f8328856f733b71bbb872b553904244e191e40050750ed16d123c9fd5c0",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_backward_start_002__A122.png",
+      "original_sha256": "56fe78261a602e85247e55091c1da0441650189182498b09c3deef487f1db115",
+      "published_sha256": "56fe78261a602e85247e55091c1da0441650189182498b09c3deef487f1db115",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_backward_stop_002__A031.png",
+      "original_sha256": "ab7b1c0eb90573d213b0859bd275bf7a4a7dd57c5be8080aad5b0564f4358aa5",
+      "published_sha256": "ab7b1c0eb90573d213b0859bd275bf7a4a7dd57c5be8080aad5b0564f4358aa5",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_forward_loop_001__A033.png",
+      "original_sha256": "7b1cb14b9cf6524c213cd557c8222a7bd708159f9cd573d63be405d211aad1fd",
+      "published_sha256": "7b1cb14b9cf6524c213cd557c8222a7bd708159f9cd573d63be405d211aad1fd",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_forward_start_002__A126.png",
+      "original_sha256": "4f0af75e8f18db62881418161ed4b8bd95010f0f7d8719f844ee9274e3172b17",
+      "published_sha256": "4f0af75e8f18db62881418161ed4b8bd95010f0f7d8719f844ee9274e3172b17",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_forward_stop_002__A036.png",
+      "original_sha256": "f5d90d0edeb45d997470e8c7845b4e31798524631617d9594b12c9763acea5b4",
+      "published_sha256": "f5d90d0edeb45d997470e8c7845b4e31798524631617d9594b12c9763acea5b4",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_forward_stop_003__A036.png",
+      "original_sha256": "1c7ed84dbfe5e40e1946c13e8af258d935820e923f8a37daddfc5d0e9cb088a6",
+      "published_sha256": "1c7ed84dbfe5e40e1946c13e8af258d935820e923f8a37daddfc5d0e9cb088a6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_idle_loop_001__A125.png",
+      "original_sha256": "e8d0d5a90efd260c7ae4b9db6dc5c6c1d087bf4df62300746defd311bc1b41c3",
+      "published_sha256": "e8d0d5a90efd260c7ae4b9db6dc5c6c1d087bf4df62300746defd311bc1b41c3",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_idle_start_002__A128.png",
+      "original_sha256": "4d681fb09b85a8126903eb1f2036beb6476e87cc04fda34e298f11a7b30c4cab",
+      "published_sha256": "4d681fb09b85a8126903eb1f2036beb6476e87cc04fda34e298f11a7b30c4cab",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_loop_002__A031.png",
+      "original_sha256": "981a758bd9feab186fdb1ff095d0249998e4e60b64ce0725290d3b58534c0ff1",
+      "published_sha256": "981a758bd9feab186fdb1ff095d0249998e4e60b64ce0725290d3b58534c0ff1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_off_001__A030.png",
+      "original_sha256": "d2378679d25fd7e727af2e1b0e77a062bc3e7271ab76a153165256958265b2b0",
+      "published_sha256": "d2378679d25fd7e727af2e1b0e77a062bc3e7271ab76a153165256958265b2b0",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_off_004__A030.png",
+      "original_sha256": "902c9b0599db4ce23a7240d065b073c76c252b5eb4b062194af08f768fa3ef1a",
+      "published_sha256": "902c9b0599db4ce23a7240d065b073c76c252b5eb4b062194af08f768fa3ef1a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_start_001__A031.png",
+      "original_sha256": "8d5be3383763035db8843d6d447b332f0c84f3f8ac46e52b8ec643c4d632af21",
+      "published_sha256": "8d5be3383763035db8843d6d447b332f0c84f3f8ac46e52b8ec643c4d632af21",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_turn_000_003__A032.png",
+      "original_sha256": "5489574118de0867d90574db4994cd2961dd636b2e04cee2a3b2f3d6f65f36dc",
+      "published_sha256": "5489574118de0867d90574db4994cd2961dd636b2e04cee2a3b2f3d6f65f36dc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_turn_045_003__A031.png",
+      "original_sha256": "c9bccb4f2089ac4fe52b8bce4736f9fa5c0bce5fd927735f2901026c6ba3f2fc",
+      "published_sha256": "c9bccb4f2089ac4fe52b8bce4736f9fa5c0bce5fd927735f2901026c6ba3f2fc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/mohak_turn_090_001__A033.png",
+      "original_sha256": "85727a9648b7001eafaa51c14f35d74154ee389b2ed53a5f25506c6ed202b15c",
+      "published_sha256": "85727a9648b7001eafaa51c14f35d74154ee389b2ed53a5f25506c6ed202b15c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_backward_start_R_003__A201.png",
+      "original_sha256": "fd980ddbf8821acd0dfc34ab348e3b1e2046f61b3373b08988bf708f8671697a",
+      "published_sha256": "fd980ddbf8821acd0dfc34ab348e3b1e2046f61b3373b08988bf708f8671697a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_backward_stop_R_003__A200.png",
+      "original_sha256": "c1c77172261092816c34024f109dc9f1176e644c236d4c9fe4393ec9ea7c63a6",
+      "published_sha256": "c1c77172261092816c34024f109dc9f1176e644c236d4c9fe4393ec9ea7c63a6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_forward_start_R_002__A201.png",
+      "original_sha256": "f7b8469988f32d066715c03b0b84e1e9ae054be86fee4f66fa84b95e7fc85655",
+      "published_sha256": "f7b8469988f32d066715c03b0b84e1e9ae054be86fee4f66fa84b95e7fc85655",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_forward_stop_R_004__A199.png",
+      "original_sha256": "cf8dd525efc94978b1423e746f5928675d84fef1bc71779c08e1f1b5a312cedf",
+      "published_sha256": "cf8dd525efc94978b1423e746f5928675d84fef1bc71779c08e1f1b5a312cedf",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_idle_loop_002__A200.png",
+      "original_sha256": "e462eeac660158bcc15fa8d17201710d1629460b3d4a9e75193fa7ad519e27dd",
+      "published_sha256": "e462eeac660158bcc15fa8d17201710d1629460b3d4a9e75193fa7ad519e27dd",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_idle_loop_003__A199.png",
+      "original_sha256": "876e5166dc4f8a73e065810e71ddcc36ab10a3082b898f526362791f9328a003",
+      "published_sha256": "876e5166dc4f8a73e065810e71ddcc36ab10a3082b898f526362791f9328a003",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_turn_270_R_003__A202.png",
+      "original_sha256": "ad2457afc7fd3e3f92e496ea85ea6e5df1cd40d30a4ba5c1434ee48974761859",
+      "published_sha256": "ad2457afc7fd3e3f92e496ea85ea6e5df1cd40d30a4ba5c1434ee48974761859",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/on_all_fours_turn_360_R_002__A201.png",
+      "original_sha256": "637e0a524086d29af883465214afcd6a8eea0800d6d0bdb1dfaae01f7728b874",
+      "published_sha256": "637e0a524086d29af883465214afcd6a8eea0800d6d0bdb1dfaae01f7728b874",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/spider_crawl_R_001__A362.png",
+      "original_sha256": "a4091a8823c2db7511f72d23a4f0108d4eebacf3eade9616a9eff2ffc1c02f01",
+      "published_sha256": "a4091a8823c2db7511f72d23a4f0108d4eebacf3eade9616a9eff2ffc1c02f01",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/quadruped/spider_crawl_R_004__A362.png",
+      "original_sha256": "9560a551b450d81b6ae6d033fb6273218cf79dc1d1540a7c754ab3b5f9bccd46",
+      "published_sha256": "9560a551b450d81b6ae6d033fb6273218cf79dc1d1540a7c754ab3b5f9bccd46",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stair_slide_down_R_102__A305.png",
+      "original_sha256": "e0ea7fab73ca30ab2b3822aca9eccdc02efa168996ba84fc73bfd274ee9ecc6f",
+      "published_sha256": "e0ea7fab73ca30ab2b3822aca9eccdc02efa168996ba84fc73bfd274ee9ecc6f",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stair_slide_down_R_104__A305.png",
+      "original_sha256": "d01adffd6d53f6af63d295ef1deea1c2824396a5afd3e134f860df8db77a92a6",
+      "published_sha256": "d01adffd6d53f6af63d295ef1deea1c2824396a5afd3e134f860df8db77a92a6",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_down_loop_R_102__A301.png",
+      "original_sha256": "d146ca2bf858510696a279d65ffb924b3592b576a2817f30479c08e8c5f7515c",
+      "published_sha256": "d146ca2bf858510696a279d65ffb924b3592b576a2817f30479c08e8c5f7515c",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_down_stop_R_002__A300.png",
+      "original_sha256": "b3a426fb984ce9f0f3983dadaa402615fabbc29b7482bea7a5969f5aeec42480",
+      "published_sha256": "b3a426fb984ce9f0f3983dadaa402615fabbc29b7482bea7a5969f5aeec42480",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_down_stop_R_102__A301.png",
+      "original_sha256": "adee7be94196b2a481e8323510db41e78e754fb97faee4b6a0739436345d4e94",
+      "published_sha256": "adee7be94196b2a481e8323510db41e78e754fb97faee4b6a0739436345d4e94",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_jog_down_loop_R_001__A300.png",
+      "original_sha256": "b7c4df9ed0be33bee3d69fd8e9697c2dec1b8526f841d4908c43cb30fc8bc350",
+      "published_sha256": "b7c4df9ed0be33bee3d69fd8e9697c2dec1b8526f841d4908c43cb30fc8bc350",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png",
+      "original_sha256": "6b7f96259f031ddd45e4d3a2e519978f947acd3eb01461d2c47a08e507e12878",
+      "published_sha256": "6b7f96259f031ddd45e4d3a2e519978f947acd3eb01461d2c47a08e507e12878",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_jog_up_start_R_002__A300.png",
+      "original_sha256": "73da77d92dc09505980d83aca538bac1adc6b2da9799ed349592fefce873efe1",
+      "published_sha256": "73da77d92dc09505980d83aca538bac1adc6b2da9799ed349592fefce873efe1",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_jog_up_start_R_003__A300.png",
+      "original_sha256": "1c43c5de3c484226f1722511f91b739ca43d92044e85bdfc9db516588294a2a9",
+      "published_sha256": "1c43c5de3c484226f1722511f91b739ca43d92044e85bdfc9db516588294a2a9",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_jog_up_start_R_102__A301.png",
+      "original_sha256": "ea98614c71f3d58b9c3e0794101a80c98cf608a13ed303fac7438712f3b6e429",
+      "published_sha256": "ea98614c71f3d58b9c3e0794101a80c98cf608a13ed303fac7438712f3b6e429",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_up_start_R_002__A300.png",
+      "original_sha256": "fc475f78ee417b8cc3b56d698cd54c3e5f45c2ec31264ad720afc881330d4bc4",
+      "published_sha256": "fc475f78ee417b8cc3b56d698cd54c3e5f45c2ec31264ad720afc881330d4bc4",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_up_start_R_003__A300.png",
+      "original_sha256": "4808f814fcdcd63ab90047c1d7016ca9822ac593ca3f6b166424d8de2852bc92",
+      "published_sha256": "4808f814fcdcd63ab90047c1d7016ca9822ac593ca3f6b166424d8de2852bc92",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_climbing_up_start_R_101__A301.png",
+      "original_sha256": "3532fb4f0b7f210bb3f761ba26f251189cb205074684ee53313589aed1468fb9",
+      "published_sha256": "3532fb4f0b7f210bb3f761ba26f251189cb205074684ee53313589aed1468fb9",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_slip_R_003__A300.png",
+      "original_sha256": "461c93800df1a79ce4b2b81e25c959eac5d20e5187ff7ad4c4de72da57bd255a",
+      "published_sha256": "461c93800df1a79ce4b2b81e25c959eac5d20e5187ff7ad4c4de72da57bd255a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/stairs/stairs_slip_R_004__A300.png",
+      "original_sha256": "c81ea9d36a0f385c2c7478e0a8b36777a315f3c96c60afb42bd1ec04fb840a57",
+      "published_sha256": "c81ea9d36a0f385c2c7478e0a8b36777a315f3c96c60afb42bd1ec04fb840a57",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/drinking_wall_leaning_mug_090_R_003__A282.png",
+      "original_sha256": "5449e223b09aadd8068d66413610b852762f4a8e416607e6cbf6933b1615aec8",
+      "published_sha256": "5449e223b09aadd8068d66413610b852762f4a8e416607e6cbf6933b1615aec8",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/drinking_wall_leaning_mug_090_R_004__A291.png",
+      "original_sha256": "1b562ef179e46ef8e7db310bf80c17e6a1fa50828b799851f6a611bc2bd6d9de",
+      "published_sha256": "1b562ef179e46ef8e7db310bf80c17e6a1fa50828b799851f6a611bc2bd6d9de",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/drinking_wall_leaning_mug_360_R_003__A282.png",
+      "original_sha256": "007328d782affaf3d1e527f336ad790c9185b205611d8db74cea6563b283fe5a",
+      "published_sha256": "007328d782affaf3d1e527f336ad790c9185b205611d8db74cea6563b283fe5a",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/drinking_wall_leaning_mug_R_002__A344.png",
+      "original_sha256": "d9d3ac8a39d3d92f8f09f7ebeac0c696decf34e065a26571a6c8082f1cdb4042",
+      "published_sha256": "d9d3ac8a39d3d92f8f09f7ebeac0c696decf34e065a26571a6c8082f1cdb4042",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_crouch_270_loop_004__A549.png",
+      "original_sha256": "e13eff1d2cefe09c0071e13b491b874837932c7b04375167a7b24400def12495",
+      "published_sha256": "e13eff1d2cefe09c0071e13b491b874837932c7b04375167a7b24400def12495",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_crouch_270_stop_001__A305.png",
+      "original_sha256": "8829fc93d3ae86ae4b87a79875e1c2efd87739808092d34005a16345d8007e66",
+      "published_sha256": "8829fc93d3ae86ae4b87a79875e1c2efd87739808092d34005a16345d8007e66",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_crouch_to_stand_270_start_001__A344.png",
+      "original_sha256": "17f7dc8cc0f6af194aa8c78aaa9af48049797ec86909e39e2e6c5d17e2882988",
+      "published_sha256": "17f7dc8cc0f6af194aa8c78aaa9af48049797ec86909e39e2e6c5d17e2882988",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_crouch_to_stand_270_stop_001__A344.png",
+      "original_sha256": "8d346a0cc3cbcdca888b8ea524eb9e0cd37ae037923bc162a313c5455a6ba954",
+      "published_sha256": "8d346a0cc3cbcdca888b8ea524eb9e0cd37ae037923bc162a313c5455a6ba954",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_crouch_to_stand_270_stop_002__A341.png",
+      "original_sha256": "549dbc25b9ab9c1798aac4961e25216d5e736f5a903012a0568c25eaf4893ca9",
+      "published_sha256": "549dbc25b9ab9c1798aac4961e25216d5e736f5a903012a0568c25eaf4893ca9",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_stand_to_crouch_270_start_001__A342.png",
+      "original_sha256": "790eba80ee5f7bea9bbddbf823959c3cce81169db6b32962c11e43482cfe8123",
+      "published_sha256": "790eba80ee5f7bea9bbddbf823959c3cce81169db6b32962c11e43482cfe8123",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_stand_to_crouch_270_start_003__A342.png",
+      "original_sha256": "ca56f1f12c1173d5b443a790c5350ef708cd08fd0cc3356006b11f3140d71e52",
+      "published_sha256": "ca56f1f12c1173d5b443a790c5350ef708cd08fd0cc3356006b11f3140d71e52",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/h_b_w_stand_to_crouch_270_start_003__A344.png",
+      "original_sha256": "b65afc8bcc66c607dc7e2b0c5bf4779780df8f1c4f2123fb81f8180bef90ab29",
+      "published_sha256": "b65afc8bcc66c607dc7e2b0c5bf4779780df8f1c4f2123fb81f8180bef90ab29",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/idle_to_wall_leaning_idle_360_R_002__A289.png",
+      "original_sha256": "e27ac22e062f3d47f0c220c797dcb842edcaf77aa04f5272e6ee106ce665d244",
+      "published_sha256": "e27ac22e062f3d47f0c220c797dcb842edcaf77aa04f5272e6ee106ce665d244",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/idle_to_wall_leaning_idle_360_R_003__A282.png",
+      "original_sha256": "f76375cd6c8e2666388d1476923ef53f79265d19308cbd2c47771cf5e86dc005",
+      "published_sha256": "f76375cd6c8e2666388d1476923ef53f79265d19308cbd2c47771cf5e86dc005",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/wall_leaning_idle_270_R_003__A291.png",
+      "original_sha256": "1511a37a368e5083b399bb79981c9a2bc77ee77d6628703ad1e14d036ff6ef85",
+      "published_sha256": "1511a37a368e5083b399bb79981c9a2bc77ee77d6628703ad1e14d036ff6ef85",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/wall_leaning_idle_360_R_003__A285.png",
+      "original_sha256": "3f7bbfa340eaa28981e7e3df4733348123cd5e8568dbb9bb4e8de6af31084ac7",
+      "published_sha256": "3f7bbfa340eaa28981e7e3df4733348123cd5e8568dbb9bb4e8de6af31084ac7",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/wall_leaning_idle_to_idle_360_R_001__A286.png",
+      "original_sha256": "c4f78a46667a39ed1ea316cae0da4e2d9be4318d2803f4b403c618842a415556",
+      "published_sha256": "c4f78a46667a39ed1ea316cae0da4e2d9be4318d2803f4b403c618842a415556",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "full/viz/wall_contact/wall_leaning_idle_to_idle_360_R_003__A283.png",
+      "original_sha256": "2a7be660f89dea003fd1d0611f3b456ce39567fe5ccbfdedae020c5226e5ebea",
+      "published_sha256": "2a7be660f89dea003fd1d0611f3b456ce39567fe5ccbfdedae020c5226e5ebea",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "pilot/by_group.json",
+      "original_sha256": "9b38f3f3f5ec88a34d6adfc68d5d3b245051415aa815cd03353911ff930b9109",
+      "published_sha256": "9b38f3f3f5ec88a34d6adfc68d5d3b245051415aa815cd03353911ff930b9109",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "pilot/report.json",
+      "original_sha256": "ce0c4924427c5efbf5bf3d9b0e239b255e2c8e11788acd0ce67ab07c797c4c72",
+      "published_sha256": "ce0c4924427c5efbf5bf3d9b0e239b255e2c8e11788acd0ce67ab07c797c4c72",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "publication_selection.json",
+      "original_sha256": "1d71977baa84a909d341ff264de7c17016641f1db70c8bc193e4d0cc37f6a911",
+      "published_sha256": "1d71977baa84a909d341ff264de7c17016641f1db70c8bc193e4d0cc37f6a911",
+      "machine_path_substitutions": false
+    }
+  ]
+}
