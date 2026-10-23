@@ -2,7 +2,7 @@
 
 2026-10-23 在 PRO6000 上运行 `d313b65`。测试最后一行：`9 passed, 1 skipped in 2.04s`。
 
-执行说明和迁移进度见 [v2记录](../../../docs/records/bones_terrain_survey_v2_pro6000_20261023.md)。
+执行说明见 [v2记录](../../../docs/records/bones_terrain_survey_v2_pro6000_20261023.md)。全部71,132条原始BVH已迁移到PRO6000并通过逐文件SHA256验证，见 [迁移完成结果](transfer/README.md)。
 
 ```text
 stems: {'unique': 2863, 'with_any_hit': 812, 'with_dimension_tokens': 17}
@@ -17,8 +17,9 @@ stems: {'unique': 2863, 'with_any_hit': 812, 'with_dimension_tokens': 17}
 | [execution_receipt.json](execution_receipt.json) | survey完成时的环境、迁移授权和磁盘余量快照 |
 | [SHA256SUMS](SHA256SUMS) | 公开结果文件的SHA256 |
 | [publication_manifest.json](publication_manifest.json) | 原始结果与公开副本的哈希对应 |
-| [transfer_source_summary.json](transfer_source_summary.json) | 全部原始BVH源清单的数量、大小和哈希；目标端验证完成后另附报告 |
+| [transfer_source_summary.json](transfer_source_summary.json) | 全部原始BVH源清单摘要与最终验证结果 |
 | [transfer_staging_complete.json](transfer_staging_complete.json) | 源端已完成全部124个日期包上传，含每个包的SHA256 |
+| [transfer/](transfer/README.md) | 目标端最终验证、标注覆盖、空间测量与中断恢复记录 |
 
 每个词干列出各桶命中比例、原始与镜像数量、家族和演员数量、尺寸词，以及一条示例描述。812个词干有至少一次命中，2,051个没有命中；17个含尺寸词。
 

@@ -228,6 +228,8 @@ def receive_verify(args):
     if digest(manifest) != complete['manifest_sha256']:
         raise ValueError('Downloaded manifest hash differs')
     rows = read_manifest(manifest)
+    if len(rows) != args.expected_files or complete['scope'] != 'all_originals':
+        raise ValueError('Source scope or file count differs from requested transfer')
     if len(rows) != complete['files'] or sum(r['size'] for r in rows) != complete['total_bytes']:
         raise ValueError('Manifest totals differ from staging receipt')
     grouped = defaultdict(list)

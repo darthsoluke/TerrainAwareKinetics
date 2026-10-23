@@ -23,6 +23,8 @@
 
 随后完成的 [survey v2](docs/records/bones_terrain_survey_v2_pro6000_20261023.md) 汇总了 [2,863 个动作词干](examples/results/bones_terrain_survey_v2_20261023/stems.tsv)，包含812个有关键词命中的词干和17个带尺寸词的词干。
 
+全部 **71,132 条原始 BONES BVH** 已迁移到 PRO6000，保留日期目录并逐文件验证通过，差异为0；见 [迁移完成记录](examples/results/bones_terrain_survey_v2_20261023/transfer/README.md)。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

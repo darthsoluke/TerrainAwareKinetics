@@ -9,5 +9,13 @@
   "manifest_sha256": "aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1",
   "largest_date_raw_bytes": 4300411261,
   "minimum_destination_free_bytes": 214748364800,
-  "destination_verification": null
+  "destination_verification": {
+    "report": "transfer/verification.json",
+    "files_verified": 71132,
+    "mismatches": 0,
+    "unexpected_bvhs": 0,
+    "receiver_preparation_free_bytes": 594274402304,
+    "final_free_bytes": 445482201088,
+    "passed": true
+  }
 }

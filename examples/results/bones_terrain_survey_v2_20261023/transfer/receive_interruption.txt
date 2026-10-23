@@ -1,0 +1,14 @@
+Extracted 230317: 63/124 dates
+2026/10/23 13:35:41 CRITICAL: Source doesn't exist or is a directory and destination is a file
+Traceback (most recent call last):
+  File "${TRANSFER_TOOLS}/transfer_bones_originals_v4.py", line 294, in <module>
+    main()
+  File "${TRANSFER_TOOLS}/transfer_bones_originals_v4.py", line 290, in main
+    {'index': index_source, 'upload': pack_upload, 'receive': receive_verify}[args.mode](args)
+  File "${TRANSFER_TOOLS}/transfer_bones_originals_v4.py", line 250, in receive_verify
+    rclone(args, remote + '/' + package['name'], archive)
+  File "${TRANSFER_TOOLS}/transfer_bones_originals_v4.py", line 100, in rclone
+    subprocess.run([args.rclone, '--config', str(args.config), 'copyto', str(source), str(destination),
+  File "${PFNN_PROJECT}/python/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['${RCLONE}', '--config', '${PRIVATE_DRIVE_CONFIG}', 'copyto', '${PRIVATE_DRIVE_ORIGINALS}/230320.tar.gz', '${TRANSFER_WORK}/230320.tar.gz', '--immutable', '--drive-chunk-size', '32M', '--disable-http2', '--contimeout', '20s', '--timeout', '120s', '--retries', '5', '--low-level-retries', '3', '--stats', '30s', '--stats-one-line', '--stats-log-level', 'NOTICE']' returned non-zero exit status 1.

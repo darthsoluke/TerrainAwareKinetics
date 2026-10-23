@@ -1,0 +1,11 @@
+{
+  "files_expected": 71132,
+  "files_verified": 71132,
+  "mismatches": [],
+  "unexpected_bvhs": [],
+  "total_bytes": 148382694286,
+  "manifest_sha256": "aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1",
+  "free_bytes_before": 493360558080,
+  "free_bytes_after": 445482201088,
+  "minimum_remaining_bytes": 214748364800
+}

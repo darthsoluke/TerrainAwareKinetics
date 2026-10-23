@@ -1,0 +1,32 @@
+{
+  "time": "2026-10-23T13:58:45.698944+08:00",
+  "pid": 1654287,
+  "arguments": [
+    "${PFNN_PROJECT}/env/bin/python",
+    "-u",
+    "${TRANSFER_TOOLS}/transfer_bones_originals_v5.py",
+    "receive",
+    "--work",
+    "${TRANSFER_WORK}",
+    "--destination",
+    "${BONES_BVH_ROOT}",
+    "--expected-files",
+    "71132",
+    "--reserve-gib",
+    "200",
+    "--prefetch",
+    "--download-transfers",
+    "4",
+    "--workers",
+    "4",
+    "--rclone",
+    "${RCLONE}",
+    "--config",
+    "${PRIVATE_DRIVE_CONFIG}",
+    "--remote",
+    "${PRIVATE_DRIVE_ORIGINALS}"
+  ],
+  "helper_sha256": "870d9277a951ab539158a1bb7cac518ef31e4047210e80b3d43be192f97afc16",
+  "cached_remaining_archives_verified": 61,
+  "source_manifest_sha256": "aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1"
+}

@@ -1,0 +1,20 @@
+{
+  "finished_at": "2026-10-23T14:04:24.626052+08:00",
+  "scope": "A_all_originals",
+  "destination": "${BONES_BVH_ROOT}",
+  "date_folders": 124,
+  "files_expected": 71132,
+  "files_verified": 71132,
+  "mismatches": 0,
+  "unexpected_bvhs": 0,
+  "total_bytes": 148382694286,
+  "compressed_transfer_bytes": 27821576214,
+  "manifest_sha256": "aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1",
+  "preflight_free_bytes": 594284519424,
+  "resume_free_bytes": 493360558080,
+  "final_free_bytes": 445482201088,
+  "minimum_remaining_bytes": 214748364800,
+  "full_sha256_verification_passed": true,
+  "motion_changed": false,
+  "training_started": false
+}

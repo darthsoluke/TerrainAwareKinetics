@@ -2,6 +2,8 @@
 
 2026-10-23，PRO6000，调查源码 `d313b65c4f42a939b9d354ce7e9a2ac93780babb`。
 
+**已完成：survey v2与范围A的全部原始BVH迁移。** 71,132个目标文件均通过独立SHA256验证，差异0、额外BVH 0；完成后根分区可用414.888GiB。完整验证产物见 [迁移结果](../../examples/results/bones_terrain_survey_v2_20261023/transfer/README.md)。
+
 ## Survey v2 已完成
 
 测试命令与实际最后一行：
@@ -54,11 +56,23 @@ flat_remainder                122285   61163   61122    435575.1         -      
 
 源端全部124个日期包已上传到私有Drive，压缩后合计27,821,576,214 bytes，约25.91GiB。[完整上传收据](../../examples/results/bones_terrain_survey_v2_20261023/transfer_staging_complete.json)包含各包SHA256，文件数、原始字节数、压缩字节数和日期数汇总均已核对。
 
-PRO6000正在下载剩余包，目标端最终逐文件校验结果尚未产生。上传器记录每个成功日期，重启时复用完成记录；大文件分块设为32MiB。g3直连Drive实测约26～29MiB/s，接收端使用M78。
+全部日期包已在PRO6000下载、解包并核验，接收程序退出码为0。上传器记录每个成功日期，恢复时复用完成记录；大文件分块设为32MiB。g3直连Drive实测约26～29MiB/s，接收端使用M78。
 
-源清单与timeline原始名称已完成交叉核对：71,132个源文件名与71,132条原始标注全部匹配，没有单边缺失。BVH内容的最终目标端验证仍按下述流程执行。
+源清单与timeline原始名称已完成交叉核对：71,132个源文件名与71,132条原始标注全部匹配，没有单边缺失。最终BVH验证与空间测量如下：
 
-迁移工具：[transfer_bones_originals.py](../../scripts/transfer_bones_originals.py)，[测试](../../tests/test_bones_transfer.py)有12项通过，覆盖原始/镜像筛选、日期目录、错误哈希、已有文件保护、空间门槛、完成日期复用、预下载完成条件与离线缓存验证。工具分为：
+| 项目 | 实测结果 |
+| --- | ---: |
+| 预期文件 |71,132 |
+| 独立全量SHA256通过 |71,132 |
+| 哈希差异 / 额外BVH |0 / 0 |
+| 总字节 |148,382,694,286 |
+| 接收准备时根分区可用量 |594,274,402,304 bytes / 553.461 GiB |
+| 最终根分区可用量 |445,482,201,088 bytes / 414.888 GiB |
+| 保留空间门槛 |214,748,364,800 bytes / 200 GiB |
+
+测量原件：[最终验证](../../examples/results/bones_terrain_survey_v2_20261023/transfer/verification.json)、[接收准备时df](../../examples/results/bones_terrain_survey_v2_20261023/transfer/space_before.txt)、[完成后df](../../examples/results/bones_terrain_survey_v2_20261023/transfer/space_after.txt)。`verification.json.free_bytes_before`是缓存恢复时的空间快照，迁移前空间采用单独保存的df输出。
+
+迁移工具：[transfer_bones_originals.py](../../scripts/transfer_bones_originals.py)，最新[测试](../../tests/test_bones_transfer.py)有13项通过，覆盖原始/镜像筛选、日期目录、错误哈希、已有文件保护、空间门槛、完成日期复用、预下载完成条件，以及缓存路径的范围/数量和哈希验证。工具分为：
 
 1. `index`：只读g3源BVH，写出每个相对路径、大小与SHA256；清单完整后才允许打包。
 2. `upload`：每个日期一个tar.gz，经私有Drive上传；成功后清理本任务自己的临时压缩包。
@@ -70,4 +84,6 @@ PRO6000正在下载剩余包，目标端最终逐文件校验结果尚未产生�
 
 处理完63个日期目录后，旧接收器对本地已存在的`230320.tar.gz`仍执行Drive查询，返回 `Source doesn't exist or is a directory and destination is a file`，接收进程退出。
 
-现场核对剩余61个本地压缩包，大小和SHA256全部匹配源端完成记录，源清单SHA256也匹配。接收器已改为复用完整本地缓存，保留包哈希、逐文件哈希和最后独立全量核对；已有目标文件也会先核验，再继续处理剩余目录。新增测试同时覆盖无需网络的缓存接收和损坏缓存必须报错。
+现场核对剩余61个本地压缩包，大小和SHA256全部匹配源端完成记录，源清单SHA256也匹配。接收器改为复用完整本地缓存，保留包哈希、逐文件哈希和最后独立全量核对；已有目标文件先核验，再继续处理剩余目录。恢复后完成全部71,132个文件，差异为0。新增测试同时覆盖无需网络的缓存接收、损坏缓存必须报错，以及缓存数量必须匹配请求。
+
+原始错误、缓存核验及实际运行命令分别见 [中断日志](../../examples/results/bones_terrain_survey_v2_20261023/transfer/receive_interruption.txt)、[缓存检查](../../examples/results/bones_terrain_survey_v2_20261023/transfer/cache_resume_check.json)、[恢复执行记录](../../examples/results/bones_terrain_survey_v2_20261023/transfer/resume_execution.json)。实际完成接收的工具SHA256保留在执行记录中，后续发布的数量检查不会改写此次运行身份。
