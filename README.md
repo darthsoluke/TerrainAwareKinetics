@@ -25,6 +25,8 @@
 
 全部 **71,132 条原始 BONES BVH** 已迁移到 PRO6000，保留日期目录并逐文件验证通过，差异为0；见 [迁移完成记录](examples/results/bones_terrain_survey_v2_20261023/transfer/README.md)。
 
+后续 [BONES 几何筛查](docs/records/bones_terrain_screen_pro6000_20261023.md) 的试运行、全量结果和逐片段紧凑表见 [结果目录](examples/results/bones_terrain_screen_v1_20261023/README.md)。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

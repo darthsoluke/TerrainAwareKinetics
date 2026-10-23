@@ -1,0 +1,1 @@
+{"selected": 6795, "per_group": {"box_support": 48, "crouch": 1145, "flat_control": 900, "kneel": 638, "known_dimension_support": 1760, "ladder": 64, "obstacle_clearance": 86, "prone": 919, "quadruped": 833, "stairs": 49, "wall_contact": 353}, "configured_stems_without_files": []}

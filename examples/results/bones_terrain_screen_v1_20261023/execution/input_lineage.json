@@ -1,0 +1,23 @@
+{
+  "source_transfer_manifest_sha256": "aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1",
+  "source_originals": 71132,
+  "bvh_root": "${BONES_BVH_ROOT}",
+  "runs": {
+    "pilot": {
+      "selected": 196,
+      "results": 196,
+      "source_hashes_matched": 196,
+      "mismatches": 0,
+      "successful": 196,
+      "failed": 0
+    },
+    "full": {
+      "selected": 6795,
+      "results": 6795,
+      "source_hashes_matched": 6795,
+      "mismatches": 0,
+      "successful": 6788,
+      "failed": 7
+    }
+  }
+}

@@ -1,0 +1,582 @@
+{
+  "schema_version": "bones-terrain-screen-v1",
+  "git_commit": "0f97409173586919f35afa8c74a9d601d5788ac2",
+  "config": {
+    "path": "${TAK_ROOT}/configs/bones_terrain_screen_v1.json",
+    "sha256": "b2c08e5bdc682cd02d53416d1fd1c50c50b5967798d2782ccf17cba28f22928e",
+    "version": "bones-terrain-screen-v1"
+  },
+  "bvh_root": "${BONES_BVH_ROOT}",
+  "bvh_files_found": 71132,
+  "arguments": {
+    "groups": null,
+    "limit_per_stem": null,
+    "workers": 16
+  },
+  "selection": {
+    "selected": 6795,
+    "per_group": {
+      "box_support": 48,
+      "crouch": 1145,
+      "flat_control": 900,
+      "kneel": 638,
+      "known_dimension_support": 1760,
+      "ladder": 64,
+      "obstacle_clearance": 86,
+      "prone": 919,
+      "quadruped": 833,
+      "stairs": 49,
+      "wall_contact": 353
+    },
+    "per_stem": {
+      "avoid_obstacle_jump_run": {
+        "group": "obstacle_clearance",
+        "available": 4,
+        "selected": 4
+      },
+      "box_jump": {
+        "group": "box_support",
+        "available": 12,
+        "selected": 12
+      },
+      "box_jump_down": {
+        "group": "box_support",
+        "available": 12,
+        "selected": 12
+      },
+      "change_idle_crawl_to_idle_crawl_right": {
+        "group": "prone",
+        "available": 15,
+        "selected": 15
+      },
+      "change_idle_crouch_right_to_idle_crouch": {
+        "group": "crouch",
+        "available": 13,
+        "selected": 13
+      },
+      "come_down_50cm_box": {
+        "group": "known_dimension_support",
+        "available": 597,
+        "selected": 597
+      },
+      "come_up_50cm_box": {
+        "group": "known_dimension_support",
+        "available": 984,
+        "selected": 984
+      },
+      "crawl": {
+        "group": "prone",
+        "available": 600,
+        "selected": 600
+      },
+      "crouch": {
+        "group": "crouch",
+        "available": 817,
+        "selected": 817
+      },
+      "crouch_idle": {
+        "group": "crouch",
+        "available": 13,
+        "selected": 13
+      },
+      "crouch_idle_right": {
+        "group": "crouch",
+        "available": 17,
+        "selected": 17
+      },
+      "crouch_idle_right_to_crouch_idle": {
+        "group": "crouch",
+        "available": 17,
+        "selected": 17
+      },
+      "crouch_idle_to_crouch_idle_right": {
+        "group": "crouch",
+        "available": 16,
+        "selected": 16
+      },
+      "crouch_walk_forward_and_back_turn_to_idle": {
+        "group": "crouch",
+        "available": 4,
+        "selected": 4
+      },
+      "drinking_wall_leaning_mug": {
+        "group": "wall_contact",
+        "available": 36,
+        "selected": 36
+      },
+      "drinking_wall_leaning_mug_090": {
+        "group": "wall_contact",
+        "available": 24,
+        "selected": 24
+      },
+      "h_b_w_crouch": {
+        "group": "wall_contact",
+        "available": 74,
+        "selected": 74
+      },
+      "h_b_w_crouch_to_stand": {
+        "group": "wall_contact",
+        "available": 40,
+        "selected": 40
+      },
+      "h_b_w_stand_to_crouch": {
+        "group": "wall_contact",
+        "available": 35,
+        "selected": 35
+      },
+      "idle": {
+        "group": "flat_control",
+        "available": 306,
+        "selected": 60
+      },
+      "idle_crawl": {
+        "group": "prone",
+        "available": 129,
+        "selected": 129
+      },
+      "idle_crawl_right": {
+        "group": "prone",
+        "available": 43,
+        "selected": 43
+      },
+      "idle_crawl_right_to_idle_crawl": {
+        "group": "prone",
+        "available": 30,
+        "selected": 30
+      },
+      "idle_crawl_to_idle_crawl_right": {
+        "group": "prone",
+        "available": 30,
+        "selected": 30
+      },
+      "idle_crouch": {
+        "group": "crouch",
+        "available": 33,
+        "selected": 33
+      },
+      "idle_crouch_right": {
+        "group": "crouch",
+        "available": 29,
+        "selected": 29
+      },
+      "idle_crouch_right_to_idle_crouch": {
+        "group": "crouch",
+        "available": 20,
+        "selected": 20
+      },
+      "idle_crouch_to_idle_crouch_right": {
+        "group": "crouch",
+        "available": 22,
+        "selected": 22
+      },
+      "idle_to_on_all_fours_idle": {
+        "group": "quadruped",
+        "available": 15,
+        "selected": 15
+      },
+      "idle_to_wall_leaning_idle": {
+        "group": "wall_contact",
+        "available": 48,
+        "selected": 48
+      },
+      "idle_turn": {
+        "group": "flat_control",
+        "available": 412,
+        "selected": 60
+      },
+      "item_pick_up_crouch_idle": {
+        "group": "crouch",
+        "available": 32,
+        "selected": 32
+      },
+      "item_pick_up_crouch_walk": {
+        "group": "crouch",
+        "available": 30,
+        "selected": 30
+      },
+      "jog": {
+        "group": "flat_control",
+        "available": 4240,
+        "selected": 60
+      },
+      "jog_arc": {
+        "group": "flat_control",
+        "available": 523,
+        "selected": 60
+      },
+      "jog_backward": {
+        "group": "flat_control",
+        "available": 223,
+        "selected": 60
+      },
+      "jog_forward": {
+        "group": "flat_control",
+        "available": 253,
+        "selected": 60
+      },
+      "jog_sideway": {
+        "group": "flat_control",
+        "available": 228,
+        "selected": 60
+      },
+      "jog_sideway_045": {
+        "group": "flat_control",
+        "available": 221,
+        "selected": 60
+      },
+      "jump_form_box_to_safety_roll": {
+        "group": "box_support",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_off_1m": {
+        "group": "known_dimension_support",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_off_50cm": {
+        "group": "known_dimension_support",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_off_front_50cm": {
+        "group": "known_dimension_support",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_on_1m": {
+        "group": "known_dimension_support",
+        "available": 6,
+        "selected": 6
+      },
+      "jump_on_50cm": {
+        "group": "known_dimension_support",
+        "available": 11,
+        "selected": 11
+      },
+      "jump_on_box_230cm": {
+        "group": "known_dimension_support",
+        "available": 6,
+        "selected": 6
+      },
+      "jump_over_obstacle_0.5m": {
+        "group": "obstacle_clearance",
+        "available": 13,
+        "selected": 13
+      },
+      "jump_over_obstacle_0.75m": {
+        "group": "obstacle_clearance",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_over_obstacle_1.5m": {
+        "group": "obstacle_clearance",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_over_obstacle_1m": {
+        "group": "obstacle_clearance",
+        "available": 13,
+        "selected": 13
+      },
+      "jump_over_obstacle_2m": {
+        "group": "obstacle_clearance",
+        "available": 12,
+        "selected": 12
+      },
+      "jump_over_obstacle_no_hand_0.75m": {
+        "group": "obstacle_clearance",
+        "available": 6,
+        "selected": 6
+      },
+      "jump_to_shoulder_roll": {
+        "group": "box_support",
+        "available": 12,
+        "selected": 12
+      },
+      "kneeling": {
+        "group": "kneel",
+        "available": 638,
+        "selected": 638
+      },
+      "ladder_climbing_down": {
+        "group": "ladder",
+        "available": 12,
+        "selected": 12
+      },
+      "ladder_climbing_down_over": {
+        "group": "ladder",
+        "available": 2,
+        "selected": 2
+      },
+      "ladder_climbing_down_through": {
+        "group": "ladder",
+        "available": 2,
+        "selected": 2
+      },
+      "ladder_climbing_idle": {
+        "group": "ladder",
+        "available": 6,
+        "selected": 6
+      },
+      "ladder_climbing_jumpdown": {
+        "group": "ladder",
+        "available": 6,
+        "selected": 6
+      },
+      "ladder_climbing_stepdown": {
+        "group": "ladder",
+        "available": 6,
+        "selected": 6
+      },
+      "ladder_climbing_up": {
+        "group": "ladder",
+        "available": 6,
+        "selected": 6
+      },
+      "ladder_jump_on": {
+        "group": "ladder",
+        "available": 6,
+        "selected": 6
+      },
+      "ladder_slide_down": {
+        "group": "ladder",
+        "available": 12,
+        "selected": 12
+      },
+      "ladder_slip": {
+        "group": "ladder",
+        "available": 6,
+        "selected": 6
+      },
+      "lift_crate_come_down_50cm_box": {
+        "group": "known_dimension_support",
+        "available": 55,
+        "selected": 55
+      },
+      "lift_crate_come_up_50cm_box": {
+        "group": "known_dimension_support",
+        "available": 65,
+        "selected": 65
+      },
+      "mohak": {
+        "group": "quadruped",
+        "available": 65,
+        "selected": 65
+      },
+      "mohak_backward": {
+        "group": "quadruped",
+        "available": 161,
+        "selected": 161
+      },
+      "mohak_forward": {
+        "group": "quadruped",
+        "available": 124,
+        "selected": 124
+      },
+      "mohak_idle": {
+        "group": "quadruped",
+        "available": 101,
+        "selected": 101
+      },
+      "mohak_off": {
+        "group": "quadruped",
+        "available": 18,
+        "selected": 18
+      },
+      "mohak_turn": {
+        "group": "quadruped",
+        "available": 174,
+        "selected": 174
+      },
+      "monkey_jump": {
+        "group": "obstacle_clearance",
+        "available": 12,
+        "selected": 12
+      },
+      "on_all_fours_backward": {
+        "group": "quadruped",
+        "available": 45,
+        "selected": 45
+      },
+      "on_all_fours_forward": {
+        "group": "quadruped",
+        "available": 45,
+        "selected": 45
+      },
+      "on_all_fours_idle": {
+        "group": "quadruped",
+        "available": 45,
+        "selected": 45
+      },
+      "on_all_fours_turn": {
+        "group": "quadruped",
+        "available": 30,
+        "selected": 30
+      },
+      "patches_crouch": {
+        "group": "crouch",
+        "available": 9,
+        "selected": 9
+      },
+      "spider_crawl": {
+        "group": "quadruped",
+        "available": 10,
+        "selected": 10
+      },
+      "stair_slide_down": {
+        "group": "stairs",
+        "available": 7,
+        "selected": 7
+      },
+      "stairs_climbing_down": {
+        "group": "stairs",
+        "available": 10,
+        "selected": 10
+      },
+      "stairs_climbing_jog_down": {
+        "group": "stairs",
+        "available": 12,
+        "selected": 12
+      },
+      "stairs_climbing_jog_up": {
+        "group": "stairs",
+        "available": 6,
+        "selected": 6
+      },
+      "stairs_climbing_up": {
+        "group": "stairs",
+        "available": 6,
+        "selected": 6
+      },
+      "stairs_slip": {
+        "group": "stairs",
+        "available": 8,
+        "selected": 8
+      },
+      "turn_crawl": {
+        "group": "prone",
+        "available": 72,
+        "selected": 72
+      },
+      "turn_crouch": {
+        "group": "crouch",
+        "available": 69,
+        "selected": 69
+      },
+      "turn_jog": {
+        "group": "flat_control",
+        "available": 628,
+        "selected": 60
+      },
+      "vault_over": {
+        "group": "obstacle_clearance",
+        "available": 2,
+        "selected": 2
+      },
+      "walk": {
+        "group": "flat_control",
+        "available": 2440,
+        "selected": 60
+      },
+      "walk_arc": {
+        "group": "flat_control",
+        "available": 539,
+        "selected": 60
+      },
+      "walk_backward": {
+        "group": "flat_control",
+        "available": 245,
+        "selected": 60
+      },
+      "walk_forward": {
+        "group": "flat_control",
+        "available": 225,
+        "selected": 60
+      },
+      "walk_sideway_045": {
+        "group": "flat_control",
+        "available": 297,
+        "selected": 60
+      },
+      "walk_sideway_090": {
+        "group": "flat_control",
+        "available": 220,
+        "selected": 60
+      },
+      "wall_leaning_idle": {
+        "group": "wall_contact",
+        "available": 48,
+        "selected": 48
+      },
+      "wall_leaning_idle_to_idle": {
+        "group": "wall_contact",
+        "available": 48,
+        "selected": 48
+      },
+      "yawn_walk_crouch_idle": {
+        "group": "crouch",
+        "available": 4,
+        "selected": 4
+      }
+    },
+    "configured_stems_without_files": []
+  },
+  "thresholds": {
+    "screen": {
+      "stationary_speed_mps": 0.15,
+      "min_event_seconds": 0.12,
+      "hand_level_tolerance_m": 0.08,
+      "knee_level_tolerance_m": 0.12,
+      "forearm_level_tolerance_m": 0.1,
+      "standing_hip_ratio": 0.8,
+      "crouch_hip_ratio": 0.45,
+      "prone_chest_height_m": 0.4,
+      "prone_pitch_deg": 60.0,
+      "multi_level_span_m": 0.1,
+      "level_merge_m": 0.03
+    },
+    "support": {
+      "stationary_speed_mps": 0.15,
+      "min_stationary_seconds": 0.1,
+      "min_event_seconds": 0.12,
+      "local_low_window_seconds": 0.3,
+      "local_low_band_m": 0.04,
+      "sole_bottom_band_m": 0.015,
+      "min_stationary_vertices": 3,
+      "max_fit_residual_m": 0.02,
+      "level_merge_m": 0.03,
+      "min_level_span_m": 0.12,
+      "min_levels": 3,
+      "min_polygon_area_m2": 0.0001,
+      "max_free_space_penetration_m": 0.03,
+      "min_root_height_span_m": 0.1,
+      "require_stairs": true
+    }
+  },
+  "protocol": {
+    "fps": 30.0,
+    "coordinates": "source world, Y up, metres",
+    "source_changed": false,
+    "conversion": "Kimodo BVH -> 30 Hz SLERP -> SOMA77 FK; official skin sole regions (98 vertices per foot)",
+    "status": "screen evidence for selecting fitting inputs; not fitted terrain"
+  },
+  "module_sha256": {
+    "motionbricks/data/bones_terrain_screen.py": "cc1c864e642cc2d8a39083a04e1ff8264e7ef4d3f1086644ea160443d85e72b7",
+    "motionbricks/data/stair_support.py": "922980f1768d1f8a23d460bca9c0bb10e83b7544b3ce56a6780aa632ba8008bb",
+    "scripts/screen_bones_terrain_geometry.py": "3922533c480c1ccba9dbc927c1a39e6bf5851a81cc979aa9e1aed2de14135d78"
+  },
+  "elapsed_seconds": 422.8,
+  "screened": 6795,
+  "failed": 7,
+  "failure_reasons": {
+    "ValueError: BVH reference geometry differs from official SOMA77 (0.0038 m)": 1,
+    "ValueError: BVH reference geometry differs from official SOMA77 (0.0027 m)": 1,
+    "ValueError: BVH reference geometry differs from official SOMA77 (0.0030 m)": 1,
+    "ValueError: BVH reference geometry differs from official SOMA77 (0.0035 m)": 2,
+    "ValueError: BVH reference geometry differs from official SOMA77 (0.0021 m)": 2
+  },
+  "standing_hip_height_m": [
+    1.0092086791992188
+  ]
+}

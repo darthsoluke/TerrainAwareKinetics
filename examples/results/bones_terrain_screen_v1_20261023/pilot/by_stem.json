@@ -1,0 +1,2863 @@
+{
+  "avoid_obstacle_jump_run": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 4.733
+  },
+  "box_jump": {
+    "group": "box_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5726,
+      "p50": 0.573,
+      "p95": 0.5735
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.6815,
+      "crouch": 0.2878,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0307
+    },
+    "duration_seconds": 6.333
+  },
+  "box_jump_down": {
+    "group": "box_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5008,
+      "p50": 0.5184,
+      "p95": 0.5359
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9352,
+      "crouch": 0.0649,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 7.733
+  },
+  "change_idle_crawl_to_idle_crawl_right": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 1.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 8.133
+  },
+  "change_idle_crouch_right_to_idle_crouch": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.2395,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.7605
+    },
+    "duration_seconds": 7.867
+  },
+  "come_down_50cm_box": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5473,
+      "p50": 0.5845,
+      "p95": 0.6216
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9416,
+      "crouch": 0.0583,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.0473,
+      "p50": 0.0844,
+      "p95": 0.1216
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.0453,
+      "p50": 0.0808,
+      "p95": 0.1163
+    },
+    "duration_seconds": 7.267
+  },
+  "come_up_50cm_box": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5722,
+      "p50": 0.5818,
+      "p95": 0.5914
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9946,
+      "crouch": 0.0054,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.0722,
+      "p50": 0.0818,
+      "p95": 0.0914
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.0744,
+      "p50": 0.0817,
+      "p95": 0.089
+    },
+    "duration_seconds": 8.433
+  },
+  "crawl": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "multi_level": 0.5,
+      "palm_support": 1.0,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0404,
+      "p50": 0.152,
+      "p95": 0.2636
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.0963,
+      "prone": 0.9038,
+      "other_low": 0.0
+    },
+    "duration_seconds": 26.4
+  },
+  "crouch": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.8724,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.1276
+    },
+    "duration_seconds": 16.867
+  },
+  "crouch_idle": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0205,
+      "crouch": 0.9795,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 20.733
+  },
+  "crouch_idle_right": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.5189,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.4812
+    },
+    "duration_seconds": 17.433
+  },
+  "crouch_idle_right_to_crouch_idle": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0305,
+      "crouch": 0.9696,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.2
+  },
+  "crouch_idle_to_crouch_idle_right": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0354,
+      "crouch": 0.9646,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 7.633
+  },
+  "crouch_walk_forward_and_back_turn_to_idle": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.3264,
+      "crouch": 0.6736,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 38.133
+  },
+  "drinking_wall_leaning_mug": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 21.5
+  },
+  "drinking_wall_leaning_mug_090": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 21.767
+  },
+  "h_b_w_crouch": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 0.5,
+      "sustained_crouch": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.5084,
+      "crouch": 0.4915,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 13.133
+  },
+  "h_b_w_crouch_to_stand": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.5725,
+      "crouch": 0.4275,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.133
+  },
+  "h_b_w_stand_to_crouch": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "palm_support": 0.5,
+      "sustained_crouch": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.239,
+      "crouch": 0.4237,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.3373
+    },
+    "duration_seconds": 7.867
+  },
+  "idle": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 26.6
+  },
+  "idle_crawl": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "no_usable_support": 0.5,
+      "palm_support": 1.0,
+      "sustained_crouch": 0.5,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 0.05,
+      "p50": 0.5,
+      "p95": 0.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.095,
+      "crouch": 0.0994,
+      "quadruped": 0.0208,
+      "prone": 0.7849,
+      "other_low": 0.0
+    },
+    "duration_seconds": 28.633
+  },
+  "idle_crawl_right": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0024,
+      "p50": 0.0238,
+      "p95": 0.0452
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 1.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 22.2
+  },
+  "idle_crawl_right_to_idle_crawl": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.002,
+      "p50": 0.0198,
+      "p95": 0.0376
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 1.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.133
+  },
+  "idle_crawl_to_idle_crawl_right": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 1.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.1
+  },
+  "idle_crouch": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.514,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.486
+    },
+    "duration_seconds": 16.733
+  },
+  "idle_crouch_right": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 1.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 23.4
+  },
+  "idle_crouch_right_to_idle_crouch": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.3745,
+      "crouch": 0.6256,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 11.867
+  },
+  "idle_crouch_to_idle_crouch_right": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0583,
+      "crouch": 0.4416,
+      "quadruped": 0.0197,
+      "prone": 0.0,
+      "other_low": 0.4803
+    },
+    "duration_seconds": 9.867
+  },
+  "idle_to_on_all_fours_idle": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_crouch": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.2144,
+      "crouch": 0.2186,
+      "quadruped": 0.5671,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 11.867
+  },
+  "idle_to_wall_leaning_idle": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 16.1
+  },
+  "idle_turn": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 12.3
+  },
+  "item_pick_up_crouch_idle": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 1.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 11.733
+  },
+  "item_pick_up_crouch_walk": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.4237,
+      "crouch": 0.5764,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 7.7
+  },
+  "jog": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.2
+  },
+  "jog_arc": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 13.633
+  },
+  "jog_backward": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 11.733
+  },
+  "jog_forward": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0008,
+      "p50": 0.0075,
+      "p95": 0.0142
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 8.3
+  },
+  "jog_sideway": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 8.633
+  },
+  "jog_sideway_045": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.767
+  },
+  "jump_form_box_to_safety_roll": {
+    "group": "box_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "multi_level": 1.0,
+      "palm_support": 1.0,
+      "palm_support_above_ground": 0.5,
+      "sustained_prone": 0.5,
+      "sustained_quadruped": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.5483,
+      "p50": 0.5486,
+      "p95": 0.5489
+    },
+    "level_count": {
+      "p5": 3.0,
+      "p50": 3.0,
+      "p95": 3.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.5889,
+      "crouch": 0.1263,
+      "quadruped": 0.1425,
+      "prone": 0.1067,
+      "other_low": 0.0357
+    },
+    "duration_seconds": 10.233
+  },
+  "jump_off_1m": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 1.069,
+      "p50": 1.122,
+      "p95": 1.1751
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.8266,
+      "crouch": 0.1079,
+      "quadruped": 0.0327,
+      "prone": 0.0,
+      "other_low": 0.0329
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.069,
+      "p50": 0.122,
+      "p95": 0.1751
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.1037,
+      "p50": 0.1376,
+      "p95": 0.1715
+    },
+    "duration_seconds": 7.033
+  },
+  "jump_off_50cm": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5852,
+      "p50": 0.5949,
+      "p95": 0.6047
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9647,
+      "crouch": 0.0353,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.0852,
+      "p50": 0.095,
+      "p95": 0.1047
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.0853,
+      "p50": 0.0951,
+      "p95": 0.1049
+    },
+    "duration_seconds": 5.6
+  },
+  "jump_off_front_50cm": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.6006,
+      "p50": 0.6012,
+      "p95": 0.6018
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.949,
+      "crouch": 0.051,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.1006,
+      "p50": 0.1012,
+      "p95": 0.1018
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.1085,
+      "p50": 0.145,
+      "p95": 0.1815
+    },
+    "duration_seconds": 5.8
+  },
+  "jump_on_1m": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0,
+      "palm_support": 0.5,
+      "palm_support_above_ground": 0.5
+    },
+    "level_span_m": {
+      "p5": 1.0997,
+      "p50": 1.1444,
+      "p95": 1.1892
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9749,
+      "crouch": 0.0251,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.0997,
+      "p50": 0.1445,
+      "p95": 0.1892
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.0906,
+      "p50": 0.1399,
+      "p95": 0.1892
+    },
+    "duration_seconds": 9.8
+  },
+  "jump_on_50cm": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.6011,
+      "p50": 0.6024,
+      "p95": 0.6037
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9785,
+      "crouch": 0.0215,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.1011,
+      "p50": 0.1024,
+      "p95": 0.1037
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.1012,
+      "p50": 0.1016,
+      "p95": 0.1019
+    },
+    "duration_seconds": 4.533
+  },
+  "jump_on_box_230cm": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "multi_level": 1.0,
+      "palm_support": 1.0,
+      "palm_support_above_ground": 1.0
+    },
+    "level_span_m": {
+      "p5": 2.4116,
+      "p50": 2.5186,
+      "p95": 2.6255
+    },
+    "level_count": {
+      "p5": 2.05,
+      "p50": 2.5,
+      "p95": 2.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.998,
+      "crouch": 0.002,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.1116,
+      "p50": 0.2185,
+      "p95": 0.3255
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.119,
+      "p50": 0.2215,
+      "p95": 0.324
+    },
+    "duration_seconds": 16.9
+  },
+  "jump_over_obstacle_0.5m": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": -0.5,
+      "p50": -0.5,
+      "p95": -0.5
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.1344,
+      "p50": 0.2107,
+      "p95": 0.2869
+    },
+    "duration_seconds": 8.267
+  },
+  "jump_over_obstacle_0.75m": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9965,
+      "crouch": 0.0036,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": -0.75,
+      "p50": -0.75,
+      "p95": -0.75
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": -0.0134,
+      "p50": 0.0062,
+      "p95": 0.0257
+    },
+    "duration_seconds": 9.133
+  },
+  "jump_over_obstacle_1.5m": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0719,
+      "p50": 0.0723,
+      "p95": 0.0727
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9373,
+      "crouch": 0.0628,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": -1.4281,
+      "p50": -1.4277,
+      "p95": -1.4273
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": -0.0664,
+      "p50": -0.065,
+      "p95": -0.0637
+    },
+    "duration_seconds": 13.767
+  },
+  "jump_over_obstacle_1m": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": -1.0,
+      "p50": -1.0,
+      "p95": -1.0
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": -0.0206,
+      "p50": -0.002,
+      "p95": 0.0166
+    },
+    "duration_seconds": 9.233
+  },
+  "jump_over_obstacle_2m": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0033,
+      "p50": 0.0335,
+      "p95": 0.0636
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9481,
+      "crouch": 0.0435,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0084
+    },
+    "dimension_level_span_error_m": {
+      "p5": -1.9967,
+      "p50": -1.9666,
+      "p95": -1.9364
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.1756,
+      "p50": 0.2202,
+      "p95": 0.2647
+    },
+    "duration_seconds": 19.567
+  },
+  "jump_over_obstacle_no_hand_0.75m": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": -0.75,
+      "p50": -0.75,
+      "p95": -0.75
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.1288,
+      "p50": 0.1372,
+      "p95": 0.1456
+    },
+    "duration_seconds": 9.567
+  },
+  "jump_to_shoulder_roll": {
+    "group": "box_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "multi_level": 1.0,
+      "palm_support": 0.5,
+      "palm_support_above_ground": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.8168,
+      "p50": 1.2389,
+      "p95": 1.661
+    },
+    "level_count": {
+      "p5": 2.05,
+      "p50": 2.5,
+      "p95": 2.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.6508,
+      "crouch": 0.1341,
+      "quadruped": 0.073,
+      "prone": 0.0733,
+      "other_low": 0.0688
+    },
+    "duration_seconds": 10.033
+  },
+  "kneeling": {
+    "group": "kneel",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0341,
+      "p50": 0.0367,
+      "p95": 0.0393
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.2023,
+      "crouch": 0.5674,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.2303
+    },
+    "duration_seconds": 11.233
+  },
+  "ladder_climbing_down": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "no_usable_support": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.033
+  },
+  "ladder_climbing_down_over": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "low_posture": 1.0,
+      "multi_level": 1.0,
+      "palm_support": 1.0,
+      "palm_support_above_ground": 1.0,
+      "sustained_crouch": 0.5,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 2.1796,
+      "p50": 2.2692,
+      "p95": 2.3589
+    },
+    "level_count": {
+      "p5": 2.05,
+      "p50": 2.5,
+      "p95": 2.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.3039,
+      "crouch": 0.1923,
+      "quadruped": 0.2629,
+      "prone": 0.0,
+      "other_low": 0.241
+    },
+    "duration_seconds": 13.8
+  },
+  "ladder_climbing_down_through": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "low_posture": 1.0,
+      "multi_level": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 2.3671,
+      "p50": 2.3693,
+      "p95": 2.3716
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.3745,
+      "crouch": 0.1517,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.4739
+    },
+    "duration_seconds": 12.6
+  },
+  "ladder_climbing_idle": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.3948,
+      "p50": 0.3968,
+      "p95": 0.3988
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 17.9
+  },
+  "ladder_climbing_jumpdown": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 0.5,
+      "multi_level": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0525,
+      "p50": 0.5252,
+      "p95": 0.9978
+    },
+    "level_count": {
+      "p5": 1.1,
+      "p50": 2.0,
+      "p95": 2.9
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9285,
+      "crouch": 0.0714,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 6.133
+  },
+  "ladder_climbing_stepdown": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 6.3
+  },
+  "ladder_climbing_up": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.167
+  },
+  "ladder_jump_on": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.067
+  },
+  "ladder_slide_down": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9714,
+      "crouch": 0.0285,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 14.233
+  },
+  "ladder_slip": {
+    "group": "ladder",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "no_usable_support": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 0.05,
+      "p50": 0.5,
+      "p95": 0.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9961,
+      "crouch": 0.0039,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 7.933
+  },
+  "lift_crate_come_down_50cm_box": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 0.5,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5437,
+      "p50": 0.5618,
+      "p95": 0.5799
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9214,
+      "crouch": 0.0786,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.0437,
+      "p50": 0.0618,
+      "p95": 0.0799
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.0395,
+      "p50": 0.0583,
+      "p95": 0.0772
+    },
+    "duration_seconds": 7.6
+  },
+  "lift_crate_come_up_50cm_box": {
+    "group": "known_dimension_support",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.5554,
+      "p50": 0.5681,
+      "p95": 0.5808
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "dimension_level_span_error_m": {
+      "p5": 0.0554,
+      "p50": 0.0681,
+      "p95": 0.0808
+    },
+    "dimension_clearance_minus_size_m": {
+      "p5": 0.0519,
+      "p50": 0.0629,
+      "p95": 0.0738
+    },
+    "duration_seconds": 7.167
+  },
+  "mohak": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "low_posture": 1.0,
+      "palm_support": 0.5,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0013,
+      "p50": 0.0135,
+      "p95": 0.0256
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 17.867
+  },
+  "mohak_backward": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0005,
+      "p50": 0.005,
+      "p95": 0.0096
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 11.9
+  },
+  "mohak_forward": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "low_posture": 1.0,
+      "palm_support": 0.5,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 12.033
+  },
+  "mohak_idle": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 0.5,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 11.733
+  },
+  "mohak_off": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0021,
+      "p50": 0.0211,
+      "p95": 0.0401
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.4849,
+      "crouch": 0.0523,
+      "quadruped": 0.4628,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.4
+  },
+  "mohak_turn": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 8.633
+  },
+  "monkey_jump": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.567
+  },
+  "on_all_fours_backward": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 17.833
+  },
+  "on_all_fours_forward": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 28.467
+  },
+  "on_all_fours_idle": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "no_usable_support": 0.5,
+      "palm_support": 1.0,
+      "sustained_crouch": 0.5,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 0.05,
+      "p50": 0.5,
+      "p95": 0.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.1778,
+      "crouch": 0.0945,
+      "quadruped": 0.7278,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 18.267
+  },
+  "on_all_fours_turn": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 1.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 8.367
+  },
+  "patches_crouch": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "palm_support": 0.5,
+      "sustained_crouch": 1.0,
+      "sustained_quadruped": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.5023,
+      "crouch": 0.0971,
+      "quadruped": 0.0915,
+      "prone": 0.0,
+      "other_low": 0.3092
+    },
+    "duration_seconds": 27.067
+  },
+  "spider_crawl": {
+    "group": "quadruped",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_quadruped": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0014,
+      "p50": 0.0135,
+      "p95": 0.0256
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.8132,
+      "prone": 0.1868,
+      "other_low": 0.0
+    },
+    "duration_seconds": 22.8
+  },
+  "stair_slide_down": {
+    "group": "stairs",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 1.4593,
+      "p50": 1.5244,
+      "p95": 1.5894
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.7976,
+      "crouch": 0.0854,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.1169
+    },
+    "duration_seconds": 12.033
+  },
+  "stairs_climbing_down": {
+    "group": "stairs",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.8614,
+      "p50": 0.8615,
+      "p95": 0.8616
+    },
+    "level_count": {
+      "p5": 6.0,
+      "p50": 6.0,
+      "p95": 6.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 9.2
+  },
+  "stairs_climbing_jog_down": {
+    "group": "stairs",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.1749,
+      "p50": 0.1765,
+      "p95": 0.1782
+    },
+    "level_count": {
+      "p5": 2.0,
+      "p50": 2.0,
+      "p95": 2.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 7.467
+  },
+  "stairs_climbing_jog_up": {
+    "group": "stairs",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 1.4704,
+      "p50": 1.4916,
+      "p95": 1.5129
+    },
+    "level_count": {
+      "p5": 3.2,
+      "p50": 5.0,
+      "p95": 6.8
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 6.9
+  },
+  "stairs_climbing_up": {
+    "group": "stairs",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "multi_level": 1.0,
+      "palm_support": 0.5,
+      "palm_support_above_ground": 0.5
+    },
+    "level_span_m": {
+      "p5": 1.1999,
+      "p50": 1.3295,
+      "p95": 1.4591
+    },
+    "level_count": {
+      "p5": 8.05,
+      "p50": 8.5,
+      "p95": 8.95
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.367
+  },
+  "stairs_slip": {
+    "group": "stairs",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "multi_level": 1.0
+    },
+    "level_span_m": {
+      "p5": 2.1764,
+      "p50": 2.2685,
+      "p95": 2.3606
+    },
+    "level_count": {
+      "p5": 8.15,
+      "p50": 9.5,
+      "p95": 10.85
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9647,
+      "crouch": 0.0353,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 13.633
+  },
+  "turn_crawl": {
+    "group": "prone",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "knee_support": 1.0,
+      "low_posture": 1.0,
+      "palm_support": 1.0,
+      "sustained_prone": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.0,
+      "crouch": 0.0,
+      "quadruped": 0.0099,
+      "prone": 0.9901,
+      "other_low": 0.0
+    },
+    "duration_seconds": 14.7
+  },
+  "turn_crouch": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 0.5
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.2923,
+      "crouch": 0.2561,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.4516
+    },
+    "duration_seconds": 4.167
+  },
+  "turn_jog": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 8.0
+  },
+  "vault_over": {
+    "group": "obstacle_clearance",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.9598,
+      "crouch": 0.0402,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 7.467
+  },
+  "walk": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.467
+  },
+  "walk_arc": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 15.233
+  },
+  "walk_backward": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0011,
+      "p50": 0.0115,
+      "p95": 0.0218
+    },
+    "level_count": {
+      "p5": 1.05,
+      "p50": 1.5,
+      "p95": 1.95
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 28.933
+  },
+  "walk_forward": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 13.767
+  },
+  "walk_sideway_045": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 10.667
+  },
+  "walk_sideway_090": {
+    "group": "flat_control",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 17.133
+  },
+  "wall_leaning_idle": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 26.9
+  },
+  "wall_leaning_idle_to_idle": {
+    "group": "wall_contact",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {},
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 1.0,
+      "crouch": 0.0,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 12.967
+  },
+  "yawn_walk_crouch_idle": {
+    "group": "crouch",
+    "clips": 2,
+    "screened": 2,
+    "failed": 0,
+    "flag_fraction": {
+      "low_posture": 1.0,
+      "sustained_crouch": 1.0
+    },
+    "level_span_m": {
+      "p5": 0.0,
+      "p50": 0.0,
+      "p95": 0.0
+    },
+    "level_count": {
+      "p5": 1.0,
+      "p50": 1.0,
+      "p95": 1.0
+    },
+    "posture_fraction_mean": {
+      "standing": 0.7376,
+      "crouch": 0.2623,
+      "quadruped": 0.0,
+      "prone": 0.0,
+      "other_low": 0.0
+    },
+    "duration_seconds": 21.533
+  }
+}

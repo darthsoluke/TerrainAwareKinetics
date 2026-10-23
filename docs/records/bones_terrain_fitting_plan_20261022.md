@@ -150,7 +150,7 @@ Kimodo BVH、30Hz SLERP、SOMA77 FK、官方蒙皮每只脚 98 个 sole 顶点�
 输出目录：`selection.jsonl`、`clips.jsonl`（完整逐条结果，留在 PRO6000）、`clips_compact.tsv`（每条一行，可公开）、
 `by_stem.json`、`by_group.json`、`report.json`（阈值、选择、失败原因、源码哈希）。
 
-状态：已用合成数据单元测试；尚未在真实 BVH 上运行。先每个词干 2 条做试跑，检查失败原因后再全量。
+执行更新：2026-10-23 已在 PRO6000 完成真实 BVH 的试运行和全量筛查。试运行 196 条全部成功；全量处理 6,795 条，成功 6,788 条，7 条因源骨架偏差超过 2 mm 被拒绝。测试 19 项通过，详见 [几何筛查执行记录](bones_terrain_screen_pro6000_20261023.md) 与其中的完整结果文件。
 
 ## 待决定
 

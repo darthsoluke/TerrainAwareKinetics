@@ -1,0 +1,346 @@
+{"selected": 196, "per_group": {"box_support": 8, "crouch": 32, "flat_control": 30, "kneel": 2, "known_dimension_support": 20, "ladder": 20, "obstacle_clearance": 18, "prone": 14, "quadruped": 24, "stairs": 12, "wall_contact": 16}, "configured_stems_without_files": []}
+100/196 screened, 0 failed, 13s
+196/196 screened, 0 failed, 20s
+{
+ "box_support": {
+  "clips": 8,
+  "screened": 8,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 0.125,
+   "low_posture": 0.75,
+   "multi_level": 1.0,
+   "palm_support": 0.375,
+   "palm_support_above_ground": 0.25,
+   "sustained_prone": 0.125,
+   "sustained_quadruped": 0.125
+  },
+  "level_span_m": {
+   "p5": 0.5125,
+   "p50": 0.5607,
+   "p95": 1.3796
+  },
+  "level_count": {
+   "p5": 2.0,
+   "p50": 2.0,
+   "p95": 3.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.7141,
+   "crouch": 0.1533,
+   "quadruped": 0.0539,
+   "prone": 0.045,
+   "other_low": 0.0338
+  },
+  "duration_seconds": 34.333
+ },
+ "crouch": {
+  "clips": 32,
+  "screened": 32,
+  "failed": 0,
+  "flag_fraction": {
+   "low_posture": 1.0,
+   "palm_support": 0.0312,
+   "sustained_crouch": 0.875,
+   "sustained_quadruped": 0.0312
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.0
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 1.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.1751,
+   "crouch": 0.6244,
+   "quadruped": 0.0069,
+   "prone": 0.0,
+   "other_low": 0.1935
+  },
+  "duration_seconds": 251.933
+ },
+ "flat_control": {
+  "clips": 30,
+  "screened": 30,
+  "failed": 0,
+  "flag_fraction": {},
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.0082
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 1.55
+  },
+  "posture_fraction_mean": {
+   "standing": 1.0,
+   "crouch": 0.0,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.0
+  },
+  "duration_seconds": 205.367
+ },
+ "kneel": {
+  "clips": 2,
+  "screened": 2,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 1.0,
+   "low_posture": 1.0,
+   "sustained_crouch": 1.0
+  },
+  "level_span_m": {
+   "p5": 0.0341,
+   "p50": 0.0367,
+   "p95": 0.0393
+  },
+  "level_count": {
+   "p5": 2.0,
+   "p50": 2.0,
+   "p95": 2.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.2023,
+   "crouch": 0.5674,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.2303
+  },
+  "duration_seconds": 11.233
+ },
+ "known_dimension_support": {
+  "clips": 20,
+  "screened": 20,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 0.05,
+   "low_posture": 0.15,
+   "multi_level": 1.0,
+   "palm_support": 0.15,
+   "palm_support_above_ground": 0.15
+  },
+  "level_span_m": {
+   "p5": 0.5431,
+   "p50": 0.6015,
+   "p95": 2.4116
+  },
+  "level_count": {
+   "p5": 2.0,
+   "p50": 2.0,
+   "p95": 2.05
+  },
+  "posture_fraction_mean": {
+   "standing": 0.9549,
+   "crouch": 0.0385,
+   "quadruped": 0.0033,
+   "prone": 0.0,
+   "other_low": 0.0033
+  },
+  "dimension_level_span_error_m": {
+   "p5": 0.0431,
+   "p50": 0.0972,
+   "p95": 0.2014
+  },
+  "dimension_clearance_minus_size_m": {
+   "p5": 0.0411,
+   "p50": 0.1006,
+   "p95": 0.2017
+  },
+  "duration_seconds": 80.133
+ },
+ "ladder": {
+  "clips": 20,
+  "screened": 20,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 0.2,
+   "low_posture": 0.25,
+   "multi_level": 0.35,
+   "no_usable_support": 0.15,
+   "palm_support": 0.1,
+   "palm_support_above_ground": 0.1,
+   "sustained_crouch": 0.15,
+   "sustained_quadruped": 0.1
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 2.3691
+  },
+  "level_count": {
+   "p5": 0.0,
+   "p50": 1.0,
+   "p95": 3.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.8574,
+   "crouch": 0.0448,
+   "quadruped": 0.0263,
+   "prone": 0.0,
+   "other_low": 0.0715
+  },
+  "duration_seconds": 106.167
+ },
+ "obstacle_clearance": {
+  "clips": 18,
+  "screened": 18,
+  "failed": 0,
+  "flag_fraction": {},
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.072
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 2.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.9824,
+   "crouch": 0.0167,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.0009
+  },
+  "dimension_level_span_error_m": {
+   "p5": -1.9632,
+   "p50": -0.875,
+   "p95": -0.5
+  },
+  "dimension_clearance_minus_size_m": {
+   "p5": -0.0649,
+   "p50": 0.0769,
+   "p95": 0.2812
+  },
+  "duration_seconds": 92.3
+ },
+ "prone": {
+  "clips": 14,
+  "screened": 14,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 1.0,
+   "low_posture": 1.0,
+   "multi_level": 0.0714,
+   "no_usable_support": 0.0714,
+   "palm_support": 1.0,
+   "sustained_crouch": 0.0714,
+   "sustained_prone": 1.0
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.1275
+  },
+  "level_count": {
+   "p5": 0.65,
+   "p50": 1.0,
+   "p95": 2.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.0136,
+   "crouch": 0.0142,
+   "quadruped": 0.0181,
+   "prone": 0.9541,
+   "other_low": 0.0
+  },
+  "duration_seconds": 120.3
+ },
+ "quadruped": {
+  "clips": 24,
+  "screened": 24,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 0.875,
+   "low_posture": 1.0,
+   "no_usable_support": 0.0417,
+   "palm_support": 0.9167,
+   "sustained_crouch": 0.125,
+   "sustained_quadruped": 1.0
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.027
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 2.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.0731,
+   "crouch": 0.0304,
+   "quadruped": 0.8809,
+   "prone": 0.0156,
+   "other_low": 0.0
+  },
+  "duration_seconds": 179.167
+ },
+ "stairs": {
+  "clips": 12,
+  "screened": 12,
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 0.5,
+   "low_posture": 0.1667,
+   "multi_level": 1.0,
+   "palm_support": 0.0833,
+   "palm_support_above_ground": 0.0833
+  },
+  "level_span_m": {
+   "p5": 0.1767,
+   "p50": 1.46,
+   "p95": 2.2583
+  },
+  "level_count": {
+   "p5": 2.0,
+   "p50": 6.0,
+   "p95": 9.9
+  },
+  "posture_fraction_mean": {
+   "standing": 0.9604,
+   "crouch": 0.0201,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.0195
+  },
+  "duration_seconds": 59.6
+ },
+ "wall_contact": {
+  "clips": 16,
+  "screened": 16,
+  "failed": 0,
+  "flag_fraction": {
+   "low_posture": 0.3125,
+   "palm_support": 0.0625,
+   "sustained_crouch": 0.25
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.0
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 1.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.79,
+   "crouch": 0.1678,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.0422
+  },
+  "duration_seconds": 130.367
+ }
+}

@@ -1,0 +1,1 @@
+{'torch': '2.7.1+cu128', 'cuda_visible': '', 'skeleton_device': 'cpu', 'standing_hip_m': 1.0092086791992188, 'landmarks': 12}

@@ -10,3 +10,5 @@
 # Preserve the exact overview[:120] excerpts, including truncated trailing spaces.
 examples/results/bones_terrain_survey_20261023/sample_candidates_seed0.txt whitespace=-blank-at-eol
 examples/results/bones_terrain_survey_v2_20261023/stems.tsv whitespace=-blank-at-eol
+# Keep the empty final error column in generated screen TSVs.
+examples/results/bones_terrain_screen_v1_20261023/*/clips_compact.tsv whitespace=-blank-at-eol

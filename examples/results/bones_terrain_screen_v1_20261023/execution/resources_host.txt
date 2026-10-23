@@ -1,0 +1,5 @@
+72
+               total        used        free      shared  buff/cache   available
+Mem:             498         110          11           3         384         388
+Swap:              7           0           7
+affinity_cpus 72

@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-10-23T12:14:39.584854+00:00",
+  "python": "${PFNN_PROJECT}/env/bin/python",
+  "python_version": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+  "versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1",
+    "torch": "2.7.1+cu128",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1"
+  },
+  "kimodo_file": "${KIMODO_ROOT}/kimodo/__init__.py",
+  "kimodo_source_sha256": "85e7275b8db3cf70cb3e8c6dfd8c908220c2cfe4200be763738781e3a44d031a",
+  "skin_asset": "${KIMODO_ROOT}/kimodo/assets/skeletons/somaskel77/skin_standard.npz",
+  "skin_sha256": "90ee2cdf50f168382a7dd7e9c88b118298aba0aca4b72022080c89c4bab0ceb2",
+  "cpu_affinity_count": 72,
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "${KIMODO_ROOT}"
+  },
+  "workers": 16
+}

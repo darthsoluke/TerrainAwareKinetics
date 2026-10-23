@@ -1,0 +1,60 @@
+  "failed": 0,
+  "flag_fraction": {
+   "knee_support": 0.4082,
+   "low_posture": 0.1633,
+   "multi_level": 0.8367,
+   "palm_support": 0.3673,
+   "palm_support_above_ground": 0.3673,
+   "sustained_crouch": 0.0204
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 1.4494,
+   "p95": 2.1674
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 5.0,
+   "p95": 10.6
+  },
+  "posture_fraction_mean": {
+   "standing": 0.9598,
+   "crouch": 0.0226,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.0177
+  },
+  "duration_seconds": 234.7
+ },
+ "wall_contact": {
+  "clips": 353,
+  "screened": 350,
+  "failed": 3,
+  "flag_fraction": {
+   "knee_support": 0.0629,
+   "low_posture": 0.2971,
+   "palm_support": 0.1057,
+   "sustained_crouch": 0.1943,
+   "sustained_quadruped": 0.0629
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.0
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 1.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.818,
+   "crouch": 0.1188,
+   "quadruped": 0.0362,
+   "prone": 0.0,
+   "other_low": 0.0269
+  },
+  "duration_seconds": 2562.734
+ }
+}
+SCREEN_EXIT=0
