@@ -191,6 +191,8 @@ def extract_archive(archive, destination, members):
 
 
 def prefetch_archives(args):
+    if (args.work / 'staging_complete.json').exists():
+        return
     remote = args.remote.rstrip('/')
     rclone(args, remote + '/index_summary.json', args.work / 'index_summary.json')
     summary = json.loads((args.work / 'index_summary.json').read_text())
@@ -219,7 +221,8 @@ def receive_verify(args):
         prefetch_archives(args)
     remote = args.remote.rstrip('/')
     for name in ('manifest.jsonl', 'staging_complete.json'):
-        rclone(args, remote + '/' + name, args.work / name)
+        if not (args.work / name).exists():
+            rclone(args, remote + '/' + name, args.work / name)
     manifest = args.work / 'manifest.jsonl'
     complete = json.loads((args.work / 'staging_complete.json').read_text())
     if digest(manifest) != complete['manifest_sha256']:
@@ -247,7 +250,8 @@ def receive_verify(args):
         if missing:
             require_space(args.destination, remaining + package['bytes'], reserve)
             archive = args.work / package['name']
-            rclone(args, remote + '/' + package['name'], archive)
+            if not archive.exists():
+                rclone(args, remote + '/' + package['name'], archive)
             if archive.stat().st_size != package['bytes'] or digest(archive) != package['sha256']:
                 raise ValueError('Archive hash differs: ' + package['name'])
             extract_archive(archive, args.destination, members)

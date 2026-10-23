@@ -8,7 +8,8 @@ from types import SimpleNamespace
 import pytest
 
 from scripts.transfer_bones_originals import (
-    GIB, extract_archive, index_source, pack_upload, prefetch_archives, read_manifest, relative_path, require_space,
+    GIB, digest, extract_archive, index_source, pack_upload, prefetch_archives,
+    read_manifest, receive_verify, relative_path, require_space,
 )
 
 
@@ -115,3 +116,34 @@ def test_prefetch_waits_for_completion_and_reserves_raw_and_archive_space(monkey
     assert len(batches) == 2 and waits == [45]
     assert reservations == [(200 + 10 * GIB, 200 * GIB), (180 + 10 * GIB, 200 * GIB)]
     assert all('--immutable' in command for command in batches)
+
+
+@pytest.mark.parametrize('corrupt', [False, True])
+def test_cached_receive_needs_no_network_and_still_checks_hashes(monkeypatch, tmp_path, corrupt):
+    work = tmp_path / 'cache'
+    work.mkdir()
+    data = b'original motion'
+    row = dict(path='230118/walk.bvh', size=len(data), sha256=hashlib.sha256(data).hexdigest())
+    manifest = work / 'manifest.jsonl'
+    manifest.write_text(json.dumps(row) + '\n')
+    package = work / '230118.tar.gz'
+    archive(package, row['path'], data)
+    (work / 'staging_complete.json').write_text(json.dumps(dict(
+        files=1, total_bytes=len(data), manifest_sha256=digest(manifest),
+        packages=[dict(date='230118', name=package.name, files=1, raw_bytes=len(data),
+                       bytes=package.stat().st_size, sha256=digest(package))])))
+    args = SimpleNamespace(work=work, destination=tmp_path / 'destination',
+                           prefetch=True, remote='drive:task', reserve_gib=0, workers=1)
+    monkeypatch.setattr('scripts.transfer_bones_originals.rclone',
+                        lambda *args: pytest.fail('Cached transfer must not query the network'))
+    if corrupt:
+        package.write_bytes(b'corrupt archive')
+        with pytest.raises(ValueError, match='Archive hash differs'):
+            receive_verify(args)
+        assert not (args.destination / row['path']).exists()
+    else:
+        receive_verify(args)
+        assert (args.destination / row['path']).read_bytes() == data
+        report = json.loads((work / 'verification.json').read_text())
+        assert report['files_expected'] == report['files_verified'] == 1
+        assert report['mismatches'] == []
