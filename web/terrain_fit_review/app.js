@@ -26,14 +26,16 @@ function resize() {
 }
 window.addEventListener('resize', resize);
 
+const ROLE_COLORS = {ground: 0x9aa0a6, support: 0xe8710a, ceiling: 0x00897b, wall: 0x8e24aa, clutter: 0x78909c};
+
 function boxMesh(box, wire) {
   const geometry = new THREE.BoxGeometry(...box.half_extent_xyz_m.map((v) => 2 * v));
   const role = box.role;
   const object = wire
     ? new THREE.LineSegments(new THREE.EdgesGeometry(geometry), new THREE.LineBasicMaterial({color: 0x5f6368}))
     : new THREE.Mesh(geometry, new THREE.MeshStandardMaterial({
-        color: role === 'ground' ? 0x9aa0a6 : 0xe8710a, transparent: true,
-        opacity: role === 'ground' ? 0.35 : 0.55, depthWrite: role === 'ground'}));
+        color: ROLE_COLORS[role] ?? 0xe8710a, transparent: true,
+        opacity: role === 'ground' ? 0.35 : role === 'ceiling' ? 0.3 : 0.55, depthWrite: role === 'ground'}));
   const r = box.rotation_local_to_world;
   const m = new THREE.Matrix4().set(r[0][0], r[0][1], r[0][2], box.center_xyz_m[0],
                                     r[1][0], r[1][1], r[1][2], box.center_xyz_m[1],
@@ -45,11 +47,15 @@ function boxMesh(box, wire) {
 function build() {
   dynamic.clear();
   const variant = $('variant').value;
-  for (const name of ['minimal', 'maximal']) {
-    if (variant !== 'both' && variant !== name) continue;
-    for (const box of clip.boxes[name]) {
-      if (name === 'maximal' && box.role === 'ground' && variant === 'both') continue;
-      dynamic.add(boxMesh(box, name === 'maximal'));
+  if (variant.startsWith('scene')) {
+    for (const box of (clip.variants || [])[+variant.slice(5)] || []) dynamic.add(boxMesh(box, false));
+  } else {
+    for (const name of ['minimal', 'maximal']) {
+      if (variant !== 'both' && variant !== name) continue;
+      for (const box of clip.boxes[name]) {
+        if (name === 'maximal' && box.role === 'ground' && variant === 'both') continue;
+        dynamic.add(boxMesh(box, name === 'maximal'));
+      }
     }
   }
   const positions = new Float32Array(clip.segments.length * 6);
@@ -100,7 +106,14 @@ function showInfo() {
               [`${name} frames > 2 cm`, skin ? skin.frames_over_report : k.penetration_frames_over_report],
               [`${name} unsupported evidence`, `${k.support_evidence_unsupported} / ${k.support_evidence_points}`]);
   }
-  for (const box of clip.boxes.maximal.filter((b) => b.role !== 'ground')) {
+  const scene = clip.scene_report;
+  if (scene) {
+    const c = scene.ceiling;
+    rows.push(['ceiling', c.status === 'fitted'
+      ? `${c.tight_m.toFixed(2)}-${c.loose_m.toFixed(2)} m above floor; explains ${(100 * (c.explanation?.tight ?? 0)).toFixed(0)}% of low frames`
+      : c.status], ['walls', scene.walls.status]);
+  }
+  for (const box of clip.boxes.maximal.filter((b) => b.role === 'support')) {
     const minimal = clip.boxes.minimal.find((b) => b.name === box.name);
     const size = (b) => `${(2 * b.half_extent_xyz_m[0]).toFixed(2)} x ${(2 * b.half_extent_xyz_m[2]).toFixed(2)}`;
     rows.push([box.name, `top ${(box.top_m - clip.ground_m).toFixed(3)} m; min ${size(minimal)}; max ${size(box)}`]);
@@ -108,7 +121,15 @@ function showInfo() {
   $('info').innerHTML = '<table>' + rows.map(([k, v]) => `<tr><td>${k}</td><td>${v ?? ''}</td></tr>`).join('') + '</table>';
 }
 
-function select(index) { clip = clips[index]; build(); $('status').textContent = `${clips.length} clip(s)`; }
+function select(index) {
+  clip = clips[index];
+  const options = [['both', 'fit: both'], ['minimal', 'fit: minimal / tight'], ['maximal', 'fit: maximal / loose']]
+    .concat((clip.variants || []).map((_, i) => [`scene${i}`, `sampled scene ${i + 1}`]));
+  const current = $('variant').value;
+  $('variant').innerHTML = options.map(([v, label]) => `<option value="${v}">${label}</option>`).join('');
+  $('variant').value = options.some(([v]) => v === current) ? current : 'both';
+  build(); $('status').textContent = `${clips.length} clip(s)`;
+}
 
 function setClips(list) {
   clips = list; $('clip').innerHTML = clips.map((c, i) => `<option value="${i}">${c.meta?.filename ?? `clip ${i}`}</option>`).join('');

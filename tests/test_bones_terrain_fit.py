@@ -220,3 +220,39 @@ def test_skin_vertices_uses_official_skinner_interface():
         screen._STATE.update(saved)
     assert vertices.shape == (5, 2, 3)
     np.testing.assert_allclose(vertices[1], posed[2, :2])
+
+
+def test_fit_script_builds_scenes_when_skin_is_available(tmp_path):
+    import scripts.fit_bones_terrain_support as fit_script
+    from scripts import screen_bones_terrain_geometry as screen
+    soles, joints, root = step_up()
+    skin = np.concatenate([soles["left"], soles["right"]] + [joints[n][:, None] for n in joints], axis=1)
+    original = (screen._init_worker, screen.convert, fit_script.skin_vertices)
+    screen._init_worker = lambda: screen._STATE.update(standing_hip=.95, standing_top=1.8)
+    screen.convert = lambda path, extra_names=(), return_motion=False: (
+        (soles, joints, root, 120.0, 0.0, (None, None)) if return_motion else (soles, joints, root, 120.0, 0.0))
+    fit_script.skin_vertices = lambda rotations, posed, stride: skin[::stride]
+    try:
+        run = tmp_path / "screen"
+        run.mkdir()
+        row = {"filename": "come_up_50cm_box_R_001__A1", "stem": "come_up_50cm_box",
+               "group": "known_dimension_support", "path": "/x/1.bvh", "dimension_tokens": ["50cm"]}
+        (run / "selection.jsonl").write_text(json.dumps(row))
+        (run / "clips.jsonl").write_text(json.dumps({**row, "flags": []}))
+        output = tmp_path / "fit"
+        assert fit_script.main(["--screen-run", str(run), "--output", str(output), "--workers", "0",
+                                "--viz-per-stem", "1", "--variants", "3"]) == 0
+    finally:
+        screen._init_worker, screen.convert, fit_script.skin_vertices = original
+        screen._STATE.pop("standing_top", None)
+    fit = json.loads((output / "fits" / "come_up_50cm_box_R_001__A1.json").read_text())
+    scene = fit["scene"]
+    assert scene["upright"] and scene["ceiling_report"]["status"] == "no_sustained_low_posture"
+    assert len(scene["variants"]) == 3 and all(v["accepted"] for v in scene["variants"])
+    assert any(b["role"] == "support" for b in scene["variants"][0]["boxes"])
+    group = json.loads((output / "by_group.json").read_text())["known_dimension_support"]
+    assert group["scene"]["variants"] == 3 and group["scene"]["variants_accepted"] == 3
+    header = (output / "fits_compact.tsv").read_text().splitlines()[0].split("\t")
+    assert "ceiling_status" in header and "variants_accepted" in header
+    payload = json.loads(next((output / "viewer").glob("come_up*.json")).read_text())
+    assert len(payload["variants"]) == 3 and payload["scene_report"]["ceiling"]["status"]

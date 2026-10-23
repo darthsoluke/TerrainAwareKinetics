@@ -134,12 +134,13 @@ def _percentiles(values):
 
 
 def screen_clip(soles, joints, root, fps, standing_hip_height_m, *,
-                dimension_tokens=(), config=None, support_config=None):
+                dimension_tokens=(), config=None, support_config=None, return_posture=False):
     """Screen one clip.
 
     soles: {"left", "right"} -> [frames, vertices, 3] official sole material points.
     joints: name -> [frames, 3] for every name in LANDMARKS (source world, Y up, m).
-    root: [frames, 3]. Returns (row, support_report) without changing any input.
+    root: [frames, 3]. Returns (row, support_report) without changing any input;
+    with return_posture, also the per-frame posture labels.
     """
     config = config or ScreenConfig()
     root = np.asarray(root, dtype=np.float64)
@@ -255,6 +256,8 @@ def screen_clip(soles, joints, root, fps, standing_hip_height_m, *,
         ("sustained_quadruped", row["posture"]["longest_run_seconds"]["quadruped"] >= 0.5),
         ("sustained_prone", row["posture"]["longest_run_seconds"]["prone"] >= 0.5),
     ) if active)
+    if return_posture:
+        return row, support, posture.astype(str)
     return row, support
 
 

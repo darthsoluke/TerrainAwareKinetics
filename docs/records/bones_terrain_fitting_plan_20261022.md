@@ -216,6 +216,10 @@ v1 全量结果见 [PRO6000 拟合记录](bones_terrain_fit_pro6000_20261023.md)
 
 v1 的 38 条查看数据另做成了在线查看页，供直接浏览；v2 重新运行后再更新。
 
+## 完整方法
+
+第三步 a v2、第四步（顶棚、侧墙）和第五步（场景变体）的完整方法见 [方法 v2](bones_terrain_method_v2_20261023.md)。
+
 ## 待决定
 
 1. **Uniform 或 Proportional。** 已有 sole 顶点来自官方 `skin_standard.npz`，与 Uniform 骨架一致。

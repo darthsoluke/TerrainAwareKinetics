@@ -30,6 +30,7 @@ if str(ROOT) not in sys.path:
 from motionbricks.data.bones_terrain_fit import (  # noqa: E402
     SCHEMA_VERSION, FitConfig, actor_scale_report, fit_support,
 )
+from motionbricks.data.bones_terrain_scene import SceneConfig, scene_for_clip  # noqa: E402
 from motionbricks.data.bones_terrain_viz import (  # noqa: E402
     VIEW_JOINTS, render_contact_sheet, render_gif, viewer_payload,
 )
@@ -38,13 +39,21 @@ from scripts import screen_bones_terrain_geometry as screen  # noqa: E402
 COMPACT = ("filename", "stem", "group", "status", "levels_m", "support_boxes", "flags", "penetration_authority",
            "minimal_penetration_max_m", "minimal_frames_over", "maximal_penetration_max_m", "maximal_frames_over",
            "sphere_minimal_penetration_max_m",
-           "unsupported_evidence", "minimal_sizes_m", "maximal_sizes_m", "error")
+           "unsupported_evidence", "minimal_sizes_m", "maximal_sizes_m",
+           "ceiling_status", "ceiling_range_m", "explanation_tight", "explanation_loose", "walls",
+           "variants_accepted", "upright_ceilings", "clutter", "variant_ground_penetration_max_m", "error")
 
 
 def _init():
     screen._init_worker()
     import matplotlib
     matplotlib.use("Agg")
+    skinner = screen._STATE.get("skinner")
+    if skinner is not None and "standing_top" not in screen._STATE:
+        # Uniform skin height in the bind pose: top of the head above the sole.
+        bind = skinner.bind_vertices
+        bind = bind.detach().cpu().numpy() if hasattr(bind, "detach") else np.asarray(bind)
+        screen._STATE["standing_top"] = float(bind[:, 1].max() - bind[:, 1].min())
 
 
 def skin_vertices(rotations, posed, stride):
@@ -61,7 +70,11 @@ def skin_vertices(rotations, posed, stride):
     return np.concatenate(chunks).astype(np.float32)
 
 
-def _process(item, render, skin_stride=2):
+def clip_seed(filename):
+    return int(hashlib.sha256(filename.encode()).hexdigest()[:8], 16)
+
+
+def _process(item, render, skin_stride=2, variants=4):
     if skin_stride:
         soles, joints, root, source_fps, _, (rotations, posed) = screen.convert(
             item["path"], extra_names=VIEW_JOINTS, return_motion=True)
@@ -69,11 +82,14 @@ def _process(item, render, skin_stride=2):
     else:
         soles, joints, root, source_fps, _ = screen.convert(item["path"], extra_names=VIEW_JOINTS)
         skin = None
-    _, support = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
-                                    dimension_tokens=item.get("dimension_tokens", ()))
+    _, support, posture = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
+                                             dimension_tokens=item.get("dimension_tokens", ()), return_posture=True)
     fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin)
     if skin is not None:
         fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
+        fit["scene"] = scene_for_clip(skin, posture[::skin_stride], joints["Hips"][::skin_stride][:, [0, 2]], fit,
+                                      screen._STATE["standing_top"], screen.FPS / skin_stride,
+                                      variants=variants, seed=clip_seed(item["filename"]))
     fit["meta"] = {key: item[key] for key in ("filename", "stem", "group")}
     fit["meta"].update(source_fps=source_fps, dimension_tokens=item.get("dimension_tokens", []))
     if render:
@@ -88,10 +104,10 @@ def _process(item, render, skin_stride=2):
 
 
 def work_fit(job):
-    item, skin_stride = job
+    item, options = job
     started = time.perf_counter()
     try:
-        fit = _process(item, None, skin_stride)
+        fit = _process(item, None, options["skin_stride"], options["variants"])
         result = {"filename": item["filename"], "stem": item["stem"], "group": item["group"], "fit": fit}
     except Exception as error:
         result = {"filename": item["filename"], "stem": item["stem"], "group": item["group"],
@@ -101,9 +117,9 @@ def work_fit(job):
 
 
 def work_render(job):
-    item, render, skin_stride = job
+    item, render, options = job
     try:
-        _process(item, render, skin_stride)
+        _process(item, render, options["skin_stride"], options["variants"])
         return {"filename": item["filename"], "rendered": True}
     except Exception as error:
         return {"filename": item["filename"], "rendered": False, "error": f"{type(error).__name__}: {error}"}
@@ -135,6 +151,26 @@ def compact_row(result):
         "sphere_minimal_penetration_max_m": round(fit["metrics"]["minimal"]["penetration_max_m"], 4),
         "unsupported_evidence": fit["metrics"]["minimal"]["support_evidence_unsupported"],
         "minimal_sizes_m": json.dumps(sizes["minimal"]), "maximal_sizes_m": json.dumps(sizes["maximal"]),
+        **scene_columns(fit.get("scene")),
+    }
+
+
+def scene_columns(scene):
+    if not scene:
+        return {}
+    report = scene["ceiling_report"]
+    explanation = report.get("explanation", {})
+    variants = scene["variants"]
+    return {
+        "ceiling_status": report["status"],
+        "ceiling_range_m": json.dumps([round(v, 3) for v in scene["ceiling"]["range_above_floor_m"]]) if scene["ceiling"] else "",
+        "explanation_tight": "" if explanation.get("tight") is None else round(explanation["tight"], 3),
+        "explanation_loose": "" if explanation.get("loose") is None else round(explanation["loose"], 3),
+        "walls": len(scene["walls"]),
+        "variants_accepted": f"{sum(v['accepted'] for v in variants)}/{len(variants)}",
+        "upright_ceilings": sum(v["params"]["upright_ceiling_m"] is not None for v in variants),
+        "clutter": sum(v["params"]["clutter"] for v in variants),
+        "variant_ground_penetration_max_m": round(max((v["penetration_m"]["ground"] for v in variants), default=0.0), 4),
     }
 
 
@@ -160,6 +196,27 @@ def group_summary(results):
                 for flag in f["flags"]:
                     flags[flag] = flags.get(flag, 0) + 1
             entry["flags"] = flags
+            scenes = [f["scene"] for f in ok if f.get("scene")]
+            if scenes:
+                status = {}
+                for scene in scenes:
+                    status[scene["ceiling_report"]["status"]] = status.get(scene["ceiling_report"]["status"], 0) + 1
+                tight = [s["ceiling_report"]["explanation"]["tight"] for s in scenes
+                         if s["ceiling"] and s["ceiling_report"].get("explanation", {}).get("tight") is not None]
+                variants = [v for s in scenes for v in s["variants"]]
+                fitted_pen = [c["frames_over_report"] for s in scenes for c in s["fitted_checks"].values()]
+                entry["scene"] = {
+                    "ceiling_status": status,
+                    "explanation_tight_p50": round(float(np.median(tight)), 4) if tight else None,
+                    "explanation_tight_p10": round(float(np.percentile(tight, 10)), 4) if tight else None,
+                    "walls_fitted": sum(len(s["walls"]) > 0 for s in scenes),
+                    "fitted_overhead_clips_with_frames_over_2cm": int(sum(v > 0 for v in fitted_pen)),
+                    "variants": len(variants), "variants_accepted": sum(v["accepted"] for v in variants),
+                    "upright_ceiling_variants": sum(v["params"]["upright_ceiling_m"] is not None for v in variants),
+                    "clutter_mean": round(float(np.mean([v["params"]["clutter"] for v in variants])), 3),
+                    "ground_skin_penetration_p95_m": round(float(np.percentile(
+                        [v["penetration_m"]["ground"] for v in variants], 95)), 4),
+                }
         summary[group] = entry
     return summary
 
@@ -197,7 +254,8 @@ def main(argv=None):
     parser.add_argument("--worst-per-group", type=int, default=3)
     parser.add_argument("--gif", action="store_true")
     parser.add_argument("--skin-stride", type=int, default=2,
-                        help="Skin every n-th frame for the penetration metric; 0 disables skinning")
+                        help="Skin every n-th frame for the penetration metric; 0 disables skinning and scenes")
+    parser.add_argument("--variants", type=int, default=4, help="Scene variants per clip")
     parser.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) // 2),
                         help="Worker processes; 0 runs in-process")
     args = parser.parse_args(argv)
@@ -218,7 +276,8 @@ def main(argv=None):
     args.output.mkdir(parents=True, exist_ok=False)
     for folder in ("fits", "viz", "viewer"):
         (args.output / folder).mkdir()
-    print(json.dumps({"clips": len(items), "workers": args.workers}), flush=True)
+    options = {"skin_stride": args.skin_stride, "variants": args.variants}
+    print(json.dumps({"clips": len(items), "workers": args.workers, **options}), flush=True)
 
     started = time.time()
     results = []
@@ -230,7 +289,7 @@ def main(argv=None):
         pool = mp.get_context("spawn").Pool(args.workers, initializer=_init)
         mapper = lambda function, jobs, **kw: pool.imap_unordered(function, jobs, **kw)  # noqa: E731
     try:
-        for index, result in enumerate(mapper(work_fit, [(item, args.skin_stride) for item in items],
+        for index, result in enumerate(mapper(work_fit, [(item, options) for item in items],
                                               **({} if pool is None else {"chunksize": 4})), 1):
             results.append(result)
             if "fit" in result:
@@ -247,7 +306,7 @@ def main(argv=None):
             folder = args.output / "viz" / item["group"]
             folder.mkdir(exist_ok=True)
             jobs.append((item, {"folder": str(folder), "viewer": str(args.output / "viewer"), "gif": args.gif},
-                         args.skin_stride))
+                         options))
         rendered = list(mapper(work_render, jobs))
     finally:
         if pool is not None:
@@ -275,9 +334,11 @@ def main(argv=None):
         "rendered": {"clips": len(rendered), "ok": sum(r["rendered"] for r in rendered),
                      "failed": [r for r in rendered if not r["rendered"]], "reasons": chosen},
         "elapsed_seconds": round(time.time() - started, 1), "config": FitConfig().__dict__,
+        "scene_config": SceneConfig().__dict__,
         "arguments": {k: (str(v) if isinstance(v, Path) else v) for k, v in vars(args).items()},
         "module_sha256": {name: screen.sha256_file(ROOT / name) for name in (
             "motionbricks/data/bones_terrain_fit.py", "motionbricks/data/bones_terrain_viz.py",
+            "motionbricks/data/bones_terrain_scene.py",
             "motionbricks/data/bones_terrain_screen.py", "scripts/fit_bones_terrain_support.py")},
     }
     (args.output / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")

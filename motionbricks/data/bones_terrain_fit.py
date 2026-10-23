@@ -313,6 +313,7 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         "half_extent_xyz_m": [float((path_high[0] - path_low[0]) / 2), config.ground_thickness_m / 2,
                               float((path_high[1] - path_low[1]) / 2)],
         "rotation_local_to_world": np.eye(3).tolist(), "top_m": ground,
+        "bottom_m": ground - config.ground_thickness_m,
     }
     minimal, maximal, level_reports = [ground_box], [ground_box], []
     flat_points = probes.reshape(-1, 3)
@@ -358,8 +359,15 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
             rect_min = _grow(evidence_rect, u, v, below_radius, margin_limit, config.side_clearance_m)
             rect_max = _grow(rect_min, u, v, below_radius, far_limit, config.side_clearance_m)
             name = f"support_{len(minimal)}"
-            minimal.append(_box_record(len(minimal) + 1, name, "support", center, axis_u, rect_min, level, bottom))
-            maximal.append(_box_record(len(maximal) + 1, name, "support", center, axis_u, rect_max, level, bottom))
+            frame = {"center_xz": [float(c) for c in center], "axis_u": [float(a) for a in axis_u]}
+            box_min = _box_record(len(minimal) + 1, name, "support", center, axis_u, rect_min, level, bottom)
+            box_max = _box_record(len(maximal) + 1, name, "support", center, axis_u, rect_max, level, bottom)
+            box_min.update(bottom_m=float(bottom), frame=dict(frame, rect=[float(r) for r in rect_min]))
+            box_max.update(bottom_m=float(bottom), frame=dict(frame, rect=[float(r) for r in rect_max]),
+                           frame_max_rect=[float(r) for r in rect_max],
+                           evidence_rect=[float(r) for r in evidence_rect])
+            minimal.append(box_min)
+            maximal.append(box_max)
             entry.update(status="fitted", evidence_used=label, items_used=len(subset), box=name,
                          minimal_size_m=[float(rect_min[1] - rect_min[0]), float(rect_min[3] - rect_min[2])],
                          maximal_size_m=[float(rect_max[1] - rect_max[0]), float(rect_max[3] - rect_max[2])])

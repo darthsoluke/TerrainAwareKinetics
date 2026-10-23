@@ -1,0 +1,12 @@
+{
+  "version": "bones-terrain-screen-edge-v1",
+  "status": "candidate check: does on_the_edge stand on a raised edge (narrow support)?",
+  "originals_only": true,
+  "sample_seed": "bones-terrain-screen-v1",
+  "groups": {
+    "edge_balance": {
+      "purpose": "standing and balancing on an edge; possible narrow-support data, unverified",
+      "stems": ["on_the_edge"]
+    }
+  }
+}

@@ -21,7 +21,20 @@ SEGMENTS = (
 )
 VIEW_JOINTS = tuple(dict.fromkeys(name for pair in SEGMENTS for name in pair))
 COLORS = {"ground": "#9aa0a6", "support": "#e8710a", "maximal": "#5f6368", "body": "#1a73e8",
-          "trail": "#188038", "evidence": "#d93025"}
+          "trail": "#188038", "evidence": "#d93025", "ceiling": "#00897b", "wall": "#8e24aa", "clutter": "#78909c"}
+
+
+def scene_boxes(fit):
+    """(solid, dashed) box lists: support fit plus fitted ceiling and walls when present."""
+    solid, dashed = list(fit["boxes"]["minimal"]), list(fit["boxes"]["maximal"])
+    scene = fit.get("scene")
+    if scene:
+        if scene.get("ceiling"):
+            solid.append(scene["ceiling"]["tight"])
+            if scene["ceiling"].get("loose"):
+                dashed.append(scene["ceiling"]["loose"])
+        solid.extend(scene.get("walls", []))
+    return solid, dashed
 
 
 def box_corners(box):
@@ -56,8 +69,9 @@ def _draw_boxes(ax, boxes, maximal=None, ground_extent=None):
                                                      alpha=0.15, edgecolor="none"))
             continue
         faces = [[tuple(_plot_xyz(corners[i])) for i in face] for face in _FACES]
-        ax.add_collection3d(Poly3DCollection(faces, facecolor=COLORS["support"], alpha=0.35,
-                                             edgecolor=COLORS["support"], linewidth=0.6))
+        color = COLORS.get(box["role"], COLORS["support"])
+        ax.add_collection3d(Poly3DCollection(faces, facecolor=color, alpha=0.35 if box["role"] != "ceiling" else 0.2,
+                                             edgecolor=color, linewidth=0.6))
     for box in maximal or ():
         if box["role"] == "ground":
             continue
@@ -97,7 +111,7 @@ def render_contact_sheet(joints, fit, path, *, title="", count=7, variant="minim
     joints = {name: np.asarray(value, dtype=np.float64) for name, value in joints.items()}
     frames = len(next(iter(joints.values())))
     picks = keyframes(frames, count)
-    boxes, maximal = fit["boxes"][variant], fit["boxes"]["maximal"]
+    boxes, maximal = scene_boxes(fit)
     everything = np.concatenate([np.stack(list(joints.values()), axis=1).reshape(-1, 3)] +
                                 [box_corners(b) for b in boxes if b["role"] != "ground"] +
                                 [box_corners(b) for b in maximal if b["role"] != "ground"])
@@ -135,9 +149,10 @@ def render_contact_sheet(joints, fit, path, *, title="", count=7, variant="minim
         if box["role"] == "ground":
             side.axhline(top, color=COLORS["ground"], linewidth=1.0)
         else:
+            color = COLORS.get(box["role"], COLORS["support"])
             side.add_patch(plt.Rectangle((s.min(), bottom), np.ptp(s), top - bottom,
                                          fill=not dashed, alpha=0.3 if not dashed else 1.0,
-                                         facecolor=COLORS["support"], edgecolor=COLORS["maximal"] if dashed else COLORS["support"],
+                                         facecolor=color, edgecolor=COLORS["maximal"] if dashed else color,
                                          linestyle="--" if dashed else "-", linewidth=0.8))
     for rank, frame in enumerate(picks):
         alpha = 0.25 + 0.75 * rank / max(1, len(picks) - 1)
@@ -151,6 +166,14 @@ def render_contact_sheet(joints, fit, path, *, title="", count=7, variant="minim
     side.set_xlabel("along travel (m)"), side.set_ylabel("height (m)")
     side.set_title("side elevation; dotted = support levels", fontsize=9)
     metrics = fit["metrics"][variant]
+    scene = fit.get("scene")
+    if scene:
+        report = scene["ceiling_report"]
+        explanation = report.get("explanation", {}).get("tight")
+        title = (f"{title}\nceiling: {report['status']}"
+                 + (f", {report['tight_m']:.2f}-{report['loose_m']:.2f} m, explains {explanation:.0%} of low frames"
+                    if report["status"] == "fitted" and explanation is not None else "")
+                 + f" | walls {len(scene['walls'])}")
     if "skin" in metrics:
         source, peak, over = "skin", metrics["skin"]["max_m"], metrics["skin"]["frames_over_report"]
     else:
@@ -173,7 +196,7 @@ def render_gif(joints, fit, path, *, fps_in=30.0, fps_out=10.0, variant="minimal
     frames = len(next(iter(joints.values())))
     stride = max(1, int(round(fps_in / fps_out)))
     picks = np.arange(0, frames, stride)
-    boxes, maximal = fit["boxes"][variant], fit["boxes"]["maximal"]
+    boxes, maximal = scene_boxes(fit)
     everything = np.concatenate([np.stack(list(joints.values()), axis=1).reshape(-1, 3)] +
                                 [box_corners(b) for b in boxes if b["role"] != "ground"])
     figure = plt.figure(figsize=(6, 5), dpi=90)
@@ -202,6 +225,10 @@ def viewer_payload(joints, fit, *, fps_in=30.0, fps_out=15.0, meta=None):
         "schema_version": "bones-terrain-view-v1", "fps": fps_in / stride, "joint_names": names,
         "segments": [[names.index(a), names.index(b)] for a, b in SEGMENTS if a in names and b in names],
         "frames_mm": np.round(stacked * 1000).astype(int).tolist(),
-        "boxes": fit["boxes"], "ground_m": fit["ground_m"], "levels_m": fit["levels_m"],
+        "boxes": dict(zip(("minimal", "maximal"), scene_boxes(fit))),
+        "variants": [v["boxes"] for v in (fit.get("scene") or {}).get("variants", [])[:3]],
+        "scene_report": ({"ceiling": fit["scene"]["ceiling_report"], "walls": fit["scene"]["wall_report"]}
+                         if fit.get("scene") else None),
+        "ground_m": fit["ground_m"], "levels_m": fit["levels_m"],
         "metrics": fit["metrics"], "flags": fit["flags"], "meta": meta or {},
     }

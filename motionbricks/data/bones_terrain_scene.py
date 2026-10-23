@@ -1,0 +1,476 @@
+"""Overhead and side geometry, and scene variants, for BONES-SEED clips (steps 4-5).
+
+Source motion is fixed. Given the full official skin of one clip (every n-th frame),
+its per-frame posture labels and the support fit (bones_terrain_fit), this module
+
+1. builds a body envelope: per XZ cell, the highest skin point at any frame;
+2. fits a ceiling that explains low postures: above the envelope everywhere it
+   covers, and below the top of the next-higher posture, so that the next-higher
+   posture would not fit under it. Two heights are kept: tight (just above the
+   body) and loose (just below the explanation bound);
+3. fits walls where the still body presses a flat region against a vertical plane;
+4. samples scene variants inside behaviour-neutral limits, adds high ceilings to
+   upright clips and distant clutter to every clip, so geometry type does not
+   predict the motion class (shortcut breaking), and measures full-skin
+   penetration of every variant.
+
+All heights are in the source world (Y up, metres; SOMA Uniform scale). Every
+threshold is a candidate value recorded in the outputs.
+"""
+
+from __future__ import annotations
+
+from dataclasses import asdict, dataclass
+
+import numpy as np
+
+from .bones_terrain_fit import _grow, _local, oriented_rectangle
+
+SCHEMA_VERSION = "bones-terrain-scene-v1"
+LOW_POSTURES = ("crouch", "other_low", "quadruped", "prone")
+
+
+@dataclass(frozen=True)
+class SceneConfig:
+    cell_m: float = 0.10
+    ceiling_clearance_m: float = 0.04        # tight ceiling above the body envelope
+    explanation_margin_m: float = 0.05       # ceiling at least this far below the next-higher posture top
+    crouch_top_ratio: float = 0.72           # crouch top / standing top, used to explain quadruped
+    quadruped_top_ratio: float = 0.45        # quadruped top / standing top, used to explain prone
+    min_low_seconds: float = 0.5
+    ceiling_thickness_m: float = 0.20
+    ceiling_growth_m: float = 0.60
+    cluster_link_m: float = 0.30
+    wall_still_speed_mps: float = 0.20
+    wall_min_seconds: float = 0.5
+    wall_contact_band_m: float = 0.015
+    wall_min_contact_vertices: float = 80.0
+    wall_offset_stability_m: float = 0.02
+    wall_height_m: float = 2.5
+    wall_thickness_m: float = 0.20
+    wall_growth_m: float = 1.0
+    # Behaviour-neutral limits for sampled geometry.
+    neutral_side_margin_m: float = 0.30      # support box sides at least this far beyond the evidence
+    neutral_headroom_m: float = 0.15         # ceilings over upright motion above envelope and standing top
+    neutral_clutter_clearance_m: float = 0.30
+    lookahead_seconds: float = 1.0
+    upright_ceiling_probability: float = 0.5
+    upright_ceiling_max_m: float = 3.0
+    clutter_max: float = 4.0
+    clutter_area_m: float = 3.0
+    penetration_report_m: float = 0.02
+
+    def __post_init__(self):
+        for name, value in asdict(self).items():
+            if not np.isfinite(value) or value < 0:
+                raise ValueError(f"{name} must be finite and non-negative")
+
+
+# ---------------------------------------------------------------- geometry helpers
+
+def make_box(box_id, name, role, center_xz, axis_u, rect, bottom, top):
+    """OBB record compatible with SceneBox: local X along axis_u, Y up."""
+    u0, u1, v0, v1 = rect
+    axis_u = np.asarray(axis_u, dtype=np.float64)
+    axis_v = np.array([-axis_u[1], axis_u[0]])
+    mid = np.asarray(center_xz) + (u0 + u1) / 2 * axis_u + (v0 + v1) / 2 * axis_v
+    x_axis = np.array([axis_u[0], 0.0, axis_u[1]])
+    z_axis = np.cross(x_axis, [0.0, 1.0, 0.0])
+    return {"box_id": int(box_id), "name": name, "role": role,
+            "center_xyz_m": [float(mid[0]), float((top + bottom) / 2), float(mid[1])],
+            "half_extent_xyz_m": [float((u1 - u0) / 2), float((top - bottom) / 2), float((v1 - v0) / 2)],
+            "rotation_local_to_world": np.stack([x_axis, [0.0, 1.0, 0.0], z_axis], axis=1).tolist(),
+            "top_m": float(top), "bottom_m": float(bottom),
+            "frame": {"center_xz": [float(c) for c in center_xz], "axis_u": [float(a) for a in axis_u],
+                      "rect": [float(r) for r in rect]}}
+
+
+def solid_penetration(points, boxes, report_threshold, roles=None):
+    """Full-volume OBB penetration of points [frames, n, 3]: depth to the nearest face."""
+    frame_depth = np.zeros(points.shape[0])
+    worst = {}
+    for box in boxes:
+        if roles and box["role"] not in roles:
+            continue
+        center = np.asarray(box["center_xyz_m"])
+        half = np.asarray(box["half_extent_xyz_m"])
+        rotation = np.asarray(box["rotation_local_to_world"])
+        box_depth = np.zeros(points.shape[0])
+        for start in range(0, points.shape[0], 32):
+            local = np.abs((points[start:start + 32] - center) @ rotation)
+            depth = (half - local).min(axis=-1).max(axis=-1)
+            box_depth[start:start + 32] = np.maximum(depth, 0.0)
+        frame_depth = np.maximum(frame_depth, box_depth)
+        worst[box["name"]] = float(box_depth.max(initial=0.0))
+    return {"max_m": float(frame_depth.max(initial=0.0)),
+            "frames_over_report": int((frame_depth > report_threshold).sum()),
+            "frames": int(points.shape[0]), "per_box_max_m": worst}
+
+
+class Grid:
+    """Fixed XZ grid over a clip, origin at the lower corner."""
+
+    def __init__(self, points_xz, cell, margin):
+        self.cell = float(cell)
+        self.origin = points_xz.min(axis=0) - margin
+        self.shape = tuple(np.ceil((points_xz.max(axis=0) + margin - self.origin) / cell).astype(int) + 1)
+
+    def index(self, xz):
+        ij = np.floor((np.asarray(xz) - self.origin) / self.cell).astype(int)
+        return np.clip(ij, 0, np.array(self.shape) - 1)
+
+    def centers(self, mask):
+        ij = np.argwhere(mask)
+        return self.origin + (ij + 0.5) * self.cell
+
+
+def envelope(skin, grid, frame_mask=None):
+    """Per-cell maximum skin height over the selected frames (-inf where never visited)."""
+    top = np.full(grid.shape, -np.inf)
+    points = skin if frame_mask is None else skin[frame_mask]
+    if len(points) == 0:
+        return top
+    flat = points.reshape(-1, 3)
+    ij = grid.index(flat[:, [0, 2]])
+    np.maximum.at(top, (ij[:, 0], ij[:, 1]), flat[:, 1])
+    return top
+
+
+def floor_height(xz, support_boxes, ground):
+    """Highest support top whose footprint contains xz, else the ground."""
+    xz = np.atleast_2d(xz)
+    result = np.full(len(xz), ground, dtype=np.float64)
+    for box in support_boxes:
+        if box["role"] != "support":
+            continue
+        center = np.asarray(box["center_xyz_m"])
+        half = np.asarray(box["half_extent_xyz_m"])
+        rotation = np.asarray(box["rotation_local_to_world"])
+        local = (np.column_stack([xz[:, 0], np.full(len(xz), center[1]), xz[:, 1]]) - center) @ rotation
+        inside = (np.abs(local[:, 0]) <= half[0]) & (np.abs(local[:, 2]) <= half[2])
+        result = np.where(inside, np.maximum(result, box["top_m"]), result)
+    return result
+
+
+def _clusters_of_points(points, link):
+    parent = list(range(len(points)))
+
+    def find(index):
+        while parent[index] != index:
+            parent[index] = parent[parent[index]]
+            index = parent[index]
+        return index
+
+    if len(points) > 1:
+        from scipy.spatial import cKDTree
+        for i, j in cKDTree(points).query_pairs(link):
+            parent[find(i)] = find(j)
+    groups = {}
+    for index in range(len(points)):
+        groups.setdefault(find(index), []).append(index)
+    return [points[indices] for indices in sorted(groups.values(), key=len, reverse=True)]
+
+
+# ---------------------------------------------------------------- ceilings
+
+def explanation_bounds(standing_top, config):
+    """Ceiling height above the floor that each low posture must stay under (next-higher top - margin)."""
+    crouch_top = config.crouch_top_ratio * standing_top
+    quadruped_top = config.quadruped_top_ratio * standing_top
+    return {"crouch": standing_top - config.explanation_margin_m,
+            "other_low": standing_top - config.explanation_margin_m,
+            "quadruped": crouch_top - config.explanation_margin_m,
+            "prone": quadruped_top - config.explanation_margin_m}
+
+
+def fit_ceiling(skin, posture, hips_xz, support_boxes, ground, standing_top, fps, config=None, box_id=100):
+    """Ceiling slab over the low-posture region, or a report of why none fits."""
+    config = config or SceneConfig()
+    posture = np.asarray(posture).astype(str)
+    low = np.isin(posture, LOW_POSTURES)
+    report = {"low_frames": int(low.sum()), "frames": int(len(posture))}
+    if low.sum() / fps < config.min_low_seconds:
+        report["status"] = "no_sustained_low_posture"
+        return None, report
+    counts = {name: int((posture == name).sum()) for name in LOW_POSTURES}
+    dominant = max(counts, key=counts.get)
+    bounds = explanation_bounds(standing_top, config)
+    grid = Grid(skin[..., [0, 2]].reshape(-1, 2), config.cell_m, config.ceiling_growth_m + 0.5)
+    top_all = envelope(skin, grid)
+    top_low = envelope(skin, grid, low)
+    centers_all = grid.centers(np.ones(grid.shape, dtype=bool))
+    floor = floor_height(centers_all, support_boxes, ground).reshape(grid.shape)
+    bound = floor + bounds[dominant]
+    core_mask = np.isfinite(top_low) & (top_all + config.ceiling_clearance_m <= bound)
+    report.update(dominant=dominant, posture_counts=counts, bound_above_floor_m=bounds[dominant],
+                  low_cells=int(np.isfinite(top_low).sum()), core_cells=int(core_mask.sum()))
+    if not core_mask.any():
+        report["status"] = "unexplainable_body_reaches_bound"
+        return None, report
+    floor_ref = float(np.median(floor[core_mask]))
+    h_tight = float((top_all[core_mask]).max() + config.ceiling_clearance_m)
+    h_loose = floor_ref + bounds[dominant]
+    if h_tight > h_loose:
+        report["status"] = "unexplainable_tight_above_bound"
+        return None, report
+
+    def build(height, name):
+        blocked = np.isfinite(top_all) & (top_all + config.ceiling_clearance_m > height)
+        blocked_xz = grid.centers(blocked)
+        radius = np.full(len(blocked_xz), config.cell_m * 0.71)
+        core_points = grid.centers(core_mask & ~blocked)
+        attempts = [("all_core", core_points)] + [
+            (f"cluster_{k}", points) for k, points in enumerate(_clusters_of_points(core_points, config.cluster_link_m))]
+        attempts.append(("hip_path", np.asarray(hips_xz)[low]))
+        for label, points in attempts:
+            if len(points) == 0:
+                continue
+            center, axis_u, half_u, half_v = oriented_rectangle(points, minimum_side_m=config.cell_m)
+            u, v = _local(blocked_xz, center, axis_u)
+            inside = ((u + radius > -half_u) & (u - radius < half_u) & (v + radius > -half_v) & (v - radius < half_v))
+            if inside.any():
+                continue
+            core_rect = (-half_u, half_u, -half_v, half_v)
+            limit = {"u0": -half_u - config.ceiling_growth_m, "u1": half_u + config.ceiling_growth_m,
+                     "v0": -half_v - config.ceiling_growth_m, "v1": half_v + config.ceiling_growth_m}
+            grown = _grow(core_rect, u, v, radius, limit, 0.0)
+            box = make_box(box_id, name, "ceiling", center, axis_u, grown, height, height + config.ceiling_thickness_m)
+            box["core_rect"] = [float(r) for r in core_rect]
+            return box, label
+        return None, None
+
+    tight, tight_used = build(h_tight, "ceiling_tight")
+    loose, loose_used = build(h_loose, "ceiling_loose")
+    if tight is None:
+        report["status"] = "no_conflict_free_rectangle"
+        return None, report
+    for box, label in ((tight, tight_used), (loose, loose_used)):
+        if box is not None:
+            box["core_used"] = label
+    report.update(status="fitted", tight_m=h_tight - floor_ref, loose_m=h_loose - floor_ref, floor_m=floor_ref)
+    report["explanation"] = {name: explanation_rate(box, posture, hips_xz, floor_ref, bounds)
+                             for name, box in (("tight", tight), ("loose", loose)) if box is not None}
+    return {"tight": tight, "loose": loose, "floor_m": floor_ref,
+            "range_above_floor_m": [h_tight - floor_ref, h_loose - floor_ref]}, report
+
+
+def _inside_footprint(box, xz):
+    center = np.asarray(box["center_xyz_m"])
+    half = np.asarray(box["half_extent_xyz_m"])
+    rotation = np.asarray(box["rotation_local_to_world"])
+    xz = np.atleast_2d(xz)
+    local = (np.column_stack([xz[:, 0], np.full(len(xz), center[1]), xz[:, 1]]) - center) @ rotation
+    return (np.abs(local[:, 0]) <= half[0]) & (np.abs(local[:, 2]) <= half[2])
+
+
+def explanation_rate(ceiling, posture, hips_xz, floor_ref, bounds):
+    """Fraction of low-posture frames under the ceiling and below their own posture bound."""
+    posture = np.asarray(posture).astype(str)
+    low = np.isin(posture, LOW_POSTURES)
+    if not low.any():
+        return None
+    under = _inside_footprint(ceiling, np.asarray(hips_xz)[low])
+    height = ceiling["bottom_m"] - floor_ref
+    below = np.array([height <= bounds[name] for name in posture[low]])
+    return float((under & below).mean())
+
+
+# ---------------------------------------------------------------- walls
+
+def fit_walls(skin, hips_xz, ground, fps, config=None, box_id=200, directions=24):
+    """Vertical walls where the still body presses a flat region against one plane."""
+    config = config or SceneConfig()
+    hips_xz = np.asarray(hips_xz)
+    speed = np.r_[0.0, np.linalg.norm(np.diff(hips_xz, axis=0), axis=-1) * fps]
+    still = speed <= config.wall_still_speed_mps
+    report = {"still_frames": int(still.sum())}
+    if still.sum() / fps < config.wall_min_seconds:
+        report["status"] = "no_still_segment"
+        return [], report
+    band = (skin[..., 1] - ground > 0.2) & (skin[..., 1] - ground < 2.0)
+    xz = skin[..., [0, 2]]
+    candidates = []
+    for k in range(directions):
+        angle = 2 * np.pi * k / directions
+        d = np.array([np.cos(angle), np.sin(angle)])
+        projection = np.where(band, xz @ d, -np.inf)
+        offset = projection.max(axis=1)
+        median = np.median(offset[still])
+        stable = still & (np.abs(offset - median) <= config.wall_offset_stability_m)
+        if stable.sum() / fps < config.wall_min_seconds:
+            continue
+        contact = ((projection >= median - config.wall_contact_band_m) & band)[stable].sum(axis=1)
+        candidates.append({"direction": d, "offset": float(median), "score": float(np.median(contact)),
+                           "stable_seconds": float(stable.sum() / fps), "beyond": float(offset.max() - median)})
+    report["best_score"] = max((c["score"] for c in candidates), default=0.0)
+    accepted = [c for c in candidates if c["score"] >= config.wall_min_contact_vertices]
+    if not accepted:
+        report["status"] = "no_contact_plane"
+        return [], report
+    best = max(accepted, key=lambda c: c["score"])
+    d = best["direction"]
+    tangent = np.array([-d[1], d[0]])
+    # Contact region along the plane; then grow along the tangent while no body point passes the plane.
+    projection = xz @ d
+    near = band & (projection >= best["offset"] - config.wall_contact_band_m)
+    t_contact = (xz @ tangent)[near]
+    beyond = band & (projection > best["offset"] + 0.005)
+    t_beyond = (xz @ tangent)[beyond]
+    t0, t1 = float(t_contact.min()), float(t_contact.max())
+    left = t_beyond[t_beyond < t0]
+    right = t_beyond[t_beyond > t1]
+    t0_grown = max(t0 - config.wall_growth_m, float(left.max()) + 0.05) if len(left) else t0 - config.wall_growth_m
+    t1_grown = min(t1 + config.wall_growth_m, float(right.min()) - 0.05) if len(right) else t1 + config.wall_growth_m
+    # The plane must clear every body point within its span at every frame, not only the still frames.
+    t_all = xz @ tangent
+    span = band & (t_all >= t0_grown) & (t_all <= t1_grown)
+    plane = max(best["offset"], float(projection[span].max()) + 0.005) if span.any() else best["offset"]
+    center_xz = d * (plane + config.wall_thickness_m / 2)
+    # Local u along the wall normal d, v along the tangent.
+    rect = (-config.wall_thickness_m / 2, config.wall_thickness_m / 2, t0_grown, t1_grown)
+    wall = make_box(box_id, "wall_1", "wall", center_xz, d, rect, ground - 0.2, ground + config.wall_height_m)
+    report.update(status="fitted", score=best["score"], stable_seconds=best["stable_seconds"],
+                  contact_span_m=t1 - t0, length_m=t1_grown - t0_grown,
+                  body_beyond_plane_m=best["beyond"], plane_shift_m=plane - best["offset"])
+    return [wall], report
+
+
+# ---------------------------------------------------------------- variants
+
+def lookahead_zone(hips_xz, fps, config):
+    """Points the policy would look at past the clip end: continue the final velocity."""
+    hips_xz = np.asarray(hips_xz)
+    window = max(2, int(fps * 0.5))
+    velocity = (hips_xz[-1] - hips_xz[-window]) * fps / (window - 1)
+    steps = np.linspace(0, config.lookahead_seconds, 11)[:, None]
+    return hips_xz[-1] + steps * velocity
+
+
+def _sample_support(box, rng, config):
+    frame = box["frame"]
+    rect_max = box["frame_max_rect"]
+    evidence = box["evidence_rect"]
+    sampled = []
+    for index, sign in ((0, -1), (1, 1), (2, -1), (3, 1)):
+        neutral = evidence[index] + sign * config.neutral_side_margin_m
+        limit = rect_max[index]
+        low, high = sorted((neutral if sign * (neutral - limit) <= 0 else limit, limit))
+        sampled.append(float(rng.uniform(low, high)) if high > low else float(limit))
+    return sampled, frame
+
+
+def sample_variant(rng, fit, ceiling, walls, top_all_grid, grid, hips_xz, upright, standing_top, fps,
+                   config=None, next_id=300):
+    """One scene: support boxes, fitted ceiling/walls, optional upright ceiling and clutter."""
+    config = config or SceneConfig()
+    boxes, params = [], {"support_sides": [], "ceiling_m": None, "upright_ceiling_m": None, "clutter": 0}
+    ground = fit["ground_m"]
+    for box in fit["boxes"]["maximal"]:
+        if box["role"] == "ground":
+            boxes.append(box)
+        elif box["role"] == "support" and "frame_max_rect" in box:
+            rect, frame = _sample_support(box, rng, config)
+            boxes.append(make_box(box["box_id"], box["name"], "support", frame["center_xz"], frame["axis_u"],
+                                  rect, box["bottom_m"], box["top_m"]))
+            params["support_sides"].append(rect)
+        elif box["role"] == "support":
+            boxes.append(box)
+    if ceiling is not None:
+        low_h, high_h = ceiling["tight"]["bottom_m"], (ceiling["loose"] or ceiling["tight"])["bottom_m"]
+        height = float(rng.uniform(low_h, max(low_h, high_h)))
+        frame = ceiling["tight"]["frame"]
+        boxes.append(make_box(100, "ceiling", "ceiling", frame["center_xz"], frame["axis_u"], frame["rect"],
+                              height, height + config.ceiling_thickness_m))
+        params["ceiling_m"] = height - ceiling["floor_m"]
+    boxes.extend(walls)
+    occupied = np.isfinite(top_all_grid)
+    if upright and rng.uniform() < config.upright_ceiling_probability:
+        minimum = max(float(top_all_grid[occupied].max()) + config.neutral_headroom_m,
+                      ground + standing_top + config.neutral_headroom_m)
+        if minimum < ground + config.upright_ceiling_max_m:
+            height = float(rng.uniform(minimum, ground + config.upright_ceiling_max_m))
+            points = grid.centers(occupied)
+            center, axis_u, half_u, half_v = oriented_rectangle(points)
+            rect = (-half_u - 1.0, half_u + 1.0, -half_v - 1.0, half_v + 1.0)
+            boxes.append(make_box(101, "upright_ceiling", "ceiling", center, axis_u, rect,
+                                  height, height + config.ceiling_thickness_m))
+            params["upright_ceiling_m"] = height - ground
+    # Clutter: boxes outside the body envelope plus a clearance, and outside the lookahead zone.
+    keep_out = np.concatenate([grid.centers(occupied), lookahead_zone(hips_xz, fps, config)])
+    from scipy.spatial import cKDTree
+    tree = cKDTree(keep_out)
+    low_corner = keep_out.min(axis=0) - config.clutter_area_m
+    high_corner = keep_out.max(axis=0) + config.clutter_area_m
+    count = int(rng.integers(0, int(config.clutter_max) + 1))
+    placed = 0
+    for attempt in range(count * 20):
+        if placed >= count:
+            break
+        size = rng.uniform([0.3, 0.3], [1.5, 1.5])
+        height = float(rng.uniform(0.3, 2.5))
+        center = rng.uniform(low_corner, high_corner)
+        angle = rng.uniform(0, np.pi)
+        axis_u = np.array([np.cos(angle), np.sin(angle)])
+        counts = np.ceil(size / 0.1).astype(int) + 1  # footprint samples no more than 0.1 m apart
+        samples = np.array([[a, b] for a in np.linspace(-size[0] / 2, size[0] / 2, counts[0])
+                            for b in np.linspace(-size[1] / 2, size[1] / 2, counts[1])])
+        world = center + samples[:, :1] * axis_u + samples[:, 1:] * np.array([-axis_u[1], axis_u[0]])
+        if tree.query(world)[0].min() < config.neutral_clutter_clearance_m + config.cell_m:
+            continue
+        rect = (-size[0] / 2, size[0] / 2, -size[1] / 2, size[1] / 2)
+        floor = float(floor_height(center, fit["boxes"]["maximal"], ground)[0])
+        boxes.append(make_box(next_id + placed, f"clutter_{placed + 1}", "clutter", center, axis_u, rect,
+                              floor - 0.2, floor + height))
+        placed += 1
+    params["clutter"] = placed
+    return boxes, params
+
+
+def scene_for_clip(skin, posture, hips_xz, fit, standing_top, fps, *, variants=4, seed=0, config=None):
+    """Ceiling, walls and validated variants for one clip; JSON-ready."""
+    config = config or SceneConfig()
+    skin = np.asarray(skin, dtype=np.float64)
+    hips_xz = np.asarray(hips_xz, dtype=np.float64)
+    posture = np.asarray(posture).astype(str)
+    support = [b for b in fit["boxes"]["minimal"] if b["role"] == "support"]
+    ground = fit["ground_m"]
+    ceiling, ceiling_report = fit_ceiling(skin, posture, hips_xz, support, ground, standing_top, fps, config)
+    walls, wall_report = fit_walls(skin, hips_xz, ground, fps, config)
+    grid = Grid(skin[..., [0, 2]].reshape(-1, 2), config.cell_m, 0.5)
+    top_all = envelope(skin, grid)
+    upright = bool((posture == "standing").mean() >= 0.9)
+    fitted_boxes = [b for b in (ceiling["tight"], ceiling["loose"]) if b] if ceiling else []
+    checks = {box["name"]: solid_penetration(skin, [box], config.penetration_report_m)
+              for box in fitted_boxes + walls}
+    rng = np.random.default_rng(seed)
+    scenes = []
+    for index in range(variants):
+        boxes, params = sample_variant(rng, fit, ceiling, walls, top_all, grid, hips_xz, upright,
+                                       standing_top, fps, config)
+        penetration = solid_penetration(skin, [b for b in boxes if b["role"] != "ground"],
+                                        config.penetration_report_m)
+        ground_box = [b for b in boxes if b["role"] == "ground"]
+        ground_pen = solid_penetration(skin, ground_box, config.penetration_report_m)
+        explanation = (explanation_rate(next(b for b in boxes if b["name"] == "ceiling"), posture, hips_xz,
+                                        ceiling["floor_m"], explanation_bounds(standing_top, config))
+                       if ceiling is not None else None)
+        scenes.append({"index": index, "params": params, "boxes": boxes,
+                       "penetration_m": {"solids": penetration["max_m"], "ground": ground_pen["max_m"]},
+                       "frames_over_report": {"solids": penetration["frames_over_report"],
+                                              "ground": ground_pen["frames_over_report"]},
+                       "explanation_rate": explanation,
+                       "accepted": penetration["frames_over_report"] == 0})
+    envelope_cells = np.argwhere(np.isfinite(top_all))
+    return {
+        "schema_version": SCHEMA_VERSION, "upright": upright, "standing_top_m": standing_top,
+        "ceiling": ceiling, "ceiling_report": ceiling_report, "walls": walls, "wall_report": wall_report,
+        "fitted_checks": checks, "variants": scenes, "config": asdict(config),
+        "envelope": {"origin_xz": grid.origin.tolist(), "cell_m": grid.cell, "shape": [int(n) for n in grid.shape],
+                     "cells": envelope_cells.tolist(),
+                     "top_m": np.round(top_all[np.isfinite(top_all)], 3).tolist()},
+        "protocol": {"source_changed": False, "penetration": "full official skin, every n-th frame",
+                     "neutral_limits": "support sides >= evidence + neutral_side_margin; upright ceilings >= "
+                                       "envelope and standing top + neutral_headroom; clutter >= "
+                                       "neutral_clutter_clearance from the body envelope and the lookahead zone",
+                     "explanation": "ceiling bottom below the next-higher posture top minus explanation_margin"},
+    }
