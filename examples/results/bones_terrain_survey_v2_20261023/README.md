@@ -17,6 +17,7 @@ stems: {'unique': 2863, 'with_any_hit': 812, 'with_dimension_tokens': 17}
 | [execution_receipt.json](execution_receipt.json) | survey完成时的环境、迁移授权和磁盘余量快照 |
 | [SHA256SUMS](SHA256SUMS) | 五个公开结果文件的SHA256 |
 | [publication_manifest.json](publication_manifest.json) | 原始结果与公开副本的哈希对应 |
+| [transfer_source_summary.json](transfer_source_summary.json) | 全部原始BVH源清单的数量、大小和哈希；目标端验证完成后另附报告 |
 
 每个词干列出各桶命中比例、原始与镜像数量、家族和演员数量、尺寸词，以及一条示例描述。812个词干有至少一次命中，2,051个没有命中；17个含尺寸词。
 

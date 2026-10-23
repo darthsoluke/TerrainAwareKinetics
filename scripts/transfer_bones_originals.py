@@ -97,7 +97,7 @@ def index_source(args):
 
 def rclone(args, source, destination):
     subprocess.run([args.rclone, '--config', str(args.config), 'copyto', str(source), str(destination),
-                    '--immutable', '--drive-chunk-size', '2M', '--disable-http2', '--contimeout', '20s',
+                    '--immutable', '--drive-chunk-size', args.drive_chunk_size, '--disable-http2', '--contimeout', '20s',
                     '--timeout', '120s', '--retries', '5', '--low-level-retries', '3',
                     '--stats', '30s', '--stats-one-line', '--stats-log-level', 'NOTICE'], check=True)
 
@@ -112,11 +112,24 @@ def pack_upload(args):
     grouped = defaultdict(list)
     for row in rows:
         grouped[PurePosixPath(row['path']).parts[0]].append(row)
+    journal = args.work / 'packages.json'
+    packages = json.loads(journal.read_text()) if journal.exists() else []
+    completed_dates = set()
+    for package in packages:
+        members = grouped.get(package['date'], [])
+        if (not members or package['date'] in completed_dates
+                or package['name'] != package['date'] + '.tar.gz'
+                or package['files'] != len(members)
+                or package['raw_bytes'] != sum(row['size'] for row in members)):
+            raise ValueError('Completed package journal does not match the source manifest')
+        completed_dates.add(package['date'])
     remote = args.remote.rstrip('/')
     rclone(args, manifest, remote + '/manifest.jsonl')
     rclone(args, args.work / 'index_summary.json', remote + '/index_summary.json')
-    packages = []
     for date, members in sorted(grouped.items()):
+        if date in completed_dates:
+            print(f'Keeping completed upload {date}', flush=True)
+            continue
         archive = args.work / (date + '.tar.gz')
         require_space(args.work, sum(r['size'] for r in members), 10 * GIB)
         listing = args.work / (date + '.files0')
@@ -242,6 +255,7 @@ def main():
     parser.add_argument('--expected-files', type=int, default=71132)
     parser.add_argument('--workers', type=int, default=4)
     parser.add_argument('--reserve-gib', type=int, default=200)
+    parser.add_argument('--drive-chunk-size', default='32M')
     parser.add_argument('--rclone')
     parser.add_argument('--config', type=Path)
     parser.add_argument('--remote')

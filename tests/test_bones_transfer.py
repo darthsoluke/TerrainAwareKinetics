@@ -8,7 +8,7 @@ from types import SimpleNamespace
 import pytest
 
 from scripts.transfer_bones_originals import (
-    GIB, extract_archive, index_source, read_manifest, relative_path, require_space,
+    GIB, extract_archive, index_source, pack_upload, read_manifest, relative_path, require_space,
 )
 
 
@@ -72,3 +72,24 @@ def test_space_gate_keeps_reserve(monkeypatch, tmp_path):
     assert require_space(tmp_path, 100 * GIB, 200 * GIB) == 300 * GIB
     with pytest.raises(ValueError, match='Insufficient space'):
         require_space(tmp_path, 101 * GIB, 200 * GIB)
+
+
+def test_completed_date_is_not_repacked_or_uploaded(monkeypatch, tmp_path):
+    source = tmp_path / 'source'
+    (source / '230118').mkdir(parents=True)
+    (source / '230118/walk.bvh').write_bytes(b'motion')
+    work = tmp_path / 'work'
+    args = SimpleNamespace(source=source, work=work, expected_files=1, workers=1, remote='drive:task')
+    index_source(args)
+    package = dict(name='230118.tar.gz', date='230118', files=1, raw_bytes=6, bytes=100, sha256='a' * 64)
+    (work / 'packages.json').write_text(json.dumps([package]))
+    copied = []
+    monkeypatch.setattr('scripts.transfer_bones_originals.rclone', lambda args, src, dst: copied.append(Path(src).name))
+    monkeypatch.setattr('scripts.transfer_bones_originals.subprocess.run', lambda *args, **kwargs: pytest.fail('Repacked a completed date'))
+    pack_upload(args)
+    assert copied == ['manifest.jsonl', 'index_summary.json', 'staging_complete.json']
+    assert json.loads((work / 'staging_complete.json').read_text())['packages'] == [package]
+    package['raw_bytes'] = 7
+    (work / 'packages.json').write_text(json.dumps([package]))
+    with pytest.raises(ValueError, match='journal'):
+        pack_upload(args)

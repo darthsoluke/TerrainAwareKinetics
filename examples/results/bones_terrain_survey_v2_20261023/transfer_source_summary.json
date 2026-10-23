@@ -1,0 +1,11 @@
+{
+  "scope": "A_all_originals",
+  "source_index_complete": true,
+  "files_expected": 71132,
+  "total_bytes": 148382694286,
+  "date_folders": 124,
+  "manifest_sha256": "aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1",
+  "largest_date_raw_bytes": 4300411261,
+  "minimum_destination_free_bytes": 214748364800,
+  "destination_verification": null
+}

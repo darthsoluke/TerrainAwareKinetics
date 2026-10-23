@@ -50,9 +50,11 @@ flat_remainder                122285   61163   61122    435575.1         -      
 
 目标选择根分区下的用户存储目录。复制前与解包时均检查剩余原始文件体积和压缩包暂存空间，完成后至少保留200GiB。
 
-本次发布时，源文件SHA256清单正在生成；BVH迁移的最终逐文件校验结果尚未产生。
+源文件SHA256清单已完整生成：71,132个文件、148,382,694,286 bytes、124个日期目录。清单SHA256为 `aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1`，摘要见 [transfer_source_summary.json](../../examples/results/bones_terrain_survey_v2_20261023/transfer_source_summary.json)。
 
-迁移工具：[transfer_bones_originals.py](../../scripts/transfer_bones_originals.py)，[测试](../../tests/test_bones_transfer.py)有8项通过，覆盖原始/镜像筛选、日期目录、错误哈希、已有文件保护与空间门槛。工具分为：
+压缩包正在通过私有Drive上传，目标端最终逐文件校验结果尚未产生。上传器记录每个成功日期，重启时复用完成记录；大文件分块设为32MiB，减少远端请求开销。
+
+迁移工具：[transfer_bones_originals.py](../../scripts/transfer_bones_originals.py)，[测试](../../tests/test_bones_transfer.py)有9项通过，覆盖原始/镜像筛选、日期目录、错误哈希、已有文件保护、空间门槛和完成日期复用。工具分为：
 
 1. `index`：只读g3源BVH，写出每个相对路径、大小与SHA256；清单完整后才允许打包。
 2. `upload`：每个日期一个tar.gz，经私有Drive上传；成功后清理本任务自己的临时压缩包。
