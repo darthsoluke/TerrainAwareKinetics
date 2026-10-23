@@ -126,7 +126,7 @@ def test_fit_script_in_process_with_stubbed_conversion(tmp_path):
     soles, joints, root = step_up()
     original = (screen._init_worker, screen.convert)
     screen._init_worker = lambda: screen._STATE.update(standing_hip=.95)
-    screen.convert = lambda path, extra_names=(): (soles, joints, root, 120.0, 0.0)
+    screen.convert = lambda path, extra_names=(), return_motion=False: (soles, joints, root, 120.0, 0.0)
     try:
         run = tmp_path / "screen"
         run.mkdir()
@@ -138,7 +138,7 @@ def test_fit_script_in_process_with_stubbed_conversion(tmp_path):
                                          json.dumps({**rows[2], "error": "ValueError: skipped"}))
         output = tmp_path / "fit"
         assert fit_script.main(["--screen-run", str(run), "--output", str(output), "--workers", "0",
-                                "--viz-per-stem", "1"]) == 0
+                                "--viz-per-stem", "1", "--skin-stride", "0"]) == 0
     finally:
         screen._init_worker, screen.convert = original
     report = json.loads((output / "report.json").read_text())
@@ -152,3 +152,71 @@ def test_fit_script_in_process_with_stubbed_conversion(tmp_path):
     assert len(lines) == 3 and all(len(l.split("\t")) == len(fit_script.COMPACT) for l in lines)
     group = json.loads((output / "by_group.json").read_text())["known_dimension_support"]
     assert group["fitted"] == 2 and group["minimal"]["clips_with_frames_over_2cm"] == 0
+
+
+def test_hanging_palms_at_box_height_are_not_support_evidence():
+    soles, joints, root = step_up(top=.69)
+    hips = joints["Hips"]
+    for side, x in (("Left", -.2), ("Right", .2)):
+        joints[f"{side}Hand"] = hips + [x, -.19, 0]
+        joints[f"{side}HandMiddleEnd"] = hips + [x, -.27, 0]
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root))
+    palms = [e for e in fit["limb_events"] if e["kind"] == "palm" and abs(e["level_m"] - .69) < .01]
+    assert palms and not any(e["accepted"] for e in palms)
+    assert fit["levels"][0]["palm_events"] == 0
+    assert fit["metrics"]["minimal"]["penetration_frames_over_report"] == 0
+
+
+def test_small_steps_merge_and_far_patches_split():
+    from motionbricks.data.bones_terrain_fit import _clusters, _filter_levels
+    kept, merged = _filter_levels([0.0, 0.023, 0.17, 0.2, 0.35], 0.06)
+    assert kept == [0.0, 0.17, 0.35] and merged == [0.023, 0.2]
+    items = [{"kind": "foot", "points": np.array([[0, 0], [.1, .2]])},
+             {"kind": "foot", "points": np.array([[.3, .2], [.4, .4]])},
+             {"kind": "foot", "points": np.array([[2.0, 0], [2.1, .2]])}]
+    groups = sorted(len(group) for group in _clusters(items, .3))
+    assert groups == [1, 2]
+
+
+def test_skin_points_inside_a_box_are_measured():
+    from motionbricks.data.bones_terrain_fit import measure_points
+    box = {"center_xyz_m": [0, .25, 0], "half_extent_xyz_m": [.5, .25, .5],
+           "rotation_local_to_world": np.eye(3).tolist(), "top_m": .5}
+    points = np.zeros((4, 2, 3))
+    points[:, 0] = [0, .55, 0]     # above the top
+    points[:, 1] = [0, .60, 0]
+    points[2, 1] = [0, .40, 0]     # 10 cm inside
+    points[3, 1] = [2, .10, 0]     # outside the footprint
+    result = measure_points(points, [box], 0.0, .02)
+    assert result["max_m"] == pytest.approx(.10) and result["frames_over_report"] == 1
+
+
+def test_fit_reports_skin_authority_when_skin_is_given():
+    soles, joints, root = step_up()
+    skin = np.concatenate([soles["left"], soles["right"]], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin)
+    assert fit["penetration_authority"] == "skin"
+    assert fit["metrics"]["minimal"]["skin"]["frames_over_report"] == 0
+
+
+def test_skin_vertices_uses_official_skinner_interface():
+    torch = pytest.importorskip("torch")
+    import scripts.fit_bones_terrain_support as fit_script
+    from scripts import screen_bones_terrain_geometry as screen
+
+    class FakeSkinner:
+        def skin(self, local, posed, rot_is_global=False):
+            assert rot_is_global is False and local.shape[0] == posed.shape[0]
+            return posed[:, :2] + 0.0
+
+    saved = dict(screen._STATE)
+    screen._STATE.update(torch=torch, skinner=FakeSkinner())
+    try:
+        rotations = np.repeat(np.eye(3)[None, None], 10, axis=0).repeat(3, axis=1)
+        posed = np.arange(10 * 3 * 3, dtype=np.float32).reshape(10, 3, 3)
+        vertices = fit_script.skin_vertices(rotations, posed, 2)
+    finally:
+        screen._STATE.clear()
+        screen._STATE.update(saved)
+    assert vertices.shape == (5, 2, 3)
+    np.testing.assert_allclose(vertices[1], posed[2, :2])

@@ -76,10 +76,11 @@ def _init_worker():
                   standing_hip=standing_hip, np=np, torch=torch)
 
 
-def convert(path, extra_names=()):
+def convert(path, extra_names=(), return_motion=False):
     """Official BVH -> 30 Hz SOMA77 joints and sole regions, in source world coordinates.
 
-    Returns LANDMARKS plus any extra SOMA77 joint names that exist (for review drawings).
+    Returns LANDMARKS plus any extra SOMA77 joint names that exist (for review drawings);
+    with return_motion, also the 30 Hz SOMA77 local rotations and posed joints (for skinning).
     """
     from kimodo.exports.bvh import bvh_to_kimodo_motion
     from kimodo.exports.motion_io import complete_motion_dict
@@ -114,6 +115,8 @@ def convert(path, extra_names=()):
     for name in extra_names:
         if name in _STATE["names"] and name not in joints:
             joints[name] = posed[:, _STATE["names"].index(name)].astype(np.float64)
+    if return_motion:
+        return soles, joints, root.astype(np.float64), float(source_fps), parity, (rotations, posed)
     return soles, joints, root.astype(np.float64), float(source_fps), parity
 
 

@@ -151,8 +151,12 @@ def render_contact_sheet(joints, fit, path, *, title="", count=7, variant="minim
     side.set_xlabel("along travel (m)"), side.set_ylabel("height (m)")
     side.set_title("side elevation; dotted = support levels", fontsize=9)
     metrics = fit["metrics"][variant]
+    if "skin" in metrics:
+        source, peak, over = "skin", metrics["skin"]["max_m"], metrics["skin"]["frames_over_report"]
+    else:
+        source, peak, over = "landmarks", metrics["penetration_max_m"], metrics["penetration_frames_over_report"]
     figure.suptitle(f"{title}\nlevels {[round(v, 3) for v in fit['levels_m']]} m | "
-                    f"penetration max {metrics['penetration_max_m']:.3f} m, frames>2cm {metrics['penetration_frames_over_report']} | "
+                    f"{source} penetration max {peak:.3f} m, frames>2cm {over} | "
                     f"flags {fit['flags']}", fontsize=9)
     figure.tight_layout()
     figure.savefig(path)

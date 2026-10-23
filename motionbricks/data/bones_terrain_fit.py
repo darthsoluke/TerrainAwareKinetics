@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass
 
 import numpy as np
 
-SCHEMA_VERSION = "bones-terrain-fit-v1"
+SCHEMA_VERSION = "bones-terrain-fit-v2"
 
 #: Landmark sphere radii in metres; conservative body volume for free-space checks.
 LANDMARK_RADII = {
@@ -52,6 +52,10 @@ class FitConfig:
     ground_margin_m: float = 1.5
     ground_thickness_m: float = 0.20
     penetration_report_m: float = 0.02
+    min_step_m: float = 0.06
+    cluster_link_m: float = 0.30
+    palm_below_hips_m: float = 0.35
+    kneel_shin_drop_m: float = 0.25
 
     def __post_init__(self):
         for name, value in asdict(self).items():
@@ -181,13 +185,100 @@ def _box_record(box_id, name, role, center_xz, axis_u, rect, top, bottom):
     }
 
 
-def fit_support(soles, joints, root, fps, support_report, *, config=None):
-    """Fit ground and support boxes to one clip; returns a JSON-ready dict."""
+def _filter_levels(levels, min_step):
+    """Drop levels within min_step of the previous kept level (toe-off and foot-pose ghosts)."""
+    kept, merged = [], []
+    for level in sorted(levels):
+        if kept and level - kept[-1] < min_step:
+            merged.append(level)
+            continue
+        kept.append(level)
+    return kept, merged
+
+
+def _limb_evidence(joints, soles, fps, levels, ground, config):
+    """Palm and knee rests that plausibly carry load at a support level.
+
+    Palms count only when well below the hips (not hanging or on a rail at waist
+    height); knees only when the shin is not vertical (kneeling, not standing).
+    """
+    events = []
+    if not levels:
+        return events
+    hips = joints.get("Hips")
+    for side, sole in (("Left", soles["left"]), ("Right", soles["right"])):
+        tracks = []
+        if f"{side}Hand" in joints and f"{side}HandMiddleEnd" in joints:
+            tracks.append(("palm", 0.5 * (joints[f"{side}Hand"] + joints[f"{side}HandMiddleEnd"]),
+                           config.palm_surface_offset_m))
+        if f"{side}Shin" in joints:
+            tracks.append(("knee", joints[f"{side}Shin"], config.knee_surface_offset_m))
+        sole_low = sole[..., 1].min(axis=1)
+        for kind, track, offset in tracks:
+            for first, last, centroid in _stationary_centroids(track, fps, config):
+                surface = centroid[1] - offset
+                level = min(levels, key=lambda value: abs(value - surface))
+                if abs(level - surface) > config.limb_level_tolerance_m:
+                    continue
+                window = slice(first, last)
+                if kind == "palm" and hips is not None:
+                    accepted = np.median(hips[window, 1]) - centroid[1] >= config.palm_below_hips_m
+                elif kind == "knee":
+                    accepted = np.median(sole_low[window]) > centroid[1] - config.kneel_shin_drop_m
+                else:
+                    accepted = True
+                events.append({"kind": kind, "side": side, "level_m": level, "start_frame": first,
+                               "end_frame_exclusive": last, "xz_m": [float(centroid[0]), float(centroid[2])],
+                               "accepted": bool(accepted)})
+    return events
+
+
+def _clusters(items, link):
+    """Union items (each with an [n, 2] point array) whose point sets come within link metres."""
+    parent = list(range(len(items)))
+
+    def find(index):
+        while parent[index] != index:
+            parent[index] = parent[parent[index]]
+            index = parent[index]
+        return index
+
+    for i in range(len(items)):
+        for j in range(i + 1, len(items)):
+            a, b = items[i]["points"], items[j]["points"]
+            if np.min(np.linalg.norm(a[:, None] - b[None], axis=-1)) <= link:
+                parent[find(i)] = find(j)
+    groups = {}
+    for index in range(len(items)):
+        groups.setdefault(find(index), []).append(items[index])
+    return list(groups.values())
+
+
+def _below_probes(flat_points, flat_radii, flat_tolerance, level):
+    below = flat_points[:, 1] - flat_radii < level - flat_tolerance
+    return flat_points[below][:, [0, 2]], flat_radii[below]
+
+
+def _conflicts(points_xz, radius, rect_points, margin=0.0):
+    center, axis_u, half_u, half_v = oriented_rectangle(rect_points)
+    u, v = _local(points_xz, center, axis_u)
+    inside = ((u + radius > -half_u - margin) & (u - radius < half_u + margin) &
+              (v + radius > -half_v - margin) & (v - radius < half_v + margin))
+    return int(inside.sum()), (center, axis_u, half_u, half_v), u, v, inside
+
+
+def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_vertices=None):
+    """Fit ground and support boxes to one clip; returns a JSON-ready dict.
+
+    skin_vertices, when given ([frames, vertices, 3], same frames as soles), is used
+    for the authoritative penetration metric; landmark spheres are reported too.
+    """
     config = config or FitConfig()
     soles = {side: np.asarray(value, dtype=np.float64) for side, value in soles.items()}
     joints = {name: np.asarray(value, dtype=np.float64) for name, value in joints.items()}
     root = np.asarray(root, dtype=np.float64)
-    levels = sorted(float(level) for level in support_report["summary"]["usable_level_heights_m"])
+    raw_levels = sorted(float(level) for level in support_report["summary"]["usable_level_heights_m"])
+    levels, merged_levels = _filter_levels(raw_levels, config.min_step_m)
     patches = [p for p in support_report["patches"] if p["status"] in ("candidate", "weak_support")]
     probes, radii = body_probes(soles, joints)
     sole_count = soles["left"].shape[1] + soles["right"].shape[1]
@@ -195,34 +286,23 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None):
     sole_low = np.minimum(soles["left"][..., 1].min(axis=1), soles["right"][..., 1].min(axis=1))
     ground = levels[0] if levels else float(np.percentile(sole_low, 2))
 
-    # Evidence per level: foot patch polygons, then palms and knees resting at that level.
-    evidence = {level: [] for level in levels}
-    sources = {level: {"foot_patches": 0, "palm_events": 0, "knee_events": 0} for level in levels}
+    def level_of(height):
+        if not levels:
+            return None
+        candidates = [level for level in levels if level <= height + config.level_match_m]
+        level = max(candidates) if candidates else levels[0]
+        return level if height - level < config.min_step_m else None
+
+    # Evidence items: each foot patch polygon, and each accepted palm/knee rest.
+    items = {level: [] for level in levels}
     for patch in patches:
-        level = min(levels, key=lambda value: abs(value - patch["height_m"])) if levels else None
-        if level is not None and abs(level - patch["height_m"]) <= config.level_match_m:
-            evidence[level].extend(np.asarray(patch["polygon_xz_m"]).tolist())
-            sources[level]["foot_patches"] += 1
-    limbs = []
-    for side in ("Left", "Right"):
-        if f"{side}Hand" in joints and f"{side}HandMiddleEnd" in joints:
-            limbs.append(("palm", 0.5 * (joints[f"{side}Hand"] + joints[f"{side}HandMiddleEnd"]),
-                          config.palm_surface_offset_m))
-        if f"{side}Shin" in joints:
-            limbs.append(("knee", joints[f"{side}Shin"], config.knee_surface_offset_m))
-    limb_events = []
-    for kind, track, offset in limbs:
-        for first, last, centroid in _stationary_centroids(track, fps, config):
-            surface = centroid[1] - offset
-            if not levels:
-                continue
-            level = min(levels, key=lambda value: abs(value - surface))
-            if abs(level - surface) <= config.limb_level_tolerance_m:
-                limb_events.append({"kind": kind, "level_m": level, "start_frame": first,
-                                    "end_frame_exclusive": last, "xz_m": [float(centroid[0]), float(centroid[2])]})
-                if level != ground:
-                    evidence[level].append([centroid[0], centroid[2]])
-                    sources[level][f"{kind}_events"] += 1
+        level = level_of(patch["height_m"])
+        if level is not None:
+            items[level].append({"kind": "foot", "points": np.asarray(patch["polygon_xz_m"], dtype=np.float64)})
+    limb_events = _limb_evidence(joints, soles, fps, levels, ground, config)
+    for event in limb_events:
+        if event["accepted"] and event["level_m"] != ground:
+            items[event["level_m"]].append({"kind": event["kind"], "points": np.asarray([event["xz_m"]])})
 
     path_low = probes[..., [0, 2]].reshape(-1, 2).min(axis=0) - config.ground_margin_m
     path_high = probes[..., [0, 2]].reshape(-1, 2).max(axis=0) + config.ground_margin_m
@@ -238,55 +318,108 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None):
     flat_points = probes.reshape(-1, 3)
     flat_radii = np.broadcast_to(radii, probes.shape[:2]).reshape(-1)
     flat_tolerance = np.broadcast_to(tolerance, probes.shape[:2]).reshape(-1)
-    for index, level in enumerate(level for level in levels if level != ground):
-        points = np.asarray(evidence[level], dtype=np.float64)
-        report = {"level_m": level, "height_above_ground_m": level - ground, **sources[level]}
-        if len(points) == 0:
+    bottom = ground - config.ground_thickness_m
+    for level in levels:
+        if level == ground:
+            continue
+        report = {"level_m": level, "height_above_ground_m": level - ground,
+                  "foot_patches": sum(i["kind"] == "foot" for i in items[level]),
+                  "palm_events": sum(i["kind"] == "palm" for i in items[level]),
+                  "knee_events": sum(i["kind"] == "knee" for i in items[level]), "clusters": []}
+        if not items[level]:
             report["status"] = "no_evidence"
             level_reports.append(report)
             continue
-        center, axis_u, half_u, half_v = oriented_rectangle(points)
-        below = flat_points[:, 1] - flat_radii < level - flat_tolerance
-        u, v = _local(flat_points[below][:, [0, 2]], center, axis_u)
-        radius = flat_radii[below]
-        evidence_rect = (-half_u, half_u, -half_v, half_v)
-        inside_evidence = ((u + radius > -half_u) & (u - radius < half_u) &
-                           (v + radius > -half_v) & (v - radius < half_v))
-        margin_limit = {"u0": -half_u - config.evidence_margin_m, "u1": half_u + config.evidence_margin_m,
-                        "v0": -half_v - config.evidence_margin_m, "v1": half_v + config.evidence_margin_m}
-        far_limit = {"u0": -half_u - config.max_growth_m, "u1": half_u + config.max_growth_m,
-                     "v0": -half_v - config.max_growth_m, "v1": half_v + config.max_growth_m}
-        outside = ~inside_evidence
-        rect_min = _grow(evidence_rect, u[outside], v[outside], radius[outside], margin_limit, config.side_clearance_m)
-        rect_max = _grow(rect_min, u[outside], v[outside], radius[outside], far_limit, config.side_clearance_m)
-        bottom = ground - config.ground_thickness_m
-        name = f"support_{index + 1}"
-        minimal.append(_box_record(len(minimal) + 1, name, "support", center, axis_u, rect_min, level, bottom))
-        maximal.append(_box_record(len(maximal) + 1, name, "support", center, axis_u, rect_max, level, bottom))
-        report.update(status="fitted", evidence_points=int(len(points)),
-                      evidence_conflict_probe_frames=int(inside_evidence.sum()),
-                      minimal_size_m=[float(rect_min[1] - rect_min[0]), float(rect_min[3] - rect_min[2])],
-                      maximal_size_m=[float(rect_max[1] - rect_max[0]), float(rect_max[3] - rect_max[2])])
+        below_xz, below_radius = _below_probes(flat_points, flat_radii, flat_tolerance, level)
+        for cluster in _clusters(items[level], config.cluster_link_m):
+            attempts = [("all_evidence", cluster),
+                        ("foot_only", [i for i in cluster if i["kind"] == "foot"])]
+            attempts += [(f"single_item_{k}", [item]) for k, item in enumerate(cluster)]
+            chosen = None
+            for label, subset in attempts:
+                if not subset:
+                    continue
+                points = np.concatenate([i["points"] for i in subset])
+                count, rect, u, v, inside = _conflicts(below_xz, below_radius, points)
+                if count == 0:
+                    chosen = (label, subset, rect, u, v)
+                    break
+            entry = {"items": len(cluster), "kinds": sorted({i["kind"] for i in cluster})}
+            if chosen is None:
+                entry["status"] = "rejected_conflicts_with_body"
+                report["clusters"].append(entry)
+                continue
+            label, subset, (center, axis_u, half_u, half_v), u, v = chosen
+            evidence_rect = (-half_u, half_u, -half_v, half_v)
+            margin_limit = {"u0": -half_u - config.evidence_margin_m, "u1": half_u + config.evidence_margin_m,
+                            "v0": -half_v - config.evidence_margin_m, "v1": half_v + config.evidence_margin_m}
+            far_limit = {"u0": -half_u - config.max_growth_m, "u1": half_u + config.max_growth_m,
+                         "v0": -half_v - config.max_growth_m, "v1": half_v + config.max_growth_m}
+            rect_min = _grow(evidence_rect, u, v, below_radius, margin_limit, config.side_clearance_m)
+            rect_max = _grow(rect_min, u, v, below_radius, far_limit, config.side_clearance_m)
+            name = f"support_{len(minimal)}"
+            minimal.append(_box_record(len(minimal) + 1, name, "support", center, axis_u, rect_min, level, bottom))
+            maximal.append(_box_record(len(maximal) + 1, name, "support", center, axis_u, rect_max, level, bottom))
+            entry.update(status="fitted", evidence_used=label, items_used=len(subset), box=name,
+                         minimal_size_m=[float(rect_min[1] - rect_min[0]), float(rect_min[3] - rect_min[2])],
+                         maximal_size_m=[float(rect_max[1] - rect_max[0]), float(rect_max[3] - rect_max[2])])
+            report["clusters"].append(entry)
+        report["status"] = "fitted" if any(c["status"] == "fitted" for c in report["clusters"]) else "rejected"
         level_reports.append(report)
 
-    metrics = {name: measure(soles, joints, boxes, patches, levels, config)
-               for name, boxes in (("minimal", minimal), ("maximal", maximal))}
+    used = [p for p in patches if level_of(p["height_m"]) is not None]
+    metrics = {}
+    for variant, boxes in (("minimal", minimal), ("maximal", maximal)):
+        metrics[variant] = measure(soles, joints, boxes, used, levels, config)
+        if skin_vertices is not None:
+            metrics[variant]["skin"] = measure_points(np.asarray(skin_vertices, dtype=np.float64), boxes,
+                                                      0.0, config.penetration_report_m)
+    authority = "skin" if skin_vertices is not None else "landmark_spheres"
+
+    def over(metric):
+        return metric["skin"]["frames_over_report"] if "skin" in metric else metric["penetration_frames_over_report"]
+
     flags = []
     if not levels:
         flags.append("no_usable_support")
-    if any(r.get("evidence_conflict_probe_frames", 0) for r in level_reports):
-        flags.append("evidence_conflicts_with_body")
-    if any(m["penetration_frames_over_report"] for m in metrics.values()):
+    if merged_levels:
+        flags.append("merged_small_steps")
+    if any(c["status"] != "fitted" or c.get("evidence_used") != "all_evidence"
+           for r in level_reports for c in r["clusters"]):
+        flags.append("evidence_reduced_for_body_conflict")
+    if any(c["status"] == "rejected_conflicts_with_body" for r in level_reports for c in r["clusters"]):
+        flags.append("support_rejected")
+    if any(over(m) for m in metrics.values()):
         flags.append("penetration_over_report")
     return {
         "schema_version": SCHEMA_VERSION, "ground_m": ground,
-        "levels_m": [level - ground for level in levels], "levels": level_reports,
-        "limb_events": limb_events, "boxes": {"minimal": minimal, "maximal": maximal},
-        "metrics": metrics, "flags": flags, "config": asdict(config),
+        "levels_m": [level - ground for level in levels], "merged_levels_m": [m - ground for m in merged_levels],
+        "levels": level_reports, "limb_events": limb_events, "boxes": {"minimal": minimal, "maximal": maximal},
+        "metrics": metrics, "penetration_authority": authority, "flags": flags, "config": asdict(config),
         "protocol": {"source_changed": False, "coordinates": "source world, Y up, metres",
                      "geometry": "ground slab plus solid boxes from the ground up to each support level",
                      "status": "weak-evidence fit; not measured terrain"},
     }
+
+
+def measure_points(points, boxes, tolerance, report_threshold):
+    """Depth of points below the top of any box whose footprint contains them."""
+    frame_depth = np.full(points.shape[0], -np.inf)
+    for box in boxes:
+        center = np.asarray(box["center_xyz_m"])
+        half = np.asarray(box["half_extent_xyz_m"])
+        rotation = np.asarray(box["rotation_local_to_world"])
+        for start in range(0, points.shape[0], 64):
+            chunk = points[start:start + 64]
+            local = (chunk - center) @ rotation
+            within = (np.abs(local[..., 0]) <= half[0]) & (np.abs(local[..., 2]) <= half[2])
+            depth = np.where(within, box["top_m"] - chunk[..., 1] - tolerance, -np.inf).max(axis=1)
+            frame_depth[start:start + 64] = np.maximum(frame_depth[start:start + 64], depth)
+    frame_depth = np.maximum(frame_depth, 0.0)
+    return {"max_m": float(frame_depth.max(initial=0.0)),
+            "p99_m": float(np.percentile(frame_depth, 99)) if len(frame_depth) else 0.0,
+            "frames_over_report": int((frame_depth > report_threshold).sum()),
+            "frames": int(len(frame_depth))}
 
 
 def measure(soles, joints, boxes, patches, levels, config):

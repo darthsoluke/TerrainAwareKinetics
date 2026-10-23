@@ -94,8 +94,10 @@ function showInfo() {
     ['levels (m)', JSON.stringify(clip.levels_m.map((v) => +v.toFixed(3)))], ['flags', (clip.flags || []).join(', ') || 'none']];
   for (const name of ['minimal', 'maximal']) {
     const k = clip.metrics[name];
-    rows.push([`${name} penetration max`, `${(k.penetration_max_m * 100).toFixed(1)} cm`],
-              [`${name} frames > 2 cm`, k.penetration_frames_over_report],
+    const skin = k.skin;
+    rows.push([`${name} ${skin ? 'skin' : 'landmark'} penetration max`,
+               `${((skin ? skin.max_m : k.penetration_max_m) * 100).toFixed(1)} cm`],
+              [`${name} frames > 2 cm`, skin ? skin.frames_over_report : k.penetration_frames_over_report],
               [`${name} unsupported evidence`, `${k.support_evidence_unsupported} / ${k.support_evidence_points}`]);
   }
   for (const box of clip.boxes.maximal.filter((b) => b.role !== 'ground')) {

@@ -35,8 +35,9 @@ from motionbricks.data.bones_terrain_viz import (  # noqa: E402
 )
 from scripts import screen_bones_terrain_geometry as screen  # noqa: E402
 
-COMPACT = ("filename", "stem", "group", "status", "levels_m", "support_boxes", "flags",
+COMPACT = ("filename", "stem", "group", "status", "levels_m", "support_boxes", "flags", "penetration_authority",
            "minimal_penetration_max_m", "minimal_frames_over", "maximal_penetration_max_m", "maximal_frames_over",
+           "sphere_minimal_penetration_max_m",
            "unsupported_evidence", "minimal_sizes_m", "maximal_sizes_m", "error")
 
 
@@ -46,11 +47,33 @@ def _init():
     matplotlib.use("Agg")
 
 
-def _process(item, render):
-    soles, joints, root, source_fps, _ = screen.convert(item["path"], extra_names=VIEW_JOINTS)
+def skin_vertices(rotations, posed, stride):
+    """Full official SOMA77 skin (every stride-th frame) for the penetration metric."""
+    torch = screen._STATE["torch"]
+    skinner = screen._STATE["skinner"]
+    local = torch.as_tensor(rotations[::stride], dtype=torch.float32)
+    joints = torch.as_tensor(posed[::stride], dtype=torch.float32)
+    chunks = []
+    with torch.inference_mode():
+        for start in range(0, len(local), 48):
+            chunks.append(skinner.skin(local[start:start + 48], joints[start:start + 48],
+                                       rot_is_global=False).cpu().numpy())
+    return np.concatenate(chunks).astype(np.float32)
+
+
+def _process(item, render, skin_stride=2):
+    if skin_stride:
+        soles, joints, root, source_fps, _, (rotations, posed) = screen.convert(
+            item["path"], extra_names=VIEW_JOINTS, return_motion=True)
+        skin = skin_vertices(rotations, posed, skin_stride)
+    else:
+        soles, joints, root, source_fps, _ = screen.convert(item["path"], extra_names=VIEW_JOINTS)
+        skin = None
     _, support = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
                                     dimension_tokens=item.get("dimension_tokens", ()))
-    fit = fit_support(soles, joints, root, screen.FPS, support)
+    fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin)
+    if skin is not None:
+        fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
     fit["meta"] = {key: item[key] for key in ("filename", "stem", "group")}
     fit["meta"].update(source_fps=source_fps, dimension_tokens=item.get("dimension_tokens", []))
     if render:
@@ -64,10 +87,11 @@ def _process(item, render):
     return fit
 
 
-def work_fit(item):
+def work_fit(job):
+    item, skin_stride = job
     started = time.perf_counter()
     try:
-        fit = _process(item, None)
+        fit = _process(item, None, skin_stride)
         result = {"filename": item["filename"], "stem": item["stem"], "group": item["group"], "fit": fit}
     except Exception as error:
         result = {"filename": item["filename"], "stem": item["stem"], "group": item["group"],
@@ -77,12 +101,20 @@ def work_fit(item):
 
 
 def work_render(job):
-    item, render = job
+    item, render, skin_stride = job
     try:
-        _process(item, render)
+        _process(item, render, skin_stride)
         return {"filename": item["filename"], "rendered": True}
     except Exception as error:
         return {"filename": item["filename"], "rendered": False, "error": f"{type(error).__name__}: {error}"}
+
+
+def penetration(fit, variant):
+    """(max depth, frames over 2 cm) from the authoritative metric: skin if present."""
+    metric = fit["metrics"][variant]
+    if "skin" in metric:
+        return metric["skin"]["max_m"], metric["skin"]["frames_over_report"]
+    return metric["penetration_max_m"], metric["penetration_frames_over_report"]
 
 
 def compact_row(result):
@@ -90,16 +122,17 @@ def compact_row(result):
         return {"filename": result["filename"], "stem": result["stem"], "group": result["group"],
                 "status": "failed", "error": result["error"].replace("\t", " ").replace("\n", " ")[:200]}
     fit = result["fit"]
+    pen = {variant: penetration(fit, variant) for variant in ("minimal", "maximal")}
     sizes = {variant: [[round(2 * b["half_extent_xyz_m"][0], 3), round(2 * b["half_extent_xyz_m"][2], 3)]
                        for b in fit["boxes"][variant] if b["role"] != "ground"] for variant in ("minimal", "maximal")}
     return {
         "filename": result["filename"], "stem": result["stem"], "group": result["group"], "status": "ok",
         "levels_m": json.dumps([round(v, 4) for v in fit["levels_m"]]),
         "support_boxes": len(sizes["minimal"]), "flags": ",".join(fit["flags"]),
-        "minimal_penetration_max_m": round(fit["metrics"]["minimal"]["penetration_max_m"], 4),
-        "minimal_frames_over": fit["metrics"]["minimal"]["penetration_frames_over_report"],
-        "maximal_penetration_max_m": round(fit["metrics"]["maximal"]["penetration_max_m"], 4),
-        "maximal_frames_over": fit["metrics"]["maximal"]["penetration_frames_over_report"],
+        "penetration_authority": fit.get("penetration_authority", "landmark_spheres"),
+        "minimal_penetration_max_m": round(pen["minimal"][0], 4), "minimal_frames_over": pen["minimal"][1],
+        "maximal_penetration_max_m": round(pen["maximal"][0], 4), "maximal_frames_over": pen["maximal"][1],
+        "sphere_minimal_penetration_max_m": round(fit["metrics"]["minimal"]["penetration_max_m"], 4),
         "unsupported_evidence": fit["metrics"]["minimal"]["support_evidence_unsupported"],
         "minimal_sizes_m": json.dumps(sizes["minimal"]), "maximal_sizes_m": json.dumps(sizes["maximal"]),
     }
@@ -117,8 +150,8 @@ def group_summary(results):
             boxes = [len([b for b in f["boxes"]["minimal"] if b["role"] != "ground"]) for f in ok]
             entry["support_boxes_distribution"] = {str(k): boxes.count(k) for k in sorted(set(boxes))}
             for variant in ("minimal", "maximal"):
-                over = [f["metrics"][variant]["penetration_frames_over_report"] for f in ok]
-                peak = [f["metrics"][variant]["penetration_max_m"] for f in ok]
+                over = [penetration(f, variant)[1] for f in ok]
+                peak = [penetration(f, variant)[0] for f in ok]
                 entry[variant] = {"clips_with_frames_over_2cm": int(sum(v > 0 for v in over)),
                                   "penetration_max_p95_m": round(float(np.percentile(peak, 95)), 4)}
             entry["unsupported_evidence_points"] = int(sum(f["metrics"]["minimal"]["support_evidence_unsupported"] for f in ok))
@@ -147,9 +180,9 @@ def choose_renders(results, per_stem, worst_per_group):
         if "fit" in result:
             by_group.setdefault(result["group"], []).append(result)
     for items in by_group.values():
-        worst = sorted(items, key=lambda r: -r["fit"]["metrics"]["minimal"]["penetration_max_m"])
+        worst = sorted(items, key=lambda r: -penetration(r["fit"], "minimal")[0])
         for result in worst[:worst_per_group]:
-            if result["fit"]["metrics"]["minimal"]["penetration_frames_over_report"] > 0:
+            if penetration(result["fit"], "minimal")[1] > 0:
                 chosen.setdefault(result["filename"], "worst_penetration")
     return chosen
 
@@ -163,6 +196,8 @@ def main(argv=None):
     parser.add_argument("--viz-per-stem", type=int, default=2)
     parser.add_argument("--worst-per-group", type=int, default=3)
     parser.add_argument("--gif", action="store_true")
+    parser.add_argument("--skin-stride", type=int, default=2,
+                        help="Skin every n-th frame for the penetration metric; 0 disables skinning")
     parser.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) // 2),
                         help="Worker processes; 0 runs in-process")
     args = parser.parse_args(argv)
@@ -195,7 +230,8 @@ def main(argv=None):
         pool = mp.get_context("spawn").Pool(args.workers, initializer=_init)
         mapper = lambda function, jobs, **kw: pool.imap_unordered(function, jobs, **kw)  # noqa: E731
     try:
-        for index, result in enumerate(mapper(work_fit, items, **({} if pool is None else {"chunksize": 4})), 1):
+        for index, result in enumerate(mapper(work_fit, [(item, args.skin_stride) for item in items],
+                                              **({} if pool is None else {"chunksize": 4})), 1):
             results.append(result)
             if "fit" in result:
                 (args.output / "fits" / f"{result['filename']}.json").write_text(
@@ -210,7 +246,8 @@ def main(argv=None):
             item = lookup[filename]
             folder = args.output / "viz" / item["group"]
             folder.mkdir(exist_ok=True)
-            jobs.append((item, {"folder": str(folder), "viewer": str(args.output / "viewer"), "gif": args.gif}))
+            jobs.append((item, {"folder": str(folder), "viewer": str(args.output / "viewer"), "gif": args.gif},
+                         args.skin_stride))
         rendered = list(mapper(work_render, jobs))
     finally:
         if pool is not None:
