@@ -32,8 +32,12 @@ if str(ROOT) not in sys.path:
 
 from motionbricks.data.bones_terrain_survey import (  # noqa: E402
     BUCKETS, SCHEMA_VERSION, describe_metadata, file_sha256, load_timelines,
-    read_metadata_rows, survey,
+    read_metadata_rows, stem_table, survey,
 )
+
+STEM_COLUMNS = ("stem", "buckets", "original_clips", "mirror_clips", "original_seconds",
+                "hit_fraction", "families", "actors", "dimension_tokens",
+                "example_filename", "example_overview")
 
 
 def print_summary(report):
@@ -44,8 +48,9 @@ def print_summary(report):
         summary = report["buckets"].get(name) or report[name]
         print(f"{name:<28}{summary['clips']:>8}{summary['original_clips']:>8}{summary['mirror_clips']:>8}"
               f"{summary['original_duration']['seconds']:>12.1f}"
-              f"{summary.get('original_matched_event_seconds', 0.0):>10.1f}"
-              f"{summary['families']:>10}{summary['actors']:>8}")
+              + (f"{summary['original_matched_event_seconds']:>10.1f}"
+                 if "original_matched_event_seconds" in summary else f"{'-':>10}")
+              + f"{summary['families']:>10}{summary['actors']:>8}")
 
 
 def main(argv=None):
@@ -89,6 +94,13 @@ def main(argv=None):
         for row in rows:
             if row["buckets"]:
                 stream.write(json.dumps(row, ensure_ascii=False, default=str) + "\n")
+    with (args.output / "stems.tsv").open("w", encoding="utf-8") as stream:
+        stream.write("\t".join(STEM_COLUMNS) + "\n")
+        for item in stem_table(rows):
+            values = [json.dumps(item[key], ensure_ascii=False) if isinstance(item[key], (dict, list))
+                      else str(item[key]).replace("\t", " ").replace("\n", " ") for key in STEM_COLUMNS]
+            stream.write("\t".join(values) + "\n")
+    print(f"stems: {report['stems']}")
     (args.output / "survey_report.json").write_text(
         json.dumps(report, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
     print(f"{SCHEMA_VERSION}: wrote {args.output}")

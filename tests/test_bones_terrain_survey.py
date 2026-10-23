@@ -146,5 +146,39 @@ def test_cli_writes_report_and_refuses_existing_output(tmp_path, capsys):
     assert {row["filename"] for row in candidates} == {
         "stairs_climbing_up_002__A300", "stairs_climbing_up_002__A300_M", "crawl_forward_001__A010"}
     assert "support_height_change" in capsys.readouterr().out
+    stems = (output / "stems.tsv").read_text().splitlines()
+    assert stems[0].split("\t")[:3] == ["stem", "buckets", "original_clips"]
+    assert len(stems) == 1 + 4  # stairs_climbing_up, crawl_forward, walk_forward, duckling_dance
     with pytest.raises(FileExistsError):
         main(["--timelines", str(timelines), "--output", str(output)])
+
+
+def test_action_stem_drops_take_tokens_and_keeps_dimensions():
+    from motionbricks.data.bones_terrain_survey import action_stem, dimension_tokens
+    assert action_stem("crouch_ff_loop_225_101__A128_M") == "crouch"
+    assert action_stem("mohak_backward_start_001__A032") == "mohak_backward"
+    assert action_stem("lift_crate_walk_ff_stop_315_002__A144_M") == "lift_crate_walk"
+    assert action_stem("come_up_50cm_box_R_003__A213") == "come_up_50cm_box"
+    assert action_stem("jump_over_obstacle_0_75m_R_003__A415") == "jump_over_obstacle_0.75m"
+    assert dimension_tokens("jump_over_obstacle_0_75m_R_003__A415") == ["0.75m"]
+    assert dimension_tokens("come_up_50cm_box_R_003__A213_M") == ["50cm"]
+    assert dimension_tokens("walk_ff_loop_180_001__A006") == []
+
+
+def test_stem_table_reports_hit_fraction_per_family():
+    from motionbricks.data.bones_terrain_survey import stem_table
+    timelines = {
+        "come_up_50cm_box_R_001__A1": timeline("come_up_50cm_box_R_001__A1", "Gets onto a raised platform."),
+        "come_up_50cm_box_R_002__A2": timeline("come_up_50cm_box_R_002__A2", "Stands idle."),
+        "come_up_50cm_box_R_002__A2_M": timeline("come_up_50cm_box_R_002__A2_M", "Stands idle."),
+        "walk_ff_loop_001__A3": timeline("walk_ff_loop_001__A3", "Walks forward."),
+    }
+    rows, report = survey(timelines)
+    table = {item["stem"]: item for item in stem_table(rows)}
+    box = table["come_up_50cm_box"]
+    assert (box["original_clips"], box["mirror_clips"]) == (2, 1)
+    assert box["hit_fraction"] == {"support_height_change": 0.5}
+    assert box["dimension_tokens"] == ["50cm"]
+    assert table["walk"]["buckets"] == "none"
+    assert report["stems"] == {"unique": 2, "with_any_hit": 1, "with_dimension_tokens": 1}
+    assert list(table) == ["come_up_50cm_box", "walk"]

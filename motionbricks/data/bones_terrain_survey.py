@@ -28,7 +28,7 @@ import re
 from collections import Counter, defaultdict
 from pathlib import Path
 
-SCHEMA_VERSION = "bones-terrain-survey-v1"
+SCHEMA_VERSION = "bones-terrain-survey-v2"
 SOURCE_FPS = 120.0
 
 #: Columns of the official BONES-SEED metadata table that this survey reads.
@@ -126,6 +126,34 @@ def recording_group(filename):
     name = re.sub(r"_M$", "", Path(filename).stem)
     name = re.sub(r"__A\d+$", "", name, flags=re.IGNORECASE)
     return re.sub(r"_\d+$", "", name).lower()
+
+
+#: BONES file names follow <action>_<direction/phase/angle tokens>_<take>__A<actor>[_M].
+#: These tokens describe the take, not the action, and are dropped from the stem.
+STEM_DROP_TOKENS = frozenset({"ff", "r", "l", "start", "stop", "loop", "cw", "ccw", "neutral"})
+STEM_ANGLES = frozenset({"0", "45", "90", "135", "180", "225", "270", "315", "360"})
+DIMENSION = re.compile(r"^\d+(?:\.\d+)?(?:cm|mm|m)$")
+
+
+def action_stem(filename):
+    """Action family name with take, actor, mirror, direction and angle removed.
+
+    Examples: crouch_ff_loop_225_101__A128_M -> crouch;
+    jump_over_obstacle_0_75m_R_003__A415 -> jump_over_obstacle_0.75m.
+    Decimal dimensions written with "_" are joined first so "0_75m" is kept.
+    """
+    name = re.sub(r"__A\d+(?:_M)?$", "", Path(filename).stem, flags=re.IGNORECASE).lower()
+    name = re.sub(r"(?<![a-z0-9])(\d+)_(\d+)(cm|mm|m)(?![a-z0-9])", r"\1.\2\3", name)
+    tokens = [token for token in re.split(r"[_\-]+", name) if token]
+    while tokens and tokens[-1].isdigit() and tokens[-1] not in STEM_ANGLES:
+        tokens.pop()  # take number
+    kept = [token for token in tokens if token not in STEM_DROP_TOKENS and token not in STEM_ANGLES]
+    return "_".join(kept) or name
+
+
+def dimension_tokens(filename):
+    """Explicit sizes in the file name, e.g. 50cm or 0.75m: candidate known geometry."""
+    return [token for token in action_stem(filename).split("_") if DIMENSION.match(token)]
 
 
 def actor_of(filename):
@@ -322,6 +350,8 @@ def classify_clip(filename, annotation=None, metadata=None):
         "actor": (str(metadata.get("take_actor")) if metadata and metadata.get("take_actor")
                   else actor_of(filename)),
         "recording_group": recording_group(filename),
+        "stem": action_stem(filename),
+        "dimension_tokens": dimension_tokens(filename),
         "duration_seconds": duration,
         "duration_source": duration_source,
         "annotation_source": annotation_source,
@@ -390,6 +420,39 @@ def summarize_bucket(rows, bucket=None):
     return summary
 
 
+def stem_table(rows):
+    """One row per action stem over all clips, including those without any hit.
+
+    hit_fraction shows whether a keyword hit is systematic for the family or
+    comes from a few descriptions; mixed stems deserve review either way.
+    """
+    groups = defaultdict(list)
+    for row in rows:
+        groups[row["stem"]].append(row)
+    table = []
+    for stem, members in groups.items():
+        originals = [row for row in members if not row["mirror"]] or members
+        hits = Counter(bucket for row in originals for bucket in row["buckets"])
+        example = sorted(originals, key=lambda row: row["filename"])[0]
+        table.append({
+            "stem": stem,
+            "buckets": "+".join(bucket for bucket in BUCKETS if hits[bucket]) or "none",
+            "original_clips": sum(1 for row in members if not row["mirror"]),
+            "mirror_clips": sum(1 for row in members if row["mirror"]),
+            "original_seconds": round(sum(row["duration_seconds"] or 0.0 for row in members
+                                          if not row["mirror"]), 3),
+            "hit_fraction": {bucket: round(hits[bucket] / len(originals), 3)
+                             for bucket in BUCKETS if hits[bucket]},
+            "families": len({row["family"] for row in members}),
+            "actors": len({row["actor"] for row in members if row["actor"]}),
+            "dimension_tokens": example["dimension_tokens"],
+            "example_filename": example["filename"],
+            "example_overview": (example["overview"] or "")[:200],
+        })
+    table.sort(key=lambda item: (item["buckets"] == "none", item["buckets"], -item["original_clips"], item["stem"]))
+    return table
+
+
 def survey(timeline_rows, metadata_rows=None, bvh_stems=None):
     """Classify every clip named by the timelines or metadata; return (rows, report)."""
     metadata_index = index_metadata(metadata_rows) if metadata_rows is not None else {}
@@ -415,6 +478,11 @@ def survey(timeline_rows, metadata_rows=None, bvh_stems=None):
                     for bucket in BUCKETS},
         "bucket_combinations": dict(overlaps.most_common()),
         "flat_remainder": summarize_bucket([row for row in rows if not row["buckets"]]),
+        "stems": {
+            "unique": len({row["stem"] for row in rows}),
+            "with_any_hit": len({row["stem"] for row in candidates}),
+            "with_dimension_tokens": len({row["stem"] for row in rows if row["dimension_tokens"]}),
+        },
         "rules": {"bucket_terms": BUCKET_TERMS, "context_terms": CONTEXT_TERMS,
                   "low_body_positions": LOW_BODY_POSITIONS,
                   "metadata_rules": {"support_height_change": "content_vertical_move == 1",
@@ -426,6 +494,7 @@ def survey(timeline_rows, metadata_rows=None, bvh_stems=None):
             "duration": "original (non-mirror) clips only; metadata frames at 120 fps, else last timeline event end",
             "event_seconds": "summed durations of timeline events whose own description matched the bucket",
             "flat_remainder": "no keyword or metadata hit; not evidence of flat support",
+            "stem": "file name without take, actor, mirror, direction, phase and angle tokens; see stems.tsv",
         },
     }
     if bvh_stems is not None:
