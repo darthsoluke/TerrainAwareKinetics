@@ -12,6 +12,7 @@
 - [BONES-SEED Training Execution](bones_seed_training_execution_20261004.md)
 - [BONES-SEED 地形拟合：阶段计划与第一步](bones_terrain_fitting_plan_20261022.md)
 - [BONES-SEED 地形候选调查：PRO6000 执行结果](bones_terrain_survey_pro6000_20261023.md)
+- [BONES-SEED survey v2：词干清单与原始BVH迁移](bones_terrain_survey_v2_pro6000_20261023.md)
 - [Training Asset Inventory: taku-g3](dataset_inventory_takug3.md)
 - [LAFAN Resolved -> SOMA -> Native MotionBricks](lafan_mb_training_20261006.md)
 - [Long-Route Mixed Continuation](long_route_mixed_training_20261010.md)

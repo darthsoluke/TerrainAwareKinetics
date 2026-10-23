@@ -1,0 +1,9 @@
+stems: {'unique': 2863, 'with_any_hit': 812, 'with_dimension_tokens': 17}
+bones-terrain-survey-v2: wrote runs/bones_terrain_survey_v2_timeline
+clips: {'total': 142220, 'timeline_only': 142220, 'metadata_only': 0, 'both': 0}
+bucket                         clips    orig  mirror      orig_s   event_s  families  actors
+support_height_change           5430    2715    2715     20664.8   14237.1       310     346
+hand_or_obstacle_support        2730    1365    1365     10561.8    4600.8       135     348
+low_posture                    12509    6256    6253     50095.7   37445.1       586     380
+any_candidate                  19935    9969    9966     77145.0         -       927     496
+flat_remainder                122285   61163   61122    435575.1         -      3411     518

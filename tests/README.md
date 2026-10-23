@@ -6,6 +6,7 @@
 | --- | --- |
 | `python tools/check_repository.py` | Python标准库；检查公开仓库结构与文档 |
 | `pytest tests/test_bones_terrain_survey.py -q` | pytest、pandas；完整动作依赖不可用时跳过一项家族兼容性检查 |
+| `pytest tests/test_bones_transfer.py -q` | pytest和标准库；用临时文件检查只读源、镜像排除、校验与空间门槛 |
 | `pytest tests/test_pfnn_frame_training.py -q` | PyTorch、NumPy、pytest；用CPU替代训练边界的runner检查 |
 | `pytest tests/test_pfnn_frame_closed_loop.py -q` | 人体表示/骨架依赖；P2目标和时间梯度检查 |
 | `pytest tests/test_pfnn_ablation_review.py -q` | PyTorch及模型导入依赖；评分mask、误差与汇总检查 |

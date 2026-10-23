@@ -1,0 +1,39 @@
+{
+  "schema": "bones-terrain-survey-publication-v1",
+  "source_commit": "d313b65c4f42a939b9d354ce7e9a2ac93780babb",
+  "execution_host": "PRO6000",
+  "publication_date": "2026-10-23",
+  "transformation": "Private machine paths replaced by role-based placeholders; survey values and all stem rows unchanged.",
+  "files": [
+    {
+      "file": "survey_report.json",
+      "original_sha256": "e3f692c7c78279c5ccd245ee536f9154023ca8001ae2aff11308e197a160e8ca",
+      "published_sha256": "3a338b3812076fc1017b9d878707504c6636b5e6115b7cb7ac8b6c7ac4e4f08e",
+      "machine_path_substitutions": true
+    },
+    {
+      "file": "stems.tsv",
+      "original_sha256": "952be8ebe199ffe9ce9362eb5aaf8a9a41ddbbde5a63f3e139b47bb77c384e4e",
+      "published_sha256": "952be8ebe199ffe9ce9362eb5aaf8a9a41ddbbde5a63f3e139b47bb77c384e4e",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "stdout.txt",
+      "original_sha256": "a81950b92ba39454dc14864e6c1517f34fb5bce0d536d405d4b2119ef3d3249b",
+      "published_sha256": "a81950b92ba39454dc14864e6c1517f34fb5bce0d536d405d4b2119ef3d3249b",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "tests.txt",
+      "original_sha256": "b65c270016fb35f5afcb1373ebfc266328b704fc385d6a9d7b1d97fe9ee71544",
+      "published_sha256": "b65c270016fb35f5afcb1373ebfc266328b704fc385d6a9d7b1d97fe9ee71544",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "execution_receipt.json",
+      "original_sha256": "713a1f0fd4a0d83bb7aae38f35da9d9697866dfbcae81b4d437745ab0504da86",
+      "published_sha256": "3153fc828b90b97e964a19b9422585cad072f2b7f01ed4ab24b02f06b916b258",
+      "machine_path_substitutions": true
+    }
+  ]
+}

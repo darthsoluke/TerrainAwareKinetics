@@ -8,6 +8,7 @@
 | 最新统一源支撑评估 | [review_pfnn_ablation_fixed_masks.py](review_pfnn_ablation_fixed_masks.py) | 需要相应checkpoint与数据 |
 | PFNN全量索引审计 | [audit_pfnn_full_coverage.py](audit_pfnn_full_coverage.py) | 需要既有数据/cache |
 | BONES地形拟合候选摸底 | [survey_bones_terrain_candidates.py](survey_bones_terrain_candidates.py) | 只读标注；[PRO6000真实数据结果](../docs/records/bones_terrain_survey_pro6000_20261023.md)已完成 |
+| BONES原始BVH迁移 | [transfer_bones_originals.py](transfer_bones_originals.py) | 逐文件清单、按日期打包、私有Drive与目标全量哈希校验；[执行记录](../docs/records/bones_terrain_survey_v2_pro6000_20261023.md) |
 | P1训练 | [train_pfnn_frame_actor.py](train_pfnn_frame_actor.py) | 旧P1已结束，不应重复执行 |
 | A/B/C小试 | [train_pfnn_frame_ablation.py](train_pfnn_frame_ablation.py) | v3三臂已完成 |
 | 逐帧模型评估 | [evaluate_pfnn_frame_actor.py](evaluate_pfnn_frame_actor.py) | 已用于P1零训练对照 |

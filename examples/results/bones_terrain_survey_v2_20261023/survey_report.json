@@ -1,0 +1,415 @@
+{
+  "schema_version": "bones-terrain-survey-v2",
+  "clips": {
+    "total": 142220,
+    "timeline_only": 142220,
+    "metadata_only": 0,
+    "both": 0
+  },
+  "all_clips": {
+    "clips": 142220,
+    "original_clips": 71132,
+    "mirror_clips": 71088,
+    "original_duration": {
+      "seconds": 512720.141,
+      "rows_without_duration": 0
+    },
+    "families": 3700,
+    "actors": 522,
+    "annotation_source": {
+      "propagated": 119370,
+      "human": 22850
+    },
+    "with_bvh": 0
+  },
+  "any_candidate": {
+    "clips": 19935,
+    "original_clips": 9969,
+    "mirror_clips": 9966,
+    "original_duration": {
+      "seconds": 77145.009,
+      "rows_without_duration": 0
+    },
+    "families": 927,
+    "actors": 496,
+    "annotation_source": {
+      "human": 3554,
+      "propagated": 16381
+    },
+    "with_bvh": 0
+  },
+  "buckets": {
+    "support_height_change": {
+      "clips": 5430,
+      "original_clips": 2715,
+      "mirror_clips": 2715,
+      "original_duration": {
+        "seconds": 20664.832,
+        "rows_without_duration": 0
+      },
+      "families": 310,
+      "actors": 346,
+      "annotation_source": {
+        "human": 1146,
+        "propagated": 4284
+      },
+      "with_bvh": 0,
+      "original_matched_event_seconds": 14237.073,
+      "evidence_only_from_metadata": 0,
+      "top_terms": {
+        "overview:crate": 2216,
+        "events:crate": 2216,
+        "filename:crate": 2206,
+        "events:platform": 1570,
+        "overview:platform": 1544,
+        "events:steps up": 1226,
+        "overview:obstacle": 756,
+        "events:obstacle": 754,
+        "filename:obstacle": 704,
+        "events:elevated": 210,
+        "events:steps down": 158,
+        "overview:elevated": 134,
+        "events:uneven": 114,
+        "overview:uneven": 114,
+        "overview:steps down": 112,
+        "events:steps onto": 102,
+        "events:stairs": 98,
+        "overview:stairs": 96,
+        "overview:onto a box": 86,
+        "overview:jumps down": 86,
+        "filename:jump off": 84,
+        "filename:stairs": 84,
+        "events:step onto": 70,
+        "overview:steps onto": 66,
+        "events:jumps down": 60
+      },
+      "by_category": {},
+      "by_body_position": {}
+    },
+    "hand_or_obstacle_support": {
+      "clips": 2730,
+      "original_clips": 1365,
+      "mirror_clips": 1365,
+      "original_duration": {
+        "seconds": 10561.8,
+        "rows_without_duration": 0
+      },
+      "families": 135,
+      "actors": 348,
+      "annotation_source": {
+        "propagated": 2338,
+        "human": 392
+      },
+      "with_bvh": 0,
+      "original_matched_event_seconds": 4600.759,
+      "evidence_only_from_metadata": 0,
+      "top_terms": {
+        "events:hands on the": 876,
+        "events:climbs": 854,
+        "overview:hands on the": 576,
+        "events:hand on the": 484,
+        "overview:hand on the": 302,
+        "overview:climbing": 174,
+        "filename:climbing": 156,
+        "overview:climbs": 146,
+        "events:climbing": 142,
+        "filename:ladder": 136,
+        "overview:ladder": 136,
+        "events:ladder": 136,
+        "events:climb": 48,
+        "overview:climb": 22,
+        "filename:vault": 4,
+        "events:hurdle": 2,
+        "overview:vault": 2,
+        "overview:vaults": 2,
+        "events:vaults": 2,
+        "overview:vaulting": 2,
+        "events:vaulting": 2
+      },
+      "by_category": {},
+      "by_body_position": {}
+    },
+    "low_posture": {
+      "clips": 12509,
+      "original_clips": 6256,
+      "mirror_clips": 6253,
+      "original_duration": {
+        "seconds": 50095.695,
+        "rows_without_duration": 0
+      },
+      "families": 586,
+      "actors": 380,
+      "annotation_source": {
+        "propagated": 10287,
+        "human": 2222
+      },
+      "with_bvh": 0,
+      "original_matched_event_seconds": 37445.123,
+      "evidence_only_from_metadata": 0,
+      "top_terms": {
+        "events:crouched": 2998,
+        "filename:crouch": 2940,
+        "overview:crouched": 2318,
+        "events:kneeling": 1889,
+        "filename:crawl": 1874,
+        "events:crawling": 1757,
+        "overview:crawling": 1367,
+        "events:hunched": 1306,
+        "filename:kneeling": 1283,
+        "events:lying": 1260,
+        "events:crouching": 1202,
+        "overview:kneeling": 970,
+        "overview:lying": 954,
+        "overview:all fours": 927,
+        "events:all fours": 865,
+        "overview:crouching": 828,
+        "events:crawls": 596,
+        "events:crawl": 593,
+        "overview:crawls": 584,
+        "events:kneels": 537,
+        "overview:kneels": 535,
+        "overview:crawl": 426,
+        "filename:all fours": 382,
+        "events:crouch": 374,
+        "events:lying down": 368
+      },
+      "by_category": {},
+      "by_body_position": {}
+    }
+  },
+  "bucket_combinations": {
+    "low_posture": 12115,
+    "support_height_change": 4966,
+    "hand_or_obstacle_support": 2124,
+    "support_height_change + hand_or_obstacle_support": 336,
+    "hand_or_obstacle_support + low_posture": 266,
+    "support_height_change + low_posture": 124,
+    "support_height_change + hand_or_obstacle_support + low_posture": 4
+  },
+  "flat_remainder": {
+    "clips": 122285,
+    "original_clips": 61163,
+    "mirror_clips": 61122,
+    "original_duration": {
+      "seconds": 435575.132,
+      "rows_without_duration": 0
+    },
+    "families": 3411,
+    "actors": 518,
+    "annotation_source": {
+      "propagated": 102989,
+      "human": 19296
+    },
+    "with_bvh": 0
+  },
+  "stems": {
+    "unique": 2863,
+    "with_any_hit": 812,
+    "with_dimension_tokens": 17
+  },
+  "rules": {
+    "bucket_terms": {
+      "support_height_change": [
+        "stair",
+        "stairs",
+        "staircase",
+        "upstairs",
+        "downstairs",
+        "step up",
+        "steps up",
+        "step down",
+        "steps down",
+        "step onto",
+        "steps onto",
+        "step off",
+        "steps off",
+        "ramp",
+        "slope",
+        "sloped",
+        "incline",
+        "inclined",
+        "hill",
+        "uphill",
+        "downhill",
+        "platform",
+        "ledge",
+        "curb",
+        "kerb",
+        "onto a box",
+        "onto the box",
+        "onto box",
+        "off the box",
+        "crate",
+        "jump onto",
+        "jumps onto",
+        "jump off",
+        "jumps off",
+        "jump down",
+        "jumps down",
+        "ascend",
+        "ascends",
+        "ascending",
+        "descend",
+        "descends",
+        "descending",
+        "elevated",
+        "uneven",
+        "obstacle",
+        "obstacles"
+      ],
+      "hand_or_obstacle_support": [
+        "vault",
+        "vaults",
+        "vaulting",
+        "climb",
+        "climbs",
+        "climbing",
+        "mantle",
+        "mantles",
+        "mantling",
+        "ladder",
+        "scramble",
+        "scrambles",
+        "hurdle",
+        "parkour",
+        "hands on the",
+        "hand on the",
+        "pull up onto",
+        "pulls up onto",
+        "pull himself",
+        "pull herself",
+        "push off the"
+      ],
+      "low_posture": [
+        "crouch",
+        "crouches",
+        "crouched",
+        "crouching",
+        "crawl",
+        "crawls",
+        "crawling",
+        "kneel",
+        "kneels",
+        "kneeling",
+        "on knees",
+        "on one knee",
+        "on their knees",
+        "on his knees",
+        "on her knees",
+        "prone",
+        "squat",
+        "squats",
+        "squatting",
+        "duck",
+        "ducks",
+        "ducking",
+        "sneak",
+        "sneaks",
+        "sneaking",
+        "stealth",
+        "all fours",
+        "hands and knees",
+        "army crawl",
+        "commando",
+        "belly",
+        "lying",
+        "lie down",
+        "lies down",
+        "lying down",
+        "low stance",
+        "hunched",
+        "bent over",
+        "underneath"
+      ]
+    },
+    "context_terms": {
+      "seating": [
+        "sit",
+        "sits",
+        "sitting",
+        "seated",
+        "chair",
+        "bench",
+        "sofa",
+        "couch",
+        "bed"
+      ],
+      "dance_or_sport": [
+        "dance",
+        "dancing",
+        "fight",
+        "fighting",
+        "punch",
+        "kick",
+        "martial",
+        "acrobat",
+        "somersault",
+        "handstand",
+        "cartwheel"
+      ],
+      "prop_handling": [
+        "carry",
+        "carries",
+        "carrying",
+        "hold",
+        "holds",
+        "holding",
+        "pick up",
+        "picks up",
+        "lift",
+        "lifts",
+        "push",
+        "pushes",
+        "pull",
+        "pulls",
+        "rifle",
+        "pistol",
+        "gun",
+        "weapon"
+      ],
+      "fall": [
+        "fall",
+        "falls",
+        "falling",
+        "trip",
+        "trips",
+        "stumble",
+        "stumbles"
+      ]
+    },
+    "low_body_positions": [
+      "crouch",
+      "crawl",
+      "kneel",
+      "prone",
+      "lying",
+      "squat",
+      "on floor",
+      "ground"
+    ],
+    "metadata_rules": {
+      "support_height_change": "content_vertical_move == 1",
+      "low_posture": "content_body_position contains a low_body_positions term"
+    }
+  },
+  "protocol": {
+    "motion_read": false,
+    "source_changed": false,
+    "status": "candidate selection only; geometric screening required before terrain fitting",
+    "family": "recording_group plus annotation-propagation union, as in data preparation",
+    "duration": "original (non-mirror) clips only; metadata frames at 120 fps, else last timeline event end",
+    "event_seconds": "summed durations of timeline events whose own description matched the bucket",
+    "flat_remainder": "no keyword or metadata hit; not evidence of flat support",
+    "stem": "file name without take, actor, mirror, direction, phase and angle tokens; see stems.tsv"
+  },
+  "inputs": {
+    "timelines": {
+      "path": "${BONES_INPUTS}/timelines.jsonl",
+      "sha256": "379d6a5b86cea06b7201d485d19ee53512cc58449352b3cf113a95d1d27603d8",
+      "entries": 142220
+    },
+    "metadata": null,
+    "bvh_root": null,
+    "survey_module_sha256": "0d393299082a3d413af012659aead6d8684858912733a661fed9b1e2b76507b1"
+  }
+}

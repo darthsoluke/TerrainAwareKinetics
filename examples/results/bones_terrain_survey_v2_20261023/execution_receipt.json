@@ -1,0 +1,28 @@
+{
+  "time": "2026-10-23T11:07:02.053231+08:00",
+  "execution_host": "PRO6000",
+  "source_commit": "d313b65c4f42a939b9d354ce7e9a2ac93780babb",
+  "python": "${PFNN_PROJECT}/env/bin/python",
+  "test_result": "9 passed, 1 skipped in 2.04s",
+  "timeline_sha256": "379d6a5b86cea06b7201d485d19ee53512cc58449352b3cf113a95d1d27603d8",
+  "transfer_scope": "A_all_originals",
+  "transfer_status": "approved_not_started",
+  "destination": "${BONES_BVH_ROOT}",
+  "minimum_remaining_bytes": 214748364800,
+  "space_before": [
+    {
+      "path": "${ROOT_STORAGE}",
+      "total_bytes": 1081101176832,
+      "used_bytes": 431824302080,
+      "free_bytes": 594284519424,
+      "free_gib": 553.471
+    },
+    {
+      "path": "${DATA_STORAGE}",
+      "total_bytes": 6525677625344,
+      "used_bytes": 5957138202624,
+      "free_bytes": 239587082240,
+      "free_gib": 223.133
+    }
+  ]
+}

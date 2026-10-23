@@ -21,6 +21,8 @@
 
 最新数据工作见 [BONES 调查报告](docs/records/bones_terrain_survey_pro6000_20261023.md)；[JSON、90 条抽样与运行记录](examples/results/bones_terrain_survey_20261023/README.md) 可直接读取。
 
+随后完成的 [survey v2](docs/records/bones_terrain_survey_v2_pro6000_20261023.md) 汇总了 [2,863 个动作词干](examples/results/bones_terrain_survey_v2_20261023/stems.tsv)，包含812个有关键词命中的词干和17个带尺寸词的词干。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |
