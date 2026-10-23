@@ -1,0 +1,71 @@
+{
+  "version": "bones-terrain-screen-v1",
+  "status": "selection for geometric screening; groups come from the v2 stem review, not from fitted geometry",
+  "originals_only": true,
+  "sample_seed": "bones-terrain-screen-v1",
+  "groups": {
+    "known_dimension_support": {
+      "purpose": "support height change with a size stated in the file name; external check for fitted levels",
+      "stems": ["come_up_50cm_box", "come_down_50cm_box", "lift_crate_come_up_50cm_box",
+                "lift_crate_come_down_50cm_box", "jump_on_50cm", "jump_off_50cm", "jump_off_front_50cm",
+                "jump_on_1m", "jump_off_1m", "jump_on_box_230cm"]
+    },
+    "box_support": {
+      "purpose": "support height change onto/off a box or platform without a stated size",
+      "stems": ["box_jump", "box_jump_down", "jump_form_box_to_safety_roll", "jump_to_shoulder_roll"]
+    },
+    "stairs": {
+      "purpose": "multi-level foot support",
+      "stems": ["stairs_climbing_up", "stairs_climbing_down", "stairs_climbing_jog_up",
+                "stairs_climbing_jog_down", "stairs_slip", "stair_slide_down"]
+    },
+    "obstacle_clearance": {
+      "purpose": "obstacle crossing; stated sizes check lowest-body clearance, hands may touch the obstacle",
+      "stems": ["jump_over_obstacle_0.5m", "jump_over_obstacle_0.75m", "jump_over_obstacle_1m",
+                "jump_over_obstacle_1.5m", "jump_over_obstacle_2m", "jump_over_obstacle_no_hand_0.75m",
+                "vault_over", "monkey_jump", "avoid_obstacle_jump_run"]
+    },
+    "ladder": {
+      "purpose": "screen only; ladder geometry is outside the first fitting version",
+      "stems": ["ladder_climbing_up", "ladder_climbing_down", "ladder_climbing_idle", "ladder_climbing_jumpdown",
+                "ladder_climbing_stepdown", "ladder_jump_on", "ladder_slide_down", "ladder_slip",
+                "ladder_climbing_down_over", "ladder_climbing_down_through"]
+    },
+    "crouch": {
+      "purpose": "crouched locomotion and holds; ceiling candidates",
+      "stems": ["crouch", "turn_crouch", "crouch_idle", "crouch_idle_right", "crouch_idle_right_to_crouch_idle",
+                "crouch_idle_to_crouch_idle_right", "idle_crouch", "idle_crouch_right",
+                "idle_crouch_right_to_idle_crouch", "idle_crouch_to_idle_crouch_right",
+                "change_idle_crouch_right_to_idle_crouch", "crouch_walk_forward_and_back_turn_to_idle",
+                "item_pick_up_crouch_walk", "item_pick_up_crouch_idle", "patches_crouch", "yawn_walk_crouch_idle"]
+    },
+    "quadruped": {
+      "purpose": "hands-and-knees locomotion and holds; ceiling candidates with hand and knee support",
+      "stems": ["mohak", "mohak_forward", "mohak_backward", "mohak_idle", "mohak_turn", "mohak_off",
+                "on_all_fours_forward", "on_all_fours_backward", "on_all_fours_idle", "on_all_fours_turn",
+                "idle_to_on_all_fours_idle", "spider_crawl"]
+    },
+    "prone": {
+      "purpose": "prone crawling and holds; lowest ceiling candidates",
+      "stems": ["crawl", "turn_crawl", "idle_crawl", "idle_crawl_right", "idle_crawl_right_to_idle_crawl",
+                "idle_crawl_to_idle_crawl_right", "change_idle_crawl_to_idle_crawl_right"]
+    },
+    "kneel": {
+      "purpose": "kneeling holds and transitions",
+      "stems": ["kneeling"]
+    },
+    "wall_contact": {
+      "purpose": "body or hand against a wall; side-geometry candidates with contact evidence",
+      "stems": ["wall_leaning_idle", "wall_leaning_idle_to_idle", "idle_to_wall_leaning_idle",
+                "drinking_wall_leaning_mug", "drinking_wall_leaning_mug_090",
+                "h_b_w_crouch", "h_b_w_crouch_to_stand", "h_b_w_stand_to_crouch"]
+    },
+    "flat_control": {
+      "purpose": "ordinary locomotion expected on one level; checks the screen's false multi-level rate",
+      "max_clips_per_stem": 60,
+      "stems": ["walk", "walk_forward", "walk_arc", "walk_backward", "walk_sideway_045", "walk_sideway_090",
+                "jog", "jog_forward", "jog_arc", "jog_backward", "jog_sideway", "jog_sideway_045",
+                "turn_jog", "idle", "idle_turn"]
+    }
+  }
+}

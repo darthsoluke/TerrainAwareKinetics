@@ -106,6 +106,52 @@ python scripts/survey_bones_terrain_candidates.py \
 4. **第二步需要动作文件在 PRO6000 上。** 顶棚和侧面几何适用于所有移动片段，几何筛查也应覆盖未命中关键词的片段，
    因此建议迁移全部原始（非镜像）SOMA Uniform BVH，而不是只迁候选子集。
 
+## 第二步：几何筛查（2026-10-23）
+
+### v2 词干审查
+
+[stems.tsv](../../examples/results/bones_terrain_survey_v2_20261023/stems.tsv) 共 2,863 个词干，812 个有命中。
+按词干名和描述逐个审查与地形、姿态相关的词干后，挑出下面的组，写入
+[bones_terrain_screen_v1.json](../../configs/bones_terrain_screen_v1.json)。条数是原始片段数（不含镜像）。
+
+| 组 | 原始片段 | 代表词干 | 用途 |
+| --- | ---: | --- | --- |
+| 已知尺寸支撑 | 1,760 | `come_up_50cm_box`（984）、`come_down_50cm_box`（597）、`jump_on_1m`、`jump_on_box_230cm` | 拟合支撑高度，并与文件名尺寸对照 |
+| 箱体支撑（无尺寸） | 48 | `box_jump`、`box_jump_down` | 支撑高度变化 |
+| 楼梯 | 49 | `stairs_climbing_up/down/jog_*` | 多级支撑；数量少 |
+| 越障 | 86 | `jump_over_obstacle_0.5m…2m`、`vault_over`、`monkey_jump` | 障碍高度对照最低身体净空；手可能撑在障碍上 |
+| 梯子 | 64 | `ladder_climbing_*` | 只筛查，不进第一版拟合 |
+| 蹲 | 1,145 | `crouch`（817，多方向蹲走）、`turn_crouch`、`idle_crouch*` | 顶棚候选 |
+| 手膝着地 | 833 | `mohak_*`（前进、后退、转向、起停）、`on_all_fours_*` | 顶棚候选，手膝支撑 |
+| 匍匐 | 919 | `crawl`（600）、`turn_crawl`、`idle_crawl*` | 最低顶棚候选 |
+| 跪 | 638 | `kneeling` | 静态低姿态 |
+| 靠墙 | 353 | `wall_leaning_*`、`h_b_w_*`（墙后掩护蹲起，手扶墙） | 侧墙候选，有身体接触证据 |
+| 平地对照 | 900 | `walk`、`jog`、各方向与弧线，每个词干最多 60 条 | 检查筛查把平地误判成多级的比例 |
+
+明确不选：搬箱行走 `lift_crate_walk`、撞小障碍 `bump_into_small_obstacle_*`（是踢到物体，不是支撑）、
+推障碍 `push_obstacle`（物体在动）、阀门/拉杆、舞蹈、原地跳、健身动作、晕倒/跌倒。
+
+### 筛查内容
+
+模块 [bones_terrain_screen.py](../../motionbricks/data/bones_terrain_screen.py)，入口
+[screen_bones_terrain_geometry.py](../../scripts/screen_bones_terrain_geometry.py)。转换沿用楼梯数据的官方路径：
+Kimodo BVH、30Hz SLERP、SOMA77 FK、官方蒙皮每只脚 98 个 sole 顶点。动作不改，结果都在源世界坐标。
+
+| 输出 | 来源 |
+| --- | --- |
+| 支撑层 | `stair_support.reconstruct_support` 的候选面（静止、局部最低、源动作没穿过），按 3cm 聚类成层；不使用它的"至少三层"成对判定 |
+| 手、膝、肘支撑 | 掌心（腕与中指末端中点）、膝（Shin）、肘（ForeArm）静止段，是否落在某个支撑层上 |
+| 姿态 | 每帧按"脚所在支撑层"之上的髋高比例、躯干俯仰、胸高和手是否着地分为站、蹲、手膝、匍匐、其他低姿态 |
+| 头顶净空 | 每种姿态下头关节到支撑层的高度分位数，后续顶棚的下界依据 |
+| 尺寸校验 | 有尺寸的词干：支撑层跨度减尺寸；最低身体净空减尺寸（越障） |
+
+站立髋高参考与 `bones_seed.validate_planar_posture` 相同（Uniform 骨架，全体共用）。所有阈值是候选值，写入报告。
+
+输出目录：`selection.jsonl`、`clips.jsonl`（完整逐条结果，留在 PRO6000）、`clips_compact.tsv`（每条一行，可公开）、
+`by_stem.json`、`by_group.json`、`report.json`（阈值、选择、失败原因、源码哈希）。
+
+状态：已用合成数据单元测试；尚未在真实 BVH 上运行。先每个词干 2 条做试跑，检查失败原因后再全量。
+
 ## 待决定
 
 1. **Uniform 或 Proportional。** 已有 sole 顶点来自官方 `skin_standard.npz`，与 Uniform 骨架一致。

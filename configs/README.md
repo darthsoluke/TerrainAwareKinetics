@@ -8,6 +8,7 @@
 | [pfnn_frame_actor_p2_pro6000_gpu3_draft.json](pfnn_frame_actor_p2_pro6000_gpu3_draft.json) | P2课程与预算草案，尚未代表执行 |
 | [pfnn_frame_actor_v1.json](pfnn_frame_actor_v1.json) | P1迁移前的双卡配置历史 |
 | [pfnn_codec_repair_pilot_v1.json](pfnn_codec_repair_pilot_v1.json) | 历史Codec修复方案 |
+| [bones_terrain_screen_v1.json](bones_terrain_screen_v1.json) | BONES地形几何筛查的分组与每组词干；只做选择，不是拟合结果 |
 
 `draft`、`preflight`、`forward`与正式训练的含义不同。配置存在不代表模型已训练，正式结果应有实际checkpoint、更新数与评估记录。
 
