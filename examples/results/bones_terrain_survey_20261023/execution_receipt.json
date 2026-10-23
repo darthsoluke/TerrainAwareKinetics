@@ -1,0 +1,51 @@
+{
+  "time": "2026-10-23T10:19:11.178765+08:00",
+  "execution_host": "PRO6000",
+  "code_commit": "f2d4c5caed62c6efc56a9efb93c65382f18183fe",
+  "workdir": "${TAK_ROOT}",
+  "python": "${PFNN_PROJECT}/env/bin/python",
+  "python_version": "3.11.16",
+  "pandas_version": "2.3.3",
+  "test_result": "7 passed, 1 skipped in 2.16s",
+  "inputs": [
+    {
+      "name": "timelines.jsonl",
+      "copied_from_g3": true,
+      "g3_path": "${G3_TIMELINE_SOURCE}/timelines.jsonl",
+      "pro6000_path": "${BONES_INPUTS}/timelines.jsonl",
+      "bytes": 80373523,
+      "g3_sha256": "379d6a5b86cea06b7201d485d19ee53512cc58449352b3cf113a95d1d27603d8",
+      "pro6000_sha256": "379d6a5b86cea06b7201d485d19ee53512cc58449352b3cf113a95d1d27603d8",
+      "match": true
+    },
+    {
+      "name": "metadata.pkl",
+      "copied_from_g3": true,
+      "g3_path": "${G3_METADATA_SOURCE}/metadata.pkl",
+      "pro6000_path": "${BONES_INPUTS}/metadata.pkl",
+      "bytes": 8771887,
+      "g3_sha256": "8104cce0cbd4387c129b595551c4e85e210e9db13f6c9275eec65a29abb08bbc",
+      "pro6000_sha256": "8104cce0cbd4387c129b595551c4e85e210e9db13f6c9275eec65a29abb08bbc",
+      "match": true
+    }
+  ],
+  "bvh": {
+    "root": null,
+    "count": null,
+    "reason": "No BONES motion BVHs found in accessible ${USER_HOME} and /data; seven SOMA skeleton template BVHs are not motion clips.",
+    "scan_results": "${BONES_INPUTS}/discovery_20261023.RuzzM6/paths.tsv",
+    "scan_errors": "${BONES_INPUTS}/discovery_20261023.RuzzM6/errors.txt",
+    "permission_denied_directories": 35
+  },
+  "metadata_survey": {
+    "ran": false,
+    "reason": "content_vertical_move and content_body_position are absent"
+  },
+  "timeline_output": "${TAK_ROOT}/runs/bones_terrain_survey_v1_timeline",
+  "sample_seed": 0,
+  "samples_per_bucket": 30,
+  "cuda_visible_devices": "",
+  "training_started": false,
+  "code_modified": false,
+  "git_status": ""
+}

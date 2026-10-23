@@ -1,0 +1,93 @@
+== support_height_change 5430
+come_up_50cm_box_R_003__A213 | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+medium_big_light_one_hand_right_side_medium_to_behind_medium_R_001__A525 | {'events': ['platform']} | A person turns back over their right shoulder while standing and places a light object with one hand, then turns forward
+bump_into_small_obstacle_swear_walk_ff_270_R_001__A461 | {'filename': ['obstacle'], 'overview': ['obstacle'], 'events': ['obstacle']} | A person walking sideways towards the right bumps into a small obstacle, then continues walking and stops.
+lift_crate_walk_ff_stop_315_002__A144_M | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person is slowly walking sideways to the left back diagonal and comes to a stop while holding a crate with both hands.
+come_up_50cm_box_R_003__A063 | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+lift_crate_walk_ff_loop_180_R_003__A143_M | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person is slowly walking forward while holding a crate with both hands in the front.
+come_up_50cm_box_R_002__A159_M | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+come_up_50cm_box_R_001__A146_M | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+come_up_50cm_box_R_003__A361_M | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+injured_R_leg_walk_ff_stop_270_003__A173_M | {'overview': ['uneven']} | A person with an injured left leg limps toward the left, taking uneven steps, then gradually comes to a stop.
+lift_crate_walk_ff_loop_315_001__A142 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person with a crate held using both their hands walks in the right back diagonal direction by taking several steps at 
+lift_crate_walk_ff_stop_180_R_001__A199 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person is slowly walking forward while holding a crate.
+lift_crate_walk_ff_loop_315_001__A160 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person with a crate held using both their hands walks in the right back diagonal direction by taking several steps at 
+lift_crate_walk_ff_stop_315_001__A142_M | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person is slowly walking sideways to the left back diagonal and comes to a stop while holding a crate with both hands.
+jump_form_box_to_safety_roll_270_R_003__A502_M | {'overview': ['platform'], 'events': ['platform']} | A person standing on a platform jumps to their left, rolls on their back to their left, and then stands upright.
+lift_crate_walk_ff_loop_315_R_002__A201 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person is walking towards the right back diagonal at a slow pace, taking short steps while holding a crate with both h
+lift_crate_come_up_50cm_box_R_002__A199 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person climbs on a box while lifting a crate and then stands upright.
+come_up_50cm_box_R_003__A054 | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+jump_over_obstacle_0_75m_R_003__A415 | {'filename': ['obstacle'], 'overview': ['obstacle'], 'events': ['obstacle']} | A person gently starts to jog forward in short strides to effortlessly jump over an obstacle and stands upright facing f
+jump_on_50cm_003__A415_M | {'overview': ['jumps onto']} | A person jumps onto a surface 50 cm high and stands.
+come_up_50cm_box_R_003__A141 | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+come_up_50cm_box_R_003__A382_M | {'overview': ['platform'], 'events': ['platform', 'steps up']} | A person standing on the ground gets up onto a raised platform and stands idle, facing forward.
+lift_crate_stop_001__A202 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | An upright person lifting a crate with both hands at waist level bends forward, keeps it down, and straightens their sta
+lift_crate_walk_ff_start_225_002__A142_M | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person starts walking slowly towards the left diagonal while holding a crate with both hands.
+lift_crate_walk_ff_start_270_002__A163 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person starts walking slowly to the right in a crossover pattern while holding a crate at waist level with both hands.
+lift_crate_walk_ff_start_180_R_001__A161 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person starts walking several steps forward at a slow pace while strenuously lifting a crate with both hands.
+turn_lift_crate_walk_270_003__A199 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person holding a crate with both hands swiftly turns to their right and walks ahead slowly with the crate.
+lift_crate_walk_ff_start_270_003__A143 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person starts walking slowly to the right in a crossover pattern while holding a crate at waist level with both hands.
+lift_crate_walk_ff_start_180_R_003__A162 | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person starts walking several steps forward at a slow pace while strenuously lifting a crate with both hands.
+lift_crate_walk_ff_loop_225_001__A159_M | {'filename': ['crate'], 'overview': ['crate'], 'events': ['crate']} | A person is walking to their left at a slow pace while holding a crate.
+== hand_or_obstacle_support 2730
+itching_head_R_003__A047_M | {'overview': ['hand on the']} | A person steadily raises the left arm, places the hand on the left side of the head, scratches it, and then lowers the a
+lift_crate_come_up_50cm_box_R_005__A250_M | {'overview': ['climbing']} | A person is climbing onto a box while lifting a crate.
+come_up_50cm_box_R_005__A116 | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+walk_hands_on_back_stop_004__A095_M | {'overview': ['hands on the'], 'events': ['hands on the']} | A person steadily walking forward with hands on the back stops walking.
+come_up_50cm_box_R_003__A378_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+come_up_50cm_box_R_002__A292_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+walk_hands_on_back_stop_001__A056_M | {'overview': ['hands on the'], 'events': ['hands on the']} | A person walking forward with hands on the back gradually stops and stands upright.
+walk_hands_on_back_stop_003__A061_M | {'overview': ['hands on the'], 'events': ['hands on the']} | A person steadily walking forward with hands on the back stops walking.
+come_up_50cm_box_R_002__A338_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+injured_torso_throw_ball_R_001__A233_M | {'events': ['hand on the']} | A person standing with an injured torso, facing downward, throws a ball forward with their left hand.
+itching_head_R_002__A118_M | {'overview': ['hand on the']} | A person steadily raises the left arm, places the hand on the left side of the head, scratches it, and then lowers the a
+come_up_50cm_box_R_003__A283_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+walk_hands_on_back_180_stop_R_003__A256 | {'overview': ['hands on the'], 'events': ['hands on the']} | A person walking forward with hands on the back gradually stops and stands upright.
+come_up_50cm_box_R_002__A411 | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+having_a_sit_table_injured_torso_002__A008_M | {'events': ['hands on the']} | A person with an injured torso is lowering the extended arms, walks forward and sits at a table, then stands up, turns b
+itching_head_R_004__A116 | {'overview': ['hand on the']} | A person steadily raises the right arm, places the hand on the right side of the head, scratches it, and then lowers the
+having_a_sit_table_injured_L_leg_002__A006_M | {'events': ['hands on the']} | An injured person lowers their arms, turns right to sit on a chair with their hands resting on the table, then stands an
+come_up_50cm_box_R_003__A187_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+ladder_climbing_idle_R_003__A300_M | {'filename': ['climbing', 'ladder'], 'overview': ['climbing', 'ladder'], 'events': ['climbing', 'ladder']} | A person looks around while standing on a ladder in a climbing pose.
+sitting_legs_cross_arms_front_start_002__A039 | {'overview': ['hands on the'], 'events': ['hands on the']} | A person standing upright sits down with the left leg crossed over the right and places both hands on the left knee.
+walk_hands_on_back_stop_003__A041_M | {'overview': ['hands on the'], 'events': ['hands on the']} | A person steadily walking forward with hands on the back stops walking.
+come_up_50cm_box_R_002__A285_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+mohak_idle_stop_001__A126 | {'events': ['hands on the']} | A person facing down is bent down onto their knees and hands, then swiftly rises to stand still.
+walk_hands_on_back_stop_003__A056 | {'overview': ['hands on the'], 'events': ['hands on the']} | A person walking forward with hands on the back gradually stops and stands upright.
+jump_over_obstacle_0_75m_R_003__A415 | {'events': ['hand on the']} | A person gently starts to jog forward in short strides to effortlessly jump over an obstacle and stands upright facing f
+itching_head_R_003__A260 | {'overview': ['hand on the']} | A person steadily raises the right arm, places the hand on the right side of the head, scratches it, and then lowers the
+injured_torso_drinking_standing_mug_R_003__A339 | {'events': ['hand on the']} | A person standing with an injured torso drinks from a mug with their right hand and holds the torso with their left arm.
+lift_crate_come_up_50cm_box_R_002__A253 | {'overview': ['climbing']} | A person is climbing onto a box while lifting a crate.
+come_up_50cm_box_R_003__A531_M | {'events': ['climbs']} | A person standing upright swiftly gets up onto a 50 cm tall box.
+itching_head_R_002__A059_M | {'overview': ['hand on the']} | A person steadily raises the left arm, places the hand on the left side of the head, scratches it, and then lowers the a
+== low_posture 12509
+medium_light_two_hands_behind_high_to_behind_low_R_001__A527 | {'events': ['crouched', 'crouches']} | A person turns back over the right shoulder, picks an object above their head, places it on the floor to the right, then
+mohak_forward_stop_001__A123_M | {'overview': ['all fours']} | A person bent down with their palms and knees placed on the ground is moving forward on all fours and further stops in t
+mohak_backward_start_001__A032 | {'overview': ['all fours', 'crawling'], 'events': ['all fours', 'crawling', 'crawls', 'hands and knees']} | A person on all fours on the floor gently begins crawling backwards with their knees and hands steadily.
+tasty_R_003__A270 | {'overview': ['belly'], 'events': ['belly']} | The person lifts the right arm to massage the belly in a circular motion and lowers it back to the side.
+kneeling_stop_003__A053 | {'filename': ['kneeling'], 'events': ['kneeling']} | A person keeling on the ground stands up straight.
+mohak_forward_stop_003__A036_M | {'overview': ['all fours', 'crawling'], 'events': ['all fours', 'crawl', 'crawling']} | A person on all fours starts crawling forward, then stops and looks upward.
+idle_crouch_right_loop_R_001__A194 | {'filename': ['crouch'], 'overview': ['crouched'], 'events': ['crouched']} | A crouched person is standing in place with their right leg ahead of the left.
+low_small_crank_under_ccw_001__A485_M | {'overview': ['underneath'], 'events': ['crouched', 'underneath']} | The person turns a small crank in a clockwise direction from underneath.
+prayer_R_001__A428 | {'overview': ['kneels'], 'events': ['bent over']} | A person standing upright kneels on the right knee while praying, and then stands upright.
+mohak_backward_start_003__A033_M | {'overview': ['crawling'], 'events': ['crawling']} | A person in a crawling position begins to move backward using their knees and hands.
+item_pick_up_crouch_idle_R_002__A549 | {'filename': ['crouch'], 'overview': ['crouch'], 'events': ['crouch']} | A person in a crouch position picks up an object placed on the ground with their right hand.
+mohak_forward_stop_001__A122 | {'overview': ['all fours']} | A person bent down with their palms and knees placed on the ground is moving forward on all fours and further stops in t
+mohak_backward_loop_002__A034_M | {'overview': ['all fours', 'crouched'], 'events': ['all fours', 'crouched']} | A person crouched on all fours is walking backward at a normal pace.
+crouch_cupboard_mid_in_R_003__A289 | {'filename': ['crouch'], 'overview': ['crouching'], 'events': ['crouching']} | A person is putting something into the medium-height cupboard while crouching.
+turn_crouch_270_002__A146_M | {'filename': ['crouch'], 'overview': ['crouched'], 'events': ['crouched']} | A person in a crouched position turns to the left side.
+inchworm_002__A360_M | {'overview': ['crawls'], 'events': ['crawls']} | A person standing upright crawls forward with their hands into a plank position, holds it, and then returns to an uprigh
+sit_on_heels_start_001__A052_M | {'events': ['kneeling', 'kneels']} | A person standing idle slowly knees down and sits down on their heels.
+crouch_ff_loop_225_101__A128_M | {'filename': ['crouch'], 'overview': ['crouched'], 'events': ['crouched']} | A crouched person walks in their left diagonal direction at a steady pace.
+idle_crouch_loop_002__A196_M | {'filename': ['crouch'], 'overview': ['crouched'], 'events': ['crouching']} | A person is sitting in a crouched posture.
+sitting_legs_bend_arms_front_start_001__A048_M | {'events': ['squat']} | The person standing in an upright posture sits with the legs bent and arms in front, hands resting on the knees.
+tasty_R_001__A438 | {'events': ['belly']} | A person standing massages their stomach steadily in a circular motion with their right hand.
+mohak_forward_start_103__A123_M | {'overview': ['all fours', 'crawl'], 'events': ['all fours', 'crawling']} | A person positioned on the ground on all fours, starts to crawl forward.
+body_search_003__A119_M | {'events': ['bent over']} | The person is standing to be searched before conducting the body search of another person standing in front of them.
+crawl_ff_stop_315_002__A134_M | {'filename': ['crawl'], 'overview': ['crawls'], 'events': ['crawling', 'lying']} | A person crawls to the left, stopping themselves with each step using their forearms and toes.
+mohak_idle_loop_002__A129 | {'overview': ['hands and knees'], 'events': ['hands and knees']} | A person is idle in a quadruped position, resting on both hands and knees and facing forward.
+body_search_002__A240 | {'overview': ['squats'], 'events': ['squats', 'squatting']} | A person leans forward, extends arms in a searching motion, squats, then rises, and then stands idle.
+crutches_fall_down_R_001__A518 | {'events': ['lying']} | A person falls down on the ground heavily.
+h_b_w_stand_to_crouch_270_stop_001__A344 | {'filename': ['crouch'], 'overview': ['crouched'], 'events': ['crouched']} | A person crouched down quickly turns around to their right in an arc to stand straight, facing the right back diagonal.
+sitting_legs_cross_arms_front_stop_003__A248 | {'events': ['crouching']} | A person sitting on the ground with their legs crossed and their arms in front rises to stand upright while the arms low
+injured_torso_turn_jump_360_R_002__A231_M | {'overview': ['hunched'], 'events': ['hunched']} | A person standing slightly hunched to the right due to an injured torso swiftly turns back over their left shoulder by h

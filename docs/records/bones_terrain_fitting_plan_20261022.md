@@ -3,6 +3,8 @@
 2026-10-22。用户决定：当前阶段只用 BONES-SEED，目标是给源动作配上丰富的地形与三维环境。
 本文件是计划和第一步工具的说明。本轮没有读取或修改任何动作文件，没有训练。
 
+2026-10-23 更新：第一步已在 PRO6000 完成，结果见 [调查报告](bones_terrain_survey_pro6000_20261023.md)。当前下一步是审查抽样误报，并准备通过筛选的 BVH 子集。
+
 ## 运行位置
 
 本阶段的开发和运行都在 PRO6000，不使用 A100 或 g1/g2/g3。g3 只是现有 BONES 源数据和 `metadata.pkl` 的存放位置；
@@ -59,15 +61,19 @@
   人工/传播标注比例、高频命中词、各桶组合，以及输入文件哈希和全部规则。
 - `candidates.jsonl`：每条候选一行，含命中证据、分段时长、上下文标记（坐姿、舞蹈/格斗、手持物、跌倒）。
 
-状态：已用合成标注做单元测试，**尚未在真实 BONES-SEED 标注上运行**。关键词是候选规则，
-命中不等于有支撑变化，未命中也不等于平地。
+状态：已在 142,220 条真实 timeline 上运行，得到 19,935 条去重候选（9,969 原始、9,966 镜像）。
+PRO6000 测试为 `7 passed, 1 skipped in 2.16s`；[90 条固定抽样](../../examples/results/bones_terrain_survey_20261023/sample_candidates_seed0.txt) 已发布。
+抽样暴露了搬箱子、挠头和揉肚子等误命中，下一步先审核规则。几何筛选尚未执行。
 
 ### 元数据现状
 
 官方 `seed_metadata_v003.parquet` 目前在 PRO6000、g3 的 BONES 源库和项目目录都没有找到，NAS 尚未查完。
-g3 有一份 SMPL 过滤版本的 `metadata.pkl`（约 8.37 MiB），结构未知。先用
-`--describe-metadata --metadata <pkl>` 查看列名，确认是否含官方列，再决定能否作为元数据输入。
+g3 的 SMPL 过滤版 `metadata.pkl`（约 8.37 MiB）已经私有 Drive 复制到 PRO6000，双端哈希一致。
+实际为 131,454 行，只有 `filename`、`duration`、`fps`、`length` 四列；缺少所需内容标签，已按条件跳过带 metadata 的调查。
+完整列清单见 [pkl_describe.json](../../examples/results/bones_terrain_survey_20261023/pkl_describe.json)。
 pickle 加载会执行代码，只用于自己信任的文件。没有元数据时，第一步只依赖时间轴关键词。
+
+PRO6000 可访问的数据目录中尚未找到 BONES 动作 BVH，本轮省略 `--bvh-root`。几何筛选需要迁入确认的候选子集。
 
 运行示例：
 

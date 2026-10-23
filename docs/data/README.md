@@ -5,7 +5,7 @@
 | 数据资产 | 当前可确认的角色 | 详细记录 |
 | --- | --- | --- |
 | BONES-SEED 原始资源与筛选集 | 原始库早期确认71,132个BVH，实际使用过191段小集及更大的平地移动子集 | [BONES实验](../records/bones_seed_training_execution_20261004.md) |
-| BONES-SEED 地形拟合候选 | 当前阶段：只用BONES配地形与三维环境，动作不变；第一步为标注摸底 | [地形拟合计划](../records/bones_terrain_fitting_plan_20261022.md) |
+| BONES-SEED 地形拟合候选 | 142,220条标注调查完成，去重候选19,935条；每类30条人工审阅样本已发布 | [调查结果](../records/bones_terrain_survey_pro6000_20261023.md)、[计划](../records/bones_terrain_fitting_plan_20261022.md) |
 | LAFAN1-resolved walk/run | 16段来源，9段转换合格，约35.514分钟 | [转换与训练](../records/lafan_mb_training_20261006.md) |
 | PARC官方与生成数据 | 已配对的动作、地形和合成/物理跟踪记录 | [长路线混合](../records/long_route_mixed_training_20261010.md) |
 | PFNN全量 | 40原始＋40镜像动作；16,195合格配对窗，64,780增强行 | [全量数据审阅](../records/pfnn_all_data_inventory_review_20261021.md) |

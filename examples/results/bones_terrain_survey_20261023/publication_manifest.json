@@ -1,0 +1,45 @@
+{
+  "schema": "bones-terrain-survey-publication-v1",
+  "source_commit": "f2d4c5caed62c6efc56a9efb93c65382f18183fe",
+  "execution_host": "PRO6000",
+  "publication_date": "2026-10-23",
+  "transformation": "Private machine paths replaced by role-based placeholders; scientific values and candidate excerpts unchanged.",
+  "files": [
+    {
+      "file": "survey_report.json",
+      "original_sha256": "2ed91df9ccf67b634d9ac4a8d6949801c4705afc62afd00364f2910209ce7071",
+      "published_sha256": "0922196f26350eb552fb602e9970b5ae339bf80bd6be226e7d7cce0531a1efa4",
+      "machine_path_substitutions": true
+    },
+    {
+      "file": "sample_candidates_seed0.txt",
+      "original_sha256": "ace93018d587fa4566053fd22efe22edf2dd73ee36f089542645780d49a7f385",
+      "published_sha256": "ace93018d587fa4566053fd22efe22edf2dd73ee36f089542645780d49a7f385",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "pkl_describe.json",
+      "original_sha256": "78cc86c01e9956bf04c57efe178f2beb5ace20c67e832b499c86d385514300cc",
+      "published_sha256": "78cc86c01e9956bf04c57efe178f2beb5ace20c67e832b499c86d385514300cc",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "execution_receipt.json",
+      "original_sha256": "2786aef149ec30b34f603bd573faef05f252671ca1624a2426184ce63848fe8b",
+      "published_sha256": "bc6f06f67b1280bac71d28d0fbaee072f4b28b2f953b19156d6a22455c660811",
+      "machine_path_substitutions": true
+    },
+    {
+      "file": "timeline_summary.txt",
+      "original_sha256": "e21fcb348914c40eedf48e6946b64ac30b28da221a2bb596ccc1630455b579fb",
+      "published_sha256": "e21fcb348914c40eedf48e6946b64ac30b28da221a2bb596ccc1630455b579fb",
+      "machine_path_substitutions": false
+    },
+    {
+      "file": "tests.txt",
+      "original_sha256": "4579affe9502ea04d4cdfd5a3a354286964a336dcbbac372fdbecbc5867e99ff",
+      "published_sha256": "4579affe9502ea04d4cdfd5a3a354286964a336dcbbac372fdbecbc5867e99ff",
+      "machine_path_substitutions": false
+    }
+  ]
+}

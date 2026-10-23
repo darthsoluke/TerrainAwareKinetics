@@ -7,3 +7,5 @@
 *.sh text eol=lf
 # A diff's context lines intentionally contain a whitespace prefix.
 *.patch -whitespace
+# Preserve the exact overview[:120] excerpts, including truncated trailing spaces.
+examples/results/bones_terrain_survey_20261023/sample_candidates_seed0.txt whitespace=-blank-at-eol

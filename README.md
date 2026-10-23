@@ -8,15 +8,18 @@
 
 ## 当前进展
 
-最近完成的结果复核：**2026-10-22**；本仓库整理日期：2026-10-23。
+最近模型结果复核：**2026-10-22**；BONES 数据调查：**2026-10-23**。
 
 - 已处理 BONES、LAFAN、PARC、PFNN 等动作来源，已有动作与地形配对、SOMA30 人体表示和 15 张 PFNN 演示地图。
 - 地形感知 MotionBricks、逐帧 P1 GRU、A/B/C 小规模结构对照均有实际训练记录。
 - 浏览器控制、WASD、Xbox 双摇杆、快速切图和同窗口调参已有实现与实测记录。
 - 最新评估显示：单步动作拟合改善，连续生成的支撑稳定性与穿透质量仍未通过交付标准。
 - P2 闭环训练目标已有部分实现；更完整的轻量 Transformer 和物理关系建模仍在研究中。
+- BONES 标注调查已在 PRO6000 完成：142,220 条标注中，19,935 条命中地形候选类别。每类 30 条抽样已发布，包含需要人工核查的关键词误命中。
 
 最新结论从 [A/B/C 复核](docs/records/pfnn_physics_findings_20261022.md) 和 [最新交接](docs/records/pfnn_physics_audit_status_20261022.md) 查看。
+
+最新数据工作见 [BONES 调查报告](docs/records/bones_terrain_survey_pro6000_20261023.md)；[JSON、90 条抽样与运行记录](examples/results/bones_terrain_survey_20261023/README.md) 可直接读取。
 
 ## 按你的问题阅读
 
