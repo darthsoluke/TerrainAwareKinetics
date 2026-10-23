@@ -5,8 +5,9 @@ import json
 import numpy as np
 import pytest
 
-from motionbricks.data.bones_terrain_scene import (SceneConfig, explanation_bounds, fit_ceiling, fit_walls,
-                                                   scene_for_clip, solid_penetration)
+from motionbricks.data.bones_terrain_scene import (PART_FOOT, PART_HAND, PART_OTHER, PART_TRUNK, SceneConfig,
+                                                   explanation_bounds, fit_ceiling, fit_walls, scene_for_clip,
+                                                   solid_penetration, vertex_part_codes)
 
 FPS = 15.0
 STANDING_TOP = 1.8
@@ -68,24 +69,82 @@ def test_low_posture_in_place_of_a_standing_body_is_unexplainable():
     skin, posture, hips = clip([(30, 0, 0, 1.8, "standing"), (30, 0, 0, 1.2, "crouch")])
     _, report = fit_ceiling(skin, posture, hips, [], 0.0, STANDING_TOP, FPS)
     assert report["status"].startswith("unexplainable")
+    # Kneeling down where the actor stood: the low body is wider than the standing one, so
+    # some cells are only ever under the low body, but the hips stay over standing cells.
+    skin = np.stack([body((0.0, 0.0), 1.8)] * 30 + [body((0.05, 0.0), 1.0, radius=0.35)] * 30)
+    posture = np.array(["standing"] * 30 + ["crouch"] * 30)
+    hips = np.array([[0.0, 0.0]] * 30 + [[0.05, 0.0]] * 30)
+    _, report = fit_ceiling(skin, posture, hips, [], 0.0, STANDING_TOP, FPS)
+    assert report["status"] == "unexplainable_in_place_transition"
+    assert report["low_hips_on_blocked_cells"] == pytest.approx(1.0)
 
 
-def test_wall_is_placed_against_a_flat_contact_and_clears_the_body():
-    frames = 30
-    skin = []
-    for _ in range(frames):
-        points = body((0.0, 0.0), 1.7)
-        flat = np.array([[0.3, y, z] for y in np.linspace(0.5, 1.6, 20) for z in np.linspace(-0.2, 0.2, 9)])
-        skin.append(np.concatenate([points, flat]))
-    skin = np.stack(skin)
-    hips = np.zeros((frames, 2))
-    walls, report = fit_walls(skin, hips, 0.0, FPS)
-    assert report["status"] == "fitted" and len(walls) == 1
+def leaning_body(contact_x=0.3, contact_part=PART_TRUNK, feet_radius=0.1, frames=30):
+    """Feet near the origin, a body column, and a flat patch of one body part at x = contact_x."""
+    feet = np.array([[feet_radius * np.cos(a), h, feet_radius * np.sin(a)]
+                     for h in (0.02, 0.06, 0.1) for a in np.linspace(0, 2 * np.pi, 16, endpoint=False)])
+    column = body((0.0, 0.0), 1.7)
+    column = column[column[:, 1] > 0.15]
+    flat = np.array([[contact_x, y, z] for y in np.linspace(0.8, 1.4, 20) for z in np.linspace(-0.2, 0.2, 9)])
+    points = np.concatenate([feet, column, flat])
+    parts = np.concatenate([np.full(len(feet), PART_FOOT), np.full(len(column), PART_OTHER),
+                            np.full(len(flat), contact_part)])
+    return np.repeat(points[None], frames, axis=0), np.zeros((frames, 2)), parts
+
+
+def test_wall_is_placed_against_a_leaning_trunk_and_clears_the_body():
+    skin, hips, parts = leaning_body()
+    walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
+    assert report["status"] == "fitted" and len(walls) == 1 and report["kind"] == "lean"
     wall = walls[0]
     rotation = np.asarray(wall["rotation_local_to_world"])
     assert abs(rotation[0, 0]) == pytest.approx(1.0, abs=1e-6)       # normal along x
     assert wall["center_xyz_m"][0] - wall["half_extent_xyz_m"][0] == pytest.approx(0.305, abs=1e-3)
     assert solid_penetration(skin, walls, .02)["frames_over_report"] == 0
+
+
+def test_outermost_skin_without_trunk_or_bracing_hand_is_not_a_wall():
+    skin, hips, parts = leaning_body(contact_part=PART_OTHER)
+    walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
+    assert walls == [] and report["status"] == "no_contact_plane"
+    assert report["rejected"]["no_trunk_or_bracing_hand_contact"] > 0
+
+
+def test_hand_near_the_hips_or_feet_at_the_plane_do_not_make_a_wall():
+    skin, hips, parts = leaning_body(contact_x=0.3, contact_part=PART_HAND)
+    assert fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)[0] == []      # hand only 0.3 m from hips
+    skin, hips, parts = leaning_body(contact_x=0.5, contact_part=PART_HAND)
+    walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
+    assert len(walls) == 1 and report["kind"] == "brace"
+    skin, hips, parts = leaning_body(contact_x=0.3, feet_radius=0.25)
+    walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
+    assert walls == [] and report["rejected"].get("feet_at_the_plane", 0) > 0
+
+
+def test_part_codes_follow_rig_joint_names():
+    names = ["Hips", "Spine1", "Chest", "LeftShoulder", "LeftArm", "LeftForeArm", "LeftHand",
+             "LeftHandIndex1", "RightFoot", "RightToeBase", "Head", "LeftLeg"]
+    codes = vertex_part_codes(np.arange(len(names)), names).tolist()
+    assert codes == [PART_TRUNK] * 5 + [PART_OTHER, PART_HAND, PART_HAND, PART_FOOT, PART_FOOT,
+                                        PART_OTHER, PART_OTHER]
+
+
+def test_variant_rejected_when_foot_evidence_has_no_surface():
+    skin, posture, hips = clip([(45, 0, 3.0, 1.8, "standing")])
+    fit = ground_fit()
+    fit["evidence_patches"] = [{"height_m": 0.5, "level_m": 0.5,
+                                "polygon_xz_m": [[1, -0.1], [1.2, -0.1], [1.2, 0.1], [1, 0.1]]}]
+    scene = scene_for_clip(skin, posture, hips, fit, STANDING_TOP, FPS, variants=3, seed=1)
+    assert not scene["training_eligible"] and scene["eligibility"] == "rejected"
+    assert all("foot_evidence_not_supported" in v["rejection_reasons"] for v in scene["variants"])
+
+
+def test_in_place_kneel_keeps_geometry_but_is_not_environment_explained():
+    skin, posture, hips = clip([(30, 0, 0, 1.8, "standing"), (30, 0, 0, 1.0, "crouch")])
+    scene = scene_for_clip(skin, posture, hips, ground_fit(), STANDING_TOP, FPS, variants=2, seed=0)
+    assert scene["ceiling"] is None and scene["sustained_low_posture"]
+    assert scene["eligibility"] == "geometry_only_low_posture_unexplained"
+    assert all(v["geometry_accepted"] and not v["accepted"] for v in scene["variants"])
 
 
 def test_upright_variants_add_high_ceilings_and_distant_clutter_only():

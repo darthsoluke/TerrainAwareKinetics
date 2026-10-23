@@ -100,8 +100,8 @@ function showInfo() {
     ['levels (m)', JSON.stringify(clip.levels_m.map((v) => +v.toFixed(3)))], ['flags', (clip.flags || []).join(', ') || 'none']];
   for (const name of ['minimal', 'maximal']) {
     const k = clip.metrics[name];
-    const skin = k.skin;
-    rows.push([`${name} ${skin ? 'skin' : 'landmark'} penetration max`,
+    const skin = k.skin_support || k.skin;
+    rows.push([`${name} ${k.skin_support ? 'skin vs support' : skin ? 'skin' : 'landmark'} penetration max`,
                `${((skin ? skin.max_m : k.penetration_max_m) * 100).toFixed(1)} cm`],
               [`${name} frames > 2 cm`, skin ? skin.frames_over_report : k.penetration_frames_over_report],
               [`${name} unsupported evidence`, `${k.support_evidence_unsupported} / ${k.support_evidence_points}`]);
@@ -111,8 +111,11 @@ function showInfo() {
     const c = scene.ceiling;
     rows.push(['ceiling', c.status === 'fitted'
       ? `${c.tight_m.toFixed(2)}-${c.loose_m.toFixed(2)} m above floor; explains ${(100 * (c.explanation?.tight ?? 0)).toFixed(0)}% of low frames`
-      : c.status], ['walls', scene.walls.status]);
+      : c.status], ['walls', scene.walls.status + (scene.walls.kind ? ` (${scene.walls.kind})` : '')],
+      ['eligibility', scene.eligibility ?? ''],
+      ['scenes 1-3', (scene.variants || []).map((v) => v.accepted ? 'ok' : v.reasons.join('+')).join(' | ')]);
   }
+  if (clip.ground_source) rows.splice(4, 0, ['ground from', clip.ground_source]);
   for (const box of clip.boxes.maximal.filter((b) => b.role === 'support')) {
     const minimal = clip.boxes.minimal.find((b) => b.name === box.name);
     const size = (b) => `${(2 * b.half_extent_xyz_m[0]).toFixed(2)} x ${(2 * b.half_extent_xyz_m[2]).toFixed(2)}`;

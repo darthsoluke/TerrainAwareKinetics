@@ -173,8 +173,11 @@ def render_contact_sheet(joints, fit, path, *, title="", count=7, variant="minim
         title = (f"{title}\nceiling: {report['status']}"
                  + (f", {report['tight_m']:.2f}-{report['loose_m']:.2f} m, explains {explanation:.0%} of low frames"
                     if report["status"] == "fitted" and explanation is not None else "")
-                 + f" | walls {len(scene['walls'])}")
-    if "skin" in metrics:
+                 + f" | walls {len(scene['walls'])} | {scene.get('eligibility', '')}")
+    if "skin_support" in metrics:
+        source, peak, over = ("skin vs support", metrics["skin_support"]["max_m"],
+                              metrics["skin_support"]["frames_over_report"])
+    elif "skin" in metrics:
         source, peak, over = "skin", metrics["skin"]["max_m"], metrics["skin"]["frames_over_report"]
     else:
         source, peak, over = "landmarks", metrics["penetration_max_m"], metrics["penetration_frames_over_report"]
@@ -227,8 +230,13 @@ def viewer_payload(joints, fit, *, fps_in=30.0, fps_out=15.0, meta=None):
         "frames_mm": np.round(stacked * 1000).astype(int).tolist(),
         "boxes": dict(zip(("minimal", "maximal"), scene_boxes(fit))),
         "variants": [v["boxes"] for v in (fit.get("scene") or {}).get("variants", [])[:3]],
-        "scene_report": ({"ceiling": fit["scene"]["ceiling_report"], "walls": fit["scene"]["wall_report"]}
+        "scene_report": ({"ceiling": fit["scene"]["ceiling_report"], "walls": fit["scene"]["wall_report"],
+                          "eligibility": fit["scene"].get("eligibility"),
+                          "variants": [{"accepted": v["accepted"], "reasons": v.get("rejection_reasons", []),
+                                        "explanation_rate": v.get("explanation_rate")}
+                                       for v in fit["scene"]["variants"][:3]]}
                          if fit.get("scene") else None),
+        "ground_source": fit.get("ground_source"),
         "ground_m": fit["ground_m"], "levels_m": fit["levels_m"],
         "metrics": fit["metrics"], "flags": fit["flags"], "meta": meta or {},
     }

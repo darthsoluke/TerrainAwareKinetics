@@ -30,7 +30,9 @@ if str(ROOT) not in sys.path:
 from motionbricks.data.bones_terrain_fit import (  # noqa: E402
     SCHEMA_VERSION, FitConfig, actor_scale_report, fit_support,
 )
-from motionbricks.data.bones_terrain_scene import SceneConfig, scene_for_clip  # noqa: E402
+from motionbricks.data.bones_terrain_scene import (  # noqa: E402
+    PART_FOOT, PART_HAND, PART_TRUNK, SceneConfig, scene_for_clip, vertex_part_codes,
+)
 from motionbricks.data.bones_terrain_viz import (  # noqa: E402
     VIEW_JOINTS, render_contact_sheet, render_gif, viewer_payload,
 )
@@ -41,7 +43,8 @@ COMPACT = ("filename", "stem", "group", "status", "levels_m", "support_boxes", "
            "sphere_minimal_penetration_max_m",
            "unsupported_evidence", "minimal_sizes_m", "maximal_sizes_m",
            "ceiling_status", "ceiling_range_m", "explanation_tight", "explanation_loose", "walls",
-           "variants_accepted", "upright_ceilings", "clutter", "variant_ground_penetration_max_m", "error")
+           "variants_accepted", "upright_ceilings", "clutter", "variant_ground_penetration_max_m",
+           "eligibility", "rejection_reasons", "wall_status", "ground_source", "ground_skin_max_m", "seconds", "error")
 
 
 def _init():
@@ -54,6 +57,22 @@ def _init():
         bind = skinner.bind_vertices
         bind = bind.detach().cpu().numpy() if hasattr(bind, "detach") else np.asarray(bind)
         screen._STATE["standing_top"] = float(bind[:, 1].max() - bind[:, 1].min())
+        screen._STATE["vertex_parts"] = skin_vertex_parts(skinner, screen._STATE["names"], bind)
+
+
+def skin_vertex_parts(skinner, names, bind):
+    """Trunk/hand/foot code per skin vertex from its dominant LBS joint, checked on the bind pose."""
+    indices, weights = skinner.lbs_indices, skinner.lbs_weights
+    indices = indices.detach().cpu().numpy() if hasattr(indices, "detach") else np.asarray(indices)
+    weights = weights.detach().cpu().numpy() if hasattr(weights, "detach") else np.asarray(weights)
+    dominant = np.take_along_axis(indices, weights.argmax(axis=1)[:, None], axis=1)[:, 0]
+    parts = vertex_part_codes(dominant, names)
+    height = bind[:, 1] - bind[:, 1].min()
+    counts = {code: int((parts == code).sum()) for code in (PART_TRUNK, PART_HAND, PART_FOOT)}
+    foot, hand, trunk = (float(np.median(height[parts == code])) for code in (PART_FOOT, PART_HAND, PART_TRUNK))
+    if min(counts.values()) < 100 or not (foot < 0.25 and foot < hand < trunk + 0.6):
+        raise RuntimeError(f"skin part labels fail the bind-pose check: {counts}")
+    return parts
 
 
 def skin_vertices(rotations, posed, stride):
@@ -89,9 +108,11 @@ def _process(item, render, skin_stride=2, variants=4):
         fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
         fit["scene"] = scene_for_clip(skin, posture[::skin_stride], joints["Hips"][::skin_stride][:, [0, 2]], fit,
                                       screen._STATE["standing_top"], screen.FPS / skin_stride,
-                                      variants=variants, seed=clip_seed(item["filename"]))
+                                      variants=variants, seed=clip_seed(item["filename"]),
+                                      vertex_parts=screen._STATE.get("vertex_parts"))
     fit["meta"] = {key: item[key] for key in ("filename", "stem", "group")}
-    fit["meta"].update(source_fps=source_fps, dimension_tokens=item.get("dimension_tokens", []))
+    fit["meta"].update(source_fps=source_fps, dimension_tokens=item.get("dimension_tokens", []),
+                       seconds=round(len(joints["Hips"]) / screen.FPS, 3))
     if render:
         folder = Path(render["folder"])
         title = f"{item['group']} / {item['stem']} / {item['filename']}"
@@ -126,8 +147,13 @@ def work_render(job):
 
 
 def penetration(fit, variant):
-    """(max depth, frames over 2 cm) from the authoritative metric: skin if present."""
+    """(max depth, frames over 2 cm) from the authoritative metric.
+
+    With skin, support boxes are judged on their own (skin_support); the ground slab is
+    reported separately because mocap skin sinks a little into any floor."""
     metric = fit["metrics"][variant]
+    if "skin_support" in metric:
+        return metric["skin_support"]["max_m"], metric["skin_support"]["frames_over_report"]
     if "skin" in metric:
         return metric["skin"]["max_m"], metric["skin"]["frames_over_report"]
     return metric["penetration_max_m"], metric["penetration_frames_over_report"]
@@ -151,6 +177,9 @@ def compact_row(result):
         "sphere_minimal_penetration_max_m": round(fit["metrics"]["minimal"]["penetration_max_m"], 4),
         "unsupported_evidence": fit["metrics"]["minimal"]["support_evidence_unsupported"],
         "minimal_sizes_m": json.dumps(sizes["minimal"]), "maximal_sizes_m": json.dumps(sizes["maximal"]),
+        "ground_source": fit.get("ground_source", ""), "seconds": fit.get("meta", {}).get("seconds", ""),
+        "ground_skin_max_m": (round(fit["metrics"]["minimal"]["skin_ground"]["max_m"], 4)
+                              if "skin_ground" in fit["metrics"]["minimal"] else ""),
         **scene_columns(fit.get("scene")),
     }
 
@@ -171,7 +200,17 @@ def scene_columns(scene):
         "upright_ceilings": sum(v["params"]["upright_ceiling_m"] is not None for v in variants),
         "clutter": sum(v["params"]["clutter"] for v in variants),
         "variant_ground_penetration_max_m": round(max((v["penetration_m"]["ground"] for v in variants), default=0.0), 4),
+        "eligibility": scene.get("eligibility", ""),
+        "rejection_reasons": ",".join(sorted({r for v in variants for r in v.get("rejection_reasons", [])})),
+        "wall_status": scene["wall_report"].get("status", ""),
     }
+
+
+def _count(values):
+    counts = {}
+    for value in values:
+        counts[value] = counts.get(value, 0) + 1
+    return dict(sorted(counts.items()))
 
 
 def group_summary(results):
@@ -191,11 +230,13 @@ def group_summary(results):
                 entry[variant] = {"clips_with_frames_over_2cm": int(sum(v > 0 for v in over)),
                                   "penetration_max_p95_m": round(float(np.percentile(peak, 95)), 4)}
             entry["unsupported_evidence_points"] = int(sum(f["metrics"]["minimal"]["support_evidence_unsupported"] for f in ok))
-            flags = {}
-            for f in ok:
-                for flag in f["flags"]:
-                    flags[flag] = flags.get(flag, 0) + 1
-            entry["flags"] = flags
+            entry["flags"] = _count(flag for f in ok for flag in f["flags"])
+            entry["ground_source"] = _count(f.get("ground_source", "unknown") for f in ok)
+            ground_skin = [f["metrics"]["minimal"]["skin_ground"]["max_m"] for f in ok
+                           if "skin_ground" in f["metrics"]["minimal"]]
+            if ground_skin:
+                entry["ground_skin_depth_m"] = {q: round(float(np.percentile(ground_skin, int(q[1:]))), 4)
+                                                for q in ("p50", "p95", "p99")}
             scenes = [f["scene"] for f in ok if f.get("scene")]
             if scenes:
                 status = {}
@@ -204,13 +245,25 @@ def group_summary(results):
                 tight = [s["ceiling_report"]["explanation"]["tight"] for s in scenes
                          if s["ceiling"] and s["ceiling_report"].get("explanation", {}).get("tight") is not None]
                 variants = [v for s in scenes for v in s["variants"]]
-                fitted_pen = [c["frames_over_report"] for s in scenes for c in s["fitted_checks"].values()]
+                fitted_pen = [c["frames_over_report"] for s in scenes for name, c in s["fitted_checks"].items()
+                              if name.startswith("ceiling")]
+                eligibility = {}
+                for f in ok:
+                    if f.get("scene"):
+                        key = f["scene"].get("eligibility", "unknown")
+                        slot = eligibility.setdefault(key, {"clips": 0, "seconds": 0.0})
+                        slot["clips"] += 1
+                        slot["seconds"] = round(slot["seconds"] + f.get("meta", {}).get("seconds", 0.0), 2)
                 entry["scene"] = {
+                    "eligibility": eligibility,
+                    "rejection_reasons": _count(r for v in variants for r in v.get("rejection_reasons", [])),
+                    "wall_status": _count(s["wall_report"].get("status", "unknown") for s in scenes),
+                    "wall_kind": _count(s["wall_report"]["kind"] for s in scenes if s["walls"]),
                     "ceiling_status": status,
                     "explanation_tight_p50": round(float(np.median(tight)), 4) if tight else None,
                     "explanation_tight_p10": round(float(np.percentile(tight, 10)), 4) if tight else None,
                     "walls_fitted": sum(len(s["walls"]) > 0 for s in scenes),
-                    "fitted_overhead_clips_with_frames_over_2cm": int(sum(v > 0 for v in fitted_pen)),
+                    "fitted_ceilings_with_frames_over_2cm": int(sum(v > 0 for v in fitted_pen)),
                     "variants": len(variants), "variants_accepted": sum(v["accepted"] for v in variants),
                     "upright_ceiling_variants": sum(v["params"]["upright_ceiling_m"] is not None for v in variants),
                     "clutter_mean": round(float(np.mean([v["params"]["clutter"] for v in variants])), 3),

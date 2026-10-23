@@ -199,6 +199,36 @@ def test_fit_reports_skin_authority_when_skin_is_given():
     assert fit["metrics"]["minimal"]["skin"]["frames_over_report"] == 0
 
 
+def test_prone_ground_comes_from_skin_and_upside_down_feet_are_not_a_platform():
+    soles, joints, root = step_up(top=0.0)
+    for side in soles:
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.10      # soles face up, 10 cm high
+    support = support_of(soles, joints, root)
+    assert min(support["summary"]["usable_level_heights_m"]) > 0.05
+    # The skin of the foot tops (and the rest of the body) lies on the floor at y = 0.
+    feet_tops = np.concatenate([soles["left"], soles["right"]], axis=1).copy()
+    feet_tops[..., 1] = 0.01
+    skin = np.concatenate([soles["left"], soles["right"], feet_tops], axis=1)
+    config = FitConfig(skin_probe_stride=1)
+    fit = fit_support(soles, joints, root, FPS, support, config=config, skin_vertices=skin)
+    assert fit["ground_source"] == "skin_lowest_contacts" and fit["ground_m"] == pytest.approx(0.01, abs=1e-6)
+    assert fit["levels_m"] == [0.0] and fit["inverted_foot_levels_m"]
+    assert [b["role"] for b in fit["boxes"]["minimal"]] == ["ground"]
+    assert {"ground_from_skin", "inverted_foot_level_dropped"} <= set(fit["flags"])
+    assert fit["evidence_patches"] == []
+
+
+def test_raised_soles_on_a_real_box_are_kept_with_skin():
+    soles, joints, root = step_up()
+    skin = np.concatenate([soles["left"], soles["right"]], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root),
+                      config=FitConfig(skin_probe_stride=1), skin_vertices=skin)
+    assert fit["ground_source"] == "lowest_foot_level" and not fit["inverted_foot_levels_m"]
+    assert any(b["role"] == "support" for b in fit["boxes"]["minimal"])
+    assert all(abs(p["level_m"] - fit["ground_m"]) < 1e-9 or abs(p["level_m"] - fit["ground_m"] - fit["levels_m"][-1]) < 1e-9
+               for p in fit["evidence_patches"])
+
+
 def test_skin_vertices_uses_official_skinner_interface():
     torch = pytest.importorskip("torch")
     import scripts.fit_bones_terrain_support as fit_script
@@ -252,7 +282,29 @@ def test_fit_script_builds_scenes_when_skin_is_available(tmp_path):
     assert any(b["role"] == "support" for b in scene["variants"][0]["boxes"])
     group = json.loads((output / "by_group.json").read_text())["known_dimension_support"]
     assert group["scene"]["variants"] == 3 and group["scene"]["variants_accepted"] == 3
+    assert scene["eligibility"] == "environment_explained" and scene["training_eligible"]
+    assert group["scene"]["eligibility"]["environment_explained"]["clips"] == 1
     header = (output / "fits_compact.tsv").read_text().splitlines()[0].split("\t")
     assert "ceiling_status" in header and "variants_accepted" in header
     payload = json.loads(next((output / "viewer").glob("come_up*.json")).read_text())
     assert len(payload["variants"]) == 3 and payload["scene_report"]["ceiling"]["status"]
+
+
+def test_skin_vertex_parts_checks_labels_on_the_bind_pose():
+    import scripts.fit_bones_terrain_support as fit_script
+    from motionbricks.data.bones_terrain_scene import PART_FOOT, PART_HAND, PART_TRUNK
+    names = ["Hips", "Chest", "LeftHand", "LeftFoot", "Head"]
+    heights = {0: 1.0, 1: 1.3, 2: 1.4, 3: 0.05, 4: 1.7}
+    dominant = np.repeat(np.arange(5), 120)
+    bind = np.zeros((len(dominant), 3))
+    bind[:, 1] = [heights[j] for j in dominant]
+
+    class Skinner:
+        lbs_indices = np.stack([dominant, (dominant + 1) % 5], axis=1)
+        lbs_weights = np.tile([0.8, 0.2], (len(dominant), 1))
+
+    parts = fit_script.skin_vertex_parts(Skinner(), names, bind)
+    assert (parts[dominant == 2] == PART_HAND).all() and (parts[dominant == 3] == PART_FOOT).all()
+    assert (parts[dominant <= 1] == PART_TRUNK).all()
+    with pytest.raises(RuntimeError):
+        fit_script.skin_vertex_parts(Skinner(), ["Hips", "Chest", "LeftFoot", "LeftHand", "Head"], bind)

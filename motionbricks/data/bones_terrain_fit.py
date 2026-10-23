@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass
 
 import numpy as np
 
-SCHEMA_VERSION = "bones-terrain-fit-v2"
+SCHEMA_VERSION = "bones-terrain-fit-v4"
 
 #: Landmark sphere radii in metres; conservative body volume for free-space checks.
 LANDMARK_RADII = {
@@ -53,6 +53,10 @@ class FitConfig:
     ground_thickness_m: float = 0.20
     penetration_report_m: float = 0.02
     min_step_m: float = 0.06
+    skin_ground_percentile: float = 2.0
+    ground_mismatch_m: float = 0.03
+    skin_probe_stride: float = 6.0
+    inverted_min_points: int = 10            # skin samples under a sole patch that mark the foot as upside down
     cluster_link_m: float = 0.30
     palm_below_hips_m: float = 0.35
     kneel_shin_drop_m: float = 0.25
@@ -267,6 +271,26 @@ def _conflicts(points_xz, radius, rect_points, margin=0.0):
     return int(inside.sum()), (center, axis_u, half_u, half_v), u, v, inside
 
 
+def _skin_below_patch(points, polygon_xz, below_height):
+    """Number of skin points inside a patch polygon (XZ) and lower than below_height."""
+    polygon = np.asarray(polygon_xz, dtype=np.float64)
+    low = points[points[:, 1] < below_height]
+    if len(low) == 0 or len(polygon) < 3:
+        return 0
+    lo, hi = polygon.min(axis=0), polygon.max(axis=0)
+    xz = low[:, [0, 2]]
+    xz = xz[np.all((xz >= lo) & (xz <= hi), axis=1)]
+    if len(xz) == 0:
+        return 0
+    inside = np.zeros(len(xz), dtype=bool)
+    for (x0, z0), (x1, z1) in zip(polygon, np.roll(polygon, -1, axis=0)):
+        crosses = (z0 > xz[:, 1]) != (z1 > xz[:, 1])
+        with np.errstate(divide="ignore", invalid="ignore"):
+            x_cross = x0 + (xz[:, 1] - z0) * (x1 - x0) / (z1 - z0)
+        inside ^= crosses & (xz[:, 0] < x_cross)
+    return int(inside.sum())
+
+
 def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_vertices=None):
     """Fit ground and support boxes to one clip; returns a JSON-ready dict.
 
@@ -285,6 +309,29 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
     tolerance = np.where(np.arange(len(radii)) < sole_count, config.sole_tolerance_m, config.landmark_tolerance_m)
     sole_low = np.minimum(soles["left"][..., 1].min(axis=1), soles["right"][..., 1].min(axis=1))
     ground = levels[0] if levels else float(np.percentile(sole_low, 2))
+    ground_source = "lowest_foot_level" if levels else "sole_percentile"
+    skin = np.asarray(skin_vertices, dtype=np.float64) if skin_vertices is not None else None
+    dropped_ghost_levels = []
+    if skin is not None:
+        # The floor is the lowest place the body rests. When feet lie on their tops or toes
+        # (prone, kneeling), the lowest foot "level" sits above the knees, hands and chest.
+        skin_ground = float(np.percentile(skin[..., 1].min(axis=1), config.skin_ground_percentile))
+        if not levels or levels[0] - skin_ground > config.ground_mismatch_m:
+            dropped_ghost_levels = [level for level in levels if level < skin_ground + config.min_step_m]
+            levels = [skin_ground] + [level for level in levels if level >= skin_ground + config.min_step_m]
+            ground, ground_source = skin_ground, "skin_lowest_contacts"
+
+    inverted_levels = []
+    if skin is not None:
+        # A foot "level" with body skin below it inside its own sole footprint is a foot lying
+        # on its top or toes (prone, kneeling), not a sole standing on a raised surface.
+        sample = skin[:, ::max(1, int(config.skin_probe_stride))].reshape(-1, 3)
+        for level in [l for l in levels if l > ground]:
+            own = [q for q in patches if abs(q["height_m"] - level) < config.min_step_m]
+            if own and all(_skin_below_patch(sample, q["polygon_xz_m"], level - config.level_match_m)
+                           >= config.inverted_min_points for q in own):
+                inverted_levels.append(level)
+        levels = [l for l in levels if l not in inverted_levels]
 
     def level_of(height):
         if not levels:
@@ -316,9 +363,18 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         "bottom_m": ground - config.ground_thickness_m,
     }
     minimal, maximal, level_reports = [ground_box], [ground_box], []
-    flat_points = probes.reshape(-1, 3)
-    flat_radii = np.broadcast_to(radii, probes.shape[:2]).reshape(-1)
-    flat_tolerance = np.broadcast_to(tolerance, probes.shape[:2]).reshape(-1)
+    if skin is not None:
+        # With the full skin, free space is the skin itself (subsampled) plus the sole regions;
+        # landmark spheres are coarser than the body and are not used.
+        sole_points = np.concatenate([soles["left"], soles["right"]], axis=1).reshape(-1, 3)
+        skin_points = skin[:, ::max(1, int(config.skin_probe_stride))].reshape(-1, 3)
+        flat_points = np.concatenate([sole_points, skin_points])
+        flat_radii = np.zeros(len(flat_points))
+        flat_tolerance = np.full(len(flat_points), config.sole_tolerance_m)
+    else:
+        flat_points = probes.reshape(-1, 3)
+        flat_radii = np.broadcast_to(radii, probes.shape[:2]).reshape(-1)
+        flat_tolerance = np.broadcast_to(tolerance, probes.shape[:2]).reshape(-1)
     bottom = ground - config.ground_thickness_m
     for level in levels:
         if level == ground:
@@ -379,12 +435,17 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
     metrics = {}
     for variant, boxes in (("minimal", minimal), ("maximal", maximal)):
         metrics[variant] = measure(soles, joints, boxes, used, levels, config)
-        if skin_vertices is not None:
-            metrics[variant]["skin"] = measure_points(np.asarray(skin_vertices, dtype=np.float64), boxes,
-                                                      0.0, config.penetration_report_m)
+        if skin is not None:
+            metrics[variant]["skin"] = measure_points(skin, boxes, 0.0, config.penetration_report_m)
+            metrics[variant]["skin_support"] = measure_points(
+                skin, [b for b in boxes if b["role"] != "ground"], 0.0, config.penetration_report_m)
+            metrics[variant]["skin_ground"] = measure_points(
+                skin, [b for b in boxes if b["role"] == "ground"], 0.0, config.penetration_report_m)
     authority = "skin" if skin_vertices is not None else "landmark_spheres"
 
     def over(metric):
+        if "skin_support" in metric:
+            return metric["skin_support"]["frames_over_report"]
         return metric["skin"]["frames_over_report"] if "skin" in metric else metric["penetration_frames_over_report"]
 
     flags = []
@@ -392,6 +453,10 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         flags.append("no_usable_support")
     if merged_levels:
         flags.append("merged_small_steps")
+    if ground_source == "skin_lowest_contacts":
+        flags.append("ground_from_skin")
+    if inverted_levels:
+        flags.append("inverted_foot_level_dropped")
     if any(c["status"] != "fitted" or c.get("evidence_used") != "all_evidence"
            for r in level_reports for c in r["clusters"]):
         flags.append("evidence_reduced_for_body_conflict")
@@ -402,6 +467,10 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
     return {
         "schema_version": SCHEMA_VERSION, "ground_m": ground,
         "levels_m": [level - ground for level in levels], "merged_levels_m": [m - ground for m in merged_levels],
+        "ground_source": ground_source, "dropped_ghost_levels_m": [g - ground for g in dropped_ghost_levels],
+        "inverted_foot_levels_m": [g - ground for g in inverted_levels],
+        "evidence_patches": [{"height_m": float(p["height_m"]), "level_m": float(level_of(p["height_m"])),
+                              "polygon_xz_m": p["polygon_xz_m"]} for p in used],
         "levels": level_reports, "limb_events": limb_events, "boxes": {"minimal": minimal, "maximal": maximal},
         "metrics": metrics, "penetration_authority": authority, "flags": flags, "config": asdict(config),
         "protocol": {"source_changed": False, "coordinates": "source world, Y up, metres",
