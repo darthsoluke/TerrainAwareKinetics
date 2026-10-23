@@ -1,0 +1,90 @@
+{
+  "box_support": {
+    "fitted_ceiling_clips": 1,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.015702848089915136,
+    "positive_wall_checks": 3,
+    "wall_clips_over_2cm": 0
+  },
+  "crouch": {
+    "fitted_ceiling_clips": 1009,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09999275816780892,
+    "positive_wall_checks": 49,
+    "wall_clips_over_2cm": 28
+  },
+  "flat_control": {
+    "fitted_ceiling_clips": 0,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09999939580585336,
+    "positive_wall_checks": 84,
+    "wall_clips_over_2cm": 43
+  },
+  "kneel": {
+    "fitted_ceiling_clips": 274,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.0999997805774864,
+    "positive_wall_checks": 12,
+    "wall_clips_over_2cm": 8
+  },
+  "known_dimension_support": {
+    "fitted_ceiling_clips": 2,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09173128285693433,
+    "positive_wall_checks": 6,
+    "wall_clips_over_2cm": 1
+  },
+  "ladder": {
+    "fitted_ceiling_clips": 3,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09999956944366768,
+    "positive_wall_checks": 21,
+    "wall_clips_over_2cm": 13
+  },
+  "obstacle_clearance": {
+    "fitted_ceiling_clips": 0,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.022938450454871875,
+    "positive_wall_checks": 2,
+    "wall_clips_over_2cm": 1
+  },
+  "prone": {
+    "fitted_ceiling_clips": 831,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09999999834237677,
+    "positive_wall_checks": 455,
+    "wall_clips_over_2cm": 420
+  },
+  "quadruped": {
+    "fitted_ceiling_clips": 699,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09999996477892495,
+    "positive_wall_checks": 249,
+    "wall_clips_over_2cm": 187
+  },
+  "stairs": {
+    "fitted_ceiling_clips": 0,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.09059804146118033,
+    "positive_wall_checks": 2,
+    "wall_clips_over_2cm": 1
+  },
+  "wall_contact": {
+    "fitted_ceiling_clips": 85,
+    "ceiling_max_penetration_m": 0.0,
+    "positive_ceiling_checks": 0,
+    "wall_max_penetration_m": 0.0999999785395118,
+    "positive_wall_checks": 114,
+    "wall_clips_over_2cm": 75
+  }
+}

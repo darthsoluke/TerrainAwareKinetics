@@ -29,6 +29,8 @@
 
 [支撑几何拟合与可视化](examples/results/bones_terrain_fit_v1_20261023/README.md) 已完成 6,788 条拟合，发布 221 张接触图、38 条 viewer 数据及完整分组指标。
 
+2026-10-24 完成 [地形 v3 四路运行](examples/results/bones_terrain_fit_v3_20261023/README.md)：增加顶棚、侧墙和场景变体，发布 249 张审查图与 79 条 viewer 数据。变体接受率 86.88%，侧墙仍有超限，详见 [执行与质量报告](docs/records/bones_terrain_fit_v3_pro6000_20261023.md)。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

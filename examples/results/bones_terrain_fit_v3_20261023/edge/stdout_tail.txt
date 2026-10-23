@@ -1,0 +1,78 @@
+{"command": ["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/screen_bones_terrain_geometry.py", "--bvh-root", "${BONES_BVH_ROOT}", "--config", "configs/bones_terrain_screen_edge_v1.json", "--output", "runs/bones_screen_edge_v1", "--workers", "4"], "resources": {"time_utc": "2026-10-23T19:00:48.086045+00:00", "available_bytes": 454132092928, "total_bytes": 535717867520, "load_average": [10.86376953125, 13.80322265625, 10.31494140625]}}
+{"selected": 120, "per_group": {"edge_balance": 120}, "configured_stems_without_files": []}
+100/120 screened, 0 failed, 57s
+120/120 screened, 0 failed, 68s
+{
+ "edge_balance": {
+  "clips": 120,
+  "screened": 120,
+  "failed": 0,
+  "flag_fraction": {
+   "low_posture": 0.0083,
+   "no_usable_support": 0.0083,
+   "sustained_crouch": 0.0417
+  },
+  "level_span_m": {
+   "p5": 0.0,
+   "p50": 0.0,
+   "p95": 0.0
+  },
+  "level_count": {
+   "p5": 1.0,
+   "p50": 1.0,
+   "p95": 1.0
+  },
+  "posture_fraction_mean": {
+   "standing": 0.9951,
+   "crouch": 0.0049,
+   "quadruped": 0.0,
+   "prone": 0.0,
+   "other_low": 0.0
+  },
+  "duration_seconds": 873.733
+ }
+}
+{"command": ["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/fit_bones_terrain_support.py", "--screen-run", "runs/bones_screen_edge_v1", "--output", "runs/bones_fit_edge_v1", "--viz-per-stem", "8", "--variants", "2", "--workers", "4"], "resources": {"time_utc": "2026-10-23T19:01:58.886499+00:00", "available_bytes": 402744336384, "total_bytes": 535717867520, "load_average": [61.07958984375, 28.326171875, 15.61474609375]}}
+{"clips": 120, "workers": 4, "skin_stride": 2, "variants": 2}
+fit 120/120, failed 0, 296s
+rendered 11/11
+{
+ "edge_balance": {
+  "clips": 120,
+  "fitted": 120,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 120
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 5,
+   "penetration_max_p95_m": 0.0187
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 5,
+   "penetration_max_p95_m": 0.0187
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 5,
+   "no_usable_support": 1
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_sustained_low_posture": 113,
+    "no_conflict_free_rectangle": 6,
+    "fitted": 1
+   },
+   "explanation_tight_p50": 0.0,
+   "explanation_tight_p10": 0.0,
+   "walls_fitted": 111,
+   "fitted_overhead_clips_with_frames_over_2cm": 0,
+   "variants": 240,
+   "variants_accepted": 240,
+   "upright_ceiling_variants": 123,
+   "clutter_mean": 1.942,
+   "ground_skin_penetration_p95_m": 0.0187
+  }
+ }
+}
+{"name": "E", "commands": [["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/screen_bones_terrain_geometry.py", "--bvh-root", "${BONES_BVH_ROOT}", "--config", "configs/bones_terrain_screen_edge_v1.json", "--output", "runs/bones_screen_edge_v1", "--workers", "4"], ["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/fit_bones_terrain_support.py", "--screen-run", "runs/bones_screen_edge_v1", "--output", "runs/bones_fit_edge_v1", "--viz-per-stem", "8", "--variants", "2", "--workers", "4"]], "output": "runs/bones_fit_edge_v1", "returncodes": [0, 0], "wall_seconds": 415.6, "fit_elapsed_seconds": 344.0, "fitted": 120, "failed": 0, "rendered": 11, "render_failures": [], "memory_samples": 16, "initial_available_bytes": 454132092928, "minimum_available_bytes": 392289955840, "peak_unavailable_bytes": 143427911680}

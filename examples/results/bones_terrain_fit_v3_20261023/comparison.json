@@ -1,0 +1,419 @@
+{
+  "box_support": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 22,
+        "penetration_max_p95_m": 0.5966
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 22,
+        "penetration_max_p95_m": 0.5966
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 23,
+        "penetration_max_p95_m": 0.1035
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 23,
+        "penetration_max_p95_m": 0.109
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "unexplainable_tight_above_bound": 19,
+        "no_sustained_low_posture": 9,
+        "fitted": 1,
+        "no_conflict_free_rectangle": 19
+      },
+      "explanation_tight_p50": 0.0,
+      "explanation_tight_p10": 0.0,
+      "walls_fitted": 43,
+      "fitted_overhead_clips_with_frames_over_2cm": 0,
+      "variants": 192,
+      "variants_accepted": 188,
+      "upright_ceiling_variants": 14,
+      "clutter_mean": 1.984,
+      "ground_skin_penetration_p95_m": 0.1
+    }
+  },
+  "crouch": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 36,
+        "penetration_max_p95_m": 0.0091
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 36,
+        "penetration_max_p95_m": 0.0091
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 157,
+        "penetration_max_p95_m": 0.0274
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 157,
+        "penetration_max_p95_m": 0.0274
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "fitted": 1009,
+        "no_conflict_free_rectangle": 12,
+        "no_sustained_low_posture": 122
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 667,
+      "fitted_overhead_clips_with_frames_over_2cm": 28,
+      "variants": 4572,
+      "variants_accepted": 4460,
+      "upright_ceiling_variants": 223,
+      "clutter_mean": 2.062,
+      "ground_skin_penetration_p95_m": 0.0274
+    }
+  },
+  "flat_control": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 0,
+        "penetration_max_p95_m": 0.002
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 0,
+        "penetration_max_p95_m": 0.002
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 80,
+        "penetration_max_p95_m": 0.0217
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 80,
+        "penetration_max_p95_m": 0.0217
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 900
+      },
+      "explanation_tight_p50": null,
+      "explanation_tight_p10": null,
+      "walls_fitted": 574,
+      "fitted_overhead_clips_with_frames_over_2cm": 43,
+      "variants": 3600,
+      "variants_accepted": 3428,
+      "upright_ceiling_variants": 1828,
+      "clutter_mean": 2.0,
+      "ground_skin_penetration_p95_m": 0.0217
+    }
+  },
+  "kneel": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 619,
+        "penetration_max_p95_m": 0.0962
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 619,
+        "penetration_max_p95_m": 0.0962
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 601,
+        "penetration_max_p95_m": 0.0924
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 602,
+        "penetration_max_p95_m": 0.0924
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "fitted": 274,
+        "no_conflict_free_rectangle": 363,
+        "unexplainable_tight_above_bound": 1
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 623,
+      "fitted_overhead_clips_with_frames_over_2cm": 8,
+      "variants": 2552,
+      "variants_accepted": 2433,
+      "upright_ceiling_variants": 0,
+      "clutter_mean": 1.989,
+      "ground_skin_penetration_p95_m": 0.0926
+    }
+  },
+  "known_dimension_support": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 32,
+        "penetration_max_p95_m": 0.0004
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 32,
+        "penetration_max_p95_m": 0.0004
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 39,
+        "penetration_max_p95_m": 0.0176
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 718,
+        "penetration_max_p95_m": 0.158
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 1736,
+        "no_conflict_free_rectangle": 12,
+        "unexplainable_tight_above_bound": 10,
+        "fitted": 2
+      },
+      "explanation_tight_p50": 0.5625,
+      "explanation_tight_p10": 0.2125,
+      "walls_fitted": 1562,
+      "fitted_overhead_clips_with_frames_over_2cm": 1,
+      "variants": 7040,
+      "variants_accepted": 6717,
+      "upright_ceiling_variants": 3344,
+      "clutter_mean": 1.985,
+      "ground_skin_penetration_p95_m": 0.015
+    }
+  },
+  "ladder": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 16,
+        "penetration_max_p95_m": 0.7135
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 16,
+        "penetration_max_p95_m": 0.7135
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 9,
+        "penetration_max_p95_m": 0.1695
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 15,
+        "penetration_max_p95_m": 0.3928
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 50,
+        "unexplainable_body_reaches_bound": 3,
+        "no_conflict_free_rectangle": 7,
+        "unexplainable_tight_above_bound": 1,
+        "fitted": 3
+      },
+      "explanation_tight_p50": 0.6854,
+      "explanation_tight_p10": 0.1371,
+      "walls_fitted": 51,
+      "fitted_overhead_clips_with_frames_over_2cm": 13,
+      "variants": 256,
+      "variants_accepted": 192,
+      "upright_ceiling_variants": 42,
+      "clutter_mean": 2.023,
+      "ground_skin_penetration_p95_m": 0.1
+    }
+  },
+  "obstacle_clearance": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 4,
+        "penetration_max_p95_m": 0.0156
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 4,
+        "penetration_max_p95_m": 0.0156
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 17,
+        "penetration_max_p95_m": 0.0235
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 19,
+        "penetration_max_p95_m": 0.0245
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 77,
+        "no_conflict_free_rectangle": 9
+      },
+      "explanation_tight_p50": null,
+      "explanation_tight_p10": null,
+      "walls_fitted": 59,
+      "fitted_overhead_clips_with_frames_over_2cm": 1,
+      "variants": 344,
+      "variants_accepted": 340,
+      "upright_ceiling_variants": 149,
+      "clutter_mean": 1.977,
+      "ground_skin_penetration_p95_m": 0.0235
+    }
+  },
+  "prone": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 904,
+        "penetration_max_p95_m": 0.1261
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 904,
+        "penetration_max_p95_m": 0.1261
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 919,
+        "penetration_max_p95_m": 0.1259
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 919,
+        "penetration_max_p95_m": 0.1259
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "fitted": 831,
+        "no_conflict_free_rectangle": 88
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 514,
+      "fitted_overhead_clips_with_frames_over_2cm": 420,
+      "variants": 3676,
+      "variants_accepted": 1992,
+      "upright_ceiling_variants": 0,
+      "clutter_mean": 1.967,
+      "ground_skin_penetration_p95_m": 0.1
+    }
+  },
+  "quadruped": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 830,
+        "penetration_max_p95_m": 0.1298
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 830,
+        "penetration_max_p95_m": 0.1298
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 830,
+        "penetration_max_p95_m": 0.1295
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 830,
+        "penetration_max_p95_m": 0.1295
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_conflict_free_rectangle": 132,
+        "fitted": 699
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 520,
+      "fitted_overhead_clips_with_frames_over_2cm": 187,
+      "variants": 3324,
+      "variants_accepted": 2576,
+      "upright_ceiling_variants": 0,
+      "clutter_mean": 2.038,
+      "ground_skin_penetration_p95_m": 0.1
+    }
+  },
+  "stairs": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 21,
+        "penetration_max_p95_m": 0.7385
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 21,
+        "penetration_max_p95_m": 0.7385
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 16,
+        "penetration_max_p95_m": 0.1607
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 33,
+        "penetration_max_p95_m": 0.3712
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 41,
+        "no_conflict_free_rectangle": 7,
+        "unexplainable_tight_above_bound": 1
+      },
+      "explanation_tight_p50": null,
+      "explanation_tight_p10": null,
+      "walls_fitted": 22,
+      "fitted_overhead_clips_with_frames_over_2cm": 1,
+      "variants": 196,
+      "variants_accepted": 164,
+      "upright_ceiling_variants": 23,
+      "clutter_mean": 1.883,
+      "ground_skin_penetration_p95_m": 0.0811
+    }
+  },
+  "wall_contact": {
+    "v1": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 36,
+        "penetration_max_p95_m": 0.0694
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 36,
+        "penetration_max_p95_m": 0.0694
+      }
+    },
+    "v3": {
+      "minimal": {
+        "clips_with_frames_over_2cm": 47,
+        "penetration_max_p95_m": 0.0676
+      },
+      "maximal": {
+        "clips_with_frames_over_2cm": 47,
+        "penetration_max_p95_m": 0.0676
+      }
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 246,
+        "fitted": 85,
+        "no_conflict_free_rectangle": 19
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 339,
+      "fitted_overhead_clips_with_frames_over_2cm": 75,
+      "variants": 1400,
+      "variants_accepted": 1100,
+      "upright_ceiling_variants": 479,
+      "clutter_mean": 1.979,
+      "ground_skin_penetration_p95_m": 0.0677
+    }
+  }
+}

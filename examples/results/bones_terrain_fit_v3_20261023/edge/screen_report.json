@@ -1,0 +1,81 @@
+{
+  "schema_version": "bones-terrain-screen-v1",
+  "git_commit": "f49e5abae96a29edf8249751405392ba2740d624",
+  "config": {
+    "path": "configs/bones_terrain_screen_edge_v1.json",
+    "sha256": "e3c7c10614b95f491686811e7aad7264fc87843d95f0c353f9ad04b9d4e9fb31",
+    "version": "bones-terrain-screen-edge-v1"
+  },
+  "bvh_root": "${BONES_BVH_ROOT}",
+  "bvh_files_found": 71132,
+  "arguments": {
+    "groups": null,
+    "limit_per_stem": null,
+    "workers": 4
+  },
+  "selection": {
+    "selected": 120,
+    "per_group": {
+      "edge_balance": 120
+    },
+    "per_stem": {
+      "on_the_edge": {
+        "group": "edge_balance",
+        "available": 120,
+        "selected": 120
+      }
+    },
+    "configured_stems_without_files": []
+  },
+  "thresholds": {
+    "screen": {
+      "stationary_speed_mps": 0.15,
+      "min_event_seconds": 0.12,
+      "hand_level_tolerance_m": 0.08,
+      "knee_level_tolerance_m": 0.12,
+      "forearm_level_tolerance_m": 0.1,
+      "standing_hip_ratio": 0.8,
+      "crouch_hip_ratio": 0.45,
+      "prone_chest_height_m": 0.4,
+      "prone_pitch_deg": 60.0,
+      "multi_level_span_m": 0.1,
+      "level_merge_m": 0.03
+    },
+    "support": {
+      "stationary_speed_mps": 0.15,
+      "min_stationary_seconds": 0.1,
+      "min_event_seconds": 0.12,
+      "local_low_window_seconds": 0.3,
+      "local_low_band_m": 0.04,
+      "sole_bottom_band_m": 0.015,
+      "min_stationary_vertices": 3,
+      "max_fit_residual_m": 0.02,
+      "level_merge_m": 0.03,
+      "min_level_span_m": 0.12,
+      "min_levels": 3,
+      "min_polygon_area_m2": 0.0001,
+      "max_free_space_penetration_m": 0.03,
+      "min_root_height_span_m": 0.1,
+      "require_stairs": true
+    }
+  },
+  "protocol": {
+    "fps": 30.0,
+    "coordinates": "source world, Y up, metres",
+    "source_changed": false,
+    "conversion": "Kimodo BVH -> 30 Hz SLERP -> SOMA77 FK; official skin sole regions (98 vertices per foot)",
+    "status": "screen evidence for selecting fitting inputs; not fitted terrain"
+  },
+  "module_sha256": {
+    "motionbricks/data/bones_terrain_screen.py": "3d865f33a9445aef4fe68701d7dc10ffacf90d77630f3b7c69a531949605e8f5",
+    "motionbricks/data/stair_support.py": "922980f1768d1f8a23d460bca9c0bb10e83b7544b3ce56a6780aa632ba8008bb",
+    "scripts/screen_bones_terrain_geometry.py": "7a01aa062bb0bb7a5378746f024752ee8072f2035cfe9604e3d204dcf537d71b"
+  },
+  "elapsed_seconds": 68.3,
+  "screened": 120,
+  "failed": 0,
+  "failure_reasons": {},
+  "standing_hip_height_m": [
+    1.0092086791992188
+  ]
+}

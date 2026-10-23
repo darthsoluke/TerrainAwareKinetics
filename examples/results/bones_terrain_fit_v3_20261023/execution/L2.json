@@ -1,0 +1,42 @@
+{
+  "name": "L2",
+  "commands": [
+    [
+      "${PFNN_PROJECT}/env/bin/python",
+      "-u",
+      "scripts/fit_bones_terrain_support.py",
+      "--screen-run",
+      "runs/bones_screen_v1_full",
+      "--output",
+      "runs/bones_fit_v3_L2",
+      "--groups",
+      "quadruped",
+      "prone",
+      "--viz-per-stem",
+      "2",
+      "--worst-per-group",
+      "3",
+      "--gif",
+      "--variants",
+      "4",
+      "--skin-stride",
+      "2",
+      "--workers",
+      "20"
+    ]
+  ],
+  "output": "runs/bones_fit_v3_L2",
+  "returncodes": [
+    0
+  ],
+  "wall_seconds": 1435.0,
+  "fit_elapsed_seconds": 1434.1,
+  "fitted": 1750,
+  "failed": 0,
+  "rendered": 44,
+  "render_failures": [],
+  "memory_samples": 49,
+  "initial_available_bytes": 454134398976,
+  "minimum_available_bytes": 381883469824,
+  "peak_unavailable_bytes": 153834397696
+}

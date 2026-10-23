@@ -1,0 +1,100 @@
+   "walls_fitted": 51,
+   "fitted_overhead_clips_with_frames_over_2cm": 13,
+   "variants": 256,
+   "variants_accepted": 192,
+   "upright_ceiling_variants": 42,
+   "clutter_mean": 2.023,
+   "ground_skin_penetration_p95_m": 0.1
+  }
+ },
+ "obstacle_clearance": {
+  "clips": 86,
+  "fitted": 86,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 78,
+   "1": 5,
+   "2": 2,
+   "3": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 17,
+   "penetration_max_p95_m": 0.0235
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 19,
+   "penetration_max_p95_m": 0.0245
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 19,
+   "evidence_reduced_for_body_conflict": 10,
+   "support_rejected": 9,
+   "merged_small_steps": 5
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_sustained_low_posture": 77,
+    "no_conflict_free_rectangle": 9
+   },
+   "explanation_tight_p50": null,
+   "explanation_tight_p10": null,
+   "walls_fitted": 59,
+   "fitted_overhead_clips_with_frames_over_2cm": 1,
+   "variants": 344,
+   "variants_accepted": 340,
+   "upright_ceiling_variants": 149,
+   "clutter_mean": 1.977,
+   "ground_skin_penetration_p95_m": 0.0235
+  }
+ },
+ "stairs": {
+  "clips": 49,
+  "fitted": 49,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 8,
+   "1": 12,
+   "2": 2,
+   "3": 2,
+   "4": 3,
+   "5": 3,
+   "6": 5,
+   "7": 5,
+   "8": 5,
+   "9": 3,
+   "10": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 16,
+   "penetration_max_p95_m": 0.1607
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 33,
+   "penetration_max_p95_m": 0.3712
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 33,
+   "evidence_reduced_for_body_conflict": 14,
+   "support_rejected": 14
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_sustained_low_posture": 41,
+    "no_conflict_free_rectangle": 7,
+    "unexplainable_tight_above_bound": 1
+   },
+   "explanation_tight_p50": null,
+   "explanation_tight_p10": null,
+   "walls_fitted": 22,
+   "fitted_overhead_clips_with_frames_over_2cm": 1,
+   "variants": 196,
+   "variants_accepted": 164,
+   "upright_ceiling_variants": 23,
+   "clutter_mean": 1.883,
+   "ground_skin_penetration_p95_m": 0.0811
+  }
+ }
+}
+{"name": "S", "commands": [["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/fit_bones_terrain_support.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v3_S", "--groups", "known_dimension_support", "box_support", "stairs", "obstacle_clearance", "ladder", "flat_control", "--viz-per-stem", "2", "--worst-per-group", "3", "--gif", "--variants", "4", "--skin-stride", "2", "--workers", "20"]], "output": "runs/bones_fit_v3_S", "returncodes": [0], "wall_seconds": 1447.3, "fit_elapsed_seconds": 1446.4, "fitted": 2907, "failed": 0, "rendered": 123, "render_failures": [], "memory_samples": 50, "initial_available_bytes": 454135431168, "minimum_available_bytes": 381895921664, "peak_unavailable_bytes": 153821945856}

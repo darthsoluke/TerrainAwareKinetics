@@ -1,0 +1,82 @@
+{
+  "prone": {
+    "clips": 919,
+    "fitted": 919,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 918,
+      "2": 1
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 919,
+      "penetration_max_p95_m": 0.1259
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 919,
+      "penetration_max_p95_m": 0.1259
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 919,
+      "merged_small_steps": 375,
+      "evidence_reduced_for_body_conflict": 3,
+      "support_rejected": 3,
+      "no_usable_support": 31
+    },
+    "scene": {
+      "ceiling_status": {
+        "fitted": 831,
+        "no_conflict_free_rectangle": 88
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 514,
+      "fitted_overhead_clips_with_frames_over_2cm": 420,
+      "variants": 3676,
+      "variants_accepted": 1992,
+      "upright_ceiling_variants": 0,
+      "clutter_mean": 1.967,
+      "ground_skin_penetration_p95_m": 0.1
+    }
+  },
+  "quadruped": {
+    "clips": 831,
+    "fitted": 831,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 830,
+      "1": 1
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 830,
+      "penetration_max_p95_m": 0.1295
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 830,
+      "penetration_max_p95_m": 0.1295
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "no_usable_support": 23,
+      "penetration_over_report": 830,
+      "merged_small_steps": 133,
+      "evidence_reduced_for_body_conflict": 4,
+      "support_rejected": 4
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_conflict_free_rectangle": 132,
+        "fitted": 699
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 520,
+      "fitted_overhead_clips_with_frames_over_2cm": 187,
+      "variants": 3324,
+      "variants_accepted": 2576,
+      "upright_ceiling_variants": 0,
+      "clutter_mean": 2.038,
+      "ground_skin_penetration_p95_m": 0.1
+    }
+  }
+}

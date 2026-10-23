@@ -1,0 +1,38 @@
+{
+  "name": "P48",
+  "commands": [
+    [
+      "${PFNN_PROJECT}/env/bin/python",
+      "-u",
+      "scripts/fit_bones_terrain_support.py",
+      "--screen-run",
+      "runs/bones_screen_v1_full",
+      "--output",
+      "runs/bones_fit_v3_pilot_48",
+      "--limit-per-stem",
+      "2",
+      "--viz-per-stem",
+      "2",
+      "--variants",
+      "4",
+      "--skin-stride",
+      "2",
+      "--workers",
+      "48"
+    ]
+  ],
+  "output": "runs/bones_fit_v3_pilot_48",
+  "returncodes": [
+    0
+  ],
+  "wall_seconds": 87.1,
+  "fit_elapsed_seconds": 86.2,
+  "fitted": 196,
+  "failed": 0,
+  "rendered": 196,
+  "render_failures": [],
+  "memory_samples": 4,
+  "initial_available_bytes": 454119280640,
+  "minimum_available_bytes": 406009360384,
+  "peak_unavailable_bytes": 129708507136
+}

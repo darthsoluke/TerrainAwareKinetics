@@ -1,0 +1,23 @@
+{
+  "pngs_decoded_nonblank": 249,
+  "png_bytes": 33982087,
+  "gifs_checked_on_pro6000": 225,
+  "viewer_counts": {
+    "viewer": 68,
+    "edge/viewer": 11
+  },
+  "prior_viewers_motion_exactly_unchanged": 38,
+  "prior_input_hashes_unchanged": 8,
+  "failed_markers": 0,
+  "relaunches": 0,
+  "wall_scan_warning_occurrences": {
+    "P48": 13,
+    "S": 12,
+    "L1": 0,
+    "L2": 0,
+    "E": 0
+  },
+  "all_shard_fit_jsons_finite": 6788,
+  "skin_vertices": 18056,
+  "skin_stride": 2
+}

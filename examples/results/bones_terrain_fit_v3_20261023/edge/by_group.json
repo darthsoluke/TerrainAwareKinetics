@@ -1,0 +1,39 @@
+{
+  "edge_balance": {
+    "clips": 120,
+    "fitted": 120,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 120
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 5,
+      "penetration_max_p95_m": 0.0187
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 5,
+      "penetration_max_p95_m": 0.0187
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "penetration_over_report": 5,
+      "no_usable_support": 1
+    },
+    "scene": {
+      "ceiling_status": {
+        "no_sustained_low_posture": 113,
+        "no_conflict_free_rectangle": 6,
+        "fitted": 1
+      },
+      "explanation_tight_p50": 0.0,
+      "explanation_tight_p10": 0.0,
+      "walls_fitted": 111,
+      "fitted_overhead_clips_with_frames_over_2cm": 0,
+      "variants": 240,
+      "variants_accepted": 240,
+      "upright_ceiling_variants": 123,
+      "clutter_mean": 1.942,
+      "ground_skin_penetration_p95_m": 0.0187
+    }
+  }
+}

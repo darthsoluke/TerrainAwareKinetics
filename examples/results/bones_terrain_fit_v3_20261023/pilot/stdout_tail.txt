@@ -1,0 +1,100 @@
+   "no_usable_support": 1
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_conflict_free_rectangle": 5,
+    "fitted": 19
+   },
+   "explanation_tight_p50": 1.0,
+   "explanation_tight_p10": 0.9688,
+   "walls_fitted": 16,
+   "fitted_overhead_clips_with_frames_over_2cm": 6,
+   "variants": 96,
+   "variants_accepted": 72,
+   "upright_ceiling_variants": 0,
+   "clutter_mean": 1.896,
+   "ground_skin_penetration_p95_m": 0.1
+  }
+ },
+ "stairs": {
+  "clips": 12,
+  "fitted": 12,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 1,
+   "1": 3,
+   "2": 1,
+   "3": 1,
+   "4": 1,
+   "5": 1,
+   "6": 2,
+   "7": 2
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 2,
+   "penetration_max_p95_m": 0.0511
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 8,
+   "penetration_max_p95_m": 0.2411
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "evidence_reduced_for_body_conflict": 5,
+   "support_rejected": 5,
+   "penetration_over_report": 8
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_sustained_low_posture": 10,
+    "no_conflict_free_rectangle": 2
+   },
+   "explanation_tight_p50": null,
+   "explanation_tight_p10": null,
+   "walls_fitted": 6,
+   "fitted_overhead_clips_with_frames_over_2cm": 1,
+   "variants": 48,
+   "variants_accepted": 40,
+   "upright_ceiling_variants": 5,
+   "clutter_mean": 1.958,
+   "ground_skin_penetration_p95_m": 0.0811
+  }
+ },
+ "wall_contact": {
+  "clips": 16,
+  "fitted": 16,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 16
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 4,
+   "penetration_max_p95_m": 0.1044
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 4,
+   "penetration_max_p95_m": 0.1044
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 4
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_conflict_free_rectangle": 2,
+    "fitted": 3,
+    "no_sustained_low_posture": 11
+   },
+   "explanation_tight_p50": 1.0,
+   "explanation_tight_p10": 0.9184,
+   "walls_fitted": 15,
+   "fitted_overhead_clips_with_frames_over_2cm": 3,
+   "variants": 64,
+   "variants_accepted": 52,
+   "upright_ceiling_variants": 23,
+   "clutter_mean": 2.0,
+   "ground_skin_penetration_p95_m": 0.0978
+  }
+ }
+}
+{"name": "P48", "commands": [["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/fit_bones_terrain_support.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v3_pilot_48", "--limit-per-stem", "2", "--viz-per-stem", "2", "--variants", "4", "--skin-stride", "2", "--workers", "48"]], "output": "runs/bones_fit_v3_pilot_48", "returncodes": [0], "wall_seconds": 87.1, "fit_elapsed_seconds": 86.2, "fitted": 196, "failed": 0, "rendered": 196, "render_failures": [], "memory_samples": 4, "initial_available_bytes": 454119280640, "minimum_available_bytes": 406009360384, "peak_unavailable_bytes": 129708507136}

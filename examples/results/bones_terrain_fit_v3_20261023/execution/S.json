@@ -1,0 +1,46 @@
+{
+  "name": "S",
+  "commands": [
+    [
+      "${PFNN_PROJECT}/env/bin/python",
+      "-u",
+      "scripts/fit_bones_terrain_support.py",
+      "--screen-run",
+      "runs/bones_screen_v1_full",
+      "--output",
+      "runs/bones_fit_v3_S",
+      "--groups",
+      "known_dimension_support",
+      "box_support",
+      "stairs",
+      "obstacle_clearance",
+      "ladder",
+      "flat_control",
+      "--viz-per-stem",
+      "2",
+      "--worst-per-group",
+      "3",
+      "--gif",
+      "--variants",
+      "4",
+      "--skin-stride",
+      "2",
+      "--workers",
+      "20"
+    ]
+  ],
+  "output": "runs/bones_fit_v3_S",
+  "returncodes": [
+    0
+  ],
+  "wall_seconds": 1447.3,
+  "fit_elapsed_seconds": 1446.4,
+  "fitted": 2907,
+  "failed": 0,
+  "rendered": 123,
+  "render_failures": [],
+  "memory_samples": 50,
+  "initial_available_bytes": 454135431168,
+  "minimum_available_bytes": 381895921664,
+  "peak_unavailable_bytes": 153821945856
+}

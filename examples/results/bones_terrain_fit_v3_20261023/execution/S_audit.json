@@ -1,0 +1,3423 @@
+{
+  "name": "S",
+  "source_commit": "f49e5abae96a29edf8249751405392ba2740d624",
+  "fit_count": 2907,
+  "groups": {
+    "flat_control": {
+      "clips": 900,
+      "skin_vertices": {
+        "18056": 900
+      },
+      "skin_stride": {
+        "2": 900
+      },
+      "fitted_check_failures": {
+        "wall_1": 43
+      },
+      "clips_with_fitted_check_over_2cm": 43,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 43,
+      "rejected_variants": 172,
+      "clips_with_rejected_variants": 43,
+      "support_cluster_status": {},
+      "wall_status": {
+        "no_contact_plane": 47,
+        "fitted": 574,
+        "no_still_segment": 279
+      },
+      "wall_shift_max_m": 10.77774139225483
+    },
+    "obstacle_clearance": {
+      "clips": 86,
+      "skin_vertices": {
+        "18056": 86
+      },
+      "skin_stride": {
+        "2": 86
+      },
+      "fitted_check_failures": {
+        "wall_1": 1
+      },
+      "clips_with_fitted_check_over_2cm": 1,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 1,
+      "rejected_variants": 4,
+      "clips_with_rejected_variants": 1,
+      "support_cluster_status": {
+        "rejected_conflicts_with_body": 13,
+        "fitted": 12
+      },
+      "wall_status": {
+        "no_still_segment": 7,
+        "fitted": 59,
+        "no_contact_plane": 20
+      },
+      "wall_shift_max_m": 5.697729794458819
+    },
+    "box_support": {
+      "clips": 48,
+      "skin_vertices": {
+        "18056": 48
+      },
+      "skin_stride": {
+        "2": 48
+      },
+      "fitted_check_failures": {},
+      "clips_with_fitted_check_over_2cm": 0,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 0,
+      "rejected_variants": 4,
+      "clips_with_rejected_variants": 1,
+      "support_cluster_status": {
+        "fitted": 46,
+        "rejected_conflicts_with_body": 6
+      },
+      "wall_status": {
+        "no_contact_plane": 5,
+        "fitted": 43
+      },
+      "wall_shift_max_m": 4.373219173156098
+    },
+    "known_dimension_support": {
+      "clips": 1760,
+      "skin_vertices": {
+        "18056": 1760
+      },
+      "skin_stride": {
+        "2": 1760
+      },
+      "fitted_check_failures": {
+        "wall_1": 1
+      },
+      "clips_with_fitted_check_over_2cm": 1,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 1,
+      "rejected_variants": 323,
+      "clips_with_rejected_variants": 83,
+      "support_cluster_status": {
+        "fitted": 1780,
+        "rejected_conflicts_with_body": 13
+      },
+      "wall_status": {
+        "fitted": 1562,
+        "no_contact_plane": 182,
+        "no_still_segment": 16
+      },
+      "wall_shift_max_m": 1.3876107510350957
+    },
+    "ladder": {
+      "clips": 64,
+      "skin_vertices": {
+        "18056": 64
+      },
+      "skin_stride": {
+        "2": 64
+      },
+      "fitted_check_failures": {
+        "wall_1": 13
+      },
+      "clips_with_fitted_check_over_2cm": 13,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 13,
+      "rejected_variants": 64,
+      "clips_with_rejected_variants": 16,
+      "support_cluster_status": {
+        "fitted": 16,
+        "rejected_conflicts_with_body": 8
+      },
+      "wall_status": {
+        "fitted": 51,
+        "no_contact_plane": 12,
+        "no_still_segment": 1
+      },
+      "wall_shift_max_m": 0.8101221296191216
+    },
+    "stairs": {
+      "clips": 49,
+      "skin_vertices": {
+        "18056": 49
+      },
+      "skin_stride": {
+        "2": 49
+      },
+      "fitted_check_failures": {
+        "wall_1": 1
+      },
+      "clips_with_fitted_check_over_2cm": 1,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 1,
+      "rejected_variants": 32,
+      "clips_with_rejected_variants": 8,
+      "support_cluster_status": {
+        "fitted": 191,
+        "rejected_conflicts_with_body": 22
+      },
+      "wall_status": {
+        "fitted": 22,
+        "no_still_segment": 17,
+        "no_contact_plane": 10
+      },
+      "wall_shift_max_m": 3.722159978264454
+    }
+  },
+  "examples": [
+    {
+      "filename": "come_down_50cm_box_R_002__A107",
+      "stem": "come_down_50cm_box",
+      "group": "known_dimension_support",
+      "fit_sha256": "71d47aa81d56e527d5450cf9babcab95fcbc51cd9648678be2e34c1a43b80939",
+      "levels_m": [
+        0.0,
+        0.5868569267913699
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 57,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0018984796479344368,
+          "skin": {
+            "max_m": 0.5295829474925995,
+            "p99_m": 0.5289756017550826,
+            "frames_over_report": 12,
+            "frames": 48
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 57,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0018984796479344368,
+          "skin": {
+            "max_m": 0.5295829474925995,
+            "p99_m": 0.5289756017550826,
+            "frames_over_report": 12,
+            "frames": 48
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 3,
+        "frames": 48,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 32,
+        "best_score": 732.0,
+        "status": "fitted",
+        "score": 732.0,
+        "stable_seconds": 1.6,
+        "contact_span_m": 0.22638699203553708,
+        "length_m": 2.226386992035537,
+        "body_beyond_plane_m": 0.01980894504313524,
+        "plane_shift_m": 0.024808945043135244
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 48,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.02594388843361345,
+            "ground": 0.010011174716055393
+          },
+          "frames_over_report": {
+            "solids": 11,
+            "ground": 0
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.02594388843361345,
+            "ground": 0.010011174716055393
+          },
+          "frames_over_report": {
+            "solids": 11,
+            "ground": 0
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.02594388843361345,
+            "ground": 0.010011174716055393
+          },
+          "frames_over_report": {
+            "solids": 11,
+            "ground": 0
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.025943888433613393,
+            "ground": 0.010011174716055393
+          },
+          "frames_over_report": {
+            "solids": 11,
+            "ground": 0
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        }
+      ]
+    },
+    {
+      "filename": "come_up_50cm_box_R_001__A046",
+      "stem": "come_up_50cm_box",
+      "group": "known_dimension_support",
+      "fit_sha256": "483559bc6b8ff3e53bb50b245335bab8410f350bb5aad033e3d392fa68f4d469",
+      "levels_m": [
+        0.0,
+        0.5450671492144465
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 101,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004935648292303085,
+          "skin": {
+            "max_m": 0.012287718243896961,
+            "p99_m": 0.012170320451259613,
+            "frames_over_report": 0,
+            "frames": 103
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 101,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004935648292303085,
+          "skin": {
+            "max_m": 0.058387622237205505,
+            "p99_m": 0.012285447977483273,
+            "frames_over_report": 1,
+            "frames": 103
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 103,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 71,
+        "best_score": 455.0,
+        "status": "fitted",
+        "score": 455.0,
+        "stable_seconds": 2.4,
+        "contact_span_m": 1.338798780451495,
+        "length_m": 3.338798780451495,
+        "body_beyond_plane_m": 1.3826107510350958,
+        "plane_shift_m": 1.3876107510350957
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 103,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "come_up_50cm_box_R_003__A102",
+      "stem": "come_up_50cm_box",
+      "group": "known_dimension_support",
+      "fit_sha256": "efc1e0c6e3c26affafa5599d772c7ba9631e26f9cce9466fa81bf6bc75199816",
+      "levels_m": [
+        0.0,
+        0.5927909828023985
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 79,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0018417498795315623,
+          "skin": {
+            "max_m": 0.007206395268440247,
+            "p99_m": 0.007177253147820011,
+            "frames_over_report": 0,
+            "frames": 52
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 79,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0018417498795315623,
+          "skin": {
+            "max_m": 0.06639702618122101,
+            "p99_m": 0.04270022094249734,
+            "frames_over_report": 1,
+            "frames": 52
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 52,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 21,
+        "best_score": 533.0,
+        "status": "fitted",
+        "score": 533.0,
+        "stable_seconds": 0.8,
+        "contact_span_m": 0.8266441480431544,
+        "length_m": 2.8266441480431546,
+        "body_beyond_plane_m": 1.0495169173179733,
+        "plane_shift_m": 1.0545169173179731
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 52,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jog_arc_cw_loop_002__A045",
+      "stem": "jog_arc",
+      "group": "flat_control",
+      "fit_sha256": "12daaeaa54aa9035cef3b007780d74f47663e40f48e7e65e2e67c916a0b56821",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.010227507697418332,
+          "penetration_p99_m": 0.009340332327410574,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 303,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.018113251077011228,
+          "skin": {
+            "max_m": 0.030057854251936078,
+            "p99_m": 0.028996505187824373,
+            "frames_over_report": 11,
+            "frames": 103
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.010227507697418332,
+          "penetration_p99_m": 0.009340332327410574,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 303,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.018113251077011228,
+          "skin": {
+            "max_m": 0.030057854251936078,
+            "p99_m": 0.028996505187824373,
+            "frames_over_report": 11,
+            "frames": 103
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 103,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 6,
+        "status": "no_still_segment"
+      },
+      "fitted_checks": {},
+      "rejected_variants": []
+    },
+    {
+      "filename": "jog_backward_loop_002__A037",
+      "stem": "jog_backward",
+      "group": "flat_control",
+      "fit_sha256": "c0fb4992478f933365913762e7a5a8e7888476d6026cc555e2e11db0413f97e1",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 340,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.022497739642858505,
+          "skin": {
+            "max_m": 0.015727223828434944,
+            "p99_m": 0.012960296124219894,
+            "frames_over_report": 0,
+            "frames": 151
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 340,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.022497739642858505,
+          "skin": {
+            "max_m": 0.015727223828434944,
+            "p99_m": 0.012960296124219894,
+            "frames_over_report": 0,
+            "frames": 151
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 151,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 44,
+        "best_score": 402.0,
+        "status": "fitted",
+        "score": 402.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 5.8550648810166654,
+        "length_m": 7.8550648810166654,
+        "body_beyond_plane_m": 10.410619633686688,
+        "plane_shift_m": 10.415619633686687
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 151,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jog_sideway_135_loop_001__A043",
+      "stem": "jog_sideway",
+      "group": "flat_control",
+      "fit_sha256": "d0bfe601be6461e3f10e914b2982be5d06f56da4fe56a9536e9e83679cd09659",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.012871688716113567,
+          "penetration_p99_m": 0.012802029214799403,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 205,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01781883928924799,
+          "skin": {
+            "max_m": 0.03287168871611357,
+            "p99_m": 0.032642852328717706,
+            "frames_over_report": 11,
+            "frames": 90
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.012871688716113567,
+          "penetration_p99_m": 0.012802029214799403,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 205,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01781883928924799,
+          "skin": {
+            "max_m": 0.03287168871611357,
+            "p99_m": 0.032642852328717706,
+            "frames_over_report": 11,
+            "frames": 90
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 90,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 12,
+        "best_score": 542.5,
+        "status": "fitted",
+        "score": 542.5,
+        "stable_seconds": 0.5333333333333333,
+        "contact_span_m": 7.050725087522662,
+        "length_m": 9.050725087522661,
+        "body_beyond_plane_m": 0.28368952326705316,
+        "plane_shift_m": 0.28868952326705316
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 90,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_form_box_to_safety_roll_180_R_001__A501",
+      "stem": "jump_form_box_to_safety_roll",
+      "group": "box_support",
+      "fit_sha256": "6d2a6078c17204cebae76899cc5d6a2bd369234151d10651a9eb2c3481e3737f",
+      "levels_m": [
+        0.0,
+        0.08038997126277536,
+        0.5489128552144393
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "evidence_reduced_for_body_conflict",
+        "support_rejected",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.051536703133024275,
+          "penetration_p99_m": 0.05148562564048916,
+          "penetration_frames_over_report": 22,
+          "support_evidence_points": 120,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08038997126277536,
+          "skin": {
+            "max_m": 0.052735922508873045,
+            "p99_m": 0.05234313028398901,
+            "frames_over_report": 12,
+            "frames": 77
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.051536703133024275,
+          "penetration_p99_m": 0.05148562564048916,
+          "penetration_frames_over_report": 22,
+          "support_evidence_points": 120,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08038997126277536,
+          "skin": {
+            "max_m": 0.052735922508873045,
+            "p99_m": 0.05234313028398901,
+            "frames_over_report": 12,
+            "frames": 77
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 32,
+        "frames": 77,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 9,
+          "other_low": 4,
+          "quadruped": 12,
+          "prone": 7
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 313,
+        "core_cells": 223,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 23,
+        "best_score": 762.5,
+        "status": "fitted",
+        "score": 762.5,
+        "stable_seconds": 0.6666666666666666,
+        "contact_span_m": 1.0405150651931763,
+        "length_m": 3.0405150651931763,
+        "body_beyond_plane_m": 3.524273157119751,
+        "plane_shift_m": 3.529273157119751
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 77,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_form_box_to_safety_roll_180_R_001__A502",
+      "stem": "jump_form_box_to_safety_roll",
+      "group": "box_support",
+      "fit_sha256": "b3432fb173c51b7ba34dcc5b6db47014e298ab243b76056e0dba9ffa9664ce40",
+      "levels_m": [
+        0.0,
+        0.5204433230683208
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.16468746680766344,
+          "penetration_p99_m": 0.1573910238221288,
+          "penetration_frames_over_report": 34,
+          "support_evidence_points": 150,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.029444201849400997,
+          "skin": {
+            "max_m": 0.16349848825484514,
+            "p99_m": 0.15737458307296034,
+            "frames_over_report": 21,
+            "frames": 85
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.16468746680766344,
+          "penetration_p99_m": 0.1573910238221288,
+          "penetration_frames_over_report": 34,
+          "support_evidence_points": 150,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.029444201849400997,
+          "skin": {
+            "max_m": 0.16349848825484514,
+            "p99_m": 0.15737458307296034,
+            "frames_over_report": 21,
+            "frames": 85
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 33,
+        "frames": 85,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 10,
+          "other_low": 8,
+          "quadruped": 8,
+          "prone": 7
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 288,
+        "core_cells": 239,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 33,
+        "best_score": 958.0,
+        "status": "fitted",
+        "score": 958.0,
+        "stable_seconds": 1.4666666666666666,
+        "contact_span_m": 1.798126459121704,
+        "length_m": 3.798126459121704,
+        "body_beyond_plane_m": 0.14600646495819092,
+        "plane_shift_m": 0.15100646495819092
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 85,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_form_box_to_safety_roll_360_R_001__A502",
+      "stem": "jump_form_box_to_safety_roll",
+      "group": "box_support",
+      "fit_sha256": "13212961f952fd987750ed411089fb16e22e44c2667853b5eb64792a3315ed96",
+      "levels_m": [
+        0.0,
+        0.5277054961770773
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.201452711597085,
+          "penetration_p99_m": 0.1952656780928374,
+          "penetration_frames_over_report": 40,
+          "support_evidence_points": 145,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.02424025721848011,
+          "skin": {
+            "max_m": 0.20219636894762516,
+            "p99_m": 0.19513183750212193,
+            "frames_over_report": 27,
+            "frames": 84
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.201452711597085,
+          "penetration_p99_m": 0.1952656780928374,
+          "penetration_frames_over_report": 40,
+          "support_evidence_points": 145,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.02424025721848011,
+          "skin": {
+            "max_m": 0.20219636894762516,
+            "p99_m": 0.19513183750212193,
+            "frames_over_report": 28,
+            "frames": 84
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 35,
+        "frames": 84,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 3,
+          "quadruped": 14,
+          "prone": 10
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 246,
+        "core_cells": 164,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 25,
+        "best_score": 558.0,
+        "status": "fitted",
+        "score": 558.0,
+        "stable_seconds": 0.7333333333333333,
+        "contact_span_m": 3.0675722889981856,
+        "length_m": 5.067572288998186,
+        "body_beyond_plane_m": 1.8310238641451217,
+        "plane_shift_m": 1.8360238641451219
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 84,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_form_box_to_safety_roll_360_R_001__A503",
+      "stem": "jump_form_box_to_safety_roll",
+      "group": "box_support",
+      "fit_sha256": "ed459fb78aa03b8dffbbcf1209773e1688bfab822df7460d22a6f90647dbe83d",
+      "levels_m": [
+        0.0,
+        0.48209960060194135
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "evidence_reduced_for_body_conflict",
+        "support_rejected",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.06218330396339297,
+          "penetration_p99_m": 0.061336679756641393,
+          "penetration_frames_over_report": 19,
+          "support_evidence_points": 102,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.48209960060194135,
+          "skin": {
+            "max_m": 0.048225201200693846,
+            "p99_m": 0.047829667907208204,
+            "frames_over_report": 10,
+            "frames": 64
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.06218330396339297,
+          "penetration_p99_m": 0.061336679756641393,
+          "penetration_frames_over_report": 19,
+          "support_evidence_points": 102,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.48209960060194135,
+          "skin": {
+            "max_m": 0.048225201200693846,
+            "p99_m": 0.047829667907208204,
+            "frames_over_report": 10,
+            "frames": 64
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 32,
+        "frames": 64,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 7,
+          "other_low": 3,
+          "quadruped": 8,
+          "prone": 14
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 312,
+        "core_cells": 55,
+        "status": "fitted",
+        "tight_m": 0.7416488243825734,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.007590658497065306,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 13,
+        "best_score": 462.5,
+        "status": "fitted",
+        "score": 462.5,
+        "stable_seconds": 0.5333333333333333,
+        "contact_span_m": 2.751445777194578,
+        "length_m": 4.7514457771945775,
+        "body_beyond_plane_m": 2.475162603412769,
+        "plane_shift_m": 2.480162603412769
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 64,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 64,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 64,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_off_1m_R_102__A301",
+      "stem": "jump_off_1m",
+      "group": "known_dimension_support",
+      "fit_sha256": "bcd64e9b7baa361a64f614aef4f8d172c811b1f8175583873e0c7780b93564b8",
+      "levels_m": [
+        0.0,
+        1.1805251410696656
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.14920545904897153,
+          "penetration_p99_m": 0.1428055394347757,
+          "penetration_frames_over_report": 7,
+          "support_evidence_points": 79,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004600822925567627,
+          "skin": {
+            "max_m": 0.14591769664548337,
+            "p99_m": 0.1351565655972809,
+            "frames_over_report": 3,
+            "frames": 59
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.14920545904897153,
+          "penetration_p99_m": 0.1428055394347757,
+          "penetration_frames_over_report": 7,
+          "support_evidence_points": 79,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004600822925567627,
+          "skin": {
+            "max_m": 0.14591769664548337,
+            "p99_m": 0.1351565655972809,
+            "frames_over_report": 3,
+            "frames": 59
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 13,
+        "frames": 59,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 7,
+          "other_low": 2,
+          "quadruped": 4,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 74,
+        "core_cells": 22,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 30,
+        "best_score": 875.5,
+        "status": "fitted",
+        "score": 875.5,
+        "stable_seconds": 0.9333333333333333,
+        "contact_span_m": 0.32108330246224226,
+        "length_m": 2.321083302462242,
+        "body_beyond_plane_m": 0.039630502130784895,
+        "plane_shift_m": 0.0446305021307849
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 59,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_off_1m_R_103__A301",
+      "stem": "jump_off_1m",
+      "group": "known_dimension_support",
+      "fit_sha256": "e118338265f552443fec8008b7c9171736b2806749e8a199f92640b79f787ada",
+      "levels_m": [
+        0.0,
+        1.1810764716938138
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.10546487849205734,
+          "penetration_p99_m": 0.10390940021723506,
+          "penetration_frames_over_report": 7,
+          "support_evidence_points": 86,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00470319390296936,
+          "skin": {
+            "max_m": 0.10713766049593687,
+            "p99_m": 0.0980497085675597,
+            "frames_over_report": 3,
+            "frames": 54
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.10546487849205734,
+          "penetration_p99_m": 0.10390940021723506,
+          "penetration_frames_over_report": 7,
+          "support_evidence_points": 86,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00470319390296936,
+          "skin": {
+            "max_m": 0.10713766049593687,
+            "p99_m": 0.0980497085675597,
+            "frames_over_report": 3,
+            "frames": 54
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 13,
+        "frames": 54,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 2,
+          "quadruped": 3,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 65,
+        "core_cells": 20,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 23,
+        "best_score": 812.5,
+        "status": "fitted",
+        "score": 812.5,
+        "stable_seconds": 0.8,
+        "contact_span_m": 0.3911254956079614,
+        "length_m": 2.3911254956079615,
+        "body_beyond_plane_m": 0.0369706532698173,
+        "plane_shift_m": 0.041970653269817304
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 54,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_over_obstacle_1_5m_L_002__A415",
+      "stem": "jump_over_obstacle_1.5m",
+      "group": "obstacle_clearance",
+      "fit_sha256": "0092ea4d24f24e35d3e25a96997c6df42c1b466a926afe0343c99ccd94f1801e",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.005680570455733686,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 165,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007502034830395132,
+          "skin": {
+            "max_m": 0.025680570455733687,
+            "p99_m": 0.019435855338815568,
+            "frames_over_report": 1,
+            "frames": 88
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.005680570455733686,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 165,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007502034830395132,
+          "skin": {
+            "max_m": 0.025680570455733687,
+            "p99_m": 0.019435855338815568,
+            "frames_over_report": 1,
+            "frames": 88
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 1,
+        "frames": 88,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 20,
+        "best_score": 84.0,
+        "status": "fitted",
+        "score": 84.0,
+        "stable_seconds": 0.7333333333333333,
+        "contact_span_m": 6.375581443309784,
+        "length_m": 8.375581443309784,
+        "body_beyond_plane_m": 0.2735312134027481,
+        "plane_shift_m": 0.2785312134027481
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.01678740501403811,
+          "frames_over_report": 0,
+          "frames": 88,
+          "per_box_max_m": {
+            "wall_1": 0.01678740501403811
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_over_obstacle_1m_R_101__A416",
+      "stem": "jump_over_obstacle_1m",
+      "group": "obstacle_clearance",
+      "fit_sha256": "8751b217e7e97ab51c67e386d8a555b7fdd2fa42ceacfe4b298b7ef8b72ad913",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 198,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007750042015686631,
+          "skin": {
+            "max_m": 0.011079662246629596,
+            "p99_m": 0.00859145984053611,
+            "frames_over_report": 0,
+            "frames": 82
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 198,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007750042015686631,
+          "skin": {
+            "max_m": 0.011079662246629596,
+            "p99_m": 0.00859145984053611,
+            "frames_over_report": 0,
+            "frames": 82
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 82,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 13,
+        "best_score": 531.0,
+        "status": "fitted",
+        "score": 531.0,
+        "stable_seconds": 0.5333333333333333,
+        "contact_span_m": 5.901880774843914,
+        "length_m": 7.901880774843914,
+        "body_beyond_plane_m": 5.602279053998896,
+        "plane_shift_m": 5.607279053998896
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 82,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_over_obstacle_2m_R_001__A304",
+      "stem": "jump_over_obstacle_2m",
+      "group": "obstacle_clearance",
+      "fit_sha256": "4026e25bb1bec2371e348dd5f6637a93bf60e5d9a6a19e12bcdff345dda7d527",
+      "levels_m": [
+        0.0,
+        0.06216294993646443,
+        2.1825009651947767
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "evidence_reduced_for_body_conflict",
+        "support_rejected",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0051395485829561945,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 165,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 2.1825009651947767,
+          "skin": {
+            "max_m": 0.025139548582956195,
+            "p99_m": 0.022909679422155008,
+            "frames_over_report": 2,
+            "frames": 118
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0051395485829561945,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 165,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 2.1825009651947767,
+          "skin": {
+            "max_m": 0.025139548582956195,
+            "p99_m": 0.023068432568106787,
+            "frames_over_report": 2,
+            "frames": 118
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 16,
+        "frames": 118,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 6,
+          "other_low": 3,
+          "quadruped": 7,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 174,
+        "core_cells": 8,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 32,
+        "best_score": 1838.0,
+        "status": "fitted",
+        "score": 1838.0,
+        "stable_seconds": 1.0,
+        "contact_span_m": 1.977864837788827,
+        "length_m": 3.977864837788827,
+        "body_beyond_plane_m": 0.09920699477736195,
+        "plane_shift_m": 0.10420699477736184
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 118,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_over_obstacle_2m_R_103__A305",
+      "stem": "jump_over_obstacle_2m",
+      "group": "obstacle_clearance",
+      "fit_sha256": "7b35f4572938357db7adca6fb2c9a4671ec0be7ae8c2067f136b975ce82bdfa8",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.008327052481472492,
+          "penetration_p99_m": 0.007666851058602333,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 83,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.023605243302881718,
+          "skin": {
+            "max_m": 0.028327052481472492,
+            "p99_m": 0.02803483389317989,
+            "frames_over_report": 4,
+            "frames": 102
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.008327052481472492,
+          "penetration_p99_m": 0.007666851058602333,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 83,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.023605243302881718,
+          "skin": {
+            "max_m": 0.028327052481472492,
+            "p99_m": 0.02803483389317989,
+            "frames_over_report": 4,
+            "frames": 102
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 7,
+        "frames": 102,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 25,
+        "best_score": 787.5,
+        "status": "fitted",
+        "score": 787.5,
+        "stable_seconds": 0.5333333333333333,
+        "contact_span_m": 1.0189072201128013,
+        "length_m": 3.0189072201128013,
+        "body_beyond_plane_m": 0.24117839499675187,
+        "plane_shift_m": 0.24617839499675176
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 102,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_to_shoulder_roll_R_002__A415",
+      "stem": "jump_to_shoulder_roll",
+      "group": "box_support",
+      "fit_sha256": "0c7df5902ac1a3a00525d7612360f6b14b93413b64ea0de25bc6b1c2a6c4be94",
+      "levels_m": [
+        0.0,
+        1.0566687835380435
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.07355913240462542,
+          "penetration_p99_m": 0.06756301540881375,
+          "penetration_frames_over_report": 25,
+          "support_evidence_points": 111,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007367084734141827,
+          "skin": {
+            "max_m": 0.07524911034852266,
+            "p99_m": 0.06260677892714728,
+            "frames_over_report": 13,
+            "frames": 66
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.07355913240462542,
+          "penetration_p99_m": 0.06756301540881375,
+          "penetration_frames_over_report": 25,
+          "support_evidence_points": 111,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007367084734141827,
+          "skin": {
+            "max_m": 0.07524911034852266,
+            "p99_m": 0.06260677892714728,
+            "frames_over_report": 13,
+            "frames": 66
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 25,
+        "frames": 66,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 10,
+          "other_low": 2,
+          "quadruped": 8,
+          "prone": 5
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 349,
+        "core_cells": 266,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 15,
+        "best_score": 292.5,
+        "status": "fitted",
+        "score": 292.5,
+        "stable_seconds": 0.6666666666666666,
+        "contact_span_m": 1.5384348384141164,
+        "length_m": 3.5384348384141164,
+        "body_beyond_plane_m": 4.368219173156098,
+        "plane_shift_m": 4.373219173156098
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.004739385041105562,
+          "frames_over_report": 0,
+          "frames": 66,
+          "per_box_max_m": {
+            "wall_1": 0.004739385041105562
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "jump_to_shoulder_roll_R_003__A304",
+      "stem": "jump_to_shoulder_roll",
+      "group": "box_support",
+      "fit_sha256": "1f7bde7b46fc961196828c7ebbdf252f237d54d7f69e65589cf962fb210dd98d",
+      "levels_m": [
+        0.0,
+        1.7082118459511548
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.12020882169716059,
+          "penetration_p99_m": 0.10755999336950496,
+          "penetration_frames_over_report": 7,
+          "support_evidence_points": 84,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 1.7093511291313916,
+          "skin": {
+            "max_m": 0.10940203140489757,
+            "p99_m": 0.09719144868664455,
+            "frames_over_report": 4,
+            "frames": 72
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.12020882169716059,
+          "penetration_p99_m": 0.10755999336950496,
+          "penetration_frames_over_report": 7,
+          "support_evidence_points": 84,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 1.7093511291313916,
+          "skin": {
+            "max_m": 0.10940203140489757,
+            "p99_m": 0.09719144868664455,
+            "frames_over_report": 4,
+            "frames": 72
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 35,
+        "frames": 72,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 17,
+          "other_low": 9,
+          "quadruped": 4,
+          "prone": 5
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 391,
+        "core_cells": 216,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 26,
+        "best_score": 1677.5,
+        "status": "fitted",
+        "score": 1677.5,
+        "stable_seconds": 0.6666666666666666,
+        "contact_span_m": 1.6147203299114214,
+        "length_m": 3.6147203299114214,
+        "body_beyond_plane_m": 0.32434364999213394,
+        "plane_shift_m": 0.32934364999213384
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 72,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "ladder_climbing_down_start_R_003__A300",
+      "stem": "ladder_climbing_down",
+      "group": "ladder",
+      "fit_sha256": "c4a1614ca25f3554c2ff6dd6fe1d35f92e41fb5515c5c756de8e83d3afc844ae",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.685691535025835,
+          "penetration_p99_m": 0.6844448861479758,
+          "penetration_frames_over_report": 29,
+          "support_evidence_points": 9,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.705691535025835,
+            "p99_m": 0.7027000012621284,
+            "frames_over_report": 18,
+            "frames": 70
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.685691535025835,
+          "penetration_p99_m": 0.6844448861479758,
+          "penetration_frames_over_report": 29,
+          "support_evidence_points": 9,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.705691535025835,
+            "p99_m": 0.7027000012621284,
+            "frames_over_report": 18,
+            "frames": 70
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 12,
+        "frames": 70,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 6,
+          "other_low": 6,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 51,
+        "core_cells": 0,
+        "status": "unexplainable_body_reaches_bound"
+      },
+      "wall_report": {
+        "still_frames": 21,
+        "best_score": 773.0,
+        "status": "fitted",
+        "score": 773.0,
+        "stable_seconds": 0.8,
+        "contact_span_m": 0.24580312790286574,
+        "length_m": 2.2458031279028656,
+        "body_beyond_plane_m": 0.037492424592747015,
+        "plane_shift_m": 0.04249242459274702
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.037408238662212615,
+          "frames_over_report": 1,
+          "frames": 70,
+          "per_box_max_m": {
+            "wall_1": 0.037408238662212615
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.037408238662212615,
+            "ground": 0.09999036788940432
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 18
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.037408238662212615,
+            "ground": 0.09999036788940432
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 18
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.037408238662212615,
+            "ground": 0.09999036788940432
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 18
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.037408238662212615,
+            "ground": 0.09999036788940432
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 18
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        }
+      ]
+    },
+    {
+      "filename": "ladder_climbing_down_start_over_R_001__A300",
+      "stem": "ladder_climbing_down_over",
+      "group": "ladder",
+      "fit_sha256": "bfced5981f6459bc3053a803bf7b82b2fbf0e9861dc58c985488e3aca883a3ef",
+      "levels_m": [
+        0.0,
+        2.16958188105491
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "evidence_reduced_for_body_conflict"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 73,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 2.1705046801653225,
+          "skin": {
+            "max_m": 0.00402987003326416,
+            "p99_m": 0.0038099622726440433,
+            "frames_over_report": 0,
+            "frames": 117
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 73,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 2.1705046801653225,
+          "skin": {
+            "max_m": 0.005571722984313965,
+            "p99_m": 0.005420880317687989,
+            "frames_over_report": 0,
+            "frames": 117
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 89,
+        "frames": 117,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 34,
+          "other_low": 27,
+          "quadruped": 28,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 116,
+        "core_cells": 3,
+        "status": "fitted",
+        "tight_m": 1.488208212852478,
+        "loose_m": 1.7105147361755373,
+        "floor_m": 2.170207142829895,
+        "explanation": {
+          "tight": 0.6853932584269663,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 60,
+        "best_score": 818.0,
+        "status": "fitted",
+        "score": 818.0,
+        "stable_seconds": 2.3333333333333335,
+        "contact_span_m": 0.22045836685633663,
+        "length_m": 2.2204583668563367,
+        "body_beyond_plane_m": 0.03347293508708575,
+        "plane_shift_m": 0.038472935087085755
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 117,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 117,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.09999956944366768,
+          "frames_over_report": 83,
+          "frames": 117,
+          "per_box_max_m": {
+            "wall_1": 0.09999956944366768
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09999956944366768,
+            "ground": 0.001875149755505845
+          },
+          "frames_over_report": {
+            "solids": 83,
+            "ground": 0
+          },
+          "explanation_rate": 0.6853932584269663,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09999956944366768,
+            "ground": 0.001875149755505845
+          },
+          "frames_over_report": {
+            "solids": 83,
+            "ground": 0
+          },
+          "explanation_rate": 0.6853932584269663,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09999956944366768,
+            "ground": 0.001875149755505845
+          },
+          "frames_over_report": {
+            "solids": 83,
+            "ground": 0
+          },
+          "explanation_rate": 0.6853932584269663,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09999956944366768,
+            "ground": 0.001875149755505845
+          },
+          "frames_over_report": {
+            "solids": 83,
+            "ground": 0
+          },
+          "explanation_rate": 0.6853932584269663,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        }
+      ]
+    },
+    {
+      "filename": "ladder_climbing_down_start_through_R_101__A301",
+      "stem": "ladder_climbing_down_through",
+      "group": "ladder",
+      "fit_sha256": "2c4c70dfcce97bfa1fe781c6298409d9ab68d1a5b79c76aa754d0436eac3ccc5",
+      "levels_m": [
+        0.0,
+        2.371931060217321
+      ],
+      "support_boxes": 1,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 75,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00510859489440918,
+          "skin": {
+            "max_m": 0.007240772247314453,
+            "p99_m": 0.0070864057540893565,
+            "frames_over_report": 0,
+            "frames": 100
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 75,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00510859489440918,
+          "skin": {
+            "max_m": 0.007240772247314453,
+            "p99_m": 0.0070864057540893565,
+            "frames_over_report": 0,
+            "frames": 100
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 64,
+        "frames": 100,
+        "dominant": "other_low",
+        "posture_counts": {
+          "crouch": 17,
+          "other_low": 47,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 100,
+        "core_cells": 7,
+        "status": "fitted",
+        "tight_m": 1.5464573287963868,
+        "loose_m": 1.7105147361755373,
+        "floor_m": 2.3694028854370117,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 40,
+        "best_score": 561.0,
+        "status": "fitted",
+        "score": 561.0,
+        "stable_seconds": 0.7333333333333333,
+        "contact_span_m": 0.1987625310470339,
+        "length_m": 2.198762531047034,
+        "body_beyond_plane_m": 0.0564897407248213,
+        "plane_shift_m": 0.0614897407248213
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 100,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 100,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.09998107685198479,
+          "frames_over_report": 36,
+          "frames": 100,
+          "per_box_max_m": {
+            "wall_1": 0.09998107685198479
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09998107685198479,
+            "ground": 0.005178431980311871
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 0
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09998107685198479,
+            "ground": 0.005178431980311871
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 0
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09998107685198479,
+            "ground": 0.005178431980311871
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 0
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09998107685198479,
+            "ground": 0.005178431980311871
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 0
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        }
+      ]
+    },
+    {
+      "filename": "ladder_climbing_down_start_through_R_103__A301",
+      "stem": "ladder_climbing_down_through",
+      "group": "ladder",
+      "fit_sha256": "cf705ef1631920928c911f23eb05978dae2b2c98d1252a77935fb82fbc4dba4e",
+      "levels_m": [
+        0.0,
+        2.366769964064588
+      ],
+      "support_boxes": 1,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 96,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00659334659576416,
+          "skin": {
+            "max_m": 0.008642501008580439,
+            "p99_m": 0.008120097491773776,
+            "frames_over_report": 0,
+            "frames": 90
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 96,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00659334659576416,
+          "skin": {
+            "max_m": 0.008642501008580439,
+            "p99_m": 0.008120097491773776,
+            "frames_over_report": 0,
+            "frames": 90
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 55,
+        "frames": 90,
+        "dominant": "other_low",
+        "posture_counts": {
+          "crouch": 12,
+          "other_low": 43,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 99,
+        "core_cells": 7,
+        "status": "fitted",
+        "tight_m": 1.7080582761764527,
+        "loose_m": 1.7105147361755373,
+        "floor_m": 2.369353413581848,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 25,
+        "best_score": 750.0,
+        "status": "fitted",
+        "score": 750.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 0.23093688636522355,
+        "length_m": 2.2309368863652237,
+        "body_beyond_plane_m": 0.06848657186364779,
+        "plane_shift_m": 0.07348657186364779
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 90,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 90,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.09998075482266322,
+          "frames_over_report": 29,
+          "frames": 90,
+          "per_box_max_m": {
+            "wall_1": 0.09998075482266322
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09998075482266322,
+            "ground": 0.008642501008580439
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 0
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09998075482266322,
+            "ground": 0.008642501008580439
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 0
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09998075482266322,
+            "ground": 0.008642501008580439
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 0
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09998075482266322,
+            "ground": 0.008642501008580439
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 0
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "support": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        }
+      ]
+    },
+    {
+      "filename": "ladder_climbing_jumpdown_R_101__A301",
+      "stem": "ladder_climbing_jumpdown",
+      "group": "ladder",
+      "fit_sha256": "9f5d66379f1bcfc8097fbedf8a395408e159a8276e0f9f76bde064df98b87a31",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 56,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007737068932328839,
+          "skin": {
+            "max_m": 0.013386078186158556,
+            "p99_m": 0.013376254837785382,
+            "frames_over_report": 0,
+            "frames": 50
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 56,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007737068932328839,
+          "skin": {
+            "max_m": 0.013386078186158556,
+            "p99_m": 0.013376254837785382,
+            "frames_over_report": 0,
+            "frames": 50
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 50,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 34,
+        "best_score": 829.5,
+        "status": "fitted",
+        "score": 829.5,
+        "stable_seconds": 0.5333333333333333,
+        "contact_span_m": 0.8892749845981598,
+        "length_m": 2.88927498459816,
+        "body_beyond_plane_m": 0.8051221296191216,
+        "plane_shift_m": 0.8101221296191216
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 50,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "ladder_climbing_jumpdown_R_103__A301",
+      "stem": "ladder_climbing_jumpdown",
+      "group": "ladder",
+      "fit_sha256": "a600b5da16bb38399dce438693281a1b16af52f8db0271e36c2a710f099c7de8",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 44,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004024877038318664,
+          "skin": {
+            "max_m": 0.009643384080845863,
+            "p99_m": 0.009636449918616563,
+            "frames_over_report": 0,
+            "frames": 51
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 44,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004024877038318664,
+          "skin": {
+            "max_m": 0.009643384080845863,
+            "p99_m": 0.009636449918616563,
+            "frames_over_report": 0,
+            "frames": 51
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 51,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 34,
+        "best_score": 453.5,
+        "status": "fitted",
+        "score": 453.5,
+        "stable_seconds": 0.6666666666666666,
+        "contact_span_m": 1.0337697458958695,
+        "length_m": 3.0337697458958695,
+        "body_beyond_plane_m": 0.6351372909956298,
+        "plane_shift_m": 0.6401372909956298
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 51,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "ladder_slip_R_102__A301",
+      "stem": "ladder_slip",
+      "group": "ladder",
+      "fit_sha256": "f625eb6377260d306a91f112beb17b5db35c82403e44c89e2186042edb84f427",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.4363256949186325,
+          "penetration_p99_m": 0.4305165204405785,
+          "penetration_frames_over_report": 31,
+          "support_evidence_points": 7,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.45782603323459625,
+            "p99_m": 0.45555617213249205,
+            "frames_over_report": 17,
+            "frames": 63
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.4363256949186325,
+          "penetration_p99_m": 0.4305165204405785,
+          "penetration_frames_over_report": 31,
+          "support_evidence_points": 7,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.45782603323459625,
+            "p99_m": 0.45555617213249205,
+            "frames_over_report": 17,
+            "frames": 63
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 15,
+        "frames": 63,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 15,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 65,
+        "core_cells": 12,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 29,
+        "best_score": 1162.0,
+        "status": "fitted",
+        "score": 1162.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 0.22196287729050312,
+        "length_m": 2.2219628772905033,
+        "body_beyond_plane_m": 0.03487523490746913,
+        "plane_shift_m": 0.03987523490746914
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.004335962489414771,
+          "frames_over_report": 0,
+          "frames": 63,
+          "per_box_max_m": {
+            "wall_1": 0.004335962489414771
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "ladder_slip_R_104__A301",
+      "stem": "ladder_slip",
+      "group": "ladder",
+      "fit_sha256": "2fc8b3d56d5c7e028953856e3cacc6b2fc3b4beaf49ec3c08f04e8f8d2ce825c",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.3486314523220062,
+          "penetration_p99_m": 0.3441212002933025,
+          "penetration_frames_over_report": 26,
+          "support_evidence_points": 27,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01406949758529663,
+          "skin": {
+            "max_m": 0.36458178609609604,
+            "p99_m": 0.3644317341595888,
+            "frames_over_report": 14,
+            "frames": 59
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.3486314523220062,
+          "penetration_p99_m": 0.3441212002933025,
+          "penetration_frames_over_report": 26,
+          "support_evidence_points": 27,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01406949758529663,
+          "skin": {
+            "max_m": 0.36458178609609604,
+            "p99_m": 0.3644317341595888,
+            "frames_over_report": 14,
+            "frames": 59
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 12,
+        "frames": 59,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 12,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 72,
+        "core_cells": 7,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 17,
+        "best_score": 790.0,
+        "status": "fitted",
+        "score": 790.0,
+        "stable_seconds": 0.7333333333333333,
+        "contact_span_m": 0.29631720323421396,
+        "length_m": 2.2963172032342136,
+        "body_beyond_plane_m": 0.04632975508158532,
+        "plane_shift_m": 0.051329755081585327
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.02278949348429854,
+          "frames_over_report": 1,
+          "frames": 59,
+          "per_box_max_m": {
+            "wall_1": 0.02278949348429854
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.02278949348429854,
+            "ground": 0.09999579191207889
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 14
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.02278949348429854,
+            "ground": 0.09999579191207889
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 14
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.02278949348429854,
+            "ground": 0.09999579191207889
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 14
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.02278949348429854,
+            "ground": 0.09999579191207889
+          },
+          "frames_over_report": {
+            "solids": 1,
+            "ground": 14
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1
+          }
+        }
+      ]
+    },
+    {
+      "filename": "lift_crate_come_up_50cm_box_R_001__A203",
+      "stem": "lift_crate_come_up_50cm_box",
+      "group": "known_dimension_support",
+      "fit_sha256": "d4bab2751d342cd63c3fafab88dbd159c77823aa00c023af3adc74b5ee97aed3",
+      "levels_m": [
+        0.0,
+        0.6072440925054252
+      ],
+      "support_boxes": 1,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 107,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0012440318241715431,
+          "skin": {
+            "max_m": 0.008516603615134954,
+            "p99_m": 0.008471116032451391,
+            "frames_over_report": 0,
+            "frames": 97
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 107,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0012440318241715431,
+          "skin": {
+            "max_m": 0.008516603615134954,
+            "p99_m": 0.008471116032451391,
+            "frames_over_report": 0,
+            "frames": 97
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 8,
+        "frames": 97,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 62,
+        "core_cells": 18,
+        "status": "fitted",
+        "tight_m": 1.6891561830043793,
+        "loose_m": 1.7105147361755373,
+        "floor_m": 0.6033941805362701,
+        "explanation": {
+          "tight": 0.125,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 68,
+        "best_score": 769.0,
+        "status": "fitted",
+        "score": 769.0,
+        "stable_seconds": 2.7333333333333334,
+        "contact_span_m": 0.2098297931323565,
+        "length_m": 2.2098297931323563,
+        "body_beyond_plane_m": 0.025114212146158277,
+        "plane_shift_m": 0.03011421214615817
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "lift_crate_come_up_50cm_box_R_003__A159",
+      "stem": "lift_crate_come_up_50cm_box",
+      "group": "known_dimension_support",
+      "fit_sha256": "8bc27462ae4fc594fb8f114907317744ea46680e2b3f4f6e2af4887f1866e10e",
+      "levels_m": [
+        0.0,
+        0.5675531151937321
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 123,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0023604141315445304,
+          "skin": {
+            "max_m": 0.012221409822814167,
+            "p99_m": 0.01202295802067965,
+            "frames_over_report": 0,
+            "frames": 165
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 123,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0023604141315445304,
+          "skin": {
+            "max_m": 0.056709349155426025,
+            "p99_m": 0.01219176962506026,
+            "frames_over_report": 1,
+            "frames": 165
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 8,
+        "frames": 165,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 52,
+        "core_cells": 21,
+        "status": "fitted",
+        "tight_m": 1.6824162983894348,
+        "loose_m": 1.7105147361755373,
+        "floor_m": 0.5675989985466003,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 124,
+        "best_score": 286.0,
+        "status": "fitted",
+        "score": 286.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 1.0445025895200186,
+        "length_m": 3.044502589520018,
+        "body_beyond_plane_m": 0.5060265983607405,
+        "plane_shift_m": 0.5110265983607405
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 165,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 165,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 165,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "monkey_jump_003__A304",
+      "stem": "monkey_jump",
+      "group": "obstacle_clearance",
+      "fit_sha256": "134b1a7db952926fc4437ded0596912818ae5673e7218506a1b4dd941b0bf7b7",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0044793798774480816,
+          "penetration_p99_m": 0.0009252525493502666,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 146,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007185894995927811,
+          "skin": {
+            "max_m": 0.02110334485769272,
+            "p99_m": 0.020802284050732853,
+            "frames_over_report": 2,
+            "frames": 72
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0044793798774480816,
+          "penetration_p99_m": 0.0009252525493502666,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 146,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007185894995927811,
+          "skin": {
+            "max_m": 0.02110334485769272,
+            "p99_m": 0.020802284050732853,
+            "frames_over_report": 2,
+            "frames": 72
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 72,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 14,
+        "best_score": 610.0,
+        "status": "fitted",
+        "score": 610.0,
+        "stable_seconds": 0.5333333333333333,
+        "contact_span_m": 6.074713889624154,
+        "length_m": 8.074713889624153,
+        "body_beyond_plane_m": 5.6927297944588195,
+        "plane_shift_m": 5.697729794458819
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 72,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "stair_slide_down_R_001__A304",
+      "stem": "stair_slide_down",
+      "group": "stairs",
+      "fit_sha256": "1a0ac08d0b1fbb20c8f28b8a4885f0d65e996d5fc2cc19d00ca4a1965328b75f",
+      "levels_m": [
+        0.0,
+        1.4520497372723185
+      ],
+      "support_boxes": 1,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0005960819148458536,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 150,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0018631219863891602,
+          "skin": {
+            "max_m": 0.020596081914845854,
+            "p99_m": 0.012890283691231137,
+            "frames_over_report": 1,
+            "frames": 105
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0005960819148458536,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 150,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0018631219863891602,
+          "skin": {
+            "max_m": 0.020596081914845854,
+            "p99_m": 0.012890283691231137,
+            "frames_over_report": 1,
+            "frames": 105
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 17,
+        "frames": 105,
+        "dominant": "other_low",
+        "posture_counts": {
+          "crouch": 7,
+          "other_low": 10,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 246,
+        "core_cells": 78,
+        "status": "unexplainable_tight_above_bound"
+      },
+      "wall_report": {
+        "still_frames": 52,
+        "best_score": 501.5,
+        "status": "fitted",
+        "score": 501.5,
+        "stable_seconds": 0.9333333333333333,
+        "contact_span_m": 2.372473599567068,
+        "length_m": 4.372473599567068,
+        "body_beyond_plane_m": 3.408933628896658,
+        "plane_shift_m": 3.413933628896658
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 105,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "stair_slide_down_R_002__A304",
+      "stem": "stair_slide_down",
+      "group": "stairs",
+      "fit_sha256": "4187d73d1d18b88f9d2ee0e8bb46c0fe7c853cf2792c70d35bf2fe6a86094615",
+      "levels_m": [
+        0.0,
+        1.45210567349568
+      ],
+      "support_boxes": 1,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 138,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0030891303904354572,
+          "skin": {
+            "max_m": 0.013876249548047781,
+            "p99_m": 0.0135479780100286,
+            "frames_over_report": 0,
+            "frames": 79
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 138,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0030891303904354572,
+          "skin": {
+            "max_m": 0.013876249548047781,
+            "p99_m": 0.0135479780100286,
+            "frames_over_report": 0,
+            "frames": 79
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 18,
+        "frames": 79,
+        "dominant": "other_low",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 10,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 284,
+        "core_cells": 129,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 22,
+        "best_score": 493.0,
+        "status": "fitted",
+        "score": 493.0,
+        "stable_seconds": 0.8666666666666667,
+        "contact_span_m": 1.7966391796435108,
+        "length_m": 3.7966391796435106,
+        "body_beyond_plane_m": 3.717159978264454,
+        "plane_shift_m": 3.722159978264454
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 79,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "stairs_climbing_down_loop_R_001__A300",
+      "stem": "stairs_climbing_down",
+      "group": "stairs",
+      "fit_sha256": "5f8f43a4028407f676dc62233e3d4152f11a5cd6863c4fceabf90a3d4bd4f481",
+      "levels_m": [
+        0.0,
+        0.16775968670845032,
+        0.3372112810611725,
+        0.4952080547809601,
+        0.6641542017459869,
+        0.8251091539859772,
+        0.992220014333725,
+        1.1558673679828644,
+        1.3235127627849579
+      ],
+      "support_boxes": 6,
+      "flags": [
+        "evidence_reduced_for_body_conflict",
+        "support_rejected",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.5043671629577875,
+          "penetration_p99_m": 0.469081596136093,
+          "penetration_frames_over_report": 36,
+          "support_evidence_points": 159,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.992220014333725,
+          "skin": {
+            "max_m": 0.5243671629577875,
+            "p99_m": 0.4915374864637851,
+            "frames_over_report": 21,
+            "frames": 93
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.5043671629577875,
+          "penetration_p99_m": 0.469081596136093,
+          "penetration_frames_over_report": 36,
+          "support_evidence_points": 159,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.992220014333725,
+          "skin": {
+            "max_m": 0.5243671629577875,
+            "p99_m": 0.4915374864637851,
+            "frames_over_report": 34,
+            "frames": 93
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 13,
+        "frames": 93,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 13,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 71,
+        "core_cells": 65,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 1,
+        "status": "no_still_segment"
+      },
+      "fitted_checks": {},
+      "rejected_variants": []
+    },
+    {
+      "filename": "stairs_climbing_jog_down_loop_R_103__A301",
+      "stem": "stairs_climbing_jog_down",
+      "group": "stairs",
+      "fit_sha256": "ddaad07b81fcd5cb1a6d21970861e25ff810d49f1627c9773120efd8e113562e",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.1658588829636574,
+          "penetration_p99_m": 0.1649908198323101,
+          "penetration_frames_over_report": 9,
+          "support_evidence_points": 17,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.18585888296365738,
+            "p99_m": 0.16818538196384897,
+            "frames_over_report": 5,
+            "frames": 46
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.1658588829636574,
+          "penetration_p99_m": 0.1649908198323101,
+          "penetration_frames_over_report": 9,
+          "support_evidence_points": 17,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.18585888296365738,
+            "p99_m": 0.16818538196384897,
+            "frames_over_report": 5,
+            "frames": 46
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 46,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 1,
+        "status": "no_still_segment"
+      },
+      "fitted_checks": {},
+      "rejected_variants": []
+    },
+    {
+      "filename": "stairs_climbing_up_start_R_103__A301",
+      "stem": "stairs_climbing_up",
+      "group": "stairs",
+      "fit_sha256": "01044bb00a73c42fe14ac807a19ca35b4fec64b20b4025d1bc41fb2319dd04f2",
+      "levels_m": [
+        0.0,
+        0.19463841652031988,
+        0.3913461792981252,
+        0.5834804106270894,
+        0.7542841661488637,
+        0.9492411244427785,
+        1.1145211089169607,
+        1.3049920428311452,
+        1.4727809656178579
+      ],
+      "support_boxes": 8,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 190,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004583042697049677,
+          "skin": {
+            "max_m": 0.1642208695411682,
+            "p99_m": 0.16391615629196166,
+            "frames_over_report": 4,
+            "frames": 69
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 190,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004583042697049677,
+          "skin": {
+            "max_m": 0.3826613575220108,
+            "p99_m": 0.236164636611937,
+            "frames_over_report": 23,
+            "frames": 69
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 69,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 5,
+        "status": "no_still_segment"
+      },
+      "fitted_checks": {},
+      "rejected_variants": []
+    },
+    {
+      "filename": "turn_start_jog_0090_003__A026",
+      "stem": "turn_jog",
+      "group": "flat_control",
+      "fit_sha256": "4902fe922961d00663c6b0762a2213a96e5dfe088f99f83bd1284f04074dff84",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.01418523445725441,
+          "penetration_p99_m": 0.014178878255188465,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 144,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.021470725536346436,
+          "skin": {
+            "max_m": 0.03418523445725441,
+            "p99_m": 0.03397209003567696,
+            "frames_over_report": 9,
+            "frames": 49
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.01418523445725441,
+          "penetration_p99_m": 0.014178878255188465,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 144,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.021470725536346436,
+          "skin": {
+            "max_m": 0.03418523445725441,
+            "p99_m": 0.03397209003567696,
+            "frames_over_report": 9,
+            "frames": 49
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 49,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 3,
+        "status": "no_still_segment"
+      },
+      "fitted_checks": {},
+      "rejected_variants": []
+    },
+    {
+      "filename": "walk_backward_loop_004__A026",
+      "stem": "walk_backward",
+      "group": "flat_control",
+      "fit_sha256": "3036c1bd754e609e76e8bd95f68b847877996fab887710064ff1a34bfb735baf",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.001980785764753818,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 387,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.026980170980095863,
+          "skin": {
+            "max_m": 0.02164109144359827,
+            "p99_m": 0.01976997498422861,
+            "frames_over_report": 2,
+            "frames": 291
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.001980785764753818,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 387,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.026980170980095863,
+          "skin": {
+            "max_m": 0.02164109144359827,
+            "p99_m": 0.01976997498422861,
+            "frames_over_report": 2,
+            "frames": 291
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 291,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 117,
+        "best_score": 517.5,
+        "status": "fitted",
+        "score": 517.5,
+        "stable_seconds": 6.533333333333333,
+        "contact_span_m": 0.8096544146537779,
+        "length_m": 2.8096544146537776,
+        "body_beyond_plane_m": 10.77274139225483,
+        "plane_shift_m": 10.77774139225483
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 291,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    }
+  ]
+}

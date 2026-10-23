@@ -1,0 +1,95 @@
+{"command": ["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/fit_bones_terrain_support.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v3_L2", "--groups", "quadruped", "prone", "--viz-per-stem", "2", "--worst-per-group", "3", "--gif", "--variants", "4", "--skin-stride", "2", "--workers", "20"], "resources": {"time_utc": "2026-10-23T19:00:48.082333+00:00", "available_bytes": 454134398976, "total_bytes": 535717867520, "load_average": [10.86376953125, 13.80322265625, 10.31494140625]}}
+{"clips": 1750, "workers": 20, "skin_stride": 2, "variants": 4}
+fit 200/1750, failed 0, 146s
+fit 400/1750, failed 0, 316s
+fit 600/1750, failed 0, 516s
+fit 800/1750, failed 0, 662s
+fit 1000/1750, failed 0, 816s
+fit 1200/1750, failed 0, 979s
+fit 1400/1750, failed 0, 1121s
+fit 1600/1750, failed 0, 1284s
+fit 1750/1750, failed 0, 1368s
+rendered 44/44
+{
+ "prone": {
+  "clips": 919,
+  "fitted": 919,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 918,
+   "2": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 919,
+   "penetration_max_p95_m": 0.1259
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 919,
+   "penetration_max_p95_m": 0.1259
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "penetration_over_report": 919,
+   "merged_small_steps": 375,
+   "evidence_reduced_for_body_conflict": 3,
+   "support_rejected": 3,
+   "no_usable_support": 31
+  },
+  "scene": {
+   "ceiling_status": {
+    "fitted": 831,
+    "no_conflict_free_rectangle": 88
+   },
+   "explanation_tight_p50": 1.0,
+   "explanation_tight_p10": 1.0,
+   "walls_fitted": 514,
+   "fitted_overhead_clips_with_frames_over_2cm": 420,
+   "variants": 3676,
+   "variants_accepted": 1992,
+   "upright_ceiling_variants": 0,
+   "clutter_mean": 1.967,
+   "ground_skin_penetration_p95_m": 0.1
+  }
+ },
+ "quadruped": {
+  "clips": 831,
+  "fitted": 831,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 830,
+   "1": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 830,
+   "penetration_max_p95_m": 0.1295
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 830,
+   "penetration_max_p95_m": 0.1295
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "no_usable_support": 23,
+   "penetration_over_report": 830,
+   "merged_small_steps": 133,
+   "evidence_reduced_for_body_conflict": 4,
+   "support_rejected": 4
+  },
+  "scene": {
+   "ceiling_status": {
+    "no_conflict_free_rectangle": 132,
+    "fitted": 699
+   },
+   "explanation_tight_p50": 1.0,
+   "explanation_tight_p10": 1.0,
+   "walls_fitted": 520,
+   "fitted_overhead_clips_with_frames_over_2cm": 187,
+   "variants": 3324,
+   "variants_accepted": 2576,
+   "upright_ceiling_variants": 0,
+   "clutter_mean": 2.038,
+   "ground_skin_penetration_p95_m": 0.1
+  }
+ }
+}
+{"name": "L2", "commands": [["${PFNN_PROJECT}/env/bin/python", "-u", "scripts/fit_bones_terrain_support.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v3_L2", "--groups", "quadruped", "prone", "--viz-per-stem", "2", "--worst-per-group", "3", "--gif", "--variants", "4", "--skin-stride", "2", "--workers", "20"]], "output": "runs/bones_fit_v3_L2", "returncodes": [0], "wall_seconds": 1435.0, "fit_elapsed_seconds": 1434.1, "fitted": 1750, "failed": 0, "rendered": 44, "render_failures": [], "memory_samples": 49, "initial_available_bytes": 454134398976, "minimum_available_bytes": 381883469824, "peak_unavailable_bytes": 153834397696}

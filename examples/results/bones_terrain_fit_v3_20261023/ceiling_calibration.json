@@ -1,0 +1,78 @@
+{
+  "box_support": {
+    "fitted": 1,
+    "tight_height_m": {
+      "p5": 0.742,
+      "p50": 0.742,
+      "p95": 0.742
+    }
+  },
+  "crouch": {
+    "fitted": 1009,
+    "tight_height_m": {
+      "p5": 1.0776000000000001,
+      "p50": 1.26,
+      "p95": 1.468
+    }
+  },
+  "flat_control": {
+    "fitted": 0,
+    "tight_height_m": null
+  },
+  "kneel": {
+    "fitted": 274,
+    "tight_height_m": {
+      "p5": 1.239,
+      "p50": 1.29,
+      "p95": 1.698
+    }
+  },
+  "known_dimension_support": {
+    "fitted": 2,
+    "tight_height_m": {
+      "p5": 1.68235,
+      "p50": 1.6855,
+      "p95": 1.68865
+    }
+  },
+  "ladder": {
+    "fitted": 3,
+    "tight_height_m": {
+      "p5": 1.4938,
+      "p50": 1.546,
+      "p95": 1.6918
+    }
+  },
+  "obstacle_clearance": {
+    "fitted": 0,
+    "tight_height_m": null
+  },
+  "prone": {
+    "fitted": 831,
+    "tight_height_m": {
+      "p5": 0.335,
+      "p50": 0.558,
+      "p95": 0.6465000000000001
+    }
+  },
+  "quadruped": {
+    "fitted": 699,
+    "tight_height_m": {
+      "p5": 0.715,
+      "p50": 0.822,
+      "p95": 0.927
+    }
+  },
+  "stairs": {
+    "fitted": 0,
+    "tight_height_m": null
+  },
+  "wall_contact": {
+    "fitted": 85,
+    "tight_height_m": {
+      "p5": 1.188,
+      "p50": 1.579,
+      "p95": 1.7078
+    }
+  }
+}

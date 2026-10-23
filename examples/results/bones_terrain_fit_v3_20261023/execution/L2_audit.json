@@ -1,0 +1,2303 @@
+{
+  "name": "L2",
+  "source_commit": "f49e5abae96a29edf8249751405392ba2740d624",
+  "fit_count": 1750,
+  "groups": {
+    "prone": {
+      "clips": 919,
+      "skin_vertices": {
+        "18056": 919
+      },
+      "skin_stride": {
+        "2": 919
+      },
+      "fitted_check_failures": {
+        "wall_1": 420
+      },
+      "clips_with_fitted_check_over_2cm": 420,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 420,
+      "rejected_variants": 1684,
+      "clips_with_rejected_variants": 421,
+      "support_cluster_status": {
+        "rejected_conflicts_with_body": 5,
+        "fitted": 2
+      },
+      "wall_status": {
+        "fitted": 514,
+        "no_contact_plane": 404,
+        "no_still_segment": 1
+      },
+      "wall_shift_max_m": 1.9610438794945368
+    },
+    "quadruped": {
+      "clips": 831,
+      "skin_vertices": {
+        "18056": 831
+      },
+      "skin_stride": {
+        "2": 831
+      },
+      "fitted_check_failures": {
+        "wall_1": 187
+      },
+      "clips_with_fitted_check_over_2cm": 187,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 187,
+      "rejected_variants": 748,
+      "clips_with_rejected_variants": 187,
+      "support_cluster_status": {
+        "rejected_conflicts_with_body": 4,
+        "fitted": 1
+      },
+      "wall_status": {
+        "no_contact_plane": 301,
+        "fitted": 520,
+        "no_still_segment": 10
+      },
+      "wall_shift_max_m": 7.839141770649627
+    }
+  },
+  "examples": [
+    {
+      "filename": "crawl_ff_loop_225_001__A132",
+      "stem": "crawl",
+      "group": "prone",
+      "fit_sha256": "bda2028475b35fe804a9041c8ad07462cb9688006e018e429c6dc70bc2123ae2",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.07606479525566101,
+          "penetration_p99_m": 0.06841945312917233,
+          "penetration_frames_over_report": 545,
+          "support_evidence_points": 333,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.017185916751623065,
+          "skin": {
+            "max_m": 0.078951396048069,
+            "p99_m": 0.07487819343805313,
+            "frames_over_report": 301,
+            "frames": 301
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.07606479525566101,
+          "penetration_p99_m": 0.06841945312917233,
+          "penetration_frames_over_report": 545,
+          "support_evidence_points": 333,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.017185916751623065,
+          "skin": {
+            "max_m": 0.078951396048069,
+            "p99_m": 0.07487819343805313,
+            "frames_over_report": 301,
+            "frames": 301
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 301,
+        "frames": 301,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 42,
+          "prone": 259
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 647,
+        "core_cells": 647,
+        "status": "fitted",
+        "tight_m": 0.5942495474219323,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.0038895383477211,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 164,
+        "best_score": 139.5,
+        "status": "fitted",
+        "score": 139.5,
+        "stable_seconds": 0.8,
+        "contact_span_m": 1.4665744467395125,
+        "length_m": 3.4665744467395125,
+        "body_beyond_plane_m": 1.956043879494537,
+        "plane_shift_m": 1.9610438794945368
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 301,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 301,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 301,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "crawl_ff_start_225_002__A132",
+      "stem": "crawl",
+      "group": "prone",
+      "fit_sha256": "b016645d2bdbc85e1fa015293fb4358da77cf79858518aa53fa2c60a861e4268",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.07209010422229767,
+          "penetration_p99_m": 0.0682387802004814,
+          "penetration_frames_over_report": 189,
+          "support_evidence_points": 106,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0284868273884058,
+          "skin": {
+            "max_m": 0.07078471779823303,
+            "p99_m": 0.06706987023353576,
+            "frames_over_report": 113,
+            "frames": 113
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.07209010422229767,
+          "penetration_p99_m": 0.0682387802004814,
+          "penetration_frames_over_report": 189,
+          "support_evidence_points": 106,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0284868273884058,
+          "skin": {
+            "max_m": 0.07078471779823303,
+            "p99_m": 0.06706987023353576,
+            "frames_over_report": 113,
+            "frames": 113
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 113,
+        "frames": 113,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 11,
+          "prone": 102
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 365,
+        "core_cells": 365,
+        "status": "fitted",
+        "tight_m": 0.5783907854557038,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.001405090093612671,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 47,
+        "best_score": 151.0,
+        "status": "fitted",
+        "score": 151.0,
+        "stable_seconds": 0.7333333333333333,
+        "contact_span_m": 1.8577507228286323,
+        "length_m": 3.8577507228286323,
+        "body_beyond_plane_m": 1.8885419002890729,
+        "plane_shift_m": 1.8935419002890728
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 113,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 113,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.031226547599355545,
+          "frames_over_report": 3,
+          "frames": 113,
+          "per_box_max_m": {
+            "wall_1": 0.031226547599355545
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.031226547599355545,
+            "ground": 0.07078471779823303
+          },
+          "frames_over_report": {
+            "solids": 3,
+            "ground": 113
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.031226547599355545,
+            "ground": 0.07078471779823303
+          },
+          "frames_over_report": {
+            "solids": 3,
+            "ground": 113
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.031226547599355545,
+            "ground": 0.07078471779823303
+          },
+          "frames_over_report": {
+            "solids": 3,
+            "ground": 113
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.031226547599355545,
+            "ground": 0.07078471779823303
+          },
+          "frames_over_report": {
+            "solids": 3,
+            "ground": 113
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        }
+      ]
+    },
+    {
+      "filename": "idle_crawl_start_005__A128",
+      "stem": "idle_crawl",
+      "group": "prone",
+      "fit_sha256": "b4f5a0e622885791c607975b05e36455ea7cfe06fcbd3299dc23755954420521",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.08738889824599028,
+          "penetration_p99_m": 0.07477149989455938,
+          "penetration_frames_over_report": 167,
+          "support_evidence_points": 72,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.024733069352805614,
+          "skin": {
+            "max_m": 0.08538804482668638,
+            "p99_m": 0.07584742140024894,
+            "frames_over_report": 81,
+            "frames": 141
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.08738889824599028,
+          "penetration_p99_m": 0.07477149989455938,
+          "penetration_frames_over_report": 167,
+          "support_evidence_points": 72,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.024733069352805614,
+          "skin": {
+            "max_m": 0.08538804482668638,
+            "p99_m": 0.07584742140024894,
+            "frames_over_report": 81,
+            "frames": 141
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 95,
+        "frames": 141,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 27,
+          "quadruped": 14,
+          "prone": 46
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 175,
+        "core_cells": 87,
+        "status": "fitted",
+        "tight_m": 0.7334032933786512,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.0030439598485827446,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 111,
+        "best_score": 449.0,
+        "status": "fitted",
+        "score": 449.0,
+        "stable_seconds": 0.7333333333333333,
+        "contact_span_m": 1.2353715029120302,
+        "length_m": 3.23537150291203,
+        "body_beyond_plane_m": 0.6678080296713795,
+        "plane_shift_m": 0.6728080296713794
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 141,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 141,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.09999989347959776,
+          "frames_over_report": 29,
+          "frames": 141,
+          "per_box_max_m": {
+            "wall_1": 0.09999989347959776
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09999989347959776,
+            "ground": 0.08538804482668638
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 81
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09999989347959776,
+            "ground": 0.08538804482668638
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 81
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09999989347959776,
+            "ground": 0.08538804482668638
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 81
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09999989347959776,
+            "ground": 0.08538804482668638
+          },
+          "frames_over_report": {
+            "solids": 29,
+            "ground": 81
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        }
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_001__A128",
+      "stem": "idle_crawl",
+      "group": "prone",
+      "fit_sha256": "a4bf1344574440797ba6cfe8f7dbfdfcda8d1b8a450339079849e9f3057be44f",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.09411269123665988,
+          "penetration_p99_m": 0.08874445850960906,
+          "penetration_frames_over_report": 151,
+          "support_evidence_points": 72,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.021460823016241193,
+          "skin": {
+            "max_m": 0.09499844606034458,
+            "p99_m": 0.08827115829102694,
+            "frames_over_report": 76,
+            "frames": 137
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.09411269123665988,
+          "penetration_p99_m": 0.08874445850960906,
+          "penetration_frames_over_report": 151,
+          "support_evidence_points": 72,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.021460823016241193,
+          "skin": {
+            "max_m": 0.09499844606034458,
+            "p99_m": 0.08827115829102694,
+            "frames_over_report": 76,
+            "frames": 137
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 95,
+        "frames": 137,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 8,
+          "other_low": 27,
+          "quadruped": 17,
+          "prone": 43
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 181,
+        "core_cells": 87,
+        "status": "fitted",
+        "tight_m": 0.7338248605001718,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.0008632808458060026,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 103,
+        "best_score": 340.5,
+        "status": "fitted",
+        "score": 340.5,
+        "stable_seconds": 0.6666666666666666,
+        "contact_span_m": 1.4019056579126594,
+        "length_m": 3.4019056579126596,
+        "body_beyond_plane_m": 0.7295257699224852,
+        "plane_shift_m": 0.7345257699224851
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 137,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 137,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.09999867879590897,
+          "frames_over_report": 36,
+          "frames": 137,
+          "per_box_max_m": {
+            "wall_1": 0.09999867879590897
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09999867879590897,
+            "ground": 0.09499844606034458
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09999867879590897,
+            "ground": 0.09499844606034458
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09999867879590897,
+            "ground": 0.09499844606034458
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09999867879590897,
+            "ground": 0.09499844606034458
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        }
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_001__A215",
+      "stem": "idle_crawl",
+      "group": "prone",
+      "fit_sha256": "d313d930e640681a6c273bd51f5c7001dc11dc8098f07462e6f708da18988a05",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.16579726245254278,
+          "penetration_p99_m": 0.1637459671124816,
+          "penetration_frames_over_report": 122,
+          "support_evidence_points": 92,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.008100911043584347,
+          "skin": {
+            "max_m": 0.1670145085081458,
+            "p99_m": 0.1654316594824195,
+            "frames_over_report": 61,
+            "frames": 123
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.16579726245254278,
+          "penetration_p99_m": 0.1637459671124816,
+          "penetration_frames_over_report": 122,
+          "support_evidence_points": 92,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.008100911043584347,
+          "skin": {
+            "max_m": 0.1670145085081458,
+            "p99_m": 0.1654316594824195,
+            "frames_over_report": 61,
+            "frames": 123
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 66,
+        "frames": 123,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 5,
+          "other_low": 0,
+          "quadruped": 24,
+          "prone": 37
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 144,
+        "core_cells": 92,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 92,
+        "best_score": 324.0,
+        "status": "fitted",
+        "score": 324.0,
+        "stable_seconds": 3.2666666666666666,
+        "contact_span_m": 0.8386313166626365,
+        "length_m": 2.8386313166626365,
+        "body_beyond_plane_m": 0.4289478319184582,
+        "plane_shift_m": 0.4339478319184582
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.09999943217082607,
+          "frames_over_report": 28,
+          "frames": 123,
+          "per_box_max_m": {
+            "wall_1": 0.09999943217082607
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09999943217082607,
+            "ground": 0.09999988768249751
+          },
+          "frames_over_report": {
+            "solids": 28,
+            "ground": 61
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09999943217082607,
+            "ground": 0.09999988768249751
+          },
+          "frames_over_report": {
+            "solids": 28,
+            "ground": 61
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09999943217082607,
+            "ground": 0.09999988768249751
+          },
+          "frames_over_report": {
+            "solids": 28,
+            "ground": 61
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09999943217082607,
+            "ground": 0.09999988768249751
+          },
+          "frames_over_report": {
+            "solids": 28,
+            "ground": 61
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        }
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_002__A215",
+      "stem": "idle_crawl",
+      "group": "prone",
+      "fit_sha256": "bcdfbf0b56a30890dceadebb91b19dbc3a8da2a36e60ca5cbf4e2a5e58ed667e",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.15001724287867546,
+          "penetration_p99_m": 0.14894197583198546,
+          "penetration_frames_over_report": 151,
+          "support_evidence_points": 88,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.016401899978518486,
+          "skin": {
+            "max_m": 0.1564117632806301,
+            "p99_m": 0.15481335863471032,
+            "frames_over_report": 76,
+            "frames": 128
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.15001724287867546,
+          "penetration_p99_m": 0.14894197583198546,
+          "penetration_frames_over_report": 151,
+          "support_evidence_points": 88,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.016401899978518486,
+          "skin": {
+            "max_m": 0.1564117632806301,
+            "p99_m": 0.15481335863471032,
+            "frames_over_report": 76,
+            "frames": 128
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 81,
+        "frames": 128,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 5,
+          "other_low": 0,
+          "quadruped": 30,
+          "prone": 46
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 127,
+        "core_cells": 64,
+        "status": "fitted",
+        "tight_m": 0.7339609088003636,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.01886891946196556,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 92,
+        "best_score": 216.0,
+        "status": "fitted",
+        "score": 216.0,
+        "stable_seconds": 5.133333333333334,
+        "contact_span_m": 0.967026548800958,
+        "length_m": 2.967026548800958,
+        "body_beyond_plane_m": 0.23260443719693746,
+        "plane_shift_m": 0.23760443719693747
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 128,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 128,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.03475996143823036,
+          "frames_over_report": 36,
+          "frames": 128,
+          "per_box_max_m": {
+            "wall_1": 0.03475996143823036
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.03475996143823036,
+            "ground": 0.09999967738986015
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.03475996143823036,
+            "ground": 0.09999967738986015
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.03475996143823036,
+            "ground": 0.09999967738986015
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.03475996143823036,
+            "ground": 0.09999967738986015
+          },
+          "frames_over_report": {
+            "solids": 36,
+            "ground": 76
+          },
+          "explanation_rate": 0.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        }
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_002__A233",
+      "stem": "idle_crawl",
+      "group": "prone",
+      "fit_sha256": "13ffb7c9378795f623ce243138fd3c5ddc47c80f9b3b3a8613245697d563f29d",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.17662165686488152,
+          "penetration_p99_m": 0.1759350433945656,
+          "penetration_frames_over_report": 78,
+          "support_evidence_points": 86,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01642073690891266,
+          "skin": {
+            "max_m": 0.1771017126739025,
+            "p99_m": 0.17650366589426994,
+            "frames_over_report": 39,
+            "frames": 109
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.17662165686488152,
+          "penetration_p99_m": 0.1759350433945656,
+          "penetration_frames_over_report": 78,
+          "support_evidence_points": 86,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01642073690891266,
+          "skin": {
+            "max_m": 0.1771017126739025,
+            "p99_m": 0.17650366589426994,
+            "frames_over_report": 39,
+            "frames": 109
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 38,
+        "frames": 109,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 3,
+          "other_low": 0,
+          "quadruped": 11,
+          "prone": 24
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 135,
+        "core_cells": 79,
+        "status": "no_conflict_free_rectangle"
+      },
+      "wall_report": {
+        "still_frames": 80,
+        "best_score": 300.0,
+        "status": "fitted",
+        "score": 300.0,
+        "stable_seconds": 3.4,
+        "contact_span_m": 0.7118513771698998,
+        "length_m": 2.7118513771699,
+        "body_beyond_plane_m": 0.3148288041135927,
+        "plane_shift_m": 0.3198288041135927
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.09999247120473086,
+          "frames_over_report": 16,
+          "frames": 109,
+          "per_box_max_m": {
+            "wall_1": 0.09999247120473086
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09999247120473086,
+            "ground": 0.09999983385205269
+          },
+          "frames_over_report": {
+            "solids": 16,
+            "ground": 39
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09999247120473086,
+            "ground": 0.09999983385205269
+          },
+          "frames_over_report": {
+            "solids": 16,
+            "ground": 39
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09999247120473086,
+            "ground": 0.09999983385205269
+          },
+          "frames_over_report": {
+            "solids": 16,
+            "ground": 39
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09999247120473086,
+            "ground": 0.09999983385205269
+          },
+          "frames_over_report": {
+            "solids": 16,
+            "ground": 39
+          },
+          "explanation_rate": null,
+          "roles": {
+            "ground": 1,
+            "wall": 1
+          }
+        }
+      ]
+    },
+    {
+      "filename": "mohak_forward_loop_001__A033",
+      "stem": "mohak_forward",
+      "group": "quadruped",
+      "fit_sha256": "c4280fd9ad757deafecc80ca7032602e8402c680f1a0e79d3bda1905fe6c6d2d",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.16527778536081314,
+          "penetration_p99_m": 0.16525619983673095,
+          "penetration_frames_over_report": 273,
+          "support_evidence_points": 105,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.022428417578339577,
+          "skin": {
+            "max_m": 0.1528046727180481,
+            "p99_m": 0.15279552191495896,
+            "frames_over_report": 137,
+            "frames": 137
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.16527778536081314,
+          "penetration_p99_m": 0.16525619983673095,
+          "penetration_frames_over_report": 273,
+          "support_evidence_points": 105,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.022428417578339577,
+          "skin": {
+            "max_m": 0.1528046727180481,
+            "p99_m": 0.15279552191495896,
+            "frames_over_report": 137,
+            "frames": 137
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 137,
+        "frames": 137,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 137,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 330,
+        "core_cells": 330,
+        "status": "fitted",
+        "tight_m": 0.8112476626038552,
+        "loose_m": 1.2175706100463866,
+        "floor_m": 0.03627564758062363,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 26,
+        "best_score": 273.5,
+        "status": "fitted",
+        "score": 273.5,
+        "stable_seconds": 1.2,
+        "contact_span_m": 1.5443220060750011,
+        "length_m": 3.544322006075001,
+        "body_beyond_plane_m": 3.4785235274136665,
+        "plane_shift_m": 3.4835235274136664
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 137,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 137,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.01858867537299455,
+          "frames_over_report": 0,
+          "frames": 137,
+          "per_box_max_m": {
+            "wall_1": 0.01858867537299455
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "mohak_forward_stop_002__A036",
+      "stem": "mohak_forward",
+      "group": "quadruped",
+      "fit_sha256": "84b5b1b00b7f7edfa94deff59fde93481104561f66285c4fd8ee11a9f357016e",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.15281800553202632,
+          "penetration_p99_m": 0.15033649042248728,
+          "penetration_frames_over_report": 245,
+          "support_evidence_points": 151,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.013330917805433273,
+          "skin": {
+            "max_m": 0.1533491425216198,
+            "p99_m": 0.15066851660609246,
+            "frames_over_report": 123,
+            "frames": 123
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.15281800553202632,
+          "penetration_p99_m": 0.15033649042248728,
+          "penetration_frames_over_report": 245,
+          "support_evidence_points": 151,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.013330917805433273,
+          "skin": {
+            "max_m": 0.1533491425216198,
+            "p99_m": 0.15066851660609246,
+            "frames_over_report": 123,
+            "frames": 123
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 123,
+        "frames": 123,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 123,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 199,
+        "core_cells": 199,
+        "status": "fitted",
+        "tight_m": 0.7158131571114064,
+        "loose_m": 1.2175706100463866,
+        "floor_m": 0.05471692606806755,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 69,
+        "best_score": 103.0,
+        "status": "fitted",
+        "score": 103.0,
+        "stable_seconds": 3.6666666666666665,
+        "contact_span_m": 0.4145778691416684,
+        "length_m": 2.4145778691416684,
+        "body_beyond_plane_m": 0.008496153030736586,
+        "plane_shift_m": 0.01349615303073648
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.05065326224397058,
+          "frames_over_report": 10,
+          "frames": 123,
+          "per_box_max_m": {
+            "wall_1": 0.05065326224397058
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.05065326224397058,
+            "ground": 0.09999989420175553
+          },
+          "frames_over_report": {
+            "solids": 10,
+            "ground": 123
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.05065326224397058,
+            "ground": 0.09999989420175553
+          },
+          "frames_over_report": {
+            "solids": 10,
+            "ground": 123
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.05065326224397058,
+            "ground": 0.09999989420175553
+          },
+          "frames_over_report": {
+            "solids": 10,
+            "ground": 123
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.05065326224397058,
+            "ground": 0.09999989420175553
+          },
+          "frames_over_report": {
+            "solids": 10,
+            "ground": 123
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1
+          }
+        }
+      ]
+    },
+    {
+      "filename": "mohak_idle_stop_001__A125",
+      "stem": "mohak_idle",
+      "group": "quadruped",
+      "fit_sha256": "aab5995616b6855a69c385cb5dc6ed10e15954f781d0b950ae5d86e8ab88433d",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0969609154308273,
+          "penetration_p99_m": 0.09693365360741155,
+          "penetration_frames_over_report": 81,
+          "support_evidence_points": 67,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.012928686282975832,
+          "skin": {
+            "max_m": 0.09795859287623898,
+            "p99_m": 0.09794257502202526,
+            "frames_over_report": 46,
+            "frames": 72
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0969609154308273,
+          "penetration_p99_m": 0.09693365360741155,
+          "penetration_frames_over_report": 81,
+          "support_evidence_points": 67,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.012928686282975832,
+          "skin": {
+            "max_m": 0.09795859287623898,
+            "p99_m": 0.09794257502202526,
+            "frames_over_report": 46,
+            "frames": 72
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 44,
+        "frames": 72,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 3,
+          "other_low": 0,
+          "quadruped": 41,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 86,
+        "core_cells": 43,
+        "status": "fitted",
+        "tight_m": 1.1873681943571137,
+        "loose_m": 1.2175706100463866,
+        "floor_m": 0.007197736009402433,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 51,
+        "best_score": 188.0,
+        "status": "fitted",
+        "score": 188.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 0.7927552864196005,
+        "length_m": 2.7927552864196006,
+        "body_beyond_plane_m": 0.12214731813902344,
+        "plane_shift_m": 0.12714731813902344
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 72,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 72,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 72,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "mohak_idle_stop_103__A123",
+      "stem": "mohak_idle",
+      "group": "quadruped",
+      "fit_sha256": "79f383117a54ff4cb0b60076547fe62654b40ee6286181bd054472f6f57b289e",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.057339005172252655,
+          "penetration_p99_m": 0.05711141735315323,
+          "penetration_frames_over_report": 74,
+          "support_evidence_points": 55,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006070645758882165,
+          "skin": {
+            "max_m": 0.05830809473991394,
+            "p99_m": 0.05813955187797546,
+            "frames_over_report": 37,
+            "frames": 87
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.057339005172252655,
+          "penetration_p99_m": 0.05711141735315323,
+          "penetration_frames_over_report": 74,
+          "support_evidence_points": 55,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006070645758882165,
+          "skin": {
+            "max_m": 0.05830809473991394,
+            "p99_m": 0.05813955187797546,
+            "frames_over_report": 37,
+            "frames": 87
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 42,
+        "frames": 87,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 5,
+          "other_low": 0,
+          "quadruped": 37,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 102,
+        "core_cells": 66,
+        "status": "fitted",
+        "tight_m": 1.1581946098804474,
+        "loose_m": 1.2175706100463866,
+        "floor_m": -0.008013397455215454,
+        "explanation": {
+          "tight": 0.21428571428571427,
+          "loose": 0.21428571428571427
+        }
+      },
+      "wall_report": {
+        "still_frames": 61,
+        "best_score": 346.0,
+        "status": "fitted",
+        "score": 346.0,
+        "stable_seconds": 2.2,
+        "contact_span_m": 0.9946972448211944,
+        "length_m": 2.994697244821195,
+        "body_beyond_plane_m": 0.17345317464582977,
+        "plane_shift_m": 0.17845317464582977
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.004935042192606959,
+          "frames_over_report": 0,
+          "frames": 87,
+          "per_box_max_m": {
+            "wall_1": 0.004935042192606959
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "mohak_loop_003__A029",
+      "stem": "mohak",
+      "group": "quadruped",
+      "fit_sha256": "17d3ce082b0436ef5616d5193bb71c23f291af4d6c7ddf900b2b1de3cb9af554",
+      "levels_m": [
+        0.0,
+        0.09567125793546438
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "merged_small_steps",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected",
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.05990994814783335,
+          "penetration_p99_m": 0.04554106079041962,
+          "penetration_frames_over_report": 237,
+          "support_evidence_points": 56,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.09567125793546438,
+          "skin": {
+            "max_m": 0.060681664384901524,
+            "p99_m": 0.04754833821207287,
+            "frames_over_report": 133,
+            "frames": 236
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.05990994814783335,
+          "penetration_p99_m": 0.04554106079041962,
+          "penetration_frames_over_report": 237,
+          "support_evidence_points": 56,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.09567125793546438,
+          "skin": {
+            "max_m": 0.060681664384901524,
+            "p99_m": 0.04754833821207287,
+            "frames_over_report": 133,
+            "frames": 236
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 236,
+        "frames": 236,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 236,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 750,
+        "core_cells": 750,
+        "status": "fitted",
+        "tight_m": 0.9382823258265853,
+        "loose_m": 1.2175706100463866,
+        "floor_m": 0.005617641843855381,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 26,
+        "best_score": 183.0,
+        "status": "fitted",
+        "score": 183.0,
+        "stable_seconds": 1.1333333333333333,
+        "contact_span_m": 7.594218666800317,
+        "length_m": 9.594218666800318,
+        "body_beyond_plane_m": 6.869801446580111,
+        "plane_shift_m": 6.874801446580111
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 236,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 236,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.09999299358117213,
+          "frames_over_report": 2,
+          "frames": 236,
+          "per_box_max_m": {
+            "wall_1": 0.09999299358117213
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.09999299358117213,
+            "ground": 0.060681664384901524
+          },
+          "frames_over_report": {
+            "solids": 2,
+            "ground": 133
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.09999299358117213,
+            "ground": 0.060681664384901524
+          },
+          "frames_over_report": {
+            "solids": 2,
+            "ground": 133
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.09999299358117213,
+            "ground": 0.060681664384901524
+          },
+          "frames_over_report": {
+            "solids": 2,
+            "ground": 133
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 3
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.09999299358117213,
+            "ground": 0.060681664384901524
+          },
+          "frames_over_report": {
+            "solids": 2,
+            "ground": 133
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        }
+      ]
+    },
+    {
+      "filename": "mohak_loop_003__A032",
+      "stem": "mohak",
+      "group": "quadruped",
+      "fit_sha256": "ac64ffde3a5cdc6a36f210801e6c91d65c85c8f0c9186addd75e4ce51361a2b3",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.09851960092782974,
+          "penetration_p99_m": 0.09569583401083945,
+          "penetration_frames_over_report": 454,
+          "support_evidence_points": 351,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.012776795774698257,
+          "skin": {
+            "max_m": 0.09952161461114883,
+            "p99_m": 0.09662037163972856,
+            "frames_over_report": 227,
+            "frames": 227
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.09851960092782974,
+          "penetration_p99_m": 0.09569583401083945,
+          "penetration_frames_over_report": 454,
+          "support_evidence_points": 351,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.012776795774698257,
+          "skin": {
+            "max_m": 0.09952161461114883,
+            "p99_m": 0.09662037163972856,
+            "frames_over_report": 227,
+            "frames": 227
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 227,
+        "frames": 227,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 227,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 675,
+        "core_cells": 675,
+        "status": "fitted",
+        "tight_m": 0.8448832044005394,
+        "loose_m": 1.2175706100463866,
+        "floor_m": 0.03250507265329361,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 14,
+        "best_score": 121.0,
+        "status": "fitted",
+        "score": 121.0,
+        "stable_seconds": 0.8666666666666667,
+        "contact_span_m": 4.672953198256603,
+        "length_m": 6.672953198256603,
+        "body_beyond_plane_m": 7.834141770649627,
+        "plane_shift_m": 7.839141770649627
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 227,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 227,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.054047679250405524,
+          "frames_over_report": 6,
+          "frames": 227,
+          "per_box_max_m": {
+            "wall_1": 0.054047679250405524
+          }
+        }
+      },
+      "rejected_variants": [
+        {
+          "index": 0,
+          "penetration_m": {
+            "solids": 0.054047679250405524,
+            "ground": 0.09952161461114883
+          },
+          "frames_over_report": {
+            "solids": 6,
+            "ground": 227
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 2
+          }
+        },
+        {
+          "index": 1,
+          "penetration_m": {
+            "solids": 0.054047679250405524,
+            "ground": 0.09952161461114883
+          },
+          "frames_over_report": {
+            "solids": 6,
+            "ground": 227
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 4
+          }
+        },
+        {
+          "index": 2,
+          "penetration_m": {
+            "solids": 0.054047679250405524,
+            "ground": 0.09952161461114883
+          },
+          "frames_over_report": {
+            "solids": 6,
+            "ground": 227
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        },
+        {
+          "index": 3,
+          "penetration_m": {
+            "solids": 0.054047679250405524,
+            "ground": 0.09952161461114883
+          },
+          "frames_over_report": {
+            "solids": 6,
+            "ground": 227
+          },
+          "explanation_rate": 1.0,
+          "roles": {
+            "ground": 1,
+            "ceiling": 1,
+            "wall": 1,
+            "clutter": 1
+          }
+        }
+      ]
+    },
+    {
+      "filename": "mohak_stop_002__A034",
+      "stem": "mohak",
+      "group": "quadruped",
+      "fit_sha256": "ae71efa3e2114159f377f6314e877ce3655102e93f569bb8434117cc659d506d",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.08410546189406887,
+          "penetration_p99_m": 0.08406146114924923,
+          "penetration_frames_over_report": 78,
+          "support_evidence_points": 75,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007647215446922928,
+          "skin": {
+            "max_m": 0.08436752116540447,
+            "p99_m": 0.08432504451135174,
+            "frames_over_report": 39,
+            "frames": 69
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.08410546189406887,
+          "penetration_p99_m": 0.08406146114924923,
+          "penetration_frames_over_report": 78,
+          "support_evidence_points": 75,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007647215446922928,
+          "skin": {
+            "max_m": 0.08436752116540447,
+            "p99_m": 0.08432504451135174,
+            "frames_over_report": 39,
+            "frames": 69
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 46,
+        "frames": 69,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 23,
+          "other_low": 1,
+          "quadruped": 22,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 102,
+        "core_cells": 94,
+        "status": "fitted",
+        "tight_m": 1.6797263332619332,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.0006911083473823965,
+        "explanation": {
+          "tight": 0.5217391304347826,
+          "loose": 0.5217391304347826
+        }
+      },
+      "wall_report": {
+        "still_frames": 49,
+        "best_score": 514.0,
+        "status": "fitted",
+        "score": 514.0,
+        "stable_seconds": 0.9333333333333333,
+        "contact_span_m": 0.6661138475782851,
+        "length_m": 2.666113847578285,
+        "body_beyond_plane_m": 0.07174474119002094,
+        "plane_shift_m": 0.07674474119002095
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 69,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 69,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.016698731525700464,
+          "frames_over_report": 0,
+          "frames": 69,
+          "per_box_max_m": {
+            "wall_1": 0.016698731525700464
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "mohak_turn_090_001__A033",
+      "stem": "mohak_turn",
+      "group": "quadruped",
+      "fit_sha256": "78061403c35046ba8dd5f612963eae7aa7ffcb0a170cf01347ad506aab3bc91c",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.17016642607748508,
+          "penetration_p99_m": 0.16996645562350748,
+          "penetration_frames_over_report": 178,
+          "support_evidence_points": 90,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007187629118561745,
+          "skin": {
+            "max_m": 0.1566899660974741,
+            "p99_m": 0.15631158329546452,
+            "frames_over_report": 89,
+            "frames": 89
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.17016642607748508,
+          "penetration_p99_m": 0.16996645562350748,
+          "penetration_frames_over_report": 178,
+          "support_evidence_points": 90,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007187629118561745,
+          "skin": {
+            "max_m": 0.1566899660974741,
+            "p99_m": 0.15631158329546452,
+            "frames_over_report": 89,
+            "frames": 89
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 89,
+        "frames": 89,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 89,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.2175706100463866,
+        "low_cells": 149,
+        "core_cells": 149,
+        "status": "fitted",
+        "tight_m": 0.8049649064987898,
+        "loose_m": 1.2175706100463866,
+        "floor_m": 0.0487923938781023,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 77,
+        "best_score": 545.0,
+        "status": "fitted",
+        "score": 545.0,
+        "stable_seconds": 0.9333333333333333,
+        "contact_span_m": 0.2613024769352035,
+        "length_m": 2.2613024769352035,
+        "body_beyond_plane_m": 0.09622947098338736,
+        "plane_shift_m": 0.10122947098338736
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 89,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 89,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 89,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "turn_crawl_360_R_003__A233",
+      "stem": "turn_crawl",
+      "group": "prone",
+      "fit_sha256": "f39c60b42674f2ae2509cacbae305b574c2037b69feefffb8bbf1068eecd53d7",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.16320013999938965,
+          "penetration_p99_m": 0.1495304176211357,
+          "penetration_frames_over_report": 274,
+          "support_evidence_points": 78,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.014284681528806686,
+          "skin": {
+            "max_m": 0.16339008510112762,
+            "p99_m": 0.15008708417415612,
+            "frames_over_report": 144,
+            "frames": 144
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.16320013999938965,
+          "penetration_p99_m": 0.1495304176211357,
+          "penetration_frames_over_report": 274,
+          "support_evidence_points": 78,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.014284681528806686,
+          "skin": {
+            "max_m": 0.16339008510112762,
+            "p99_m": 0.15008708417415612,
+            "frames_over_report": 144,
+            "frames": 144
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 144,
+        "frames": 144,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 1,
+          "prone": 143
+        },
+        "bound_above_floor_m": 0.7422316312789917,
+        "low_cells": 359,
+        "core_cells": 359,
+        "status": "fitted",
+        "tight_m": 0.6100648576021195,
+        "loose_m": 0.7422316312789917,
+        "floor_m": 0.0010691136121749878,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 98,
+        "best_score": 78.0,
+        "status": "no_contact_plane"
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 144,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 144,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    }
+  ]
+}

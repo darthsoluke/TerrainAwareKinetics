@@ -220,6 +220,8 @@ v1 的 38 条查看数据另做成了在线查看页，供直接浏览；v2 重�
 
 第三步 a v2、第四步（顶棚、侧墙）和第五步（场景变体）的完整方法见 [方法 v2](bones_terrain_method_v2_20261023.md)。
 
+2026-10-24 已完成 [v3 四路执行](bones_terrain_fit_v3_pro6000_20261023.md)，涵盖 6,788 条主样本和 120 条 `on_the_edge`。分组对照、顶棚高度校准、墙体问题和变体接受率已发布；本轮没有训练。
+
 ## 待决定
 
 1. **Uniform 或 Proportional。** 已有 sole 顶点来自官方 `skin_standard.npz`，与 Uniform 骨架一致。

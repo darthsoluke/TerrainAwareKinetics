@@ -1,0 +1,417 @@
+{
+  "name": "E",
+  "source_commit": "f49e5abae96a29edf8249751405392ba2740d624",
+  "fit_count": 120,
+  "groups": {
+    "edge_balance": {
+      "clips": 120,
+      "skin_vertices": {
+        "18056": 120
+      },
+      "skin_stride": {
+        "2": 120
+      },
+      "fitted_check_failures": {},
+      "clips_with_fitted_check_over_2cm": 0,
+      "clips_with_ceiling_over_2cm": 0,
+      "clips_with_wall_over_2cm": 0,
+      "rejected_variants": 0,
+      "clips_with_rejected_variants": 0,
+      "support_cluster_status": {},
+      "wall_status": {
+        "fitted": 111,
+        "no_contact_plane": 9
+      },
+      "wall_shift_max_m": 0.7387354036277688
+    }
+  },
+  "examples": [
+    {
+      "filename": "on_the_edge_001__A098",
+      "stem": "on_the_edge",
+      "group": "edge_balance",
+      "fit_sha256": "a525e5429207230bf4252ded9c963616d237e7ee9bf76555b687ac6838e11ba7",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.006225559631711803,
+          "penetration_p99_m": 0.006045333439833484,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 62,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.011577800134546123,
+          "skin": {
+            "max_m": 0.026225559631711803,
+            "p99_m": 0.025998303773230872,
+            "frames_over_report": 32,
+            "frames": 124
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.006225559631711803,
+          "penetration_p99_m": 0.006045333439833484,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 62,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.011577800134546123,
+          "skin": {
+            "max_m": 0.026225559631711803,
+            "p99_m": 0.025998303773230872,
+            "frames_over_report": 32,
+            "frames": 124
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 124,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 86,
+        "best_score": 482.0,
+        "status": "fitted",
+        "score": 482.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 0.9350451827049255,
+        "length_m": 2.9350451827049255,
+        "body_beyond_plane_m": 0.16503450274467468,
+        "plane_shift_m": 0.1700345027446747
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 124,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "on_the_edge_001__A411",
+      "stem": "on_the_edge",
+      "group": "edge_balance",
+      "fit_sha256": "2ad0c0749b611f6602afa50b6a7c865e7973310d7d4fb4028f458a635593a9d9",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.006084796292707324,
+          "penetration_p99_m": 0.005983315268531441,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 45,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0022256586235016584,
+          "skin": {
+            "max_m": 0.026084796292707324,
+            "p99_m": 0.02596926474943757,
+            "frames_over_report": 28,
+            "frames": 158
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.006084796292707324,
+          "penetration_p99_m": 0.005983315268531441,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 45,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0022256586235016584,
+          "skin": {
+            "max_m": 0.026084796292707324,
+            "p99_m": 0.02596926474943757,
+            "frames_over_report": 28,
+            "frames": 158
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 158,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 107,
+        "best_score": 569.0,
+        "status": "fitted",
+        "score": 569.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 1.376044196916456,
+        "length_m": 3.376044196916456,
+        "body_beyond_plane_m": 0.37642846639802224,
+        "plane_shift_m": 0.38142846639802225
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 158,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "on_the_edge_002__A414",
+      "stem": "on_the_edge",
+      "group": "edge_balance",
+      "fit_sha256": "67545c6ba44a9f618e39255dd0104b8707436cf8a1148edef7d038fb9204f179",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [
+        "penetration_over_report"
+      ],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.004159304797649383,
+          "penetration_p99_m": 0.004109688936732706,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 18,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.024153408594429493,
+            "p99_m": 0.024015875346958634,
+            "frames_over_report": 21,
+            "frames": 153
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.004159304797649383,
+          "penetration_p99_m": 0.004109688936732706,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 18,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0,
+          "skin": {
+            "max_m": 0.024153408594429493,
+            "p99_m": 0.024015875346958634,
+            "frames_over_report": 21,
+            "frames": 153
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 13,
+        "frames": 153,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 13,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 88,
+        "core_cells": 41,
+        "status": "fitted",
+        "tight_m": 1.7094540362805128,
+        "loose_m": 1.710514736175537,
+        "floor_m": 0.017134489491581917,
+        "explanation": {
+          "tight": 0.0,
+          "loose": 0.0
+        }
+      },
+      "wall_report": {
+        "still_frames": 104,
+        "best_score": 723.0,
+        "status": "fitted",
+        "score": 723.0,
+        "stable_seconds": 0.6,
+        "contact_span_m": 0.9763254622502175,
+        "length_m": 2.9763254622502178,
+        "body_beyond_plane_m": 0.3578770047917067,
+        "plane_shift_m": 0.3628770047917067
+      },
+      "fitted_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 153,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 153,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        },
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 153,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "on_the_edge_003__A234",
+      "stem": "on_the_edge",
+      "group": "edge_balance",
+      "fit_sha256": "4923611bdd91405d9e5a12e198aebc40917ad7238e16b9c9d014a7e445e75cd4",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 40,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0003154182340949774,
+          "skin": {
+            "max_m": 0.010550389531999826,
+            "p99_m": 0.010382557492703198,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 40,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0003154182340949774,
+          "skin": {
+            "max_m": 0.010550389531999826,
+            "p99_m": 0.010382557492703198,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 99,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 70,
+        "best_score": 332.0,
+        "status": "fitted",
+        "score": 332.0,
+        "stable_seconds": 0.8666666666666667,
+        "contact_span_m": 1.7265571701764768,
+        "length_m": 3.7265571701764766,
+        "body_beyond_plane_m": 0.7328829512332249,
+        "plane_shift_m": 0.7378829512332248
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    },
+    {
+      "filename": "on_the_edge_004__A142",
+      "stem": "on_the_edge",
+      "group": "edge_balance",
+      "fit_sha256": "fd87ba62c360c3b93e3fc8991783b4f99ca5f34b11eae8921283978aaaf5ebb7",
+      "levels_m": [
+        0.0
+      ],
+      "support_boxes": 0,
+      "flags": [],
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 127,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01011523837223649,
+          "skin": {
+            "max_m": 0.01209145924076438,
+            "p99_m": 0.01208384757861495,
+            "frames_over_report": 0,
+            "frames": 128
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 127,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01011523837223649,
+          "skin": {
+            "max_m": 0.01209145924076438,
+            "p99_m": 0.01208384757861495,
+            "frames_over_report": 0,
+            "frames": 128
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 128,
+        "status": "no_sustained_low_posture"
+      },
+      "wall_report": {
+        "still_frames": 102,
+        "best_score": 601.5,
+        "status": "fitted",
+        "score": 601.5,
+        "stable_seconds": 1.2,
+        "contact_span_m": 1.1779243746039447,
+        "length_m": 3.1779243746039447,
+        "body_beyond_plane_m": 0.7337354036277689,
+        "plane_shift_m": 0.7387354036277688
+      },
+      "fitted_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 128,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "rejected_variants": []
+    }
+  ],
+  "screen_levels": {
+    "1": 119,
+    "0": 1
+  },
+  "fit_levels": {
+    "1": 119,
+    "0": 1
+  }
+}

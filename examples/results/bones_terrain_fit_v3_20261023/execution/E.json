@@ -1,0 +1,48 @@
+{
+  "name": "E",
+  "commands": [
+    [
+      "${PFNN_PROJECT}/env/bin/python",
+      "-u",
+      "scripts/screen_bones_terrain_geometry.py",
+      "--bvh-root",
+      "${BONES_BVH_ROOT}",
+      "--config",
+      "configs/bones_terrain_screen_edge_v1.json",
+      "--output",
+      "runs/bones_screen_edge_v1",
+      "--workers",
+      "4"
+    ],
+    [
+      "${PFNN_PROJECT}/env/bin/python",
+      "-u",
+      "scripts/fit_bones_terrain_support.py",
+      "--screen-run",
+      "runs/bones_screen_edge_v1",
+      "--output",
+      "runs/bones_fit_edge_v1",
+      "--viz-per-stem",
+      "8",
+      "--variants",
+      "2",
+      "--workers",
+      "4"
+    ]
+  ],
+  "output": "runs/bones_fit_edge_v1",
+  "returncodes": [
+    0,
+    0
+  ],
+  "wall_seconds": 415.6,
+  "fit_elapsed_seconds": 344.0,
+  "fitted": 120,
+  "failed": 0,
+  "rendered": 11,
+  "render_failures": [],
+  "memory_samples": 16,
+  "initial_available_bytes": 454132092928,
+  "minimum_available_bytes": 392289955840,
+  "peak_unavailable_bytes": 143427911680
+}
