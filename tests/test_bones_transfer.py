@@ -96,7 +96,7 @@ def test_completed_date_is_not_repacked_or_uploaded(monkeypatch, tmp_path):
 
 
 def test_prefetch_waits_for_completion_and_reserves_raw_and_archive_space(monkeypatch, tmp_path):
-    args = SimpleNamespace(work=tmp_path, remote='drive:task', expected_files=2,
+    args = SimpleNamespace(work=tmp_path, remote='drive:task', expected_files=2, download_transfers=4,
                            reserve_gib=200, rclone='rclone', config='private.conf')
     def get_summary(args, source, target):
         Path(target).write_text(json.dumps(dict(files=2, scope='all_originals', total_bytes=100, dates=2)))

@@ -203,7 +203,7 @@ def prefetch_archives(args):
         require_space(args.work, max(0, 2 * summary['total_bytes'] + 10 * GIB - cached), args.reserve_gib * GIB)
         subprocess.run([args.rclone, '--config', str(args.config), 'copy', remote, str(args.work),
                         '--include', '/*.tar.gz', '--include', '/manifest.jsonl',
-                        '--include', '/staging_complete.json', '--immutable', '--transfers', '2',
+                        '--include', '/staging_complete.json', '--immutable', '--transfers', str(args.download_transfers),
                         '--max-depth', '1', '--contimeout', '20s', '--timeout', '120s',
                         '--retries', '5', '--low-level-retries', '3', '--stats', '30s',
                         '--stats-one-line', '--stats-log-level', 'NOTICE'], check=True)
@@ -282,6 +282,7 @@ def main():
     parser.add_argument('--reserve-gib', type=int, default=200)
     parser.add_argument('--drive-chunk-size', default='32M')
     parser.add_argument('--prefetch', action='store_true', help='Download finished date archives while the source uploader is active')
+    parser.add_argument('--download-transfers', type=int, default=4)
     parser.add_argument('--rclone')
     parser.add_argument('--config', type=Path)
     parser.add_argument('--remote')
