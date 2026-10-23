@@ -52,12 +52,12 @@ flat_remainder                122285   61163   61122    435575.1         -      
 
 源文件SHA256清单已完整生成：71,132个文件、148,382,694,286 bytes、124个日期目录。清单SHA256为 `aae7f5c9fe585c264867488488315857020ebb11dd58c6981856b0315ae9dfc1`，摘要见 [transfer_source_summary.json](../../examples/results/bones_terrain_survey_v2_20261023/transfer_source_summary.json)。
 
-压缩包正在通过私有Drive上传，目标端最终逐文件校验结果尚未产生。上传器记录每个成功日期，重启时复用完成记录；大文件分块设为32MiB，减少远端请求开销。
+压缩包正在通过私有Drive上传，PRO6000同时预下载已完成的包，目标端最终逐文件校验结果尚未产生。上传器记录每个成功日期，重启时复用完成记录；大文件分块设为32MiB。g3直连Drive实测约26～29MiB/s，接收端使用M78。
 
-迁移工具：[transfer_bones_originals.py](../../scripts/transfer_bones_originals.py)，[测试](../../tests/test_bones_transfer.py)有9项通过，覆盖原始/镜像筛选、日期目录、错误哈希、已有文件保护、空间门槛和完成日期复用。工具分为：
+迁移工具：[transfer_bones_originals.py](../../scripts/transfer_bones_originals.py)，[测试](../../tests/test_bones_transfer.py)有10项通过，覆盖原始/镜像筛选、日期目录、错误哈希、已有文件保护、空间门槛、完成日期复用与预下载完成条件。工具分为：
 
 1. `index`：只读g3源BVH，写出每个相对路径、大小与SHA256；清单完整后才允许打包。
 2. `upload`：每个日期一个tar.gz，经私有Drive上传；成功后清理本任务自己的临时压缩包。
-3. `receive`：PRO6000验证压缩包、保留日期目录解包、核对每个BVH，最后再独立读取所有目标文件进行全量哈希验证。
+3. `receive --prefetch`：预下载时预留全部原始BVH、最坏情况压缩包与额外10GiB空间。源端完成标志到达后，PRO6000验证压缩包、保留日期目录解包、核对每个BVH，最后再独立读取所有目标文件进行全量哈希验证。
 
 源文件、NAS与其他用户目录保持不变；全过程CPU，无训练。机器路径和传输凭证采用任务私有配置。

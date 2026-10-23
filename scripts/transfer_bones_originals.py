@@ -12,6 +12,7 @@ import stat
 import subprocess
 import tarfile
 import tempfile
+import time
 
 
 GIB = 1024**3
@@ -189,9 +190,33 @@ def extract_archive(archive, destination, members):
         raise ValueError('Archive is missing expected BVHs')
 
 
+def prefetch_archives(args):
+    remote = args.remote.rstrip('/')
+    rclone(args, remote + '/index_summary.json', args.work / 'index_summary.json')
+    summary = json.loads((args.work / 'index_summary.json').read_text())
+    if summary['files'] != args.expected_files or summary['scope'] != 'all_originals':
+        raise ValueError('Unexpected source scope for archive prefetch')
+    while not (args.work / 'staging_complete.json').exists():
+        archives = list(args.work.glob('*.tar.gz'))
+        cached = sum(path.stat().st_size for path in archives)
+        # Reserve room for all raw BVHs, worst-case remaining archives and tar overhead.
+        require_space(args.work, max(0, 2 * summary['total_bytes'] + 10 * GIB - cached), args.reserve_gib * GIB)
+        subprocess.run([args.rclone, '--config', str(args.config), 'copy', remote, str(args.work),
+                        '--include', '/*.tar.gz', '--include', '/manifest.jsonl',
+                        '--include', '/staging_complete.json', '--immutable', '--transfers', '2',
+                        '--max-depth', '1', '--contimeout', '20s', '--timeout', '120s',
+                        '--retries', '5', '--low-level-retries', '3', '--stats', '30s',
+                        '--stats-one-line', '--stats-log-level', 'NOTICE'], check=True)
+        print(f'Prefetched {len(list(args.work.glob("*.tar.gz")))}/{summary["dates"]} date archives', flush=True)
+        if not (args.work / 'staging_complete.json').exists():
+            time.sleep(45)
+
+
 def receive_verify(args):
     args.work.mkdir(parents=True, exist_ok=True)
     args.destination.mkdir(parents=True, exist_ok=True)
+    if args.prefetch:
+        prefetch_archives(args)
     remote = args.remote.rstrip('/')
     for name in ('manifest.jsonl', 'staging_complete.json'):
         rclone(args, remote + '/' + name, args.work / name)
@@ -256,6 +281,7 @@ def main():
     parser.add_argument('--workers', type=int, default=4)
     parser.add_argument('--reserve-gib', type=int, default=200)
     parser.add_argument('--drive-chunk-size', default='32M')
+    parser.add_argument('--prefetch', action='store_true', help='Download finished date archives while the source uploader is active')
     parser.add_argument('--rclone')
     parser.add_argument('--config', type=Path)
     parser.add_argument('--remote')

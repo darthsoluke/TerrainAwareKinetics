@@ -8,7 +8,7 @@ from types import SimpleNamespace
 import pytest
 
 from scripts.transfer_bones_originals import (
-    GIB, extract_archive, index_source, pack_upload, read_manifest, relative_path, require_space,
+    GIB, extract_archive, index_source, pack_upload, prefetch_archives, read_manifest, relative_path, require_space,
 )
 
 
@@ -93,3 +93,25 @@ def test_completed_date_is_not_repacked_or_uploaded(monkeypatch, tmp_path):
     (work / 'packages.json').write_text(json.dumps([package]))
     with pytest.raises(ValueError, match='journal'):
         pack_upload(args)
+
+
+def test_prefetch_waits_for_completion_and_reserves_raw_and_archive_space(monkeypatch, tmp_path):
+    args = SimpleNamespace(work=tmp_path, remote='drive:task', expected_files=2,
+                           reserve_gib=200, rclone='rclone', config='private.conf')
+    def get_summary(args, source, target):
+        Path(target).write_text(json.dumps(dict(files=2, scope='all_originals', total_bytes=100, dates=2)))
+    monkeypatch.setattr('scripts.transfer_bones_originals.rclone', get_summary)
+    reservations, batches, waits = [], [], []
+    monkeypatch.setattr('scripts.transfer_bones_originals.require_space', lambda path, incoming, reserve: reservations.append((incoming, reserve)))
+    monkeypatch.setattr('scripts.transfer_bones_originals.time.sleep', waits.append)
+    def copy_batch(command, check):
+        batches.append(command)
+        if len(batches) == 1:
+            (tmp_path / '230118.tar.gz').write_bytes(b'x' * 20)
+        else:
+            (tmp_path / 'staging_complete.json').write_text('{}')
+    monkeypatch.setattr('scripts.transfer_bones_originals.subprocess.run', copy_batch)
+    prefetch_archives(args)
+    assert len(batches) == 2 and waits == [45]
+    assert reservations == [(200 + 10 * GIB, 200 * GIB), (180 + 10 * GIB, 200 * GIB)]
+    assert all('--immutable' in command for command in batches)
