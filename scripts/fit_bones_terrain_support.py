@@ -112,19 +112,79 @@ def clip_seed(filename):
 UNMODELLED_GROUPS = ("ladder", "obstacle_clearance")
 
 
-def _process(item, render, skin_stride=2, variants=4):
+def _cache_path(cache, item, skin_stride):
+    return Path(cache) / f"{item['filename']}__s{skin_stride}.npz"
+
+
+def _source_stamp(path):
+    stat = Path(path).stat()
+    return f"{stat.st_size}:{stat.st_mtime_ns}"
+
+
+def load_motion(item, skin_stride, cache=None, cache_skin=False):
+    """Converted motion (and optionally skin) for one clip, from the cache when it is current.
+
+    The cache only stores outputs of the unchanged official conversion path (BVH parse,
+    30 Hz resampling, FK, sole regions, skinning); it is keyed by the BVH size and mtime and
+    the skin stride, so fitting code changes never need it rebuilt.
+    """
+    path = _cache_path(cache, item, skin_stride) if cache else None
+    if path is not None and path.exists():
+        data = np.load(path, allow_pickle=False)
+        if str(data["stamp"]) == _source_stamp(item["path"]) and (not skin_stride or not cache_skin or "skin" in data):
+            names = [str(n) for n in data["joint_names"]]
+            joints = {name: data["joints"][:, k].astype(np.float64) for k, name in enumerate(names)}
+            soles = {"left": data["sole_left"].astype(np.float64), "right": data["sole_right"].astype(np.float64)}
+            skin = None
+            if skin_stride:
+                if "skin" in data:     # float16 offsets from each skinned frame's root: about 1 mm steps
+                    skin = data["skin"].astype(np.float32) + data["root"][::skin_stride][:, None].astype(np.float32)
+                else:                  # exact: the same float32 rotations through the same skinner
+                    skin = skin_vertices(data["rotations"], data["posed"], skin_stride)
+            return soles, joints, data["root"].astype(np.float64), float(data["source_fps"]), skin, True
     if skin_stride:
         soles, joints, root, source_fps, _, (rotations, posed) = screen.convert(
             item["path"], extra_names=VIEW_JOINTS, return_motion=True)
         skin = skin_vertices(rotations, posed, skin_stride)
     else:
         soles, joints, root, source_fps, _ = screen.convert(item["path"], extra_names=VIEW_JOINTS)
-        skin = None
+        skin, rotations, posed = None, None, None
+    if path is not None:
+        names = sorted(joints)
+        arrays = {"stamp": np.array(_source_stamp(item["path"])), "joint_names": np.array(names),
+                  "joints": np.stack([joints[n] for n in names], axis=1).astype(np.float32),
+                  "sole_left": soles["left"].astype(np.float32), "sole_right": soles["right"].astype(np.float32),
+                  "root": root.astype(np.float32), "source_fps": np.array(source_fps)}
+        if rotations is not None:
+            arrays.update(rotations=np.asarray(rotations, dtype=np.float32), posed=np.asarray(posed, dtype=np.float32))
+        if skin is not None and cache_skin:
+            arrays["skin"] = (skin - root[::skin_stride][:, None]).astype(np.float16)
+        path.parent.mkdir(parents=True, exist_ok=True)
+        temporary = path.with_suffix(".tmp.npz")
+        np.savez(temporary, **arrays)
+        temporary.replace(path)
+    return soles, joints, root, source_fps, skin, False
+
+
+def _process(item, render, skin_stride=2, variants=4, cache=None, cache_skin=False):
+    timing = {}
+    clock = time.perf_counter()
+
+    def lap(name):
+        nonlocal clock
+        now = time.perf_counter()
+        timing[name] = round(now - clock, 4)
+        clock = now
+
+    soles, joints, root, source_fps, skin, cached = load_motion(item, skin_stride, cache, cache_skin)
+    lap("motion_cached" if cached else "motion_converted")
     _, support, posture = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
                                              dimension_tokens=item.get("dimension_tokens", ()), return_posture=True)
+    lap("screen")
     fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin,
                       skin_frame_stride=max(1, skin_stride), foot_vertices=screen._STATE.get("foot_vertices"),
                       leg_vertices=screen._STATE.get("leg_vertices"))
+    lap("support_fit")
     if skin is not None:
         fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
         fit["scene"] = scene_for_clip(skin, posture[::skin_stride], joints["Hips"][::skin_stride][:, [0, 2]], fit,
@@ -134,6 +194,7 @@ def _process(item, render, skin_stride=2, variants=4):
         if item.get("group") in UNMODELLED_GROUPS:
             fit["scene"].update(eligibility="excluded_unmodelled_geometry", training_eligible=False,
                                 eligibility_before_exclusion=fit["scene"]["eligibility"])
+    lap("scene")
     fit["meta"] = {key: item[key] for key in ("filename", "stem", "group")}
     fit["meta"].update(source_fps=source_fps, dimension_tokens=item.get("dimension_tokens", []),
                        seconds=round(len(joints["Hips"]) / screen.FPS, 3))
@@ -145,6 +206,8 @@ def _process(item, render, skin_stride=2, variants=4):
             render_gif(joints, fit, folder / f"{item['filename']}.gif", title=item["filename"])
         payload = viewer_payload(joints, fit, meta=fit["meta"])
         (Path(render["viewer"]) / f"{item['filename']}.json").write_text(json.dumps(payload), encoding="utf-8")
+        lap("render")
+    fit["timing_s"] = timing
     return fit
 
 
@@ -152,7 +215,8 @@ def work_fit(job):
     item, options = job
     started = time.perf_counter()
     try:
-        fit = _process(item, None, options["skin_stride"], options["variants"])
+        fit = _process(item, None, options["skin_stride"], options["variants"],
+                       options.get("motion_cache"), options.get("cache_skin", False))
         result = {"filename": item["filename"], "stem": item["stem"], "group": item["group"], "fit": fit}
     except Exception as error:
         result = {"filename": item["filename"], "stem": item["stem"], "group": item["group"],
@@ -164,10 +228,21 @@ def work_fit(job):
 def work_render(job):
     item, render, options = job
     try:
-        _process(item, render, options["skin_stride"], options["variants"])
+        _process(item, render, options["skin_stride"], options["variants"],
+                 options.get("motion_cache"), options.get("cache_skin", False))
         return {"filename": item["filename"], "rendered": True}
     except Exception as error:
         return {"filename": item["filename"], "rendered": False, "error": f"{type(error).__name__}: {error}"}
+
+
+def stage_summary(results):
+    """Total and per-clip median seconds per processing stage, to see where time goes."""
+    stages = {}
+    for result in results:
+        for name, value in result.get("fit", {}).get("timing_s", {}).items():
+            stages.setdefault(name, []).append(value)
+    return {name: {"clips": len(v), "total": round(float(np.sum(v)), 1), "p50": round(float(np.median(v)), 4),
+                   "p95": round(float(np.percentile(v, 95)), 4)} for name, v in sorted(stages.items())}
 
 
 def penetration(fit, variant):
@@ -336,6 +411,12 @@ def main(argv=None):
     parser.add_argument("--skin-stride", type=int, default=2,
                         help="Skin every n-th frame for the penetration metric; 0 disables skinning and scenes")
     parser.add_argument("--variants", type=int, default=4, help="Scene variants per clip")
+    parser.add_argument("--clips", type=Path, help="Text file of filenames (one per line) to restrict the run to")
+    parser.add_argument("--motion-cache", type=Path,
+                        help="Directory caching converted motion per clip; reused while the BVH is unchanged")
+    parser.add_argument("--cache-skin", action="store_true",
+                        help="Also cache the skin as float16 root offsets (~1 mm steps, ~10 MB per clip) instead "
+                             "of re-skinning; approximate, so not for release runs")
     parser.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2) // 2),
                         help="Worker processes; 0 runs in-process")
     args = parser.parse_args(argv)
@@ -346,6 +427,9 @@ def main(argv=None):
     screened_ok = [row for row in screened_ok if "error" not in row]
     items = [selection[row["filename"]] for row in sorted(screened_ok, key=lambda r: r["filename"])
              if row["filename"] in selection and (not args.groups or row["group"] in args.groups)]
+    if args.clips:
+        wanted = {line.strip() for line in args.clips.read_text().splitlines() if line.strip()}
+        items = [item for item in items if item["filename"] in wanted]
     if args.limit_per_stem:
         kept, counts = [], {}
         for item in sorted(items, key=lambda i: hashlib.sha256(i["filename"].encode()).hexdigest()):
@@ -356,7 +440,8 @@ def main(argv=None):
     args.output.mkdir(parents=True, exist_ok=False)
     for folder in ("fits", "viz", "viewer"):
         (args.output / folder).mkdir()
-    options = {"skin_stride": args.skin_stride, "variants": args.variants}
+    options = {"skin_stride": args.skin_stride, "variants": args.variants,
+               "motion_cache": str(args.motion_cache) if args.motion_cache else None, "cache_skin": args.cache_skin}
     print(json.dumps({"clips": len(items), "workers": args.workers, **options}), flush=True)
 
     started = time.time()
@@ -414,6 +499,7 @@ def main(argv=None):
         "rendered": {"clips": len(rendered), "ok": sum(r["rendered"] for r in rendered),
                      "failed": [r for r in rendered if not r["rendered"]], "reasons": chosen},
         "elapsed_seconds": round(time.time() - started, 1), "config": FitConfig().__dict__,
+        "stage_seconds": stage_summary(results),
         "scene_config": SceneConfig().__dict__,
         "arguments": {k: (str(v) if isinstance(v, Path) else v) for k, v in vars(args).items()},
         "module_sha256": {name: screen.sha256_file(ROOT / name) for name in (

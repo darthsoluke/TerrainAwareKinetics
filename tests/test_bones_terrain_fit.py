@@ -467,3 +467,46 @@ def test_unmodelled_groups_are_never_training_eligible(tmp_path):
     scene = json.loads((output / "fits" / "ladder_climb_up_001__A1.json").read_text())["scene"]
     assert scene["eligibility"] == "excluded_unmodelled_geometry" and not scene["training_eligible"]
     assert scene["eligibility_before_exclusion"] == "environment_explained"
+
+
+def test_motion_cache_and_clip_list_reproduce_the_fit(tmp_path):
+    import scripts.fit_bones_terrain_support as fit_script
+    from scripts import screen_bones_terrain_geometry as screen
+    soles, joints, root = step_up()
+    skin = np.concatenate([soles["left"], soles["right"]] + [joints[n][:, None] for n in joints], axis=1)
+    calls = []
+    original = (screen._init_worker, screen.convert, fit_script.skin_vertices)
+    screen._init_worker = lambda: screen._STATE.update(standing_hip=.95, standing_top=1.8)
+
+    def convert(path, extra_names=(), return_motion=False):
+        calls.append(path)
+        return (soles, joints, root, 120.0, 0.0, (None, None)) if return_motion else (soles, joints, root, 120.0, 0.0)
+    screen.convert = convert
+    fit_script.skin_vertices = lambda rotations, posed, stride: skin[::stride]
+    bvh = tmp_path / "1.bvh"
+    bvh.write_text("x")
+    try:
+        run = tmp_path / "screen"
+        run.mkdir()
+        rows = [{"filename": name, "stem": "come_up_50cm_box", "group": "known_dimension_support",
+                 "path": str(bvh), "dimension_tokens": ["50cm"]} for name in ("clip_a", "clip_b")]
+        (run / "selection.jsonl").write_text("\n".join(json.dumps(r) for r in rows))
+        (run / "clips.jsonl").write_text("\n".join(json.dumps({**r, "flags": []}) for r in rows))
+        (tmp_path / "dev.txt").write_text("clip_a\n")
+        common = ["--screen-run", str(run), "--workers", "0", "--viz-per-stem", "0", "--worst-per-group", "0",
+                  "--variants", "2", "--clips", str(tmp_path / "dev.txt"),
+                  "--motion-cache", str(tmp_path / "cache"), "--cache-skin"]
+        assert fit_script.main(common + ["--output", str(tmp_path / "first")]) == 0
+        assert fit_script.main(common + ["--output", str(tmp_path / "second")]) == 0
+    finally:
+        screen._init_worker, screen.convert, fit_script.skin_vertices = original
+        screen._STATE.pop("standing_top", None)
+    assert len(calls) == 1                                        # second run read the cache
+    first, second = (json.loads((tmp_path / run_name / "fits" / "clip_a.json").read_text())
+                     for run_name in ("first", "second"))
+    assert not (tmp_path / "first" / "fits" / "clip_b.json").exists()
+    assert "motion_converted" in first["timing_s"] and "motion_cached" in second["timing_s"]
+    assert np.allclose(first["levels_m"], second["levels_m"], atol=2e-3)
+    assert [b["role"] for b in first["boxes"]["minimal"]] == [b["role"] for b in second["boxes"]["minimal"]]
+    report = json.loads((tmp_path / "second" / "report.json").read_text())
+    assert "motion_cached" in report["stage_seconds"] and "scene" in report["stage_seconds"]
