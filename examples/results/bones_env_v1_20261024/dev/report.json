@@ -1,0 +1,179 @@
+{
+  "schema": "bones-env-training-v1",
+  "fit_run": "runs/bones_fit_v9_full",
+  "motion_cache": "runs/bones_motion_cache_s2",
+  "eligibility": [
+    "environment_explained"
+  ],
+  "elapsed_seconds": 9.3,
+  "summary": {
+    "groups": {
+      "box_support": {
+        "clips": 42,
+        "built": 9,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 27,
+          "eligibility:rejected": 6
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 41.65
+        },
+        "variants": 36
+      },
+      "crouch": {
+        "clips": 49,
+        "built": 47,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 2
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 250.14,
+          "test": 18.4,
+          "validation": 10.94
+        },
+        "variants": 188
+      },
+      "flat_control": {
+        "clips": 41,
+        "built": 41,
+        "skipped": {},
+        "errors": 0,
+        "seconds": {
+          "test": 27.08,
+          "train": 226.69,
+          "validation": 8.8
+        },
+        "variants": 164
+      },
+      "kneel": {
+        "clips": 42,
+        "built": 15,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 27
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 127.5,
+          "validation": 10.4,
+          "test": 12.23
+        },
+        "variants": 60
+      },
+      "known_dimension_support": {
+        "clips": 116,
+        "built": 105,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 4,
+          "eligibility:rejected": 7
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 431.04,
+          "validation": 14.9,
+          "test": 49.83
+        },
+        "variants": 420
+      },
+      "ladder": {
+        "clips": 41,
+        "built": 0,
+        "skipped": {
+          "eligibility:excluded_unmodelled_geometry": 41
+        },
+        "errors": 0,
+        "seconds": {},
+        "variants": 0
+      },
+      "obstacle_clearance": {
+        "clips": 40,
+        "built": 0,
+        "skipped": {
+          "eligibility:excluded_unmodelled_geometry": 40
+        },
+        "errors": 0,
+        "seconds": {},
+        "variants": 0
+      },
+      "prone": {
+        "clips": 81,
+        "built": 56,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 22,
+          "eligibility:rejected": 3
+        },
+        "errors": 0,
+        "seconds": {
+          "validation": 4.2,
+          "train": 535.95
+        },
+        "variants": 224
+      },
+      "quadruped": {
+        "clips": 61,
+        "built": 56,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 5
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 442.61,
+          "validation": 82.37,
+          "test": 5.83
+        },
+        "variants": 224
+      },
+      "stairs": {
+        "clips": 40,
+        "built": 24,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 4,
+          "eligibility:rejected": 12
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 44.16,
+          "test": 53.21
+        },
+        "variants": 96
+      },
+      "wall_contact": {
+        "clips": 40,
+        "built": 35,
+        "skipped": {
+          "eligibility:geometry_only_low_posture_unexplained": 5
+        },
+        "errors": 0,
+        "seconds": {
+          "train": 287.33
+        },
+        "variants": 140
+      }
+    },
+    "splits": {
+      "test": {
+        "clips": 31,
+        "seconds": 166.6,
+        "actors": 11
+      },
+      "train": {
+        "clips": 339,
+        "seconds": 2387.1,
+        "actors": 139
+      },
+      "validation": {
+        "clips": 18,
+        "seconds": 131.6,
+        "actors": 8
+      }
+    },
+    "fk_roundtrip_max_m": 3.8e-06,
+    "boxes_max": 13
+  },
+  "errors": [],
+  "module_sha256": {
+    "motionbricks/data/bones_env_dataset.py": "6094e9d426b940162d2d18d9457436de39b7e461b7f2f5a1a359e7505ff974ee",
+    "scripts/build_bones_env_training_set.py": "f41922705a9f9f1570cc19e9bb880bb3bedc73a2b23e584391e4dbb6ed300199"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "dataset": "runs/bones_env_v1",
+  "split": "train",
+  "windows": 199227,
+  "sampled": 8192,
+  "head_up_clearance_m": {
+    "box_support": {
+      "p10": 1.0,
+      "p50": 1.0,
+      "n": 10
+    },
+    "crouch": {
+      "p10": 0.31,
+      "p50": 0.54,
+      "n": 1534
+    },
+    "flat_control": {
+      "p10": 0.606,
+      "p50": 1.0,
+      "n": 1448
+    },
+    "kneel": {
+      "p10": 0.25,
+      "p50": 0.379,
+      "n": 560
+    },
+    "known_dimension_support": {
+      "p10": 0.615,
+      "p50": 1.0,
+      "n": 1238
+    },
+    "prone": {
+      "p10": 0.216,
+      "p50": 0.292,
+      "n": 1461
+    },
+    "quadruped": {
+      "p10": 0.206,
+      "p50": 0.277,
+      "n": 1268
+    },
+    "stairs": {
+      "p10": 1.0,
+      "p50": 1.0,
+      "n": 16
+    },
+    "wall_contact": {
+      "p10": 0.51,
+      "p50": 1.0,
+      "n": 657
+    }
+  },
+  "ray_node_inside_fraction": 1.4947384897823213e-05,
+  "ray_hit_fraction": 0.36633798386901617,
+  "contact_rate": [
+    0.4392,
+    0.4778,
+    0.4694,
+    0.5025
+  ],
+  "command_speed_mps": {
+    "p10": 0.002,
+    "p50": 0.176,
+    "p90": 0.989
+  },
+  "observation_ms_per_sample": 0.0148,
+  "smoke_rollout": {
+    "batch": 256,
+    "horizon": 4,
+    "milliseconds": 406.1,
+    "policy_loss": 1.4279210567474365,
+    "critic_loss": 2.984434127807617,
+    "terms": {
+      "command_velocity": 0.3343794345855713,
+      "command_heading": 0.0039428044110536575,
+      "penetration": 5.893647880839126e-07,
+      "support": 0.004708032123744488,
+      "skating": 7.2000027467877814e-12,
+      "smoothness": 1.5277085304260254,
+      "imitation": 0.09891149401664734
+    },
+    "parameters": 1567691
+  },
+  "single_character_step_ms": {
+    "p50": 12.902,
+    "p99": 16.991,
+    "note": "eager, includes FK, rays, stations, model and advance"
+  },
+  "body_parts": [
+    "root",
+    "torso",
+    "left_arm",
+    "right_arm",
+    "left_leg",
+    "right_leg"
+  ]
+}

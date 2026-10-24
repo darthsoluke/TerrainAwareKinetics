@@ -1,0 +1,1235 @@
+{
+  "groups": [
+    {
+      "dataset": "dev",
+      "group": "box_support",
+      "clips": 9,
+      "seconds": 41.665,
+      "variants": 36,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "crouch",
+      "clips": 47,
+      "seconds": 279.498,
+      "variants": 188,
+      "actors": 19
+    },
+    {
+      "dataset": "dev",
+      "group": "flat_control",
+      "clips": 41,
+      "seconds": 262.567,
+      "variants": 164,
+      "actors": 28
+    },
+    {
+      "dataset": "dev",
+      "group": "kneel",
+      "clips": 15,
+      "seconds": 150.133,
+      "variants": 60,
+      "actors": 14
+    },
+    {
+      "dataset": "dev",
+      "group": "known_dimension_support",
+      "clips": 105,
+      "seconds": 495.767,
+      "variants": 420,
+      "actors": 74
+    },
+    {
+      "dataset": "dev",
+      "group": "ladder",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "obstacle_clearance",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "prone",
+      "clips": 56,
+      "seconds": 540.135,
+      "variants": 224,
+      "actors": 16
+    },
+    {
+      "dataset": "dev",
+      "group": "quadruped",
+      "clips": 56,
+      "seconds": 530.801,
+      "variants": 224,
+      "actors": 21
+    },
+    {
+      "dataset": "dev",
+      "group": "stairs",
+      "clips": 24,
+      "seconds": 97.367,
+      "variants": 96,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "wall_contact",
+      "clips": 35,
+      "seconds": 287.333,
+      "variants": 140,
+      "actors": 14
+    },
+    {
+      "dataset": "build",
+      "group": "box_support",
+      "clips": 9,
+      "seconds": 41.665,
+      "variants": 36,
+      "actors": 2
+    },
+    {
+      "dataset": "build",
+      "group": "crouch",
+      "clips": 1111,
+      "seconds": 6607.56,
+      "variants": 4444,
+      "actors": 43
+    },
+    {
+      "dataset": "build",
+      "group": "flat_control",
+      "clips": 900,
+      "seconds": 6247.68,
+      "variants": 3600,
+      "actors": 143
+    },
+    {
+      "dataset": "build",
+      "group": "kneel",
+      "clips": 272,
+      "seconds": 2452.006,
+      "variants": 1088,
+      "actors": 69
+    },
+    {
+      "dataset": "build",
+      "group": "known_dimension_support",
+      "clips": 1692,
+      "seconds": 6395.108,
+      "variants": 6768,
+      "actors": 360
+    },
+    {
+      "dataset": "build",
+      "group": "ladder",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "obstacle_clearance",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "prone",
+      "clips": 637,
+      "seconds": 5734.165,
+      "variants": 2545,
+      "actors": 20
+    },
+    {
+      "dataset": "build",
+      "group": "quadruped",
+      "clips": 684,
+      "seconds": 5490.108,
+      "variants": 2736,
+      "actors": 25
+    },
+    {
+      "dataset": "build",
+      "group": "stairs",
+      "clips": 27,
+      "seconds": 110.7,
+      "variants": 108,
+      "actors": 2
+    },
+    {
+      "dataset": "build",
+      "group": "wall_contact",
+      "clips": 318,
+      "seconds": 2444.307,
+      "variants": 1272,
+      "actors": 19
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "box_support",
+      "clips": 42,
+      "seconds": 188.165,
+      "variants": 168,
+      "actors": 12
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "crouch",
+      "clips": 1143,
+      "seconds": 6905.663,
+      "variants": 4572,
+      "actors": 51
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "flat_control",
+      "clips": 900,
+      "seconds": 6247.68,
+      "variants": 3600,
+      "actors": 143
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "kneel",
+      "clips": 637,
+      "seconds": 4103.269,
+      "variants": 2548,
+      "actors": 69
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "known_dimension_support",
+      "clips": 1711,
+      "seconds": 6485.01,
+      "variants": 6844,
+      "actors": 360
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "ladder",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "obstacle_clearance",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "prone",
+      "clips": 895,
+      "seconds": 8008.461,
+      "variants": 3575,
+      "actors": 20
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "quadruped",
+      "clips": 831,
+      "seconds": 6398.852,
+      "variants": 3324,
+      "actors": 32
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "stairs",
+      "clips": 34,
+      "seconds": 149.466,
+      "variants": 136,
+      "actors": 4
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "wall_contact",
+      "clips": 350,
+      "seconds": 2562.739,
+      "variants": 1400,
+      "actors": 19
+    }
+  ],
+  "splits": [
+    {
+      "dataset": "dev",
+      "split": "train",
+      "clips": 339,
+      "seconds": 2387.097,
+      "variants": 1356,
+      "actors": 139
+    },
+    {
+      "dataset": "dev",
+      "split": "validation",
+      "clips": 18,
+      "seconds": 131.601,
+      "variants": 72,
+      "actors": 8
+    },
+    {
+      "dataset": "dev",
+      "split": "test",
+      "clips": 31,
+      "seconds": 166.568,
+      "variants": 124,
+      "actors": 11
+    },
+    {
+      "dataset": "build",
+      "split": "train",
+      "clips": 5038,
+      "seconds": 31854.489,
+      "variants": 20149,
+      "actors": 360
+    },
+    {
+      "dataset": "build",
+      "split": "validation",
+      "clips": 248,
+      "seconds": 1559.067,
+      "variants": 992,
+      "actors": 15
+    },
+    {
+      "dataset": "build",
+      "split": "test",
+      "clips": 364,
+      "seconds": 2109.743,
+      "variants": 1456,
+      "actors": 40
+    },
+    {
+      "dataset": "geometry_only",
+      "split": "train",
+      "clips": 5814,
+      "seconds": 36776.823,
+      "variants": 23251,
+      "actors": 364
+    },
+    {
+      "dataset": "geometry_only",
+      "split": "validation",
+      "clips": 306,
+      "seconds": 1889.368,
+      "variants": 1224,
+      "actors": 15
+    },
+    {
+      "dataset": "geometry_only",
+      "split": "test",
+      "clips": 423,
+      "seconds": 2383.114,
+      "variants": 1692,
+      "actors": 40
+    }
+  ],
+  "group_splits": [
+    {
+      "dataset": "dev",
+      "group": "box_support",
+      "split": "train",
+      "clips": 9,
+      "seconds": 41.665,
+      "variants": 36,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "box_support",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "box_support",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "crouch",
+      "split": "train",
+      "clips": 42,
+      "seconds": 250.164,
+      "variants": 168,
+      "actors": 16
+    },
+    {
+      "dataset": "dev",
+      "group": "crouch",
+      "split": "validation",
+      "clips": 2,
+      "seconds": 10.934,
+      "variants": 8,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "crouch",
+      "split": "test",
+      "clips": 3,
+      "seconds": 18.4,
+      "variants": 12,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "flat_control",
+      "split": "train",
+      "clips": 35,
+      "seconds": 226.699,
+      "variants": 140,
+      "actors": 24
+    },
+    {
+      "dataset": "dev",
+      "group": "flat_control",
+      "split": "validation",
+      "clips": 2,
+      "seconds": 8.8,
+      "variants": 8,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "flat_control",
+      "split": "test",
+      "clips": 4,
+      "seconds": 27.068,
+      "variants": 16,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "kneel",
+      "split": "train",
+      "clips": 13,
+      "seconds": 127.5,
+      "variants": 52,
+      "actors": 12
+    },
+    {
+      "dataset": "dev",
+      "group": "kneel",
+      "split": "validation",
+      "clips": 1,
+      "seconds": 10.4,
+      "variants": 4,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "kneel",
+      "split": "test",
+      "clips": 1,
+      "seconds": 12.233,
+      "variants": 4,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "known_dimension_support",
+      "split": "train",
+      "clips": 93,
+      "seconds": 431.034,
+      "variants": 372,
+      "actors": 64
+    },
+    {
+      "dataset": "dev",
+      "group": "known_dimension_support",
+      "split": "validation",
+      "clips": 3,
+      "seconds": 14.9,
+      "variants": 12,
+      "actors": 3
+    },
+    {
+      "dataset": "dev",
+      "group": "known_dimension_support",
+      "split": "test",
+      "clips": 9,
+      "seconds": 49.833,
+      "variants": 36,
+      "actors": 7
+    },
+    {
+      "dataset": "dev",
+      "group": "ladder",
+      "split": "train",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "ladder",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "ladder",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "obstacle_clearance",
+      "split": "train",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "obstacle_clearance",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "obstacle_clearance",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "prone",
+      "split": "train",
+      "clips": 55,
+      "seconds": 535.935,
+      "variants": 220,
+      "actors": 15
+    },
+    {
+      "dataset": "dev",
+      "group": "prone",
+      "split": "validation",
+      "clips": 1,
+      "seconds": 4.2,
+      "variants": 4,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "prone",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "quadruped",
+      "split": "train",
+      "clips": 46,
+      "seconds": 442.601,
+      "variants": 184,
+      "actors": 18
+    },
+    {
+      "dataset": "dev",
+      "group": "quadruped",
+      "split": "validation",
+      "clips": 9,
+      "seconds": 82.367,
+      "variants": 36,
+      "actors": 2
+    },
+    {
+      "dataset": "dev",
+      "group": "quadruped",
+      "split": "test",
+      "clips": 1,
+      "seconds": 5.833,
+      "variants": 4,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "stairs",
+      "split": "train",
+      "clips": 11,
+      "seconds": 44.166,
+      "variants": 44,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "stairs",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "stairs",
+      "split": "test",
+      "clips": 13,
+      "seconds": 53.201,
+      "variants": 52,
+      "actors": 1
+    },
+    {
+      "dataset": "dev",
+      "group": "wall_contact",
+      "split": "train",
+      "clips": 35,
+      "seconds": 287.333,
+      "variants": 140,
+      "actors": 14
+    },
+    {
+      "dataset": "dev",
+      "group": "wall_contact",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "dev",
+      "group": "wall_contact",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "box_support",
+      "split": "train",
+      "clips": 9,
+      "seconds": 41.665,
+      "variants": 36,
+      "actors": 2
+    },
+    {
+      "dataset": "build",
+      "group": "box_support",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "box_support",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "crouch",
+      "split": "train",
+      "clips": 994,
+      "seconds": 5900.125,
+      "variants": 3976,
+      "actors": 38
+    },
+    {
+      "dataset": "build",
+      "group": "crouch",
+      "split": "validation",
+      "clips": 56,
+      "seconds": 316.499,
+      "variants": 224,
+      "actors": 3
+    },
+    {
+      "dataset": "build",
+      "group": "crouch",
+      "split": "test",
+      "clips": 61,
+      "seconds": 390.936,
+      "variants": 244,
+      "actors": 2
+    },
+    {
+      "dataset": "build",
+      "group": "flat_control",
+      "split": "train",
+      "clips": 789,
+      "seconds": 5421.344,
+      "variants": 3156,
+      "actors": 128
+    },
+    {
+      "dataset": "build",
+      "group": "flat_control",
+      "split": "validation",
+      "clips": 44,
+      "seconds": 248.265,
+      "variants": 176,
+      "actors": 5
+    },
+    {
+      "dataset": "build",
+      "group": "flat_control",
+      "split": "test",
+      "clips": 67,
+      "seconds": 578.071,
+      "variants": 268,
+      "actors": 10
+    },
+    {
+      "dataset": "build",
+      "group": "kneel",
+      "split": "train",
+      "clips": 215,
+      "seconds": 1974.506,
+      "variants": 860,
+      "actors": 57
+    },
+    {
+      "dataset": "build",
+      "group": "kneel",
+      "split": "validation",
+      "clips": 23,
+      "seconds": 214.268,
+      "variants": 92,
+      "actors": 5
+    },
+    {
+      "dataset": "build",
+      "group": "kneel",
+      "split": "test",
+      "clips": 34,
+      "seconds": 263.232,
+      "variants": 136,
+      "actors": 7
+    },
+    {
+      "dataset": "build",
+      "group": "known_dimension_support",
+      "split": "train",
+      "clips": 1487,
+      "seconds": 5583.972,
+      "variants": 5948,
+      "actors": 313
+    },
+    {
+      "dataset": "build",
+      "group": "known_dimension_support",
+      "split": "validation",
+      "clips": 47,
+      "seconds": 167.832,
+      "variants": 188,
+      "actors": 11
+    },
+    {
+      "dataset": "build",
+      "group": "known_dimension_support",
+      "split": "test",
+      "clips": 158,
+      "seconds": 643.304,
+      "variants": 632,
+      "actors": 36
+    },
+    {
+      "dataset": "build",
+      "group": "ladder",
+      "split": "train",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "ladder",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "ladder",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "obstacle_clearance",
+      "split": "train",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "obstacle_clearance",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "obstacle_clearance",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "prone",
+      "split": "train",
+      "clips": 627,
+      "seconds": 5659.265,
+      "variants": 2505,
+      "actors": 19
+    },
+    {
+      "dataset": "build",
+      "group": "prone",
+      "split": "validation",
+      "clips": 10,
+      "seconds": 74.9,
+      "variants": 40,
+      "actors": 1
+    },
+    {
+      "dataset": "build",
+      "group": "prone",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "quadruped",
+      "split": "train",
+      "clips": 596,
+      "seconds": 4820.972,
+      "variants": 2384,
+      "actors": 21
+    },
+    {
+      "dataset": "build",
+      "group": "quadruped",
+      "split": "validation",
+      "clips": 59,
+      "seconds": 498.47,
+      "variants": 236,
+      "actors": 2
+    },
+    {
+      "dataset": "build",
+      "group": "quadruped",
+      "split": "test",
+      "clips": 29,
+      "seconds": 170.666,
+      "variants": 116,
+      "actors": 2
+    },
+    {
+      "dataset": "build",
+      "group": "stairs",
+      "split": "train",
+      "clips": 12,
+      "seconds": 47.166,
+      "variants": 48,
+      "actors": 1
+    },
+    {
+      "dataset": "build",
+      "group": "stairs",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "build",
+      "group": "stairs",
+      "split": "test",
+      "clips": 15,
+      "seconds": 63.534,
+      "variants": 60,
+      "actors": 1
+    },
+    {
+      "dataset": "build",
+      "group": "wall_contact",
+      "split": "train",
+      "clips": 309,
+      "seconds": 2405.474,
+      "variants": 1236,
+      "actors": 18
+    },
+    {
+      "dataset": "build",
+      "group": "wall_contact",
+      "split": "validation",
+      "clips": 9,
+      "seconds": 38.833,
+      "variants": 36,
+      "actors": 1
+    },
+    {
+      "dataset": "build",
+      "group": "wall_contact",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "box_support",
+      "split": "train",
+      "clips": 31,
+      "seconds": 138.765,
+      "variants": 124,
+      "actors": 9
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "box_support",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "box_support",
+      "split": "test",
+      "clips": 11,
+      "seconds": 49.4,
+      "variants": 44,
+      "actors": 3
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "crouch",
+      "split": "train",
+      "clips": 1026,
+      "seconds": 6198.228,
+      "variants": 4104,
+      "actors": 46
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "crouch",
+      "split": "validation",
+      "clips": 56,
+      "seconds": 316.499,
+      "variants": 224,
+      "actors": 3
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "crouch",
+      "split": "test",
+      "clips": 61,
+      "seconds": 390.936,
+      "variants": 244,
+      "actors": 2
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "flat_control",
+      "split": "train",
+      "clips": 789,
+      "seconds": 5421.344,
+      "variants": 3156,
+      "actors": 128
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "flat_control",
+      "split": "validation",
+      "clips": 44,
+      "seconds": 248.265,
+      "variants": 176,
+      "actors": 5
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "flat_control",
+      "split": "test",
+      "clips": 67,
+      "seconds": 578.071,
+      "variants": 268,
+      "actors": 10
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "kneel",
+      "split": "train",
+      "clips": 525,
+      "seconds": 3402.666,
+      "variants": 2100,
+      "actors": 57
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "kneel",
+      "split": "validation",
+      "clips": 49,
+      "seconds": 321.102,
+      "variants": 196,
+      "actors": 5
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "kneel",
+      "split": "test",
+      "clips": 63,
+      "seconds": 379.501,
+      "variants": 252,
+      "actors": 7
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "known_dimension_support",
+      "split": "train",
+      "clips": 1502,
+      "seconds": 5653.674,
+      "variants": 6008,
+      "actors": 313
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "known_dimension_support",
+      "split": "validation",
+      "clips": 47,
+      "seconds": 167.832,
+      "variants": 188,
+      "actors": 11
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "known_dimension_support",
+      "split": "test",
+      "clips": 162,
+      "seconds": 663.504,
+      "variants": 648,
+      "actors": 36
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "ladder",
+      "split": "train",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "ladder",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "ladder",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "obstacle_clearance",
+      "split": "train",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "obstacle_clearance",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "obstacle_clearance",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "prone",
+      "split": "train",
+      "clips": 871,
+      "seconds": 7818.162,
+      "variants": 3479,
+      "actors": 19
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "prone",
+      "split": "validation",
+      "clips": 24,
+      "seconds": 190.299,
+      "variants": 96,
+      "actors": 1
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "prone",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "quadruped",
+      "split": "train",
+      "clips": 714,
+      "seconds": 5548.28,
+      "variants": 2856,
+      "actors": 25
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "quadruped",
+      "split": "validation",
+      "clips": 73,
+      "seconds": 592.404,
+      "variants": 292,
+      "actors": 2
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "quadruped",
+      "split": "test",
+      "clips": 44,
+      "seconds": 258.168,
+      "variants": 176,
+      "actors": 5
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "stairs",
+      "split": "train",
+      "clips": 19,
+      "seconds": 85.932,
+      "variants": 76,
+      "actors": 3
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "stairs",
+      "split": "validation",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "stairs",
+      "split": "test",
+      "clips": 15,
+      "seconds": 63.534,
+      "variants": 60,
+      "actors": 1
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "wall_contact",
+      "split": "train",
+      "clips": 337,
+      "seconds": 2509.772,
+      "variants": 1348,
+      "actors": 18
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "wall_contact",
+      "split": "validation",
+      "clips": 13,
+      "seconds": 52.967,
+      "variants": 52,
+      "actors": 1
+    },
+    {
+      "dataset": "geometry_only",
+      "group": "wall_contact",
+      "split": "test",
+      "clips": 0,
+      "seconds": 0.0,
+      "variants": 0,
+      "actors": 0
+    }
+  ]
+}

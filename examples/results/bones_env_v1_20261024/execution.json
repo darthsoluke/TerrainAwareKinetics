@@ -1,0 +1,343 @@
+{
+  "source_commit": "4ef8af1af760011858e18f845a3f8205f3175da3",
+  "tests": {
+    "source_commit": "4ef8af1af760011858e18f845a3f8205f3175da3",
+    "suites": {
+      "dataset": {
+        "command": [
+          "${PFNN_PROJECT}/env/bin/python",
+          "-m",
+          "pytest",
+          "tests/test_bones_env_dataset.py",
+          "-q",
+          "--full-trace",
+          "--color=no",
+          "--junitxml=runs/bones_env_v1_coord/dataset_tests.xml"
+        ],
+        "exit_code": 0,
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 6
+      },
+      "controller": {
+        "command": [
+          "${PFNN_PROJECT}/env/bin/python",
+          "-m",
+          "pytest",
+          "tests/test_terrain_controller.py",
+          "-q",
+          "--full-trace",
+          "--color=no",
+          "--junitxml=runs/bones_env_v1_coord/controller_tests.xml"
+        ],
+        "exit_code": 0,
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 9
+      },
+      "ray": {
+        "command": [
+          "${PFNN_PROJECT}/env/bin/python",
+          "-m",
+          "pytest",
+          "tests/test_skeleton_ray_sampler.py",
+          "-q",
+          "--full-trace",
+          "--color=no",
+          "--junitxml=runs/bones_env_v1_coord/ray_tests.xml"
+        ],
+        "exit_code": 0,
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 6
+      },
+      "terrain": {
+        "command": [
+          "${PFNN_PROJECT}/env/bin/python",
+          "-m",
+          "pytest",
+          "tests/test_bones_terrain_fit.py",
+          "tests/test_bones_terrain_scene.py",
+          "tests/test_bones_terrain_screen.py",
+          "tests/test_bones_terrain_survey.py",
+          "-q",
+          "--full-trace",
+          "--color=no",
+          "--junitxml=runs/bones_env_v1_coord/terrain_tests.xml"
+        ],
+        "exit_code": 0,
+        "tests": 60,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "passed": 60
+      }
+    },
+    "dataset_gate_passed": true
+  },
+  "builds": {
+    "dev": {
+      "stage": "dev",
+      "command": [
+        "${PFNN_PROJECT}/env/bin/python",
+        "-u",
+        "scripts/build_bones_env_training_set.py",
+        "--fit-run",
+        "runs/bones_fit_v9_full",
+        "--motion-cache",
+        "runs/bones_motion_cache_s2",
+        "--screen-run",
+        "runs/bones_screen_v1_full",
+        "--output",
+        "runs/bones_env_v1_dev",
+        "--workers",
+        "64",
+        "--clips",
+        "configs/bones_terrain_devset_v1.txt"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 9.522,
+      "built": 388,
+      "eligible": 388,
+      "errors": 0,
+      "error_fraction": 0.0,
+      "fk_roundtrip_max_m": 3.8e-06,
+      "boxes_max": 13,
+      "gates": {
+        "fk_roundtrip": true,
+        "eligible_error_rate": true,
+        "boxes_max": true
+      },
+      "passed": true
+    },
+    "full": {
+      "stage": "full",
+      "command": [
+        "${PFNN_PROJECT}/env/bin/python",
+        "-u",
+        "scripts/build_bones_env_training_set.py",
+        "--fit-run",
+        "runs/bones_fit_v9_full",
+        "--motion-cache",
+        "runs/bones_motion_cache_s2",
+        "--screen-run",
+        "runs/bones_screen_v1_full",
+        "--output",
+        "runs/bones_env_v1",
+        "--workers",
+        "64"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 29.874,
+      "built": 5650,
+      "eligible": 5650,
+      "errors": 0,
+      "error_fraction": 0.0,
+      "fk_roundtrip_max_m": 4.8e-06,
+      "boxes_max": 14,
+      "gates": {
+        "fk_roundtrip": true,
+        "eligible_error_rate": true,
+        "boxes_max": true
+      },
+      "passed": true
+    },
+    "geometry": {
+      "stage": "geometry",
+      "command": [
+        "${PFNN_PROJECT}/env/bin/python",
+        "-u",
+        "scripts/build_bones_env_training_set.py",
+        "--fit-run",
+        "runs/bones_fit_v9_full",
+        "--motion-cache",
+        "runs/bones_motion_cache_s2",
+        "--screen-run",
+        "runs/bones_screen_v1_full",
+        "--output",
+        "runs/bones_env_v1_geometry_only",
+        "--workers",
+        "64",
+        "--include-geometry-only"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 34.227,
+      "built": 6543,
+      "eligible": 6543,
+      "errors": 0,
+      "error_fraction": 0.0,
+      "fk_roundtrip_max_m": 4.8e-06,
+      "boxes_max": 14,
+      "gates": {
+        "fk_roundtrip": true,
+        "eligible_error_rate": true,
+        "boxes_max": true
+      },
+      "passed": true
+    }
+  },
+  "audit": {
+    "audit_command": [
+      "${PFNN_PROJECT}/env/bin/python",
+      "scripts/audit_bones_env_training_set.py",
+      "--dataset",
+      "runs/bones_env_v1",
+      "--output",
+      "runs/bones_env_v1_audit",
+      "--device",
+      "cuda",
+      "--samples",
+      "8192",
+      "--batch",
+      "256",
+      "--rollout-horizon",
+      "4"
+    ],
+    "exit_code": 0,
+    "wall_seconds": 7.609,
+    "optimizer_updates": 0,
+    "gpu_index": 3,
+    "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+    "gpu_driver": "610.57.04",
+    "torch": "2.7.1+cu128",
+    "torch_cuda": "12.8",
+    "inside_by_group": {
+      "box_support": {
+        "windows": 10,
+        "ray_samples": 490,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      },
+      "crouch": {
+        "windows": 1534,
+        "ray_samples": 75166,
+        "inside_ray_samples": 4,
+        "windows_with_inside": 2,
+        "inside_fraction": 5.3215549583588326e-05,
+        "share_of_all_inside": 0.6666666666666666
+      },
+      "flat_control": {
+        "windows": 1448,
+        "ray_samples": 70952,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      },
+      "kneel": {
+        "windows": 560,
+        "ray_samples": 27440,
+        "inside_ray_samples": 2,
+        "windows_with_inside": 1,
+        "inside_fraction": 7.28862973760933e-05,
+        "share_of_all_inside": 0.3333333333333333
+      },
+      "known_dimension_support": {
+        "windows": 1238,
+        "ray_samples": 60662,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      },
+      "prone": {
+        "windows": 1461,
+        "ray_samples": 71589,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      },
+      "quadruped": {
+        "windows": 1268,
+        "ray_samples": 62132,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      },
+      "stairs": {
+        "windows": 16,
+        "ray_samples": 784,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      },
+      "wall_contact": {
+        "windows": 657,
+        "ray_samples": 32193,
+        "inside_ray_samples": 0,
+        "windows_with_inside": 0,
+        "inside_fraction": 0.0,
+        "share_of_all_inside": 0.0
+      }
+    },
+    "inside_threshold_passed": true,
+    "clearance_order_passed": true,
+    "finite_smoke": true,
+    "instrumentation": "Original audit.main; per-group counts read after _timed returned, outside its measured interval. No source or parameters changed."
+  },
+  "datasets": {
+    "dev": {
+      "path": "runs/bones_env_v1_dev",
+      "clips": 388,
+      "seconds": 2685.266,
+      "variants": 1552,
+      "actors": 158,
+      "eligibility": {
+        "environment_explained": 388
+      },
+      "actor_splits_disjoint": true,
+      "manifest_bytes": 179075,
+      "manifest_published": false,
+      "manifest_sha256": "96d583abb140147ce74c162e445a5f2e249610c6eb9685a1d292ad9decfb8f9a"
+    },
+    "build": {
+      "path": "runs/bones_env_v1",
+      "clips": 5650,
+      "seconds": 35523.299,
+      "variants": 22597,
+      "actors": 415,
+      "eligibility": {
+        "environment_explained": 5650
+      },
+      "actor_splits_disjoint": true,
+      "manifest_bytes": 2593350,
+      "manifest_published": false,
+      "manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d"
+    },
+    "geometry_only": {
+      "path": "runs/bones_env_v1_geometry_only",
+      "clips": 6543,
+      "seconds": 41049.305,
+      "variants": 26167,
+      "actors": 419,
+      "eligibility": {
+        "environment_explained": 5650,
+        "geometry_only_low_posture_unexplained": 893
+      },
+      "actor_splits_disjoint": true,
+      "manifest_bytes": 2999849,
+      "manifest_published": false,
+      "manifest_sha256": "60eb761ee69a3a4758ae413b916baa2381c682236e80087b9241a7d70ef7fa2b",
+      "E_rows_match_default_except_build_seconds": true
+    }
+  },
+  "module_sha256": {
+    "motionbricks/data/bones_env_dataset.py": "6094e9d426b940162d2d18d9457436de39b7e461b7f2f5a1a359e7505ff974ee",
+    "motionbricks/controller/scene_sdf.py": "521a416dc2dc37aea8a59ac5d685a32aa13f08b3369b5775244e5bd783b127e5",
+    "motionbricks/controller/closed_loop.py": "b4bb8622d47991ff8e69f3ad5a5acad4a839c27ef353f4e5a6971ca096984990",
+    "scripts/build_bones_env_training_set.py": "f41922705a9f9f1570cc19e9bb880bb3bedc73a2b23e584391e4dbb6ed300199",
+    "scripts/audit_bones_env_training_set.py": "418897fa3428d7e311bcf679f524479465ac4515c141259e3d23a21e8e41b7ca",
+    "motionbricks/data/skeleton_ray_sampler.py": "d98616ac58101ccd3f1b9a0a76e5aa6e462ed71996d73a9b0d3c612915d385b1"
+  }
+}

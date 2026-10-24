@@ -1,0 +1,74 @@
+{
+  "box_support": {
+    "windows": 10,
+    "ray_samples": 490,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  },
+  "crouch": {
+    "windows": 1534,
+    "ray_samples": 75166,
+    "inside_ray_samples": 4,
+    "windows_with_inside": 2,
+    "inside_fraction": 5.3215549583588326e-05,
+    "share_of_all_inside": 0.6666666666666666
+  },
+  "flat_control": {
+    "windows": 1448,
+    "ray_samples": 70952,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  },
+  "kneel": {
+    "windows": 560,
+    "ray_samples": 27440,
+    "inside_ray_samples": 2,
+    "windows_with_inside": 1,
+    "inside_fraction": 7.28862973760933e-05,
+    "share_of_all_inside": 0.3333333333333333
+  },
+  "known_dimension_support": {
+    "windows": 1238,
+    "ray_samples": 60662,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  },
+  "prone": {
+    "windows": 1461,
+    "ray_samples": 71589,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  },
+  "quadruped": {
+    "windows": 1268,
+    "ray_samples": 62132,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  },
+  "stairs": {
+    "windows": 16,
+    "ray_samples": 784,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  },
+  "wall_contact": {
+    "windows": 657,
+    "ray_samples": 32193,
+    "inside_ray_samples": 0,
+    "windows_with_inside": 0,
+    "inside_fraction": 0.0,
+    "share_of_all_inside": 0.0
+  }
+}

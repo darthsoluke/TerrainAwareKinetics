@@ -1,0 +1,10 @@
+dataset	split	clips	seconds	variants	actors
+dev	train	339	2387.097	1356	139
+dev	validation	18	131.601	72	8
+dev	test	31	166.568	124	11
+build	train	5038	31854.489	20149	360
+build	validation	248	1559.067	992	15
+build	test	364	2109.743	1456	40
+geometry_only	train	5814	36776.823	23251	364
+geometry_only	validation	306	1889.368	1224	15
+geometry_only	test	423	2383.114	1692	40
