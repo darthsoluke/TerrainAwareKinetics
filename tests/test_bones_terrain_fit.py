@@ -261,9 +261,25 @@ def test_toes_far_behind_a_raised_sole_mark_the_foot_as_not_plantar():
     assert [b["role"] for b in fit["boxes"]["minimal"]] == ["ground"]
 
 
+def test_still_feet_held_above_a_body_resting_lower_are_not_a_platform():
+    soles, joints, root = step_up(top=0.0)
+    for side in soles:
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.08      # feet held still in the air
+    support = support_of(soles, joints, root)
+    knees = np.repeat(np.array([[[-0.1, 0.0, -0.4], [0.1, 0.0, -0.4], [0.0, 0.01, -0.8]]]), len(root), axis=0)
+    skin = np.concatenate([soles["left"], soles["right"], knees], axis=1)
+    feet = {"left": np.arange(4), "right": np.arange(4, 8)}
+    fit = fit_support(soles, joints, root, FPS, support, skin_vertices=skin, foot_vertices=feet)
+    assert fit["levels_m"] == [0.0] and [b["role"] for b in fit["boxes"]["minimal"]] == ["ground"]
+    assert fit["patch_checks"] and all("body_rests_lower" in c["dropped"] for c in fit["patch_checks"])
+    assert fit["evidence_patches"] == []
+
+
 def test_plantar_sole_on_a_box_is_kept_with_foot_vertices():
     soles, joints, root = step_up()
     skin = np.concatenate([soles["left"], soles["right"]], axis=1)
+    hands = np.stack([joints["LeftHand"], joints["RightHand"]], axis=1)   # above the box while standing on it
+    skin = np.concatenate([skin, hands], axis=1)
     fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin,
                       foot_vertices={"left": np.arange(4), "right": np.arange(4, 8)})
     assert any(b["role"] == "support" for b in fit["boxes"]["minimal"])
@@ -382,3 +398,31 @@ def test_skin_vertex_parts_checks_labels_on_the_bind_pose():
     assert (parts[dominant <= 1] == PART_TRUNK).all()
     with pytest.raises(RuntimeError):
         fit_script.skin_vertex_parts(Skinner(), ["Hips", "Chest", "LeftFoot", "LeftHand", "Head"], bind)
+
+
+def test_unmodelled_groups_are_never_training_eligible(tmp_path):
+    import scripts.fit_bones_terrain_support as fit_script
+    from scripts import screen_bones_terrain_geometry as screen
+    soles, joints, root = step_up()
+    skin = np.concatenate([soles["left"], soles["right"]] + [joints[n][:, None] for n in joints], axis=1)
+    original = (screen._init_worker, screen.convert, fit_script.skin_vertices)
+    screen._init_worker = lambda: screen._STATE.update(standing_hip=.95, standing_top=1.8)
+    screen.convert = lambda path, extra_names=(), return_motion=False: (
+        (soles, joints, root, 120.0, 0.0, (None, None)) if return_motion else (soles, joints, root, 120.0, 0.0))
+    fit_script.skin_vertices = lambda rotations, posed, stride: skin[::stride]
+    try:
+        run = tmp_path / "screen"
+        run.mkdir()
+        row = {"filename": "ladder_climb_up_001__A1", "stem": "ladder_climb_up", "group": "ladder",
+               "path": "/x/1.bvh", "dimension_tokens": []}
+        (run / "selection.jsonl").write_text(json.dumps(row))
+        (run / "clips.jsonl").write_text(json.dumps({**row, "flags": []}))
+        output = tmp_path / "fit"
+        assert fit_script.main(["--screen-run", str(run), "--output", str(output), "--workers", "0",
+                                "--viz-per-stem", "0", "--worst-per-group", "0", "--variants", "2"]) == 0
+    finally:
+        screen._init_worker, screen.convert, fit_script.skin_vertices = original
+        screen._STATE.pop("standing_top", None)
+    scene = json.loads((output / "fits" / "ladder_climb_up_001__A1.json").read_text())["scene"]
+    assert scene["eligibility"] == "excluded_unmodelled_geometry" and not scene["training_eligible"]
+    assert scene["eligibility_before_exclusion"] == "environment_explained"

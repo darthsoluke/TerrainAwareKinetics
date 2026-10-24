@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass
 
 import numpy as np
 
-SCHEMA_VERSION = "bones-terrain-fit-v6"
+SCHEMA_VERSION = "bones-terrain-fit-v7"
 
 #: Landmark sphere radii in metres; conservative body volume for free-space checks.
 LANDMARK_RADII = {
@@ -58,6 +58,7 @@ class FitConfig:
     skin_probe_stride: float = 1.0           # every skin vertex is a free-space probe (boxes are exact w.r.t. the metric)
     resting_min_points: int = 10             # skin points under a sole patch during its own contact -> foot rests on body
     foot_below_fraction: float = 0.5         # contact frames where the same foot reaches below its sole -> not plantar
+    body_below_fraction: float = 0.5         # contact frames where non-foot skin is below the sole -> foot not load-bearing
     slab_clearance_m: float = 0.03           # floating slab bottom above the highest skin that passes beneath it
     min_slab_thickness_m: float = 0.05
     cluster_link_m: float = 0.30
@@ -334,6 +335,23 @@ def _foot_below_sole(patch, skin, events, frame_stride, foot_vertices, config):
     return float((drop > config.level_match_m).mean()), float(np.median(drop))
 
 
+def _body_below_sole(patch, skin, events, frame_stride, body_vertices, config):
+    """Fraction of the patch's contact frames in which some non-foot skin is below the sole.
+
+    Standing on a raised surface, the hands, knees and trunk are above the feet. When the
+    knees, hands or chest are lower than a still sole (crawling, kneeling, lying), the body
+    rests on them and the foot merely holds still in the air: no surface under the sole.
+    """
+    if body_vertices is None or len(body_vertices) == 0:
+        return 0.0, None
+    frames = _event_frames(patch, events, frame_stride, len(skin))
+    if not frames:
+        return 0.0, None
+    lowest = skin[frames][:, body_vertices, 1].min(axis=1)
+    drop = patch["height_m"] - lowest
+    return float((drop > config.level_match_m).mean()), float(np.median(drop))
+
+
 def _patch_rests_on_body(patch, skin, events, frame_stride, config):
     """Skin points below a sole patch, inside its footprint, during the patch's own contact.
 
@@ -400,18 +418,25 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         events = {event["id"]: event for event in support_report.get("events", [])}
         kept = []
         stride = max(1, int(skin_frame_stride))
+        body_vertices = None
+        if foot_vertices is not None:
+            feet = np.concatenate([np.asarray(v, dtype=np.int64) for v in foot_vertices.values()])
+            body_vertices = np.setdiff1d(np.arange(skin.shape[1]), feet)
         for patch in patches:
             if patch["height_m"] - ground < config.min_step_m:
                 kept.append(patch)
                 continue
             count = _patch_rests_on_body(patch, skin, events, stride, config)
             below, drop = _foot_below_sole(patch, skin, events, stride, foot_vertices, config)
+            body_below, body_drop = _body_below_sole(patch, skin, events, stride, body_vertices, config)
             reasons = ([] if count < config.resting_min_points else ["body_under_sole"]) + (
-                [] if below < config.foot_below_fraction else ["foot_lower_than_sole"])
+                [] if below < config.foot_below_fraction else ["foot_lower_than_sole"]) + (
+                [] if body_below < config.body_below_fraction else ["body_rests_lower"])
             patch_checks.append({"height_above_ground_m": float(patch["height_m"] - ground),
                                  "side": _patch_side(patch, events), "area_m2": float(patch.get("area_m2", 0.0)),
                                  "body_points_under": count, "foot_below_fraction": below,
-                                 "foot_drop_median_m": drop, "dropped": reasons})
+                                 "foot_drop_median_m": drop, "body_below_fraction": body_below,
+                                 "body_drop_median_m": body_drop, "dropped": reasons})
             (resting if reasons else kept).append(patch)
         patches = kept
 

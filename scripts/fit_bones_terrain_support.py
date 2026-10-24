@@ -99,6 +99,11 @@ def clip_seed(filename):
     return int(hashlib.sha256(filename.encode()).hexdigest()[:8], 16)
 
 
+#: Groups whose motion needs geometry the boxes cannot represent yet (thin ladder rungs,
+#: obstacles under jumps). Their scenes are fitted and reported but never training-eligible.
+UNMODELLED_GROUPS = ("ladder", "obstacle_clearance")
+
+
 def _process(item, render, skin_stride=2, variants=4):
     if skin_stride:
         soles, joints, root, source_fps, _, (rotations, posed) = screen.convert(
@@ -117,6 +122,9 @@ def _process(item, render, skin_stride=2, variants=4):
                                       screen._STATE["standing_top"], screen.FPS / skin_stride,
                                       variants=variants, seed=clip_seed(item["filename"]),
                                       vertex_parts=screen._STATE.get("vertex_parts"))
+        if item.get("group") in UNMODELLED_GROUPS:
+            fit["scene"].update(eligibility="excluded_unmodelled_geometry", training_eligible=False,
+                                eligibility_before_exclusion=fit["scene"]["eligibility"])
     fit["meta"] = {key: item[key] for key in ("filename", "stem", "group")}
     fit["meta"].update(source_fps=source_fps, dimension_tokens=item.get("dimension_tokens", []),
                        seconds=round(len(joints["Hips"]) / screen.FPS, 3))
