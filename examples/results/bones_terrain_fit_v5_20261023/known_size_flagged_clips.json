@@ -1,0 +1,32 @@
+[
+  {
+    "filename": "come_down_50cm_box_R_002__A049",
+    "group": "known_dimension_support",
+    "flags": [
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "jump_off_1m_R_102__A301",
+    "group": "known_dimension_support",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "jump_off_1m_R_103__A301",
+    "group": "known_dimension_support",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  }
+]

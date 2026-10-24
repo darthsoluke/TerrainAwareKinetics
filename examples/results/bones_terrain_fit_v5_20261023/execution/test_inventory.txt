@@ -1,0 +1,2 @@
+collected 49 skipped 0 failures 0
+{'tests.test_bones_terrain_fit': 18, 'tests.test_bones_terrain_scene': 12, 'tests.test_bones_terrain_screen': 9, 'tests.test_bones_terrain_survey': 10}

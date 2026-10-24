@@ -1,0 +1,107 @@
+[
+  {
+    "filename": "crouch_ff_start_180_R_001__A147",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_start_270_R_001__A246",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_180_R_001__A247",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_225_R_001__A244",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_225_R_003__A195",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_001__A247",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_002__A197",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_315_R_002__A194",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "h_b_w_crouch_to_stand_270_start_001__A344",
+    "group": "wall_contact",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "h_b_w_stand_to_crouch_270_start_003__A344",
+    "group": "wall_contact",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "kneeling_loop_001__A101",
+    "group": "kneel",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "kneeling_stop_003__A097",
+    "group": "kneel",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "turn_crouch_270_R_002__A195",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "turn_crouch_360_R_002__A197",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "wall_leaning_idle_360_R_003__A285",
+    "group": "wall_contact",
+    "reasons": [
+      "group_sample"
+    ]
+  }
+]

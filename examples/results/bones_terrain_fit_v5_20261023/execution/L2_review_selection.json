@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "crawl_ff_loop_270_R_001__A216",
+    "group": "prone",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "idle_crawl_right_to_idle_crawl_R_003__A229",
+    "group": "prone",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "idle_crawl_start_001__A233",
+    "group": "prone",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+    "group": "prone",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "mohak_backward_stop_002__A031",
+    "group": "quadruped",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "mohak_loop_002__A031",
+    "group": "quadruped",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "mohak_start_001__A031",
+    "group": "quadruped",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_003__A202",
+    "group": "quadruped",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "on_all_fours_turn_360_R_002__A201",
+    "group": "quadruped",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "turn_crawl_270_R_003__A229",
+    "group": "prone",
+    "reasons": [
+      "group_sample"
+    ]
+  }
+]

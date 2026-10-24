@@ -1,0 +1,83 @@
+{
+  "maximal_over_2cm_zero": {
+    "passed": true,
+    "bug_clips": []
+  },
+  "low_posture": {
+    "prone": {
+      "v4": {
+        "eligible_clips": 368,
+        "eligible_share": 0.40043525571273125,
+        "S": 1923,
+        "F": 1637
+      },
+      "v5": {
+        "eligible_clips": 464,
+        "eligible_share": 0.5048966267682263,
+        "S": 0,
+        "F": 1834
+      },
+      "passed": false
+    },
+    "quadruped": {
+      "v4": {
+        "eligible_clips": 279,
+        "eligible_share": 0.33574007220216606,
+        "S": 428,
+        "F": 2184
+      },
+      "v5": {
+        "eligible_clips": 279,
+        "eligible_share": 0.33574007220216606,
+        "S": 0,
+        "F": 2211
+      },
+      "passed": false
+    },
+    "kneel": {
+      "v4": {
+        "eligible_clips": 525,
+        "eligible_share": 0.822884012539185,
+        "S": 32,
+        "F": 432
+      },
+      "v5": {
+        "eligible_clips": 532,
+        "eligible_share": 0.8338557993730408,
+        "S": 0,
+        "F": 424
+      },
+      "passed": true
+    }
+  },
+  "known_size_flags": {
+    "floating_slab": {
+      "count": 0,
+      "fraction": 0.0,
+      "passed": true
+    },
+    "foot_patches_rest_on_body": {
+      "count": 3,
+      "fraction": 0.0017045454545454545,
+      "passed": true
+    }
+  },
+  "crouch_walls": {
+    "v4": 327,
+    "v5": 58,
+    "decrease_fraction": 0.8226299694189603,
+    "criterion": "far fewer than 327; interpret the reported count without tuning"
+  },
+  "wall_contact": {
+    "walls": 112,
+    "clips": 350,
+    "fraction": 0.32,
+    "passed": true
+  },
+  "flat_control": {
+    "environment_explained": 900,
+    "clips": 900,
+    "walls": 3,
+    "passed": true
+  }
+}

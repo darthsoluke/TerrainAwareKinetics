@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "mohak_loop_002__A031",
+    "group": "quadruped",
+    "frames": 595,
+    "fit_seconds": 22.334,
+    "render_seconds": 21.092,
+    "total_seconds": 43.426
+  },
+  {
+    "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493",
+    "group": "crouch",
+    "frames": 573,
+    "fit_seconds": 19.347,
+    "render_seconds": 20.833,
+    "total_seconds": 40.18
+  },
+  {
+    "filename": "spider_crawl_R_001__A362",
+    "group": "quadruped",
+    "frames": 398,
+    "fit_seconds": 19.757,
+    "render_seconds": 19.086,
+    "total_seconds": 38.843
+  },
+  {
+    "filename": "spider_crawl_R_004__A362",
+    "group": "quadruped",
+    "frames": 288,
+    "fit_seconds": 17.69,
+    "render_seconds": 18.982,
+    "total_seconds": 36.672
+  },
+  {
+    "filename": "mohak_idle_loop_001__A125",
+    "group": "quadruped",
+    "frames": 540,
+    "fit_seconds": 17.077,
+    "render_seconds": 19.359,
+    "total_seconds": 36.436
+  },
+  {
+    "filename": "ladder_climbing_idle_R_101__A301",
+    "group": "ladder",
+    "frames": 419,
+    "fit_seconds": 17.352,
+    "render_seconds": 18.623,
+    "total_seconds": 35.975
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A199",
+    "group": "quadruped",
+    "frames": 343,
+    "fit_seconds": 17.534,
+    "render_seconds": 16.653,
+    "total_seconds": 34.187
+  },
+  {
+    "filename": "stairs_slip_R_004__A300",
+    "group": "stairs",
+    "frames": 202,
+    "fit_seconds": 17.0,
+    "render_seconds": 13.547,
+    "total_seconds": 30.547
+  },
+  {
+    "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492",
+    "group": "crouch",
+    "frames": 573,
+    "fit_seconds": 14.724,
+    "render_seconds": 15.645,
+    "total_seconds": 30.369
+  },
+  {
+    "filename": "crouch_idle_002__A248",
+    "group": "crouch",
+    "frames": 380,
+    "fit_seconds": 12.671,
+    "render_seconds": 16.746,
+    "total_seconds": 29.417
+  }
+]

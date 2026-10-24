@@ -1,0 +1,11 @@
+{
+  "source_commit": "981157235447cf416627f373b7557bbae17f2c04",
+  "clips": 41,
+  "fitted": 41,
+  "failed": 0,
+  "rendered": 41,
+  "elapsed_seconds": 98.6,
+  "maximal_over_2cm_bug_clips": [],
+  "required_clips_without_support": [],
+  "passed": true
+}
