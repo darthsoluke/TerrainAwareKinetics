@@ -95,21 +95,60 @@ def make_box(box_id, name, role, center_xz, axis_u, rect, bottom, top):
                       "rect": [float(r) for r in rect]}}
 
 
-def solid_penetration(points, boxes, report_threshold, roles=None):
-    """Full-volume OBB penetration of points [frames, n, 3]: depth to the nearest face."""
+def frame_bounds(points):
+    """Per-frame axis-aligned bounds [frames, 2, 3] of points [frames, n, 3]."""
+    return np.stack([points.min(axis=1), points.max(axis=1)], axis=1)
+
+
+def _box_depth(points, box, bounds):
+    """Per-frame deepest penetration of points into one OBB (0 when outside)."""
+    center = np.asarray(box["center_xyz_m"], dtype=np.float64)
+    half = np.asarray(box["half_extent_xyz_m"], dtype=np.float64)
+    rotation = np.asarray(box["rotation_local_to_world"], dtype=np.float64)
+    reach = np.abs(rotation) @ half                      # world AABB half extents of the box
+    lo, hi = center - reach, center + reach
+    depth = np.zeros(points.shape[0])
+    touching = np.flatnonzero(np.all(bounds[:, 1] >= lo, axis=1) & np.all(bounds[:, 0] <= hi, axis=1))
+    for start in range(0, len(touching), 32):
+        frames = touching[start:start + 32]
+        chunk = points[frames]
+        near = np.all((chunk >= lo) & (chunk <= hi), axis=-1)
+        if not near.any():
+            continue
+        local = np.abs((chunk[near] - center) @ rotation)
+        inside = (half - local).min(axis=-1)
+        frame_index = np.broadcast_to(np.arange(len(frames))[:, None], near.shape)[near]
+        best = np.full(len(frames), -np.inf)
+        np.maximum.at(best, frame_index, inside)
+        depth[frames] = np.maximum(best, 0.0)
+    return depth
+
+
+def _box_key(box):
+    return (tuple(np.round(box["center_xyz_m"], 9)), tuple(np.round(box["half_extent_xyz_m"], 9)),
+            tuple(np.round(np.asarray(box["rotation_local_to_world"]).ravel(), 9)))
+
+
+def solid_penetration(points, boxes, report_threshold, roles=None, *, bounds=None, cache=None):
+    """Full-volume OBB penetration of points [frames, n, 3]: depth to the nearest face.
+
+    Frames whose point bounds miss a box are skipped, and only points inside the box's
+    world bounds are transformed. ``cache`` (a dict) reuses per-box depths across calls
+    on the same points, e.g. the fitted boxes shared by every scene variant.
+    """
+    bounds = frame_bounds(points) if bounds is None else bounds
     frame_depth = np.zeros(points.shape[0])
     worst = {}
     for box in boxes:
         if roles and box["role"] not in roles:
             continue
-        center = np.asarray(box["center_xyz_m"])
-        half = np.asarray(box["half_extent_xyz_m"])
-        rotation = np.asarray(box["rotation_local_to_world"])
-        box_depth = np.zeros(points.shape[0])
-        for start in range(0, points.shape[0], 32):
-            local = np.abs((points[start:start + 32] - center) @ rotation)
-            depth = (half - local).min(axis=-1).max(axis=-1)
-            box_depth[start:start + 32] = np.maximum(depth, 0.0)
+        key = _box_key(box) if cache is not None else None
+        if key is not None and key in cache:
+            box_depth = cache[key]
+        else:
+            box_depth = _box_depth(points, box, bounds)
+            if key is not None:
+                cache[key] = box_depth
         frame_depth = np.maximum(frame_depth, box_depth)
         worst[box["name"]] = float(box_depth.max(initial=0.0))
     return {"max_m": float(frame_depth.max(initial=0.0)),
@@ -572,7 +611,9 @@ def scene_for_clip(skin, posture, hips_xz, fit, standing_top, fps, *, variants=4
     ground = fit["ground_m"]
     ceiling, ceiling_report = fit_ceiling(skin, posture, hips_xz, support, ground, standing_top, fps, config)
     walls, wall_report = fit_walls(skin, hips_xz, ground, fps, config, vertex_parts=vertex_parts)
-    checks = {box["name"]: solid_penetration(skin, [box], config.penetration_report_m)
+    bounds = frame_bounds(skin)
+    depth_cache = {}
+    checks = {box["name"]: solid_penetration(skin, [box], config.penetration_report_m, bounds=bounds, cache=depth_cache)
               for box in walls}
     if walls and checks[walls[0]["name"]]["frames_over_report"]:
         wall_report.update(status="dropped_penetrates_skin", dropped_max_m=checks[walls[0]["name"]]["max_m"])
@@ -582,7 +623,8 @@ def scene_for_clip(skin, posture, hips_xz, fit, standing_top, fps, *, variants=4
     upright = bool((posture == "standing").mean() >= 0.9)
     sustained_low = ceiling_report["status"] != "no_sustained_low_posture"
     fitted_boxes = [b for b in (ceiling["tight"], ceiling["loose"]) if b] if ceiling else []
-    checks.update({box["name"]: solid_penetration(skin, [box], config.penetration_report_m)
+    checks.update({box["name"]: solid_penetration(skin, [box], config.penetration_report_m, bounds=bounds,
+                                                  cache=depth_cache)
                    for box in fitted_boxes})
     patches = fit.get("evidence_patches", [])
     rng = np.random.default_rng(seed)
@@ -591,9 +633,10 @@ def scene_for_clip(skin, posture, hips_xz, fit, standing_top, fps, *, variants=4
         boxes, params = sample_variant(rng, fit, ceiling, walls, top_all, grid, hips_xz, upright,
                                        standing_top, fps, config)
         penetration = solid_penetration(skin, [b for b in boxes if b["role"] != "ground"],
-                                        config.penetration_report_m)
+                                        config.penetration_report_m, bounds=bounds, cache=depth_cache)
         ground_box = [b for b in boxes if b["role"] == "ground"]
-        ground_pen = solid_penetration(skin, ground_box, config.penetration_report_m)
+        ground_pen = solid_penetration(skin, ground_box, config.penetration_report_m, bounds=bounds,
+                                       cache=depth_cache)
         explanation = (explanation_rate(next(b for b in boxes if b["name"] == "ceiling"), posture, hips_xz,
                                         ceiling["floor_m"], explanation_bounds(standing_top, config))
                        if ceiling is not None else None)

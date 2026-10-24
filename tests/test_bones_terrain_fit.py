@@ -295,7 +295,7 @@ def test_the_other_leg_below_a_trailing_foot_does_not_drop_it():
     soles, joints, root = step_up()
     on_box = soles["right"][-1:, :, 1].mean()
     # While stepping down, the left shin is far below the right foot still on the box.
-    shin = np.repeat(np.array([[[-0.12, 0.2, 0.3]]]), len(root), axis=0)
+    shin = np.repeat(np.array([[[-0.12, 0.02, 0.3]]]), len(root), axis=0)   # leading leg down on the floor
     hands = np.stack([joints["LeftHand"], joints["RightHand"]], axis=1)
     skin = np.concatenate([soles["left"], soles["right"], shin, hands], axis=1)
     feet = {"left": np.arange(4), "right": np.arange(4, 8)}
@@ -307,6 +307,18 @@ def test_the_other_leg_below_a_trailing_foot_does_not_drop_it():
     without = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin,
                           foot_vertices=feet)
     assert any("body_rests_lower" in c["dropped"] for c in without["patch_checks"] if c["side"] == "right")
+
+
+def test_hands_on_the_same_raised_surface_do_not_drop_the_sole():
+    soles, joints, root = step_up()
+    top = soles["right"][-1, :, 1].mean()
+    # Hands braced on lower ledges beside the box, well above the floor.
+    palms = np.repeat(np.array([[[-0.7, top - 0.15, 0.6], [0.7, top - 0.15, 0.6]]]), len(root), axis=0)
+    skin = np.concatenate([soles["left"], soles["right"], palms], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin,
+                      foot_vertices={"left": np.arange(4), "right": np.arange(4, 8)})
+    assert fit["patch_checks"] and not any("body_rests_lower" in c["dropped"] for c in fit["patch_checks"])
+    assert any(b["role"] == "support" for b in fit["boxes"]["minimal"])
 
 
 def test_leg_vertices_by_side_uses_thigh_and_shin_joints():

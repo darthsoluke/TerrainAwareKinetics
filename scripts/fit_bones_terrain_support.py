@@ -376,8 +376,8 @@ def group_summary(results):
     return summary
 
 
-def choose_renders(results, per_stem, worst_per_group):
-    """Deterministic sample per stem, plus the worst penetration clips per group."""
+def choose_renders(results, per_stem, worst_per_group, sample_per_group=0):
+    """Deterministic sample per stem and per group, plus the worst penetration clips per group."""
     chosen = {}
     by_stem = {}
     for result in results:
@@ -392,6 +392,8 @@ def choose_renders(results, per_stem, worst_per_group):
         if "fit" in result:
             by_group.setdefault(result["group"], []).append(result)
     for items in by_group.values():
+        for result in sorted(items, key=lambda r: hashlib.sha256(r["filename"].encode()).hexdigest())[:sample_per_group]:
+            chosen.setdefault(result["filename"], "group_sample")
         worst = sorted(items, key=lambda r: -penetration(r["fit"], "minimal")[0])
         for result in worst[:worst_per_group]:
             if penetration(result["fit"], "minimal")[1] > 0:
@@ -407,6 +409,9 @@ def main(argv=None):
     parser.add_argument("--limit-per-stem", type=int)
     parser.add_argument("--viz-per-stem", type=int, default=2)
     parser.add_argument("--worst-per-group", type=int, default=3)
+    parser.add_argument("--sample-per-group", type=int, default=0,
+                        help="Also render this many hash-chosen clips per group (worst renders only cover failures)")
+    parser.add_argument("--render-list", type=Path, help="Text file of filenames to render in addition")
     parser.add_argument("--gif", action="store_true")
     parser.add_argument("--skin-stride", type=int, default=2,
                         help="Skin every n-th frame for the penetration metric; 0 disables skinning and scenes")
@@ -463,7 +468,11 @@ def main(argv=None):
             if index % 200 == 0 or index == len(items):
                 print(f"fit {index}/{len(items)}, failed {sum('error' in r for r in results)}, "
                       f"{time.time() - started:.0f}s", flush=True)
-        chosen = choose_renders(results, args.viz_per_stem, args.worst_per_group)
+        chosen = choose_renders(results, args.viz_per_stem, args.worst_per_group, args.sample_per_group)
+        if args.render_list:
+            for name in args.render_list.read_text().split():
+                if any(r.get("filename") == name and "fit" in r for r in results):
+                    chosen.setdefault(name, "requested")
         lookup = {item["filename"]: item for item in items}
         jobs = []
         for filename, reason in sorted(chosen.items()):

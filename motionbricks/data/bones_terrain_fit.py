@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass
 
 import numpy as np
 
-SCHEMA_VERSION = "bones-terrain-fit-v8"
+SCHEMA_VERSION = "bones-terrain-fit-v9"
 
 #: Landmark sphere radii in metres; conservative body volume for free-space checks.
 LANDMARK_RADII = {
@@ -348,8 +348,8 @@ def _foot_below_sole(patch, skin, events, frame_stride, foot_vertices, config):
     return float((drop > config.level_match_m).mean()), float(np.median(drop))
 
 
-def _body_below_sole(patch, skin, events, frame_stride, body_vertices, config):
-    """Fraction of the patch's contact frames in which some non-foot skin is below the sole.
+def _body_below_sole(patch, skin, events, frame_stride, body_vertices, config, floor_limit=np.inf):
+    """Fraction of the patch's contact frames in which non-foot skin lies on the floor below the sole.
 
     Standing on a raised surface, the hands, knees and trunk are above the feet. When the
     knees, hands or chest are lower than a still sole (crawling, kneeling, lying), the body
@@ -362,7 +362,10 @@ def _body_below_sole(patch, skin, events, frame_stride, body_vertices, config):
         return 0.0, None
     lowest = skin[frames][:, body_vertices, 1].min(axis=1)
     drop = patch["height_m"] - lowest
-    return float((drop > config.level_match_m).mean()), float(np.median(drop))
+    # Only a body resting on the floor itself counts: hands or knees on the same raised
+    # surface (or on another, lower box) do not make a sole on that surface weightless.
+    resting = (drop > config.level_match_m) & (lowest <= floor_limit)
+    return float(resting.mean()), float(np.median(drop))
 
 
 def _patch_rests_on_body(patch, skin, events, frame_stride, config):
@@ -452,7 +455,7 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
             side = _patch_side(patch, events)
             body_below, body_drop = _body_below_sole(patch, skin, events, stride,
                                                      None if body_vertices is None or side is None
-                                                     else body_vertices[side], config)
+                                                     else body_vertices[side], config, floor_limit=ground + band)
             reasons = ([] if count < config.resting_min_points else ["body_under_sole"]) + (
                 [] if below < config.foot_below_fraction else ["foot_lower_than_sole"]) + (
                 [] if body_below < config.body_below_fraction else ["body_rests_lower"])
