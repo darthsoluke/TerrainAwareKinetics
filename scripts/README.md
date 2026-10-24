@@ -11,6 +11,7 @@
 | BONES地形几何筛查 | [screen_bones_terrain_geometry.py](screen_bones_terrain_geometry.py) | 读BVH、不改动作；组定义见[配置](../configs/bones_terrain_screen_v1.json) |
 | BONES支撑、顶棚、侧墙与场景变体 | [fit_bones_terrain_support.py](fit_bones_terrain_support.py) | 需要筛查结果目录；方法见[方法v2](../docs/records/bones_terrain_method_v2_20261023.md)；输出拟合JSON、图片和[浏览器查看页](../web/terrain_fit_review/index.html)数据；`--motion-cache` 复用转换结果（精确），`--clips` 只跑开发集，`--sample-per-group`/`--render-list` 指定审查图，`report.json` 的 `stage_seconds` 给出各阶段耗时 |
 | BONES动作—场景训练集 | [build_bones_env_training_set.py](build_bones_env_training_set.py)、[audit_bones_env_training_set.py](audit_bones_env_training_set.py) | 从v9拟合和动作缓存构建分片；审计在线观测并试跑未训练模型；[说明](../docs/records/bones_env_training_set_20261024.md) |
+| 地形感知动作Transformer训练 | [train_terrain_controller.py](train_terrain_controller.py) | 4卡torchrun，分阶段（一步监督→可微闭环），时间上限、原子保存、曝光账本；需按[计划](../docs/records/terrain_controller_pilot_plan_20261024.md)获批后运行 |
 | 场景观测计时 | [benchmark_scene_observation.py](benchmark_scene_observation.py) | 部署显卡上测骨骼射线与体积观测的单帧延迟；[性能约定](../docs/records/skeleton_ray_observation_20261023.md) |
 | BONES原始BVH迁移 | [transfer_bones_originals.py](transfer_bones_originals.py) | 逐文件清单、按日期打包、私有Drive与目标全量哈希校验；[执行记录](../docs/records/bones_terrain_survey_v2_pro6000_20261023.md) |
 | P1训练 | [train_pfnn_frame_actor.py](train_pfnn_frame_actor.py) | 旧P1已结束，不应重复执行 |

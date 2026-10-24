@@ -215,3 +215,28 @@ def test_closed_loop_rollout_is_differentiable_end_to_end():
     values = torch.tensor([[0.0, 10.0, 20.0]])
     assert torch.allclose(lambda_returns(torch.tensor([[1.0, 2.0]]), values, 0.5, 0.5),
                           torch.tensor(lambda_returns_numpy([[1.0, 2.0]], values.numpy(), 0.5, 0.5), dtype=torch.float32))
+
+
+def test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch():
+    rep = _rep()
+    import torch
+    from motionbricks.controller.closed_loop import ClosedLoop, Critic, RolloutConfig
+    from motionbricks.controller.training import closed_loop_step, evaluate, teacher_step
+    model, sampler, table, prober, names = _model(rep)
+    loop = ClosedLoop(model, rep, names, sampler, table, prober, RolloutConfig(horizon=4))
+    critic = Critic(loop.critic_input_dim())
+    frames = make_history(rep, frames=32)
+    packed = sampler.boxes([GROUND, box([0, 1.2, 1.0], [1, .1, 1])])
+    batch = {"history": frames[:, :16], "history_mask": torch.ones(2, 16, dtype=torch.bool),
+             "targets": frames[:, 16:], "commands": torch.tensor([0.0, 1.0, 1.0, 0.0]).expand(2, 16, 4),
+             "box_centers": packed[0].expand(2, -1, -1), "box_half": packed[1].expand(2, -1, -1),
+             "box_rotation": packed[2].expand(2, -1, -1, -1), "box_mask": packed[3].expand(2, -1)}
+    loss, terms = teacher_step(loop, batch)
+    loss.backward()
+    assert torch.isfinite(loss) and "path" in terms and "body_fk" in terms
+    policy, critic_loss, terms = closed_loop_step(loop, batch, critic, horizon=4)
+    assert torch.isfinite(policy) and torch.isfinite(critic_loss) and "imitation" in terms
+    model.eval()
+    report = evaluate(loop, batch, horizon=4)
+    assert report["persistence_body_cm"] >= 0 and report["closed_loop_root_drift_cm_p50"] >= 0
+    assert 0 <= report["closed_loop_joint_penetration_over_2cm_frames"] <= 1
