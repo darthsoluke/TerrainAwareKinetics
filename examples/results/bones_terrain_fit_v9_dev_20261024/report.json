@@ -1,0 +1,4911 @@
+{
+  "schema_version": "bones-terrain-fit-v9",
+  "git_commit": "8c1d2f8fd877c45cb9d98d8f617a788a95cc2d05",
+  "screen_run": "runs/bones_screen_v1_full",
+  "clips": 593,
+  "fitted": 593,
+  "failed": 0,
+  "failures": [],
+  "rendered": {
+    "clips": 60,
+    "ok": 60,
+    "failed": [],
+    "reasons": {
+      "jump_over_obstacle_1m_R_102__A305": "group_sample",
+      "jump_over_obstacle_0_75m_R_102__A416": "group_sample",
+      "jump_over_obstacle_1_5m_L_101__A416": "group_sample",
+      "jump_to_shoulder_roll_R_102__A416": "group_sample",
+      "box_jump_down_360_002__A359": "group_sample",
+      "jump_to_shoulder_roll_R_001__A305": "group_sample",
+      "lift_crate_come_up_50cm_box_R_005__A249": "group_sample",
+      "come_up_50cm_box_R_001__A206": "group_sample",
+      "come_up_50cm_box_R_002__A282": "group_sample",
+      "idle_crawl_to_idle_crawl_right_R_003__A232": "group_sample",
+      "crawl_ff_loop_315_005__A131": "group_sample",
+      "crawl_ff_loop_270_R_001__A216": "group_sample",
+      "crouch_ff_start_315_003__A148": "group_sample",
+      "item_pick_up_crouch_walk_R_003__A412": "group_sample",
+      "crouch_ff_start_360_R_003__A197": "group_sample",
+      "idle_turn_360_001__A066": "group_sample",
+      "jog_sideway_135_start_001__A031": "group_sample",
+      "walk_backward_start_001__A029": "group_sample",
+      "wall_leaning_idle_360_R_003__A285": "group_sample",
+      "h_b_w_crouch_to_stand_270_start_001__A344": "group_sample",
+      "h_b_w_stand_to_crouch_270_start_003__A344": "group_sample",
+      "on_all_fours_turn_270_R_003__A202": "group_sample",
+      "mohak_start_001__A031": "group_sample",
+      "mohak_backward_stop_002__A031": "group_sample",
+      "kneeling_loop_001__A101": "group_sample",
+      "kneeling_stop_003__A097": "group_sample",
+      "kneeling_start_R_003__A408": "group_sample",
+      "ladder_slip_R_002__A300": "group_sample",
+      "ladder_slide_down_R_002__A300": "group_sample",
+      "ladder_slide_down_R_004__A300": "group_sample",
+      "stairs_slip_R_003__A300": "group_sample",
+      "stairs_climbing_jog_down_stop_R_003__A300": "group_sample",
+      "stairs_climbing_down_loop_R_102__A301": "group_sample",
+      "come_down_50cm_box_R_001__A330": "requested",
+      "come_down_50cm_box_R_001__A359": "requested",
+      "come_down_50cm_box_R_002__A049": "requested",
+      "come_down_50cm_box_R_002__A107": "requested",
+      "come_down_50cm_box_R_002__A219": "requested",
+      "come_down_50cm_box_R_002__A249": "requested",
+      "come_down_50cm_box_R_002__A320": "requested",
+      "come_down_50cm_box_R_002__A341": "requested",
+      "come_down_50cm_box_R_002__A342": "requested",
+      "come_down_50cm_box_R_002__A359": "requested",
+      "come_down_50cm_box_R_003__A088": "requested",
+      "come_down_50cm_box_R_003__A144": "requested",
+      "come_down_50cm_box_R_003__A150": "requested",
+      "come_down_50cm_box_R_003__A202": "requested",
+      "come_down_50cm_box_R_003__A220": "requested",
+      "come_down_50cm_box_R_003__A242": "requested",
+      "come_down_50cm_box_R_003__A322": "requested",
+      "come_down_50cm_box_R_003__A359": "requested",
+      "come_down_50cm_box_R_003__A378": "requested",
+      "come_down_50cm_box_R_003__A393": "requested",
+      "come_down_50cm_box_R_003__A481": "requested",
+      "come_down_50cm_box_R_004__A222": "requested",
+      "come_down_50cm_box_R_005__A056": "requested",
+      "come_up_50cm_box_R_002__A065": "requested",
+      "come_up_50cm_box_R_003__A065": "requested",
+      "come_up_50cm_box_R_004__A065": "requested",
+      "jump_form_box_to_safety_roll_360_R_001__A502": "requested"
+    }
+  },
+  "elapsed_seconds": 73.6,
+  "config": {
+    "level_match_m": 0.03,
+    "evidence_margin_m": 0.03,
+    "max_growth_m": 0.6,
+    "side_clearance_m": 0.01,
+    "sole_tolerance_m": 0.02,
+    "landmark_tolerance_m": 0.02,
+    "palm_surface_offset_m": 0.03,
+    "knee_surface_offset_m": 0.06,
+    "limb_level_tolerance_m": 0.05,
+    "stationary_speed_mps": 0.15,
+    "min_event_seconds": 0.12,
+    "ground_margin_m": 1.5,
+    "ground_thickness_m": 0.2,
+    "penetration_report_m": 0.02,
+    "min_step_m": 0.06,
+    "skin_ground_percentile": 2.0,
+    "ground_mismatch_m": 0.03,
+    "skin_probe_stride": 1.0,
+    "resting_min_points": 10,
+    "foot_below_fraction": 0.5,
+    "body_below_fraction": 0.5,
+    "skin_ground_band_m": 0.1,
+    "slab_clearance_m": 0.03,
+    "min_slab_thickness_m": 0.05,
+    "cluster_link_m": 0.3,
+    "palm_below_hips_m": 0.35,
+    "kneel_shin_drop_m": 0.25
+  },
+  "stage_seconds": {
+    "motion_cached": {
+      "clips": 593,
+      "total": 1433.1,
+      "p50": 2.1094,
+      "p95": 4.8698
+    },
+    "scene": {
+      "clips": 593,
+      "total": 941.8,
+      "p50": 1.3058,
+      "p95": 3.8664
+    },
+    "screen": {
+      "clips": 593,
+      "total": 25.0,
+      "p50": 0.0373,
+      "p95": 0.0827
+    },
+    "support_fit": {
+      "clips": 593,
+      "total": 572.1,
+      "p50": 0.7429,
+      "p95": 2.2744
+    }
+  },
+  "scene_config": {
+    "cell_m": 0.1,
+    "ceiling_clearance_m": 0.04,
+    "explanation_margin_m": 0.05,
+    "crouch_top_ratio": 0.62,
+    "quadruped_top_ratio": 0.4,
+    "in_place_blocked_fraction": 0.2,
+    "min_low_seconds": 0.5,
+    "ceiling_thickness_m": 0.2,
+    "ceiling_growth_m": 0.6,
+    "cluster_link_m": 0.3,
+    "wall_still_speed_mps": 0.2,
+    "wall_min_seconds": 0.5,
+    "wall_contact_band_m": 0.015,
+    "wall_min_contact_vertices": 80.0,
+    "wall_offset_stability_m": 0.02,
+    "wall_min_trunk_vertices": 60.0,
+    "wall_min_hand_vertices": 25.0,
+    "wall_hand_reach_m": 0.35,
+    "wall_hand_min_height_m": 0.85,
+    "wall_min_feet_distance_m": 0.15,
+    "wall_max_shift_m": 0.05,
+    "wall_contact_drift_m": 0.1,
+    "wall_height_m": 2.5,
+    "wall_thickness_m": 0.2,
+    "wall_growth_m": 1.0,
+    "neutral_side_margin_m": 0.3,
+    "neutral_headroom_m": 0.15,
+    "neutral_clutter_clearance_m": 0.3,
+    "lookahead_seconds": 1.0,
+    "upright_ceiling_probability": 0.5,
+    "upright_ceiling_max_m": 3.0,
+    "clutter_max": 4.0,
+    "clutter_area_m": 3.0,
+    "penetration_report_m": 0.02,
+    "coverage_tolerance_m": 0.03,
+    "min_explanation_rate": 0.9
+  },
+  "arguments": {
+    "screen_run": "runs/bones_screen_v1_full",
+    "output": "runs/bones_fit_v9_dev",
+    "groups": null,
+    "limit_per_stem": null,
+    "viz_per_stem": 0,
+    "worst_per_group": 5,
+    "sample_per_group": 3,
+    "render_list": "runs/bones_fit_v9_dev_coord/render_list.txt",
+    "gif": false,
+    "skin_stride": 2,
+    "variants": 4,
+    "clips": "configs/bones_terrain_devset_v1.txt",
+    "motion_cache": "runs/bones_motion_cache_s2",
+    "cache_skin": false,
+    "workers": 68
+  },
+  "module_sha256": {
+    "motionbricks/data/bones_terrain_fit.py": "0c5e17047d9fe1ec951849c3476a4e73c6a08de2540fdb0088dbefbe8c54ae83",
+    "motionbricks/data/bones_terrain_viz.py": "e2cc7e21acb125c628b0cedcd497be9390c53d139f7ee523b07f62f7af7f35a7",
+    "motionbricks/data/bones_terrain_scene.py": "6715c768d721aee52441c570bceb906260c86f804feb4d4dd1cb066d6912d192",
+    "motionbricks/data/bones_terrain_screen.py": "3d865f33a9445aef4fe68701d7dc10ffacf90d77630f3b7c69a531949605e8f5",
+    "scripts/fit_bones_terrain_support.py": "bf4c818036c30133024e1bd2e8753f0e9db1677a8cd7d6a14d9a3b56f0c17877"
+  },
+  "dev_validation": {
+    "preflight": {
+      "source_commit": "8c1d2f8fd877c45cb9d98d8f617a788a95cc2d05",
+      "tests": {
+        "terrain": {
+          "tests": 60,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "ray": {
+          "tests": 6,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      },
+      "tests_passed": true,
+      "limb_vertex_counts": {
+        "foot_left": 1258,
+        "foot_right": 1258,
+        "leg_left": 789,
+        "leg_right": 794
+      },
+      "nproc": 72,
+      "workers": 68,
+      "nproc_command": "env -u OMP_NUM_THREADS -u OMP_THREAD_LIMIT nproc",
+      "nproc_under_omp_num_threads_1": 1,
+      "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+      "python_executable": "${PFNN_PROJECT}/env/bin/python",
+      "platform": "Linux-7.0.0-38-generic-x86_64-with-glibc2.43",
+      "torch": "2.7.1+cu128",
+      "standing_top_m": 1.760514736175537,
+      "environment": {
+        "CUDA_VISIBLE_DEVICES": "",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "PYTHONPATH": "${KIMODO_ROOT}"
+      },
+      "clips": 593,
+      "v7_normal_drop_clips": 77,
+      "render_list_clips": 27
+    },
+    "execution": {
+      "command": [
+        "${PFNN_PROJECT}/env/bin/python",
+        "-u",
+        "scripts/fit_bones_terrain_support.py",
+        "--screen-run",
+        "runs/bones_screen_v1_full",
+        "--output",
+        "runs/bones_fit_v9_dev",
+        "--clips",
+        "configs/bones_terrain_devset_v1.txt",
+        "--motion-cache",
+        "runs/bones_motion_cache_s2",
+        "--viz-per-stem",
+        "0",
+        "--worst-per-group",
+        "5",
+        "--sample-per-group",
+        "3",
+        "--render-list",
+        "runs/bones_fit_v9_dev_coord/render_list.txt",
+        "--variants",
+        "4",
+        "--skin-stride",
+        "2",
+        "--workers",
+        "68"
+      ],
+      "exit_code": 0,
+      "outer_seconds": 74.276
+    },
+    "audit": {
+      "source_commit": "8c1d2f8fd877c45cb9d98d8f617a788a95cc2d05",
+      "clips": 593,
+      "comparison": {
+        "box_support": {
+          "v7": {
+            "clips": 42,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 32,
+            "four_plus_support_boxes": 3,
+            "eligibility": {
+              "environment_explained": 9,
+              "geometry_only_low_posture_unexplained": 25,
+              "rejected": 8,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 14
+          },
+          "v8": {
+            "clips": 42,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 24,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 9,
+              "geometry_only_low_posture_unexplained": 27,
+              "rejected": 6,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 8
+          },
+          "v9": {
+            "clips": 42,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 24,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 9,
+              "geometry_only_low_posture_unexplained": 27,
+              "rejected": 6,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 6
+          }
+        },
+        "crouch": {
+          "v7": {
+            "clips": 49,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 47,
+              "geometry_only_low_posture_unexplained": 2,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          },
+          "v8": {
+            "clips": 49,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 47,
+              "geometry_only_low_posture_unexplained": 2,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          },
+          "v9": {
+            "clips": 49,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 47,
+              "geometry_only_low_posture_unexplained": 2,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          }
+        },
+        "flat_control": {
+          "v7": {
+            "clips": 41,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 41,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          },
+          "v8": {
+            "clips": 41,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 41,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          },
+          "v9": {
+            "clips": 41,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 41,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          }
+        },
+        "kneel": {
+          "v7": {
+            "clips": 42,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 20,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 15,
+              "geometry_only_low_posture_unexplained": 22,
+              "rejected": 5,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 31
+          },
+          "v8": {
+            "clips": 42,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 15,
+              "geometry_only_low_posture_unexplained": 27,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 11
+          },
+          "v9": {
+            "clips": 42,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 15,
+              "geometry_only_low_posture_unexplained": 27,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 11
+          }
+        },
+        "known_dimension_support": {
+          "v7": {
+            "clips": 116,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 4,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 108,
+              "geometry_only_low_posture_unexplained": 7,
+              "rejected": 1,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 82
+          },
+          "v8": {
+            "clips": 116,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 24,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 105,
+              "geometry_only_low_posture_unexplained": 5,
+              "rejected": 6,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 28
+          },
+          "v9": {
+            "clips": 116,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 28,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 105,
+              "geometry_only_low_posture_unexplained": 4,
+              "rejected": 7,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          }
+        },
+        "ladder": {
+          "v7": {
+            "clips": 41,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 20,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 0,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 41
+            },
+            "body_rests_lower": 7
+          },
+          "v8": {
+            "clips": 41,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 28,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 0,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 41
+            },
+            "body_rests_lower": 0
+          },
+          "v9": {
+            "clips": 41,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 28,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 0,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 41
+            },
+            "body_rests_lower": 0
+          }
+        },
+        "obstacle_clearance": {
+          "v7": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 16,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 0,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 40
+            },
+            "body_rests_lower": 2
+          },
+          "v8": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 12,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 0,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 40
+            },
+            "body_rests_lower": 2
+          },
+          "v9": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 16,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 0,
+              "geometry_only_low_posture_unexplained": 0,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 40
+            },
+            "body_rests_lower": 0
+          }
+        },
+        "prone": {
+          "v7": {
+            "clips": 81,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 86,
+            "four_plus_support_boxes": 39,
+            "eligibility": {
+              "environment_explained": 46,
+              "geometry_only_low_posture_unexplained": 14,
+              "rejected": 21,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 853
+          },
+          "v8": {
+            "clips": 81,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 12,
+            "four_plus_support_boxes": 3,
+            "eligibility": {
+              "environment_explained": 56,
+              "geometry_only_low_posture_unexplained": 22,
+              "rejected": 3,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 121
+          },
+          "v9": {
+            "clips": 81,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 12,
+            "four_plus_support_boxes": 3,
+            "eligibility": {
+              "environment_explained": 56,
+              "geometry_only_low_posture_unexplained": 22,
+              "rejected": 3,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 121
+          }
+        },
+        "quadruped": {
+          "v7": {
+            "clips": 61,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 24,
+            "four_plus_support_boxes": 6,
+            "eligibility": {
+              "environment_explained": 51,
+              "geometry_only_low_posture_unexplained": 4,
+              "rejected": 6,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 423
+          },
+          "v8": {
+            "clips": 61,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 56,
+              "geometry_only_low_posture_unexplained": 5,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 194
+          },
+          "v9": {
+            "clips": 61,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 56,
+              "geometry_only_low_posture_unexplained": 5,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 193
+          }
+        },
+        "stairs": {
+          "v7": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 48,
+            "four_plus_support_boxes": 22,
+            "eligibility": {
+              "environment_explained": 24,
+              "geometry_only_low_posture_unexplained": 4,
+              "rejected": 12,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 3
+          },
+          "v8": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 48,
+            "four_plus_support_boxes": 22,
+            "eligibility": {
+              "environment_explained": 24,
+              "geometry_only_low_posture_unexplained": 4,
+              "rejected": 12,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          },
+          "v9": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 48,
+            "four_plus_support_boxes": 22,
+            "eligibility": {
+              "environment_explained": 24,
+              "geometry_only_low_posture_unexplained": 4,
+              "rejected": 12,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 0
+          }
+        },
+        "wall_contact": {
+          "v7": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 34,
+              "geometry_only_low_posture_unexplained": 6,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 6
+          },
+          "v8": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 35,
+              "geometry_only_low_posture_unexplained": 5,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 1
+          },
+          "v9": {
+            "clips": 40,
+            "maximal_over_2cm_clips": 0,
+            "F_variants": 0,
+            "four_plus_support_boxes": 0,
+            "eligibility": {
+              "environment_explained": 35,
+              "geometry_only_low_posture_unexplained": 5,
+              "rejected": 0,
+              "excluded_unmodelled_geometry": 0
+            },
+            "body_rests_lower": 1
+          }
+        }
+      },
+      "comparison_sources": "Same dev names; compact TSV for counts/eligibility, saved fits for exact variant F and patch counts.",
+      "variant_equivalence": {
+        "patch_decision_definition": "Ordered (height_above_ground_m, side, area_m2, bool(dropped)); diagnostic fractions and redundant drop reasons do not alter the kept/dropped decision.",
+        "unchanged_clips": 564,
+        "changed_clips": 29,
+        "unchanged_names": [
+          "avoid_obstacle_jump_run_ff_180_R_002__A500",
+          "avoid_obstacle_jump_run_ff_180_R_002__A501",
+          "avoid_obstacle_jump_run_ff_180_R_002__A502",
+          "box_jump_001__A359",
+          "box_jump_001__A360",
+          "box_jump_001__A361",
+          "box_jump_001__A362",
+          "box_jump_002__A359",
+          "box_jump_002__A360",
+          "box_jump_002__A361",
+          "box_jump_003__A359",
+          "box_jump_003__A360",
+          "box_jump_003__A361",
+          "box_jump_003__A362",
+          "box_jump_down_360_001__A359",
+          "box_jump_down_360_001__A360",
+          "box_jump_down_360_001__A362",
+          "box_jump_down_360_002__A359",
+          "box_jump_down_360_002__A360",
+          "box_jump_down_360_002__A361",
+          "box_jump_down_360_002__A362",
+          "box_jump_down_360_003__A360",
+          "box_jump_down_360_003__A361",
+          "box_jump_down_360_003__A362",
+          "change_idle_crawl_to_idle_crawl_right_002__A129",
+          "come_down_50cm_box_R_001__A177",
+          "come_down_50cm_box_R_001__A281",
+          "come_down_50cm_box_R_001__A346",
+          "come_down_50cm_box_R_001__A371",
+          "come_down_50cm_box_R_002__A049",
+          "come_down_50cm_box_R_002__A196",
+          "come_down_50cm_box_R_002__A336",
+          "come_down_50cm_box_R_002__A344",
+          "come_down_50cm_box_R_002__A408",
+          "come_down_50cm_box_R_003__A045",
+          "come_down_50cm_box_R_003__A048",
+          "come_down_50cm_box_R_003__A072",
+          "come_down_50cm_box_R_003__A109",
+          "come_down_50cm_box_R_003__A125",
+          "come_down_50cm_box_R_003__A195",
+          "come_down_50cm_box_R_003__A219",
+          "come_down_50cm_box_R_003__A308",
+          "come_down_50cm_box_R_003__A377",
+          "come_down_50cm_box_R_004__A219",
+          "come_down_50cm_box_R_004__A249",
+          "come_down_50cm_box_R_004__A250",
+          "come_down_50cm_box_R_004__A251",
+          "come_down_50cm_box_R_004__A252",
+          "come_up_50cm_box_R_001__A052",
+          "come_up_50cm_box_R_001__A070",
+          "come_up_50cm_box_R_001__A196",
+          "come_up_50cm_box_R_001__A206",
+          "come_up_50cm_box_R_001__A212",
+          "come_up_50cm_box_R_001__A248",
+          "come_up_50cm_box_R_001__A288",
+          "come_up_50cm_box_R_001__A301",
+          "come_up_50cm_box_R_001__A458",
+          "come_up_50cm_box_R_002__A053",
+          "come_up_50cm_box_R_002__A067",
+          "come_up_50cm_box_R_002__A068",
+          "come_up_50cm_box_R_002__A072",
+          "come_up_50cm_box_R_002__A084",
+          "come_up_50cm_box_R_002__A107",
+          "come_up_50cm_box_R_002__A136",
+          "come_up_50cm_box_R_002__A160",
+          "come_up_50cm_box_R_002__A188",
+          "come_up_50cm_box_R_002__A224",
+          "come_up_50cm_box_R_002__A237",
+          "come_up_50cm_box_R_002__A250",
+          "come_up_50cm_box_R_002__A252",
+          "come_up_50cm_box_R_002__A282",
+          "come_up_50cm_box_R_002__A310",
+          "come_up_50cm_box_R_002__A324",
+          "come_up_50cm_box_R_002__A416",
+          "come_up_50cm_box_R_003__A053",
+          "come_up_50cm_box_R_003__A139",
+          "come_up_50cm_box_R_003__A245",
+          "come_up_50cm_box_R_003__A252",
+          "come_up_50cm_box_R_004__A047",
+          "come_up_50cm_box_R_004__A067",
+          "crawl_ff_loop_180_R_001__A233",
+          "crawl_ff_loop_180_R_002__A229",
+          "crawl_ff_loop_180_R_003__A127",
+          "crawl_ff_loop_180_R_003__A214",
+          "crawl_ff_loop_180_R_004__A214",
+          "crawl_ff_loop_180_R_005__A127",
+          "crawl_ff_loop_225_001__A132",
+          "crawl_ff_loop_225_001__A133",
+          "crawl_ff_loop_225_003__A130",
+          "crawl_ff_loop_225_003__A132",
+          "crawl_ff_loop_225_004__A131",
+          "crawl_ff_loop_225_R_001__A215",
+          "crawl_ff_loop_225_R_003__A214",
+          "crawl_ff_loop_225_R_003__A233",
+          "crawl_ff_loop_225_R_005__A233",
+          "crawl_ff_loop_270_R_001__A216",
+          "crawl_ff_loop_270_R_001__A233",
+          "crawl_ff_loop_270_R_002__A214",
+          "crawl_ff_loop_315_005__A131",
+          "crawl_ff_loop_315_R_001__A232",
+          "crawl_ff_loop_360_001__A134",
+          "crawl_ff_loop_360_R_002__A230",
+          "crawl_ff_loop_360_R_002__A233",
+          "crawl_ff_loop_360_R_003__A230",
+          "crawl_ff_start_180_R_001__A214",
+          "crawl_ff_start_180_R_001__A217",
+          "crawl_ff_start_180_R_003__A129",
+          "crawl_ff_start_180_R_003__A231",
+          "crawl_ff_start_180_R_004__A127",
+          "crawl_ff_start_225_002__A133",
+          "crawl_ff_start_225_R_001__A230",
+          "crawl_ff_start_225_R_001__A232",
+          "crawl_ff_start_225_R_002__A231",
+          "crawl_ff_start_225_R_002__A232",
+          "crawl_ff_start_225_R_002__A233",
+          "crawl_ff_start_225_R_003__A217",
+          "crawl_ff_start_225_R_003__A233",
+          "crawl_ff_start_270_001__A132",
+          "crawl_ff_start_270_005__A131",
+          "crawl_ff_start_270_R_002__A233",
+          "crawl_ff_start_270_R_003__A218",
+          "crawl_ff_start_315_001__A130",
+          "crawl_ff_start_315_001__A132",
+          "crawl_ff_start_315_R_002__A233",
+          "crawl_ff_start_315_R_003__A216",
+          "crawl_ff_start_315_R_003__A232",
+          "crawl_ff_start_360_002__A130",
+          "crawl_ff_start_360_002__A133",
+          "crawl_ff_start_360_R_001__A229",
+          "crawl_ff_start_360_R_001__A230",
+          "crawl_ff_start_360_R_002__A230",
+          "crawl_ff_start_360_R_003__A216",
+          "crawl_ff_start_360_R_003__A231",
+          "crawl_ff_stop_180_R_001__A230",
+          "crawl_ff_stop_180_R_003__A126",
+          "crawl_ff_stop_180_R_003__A218",
+          "crawl_ff_stop_180_R_005__A214",
+          "crawl_ff_stop_225_005__A130",
+          "crawl_ff_stop_225_006__A131",
+          "crawl_ff_stop_225_R_001__A233",
+          "crawl_ff_stop_225_R_002__A214",
+          "crawl_ff_stop_225_R_002__A232",
+          "crawl_ff_stop_225_R_003__A215",
+          "crawl_ff_stop_270_R_002__A230",
+          "crawl_ff_stop_270_R_002__A231",
+          "crawl_ff_stop_270_R_003__A216",
+          "crawl_ff_stop_270_R_003__A218",
+          "crawl_ff_stop_270_R_003__A229",
+          "crawl_ff_stop_315_R_003__A217",
+          "crawl_ff_stop_315_R_003__A231",
+          "crawl_ff_stop_315_R_003__A232",
+          "crawl_ff_stop_360_R_003__A214",
+          "crouch_ff_loop_180_R_002__A198",
+          "crouch_ff_loop_180_R_003__A246",
+          "crouch_ff_loop_225_003__A147",
+          "crouch_ff_loop_225_004__A148",
+          "crouch_ff_loop_225_R_002__A196",
+          "crouch_ff_loop_270_003__A125",
+          "crouch_ff_loop_270_003__A128",
+          "crouch_ff_loop_270_R_001__A247",
+          "crouch_ff_loop_270_R_003__A246",
+          "crouch_ff_loop_270_R_004__A198",
+          "crouch_ff_loop_315_R_002__A197",
+          "crouch_ff_loop_315_R_002__A198",
+          "crouch_ff_loop_315_R_002__A245",
+          "crouch_ff_loop_360_R_002__A196",
+          "crouch_ff_start_180_R_001__A145",
+          "crouch_ff_start_180_R_001__A147",
+          "crouch_ff_start_225_003__A146",
+          "crouch_ff_start_225_R_001__A245",
+          "crouch_ff_start_270_R_001__A246",
+          "crouch_ff_start_270_R_003__A247",
+          "crouch_ff_start_315_003__A148",
+          "crouch_ff_start_315_R_003__A198",
+          "crouch_ff_start_315_R_003__A247",
+          "crouch_ff_start_360_R_003__A197",
+          "crouch_ff_stop_180_R_001__A247",
+          "crouch_ff_stop_180_R_002__A196",
+          "crouch_ff_stop_180_R_002__A248",
+          "crouch_ff_stop_180_R_003__A247",
+          "crouch_ff_stop_180_R_004__A147",
+          "crouch_ff_stop_225_R_001__A244",
+          "crouch_ff_stop_225_R_003__A195",
+          "crouch_ff_stop_225_R_004__A245",
+          "crouch_ff_stop_270_R_001__A247",
+          "crouch_ff_stop_270_R_002__A197",
+          "crouch_ff_stop_315_R_001__A198",
+          "crouch_ff_stop_315_R_002__A194",
+          "crouch_idle_002__A248",
+          "crouch_idle_right_R_002__A245",
+          "drinking_wall_leaning_mug_090_R_001__A282",
+          "drinking_wall_leaning_mug_090_R_001__A285",
+          "drinking_wall_leaning_mug_090_R_003__A282",
+          "drinking_wall_leaning_mug_090_R_004__A291",
+          "drinking_wall_leaning_mug_360_R_001__A283",
+          "drinking_wall_leaning_mug_360_R_002__A290",
+          "drinking_wall_leaning_mug_360_R_003__A282",
+          "drinking_wall_leaning_mug_R_002__A344",
+          "h_b_w_crouch_270_loop_004__A548",
+          "h_b_w_crouch_270_loop_004__A549",
+          "h_b_w_crouch_270_start_002__A342",
+          "h_b_w_crouch_270_stop_001__A305",
+          "h_b_w_crouch_270_stop_001__A344",
+          "h_b_w_crouch_270_stop_001__A549",
+          "h_b_w_crouch_270_stop_002__A305",
+          "h_b_w_crouch_270_stop_002__A548",
+          "h_b_w_crouch_270_stop_002__A549",
+          "h_b_w_crouch_to_stand_270_start_001__A344",
+          "h_b_w_crouch_to_stand_270_start_001__A549",
+          "h_b_w_crouch_to_stand_270_start_001__A551",
+          "h_b_w_crouch_to_stand_270_start_002__A549",
+          "h_b_w_crouch_to_stand_270_stop_001__A344",
+          "h_b_w_stand_to_crouch_270_start_003__A342",
+          "h_b_w_stand_to_crouch_270_start_003__A344",
+          "idle_crawl_right_to_idle_crawl_R_003__A229",
+          "idle_crawl_start_001__A233",
+          "idle_crawl_stop_001__A128",
+          "idle_crawl_stop_002__A232",
+          "idle_crawl_stop_002__A233",
+          "idle_crawl_to_idle_crawl_right_R_003__A232",
+          "idle_crouch_right_loop_101__A129",
+          "idle_crouch_right_loop_103__A126",
+          "idle_crouch_right_to_idle_crouch_R_001__A197",
+          "idle_crouch_right_to_idle_crouch_R_004__A194",
+          "idle_crouch_to_idle_crouch_right_002__A146",
+          "idle_crouch_to_idle_crouch_right_R_002__A195",
+          "idle_to_on_all_fours_idle_001__A332",
+          "idle_to_on_all_fours_idle_002__A334",
+          "idle_to_wall_leaning_idle_270_R_001__A287",
+          "idle_to_wall_leaning_idle_270_R_001__A290",
+          "idle_to_wall_leaning_idle_270_R_001__A291",
+          "idle_to_wall_leaning_idle_360_R_002__A282",
+          "idle_to_wall_leaning_idle_360_R_002__A289",
+          "idle_to_wall_leaning_idle_360_R_002__A290",
+          "idle_to_wall_leaning_idle_360_R_003__A282",
+          "idle_turn_270_001__A046",
+          "idle_turn_270_001__A063",
+          "idle_turn_270_001__A147",
+          "idle_turn_270_003__A061",
+          "idle_turn_270_R_001__A266",
+          "idle_turn_360_001__A066",
+          "idle_turn_360_003__A058",
+          "idle_turn_360_003__A066",
+          "item_pick_up_crouch_walk_R_001__A350",
+          "item_pick_up_crouch_walk_R_003__A412",
+          "jog_arc_cw_stop_R_001__A266",
+          "jog_arc_cw_stop_R_005__A216",
+          "jog_backward_loop_002__A036",
+          "jog_backward_loop_002__A037",
+          "jog_backward_loop_003__A026",
+          "jog_backward_loop_003__A035",
+          "jog_backward_loop_003__A039",
+          "jog_backward_start_001__A038",
+          "jog_backward_stop_004__A034",
+          "jog_ff_loop_180_R_003__A105",
+          "jog_ff_start_180_R_001__A298",
+          "jog_ff_stop_180_R_002__A152",
+          "jog_forward_loop_001__A028",
+          "jog_forward_start_001__A021",
+          "jog_forward_start_003__A032",
+          "jog_forward_stop_001__A039",
+          "jog_forward_stop_001__A040",
+          "jog_sideway_045_stop_002__A040",
+          "jog_sideway_135_start_001__A031",
+          "jump_form_box_to_safety_roll_180_R_001__A500",
+          "jump_form_box_to_safety_roll_180_R_001__A501",
+          "jump_form_box_to_safety_roll_180_R_001__A503",
+          "jump_form_box_to_safety_roll_270_R_003__A500",
+          "jump_form_box_to_safety_roll_270_R_003__A503",
+          "jump_form_box_to_safety_roll_360_R_001__A500",
+          "jump_form_box_to_safety_roll_360_R_001__A501",
+          "jump_form_box_to_safety_roll_360_R_001__A503",
+          "jump_off_front_50cm_002__A416",
+          "jump_on_50cm_R_003__A415",
+          "jump_over_obstacle_0_5m_R_001__A415",
+          "jump_over_obstacle_0_5m_R_002__A415",
+          "jump_over_obstacle_0_5m_R_003__A304",
+          "jump_over_obstacle_0_5m_R_003__A415",
+          "jump_over_obstacle_0_5m_R_101__A305",
+          "jump_over_obstacle_0_5m_R_103__A305",
+          "jump_over_obstacle_0_75m_R_002__A304",
+          "jump_over_obstacle_0_75m_R_003__A415",
+          "jump_over_obstacle_0_75m_R_004__A304",
+          "jump_over_obstacle_0_75m_R_101__A305",
+          "jump_over_obstacle_0_75m_R_102__A416",
+          "jump_over_obstacle_0_75m_R_103__A305",
+          "jump_over_obstacle_1_5m_L_001__A415",
+          "jump_over_obstacle_1_5m_L_003__A415",
+          "jump_over_obstacle_1_5m_L_101__A416",
+          "jump_over_obstacle_1_5m_L_103__A416",
+          "jump_over_obstacle_1_5m_R_002__A304",
+          "jump_over_obstacle_1_5m_R_101__A305",
+          "jump_over_obstacle_1m_L_002__A415",
+          "jump_over_obstacle_1m_R_102__A305",
+          "jump_over_obstacle_1m_R_103__A305",
+          "jump_over_obstacle_1m_R_104__A305",
+          "jump_over_obstacle_2m_L_001__A415",
+          "jump_over_obstacle_2m_L_104__A416",
+          "jump_over_obstacle_2m_R_002__A304",
+          "jump_over_obstacle_2m_R_003__A304",
+          "jump_over_obstacle_2m_R_102__A305",
+          "jump_over_obstacle_no_hand_0_75m_R_002__A415",
+          "jump_over_obstacle_no_hand_0_75m_R_101__A416",
+          "jump_to_shoulder_roll_R_001__A304",
+          "jump_to_shoulder_roll_R_001__A305",
+          "jump_to_shoulder_roll_R_001__A415",
+          "jump_to_shoulder_roll_R_002__A304",
+          "jump_to_shoulder_roll_R_002__A305",
+          "jump_to_shoulder_roll_R_002__A415",
+          "jump_to_shoulder_roll_R_003__A304",
+          "jump_to_shoulder_roll_R_003__A305",
+          "jump_to_shoulder_roll_R_003__A415",
+          "jump_to_shoulder_roll_R_101__A416",
+          "jump_to_shoulder_roll_R_102__A416",
+          "jump_to_shoulder_roll_R_103__A416",
+          "kneeling_loop_001__A025",
+          "kneeling_loop_001__A045",
+          "kneeling_loop_001__A097",
+          "kneeling_loop_001__A101",
+          "kneeling_loop_001__A165",
+          "kneeling_loop_001__A187",
+          "kneeling_loop_001__A409",
+          "kneeling_loop_002__A024",
+          "kneeling_loop_002__A166",
+          "kneeling_loop_003__A097",
+          "kneeling_loop_003__A246",
+          "kneeling_loop_003__A248",
+          "kneeling_start_001__A025",
+          "kneeling_start_001__A124",
+          "kneeling_start_002__A056",
+          "kneeling_start_003__A030",
+          "kneeling_start_003__A167",
+          "kneeling_start_003__A184",
+          "kneeling_start_004__A024",
+          "kneeling_start_004__A034",
+          "kneeling_start_004__A035",
+          "kneeling_start_004__A099",
+          "kneeling_start_R_002__A190",
+          "kneeling_start_R_002__A244",
+          "kneeling_start_R_003__A189",
+          "kneeling_start_R_003__A193",
+          "kneeling_start_R_003__A408",
+          "kneeling_stop_002__A023",
+          "kneeling_stop_002__A033",
+          "kneeling_stop_002__A037",
+          "kneeling_stop_002__A056",
+          "kneeling_stop_003__A035",
+          "kneeling_stop_003__A037",
+          "kneeling_stop_003__A039",
+          "kneeling_stop_003__A051",
+          "kneeling_stop_003__A097",
+          "kneeling_stop_003__A167",
+          "kneeling_stop_003__A185",
+          "kneeling_stop_R_001__A408",
+          "kneeling_stop_R_002__A190",
+          "kneeling_stop_R_002__A191",
+          "kneeling_stop_R_002__A247",
+          "ladder_climbing_down_loop_R_101__A301",
+          "ladder_climbing_down_loop_R_103__A301",
+          "ladder_climbing_down_start_R_003__A300",
+          "ladder_climbing_down_start_R_103__A301",
+          "ladder_climbing_down_start_over_R_001__A300",
+          "ladder_climbing_down_start_through_R_101__A301",
+          "ladder_climbing_down_start_through_R_103__A301",
+          "ladder_climbing_down_stop_R_004__A300",
+          "ladder_climbing_down_stop_R_006__A300",
+          "ladder_climbing_down_stop_R_007__A300",
+          "ladder_climbing_down_stop_R_101__A301",
+          "ladder_climbing_idle_R_001__A300",
+          "ladder_climbing_idle_R_002__A300",
+          "ladder_climbing_idle_R_101__A301",
+          "ladder_climbing_idle_R_103__A301",
+          "ladder_climbing_jumpdown_R_003__A300",
+          "ladder_climbing_jumpdown_R_004__A300",
+          "ladder_climbing_jumpdown_R_102__A301",
+          "ladder_climbing_stepdown_R_003__A300",
+          "ladder_climbing_stepdown_R_103__A301",
+          "ladder_climbing_up_start_R_101__A301",
+          "ladder_climbing_up_start_R_102__A301",
+          "ladder_climbing_up_start_R_103__A301",
+          "ladder_jump_on_R_003__A300",
+          "ladder_jump_on_R_005__A300",
+          "ladder_jump_on_R_101__A301",
+          "ladder_jump_on_R_103__A301",
+          "ladder_slide_down_R_002__A300",
+          "ladder_slide_down_R_003__A300",
+          "ladder_slide_down_R_004__A300",
+          "ladder_slide_down_R_101__A301",
+          "ladder_slide_down_R_102__A301",
+          "ladder_slide_down_R_104__A301",
+          "ladder_slide_down_R_201__A303",
+          "ladder_slide_down_R_301__A302",
+          "ladder_slide_down_R_302__A302",
+          "ladder_slide_down_R_303__A302",
+          "ladder_slip_R_002__A300",
+          "ladder_slip_R_003__A300",
+          "ladder_slip_R_101__A301",
+          "ladder_slip_R_104__A301",
+          "lift_crate_come_down_50cm_box_R_002__A143",
+          "lift_crate_come_down_50cm_box_R_002__A162",
+          "lift_crate_come_down_50cm_box_R_002__A249",
+          "lift_crate_come_down_50cm_box_R_003__A161",
+          "lift_crate_come_up_50cm_box_R_001__A159",
+          "lift_crate_come_up_50cm_box_R_001__A160",
+          "lift_crate_come_up_50cm_box_R_001__A161",
+          "lift_crate_come_up_50cm_box_R_001__A162",
+          "lift_crate_come_up_50cm_box_R_001__A201",
+          "lift_crate_come_up_50cm_box_R_001__A202",
+          "lift_crate_come_up_50cm_box_R_002__A140",
+          "lift_crate_come_up_50cm_box_R_002__A142",
+          "lift_crate_come_up_50cm_box_R_002__A159",
+          "lift_crate_come_up_50cm_box_R_002__A160",
+          "lift_crate_come_up_50cm_box_R_002__A199",
+          "lift_crate_come_up_50cm_box_R_002__A202",
+          "lift_crate_come_up_50cm_box_R_002__A249",
+          "lift_crate_come_up_50cm_box_R_002__A250",
+          "lift_crate_come_up_50cm_box_R_002__A251",
+          "lift_crate_come_up_50cm_box_R_003__A140",
+          "lift_crate_come_up_50cm_box_R_003__A159",
+          "lift_crate_come_up_50cm_box_R_003__A160",
+          "lift_crate_come_up_50cm_box_R_003__A161",
+          "lift_crate_come_up_50cm_box_R_003__A202",
+          "lift_crate_come_up_50cm_box_R_003__A250",
+          "lift_crate_come_up_50cm_box_R_003__A251",
+          "lift_crate_come_up_50cm_box_R_003__A253",
+          "lift_crate_come_up_50cm_box_R_004__A140",
+          "lift_crate_come_up_50cm_box_R_005__A249",
+          "lift_crate_come_up_50cm_box_R_005__A251",
+          "lift_crate_come_up_50cm_box_R_005__A252",
+          "lift_crate_come_up_50cm_box_R_005__A253",
+          "lift_crate_come_up_50cm_box_R_006__A250",
+          "mohak_backward_loop_001__A030",
+          "mohak_backward_loop_001__A127",
+          "mohak_backward_loop_002__A127",
+          "mohak_backward_loop_003__A036",
+          "mohak_backward_loop_003__A127",
+          "mohak_backward_loop_004__A030",
+          "mohak_backward_start_001__A029",
+          "mohak_backward_start_001__A032",
+          "mohak_backward_start_001__A035",
+          "mohak_backward_start_002__A122",
+          "mohak_backward_start_002__A128",
+          "mohak_backward_start_003__A029",
+          "mohak_backward_start_003__A035",
+          "mohak_backward_start_003__A123",
+          "mohak_backward_start_004__A030",
+          "mohak_backward_stop_002__A031",
+          "mohak_forward_loop_001__A034",
+          "mohak_forward_loop_001__A036",
+          "mohak_forward_loop_003__A033",
+          "mohak_forward_loop_003__A034",
+          "mohak_forward_loop_003__A127",
+          "mohak_forward_start_001__A129",
+          "mohak_forward_start_002__A126",
+          "mohak_forward_stop_001__A120",
+          "mohak_forward_stop_003__A036",
+          "mohak_idle_003__A030",
+          "mohak_idle_003__A031",
+          "mohak_idle_loop_001__A125",
+          "mohak_idle_loop_002__A129",
+          "mohak_idle_start_002__A128",
+          "mohak_loop_001__A030",
+          "mohak_loop_002__A029",
+          "mohak_loop_002__A031",
+          "mohak_loop_003__A029",
+          "mohak_start_001__A031",
+          "mohak_stop_001__A029",
+          "mohak_stop_001__A032",
+          "mohak_stop_002__A029",
+          "mohak_stop_002__A030",
+          "mohak_turn_000_003__A032",
+          "mohak_turn_000_004__A030",
+          "mohak_turn_045_001__A030",
+          "mohak_turn_045_003__A031",
+          "mohak_turn_090_003__A029",
+          "mohak_turn_135_002__A030",
+          "mohak_turn_270_003__A122",
+          "mohak_turn_360_001__A120",
+          "mohak_turn_360_005__A128",
+          "monkey_jump_001__A304",
+          "monkey_jump_003__A304",
+          "monkey_jump_003__A415",
+          "monkey_jump_004__A416",
+          "monkey_jump_005__A416",
+          "monkey_jump_006__A416",
+          "neutral_idle_loop_003__A104",
+          "on_all_fours_backward_start_R_003__A201",
+          "on_all_fours_backward_stop_R_003__A200",
+          "on_all_fours_backward_stop_R_004__A203",
+          "on_all_fours_forward_loop_R_002__A200",
+          "on_all_fours_forward_start_R_002__A201",
+          "on_all_fours_forward_start_R_003__A199",
+          "on_all_fours_forward_start_R_003__A201",
+          "on_all_fours_forward_stop_R_004__A199",
+          "on_all_fours_idle_loop_001__A202",
+          "on_all_fours_turn_270_R_003__A202",
+          "on_all_fours_turn_360_R_002__A201",
+          "stair_slide_down_R_002__A304",
+          "stair_slide_down_R_102__A305",
+          "stair_slide_down_R_103__A305",
+          "stair_slide_down_R_104__A305",
+          "stairs_climbing_down_loop_R_002__A300",
+          "stairs_climbing_down_loop_R_102__A301",
+          "stairs_climbing_down_loop_R_104__A301",
+          "stairs_climbing_down_stop_R_001__A300",
+          "stairs_climbing_down_stop_R_002__A300",
+          "stairs_climbing_down_stop_R_003__A300",
+          "stairs_climbing_down_stop_R_102__A301",
+          "stairs_climbing_down_stop_R_103__A301",
+          "stairs_climbing_jog_down_loop_R_001__A300",
+          "stairs_climbing_jog_down_loop_R_003__A300",
+          "stairs_climbing_jog_down_loop_R_103__A301",
+          "stairs_climbing_jog_down_loop_R_104__A301",
+          "stairs_climbing_jog_down_stop_R_001__A300",
+          "stairs_climbing_jog_down_stop_R_002__A300",
+          "stairs_climbing_jog_down_stop_R_003__A300",
+          "stairs_climbing_jog_down_stop_R_101__A301",
+          "stairs_climbing_jog_down_stop_R_102__A301",
+          "stairs_climbing_jog_down_stop_R_103__A301",
+          "stairs_climbing_jog_up_start_R_001__A300",
+          "stairs_climbing_jog_up_start_R_002__A300",
+          "stairs_climbing_jog_up_start_R_003__A300",
+          "stairs_climbing_jog_up_start_R_101__A301",
+          "stairs_climbing_jog_up_start_R_102__A301",
+          "stairs_climbing_jog_up_start_R_103__A301",
+          "stairs_climbing_up_start_R_001__A300",
+          "stairs_climbing_up_start_R_002__A300",
+          "stairs_climbing_up_start_R_003__A300",
+          "stairs_climbing_up_start_R_101__A301",
+          "stairs_climbing_up_start_R_102__A301",
+          "stairs_climbing_up_start_R_103__A301",
+          "stairs_slip_R_001__A300",
+          "stairs_slip_R_003__A300",
+          "stairs_slip_R_004__A300",
+          "stairs_slip_R_005__A300",
+          "stairs_slip_R_007__A300",
+          "stairs_slip_R_102__A301",
+          "turn_crawl_270_R_003__A217",
+          "turn_crawl_270_R_003__A229",
+          "turn_crouch_270_R_002__A195",
+          "turn_crouch_360_R_001__A194",
+          "turn_crouch_360_R_002__A197",
+          "turn_jog_270_R_002__A238",
+          "turn_jog_270_R_003__A255",
+          "turn_start_jog_0000_002__A034",
+          "turn_start_jog_0135_002__A028",
+          "turn_start_jog_090_001__A031",
+          "walk_arc_cw_loop_001__A046",
+          "walk_backward_start_001__A029",
+          "walk_ff_stop_360_004__A066",
+          "walk_forward_stop_003__A039",
+          "walk_forward_stop_005__A026",
+          "walk_sideway_045_loop_005__A026",
+          "walk_sideway_045_loop_005__A040",
+          "walk_sideway_045_stop_002__A030",
+          "wall_leaning_idle_270_R_003__A291",
+          "wall_leaning_idle_360_R_003__A282",
+          "wall_leaning_idle_360_R_003__A285",
+          "wall_leaning_idle_360_R_003__A287",
+          "wall_leaning_idle_to_idle_270_R_001__A287",
+          "wall_leaning_idle_to_idle_270_R_002__A290",
+          "wall_leaning_idle_to_idle_270_R_003__A290",
+          "wall_leaning_idle_to_idle_360_R_001__A286",
+          "wall_leaning_idle_to_idle_360_R_003__A283"
+        ],
+        "changed_names": [
+          "come_down_50cm_box_R_001__A330",
+          "come_down_50cm_box_R_001__A359",
+          "come_down_50cm_box_R_001__A474",
+          "come_down_50cm_box_R_002__A107",
+          "come_down_50cm_box_R_002__A219",
+          "come_down_50cm_box_R_002__A249",
+          "come_down_50cm_box_R_002__A320",
+          "come_down_50cm_box_R_002__A341",
+          "come_down_50cm_box_R_002__A342",
+          "come_down_50cm_box_R_002__A359",
+          "come_down_50cm_box_R_003__A088",
+          "come_down_50cm_box_R_003__A144",
+          "come_down_50cm_box_R_003__A150",
+          "come_down_50cm_box_R_003__A202",
+          "come_down_50cm_box_R_003__A220",
+          "come_down_50cm_box_R_003__A242",
+          "come_down_50cm_box_R_003__A322",
+          "come_down_50cm_box_R_003__A359",
+          "come_down_50cm_box_R_003__A378",
+          "come_down_50cm_box_R_003__A393",
+          "come_down_50cm_box_R_003__A481",
+          "come_down_50cm_box_R_004__A222",
+          "come_down_50cm_box_R_005__A056",
+          "come_up_50cm_box_R_002__A065",
+          "come_up_50cm_box_R_003__A065",
+          "come_up_50cm_box_R_004__A065",
+          "jump_form_box_to_safety_roll_360_R_001__A502",
+          "jump_over_obstacle_1_5m_R_103__A305",
+          "jump_over_obstacle_2m_L_003__A415"
+        ],
+        "variants_checked": 2256,
+        "mismatches": [],
+        "support_geometry_changes_among_unchanged": [],
+        "comparison": "Sorted-key JSON of penetration_m and accepted, exact, no tolerance."
+      },
+      "stop_conditions": {
+        "maximal_over_2cm": [],
+        "protected_support": {
+          "come_up_50cm_box_R_002__A053": {
+            "v7": {
+              "minimal": 1,
+              "maximal": 1
+            },
+            "v8": {
+              "minimal": 1,
+              "maximal": 1
+            },
+            "v9": {
+              "minimal": 1,
+              "maximal": 1
+            }
+          },
+          "stairs_climbing_up_start_R_101__A301": {
+            "v7": {
+              "minimal": 7,
+              "maximal": 7
+            },
+            "v8": {
+              "minimal": 7,
+              "maximal": 7
+            },
+            "v9": {
+              "minimal": 7,
+              "maximal": 7
+            }
+          }
+        },
+        "protected_lost": [],
+        "v7_normal_drop_tagged": 77,
+        "still_body_rests_lower": [],
+        "prone_F": {
+          "value": 12,
+          "limit_inclusive": 24
+        },
+        "quadruped_F": {
+          "value": 0,
+          "limit_inclusive": 12
+        },
+        "variant_equivalence_failures": 0,
+        "triggered": false
+      },
+      "rendered": 60,
+      "render_counts_by_group": {
+        "box_support": 4,
+        "known_dimension_support": 29,
+        "prone": 3,
+        "crouch": 3,
+        "wall_contact": 3,
+        "flat_control": 3,
+        "obstacle_clearance": 3,
+        "kneel": 3,
+        "ladder": 3,
+        "quadruped": 3,
+        "stairs": 3
+      },
+      "render_reason_counts": {
+        "group_sample": 33,
+        "requested": 27
+      }
+    },
+    "review_selection": [
+      {
+        "filename": "box_jump_down_360_002__A359",
+        "group": "box_support",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/box_support/box_jump_down_360_002__A359.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0,
+          0.5788283527945168
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_tight_above_bound",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5788464726065286,
+            "side": "left",
+            "area_m2": 0.015114060302606369,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004196494817733765,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08561038970947266,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5788102329825051,
+            "side": "right",
+            "area_m2": 0.01453303301280906,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0045265257358551025,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08075079321861267,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_001__A330",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_001__A330.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5960513475583866
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5948335650609806,
+            "side": "left",
+            "area_m2": 0.016701765140342148,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0023053884506225586,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08323997259140015,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6137699905084446,
+            "side": "left",
+            "area_m2": 0.0007449357450723948,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.012825697660446167,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.07288405299186707,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5960513475583866,
+            "side": "right",
+            "area_m2": 0.01201785136123,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.011017918586730957,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07107168436050415,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_001__A359",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_001__A359.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5746074820053764
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5732898021233268,
+            "side": "left",
+            "area_m2": 0.014549298796766766,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0036318302154541016,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07835507392883301,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5760970318806358,
+            "side": "left",
+            "area_m2": 0.016681641627729813,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0028581321239471436,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0904090404510498,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5747980082524009,
+            "side": "left",
+            "area_m2": 0.0010592086618492202,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.010226428508758545,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.053687840700149536,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5744169557583518,
+            "side": "right",
+            "area_m2": 0.014670430270367546,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009870439767837524,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07263454794883728,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A049",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A049.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0,
+          0.6570779312751256
+        ],
+        "flags": [
+          "foot_patches_rest_on_body",
+          "evidence_reduced_for_body_conflict"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6575534720323049,
+            "side": "left",
+            "area_m2": 0.018567101773937666,
+            "body_points_under": 3359,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005548387765884399,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.04003632068634033,
+            "dropped": [
+              "body_under_sole"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.6566023905179463,
+            "side": "right",
+            "area_m2": 0.015327480440640369,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004729777574539185,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07775905728340149,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A107",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A107.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5868569267913699
+        ],
+        "flags": [
+          "merged_small_steps",
+          "evidence_reduced_for_body_conflict"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6346507919952273,
+            "side": "left",
+            "area_m2": 0.0005686316537033553,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.01838672161102295,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.0654759407043457,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5868569267913699,
+            "side": "right",
+            "area_m2": 0.014389485794338575,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0072972774505615234,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07593709230422974,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A219",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A219.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5849504675716162
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5831045117229223,
+            "side": "left",
+            "area_m2": 0.01642539685220243,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0032835006713867188,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07872462272644043,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5939716305583715,
+            "side": "left",
+            "area_m2": 0.0004070637010295808,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0150986909866333,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.11197355389595032,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5849504675716162,
+            "side": "right",
+            "area_m2": 0.015322388294151917,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.006651729345321655,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07512643933296204,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A249",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A249.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.6003716206469107
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6003716206469107,
+            "side": "left",
+            "area_m2": 0.016587444709555588,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004939049482345581,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0783754289150238,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6205500280775595,
+            "side": "left",
+            "area_m2": 0.0010627890800257722,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.012256830930709839,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.07165113091468811,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5952187693037558,
+            "side": "right",
+            "area_m2": 0.014424352884988556,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004311501979827881,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07677674293518066,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A320",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A320.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.6281393528915942
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6281393528915942,
+            "side": "left",
+            "area_m2": 0.02000673698931532,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004600644111633301,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08110758662223816,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6210927427746356,
+            "side": "left",
+            "area_m2": 0.00010561473230685792,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.008584827184677124,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.06436604261398315,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6294969082809985,
+            "side": "right",
+            "area_m2": 0.010648881080871392,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.010773420333862305,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07129043340682983,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A341",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A341.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.6036043797939783
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6060116027801996,
+            "side": "left",
+            "area_m2": 0.01622250986486748,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004301577806472778,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07947584986686707,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6028925811260706,
+            "side": "left",
+            "area_m2": 0.0008045625246851928,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009181857109069824,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.16286319494247437,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6036043797939783,
+            "side": "right",
+            "area_m2": 0.014742605207075044,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0052398741245269775,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07609093189239502,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A342",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A342.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5805683837097604
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5805683837097604,
+            "side": "left",
+            "area_m2": 0.01696052888910364,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004400461912155151,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07766160368919373,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5755061016243417,
+            "side": "left",
+            "area_m2": 0.00012944822052851634,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.008610665798187256,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.11474037170410156,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5854374275368173,
+            "side": "right",
+            "area_m2": 0.014789048446833875,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00442051887512207,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07682466506958008,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_002__A359",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A359.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5755700901499949
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5755700901499949,
+            "side": "left",
+            "area_m2": 0.016748154592105283,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.002982199192047119,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08394485712051392,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5789898470393382,
+            "side": "left",
+            "area_m2": 0.0011685013030691693,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0036040544509887695,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.04562726616859436,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5745118096820079,
+            "side": "right",
+            "area_m2": 0.014670100815949008,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007706880569458008,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07547536492347717,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A088",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A088.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.6073847317602485
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6053113543894142,
+            "side": "left",
+            "area_m2": 0.01650570563298256,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0036145150661468506,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08209925889968872,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6308484578039497,
+            "side": "left",
+            "area_m2": 0.00016718071950921898,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0068243443965911865,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.06876108050346375,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6073847317602485,
+            "side": "right",
+            "area_m2": 0.014340719655505891,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0021354854106903076,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08025631308555603,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A144",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A144.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5920419410977047
+        ],
+        "flags": [
+          "merged_small_steps"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5945445315155666,
+            "side": "left",
+            "area_m2": 0.016563518851743342,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.012046992778778076,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07184281945228577,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6202498988423031,
+            "side": "left",
+            "area_m2": 0.00010390335512378002,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005170255899429321,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.07458427548408508,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5895393506798428,
+            "side": "right",
+            "area_m2": 0.014616164803148729,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0043604373931884766,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07738041877746582,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A150",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A150.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5988910396918072
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5988910396918072,
+            "side": "left",
+            "area_m2": 0.017220247680894387,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005584031343460083,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07859843969345093,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6080671151503338,
+            "side": "left",
+            "area_m2": 0.00016226107052441652,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009761989116668701,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.08144041895866394,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5924112399443402,
+            "side": "right",
+            "area_m2": 0.014810398514731538,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.002354174852371216,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07971513271331787,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A202",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A202.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5444877974223346
+        ],
+        "flags": [
+          "merged_small_steps"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5494742027949542,
+            "side": "left",
+            "area_m2": 0.01624021121473218,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007206380367279053,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0740823745727539,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5745378963183612,
+            "side": "left",
+            "area_m2": 0.0012310584592604146,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005773484706878662,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.08205839991569519,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5395013920497149,
+            "side": "right",
+            "area_m2": 0.014358033940000937,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0022718608379364014,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0796903669834137,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A220",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A220.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5869350672001019
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5869350672001019,
+            "side": "left",
+            "area_m2": 0.01606910371489771,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005467653274536133,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07609909772872925,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6139530182117596,
+            "side": "left",
+            "area_m2": 0.0002223283824815958,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007917165756225586,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.03494742512702942,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5865030527347699,
+            "side": "right",
+            "area_m2": 0.014456122851911613,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0051833391189575195,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07583707571029663,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A242",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A242.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5497504501836374
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5460671513574198,
+            "side": "left",
+            "area_m2": 0.015430533600180027,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0029765963554382324,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08307844400405884,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5652440517442301,
+            "side": "left",
+            "area_m2": 0.00014088959749003482,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007760822772979736,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.07046353816986084,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5497504501836374,
+            "side": "right",
+            "area_m2": 0.014417138045055018,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00669330358505249,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07580643892288208,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A322",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A322.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.6102520488129812
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6085965894089895,
+            "side": "left",
+            "area_m2": 0.01748075521957597,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0021972358226776123,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08346983790397644,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6102520488129812,
+            "side": "left",
+            "area_m2": 0.0008069650704216058,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.010864585638046265,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.15420874953269958,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6130534373151022,
+            "side": "right",
+            "area_m2": 0.014696701249077286,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007046937942504883,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07470989227294922,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A359",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A359.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5750354911433533
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5750354911433533,
+            "side": "left",
+            "area_m2": 0.016850286136204817,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0020779967308044434,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0823066234588623,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5820013667689636,
+            "side": "left",
+            "area_m2": 0.0014011203795022964,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00973588228225708,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.06565266847610474,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5750223185168579,
+            "side": "right",
+            "area_m2": 0.015030904296270534,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00764012336730957,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07568001747131348,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A378",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A378.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5805646367371082
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5800221748650074,
+            "side": "left",
+            "area_m2": 0.01579350857302747,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0038321614265441895,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07855033874511719,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6089838035404682,
+            "side": "left",
+            "area_m2": 0.0012173255226783919,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.011761516332626343,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.1568514108657837,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5805646367371082,
+            "side": "right",
+            "area_m2": 0.014336979530986699,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.006551921367645264,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0757375955581665,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A393",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A393.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5780052539194003
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5763663348043337,
+            "side": "left",
+            "area_m2": 0.01638952319149556,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.006626099348068237,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07833388447761536,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5823227759683505,
+            "side": "left",
+            "area_m2": 0.00010676588136937504,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005679965019226074,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.09299182891845703,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5780052539194003,
+            "side": "right",
+            "area_m2": 0.01495754235178852,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.006129860877990723,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0770951509475708,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_003__A481",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A481.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5461553938221186
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5461553938221186,
+            "side": "left",
+            "area_m2": 0.01671564553273046,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005561381578445435,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07637137174606323,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5455676622223109,
+            "side": "left",
+            "area_m2": 0.0007507674079849092,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.01006266474723816,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.13278597593307495,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5489898330997676,
+            "side": "right",
+            "area_m2": 0.014473425418292302,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009819090366363525,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07231515645980835,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_004__A222",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_004__A222.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5474350534204859
+        ],
+        "flags": [
+          "merged_small_steps"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5490465991024394,
+            "side": "left",
+            "area_m2": 0.017081344577015767,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00513121485710144,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07766160368919373,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5836329392914195,
+            "side": "left",
+            "area_m2": 0.00011533085439008328,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0045517683029174805,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.08688759803771973,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5458235077385325,
+            "side": "right",
+            "area_m2": 0.014522425739132205,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004821956157684326,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07660961151123047,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_down_50cm_box_R_005__A056",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_down_50cm_box_R_005__A056.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5895088195102289
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.588209021021612,
+            "side": "left",
+            "area_m2": 0.019706665008413143,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009049266576766968,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07385176420211792,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6120195268886164,
+            "side": "left",
+            "area_m2": 0.0006361813720910936,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007588207721710205,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.08447253704071045,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5895088195102289,
+            "side": "right",
+            "area_m2": 0.014801897464507427,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005277484655380249,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0771760642528534,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_up_50cm_box_R_001__A206",
+        "group": "known_dimension_support",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/known_dimension_support/come_up_50cm_box_R_001__A206.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.6077587407489773
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6031955134531017,
+            "side": "left",
+            "area_m2": 0.016513196636406713,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004198223352432251,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0766400396823883,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6123219680448528,
+            "side": "right",
+            "area_m2": 0.014907422134967208,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005805760622024536,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07547122240066528,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_up_50cm_box_R_002__A065",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_up_50cm_box_R_002__A065.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "rejected"
+        },
+        "levels_m": [
+          0.0,
+          0.6836625034920871
+        ],
+        "flags": [
+          "evidence_reduced_for_body_conflict"
+        ],
+        "F": 4,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_tight_above_bound",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6838078196160495,
+            "side": "left",
+            "area_m2": 0.009458363792705482,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0026061534881591797,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.044537127017974854,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6868842537514865,
+            "side": "right",
+            "area_m2": 0.024249886842666157,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004095494747161865,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.0588127076625824,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6835171873681247,
+            "side": "right",
+            "area_m2": 0.015271001298451825,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0023166537284851074,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08627831935882568,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6831907029263675,
+            "side": "right",
+            "area_m2": 0.014658918458798187,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.002029627561569214,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.0809309184551239,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_up_50cm_box_R_002__A282",
+        "group": "known_dimension_support",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/known_dimension_support/come_up_50cm_box_R_002__A282.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5889431312680244
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5905817225575447,
+            "side": "left",
+            "area_m2": 0.015188235275371165,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004715621471405029,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07604265213012695,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5873045399785042,
+            "side": "right",
+            "area_m2": 0.015039832954984345,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0018017590045928955,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07997065782546997,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_up_50cm_box_R_003__A065",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_up_50cm_box_R_003__A065.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0,
+          0.6825619793962687
+        ],
+        "flags": [
+          "evidence_reduced_for_body_conflict"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.6815294481348246,
+            "side": "left",
+            "area_m2": 0.01988393579876302,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005986243486404419,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.021582216024398804,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6804116822313517,
+            "side": "left",
+            "area_m2": 0.01592341832454569,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005842119455337524,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07607299089431763,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6856654740404338,
+            "side": "right",
+            "area_m2": 0.02639043507012917,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0021871328353881836,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.05133327841758728,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6835945106577128,
+            "side": "right",
+            "area_m2": 0.01807858166211318,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0019084811210632324,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08117729425430298,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "come_up_50cm_box_R_004__A065",
+        "group": "known_dimension_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/known_dimension_support/come_up_50cm_box_R_004__A065.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "rejected",
+          "v8": "rejected",
+          "v9": "rejected"
+        },
+        "levels_m": [
+          0.0,
+          0.4898524531163275,
+          0.6838334598578513
+        ],
+        "flags": [
+          "evidence_reduced_for_body_conflict",
+          "support_rejected"
+        ],
+        "F": 4,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_tight_above_bound",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.4889285662211478,
+            "side": "left",
+            "area_m2": 0.000592316774573387,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.016262948513031006,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.14484456181526184,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.4907763400115073,
+            "side": "left",
+            "area_m2": 0.00034656190118376173,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.017004042863845825,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.149094820022583,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6818476715125144,
+            "side": "left",
+            "area_m2": 0.015109263704107811,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0034179985523223877,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.012082099914550781,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6803745427168906,
+            "side": "left",
+            "area_m2": 0.01584262308554507,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.007008671760559082,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07361829280853271,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6852692165412009,
+            "side": "right",
+            "area_m2": 0.02178312321612652,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00305098295211792,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.05709797143936157,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6838334598578513,
+            "side": "right",
+            "area_m2": 0.015192845268142907,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0026803016662597656,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": 0.028244853019714355,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6839355924166739,
+            "side": "right",
+            "area_m2": 0.015289882939366173,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0022906363010406494,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08108207583427429,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "crawl_ff_loop_270_R_001__A216",
+        "group": "prone",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/prone/crawl_ff_loop_270_R_001__A216.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "crawl_ff_loop_315_005__A131",
+        "group": "prone",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/prone/crawl_ff_loop_315_005__A131.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "crouch_ff_start_315_003__A148",
+        "group": "crouch",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/crouch/crouch_ff_start_315_003__A148.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "crouch_ff_start_360_R_003__A197",
+        "group": "crouch",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/crouch/crouch_ff_start_360_R_003__A197.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "h_b_w_crouch_to_stand_270_start_001__A344",
+        "group": "wall_contact",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/wall_contact/h_b_w_crouch_to_stand_270_start_001__A344.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "h_b_w_stand_to_crouch_270_start_003__A344",
+        "group": "wall_contact",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/wall_contact/h_b_w_stand_to_crouch_270_start_003__A344.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+        "group": "prone",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/prone/idle_crawl_to_idle_crawl_right_R_003__A232.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "idle_turn_360_001__A066",
+        "group": "flat_control",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/flat_control/idle_turn_360_001__A066.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "item_pick_up_crouch_walk_R_003__A412",
+        "group": "crouch",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/crouch/item_pick_up_crouch_walk_R_003__A412.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "jog_sideway_135_start_001__A031",
+        "group": "flat_control",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/flat_control/jog_sideway_135_start_001__A031.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "jump_form_box_to_safety_roll_360_R_001__A502",
+        "group": "box_support",
+        "reason": "requested",
+        "listed_v8_stop_clip": true,
+        "png": "viz/box_support/jump_form_box_to_safety_roll_360_R_001__A502.png",
+        "boxes": {
+          "v7": 3,
+          "v8": 3,
+          "v9": 3
+        },
+        "eligibility": {
+          "v7": "rejected",
+          "v8": "rejected",
+          "v9": "rejected"
+        },
+        "levels_m": [
+          0.0,
+          0.18912470079958438,
+          0.7168301969766617
+        ],
+        "flags": [
+          "merged_small_steps",
+          "ground_from_skin",
+          "evidence_reduced_for_body_conflict"
+        ],
+        "F": 4,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.7157198667526246,
+            "side": "left",
+            "area_m2": 0.016796104548696546,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004387855529785156,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08320537209510803,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.22221735417842864,
+            "side": "left",
+            "area_m2": 0.004292733982260932,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.011142970994114876,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.11254767328500748,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.19847784489393233,
+            "side": "left",
+            "area_m2": 0.011490378214791486,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004415859468281269,
+            "body_below_fraction": 0.25,
+            "body_drop_median_m": -0.0004576779901981354,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.18912470079958438,
+            "side": "left",
+            "area_m2": 0.006500506577539866,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.01185724139213562,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.1264851000159979,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.18831886555999516,
+            "side": "left",
+            "area_m2": 0.01511708018846214,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0024015838280320168,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08417090866714716,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.7179405272006989,
+            "side": "right",
+            "area_m2": 0.01587489722245246,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0050671398639678955,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07659271359443665,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.2220669474452734,
+            "side": "right",
+            "area_m2": 0.00011035841202078345,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00103708915412426,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.11722435243427753,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.2061494804918766,
+            "side": "right",
+            "area_m2": 0.013598376834037751,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004587365314364433,
+            "body_below_fraction": 0.25,
+            "body_drop_median_m": 0.007213957607746124,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.16488444358110427,
+            "side": "right",
+            "area_m2": 0.0019754699377863005,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009318150579929352,
+            "body_below_fraction": 0.3333333333333333,
+            "body_drop_median_m": -0.016264162957668304,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.19425256475806235,
+            "side": "right",
+            "area_m2": 0.013483943008239407,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.14285714285714285,
+            "foot_drop_median_m": 0.0012888908386230469,
+            "body_below_fraction": 0.14285714285714285,
+            "body_drop_median_m": -0.05496223643422127,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.19443017542362212,
+            "side": "right",
+            "area_m2": 0.01512581623323328,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.01002848893404007,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.10836618393659592,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "jump_over_obstacle_0_75m_R_102__A416",
+        "group": "obstacle_clearance",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/obstacle_clearance/jump_over_obstacle_0_75m_R_102__A416.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "excluded_unmodelled_geometry",
+          "v8": "excluded_unmodelled_geometry",
+          "v9": "excluded_unmodelled_geometry"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "jump_over_obstacle_1_5m_L_101__A416",
+        "group": "obstacle_clearance",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/obstacle_clearance/jump_over_obstacle_1_5m_L_101__A416.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "excluded_unmodelled_geometry",
+          "v8": "excluded_unmodelled_geometry",
+          "v9": "excluded_unmodelled_geometry"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "jump_over_obstacle_1m_R_102__A305",
+        "group": "obstacle_clearance",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/obstacle_clearance/jump_over_obstacle_1m_R_102__A305.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "excluded_unmodelled_geometry",
+          "v8": "excluded_unmodelled_geometry",
+          "v9": "excluded_unmodelled_geometry"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "jump_to_shoulder_roll_R_001__A305",
+        "group": "box_support",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/box_support/jump_to_shoulder_roll_R_001__A305.png",
+        "boxes": {
+          "v7": 3,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0,
+          0.8347838646173478
+        ],
+        "flags": [
+          "merged_small_steps",
+          "ground_from_skin",
+          "foot_patches_rest_on_body"
+        ],
+        "F": 0,
+        "body_rests_lower": 1,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.8347838646173478,
+            "side": "right",
+            "area_m2": 0.0007235164183903575,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.01328587532043457,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.15767920017242432,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.11082850903272629,
+            "side": "right",
+            "area_m2": 0.006000694573315535,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005018111318349838,
+            "body_below_fraction": 0.6,
+            "body_drop_median_m": 0.07650292664766312,
+            "dropped": [
+              "body_rests_lower"
+            ]
+          }
+        ]
+      },
+      {
+        "filename": "jump_to_shoulder_roll_R_102__A416",
+        "group": "box_support",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/box_support/jump_to_shoulder_roll_R_102__A416.png",
+        "boxes": {
+          "v7": 4,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0,
+          1.1065489786863327
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_tight_above_bound",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 1.10210074365139,
+            "side": "left",
+            "area_m2": 0.015412411947597265,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005692601203918457,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07869976758956909,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.1109972137212754,
+            "side": "right",
+            "area_m2": 0.014998576357113463,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.009231865406036377,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07537239789962769,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "kneeling_loop_001__A101",
+        "group": "kneel",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/kneel/kneeling_loop_001__A101.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "kneeling_start_R_003__A408",
+        "group": "kneel",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/kneel/kneeling_start_R_003__A408.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "merged_small_steps"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "kneeling_stop_003__A097",
+        "group": "kneel",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/kneel/kneeling_stop_003__A097.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "geometry_only_low_posture_unexplained",
+          "v8": "geometry_only_low_posture_unexplained",
+          "v9": "geometry_only_low_posture_unexplained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "merged_small_steps"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_conflict_free_rectangle",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "ladder_slide_down_R_002__A300",
+        "group": "ladder",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/ladder/ladder_slide_down_R_002__A300.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "excluded_unmodelled_geometry",
+          "v8": "excluded_unmodelled_geometry",
+          "v9": "excluded_unmodelled_geometry"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "ladder_slide_down_R_004__A300",
+        "group": "ladder",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/ladder/ladder_slide_down_R_004__A300.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "excluded_unmodelled_geometry",
+          "v8": "excluded_unmodelled_geometry",
+          "v9": "excluded_unmodelled_geometry"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "unexplainable_in_place_transition",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "ladder_slip_R_002__A300",
+        "group": "ladder",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/ladder/ladder_slip_R_002__A300.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "excluded_unmodelled_geometry",
+          "v8": "excluded_unmodelled_geometry",
+          "v9": "excluded_unmodelled_geometry"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+        "group": "known_dimension_support",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.5931098182627466
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 1,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.5963433702418115,
+            "side": "left",
+            "area_m2": 0.015540896095569856,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.002957165241241455,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08810776472091675,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5898762662836816,
+            "side": "right",
+            "area_m2": 0.022030287181550756,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.003003418445587158,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08702367544174194,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "mohak_backward_stop_002__A031",
+        "group": "quadruped",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/quadruped/mohak_backward_stop_002__A031.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin",
+          "foot_patches_rest_on_body"
+        ],
+        "F": 0,
+        "body_rests_lower": 3,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.11109518662095069,
+            "side": "left",
+            "area_m2": 0.0007336342025587861,
+            "body_points_under": 1,
+            "foot_below_fraction": 0.25,
+            "foot_drop_median_m": 0.029600992798805237,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.09593130275607109,
+            "dropped": [
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.10006143927574157,
+            "side": "left",
+            "area_m2": 0.002392569199163308,
+            "body_points_under": 15,
+            "foot_below_fraction": 0.13333333333333333,
+            "foot_drop_median_m": 0.02863973379135132,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.08777675032615662,
+            "dropped": [
+              "body_under_sole",
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.1073921214044094,
+            "side": "right",
+            "area_m2": 0.004139546311201947,
+            "body_points_under": 293,
+            "foot_below_fraction": 0.8823529411764706,
+            "foot_drop_median_m": 0.033267442137002945,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.09893519803881645,
+            "dropped": [
+              "body_under_sole",
+              "foot_lower_than_sole",
+              "body_rests_lower"
+            ]
+          }
+        ]
+      },
+      {
+        "filename": "mohak_start_001__A031",
+        "group": "quadruped",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/quadruped/mohak_start_001__A031.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin",
+          "inverted_foot_level_dropped",
+          "foot_patches_rest_on_body"
+        ],
+        "F": 0,
+        "body_rests_lower": 6,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.11907174162566662,
+            "side": "left",
+            "area_m2": 0.0046248645091112595,
+            "body_points_under": 4,
+            "foot_below_fraction": 0.09090909090909091,
+            "foot_drop_median_m": 0.025146467611193657,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.0941611509770155,
+            "dropped": [
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.10631367474794388,
+            "side": "left",
+            "area_m2": 0.0032544281059653235,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.026544228196144104,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.0853724554181099,
+            "dropped": [
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.10097015745937825,
+            "side": "left",
+            "area_m2": 0.004026347121164342,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.02246483601629734,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.0860439408570528,
+            "dropped": [
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.11720514208078385,
+            "side": "right",
+            "area_m2": 0.0037886773937249596,
+            "body_points_under": 408,
+            "foot_below_fraction": 1.0,
+            "foot_drop_median_m": 0.03588838316500187,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.09824851900339127,
+            "dropped": [
+              "body_under_sole",
+              "foot_lower_than_sole",
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.11530519932508469,
+            "side": "right",
+            "area_m2": 0.004441948466916923,
+            "body_points_under": 364,
+            "foot_below_fraction": 1.0,
+            "foot_drop_median_m": 0.03810255974531174,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.10586481541395187,
+            "dropped": [
+              "body_under_sole",
+              "foot_lower_than_sole",
+              "body_rests_lower"
+            ]
+          },
+          {
+            "height_above_ground_m": 0.1138213323801756,
+            "side": "right",
+            "area_m2": 0.005060588720455339,
+            "body_points_under": 455,
+            "foot_below_fraction": 1.0,
+            "foot_drop_median_m": 0.038870624266564846,
+            "body_below_fraction": 1.0,
+            "body_drop_median_m": 0.0958364736288786,
+            "dropped": [
+              "body_under_sole",
+              "foot_lower_than_sole",
+              "body_rests_lower"
+            ]
+          }
+        ]
+      },
+      {
+        "filename": "on_all_fours_turn_270_R_003__A202",
+        "group": "quadruped",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/quadruped/on_all_fours_turn_270_R_003__A202.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [
+          "ground_from_skin"
+        ],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "fitted",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "stairs_climbing_down_loop_R_102__A301",
+        "group": "stairs",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/stairs/stairs_climbing_down_loop_R_102__A301.png",
+        "boxes": {
+          "v7": 5,
+          "v8": 5,
+          "v9": 5
+        },
+        "eligibility": {
+          "v7": "rejected",
+          "v8": "rejected",
+          "v9": "rejected"
+        },
+        "levels_m": [
+          0.0,
+          0.2082621455192566,
+          0.3776460587978363,
+          0.5658147931098938,
+          0.740985780954361,
+          0.926254004240036,
+          1.1006765067577362,
+          1.2869699895381927,
+          1.4579857289791107,
+          1.6466582715511322
+        ],
+        "flags": [
+          "evidence_reduced_for_body_conflict",
+          "support_rejected"
+        ],
+        "F": 4,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 1.4579857289791107,
+            "side": "left",
+            "area_m2": 0.014736664642331893,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005732893943786621,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09104490280151367,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.1006765067577362,
+            "side": "left",
+            "area_m2": 0.014003180983250818,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.003621697425842285,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09253644943237305,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.740985780954361,
+            "side": "left",
+            "area_m2": 0.009872051925895867,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005591690540313721,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09512990713119507,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.3776460587978363,
+            "side": "left",
+            "area_m2": 0.010695757991475346,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0073822736740112305,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09229862689971924,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.6466582715511322,
+            "side": "right",
+            "area_m2": 0.01478231336472663,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005466938018798828,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08639895915985107,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.2869699895381927,
+            "side": "right",
+            "area_m2": 0.014569988676334633,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004289209842681885,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08837592601776123,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.926254004240036,
+            "side": "right",
+            "area_m2": 0.014195025876582612,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005540311336517334,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09351778030395508,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5658147931098938,
+            "side": "right",
+            "area_m2": 0.013471990569978942,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.006421536207199097,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09070435166358948,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.2082621455192566,
+            "side": "right",
+            "area_m2": 0.015246518250735974,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.002546340227127075,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08711986243724823,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+        "group": "stairs",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png",
+        "boxes": {
+          "v7": 1,
+          "v8": 1,
+          "v9": 1
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.17309086921159178
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.17309086921159178,
+            "side": "left",
+            "area_m2": 0.0010792779524693152,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0022408440709114075,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.11471129208803177,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "stairs_slip_R_003__A300",
+        "group": "stairs",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/stairs/stairs_slip_R_003__A300.png",
+        "boxes": {
+          "v7": 7,
+          "v8": 7,
+          "v9": 7
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0,
+          0.3569821557030082,
+          0.5226545473560691,
+          0.6887825569137931,
+          1.0312499245628715,
+          1.188407584093511,
+          1.3556011756882071,
+          2.1661389311775565
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": [
+          {
+            "height_above_ground_m": 0.3569821557030082,
+            "side": "left",
+            "area_m2": 0.0027491223824966937,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.01062050461769104,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07479871809482574,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.6887825569137931,
+            "side": "left",
+            "area_m2": 0.0032465357522868388,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004094481468200684,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08087235689163208,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.0312499245628715,
+            "side": "left",
+            "area_m2": 0.011202893685532622,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.004105091094970703,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.10429668426513672,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.3556011756882071,
+            "side": "left",
+            "area_m2": 0.011121986969428121,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0026801228523254395,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.09512001276016235,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 2.164842768572271,
+            "side": "left",
+            "area_m2": 0.014638771424124286,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.005161285400390625,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07684636116027832,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 0.5226545473560691,
+            "side": "right",
+            "area_m2": 0.0020979669004606016,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.00833362340927124,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.07652157545089722,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 1.188407584093511,
+            "side": "right",
+            "area_m2": 0.0074726492138735,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.0025540590286254883,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.11056327819824219,
+            "dropped": []
+          },
+          {
+            "height_above_ground_m": 2.167435093782842,
+            "side": "right",
+            "area_m2": 0.015763056674349407,
+            "body_points_under": 0,
+            "foot_below_fraction": 0.0,
+            "foot_drop_median_m": 0.003392934799194336,
+            "body_below_fraction": 0.0,
+            "body_drop_median_m": -0.08007216453552246,
+            "dropped": []
+          }
+        ]
+      },
+      {
+        "filename": "walk_backward_start_001__A029",
+        "group": "flat_control",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/flat_control/walk_backward_start_001__A029.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      },
+      {
+        "filename": "wall_leaning_idle_360_R_003__A285",
+        "group": "wall_contact",
+        "reason": "group_sample",
+        "listed_v8_stop_clip": false,
+        "png": "viz/wall_contact/wall_leaning_idle_360_R_003__A285.png",
+        "boxes": {
+          "v7": 0,
+          "v8": 0,
+          "v9": 0
+        },
+        "eligibility": {
+          "v7": "environment_explained",
+          "v8": "environment_explained",
+          "v9": "environment_explained"
+        },
+        "levels_m": [
+          0.0
+        ],
+        "flags": [],
+        "F": 0,
+        "body_rests_lower": 0,
+        "ceiling_status": "no_sustained_low_posture",
+        "walls": 0,
+        "patch_checks": []
+      }
+    ],
+    "visual_review": {
+      "status": "complete",
+      "date": "2026-10-25",
+      "reviewed": 60,
+      "method": "All complete PNGs viewed in 15 uncropped four-up pages; both 3D and side panels reviewed.",
+      "lines": [
+        {
+          "filename": "box_jump_down_360_002__A359",
+          "png": "viz/box_support/box_jump_down_360_002__A359.png",
+          "judgment": "起跳端单箱与初始足部高度对应，落地区域清空；未拟合顶棚，G。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_001__A330",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_001__A330.png",
+          "judgment": "离台支撑盒保留，箱顶对应高处脚位，后续落地位于箱外。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_001__A359",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_001__A359.png",
+          "judgment": "单个离台箱与脚步高度对应，落地区域没有附加小箱。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A049",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A049.png",
+          "judgment": "保留离台支撑，但最小实体较窄；低姿态转换未获顶棚解释，G。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A107",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A107.png",
+          "judgment": "最小支撑收缩成细柱，最大范围虚线较宽；窄支撑形状仍需复核。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A219",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A219.png",
+          "judgment": "离台箱保留，后脚仍在箱顶时前脚可以落到外侧地面。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A249",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A249.png",
+          "judgment": "高处支撑与离台脚位对应，落地段无额外碎片支撑。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A320",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A320.png",
+          "judgment": "单箱覆盖离台位置，前方落地区域保持连续地面。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A341",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A341.png",
+          "judgment": "起始脚位对应箱顶，末段落地脚位于箱外，没有新增小块。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A342",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A342.png",
+          "judgment": "抬腿离台过程仍有完整单箱，箱外落地空间清晰。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_002__A359",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_002__A359.png",
+          "judgment": "单个离台箱保留，落地过程未被额外低矮支撑分割。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A088",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A088.png",
+          "judgment": "箱顶与离台足部高度对应，低处站立位置留在地面上。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A144",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A144.png",
+          "judgment": "离台实体位于高脚下方，后续抬腿和落地区域清空。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A150",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A150.png",
+          "judgment": "单个支撑块与高处脚位对应，落地侧无多余箱体。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A202",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A202.png",
+          "judgment": "保留较低的离台块，高低两段脚位分别对应箱顶和地面。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A220",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A220.png",
+          "judgment": "离台支撑保持单箱，前腿下探时没有丢失后脚下方支撑。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A242",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A242.png",
+          "judgment": "单箱与起始足部对应，向前落地没有附加台阶。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A322",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A322.png",
+          "judgment": "离台块保留，高处足部和箱顶对齐，地面落点清晰。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A359",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A359.png",
+          "judgment": "离台支撑呈单个矩形块，身体移到地面后没有碎片箱。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A378",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A378.png",
+          "judgment": "箱顶覆盖起始脚位，前方站立区域保持无障碍。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A393",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A393.png",
+          "judgment": "离台块仍在高处足部下方，落地路径未增加小支撑。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_003__A481",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_003__A481.png",
+          "judgment": "单箱保持与初始脚位对应，落地后地面连续。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_004__A222",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_004__A222.png",
+          "judgment": "高低脚位分别对应支撑块与地面，未生成额外零碎台阶。"
+        },
+        {
+          "filename": "come_down_50cm_box_R_005__A056",
+          "png": "viz/known_dimension_support/come_down_50cm_box_R_005__A056.png",
+          "judgment": "离台箱保留，抬腿与低处落地区域都没有多余支撑。"
+        },
+        {
+          "filename": "come_up_50cm_box_R_001__A206",
+          "png": "viz/known_dimension_support/come_up_50cm_box_R_001__A206.png",
+          "judgment": "上箱支撑覆盖最终高处脚位，初始站立区域保持地面。"
+        },
+        {
+          "filename": "come_up_50cm_box_R_002__A065",
+          "png": "viz/known_dimension_support/come_up_50cm_box_R_002__A065.png",
+          "judgment": "最小实体仍是窄柱，部分高处脚位超出实心范围；当前为R。"
+        },
+        {
+          "filename": "come_up_50cm_box_R_002__A282",
+          "png": "viz/known_dimension_support/come_up_50cm_box_R_002__A282.png",
+          "judgment": "上箱后的脚位对应单箱顶面，箱前没有额外支撑块。"
+        },
+        {
+          "filename": "come_up_50cm_box_R_003__A065",
+          "png": "viz/known_dimension_support/come_up_50cm_box_R_003__A065.png",
+          "judgment": "单箱覆盖高处收身脚位；站立和低姿态混合未拟合顶棚，G。"
+        },
+        {
+          "filename": "come_up_50cm_box_R_004__A065",
+          "png": "viz/known_dimension_support/come_up_50cm_box_R_004__A065.png",
+          "judgment": "高层单箱保留，0.49m中间层只有标线，没有对应台阶；当前为R。"
+        },
+        {
+          "filename": "crawl_ff_loop_270_R_001__A216",
+          "png": "viz/prone/crawl_ff_loop_270_R_001__A216.png",
+          "judgment": "匍匐路径下无脚或膝的小箱，连续低顶棚覆盖运动范围。"
+        },
+        {
+          "filename": "crawl_ff_loop_315_005__A131",
+          "png": "viz/prone/crawl_ff_loop_315_005__A131.png",
+          "judgment": "匍匐下方只有连续地面，低顶棚覆盖整段路径，无碎片支撑。"
+        },
+        {
+          "filename": "crouch_ff_start_315_003__A148",
+          "png": "viz/crouch/crouch_ff_start_315_003__A148.png",
+          "judgment": "蹲行路径上方有连续顶棚，脚下没有零碎小箱，也没有侧墙。"
+        },
+        {
+          "filename": "crouch_ff_start_360_R_003__A197",
+          "png": "viz/crouch/crouch_ff_start_360_R_003__A197.png",
+          "judgment": "弯曲姿态沿地面前进，但未拟合顶棚或侧墙；E的环境解释仍需复核。"
+        },
+        {
+          "filename": "h_b_w_crouch_to_stand_270_start_001__A344",
+          "png": "viz/wall_contact/h_b_w_crouch_to_stand_270_start_001__A344.png",
+          "judgment": "蹲起过程没有支撑小箱，未拟合墙或顶棚，保留G分类。"
+        },
+        {
+          "filename": "h_b_w_stand_to_crouch_270_start_003__A344",
+          "png": "viz/wall_contact/h_b_w_stand_to_crouch_270_start_003__A344.png",
+          "judgment": "蹲下路径上方拟合了顶棚，但没有墙面，靠墙关系未体现。"
+        },
+        {
+          "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+          "png": "viz/prone/idle_crawl_to_idle_crawl_right_R_003__A232.png",
+          "judgment": "伏地转向下方无小箱，低顶棚覆盖身体活动范围。"
+        },
+        {
+          "filename": "idle_turn_360_001__A066",
+          "png": "viz/flat_control/idle_turn_360_001__A066.png",
+          "judgment": "平地原地转向只有地面，没有额外箱、墙或顶棚。"
+        },
+        {
+          "filename": "item_pick_up_crouch_walk_R_003__A412",
+          "png": "viz/crouch/item_pick_up_crouch_walk_R_003__A412.png",
+          "judgment": "蹲行路径由连续低顶棚覆盖，沿途脚下没有碎片支撑。"
+        },
+        {
+          "filename": "jog_sideway_135_start_001__A031",
+          "png": "viz/flat_control/jog_sideway_135_start_001__A031.png",
+          "judgment": "侧向跑动起步沿平地展开，没有新增墙体、顶棚或台阶。"
+        },
+        {
+          "filename": "jump_form_box_to_safety_roll_360_R_001__A502",
+          "png": "viz/box_support/jump_form_box_to_safety_roll_360_R_001__A502.png",
+          "judgment": "起跳高箱之外，中段和末端仍有两个低矮块；翻滚场景仍为R。"
+        },
+        {
+          "filename": "jump_over_obstacle_0_75m_R_102__A416",
+          "png": "viz/obstacle_clearance/jump_over_obstacle_0_75m_R_102__A416.png",
+          "judgment": "腾空跨越动作没有对应障碍实体，场景只有地面；X分类保留。"
+        },
+        {
+          "filename": "jump_over_obstacle_1_5m_L_101__A416",
+          "png": "viz/obstacle_clearance/jump_over_obstacle_1_5m_L_101__A416.png",
+          "judgment": "较高跨越轨迹下没有障碍体，未补造支撑，保持X。"
+        },
+        {
+          "filename": "jump_over_obstacle_1m_R_102__A305",
+          "png": "viz/obstacle_clearance/jump_over_obstacle_1m_R_102__A305.png",
+          "judgment": "跨越轨迹清晰，但场景缺少要跨过的物体，保持X。"
+        },
+        {
+          "filename": "jump_to_shoulder_roll_R_001__A305",
+          "png": "viz/box_support/jump_to_shoulder_roll_R_001__A305.png",
+          "judgment": "起跳支撑收缩成窄柱；翻滚路径没有低碎块，低姿态未获环境解释，G。"
+        },
+        {
+          "filename": "jump_to_shoulder_roll_R_102__A416",
+          "png": "viz/box_support/jump_to_shoulder_roll_R_102__A416.png",
+          "judgment": "高处起跳块与初始足部对应，后续翻滚落到连续地面，未拟合顶棚。"
+        },
+        {
+          "filename": "kneeling_loop_001__A101",
+          "png": "viz/kneel/kneeling_loop_001__A101.png",
+          "judgment": "静止跪姿下方没有小箱，顶棚覆盖低姿态范围。"
+        },
+        {
+          "filename": "kneeling_start_R_003__A408",
+          "png": "viz/kneel/kneeling_start_R_003__A408.png",
+          "judgment": "站立转跪姿保持空旷地面，没有脚下小箱或强加的顶棚，G。"
+        },
+        {
+          "filename": "kneeling_stop_003__A097",
+          "png": "viz/kneel/kneeling_stop_003__A097.png",
+          "judgment": "跪姿起身下方没有小箱，头顶空间清空，保持G分类。"
+        },
+        {
+          "filename": "ladder_slide_down_R_002__A300",
+          "png": "viz/ladder/ladder_slide_down_R_002__A300.png",
+          "judgment": "高处下滑动作没有梯档或梯架几何，保持X排除。"
+        },
+        {
+          "filename": "ladder_slide_down_R_004__A300",
+          "png": "viz/ladder/ladder_slide_down_R_004__A300.png",
+          "judgment": "垂直下滑轨迹只配地面，没有实际攀附结构，保持X。"
+        },
+        {
+          "filename": "ladder_slip_R_002__A300",
+          "png": "viz/ladder/ladder_slip_R_002__A300.png",
+          "judgment": "滑落动作缺少梯子几何，未用孤立平台代替，保持X。"
+        },
+        {
+          "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+          "png": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png",
+          "judgment": "上箱支撑存在；搬物前伸手势附近配有整面墙，撑墙解释可疑。"
+        },
+        {
+          "filename": "mohak_backward_stop_002__A031",
+          "png": "viz/quadruped/mohak_backward_stop_002__A031.png",
+          "judgment": "手膝后退停止下方没有碎片箱，连续顶棚覆盖停止范围。"
+        },
+        {
+          "filename": "mohak_start_001__A031",
+          "png": "viz/quadruped/mohak_start_001__A031.png",
+          "judgment": "手膝起步路径只有连续地面和顶棚，没有脚或膝下的小柱。"
+        },
+        {
+          "filename": "on_all_fours_turn_270_R_003__A202",
+          "png": "viz/quadruped/on_all_fours_turn_270_R_003__A202.png",
+          "judgment": "手膝原地转向下方没有支撑小箱，顶棚覆盖转向区域。"
+        },
+        {
+          "filename": "stairs_climbing_down_loop_R_102__A301",
+          "png": "viz/stairs/stairs_climbing_down_loop_R_102__A301.png",
+          "judgment": "五个分离支撑之间仍有间隙，部分下降高度缺台阶，当前为R。"
+        },
+        {
+          "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+          "png": "viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png",
+          "judgment": "仅末端保留一个小阶，前段下降没有对应阶梯；该片段仍被归为E。"
+        },
+        {
+          "filename": "stairs_slip_R_003__A300",
+          "png": "viz/stairs/stairs_slip_R_003__A300.png",
+          "judgment": "七个支撑离散排列，跨度和高度变化较大，踏点高度与动作对应。"
+        },
+        {
+          "filename": "walk_backward_start_001__A029",
+          "png": "viz/flat_control/walk_backward_start_001__A029.png",
+          "judgment": "平地后退起步没有额外台阶、墙体或顶棚。"
+        },
+        {
+          "filename": "wall_leaning_idle_360_R_003__A285",
+          "png": "viz/wall_contact/wall_leaning_idle_360_R_003__A285.png",
+          "judgment": "靠墙idle没有生成墙面，图中只有地面和人体，当前为E。"
+        }
+      ]
+    }
+  }
+}
