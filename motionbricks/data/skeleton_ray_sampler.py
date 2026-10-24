@@ -181,6 +181,73 @@ def features_numpy(result, forward_xz, layout):
                           -1).reshape(len(basis), -1)
 
 
+def heading_basis(forward_xz):
+    """[B, 3, 3] world axes (columns: right, up, forward) of a heading given as XZ forward."""
+    import torch
+    f = forward_xz / forward_xz.norm(dim=-1, keepdim=True).clamp_min(1e-9)
+    zero = torch.zeros_like(f[..., 0])
+    forward = torch.stack((f[..., 0], zero, f[..., 1]), -1)
+    up = torch.stack((zero, torch.ones_like(zero), zero), -1)
+    right = torch.linalg.cross(up, forward, dim=-1)
+    return torch.stack((right, up, forward), -1)
+
+
+def batched_boxes(boxes, batch):
+    """Padded boxes shared by the batch ([K, ...]) or per sample ([B, K, ...]) -> per sample."""
+    centers, half, rotation, mask = boxes
+    if centers.ndim == 2:
+        return (centers.expand(batch, *centers.shape), half.expand(batch, *half.shape),
+                rotation.expand(batch, *rotation.shape), mask.expand(batch, *mask.shape))
+    return boxes
+
+
+def cast_rays(origin, direction, max_length, boxes):
+    """Analytic first hit of rays [B, R, 3] (unit directions) against padded OBBs.
+
+    Boxes are shared ([K, ...]) or per sample ([B, K, ...]). max_length is [R]. Returns
+    distance (max_length on a miss, 0 when the origin is inside a solid), world normal at
+    the hit, hit and inside flags. Distance is differentiable
+    with respect to the origin and the boxes wherever the hit face does not change.
+    """
+    import torch
+    centers, half, rotation, mask = batched_boxes(boxes, origin.shape[0])
+    local_origin = torch.einsum("brki,bkij->brkj", origin[:, :, None] - centers[:, None], rotation)
+    local_direction = torch.einsum("bri,bkij->brkj", direction, rotation)
+    half, mask = half[:, None], mask[:, None]
+    tiny = torch.finfo(origin.dtype).eps
+    safe = torch.where(local_direction.abs() < tiny, torch.full_like(local_direction, tiny), local_direction)
+    t1 = (-half - local_origin) / safe
+    t2 = (half - local_origin) / safe
+    near_axis = torch.minimum(t1, t2)
+    t_near = near_axis.amax(-1)
+    t_far = torch.maximum(t1, t2).amin(-1)
+    inside = (local_origin.abs() <= half).all(-1) & mask
+    hit = (t_near <= t_far) & (t_far >= 0) & (t_near <= max_length[None, :, None]) & mask
+    t = torch.where(hit, t_near.clamp_min(0), torch.full_like(t_near, float("inf")))
+    distance, winner = t.min(-1)
+    any_hit = torch.isfinite(distance)
+    axis = near_axis.argmax(-1).gather(-1, winner[..., None])                           # [B, R, 1]
+    winner_direction = local_direction.gather(2, winner[..., None, None].expand(*winner.shape, 1, 3))[:, :, 0]
+    sign = -torch.sign(winner_direction.gather(-1, axis))
+    local_normal = torch.zeros_like(origin).scatter(-1, axis, sign)
+    batch_index = torch.arange(origin.shape[0], device=origin.device)[:, None]
+    normal = torch.einsum("brij,brj->bri", rotation[batch_index, winner], local_normal)
+    starts_inside = inside.any(-1)
+    normal = torch.where((any_hit & ~starts_inside)[..., None], normal, torch.zeros_like(normal))
+    distance = torch.where(any_hit, torch.where(starts_inside, torch.zeros_like(distance), distance),
+                           max_length[None].expand_as(distance))
+    return {"distance": distance, "normal": normal, "hit": any_hit, "inside": starts_inside}
+
+
+def ray_features(result, basis, max_length):
+    """[B, R, 6]: distance / max length, normal in the heading frame, hit, inside."""
+    import torch
+    normal_heading = torch.einsum("bij,bri->brj", basis, result["normal"])
+    dtype = result["distance"].dtype
+    return torch.cat(((result["distance"] / max_length)[..., None], normal_heading,
+                      result["hit"][..., None].to(dtype), result["inside"][..., None].to(dtype)), -1)
+
+
 class SkeletonRaySampler:
     """Torch runtime version of cast_rays_numpy plus features; fixed shapes, no sync."""
 
@@ -220,51 +287,17 @@ class SkeletonRaySampler:
 
     def cast(self, joints, forward_xz, boxes):
         import torch
-        centers, half, rotation, mask = boxes
         first, second, direction_heading, max_length = self._tables(joints)
-        f = forward_xz / forward_xz.norm(dim=-1, keepdim=True).clamp_min(1e-9)
-        zero = torch.zeros_like(f[:, 0])
-        forward = torch.stack((f[:, 0], zero, f[:, 1]), -1)
-        up = torch.zeros_like(forward)
-        up[:, 1] = 1
-        right = torch.linalg.cross(up, forward)
-        basis = torch.stack((right, up, forward), -1)                                    # [B, 3, 3]
+        basis = heading_basis(forward_xz)                                               # [B, 3, 3]
         origin = 0.5 * (joints[:, first] + joints[:, second])                            # [B, R, 3]
         direction = torch.einsum("bij,rj->bri", basis, direction_heading)
-        local_origin = torch.einsum("brki,kij->brkj", origin[:, :, None] - centers, rotation)
-        local_direction = torch.einsum("bri,kij->brkj", direction, rotation)
-        tiny = torch.finfo(joints.dtype).eps
-        safe = torch.where(local_direction.abs() < tiny, torch.full_like(local_direction, tiny), local_direction)
-        t1 = (-half - local_origin) / safe
-        t2 = (half - local_origin) / safe
-        near_axis = torch.minimum(t1, t2)
-        t_near = near_axis.amax(-1)
-        t_far = torch.maximum(t1, t2).amin(-1)
-        inside = (local_origin.abs() <= half).all(-1) & mask
-        hit = (t_near <= t_far) & (t_far >= 0) & (t_near <= max_length[None, :, None]) & mask
-        t = torch.where(hit, t_near.clamp_min(0), torch.full_like(t_near, float("inf")))
-        distance, winner = t.min(-1)
-        any_hit = torch.isfinite(distance)
-        axis = near_axis.argmax(-1).gather(-1, winner[..., None])                       # [B, R, 1]
-        winner_direction = local_direction.gather(2, winner[..., None, None].expand(*winner.shape, 1, 3))[:, :, 0]
-        sign = -torch.sign(winner_direction.gather(-1, axis))
-        local_normal = torch.zeros_like(origin).scatter(-1, axis, sign)
-        normal = torch.einsum("brij,brj->bri", rotation[winner], local_normal)
-        starts_inside = (inside.gather(-1, winner[..., None])[..., 0] & any_hit) | inside.any(-1)
-        normal = torch.where((any_hit & ~starts_inside)[..., None], normal, torch.zeros_like(normal))
-        distance = torch.where(any_hit, torch.where(starts_inside, torch.zeros_like(distance), distance),
-                               max_length[None].expand_as(distance))
-        return {"origin": origin, "direction": direction, "distance": distance, "normal": normal,
-                "hit": any_hit, "inside": starts_inside, "basis": basis}
+        result = cast_rays(origin, direction, max_length, boxes)
+        result.update(origin=origin, direction=direction, basis=basis)
+        return result
 
     def observe(self, joints, forward_xz, boxes):
         """[B, rays * 6] features; joints come from past (already generated) frames only."""
-        import torch
         result = self.cast(joints, forward_xz, boxes)
-        max_length = self._tables(joints)[3]
-        normal_heading = torch.einsum("bij,bri->brj", result["basis"], result["normal"])
-        features = torch.cat(((result["distance"] / max_length)[..., None], normal_heading,
-                              result["hit"][..., None].to(joints.dtype),
-                              result["inside"][..., None].to(joints.dtype)), -1)
-        result["features"] = features.flatten(1)
+        result["ray_features"] = ray_features(result, result["basis"], self._tables(joints)[3])
+        result["features"] = result["ray_features"].flatten(1)
         return result

@@ -10,6 +10,7 @@
 | G1物理执行 | MB人体参考→G1参考→SONIC/ProtoMotions→MuJoCo | [控制器比较](../records/mb_tracker_comparison_20261019.md) |
 | scene_control_v3 | 统一GRU输出Root、身体、15路接触/释放与路径预览 | [未训练原型](../records/scene_control_v3_model_20261018.md) |
 | 完整轻量Transformer | 运动时序、24空间token、身体区域查询和因果输出 | [设计方案](../records/pfnn_lightweight_transformer_design_20261022.md) |
+| 地形感知动作Transformer | 16帧历史、部位射线token、路径站点token、6部位query；可微闭环训练目标 | [代码说明](../records/terrain_motion_transformer_20261024.md)，未训练 |
 
 ## 各分支共有的环境观测
 

@@ -3,6 +3,7 @@
 | 子目录 | 内容 |
 | --- | --- |
 | `data/` | 数据读取、动作合同、场景查询、模型适配、逐帧actor和评估目标 |
+| `controller/` | 地形感知动作Transformer、身体部位与路径站点token、可微场景距离与闭环训练目标（未训练） |
 | `motion_backbone/` | 原生MotionBricks的Root/Pose网络和推理流程 |
 | `vqvae/` | 动作压缩器、量化器和解码器 |
 | `motionlib/` | 骨架、旋转、动作表示和FK工具 |
