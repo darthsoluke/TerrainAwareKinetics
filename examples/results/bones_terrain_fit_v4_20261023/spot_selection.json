@@ -1,0 +1,86 @@
+[
+  {
+    "filename": "crawl_ff_loop_315_005__A131",
+    "reasons": [
+      "requested"
+    ],
+    "group": "prone"
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A053",
+    "reasons": [
+      "requested"
+    ],
+    "group": "known_dimension_support"
+  },
+  {
+    "filename": "stairs_climbing_up_start_R_101__A301",
+    "reasons": [
+      "requested"
+    ],
+    "group": "stairs"
+  },
+  {
+    "filename": "jog_backward_loop_002__A036",
+    "reasons": [
+      "requested"
+    ],
+    "group": "flat_control"
+  },
+  {
+    "filename": "idle_to_wall_leaning_idle_360_R_002__A289",
+    "reasons": [
+      "wall_fitted"
+    ],
+    "group": "wall_contact"
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+    "reasons": [
+      "wall_fitted"
+    ],
+    "group": "wall_contact"
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_360_R_003__A282",
+    "reasons": [
+      "wall_fitted"
+    ],
+    "group": "wall_contact"
+  },
+  {
+    "filename": "kneeling_start_R_003__A408",
+    "reasons": [
+      "in_place_transition"
+    ],
+    "group": "kneel"
+  },
+  {
+    "filename": "kneeling_stop_003__A051",
+    "reasons": [
+      "in_place_transition"
+    ],
+    "group": "kneel"
+  },
+  {
+    "filename": "idle_crawl_stop_001__A128",
+    "reasons": [
+      "in_place_transition"
+    ],
+    "group": "prone"
+  },
+  {
+    "filename": "jump_over_obstacle_2m_L_003__A415",
+    "reasons": [
+      "inverted_outside_low"
+    ],
+    "group": "obstacle_clearance"
+  },
+  {
+    "filename": "ladder_slide_down_R_303__A302",
+    "reasons": [
+      "inverted_outside_low"
+    ],
+    "group": "ladder"
+  }
+]

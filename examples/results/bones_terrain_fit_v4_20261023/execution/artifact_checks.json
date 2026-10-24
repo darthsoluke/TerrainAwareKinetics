@@ -1,0 +1,20 @@
+{
+  "selected_pngs_decoded_nonblank": 63,
+  "png_dimensions": [
+    [
+      1320,
+      572
+    ]
+  ],
+  "png_bytes": 9493963,
+  "viewer_payloads_checked": 63,
+  "prior_input_hashes_unchanged": 13,
+  "prior_v3_fit_hashes_unchanged": 6788,
+  "jsonl_or_gif_payloads_published": 0,
+  "v3_common_viewers_motion_exactly_unchanged": 30,
+  "all_v4_fits_finite": 6788,
+  "skin_vertices": 18056,
+  "skin_stride": 2,
+  "relaunches": 0,
+  "kept_walls_and_fitted_ceilings_over_2cm": 0
+}

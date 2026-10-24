@@ -1,0 +1,9 @@
+{
+  "method": "Reuse v3 saved boxes; separate support and ground at original stride2, zero tolerance. No-support clips reuse recorded ground-only metric; other clips re-skin unchanged BVHs. Validate recombined metric against original v3.",
+  "source_commit": "c9039da705426c9304876c1cf7955fa7fa2afce0",
+  "workers": 4,
+  "clips": 6788,
+  "reskinned_clips": 1885,
+  "combined_metric_max_error_m": 0.0,
+  "elapsed_seconds": 1607.2
+}

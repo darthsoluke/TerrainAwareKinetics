@@ -31,6 +31,8 @@
 
 2026-10-24 完成 [地形 v3 四路运行](examples/results/bones_terrain_fit_v3_20261023/README.md)：增加顶棚、侧墙和场景变体，发布 249 张审查图与 79 条 viewer 数据。变体接受率 86.88%，侧墙仍有超限，详见 [执行与质量报告](docs/records/bones_terrain_fit_v3_pro6000_20261023.md)。
 
+随后完成 [v4 三路全量与点检](examples/results/bones_terrain_fit_v4_20261023/README.md)：平地配墙降为 4/900，保留墙体无超限；低姿态支撑出现退步。报告按新规则列出 4,814 条环境可解释、639 条仅几何一致及 1,335 条拒绝，发布 63 条审查图/viewer。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

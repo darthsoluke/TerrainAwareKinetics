@@ -14,4 +14,5 @@ examples/results/bones_terrain_survey_v2_20261023/stems.tsv whitespace=-blank-at
 examples/results/bones_terrain_screen_v1_20261023/*/clips_compact.tsv whitespace=-blank-at-eol
 examples/results/bones_terrain_fit_v1_20261023/full/fits_compact.tsv whitespace=-blank-at-eol
 examples/results/bones_terrain_fit_v3_20261023/**/fits_compact.tsv whitespace=-blank-at-eol
+examples/results/bones_terrain_fit_v4_20261023/fits_compact.tsv whitespace=-blank-at-eol
 *.png binary

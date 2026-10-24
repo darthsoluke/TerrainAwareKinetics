@@ -1,0 +1,473 @@
+{
+  "viewer_count": 63,
+  "png_count": 63,
+  "png_bytes": 9493963,
+  "selected": [
+    {
+      "filename": "box_jump_down_360_002__A359",
+      "group": "box_support",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "come_down_50cm_box_R_002__A137",
+      "group": "known_dimension_support",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "come_up_50cm_box_R_001__A206",
+      "group": "known_dimension_support",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "come_up_50cm_box_R_002__A053",
+      "group": "known_dimension_support",
+      "reasons": [
+        "spot:requested"
+      ]
+    },
+    {
+      "filename": "come_up_50cm_box_R_002__A065",
+      "group": "known_dimension_support",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_225_R_003__A233",
+      "group": "prone",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_270_R_001__A216",
+      "group": "prone",
+      "reasons": [
+        "L2_agent_review"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_315_005__A131",
+      "group": "prone",
+      "reasons": [
+        "spot:requested",
+        "L2_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_225_R_001__A230",
+      "group": "prone",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "crawl_ff_stop_180_R_001__A230",
+      "group": "prone",
+      "reasons": [
+        "L2_agent_review",
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "crouch_ff_start_315_003__A148",
+      "group": "crouch",
+      "reasons": [
+        "L1_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_225_001__A146",
+      "group": "crouch",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_315_001__A148",
+      "group": "crouch",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+      "group": "wall_contact",
+      "reasons": [
+        "spot:wall_fitted",
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_360_R_003__A282",
+      "group": "wall_contact",
+      "reasons": [
+        "spot:wall_fitted",
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "h_b_w_crouch_270_loop_004__A549",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "h_b_w_crouch_270_stop_001__A305",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "h_b_w_crouch_270_stop_002__A343",
+      "group": "wall_contact",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "h_b_w_crouch_to_stand_270_start_001__A344",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "h_b_w_crouch_to_stand_270_stop_001__A344",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "h_b_w_stand_to_crouch_270_start_003__A344",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_001__A128",
+      "group": "prone",
+      "reasons": [
+        "spot:in_place_transition"
+      ]
+    },
+    {
+      "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+      "group": "prone",
+      "reasons": [
+        "L2_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "idle_to_wall_leaning_idle_360_R_002__A289",
+      "group": "wall_contact",
+      "reasons": [
+        "spot:wall_fitted",
+        "L1_agent_review"
+      ]
+    },
+    {
+      "filename": "idle_turn_360_001__A066",
+      "group": "flat_control",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "item_pick_up_crouch_walk_R_003__A412",
+      "group": "crouch",
+      "reasons": [
+        "L1_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "jog_backward_loop_002__A036",
+      "group": "flat_control",
+      "reasons": [
+        "spot:requested"
+      ]
+    },
+    {
+      "filename": "jog_sideway_135_start_001__A031",
+      "group": "flat_control",
+      "reasons": [
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "jump_over_obstacle_0_75m_R_102__A416",
+      "group": "obstacle_clearance",
+      "reasons": [
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "jump_over_obstacle_1m_R_102__A305",
+      "group": "obstacle_clearance",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "jump_over_obstacle_2m_L_003__A415",
+      "group": "obstacle_clearance",
+      "reasons": [
+        "spot:inverted_outside_low"
+      ]
+    },
+    {
+      "filename": "jump_to_shoulder_roll_R_001__A304",
+      "group": "box_support",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "jump_to_shoulder_roll_R_002__A305",
+      "group": "box_support",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "jump_to_shoulder_roll_R_102__A416",
+      "group": "box_support",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "kneeling_loop_001__A101",
+      "group": "kneel",
+      "reasons": [
+        "L1_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "kneeling_start_R_003__A408",
+      "group": "kneel",
+      "reasons": [
+        "spot:in_place_transition"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_002__A026",
+      "group": "kneel",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_002__A032",
+      "group": "kneel",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_003__A032",
+      "group": "kneel",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_003__A051",
+      "group": "kneel",
+      "reasons": [
+        "spot:in_place_transition"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_003__A097",
+      "group": "kneel",
+      "reasons": [
+        "L1_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "ladder_climbing_stepdown_R_001__A300",
+      "group": "ladder",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "ladder_slide_down_R_002__A300",
+      "group": "ladder",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "ladder_slide_down_R_303__A302",
+      "group": "ladder",
+      "reasons": [
+        "spot:inverted_outside_low"
+      ]
+    },
+    {
+      "filename": "ladder_slip_R_002__A300",
+      "group": "ladder",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "lift_crate_come_down_50cm_box_R_003__A203",
+      "group": "known_dimension_support",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+      "group": "known_dimension_support",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "mohak_backward_loop_003__A120",
+      "group": "quadruped",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "mohak_backward_start_003__A029",
+      "group": "quadruped",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "mohak_backward_stop_002__A031",
+      "group": "quadruped",
+      "reasons": [
+        "L2_agent_review"
+      ]
+    },
+    {
+      "filename": "mohak_forward_loop_003__A127",
+      "group": "quadruped",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "mohak_loop_002__A031",
+      "group": "quadruped",
+      "reasons": [
+        "L2_agent_review"
+      ]
+    },
+    {
+      "filename": "mohak_start_001__A031",
+      "group": "quadruped",
+      "reasons": [
+        "L2_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "on_all_fours_turn_270_R_003__A202",
+      "group": "quadruped",
+      "reasons": [
+        "L2_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "on_all_fours_turn_360_R_002__A201",
+      "group": "quadruped",
+      "reasons": [
+        "L2_agent_review"
+      ]
+    },
+    {
+      "filename": "stairs_climbing_down_loop_R_001__A300",
+      "group": "stairs",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "stairs_climbing_down_stop_R_003__A300",
+      "group": "stairs",
+      "reasons": [
+        "worst_penetration"
+      ]
+    },
+    {
+      "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+      "group": "stairs",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "stairs_climbing_up_start_R_101__A301",
+      "group": "stairs",
+      "reasons": [
+        "spot:requested"
+      ]
+    },
+    {
+      "filename": "stairs_slip_R_003__A300",
+      "group": "stairs",
+      "reasons": [
+        "S_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "turn_crawl_270_R_003__A229",
+      "group": "prone",
+      "reasons": [
+        "L2_agent_review"
+      ]
+    },
+    {
+      "filename": "wall_leaning_idle_360_R_003__A285",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review",
+        "group_sample"
+      ]
+    },
+    {
+      "filename": "wall_leaning_idle_to_idle_360_R_001__A286",
+      "group": "wall_contact",
+      "reasons": [
+        "L1_agent_review"
+      ]
+    }
+  ]
+}
