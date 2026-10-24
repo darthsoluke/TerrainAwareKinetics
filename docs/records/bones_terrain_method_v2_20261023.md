@@ -26,10 +26,10 @@
 | --- | --- | --- | --- |
 | 1 标注摸底 | 时间轴关键词与动作词干分组 | [bones_terrain_survey.py](../../motionbricks/data/bones_terrain_survey.py) | 已在 PRO6000 完成 |
 | 2 几何筛查 | 支撑层、手膝支撑、逐帧姿态、头顶净空 | [bones_terrain_screen.py](../../motionbricks/data/bones_terrain_screen.py) | 已完成，6,788 条 |
-| 3 支撑拟合 v2 | 地面、支撑箱体 | [bones_terrain_fit.py](../../motionbricks/data/bones_terrain_fit.py) | 本次运行 |
+| 3 支撑拟合 | 地面、支撑箱体 | [bones_terrain_fit.py](../../motionbricks/data/bones_terrain_fit.py) | 以 v9 结束 |
 | 4 头顶与侧面 | 顶棚、侧墙 | [bones_terrain_scene.py](../../motionbricks/data/bones_terrain_scene.py) | 本次运行 |
 | 5 场景变体 | 中性范围内采样、防捷径、逐变体蒙皮校验 | 同上 | 本次运行 |
-| 6 观测与缓存 | 每个变体用运行时同一套三维查询生成观测 | 待定，取决于模型观测设计 | 下一步 |
+| 6 训练集与观测 | 原生帧、场景变体、接触、指令入缓存；身体射线和路径站点射线在线计算 | [训练集说明](bones_env_training_set_20261024.md) | 代码完成，待服务器运行 |
 
 入口脚本：[fit_bones_terrain_support.py](../../scripts/fit_bones_terrain_support.py)（步骤 3~5 一次完成）；
 查看：[terrain_fit_review](../../web/terrain_fit_review/index.html)。

@@ -11,6 +11,7 @@
 | `pytest tests/test_bones_terrain_scene.py -q` | NumPy、SciPy、pytest；合成身体检查顶棚解释、侧墙、中性余量与变体穿透 |
 | `pytest tests/test_skeleton_ray_sampler.py -q` | NumPy、pytest；torch 可用时检查运行时版本与 float64 参考一致 |
 | `pytest tests/test_terrain_controller.py -q` | NumPy、pytest；torch 与 Kimodo 可用时检查距离场、站点射线、Transformer 不变性和闭环梯度 |
+| `pytest tests/test_bones_env_dataset.py -q` | NumPy、pytest；torch 与 Kimodo 可用时检查原生帧 FK 往返和窗口数据集 |
 | `pytest tests/test_bones_transfer.py -q` | pytest和标准库；用临时文件检查只读源、镜像排除、校验与空间门槛 |
 | `pytest tests/test_pfnn_frame_training.py -q` | PyTorch、NumPy、pytest；用CPU替代训练边界的runner检查 |
 | `pytest tests/test_pfnn_frame_closed_loop.py -q` | 人体表示/骨架依赖；P2目标和时间梯度检查 |

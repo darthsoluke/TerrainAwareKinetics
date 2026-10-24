@@ -103,7 +103,7 @@ class ClosedLoop:
         self.model, self.rep = model, rep
         self.sampler, self.table, self.prober = ray_sampler, part_table, station_prober
         self.config = config or RolloutConfig()
-        self.foot_index = torch.as_tensor(np.asarray(rep.skeleton.foot_joint_idx), dtype=torch.long)
+        self.foot_index = torch.as_tensor(rep.skeleton.foot_joint_idx).long().cpu()
         self.radii = joint_radii(joint_names, self.config)
         self.sole_offsets = default_sole_offsets(rep) if sole_offsets is None else torch.as_tensor(sole_offsets)
 
