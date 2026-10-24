@@ -9,11 +9,12 @@
 | 数据 | `runs/bones_env_v1`（[构建与审计记录](bones_env_v1_pro6000_20261024.md)）：训练 5,038 条、31,854 秒、20,149 个场景变体、360 名演员；验证 248 条、15 名演员。只用"环境可解释"片段 |
 | 模型 | [TerrainMotionTransformer](../../motionbricks/controller/terrain_motion_transformer.py)，约 157 万参数，零初始化输出层 |
 | 训练步骤 | [training.py](../../motionbricks/controller/training.py)：一步监督（`source_one_step_loss` + 路径）；可微闭环（[closed_loop.py](../../motionbricks/controller/closed_loop.py)） |
-| 入口 | [train_terrain_controller.py](../../scripts/train_terrain_controller.py)，4 卡 torchrun，梯度手动平均，原子保存，记录样本曝光账本 |
+| 入口 | [train_terrain_controller.py](../../scripts/train_terrain_controller.py)，torchrun，梯度手动平均，原子保存，记录样本曝光账本 |
+| 硬件 | 用户指定：A100 服务器上两张空闲 GPU。数据集从 PRO6000 复制过去，逐文件核对哈希 |
 
 ## 2. 阶段与预算
 
-每卡批量 256，全局 1,024。
+全局批量 1,024（2 卡 × 每卡 512）。若预检中 loop:16 每卡 512 的显存峰值超过显卡容量的 80%，改为每卡 256、全局 512，更新次数不变，样本曝光减半，并在记录中写明。
 
 | 阶段 | 参数更新 | 样本曝光 |
 | --- | ---: | ---: |
@@ -30,7 +31,8 @@
 1. 81 项相关测试通过（含新增的训练步骤测试）。
 2. 单卡冒烟：`--phases teacher:5 loop:4:5 --batch 16 --max-hours 0.2`，确认 progress、eval、检查点写出，损失有限。
 3. 从冒烟的 `latest.pt` 用 `--resume` 再跑 2 次更新，确认更新计数和账本连续。
-4. 4 卡冒烟：`--phases teacher:5 --batch 64`，确认多卡同步和时间上限同步。
+4. 2 卡冒烟：`--phases teacher:5 --batch 64`，确认多卡同步和时间上限同步。
+5. 显存预检：单卡 `--phases loop:16:2 --batch 512`，记录显存峰值，按上文决定每卡批量。
 
 ## 4. 验收（试验性诊断，不是部署门）
 
