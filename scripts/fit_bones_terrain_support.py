@@ -28,7 +28,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from motionbricks.data.bones_terrain_fit import (  # noqa: E402
-    SCHEMA_VERSION, FitConfig, actor_scale_report, fit_support, foot_vertices_by_side,
+    SCHEMA_VERSION, FitConfig, actor_scale_report, fit_support, foot_vertices_by_side, leg_vertices_by_side,
 )
 from motionbricks.data.bones_terrain_scene import (  # noqa: E402
     PART_FOOT, PART_HAND, PART_TRUNK, SceneConfig, scene_for_clip, vertex_part_codes,
@@ -58,7 +58,15 @@ def _init():
         bind = bind.detach().cpu().numpy() if hasattr(bind, "detach") else np.asarray(bind)
         screen._STATE["standing_top"] = float(bind[:, 1].max() - bind[:, 1].min())
         screen._STATE["vertex_parts"] = skin_vertex_parts(skinner, screen._STATE["names"], bind)
-        screen._STATE["foot_vertices"] = foot_vertices_by_side(dominant_joints(skinner), screen._STATE["names"])
+        dominant = dominant_joints(skinner)
+        screen._STATE["foot_vertices"] = foot_vertices_by_side(dominant, screen._STATE["names"])
+        screen._STATE["leg_vertices"] = leg_vertices_by_side(dominant, screen._STATE["names"])
+        counts = {f"{kind}_{side}": len(table[side]) for kind, table in
+                  (("foot", screen._STATE["foot_vertices"]), ("leg", screen._STATE["leg_vertices"]))
+                  for side in ("left", "right")}
+        if min(counts.values()) < 100:
+            raise RuntimeError(f"foot/leg skin labels look wrong: {counts}")
+        screen._STATE["limb_vertex_counts"] = counts
 
 
 def dominant_joints(skinner):
@@ -115,7 +123,8 @@ def _process(item, render, skin_stride=2, variants=4):
     _, support, posture = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
                                              dimension_tokens=item.get("dimension_tokens", ()), return_posture=True)
     fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin,
-                      skin_frame_stride=max(1, skin_stride), foot_vertices=screen._STATE.get("foot_vertices"))
+                      skin_frame_stride=max(1, skin_stride), foot_vertices=screen._STATE.get("foot_vertices"),
+                      leg_vertices=screen._STATE.get("leg_vertices"))
     if skin is not None:
         fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
         fit["scene"] = scene_for_clip(skin, posture[::skin_stride], joints["Hips"][::skin_stride][:, [0, 2]], fit,

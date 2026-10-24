@@ -202,7 +202,7 @@ def test_fit_reports_skin_authority_when_skin_is_given():
 def test_prone_ground_comes_from_skin_and_upside_down_feet_are_not_a_platform():
     soles, joints, root = step_up(top=0.0)
     for side in soles:
-        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.10      # soles face up, 10 cm high
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.15      # soles face up, 15 cm high
     support = support_of(soles, joints, root)
     assert min(support["summary"]["usable_level_heights_m"]) > 0.05
     # The skin of the foot tops (and the rest of the body) lies on the floor at y = 0.
@@ -232,7 +232,7 @@ def test_raised_soles_on_a_real_box_are_kept_with_skin():
 def test_tucked_toes_beside_the_sole_also_mark_a_resting_foot():
     soles, joints, root = step_up(top=0.0)
     for side in soles:
-        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.10
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.15
     support = support_of(soles, joints, root)
     toes = np.concatenate([soles["left"], soles["right"]], axis=1).copy()
     toes[..., 2] += 0.10            # toe tips 2 cm beyond the sole outline, on the floor
@@ -245,7 +245,7 @@ def test_tucked_toes_beside_the_sole_also_mark_a_resting_foot():
 def test_toes_far_behind_a_raised_sole_mark_the_foot_as_not_plantar():
     soles, joints, root = step_up(top=0.0)
     for side in soles:
-        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.07      # sole hovers, toes point back
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.15      # sole hovers, toes point back
     support = support_of(soles, joints, root)
     toes = {side: soles[side].copy() for side in soles}
     for side in toes:
@@ -264,7 +264,7 @@ def test_toes_far_behind_a_raised_sole_mark_the_foot_as_not_plantar():
 def test_still_feet_held_above_a_body_resting_lower_are_not_a_platform():
     soles, joints, root = step_up(top=0.0)
     for side in soles:
-        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.08      # feet held still in the air
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.15      # feet held still in the air
     support = support_of(soles, joints, root)
     knees = np.repeat(np.array([[[-0.1, 0.0, -0.4], [0.1, 0.0, -0.4], [0.0, 0.01, -0.8]]]), len(root), axis=0)
     skin = np.concatenate([soles["left"], soles["right"], knees], axis=1)
@@ -273,6 +273,47 @@ def test_still_feet_held_above_a_body_resting_lower_are_not_a_platform():
     assert fit["levels_m"] == [0.0] and [b["role"] for b in fit["boxes"]["minimal"]] == ["ground"]
     assert fit["patch_checks"] and all("body_rests_lower" in c["dropped"] for c in fit["patch_checks"])
     assert fit["evidence_patches"] == []
+
+
+def test_contacts_within_the_skin_ground_band_are_the_floor():
+    # A lying body's soft tissue sinks into the floor; knees and feet rest a few cm above
+    # the skin-derived floor. Those contacts are the floor, not a 7 cm platform.
+    soles, joints, root = step_up(top=0.0)
+    for side in soles:
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.07
+    support = support_of(soles, joints, root)
+    chest = np.repeat(np.array([[[0.0, 0.0, -0.6], [0.1, 0.0, -0.7]]]), len(root), axis=0)
+    skin = np.concatenate([soles["left"], soles["right"], chest], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support, skin_vertices=skin,
+                      foot_vertices={"left": np.arange(4), "right": np.arange(4, 8)})
+    assert fit["ground_source"] == "skin_lowest_contacts" and fit["ground_band_m"] == pytest.approx(0.10)
+    assert fit["levels_m"] == [0.0] and [b["role"] for b in fit["boxes"]["minimal"]] == ["ground"]
+    assert fit["evidence_patches"] and all(p["level_m"] == fit["ground_m"] for p in fit["evidence_patches"])
+
+
+def test_the_other_leg_below_a_trailing_foot_does_not_drop_it():
+    soles, joints, root = step_up()
+    on_box = soles["right"][-1:, :, 1].mean()
+    # While stepping down, the left shin is far below the right foot still on the box.
+    shin = np.repeat(np.array([[[-0.12, 0.2, 0.3]]]), len(root), axis=0)
+    hands = np.stack([joints["LeftHand"], joints["RightHand"]], axis=1)
+    skin = np.concatenate([soles["left"], soles["right"], shin, hands], axis=1)
+    feet = {"left": np.arange(4), "right": np.arange(4, 8)}
+    legs = {"left": np.array([8]), "right": np.array([], dtype=int)}
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin,
+                      foot_vertices=feet, leg_vertices=legs)
+    right = [c for c in fit["patch_checks"] if c["side"] == "right"]
+    assert on_box > 0.4 and right and not any(c["dropped"] for c in right)
+    without = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin,
+                          foot_vertices=feet)
+    assert any("body_rests_lower" in c["dropped"] for c in without["patch_checks"] if c["side"] == "right")
+
+
+def test_leg_vertices_by_side_uses_thigh_and_shin_joints():
+    from motionbricks.data.bones_terrain_fit import leg_vertices_by_side
+    names = ["Hips", "LeftUpLeg", "LeftLeg", "LeftFoot", "RightShin", "RightToeBase"]
+    sides = leg_vertices_by_side(np.array([0, 1, 2, 3, 4, 5]), names)
+    assert sides["left"].tolist() == [1, 2] and sides["right"].tolist() == [4]
 
 
 def test_plantar_sole_on_a_box_is_kept_with_foot_vertices():

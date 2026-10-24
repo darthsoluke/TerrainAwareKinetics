@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass
 
 import numpy as np
 
-SCHEMA_VERSION = "bones-terrain-fit-v7"
+SCHEMA_VERSION = "bones-terrain-fit-v8"
 
 #: Landmark sphere radii in metres; conservative body volume for free-space checks.
 LANDMARK_RADII = {
@@ -59,6 +59,7 @@ class FitConfig:
     resting_min_points: int = 10             # skin points under a sole patch during its own contact -> foot rests on body
     foot_below_fraction: float = 0.5         # contact frames where the same foot reaches below its sole -> not plantar
     body_below_fraction: float = 0.5         # contact frames where non-foot skin is below the sole -> foot not load-bearing
+    skin_ground_band_m: float = 0.10         # with a skin-derived floor, contacts this close to it are the floor
     slab_clearance_m: float = 0.03           # floating slab bottom above the highest skin that passes beneath it
     min_slab_thickness_m: float = 0.05
     cluster_link_m: float = 0.30
@@ -306,6 +307,18 @@ def _patch_side(patch, events):
     return sides.pop() if len(sides) == 1 else None
 
 
+def leg_vertices_by_side(dominant_joint, joint_names):
+    """Skin vertex indices whose dominant LBS joint is a thigh, knee or shin joint, per side."""
+    dominant_joint = np.asarray(dominant_joint)
+    result = {}
+    for side, prefix in (("left", "Left"), ("right", "Right")):
+        joints = [k for k, name in enumerate(joint_names)
+                  if name.startswith(prefix) and any(part in name[len(prefix):] for part in ("Leg", "Thigh", "Knee", "Shin"))
+                  and not any(part in name[len(prefix):] for part in ("Foot", "Toe", "Ankle"))]
+        result[side] = np.flatnonzero(np.isin(dominant_joint, joints))
+    return result
+
+
 def foot_vertices_by_side(dominant_joint, joint_names):
     """Skin vertex indices whose dominant LBS joint is a foot or toe joint, per side."""
     dominant_joint = np.asarray(dominant_joint)
@@ -379,7 +392,7 @@ def _inside_rect(u, v, rect, clearance):
 
 
 def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_vertices=None,
-                skin_frame_stride=1, foot_vertices=None):
+                skin_frame_stride=1, foot_vertices=None, leg_vertices=None):
     """Fit ground and support boxes to one clip; returns a JSON-ready dict.
 
     skin_vertices, when given ([skin frames, vertices, 3], every skin_frame_stride-th
@@ -404,13 +417,17 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
     ground_source = "lowest_foot_level" if levels else "sole_percentile"
     skin = np.asarray(skin_vertices, dtype=np.float64) if skin_vertices is not None else None
     dropped_ghost_levels = []
+    band = config.min_step_m
     if skin is not None:
         # The floor is the lowest place the body rests. When feet lie on their tops or toes
         # (prone, kneeling), the lowest foot "level" sits above the knees, hands and chest.
         skin_ground = float(np.percentile(skin[..., 1].min(axis=1), config.skin_ground_percentile))
         if not levels or levels[0] - skin_ground > config.ground_mismatch_m:
-            dropped_ghost_levels = [level for level in levels if level < skin_ground + config.min_step_m]
-            levels = [skin_ground] + [level for level in levels if level >= skin_ground + config.min_step_m]
+            # A lying or kneeling body sinks its soft tissue into the floor by several cm, so knees,
+            # feet and hands rest a few cm above the skin-derived floor. Treat that band as floor.
+            band = max(config.min_step_m, config.skin_ground_band_m)
+            dropped_ghost_levels = [level for level in levels if level < skin_ground + band]
+            levels = [skin_ground] + [level for level in levels if level >= skin_ground + band]
             ground, ground_source = skin_ground, "skin_lowest_contacts"
 
     resting, patch_checks = [], []
@@ -421,14 +438,21 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         body_vertices = None
         if foot_vertices is not None:
             feet = np.concatenate([np.asarray(v, dtype=np.int64) for v in foot_vertices.values()])
-            body_vertices = np.setdiff1d(np.arange(skin.shape[1]), feet)
+            others = np.setdiff1d(np.arange(skin.shape[1]), feet)
+            # The other leg may legitimately be lower (stepping down off a box): exclude it.
+            opposite = {"left": "right", "right": "left"}
+            body_vertices = {side: np.setdiff1d(others, (leg_vertices or {}).get(opposite[side], []))
+                             for side in ("left", "right")}
         for patch in patches:
-            if patch["height_m"] - ground < config.min_step_m:
+            if patch["height_m"] - ground < band:
                 kept.append(patch)
                 continue
             count = _patch_rests_on_body(patch, skin, events, stride, config)
             below, drop = _foot_below_sole(patch, skin, events, stride, foot_vertices, config)
-            body_below, body_drop = _body_below_sole(patch, skin, events, stride, body_vertices, config)
+            side = _patch_side(patch, events)
+            body_below, body_drop = _body_below_sole(patch, skin, events, stride,
+                                                     None if body_vertices is None or side is None
+                                                     else body_vertices[side], config)
             reasons = ([] if count < config.resting_min_points else ["body_under_sole"]) + (
                 [] if below < config.foot_below_fraction else ["foot_lower_than_sole"]) + (
                 [] if body_below < config.body_below_fraction else ["body_rests_lower"])
@@ -441,6 +465,8 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         patches = kept
 
         def nearest(height):
+            if height - ground < band:
+                return ground
             return min(levels, key=lambda level: abs(level - height))
         backed = {nearest(p["height_m"]) for p in patches}
         inverted_levels = [level for level in levels if level > ground and level not in backed
@@ -452,6 +478,8 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
     def level_of(height):
         if not levels:
             return None
+        if height - ground < band:
+            return ground
         candidates = [level for level in levels if level <= height + config.level_match_m]
         level = max(candidates) if candidates else levels[0]
         return level if height - level < config.min_step_m else None
@@ -621,7 +649,7 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
     return {
         "schema_version": SCHEMA_VERSION, "ground_m": ground,
         "levels_m": [level - ground for level in levels], "merged_levels_m": [m - ground for m in merged_levels],
-        "ground_source": ground_source, "dropped_ghost_levels_m": [g - ground for g in dropped_ghost_levels],
+        "ground_source": ground_source, "ground_band_m": float(band), "dropped_ghost_levels_m": [g - ground for g in dropped_ghost_levels],
         "inverted_foot_levels_m": [g - ground for g in inverted_levels],
         "patches_resting_on_body": len(resting), "patch_checks": patch_checks,
         "evidence_patches": [{"height_m": float(p["height_m"]), "level_m": float(level_of(p["height_m"])),
