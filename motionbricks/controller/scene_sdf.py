@@ -12,8 +12,8 @@ a penetration cost needs. No host synchronisation; fixed shapes.
 
 import numpy as np
 
-#: Added inside the square root so the distance has a finite gradient on box faces.
-_EPS = 1e-12
+#: Floor under the square root so the unused branch of torch.where stays finite.
+_EPS = 1e-24
 
 
 def box_sdf(points, boxes):
@@ -26,7 +26,10 @@ def box_sdf(points, boxes):
     local = torch.einsum("bnki,bkij->bnkj", flat[:, :, None] - centers[:, None], rotation)
     q = local.abs() - half[:, None]
     outside = q.clamp_min(0)
-    length = (outside.square().sum(-1) + _EPS).sqrt() - _EPS ** 0.5
+    squared = outside.square().sum(-1)
+    positive = squared > 0
+    # Exact length outside; zero (with a finite, zero gradient) on and inside the box.
+    length = torch.where(positive, squared.clamp_min(_EPS).sqrt(), torch.zeros_like(squared))
     component = length + q.amax(-1).clamp_max(0)
     component = torch.where(mask[:, None], component, torch.full_like(component, float("inf")))
     return component.amin(-1).reshape(points.shape[:-1])
