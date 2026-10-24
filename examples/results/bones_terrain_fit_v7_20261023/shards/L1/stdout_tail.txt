@@ -1,0 +1,100 @@
+   "variants": 2552,
+   "variants_accepted": 1060,
+   "upright_ceiling_variants": 0,
+   "clutter_mean": 2.002,
+   "ground_skin_penetration_p95_m": 0.0284
+  }
+ },
+ "wall_contact": {
+  "clips": 350,
+  "fitted": 350,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 327,
+   "1": 8,
+   "2": 12,
+   "3": 3
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 0,
+   "penetration_max_p95_m": 0.0089
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 0,
+   "penetration_max_p95_m": 0.0099
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "evidence_reduced_for_body_conflict": 11,
+   "foot_patches_rest_on_body": 24,
+   "ground_from_skin": 37,
+   "merged_small_steps": 5,
+   "support_rejected": 5
+  },
+  "ground_source": {
+   "lowest_foot_level": 313,
+   "skin_lowest_contacts": 37
+  },
+  "raised_sole_patches": {
+   "checked": 95,
+   "kept": 54,
+   "dropped_by": {
+    "body_rests_lower": 41,
+    "body_under_sole": 1
+   }
+  },
+  "ground_skin_depth_m": {
+   "p50": 0.0095,
+   "p95": 0.0169,
+   "p99": 0.0218
+  },
+  "scene": {
+   "eligibility": {
+    "environment_explained": {
+     "clips": 316,
+     "seconds": 2445.48
+    },
+    "geometry_only_low_posture_unexplained": {
+     "clips": 32,
+     "seconds": 122.58
+    },
+    "rejected": {
+     "clips": 2,
+     "seconds": 6.4
+    }
+   },
+   "rejection_reasons": {
+    "foot_evidence_not_supported": 8,
+    "low_posture_partly_explained": 28,
+    "low_posture_unexplained": 108
+   },
+   "wall_status": {
+    "fitted": 106,
+    "no_contact_plane": 244
+   },
+   "wall_kind": {
+    "brace": 8,
+    "lean": 98
+   },
+   "ceiling_status": {
+    "no_sustained_low_posture": 246,
+    "fitted": 77,
+    "unexplainable_tight_above_bound": 9,
+    "no_conflict_free_rectangle": 7,
+    "unexplainable_in_place_transition": 11
+   },
+   "explanation_tight_p50": 1.0,
+   "explanation_tight_p10": 0.935,
+   "walls_fitted": 106,
+   "fitted_ceilings_with_frames_over_2cm": 0,
+   "variants": 1400,
+   "variants_accepted": 1264,
+   "upright_ceiling_variants": 479,
+   "clutter_mean": 1.961,
+   "ground_skin_penetration_p95_m": 0.017
+  }
+ }
+}
+EXIT_CODE=0
+DONE_L1
+{"name": "L1", "command": ["${PFNN_PROJECT}/env/bin/python", "-u", "runs/bones_fit_v7_coord/timed_runner.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v7_L1", "--viz-per-stem", "2", "--variants", "4", "--skin-stride", "2", "--groups", "crouch", "kneel", "wall_contact", "--worst-per-group", "3", "--gif", "--workers", "20"], "output": "runs/bones_fit_v7_L1", "exit_code": 0, "wall_seconds": 1550.7, "fit_elapsed_seconds": 1549.2, "fitted": 2131, "failed": 0, "rendered": 50, "render_failures": [], "minimum_available_bytes": 397219565568, "peak_unavailable_bytes": 138498301952, "timing_rows": 2131, "slowest10": [{"filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493", "group": "crouch", "frames": 573, "fit_seconds": 33.969, "render_seconds": 75.137, "total_seconds": 109.106}, {"filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492", "group": "crouch", "frames": 573, "fit_seconds": 36.164, "render_seconds": 65.761, "total_seconds": 101.925}, {"filename": "crouch_idle_002__A248", "group": "crouch", "frames": 380, "fit_seconds": 33.793, "render_seconds": 64.408, "total_seconds": 98.201}, {"filename": "patches_crouch_R_002__A430", "group": "crouch", "frames": 350, "fit_seconds": 38.395, "render_seconds": 56.472, "total_seconds": 94.867}, {"filename": "wall_leaning_idle_360_R_003__A285", "group": "wall_contact", "frames": 416, "fit_seconds": 34.358, "render_seconds": 46.675, "total_seconds": 81.033}, {"filename": "kneeling_loop_001__A101", "group": "kneel", "frames": 403, "fit_seconds": 30.577, "render_seconds": 50.334, "total_seconds": 80.911}, {"filename": "drinking_wall_leaning_mug_090_R_003__A282", "group": "wall_contact", "frames": 352, "fit_seconds": 30.329, "render_seconds": 48.357, "total_seconds": 78.686}, {"filename": "crouch_idle_right_R_002__A245", "group": "crouch", "frames": 331, "fit_seconds": 27.906, "render_seconds": 49.506, "total_seconds": 77.412}, {"filename": "drinking_wall_leaning_mug_090_R_004__A291", "group": "wall_contact", "frames": 330, "fit_seconds": 25.626, "render_seconds": 48.447, "total_seconds": 74.073}, {"filename": "crouch_idle_right_R_003__A245", "group": "crouch", "frames": 286, "fit_seconds": 22.385, "render_seconds": 50.649, "total_seconds": 73.034}]}

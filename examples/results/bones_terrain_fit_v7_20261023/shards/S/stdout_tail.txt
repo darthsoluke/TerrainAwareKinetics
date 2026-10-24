@@ -1,0 +1,100 @@
+   "variants": 344,
+   "variants_accepted": 292,
+   "upright_ceiling_variants": 149,
+   "clutter_mean": 1.951,
+   "ground_skin_penetration_p95_m": 0.0235
+  }
+ },
+ "stairs": {
+  "clips": 49,
+  "fitted": 49,
+  "failed": 0,
+  "support_boxes_distribution": {
+   "0": 7,
+   "1": 13,
+   "2": 2,
+   "3": 2,
+   "4": 5,
+   "5": 2,
+   "6": 4,
+   "7": 5,
+   "8": 6,
+   "9": 2,
+   "10": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 0,
+   "penetration_max_p95_m": 0.0197
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 0,
+   "penetration_max_p95_m": 0.0198
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "evidence_reduced_for_body_conflict": 15,
+   "foot_patches_rest_on_body": 3,
+   "ground_from_skin": 2,
+   "inverted_foot_level_dropped": 3,
+   "support_rejected": 14
+  },
+  "ground_source": {
+   "lowest_foot_level": 47,
+   "skin_lowest_contacts": 2
+  },
+  "raised_sole_patches": {
+   "checked": 242,
+   "kept": 239,
+   "dropped_by": {
+    "body_rests_lower": 3
+   }
+  },
+  "ground_skin_depth_m": {
+   "p50": 0.0086,
+   "p95": 0.0303,
+   "p99": 0.0671
+  },
+  "scene": {
+   "eligibility": {
+    "environment_explained": {
+     "clips": 27,
+     "seconds": 111.59
+    },
+    "geometry_only_low_posture_unexplained": {
+     "clips": 7,
+     "seconds": 39.0
+    },
+    "rejected": {
+     "clips": 15,
+     "seconds": 85.73
+    }
+   },
+   "rejection_reasons": {
+    "foot_evidence_not_supported": 60,
+    "low_posture_unexplained": 32
+   },
+   "wall_status": {
+    "no_contact_plane": 32,
+    "no_still_segment": 17
+   },
+   "wall_kind": {},
+   "ceiling_status": {
+    "no_sustained_low_posture": 41,
+    "unexplainable_in_place_transition": 7,
+    "unexplainable_tight_above_bound": 1
+   },
+   "explanation_tight_p50": null,
+   "explanation_tight_p10": null,
+   "walls_fitted": 0,
+   "fitted_ceilings_with_frames_over_2cm": 0,
+   "variants": 196,
+   "variants_accepted": 108,
+   "upright_ceiling_variants": 24,
+   "clutter_mean": 1.974,
+   "ground_skin_penetration_p95_m": 0.0353
+  }
+ }
+}
+EXIT_CODE=0
+DONE_S
+{"name": "S", "command": ["${PFNN_PROJECT}/env/bin/python", "-u", "runs/bones_fit_v7_coord/timed_runner.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v7_S", "--viz-per-stem", "2", "--variants", "4", "--skin-stride", "2", "--groups", "known_dimension_support", "box_support", "stairs", "obstacle_clearance", "ladder", "flat_control", "--worst-per-group", "3", "--gif", "--workers", "20"], "output": "runs/bones_fit_v7_S", "exit_code": 0, "wall_seconds": 1616.6, "fit_elapsed_seconds": 1615.4, "fitted": 2907, "failed": 0, "rendered": 108, "render_failures": [], "minimum_available_bytes": 397219565568, "peak_unavailable_bytes": 138498301952, "timing_rows": 2907, "slowest10": [{"filename": "Turn_Start_Jog_0180_001__A019", "group": "flat_control", "frames": 2727, "fit_seconds": 176.018, "render_seconds": 0.0, "total_seconds": 176.018}, {"filename": "Turn_Start_Jog_0135_001__A018", "group": "flat_control", "frames": 2919, "fit_seconds": 150.255, "render_seconds": 0.0, "total_seconds": 150.255}, {"filename": "Turn_Start_Jog_0000_001__A018", "group": "flat_control", "frames": 2444, "fit_seconds": 106.805, "render_seconds": 0.0, "total_seconds": 106.805}, {"filename": "Turn_Start_Jog_0360_001__A020", "group": "flat_control", "frames": 2120, "fit_seconds": 89.756, "render_seconds": 0.0, "total_seconds": 89.756}, {"filename": "ladder_climbing_idle_R_101__A301", "group": "ladder", "frames": 419, "fit_seconds": 34.135, "render_seconds": 46.095, "total_seconds": 80.23}, {"filename": "neutral_idle_loop_002__A105", "group": "flat_control", "frames": 406, "fit_seconds": 27.947, "render_seconds": 39.273, "total_seconds": 67.22}, {"filename": "stairs_slip_R_004__A300", "group": "stairs", "frames": 202, "fit_seconds": 30.015, "render_seconds": 36.858, "total_seconds": 66.873}, {"filename": "neutral_idle_loop_003__A104", "group": "flat_control", "frames": 356, "fit_seconds": 25.425, "render_seconds": 38.497, "total_seconds": 63.922}, {"filename": "jump_on_box_230cm_102__A305", "group": "known_dimension_support", "frames": 234, "fit_seconds": 26.581, "render_seconds": 36.22, "total_seconds": 62.801}, {"filename": "walk_backward_loop_003__A039", "group": "flat_control", "frames": 420, "fit_seconds": 28.191, "render_seconds": 33.941, "total_seconds": 62.132}]}

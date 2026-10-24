@@ -1,0 +1,1349 @@
+{
+  "source_commit": "c4b776a920d69fc3f997f8e38821f1300837f177",
+  "pngs_decoded_nonblank": 191,
+  "png_bytes": 29329934,
+  "target_pngs": 71,
+  "previous_v6_pngs": 10,
+  "unchanged_screen_inputs": 2,
+  "viewer_motion_payloads": 0,
+  "fit_scene_payloads": 0,
+  "selected": [
+    {
+      "file": "previous_v6/viz/known_dimension_support/come_down_50cm_box_R_001__A371.png",
+      "filename": "come_down_50cm_box_R_001__A371",
+      "group": "known_dimension_support",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/known_dimension_support/come_down_50cm_box_R_003__A045.png",
+      "filename": "come_down_50cm_box_R_003__A045",
+      "group": "known_dimension_support",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/known_dimension_support/come_up_50cm_box_R_001__A206.png",
+      "filename": "come_up_50cm_box_R_001__A206",
+      "group": "known_dimension_support",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/known_dimension_support/come_up_50cm_box_R_002__A282.png",
+      "filename": "come_up_50cm_box_R_002__A282",
+      "group": "known_dimension_support",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png",
+      "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+      "group": "known_dimension_support",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/stairs/stairs_climbing_down_loop_R_102__A301.png",
+      "filename": "stairs_climbing_down_loop_R_102__A301",
+      "group": "stairs",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/stairs/stairs_climbing_jog_down_loop_R_001__A300.png",
+      "filename": "stairs_climbing_jog_down_loop_R_001__A300",
+      "group": "stairs",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png",
+      "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+      "group": "stairs",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/stairs/stairs_slip_R_003__A300.png",
+      "filename": "stairs_slip_R_003__A300",
+      "group": "stairs",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "previous_v6/viz/stairs/stairs_slip_R_004__A300.png",
+      "filename": "stairs_slip_R_004__A300",
+      "group": "stairs",
+      "version": "v6",
+      "reason": "S_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_start_180_R_001__A147.png",
+      "filename": "crouch_ff_start_180_R_001__A147",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_start_270_R_001__A246.png",
+      "filename": "crouch_ff_start_270_R_001__A246",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_stop_180_R_001__A247.png",
+      "filename": "crouch_ff_stop_180_R_001__A247",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_stop_225_R_001__A244.png",
+      "filename": "crouch_ff_stop_225_R_001__A244",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_stop_225_R_003__A195.png",
+      "filename": "crouch_ff_stop_225_R_003__A195",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_stop_270_R_001__A247.png",
+      "filename": "crouch_ff_stop_270_R_001__A247",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_stop_270_R_002__A197.png",
+      "filename": "crouch_ff_stop_270_R_002__A197",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/crouch_ff_stop_315_R_002__A194.png",
+      "filename": "crouch_ff_stop_315_R_002__A194",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/turn_crouch_270_R_002__A195.png",
+      "filename": "turn_crouch_270_R_002__A195",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/crouch/turn_crouch_360_R_002__A197.png",
+      "filename": "turn_crouch_360_R_002__A197",
+      "group": "crouch",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/flat_control/jog_backward_loop_002__A036.png",
+      "filename": "jog_backward_loop_002__A036",
+      "group": "flat_control",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/kneel/kneeling_start_003__A167.png",
+      "filename": "kneeling_start_003__A167",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/kneel/kneeling_start_R_003__A408.png",
+      "filename": "kneeling_start_R_003__A408",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/kneel/kneeling_stop_003__A051.png",
+      "filename": "kneeling_stop_003__A051",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/kneel/kneeling_stop_003__A167.png",
+      "filename": "kneeling_stop_003__A167",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/known_dimension_support/come_up_50cm_box_R_002__A053.png",
+      "filename": "come_up_50cm_box_R_002__A053",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/ladder/ladder_slide_down_R_303__A302.png",
+      "filename": "ladder_slide_down_R_303__A302",
+      "group": "ladder",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/obstacle_clearance/jump_over_obstacle_2m_L_003__A415.png",
+      "filename": "jump_over_obstacle_2m_L_003__A415",
+      "group": "obstacle_clearance",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/change_idle_crawl_to_idle_crawl_right_002__A129.png",
+      "filename": "change_idle_crawl_to_idle_crawl_right_002__A129",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_225_004__A131.png",
+      "filename": "crawl_ff_loop_225_004__A131",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_225_R_001__A215.png",
+      "filename": "crawl_ff_loop_225_R_001__A215",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_225_R_003__A233.png",
+      "filename": "crawl_ff_loop_225_R_003__A233",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_270_R_001__A216.png",
+      "filename": "crawl_ff_loop_270_R_001__A216",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_315_005__A131.png",
+      "filename": "crawl_ff_loop_315_005__A131",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_360_R_002__A230.png",
+      "filename": "crawl_ff_loop_360_R_002__A230",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_loop_360_R_003__A230.png",
+      "filename": "crawl_ff_loop_360_R_003__A230",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_180_R_001__A214.png",
+      "filename": "crawl_ff_start_180_R_001__A214",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_180_R_004__A127.png",
+      "filename": "crawl_ff_start_180_R_004__A127",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_225_002__A133.png",
+      "filename": "crawl_ff_start_225_002__A133",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_225_R_001__A230.png",
+      "filename": "crawl_ff_start_225_R_001__A230",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_270_R_002__A233.png",
+      "filename": "crawl_ff_start_270_R_002__A233",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_315_001__A130.png",
+      "filename": "crawl_ff_start_315_001__A130",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_315_001__A132.png",
+      "filename": "crawl_ff_start_315_001__A132",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_315_R_003__A232.png",
+      "filename": "crawl_ff_start_315_R_003__A232",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_start_360_002__A130.png",
+      "filename": "crawl_ff_start_360_002__A130",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_stop_180_R_001__A230.png",
+      "filename": "crawl_ff_stop_180_R_001__A230",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_stop_225_006__A131.png",
+      "filename": "crawl_ff_stop_225_006__A131",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/crawl_ff_stop_225_R_003__A215.png",
+      "filename": "crawl_ff_stop_225_R_003__A215",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/idle_crawl_right_to_idle_crawl_R_003__A229.png",
+      "filename": "idle_crawl_right_to_idle_crawl_R_003__A229",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/idle_crawl_start_001__A233.png",
+      "filename": "idle_crawl_start_001__A233",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/idle_crawl_stop_001__A128.png",
+      "filename": "idle_crawl_stop_001__A128",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/idle_crawl_stop_002__A232.png",
+      "filename": "idle_crawl_stop_002__A232",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/idle_crawl_to_idle_crawl_right_R_003__A232.png",
+      "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/turn_crawl_270_R_003__A217.png",
+      "filename": "turn_crawl_270_R_003__A217",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/prone/turn_crawl_270_R_003__A229.png",
+      "filename": "turn_crawl_270_R_003__A229",
+      "group": "prone",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_loop_001__A030.png",
+      "filename": "mohak_backward_loop_001__A030",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_loop_001__A127.png",
+      "filename": "mohak_backward_loop_001__A127",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_loop_002__A127.png",
+      "filename": "mohak_backward_loop_002__A127",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_loop_003__A127.png",
+      "filename": "mohak_backward_loop_003__A127",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_start_001__A029.png",
+      "filename": "mohak_backward_start_001__A029",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_start_003__A029.png",
+      "filename": "mohak_backward_start_003__A029",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_start_003__A035.png",
+      "filename": "mohak_backward_start_003__A035",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_start_004__A030.png",
+      "filename": "mohak_backward_start_004__A030",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_backward_stop_002__A031.png",
+      "filename": "mohak_backward_stop_002__A031",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_forward_loop_003__A127.png",
+      "filename": "mohak_forward_loop_003__A127",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_forward_start_001__A129.png",
+      "filename": "mohak_forward_start_001__A129",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_forward_stop_001__A120.png",
+      "filename": "mohak_forward_stop_001__A120",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_loop_002__A029.png",
+      "filename": "mohak_loop_002__A029",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_loop_002__A031.png",
+      "filename": "mohak_loop_002__A031",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_loop_003__A029.png",
+      "filename": "mohak_loop_003__A029",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_start_001__A031.png",
+      "filename": "mohak_start_001__A031",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_turn_000_004__A030.png",
+      "filename": "mohak_turn_000_004__A030",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_turn_090_003__A029.png",
+      "filename": "mohak_turn_090_003__A029",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/mohak_turn_360_001__A120.png",
+      "filename": "mohak_turn_360_001__A120",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/on_all_fours_idle_loop_001__A202.png",
+      "filename": "on_all_fours_idle_loop_001__A202",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/on_all_fours_turn_270_R_003__A202.png",
+      "filename": "on_all_fours_turn_270_R_003__A202",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/quadruped/on_all_fours_turn_360_R_002__A201.png",
+      "filename": "on_all_fours_turn_360_R_002__A201",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/stairs/stairs_climbing_up_start_R_101__A301.png",
+      "filename": "stairs_climbing_up_start_R_101__A301",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/wall_contact/drinking_wall_leaning_mug_090_R_003__A282.png",
+      "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+      "group": "wall_contact",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/wall_contact/drinking_wall_leaning_mug_360_R_003__A282.png",
+      "filename": "drinking_wall_leaning_mug_360_R_003__A282",
+      "group": "wall_contact",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "targets/viz/wall_contact/idle_to_wall_leaning_idle_360_R_002__A289.png",
+      "filename": "idle_to_wall_leaning_idle_360_R_002__A289",
+      "group": "wall_contact",
+      "version": "v7",
+      "reason": "main_target_review"
+    },
+    {
+      "file": "viz/box_support/jump_form_box_to_safety_roll_180_R_001__A500.png",
+      "filename": "jump_form_box_to_safety_roll_180_R_001__A500",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/box_support/jump_form_box_to_safety_roll_180_R_001__A501.png",
+      "filename": "jump_form_box_to_safety_roll_180_R_001__A501",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/box_support/jump_form_box_to_safety_roll_360_R_001__A501.png",
+      "filename": "jump_form_box_to_safety_roll_360_R_001__A501",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/box_support/jump_form_box_to_safety_roll_360_R_001__A502.png",
+      "filename": "jump_form_box_to_safety_roll_360_R_001__A502",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/box_support/jump_form_box_to_safety_roll_360_R_001__A503.png",
+      "filename": "jump_form_box_to_safety_roll_360_R_001__A503",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/box_support/jump_to_shoulder_roll_R_001__A305.png",
+      "filename": "jump_to_shoulder_roll_R_001__A305",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/box_support/jump_to_shoulder_roll_R_002__A305.png",
+      "filename": "jump_to_shoulder_roll_R_002__A305",
+      "group": "box_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/kneel/kneeling_loop_001__A409.png",
+      "filename": "kneeling_loop_001__A409",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "L1_review"
+    },
+    {
+      "file": "viz/kneel/kneeling_start_003__A184.png",
+      "filename": "kneeling_start_003__A184",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "L1_review"
+    },
+    {
+      "file": "viz/kneel/kneeling_stop_002__A023.png",
+      "filename": "kneeling_stop_002__A023",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "L1_review"
+    },
+    {
+      "file": "viz/kneel/kneeling_stop_002__A037.png",
+      "filename": "kneeling_stop_002__A037",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "L1_review"
+    },
+    {
+      "file": "viz/kneel/kneeling_stop_003__A097.png",
+      "filename": "kneeling_stop_003__A097",
+      "group": "kneel",
+      "version": "v7",
+      "reason": "L1_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_001__A281.png",
+      "filename": "come_down_50cm_box_R_001__A281",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_001__A330.png",
+      "filename": "come_down_50cm_box_R_001__A330",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_001__A359.png",
+      "filename": "come_down_50cm_box_R_001__A359",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_001__A371.png",
+      "filename": "come_down_50cm_box_R_001__A371",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_001__A474.png",
+      "filename": "come_down_50cm_box_R_001__A474",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A049.png",
+      "filename": "come_down_50cm_box_R_002__A049",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A107.png",
+      "filename": "come_down_50cm_box_R_002__A107",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A219.png",
+      "filename": "come_down_50cm_box_R_002__A219",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A249.png",
+      "filename": "come_down_50cm_box_R_002__A249",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A320.png",
+      "filename": "come_down_50cm_box_R_002__A320",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A341.png",
+      "filename": "come_down_50cm_box_R_002__A341",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A342.png",
+      "filename": "come_down_50cm_box_R_002__A342",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A344.png",
+      "filename": "come_down_50cm_box_R_002__A344",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_002__A359.png",
+      "filename": "come_down_50cm_box_R_002__A359",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A045.png",
+      "filename": "come_down_50cm_box_R_003__A045",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A048.png",
+      "filename": "come_down_50cm_box_R_003__A048",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A088.png",
+      "filename": "come_down_50cm_box_R_003__A088",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A109.png",
+      "filename": "come_down_50cm_box_R_003__A109",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A144.png",
+      "filename": "come_down_50cm_box_R_003__A144",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A150.png",
+      "filename": "come_down_50cm_box_R_003__A150",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A202.png",
+      "filename": "come_down_50cm_box_R_003__A202",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A219.png",
+      "filename": "come_down_50cm_box_R_003__A219",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A220.png",
+      "filename": "come_down_50cm_box_R_003__A220",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A242.png",
+      "filename": "come_down_50cm_box_R_003__A242",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A322.png",
+      "filename": "come_down_50cm_box_R_003__A322",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A359.png",
+      "filename": "come_down_50cm_box_R_003__A359",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A378.png",
+      "filename": "come_down_50cm_box_R_003__A378",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A393.png",
+      "filename": "come_down_50cm_box_R_003__A393",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_003__A481.png",
+      "filename": "come_down_50cm_box_R_003__A481",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_004__A219.png",
+      "filename": "come_down_50cm_box_R_004__A219",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_004__A222.png",
+      "filename": "come_down_50cm_box_R_004__A222",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_004__A249.png",
+      "filename": "come_down_50cm_box_R_004__A249",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_004__A250.png",
+      "filename": "come_down_50cm_box_R_004__A250",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_004__A251.png",
+      "filename": "come_down_50cm_box_R_004__A251",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_004__A252.png",
+      "filename": "come_down_50cm_box_R_004__A252",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_down_50cm_box_R_005__A056.png",
+      "filename": "come_down_50cm_box_R_005__A056",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_001__A206.png",
+      "filename": "come_up_50cm_box_R_001__A206",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_001__A458.png",
+      "filename": "come_up_50cm_box_R_001__A458",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A065.png",
+      "filename": "come_up_50cm_box_R_002__A065",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A067.png",
+      "filename": "come_up_50cm_box_R_002__A067",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A068.png",
+      "filename": "come_up_50cm_box_R_002__A068",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A072.png",
+      "filename": "come_up_50cm_box_R_002__A072",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A160.png",
+      "filename": "come_up_50cm_box_R_002__A160",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A188.png",
+      "filename": "come_up_50cm_box_R_002__A188",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A252.png",
+      "filename": "come_up_50cm_box_R_002__A252",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_002__A282.png",
+      "filename": "come_up_50cm_box_R_002__A282",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_003__A053.png",
+      "filename": "come_up_50cm_box_R_003__A053",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_003__A065.png",
+      "filename": "come_up_50cm_box_R_003__A065",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_003__A252.png",
+      "filename": "come_up_50cm_box_R_003__A252",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_004__A047.png",
+      "filename": "come_up_50cm_box_R_004__A047",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_004__A065.png",
+      "filename": "come_up_50cm_box_R_004__A065",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/come_up_50cm_box_R_004__A067.png",
+      "filename": "come_up_50cm_box_R_004__A067",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/jump_off_front_50cm_002__A416.png",
+      "filename": "jump_off_front_50cm_002__A416",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_down_50cm_box_R_002__A143.png",
+      "filename": "lift_crate_come_down_50cm_box_R_002__A143",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_down_50cm_box_R_002__A162.png",
+      "filename": "lift_crate_come_down_50cm_box_R_002__A162",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A159.png",
+      "filename": "lift_crate_come_up_50cm_box_R_001__A159",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A160.png",
+      "filename": "lift_crate_come_up_50cm_box_R_001__A160",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A161.png",
+      "filename": "lift_crate_come_up_50cm_box_R_001__A161",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A162.png",
+      "filename": "lift_crate_come_up_50cm_box_R_001__A162",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A202.png",
+      "filename": "lift_crate_come_up_50cm_box_R_001__A202",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A140.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A140",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A142.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A142",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A160.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A160",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A199.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A199",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A202.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A202",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A249.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A249",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A250.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A250",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A251.png",
+      "filename": "lift_crate_come_up_50cm_box_R_002__A251",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A140.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A140",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A159.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A159",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A160.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A160",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A161.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A161",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A202.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A202",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A250.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A250",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A251.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A251",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A253.png",
+      "filename": "lift_crate_come_up_50cm_box_R_003__A253",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_004__A140.png",
+      "filename": "lift_crate_come_up_50cm_box_R_004__A140",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png",
+      "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A251.png",
+      "filename": "lift_crate_come_up_50cm_box_R_005__A251",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A252.png",
+      "filename": "lift_crate_come_up_50cm_box_R_005__A252",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A253.png",
+      "filename": "lift_crate_come_up_50cm_box_R_005__A253",
+      "group": "known_dimension_support",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/prone/crawl_ff_loop_225_001__A133.png",
+      "filename": "crawl_ff_loop_225_001__A133",
+      "group": "prone",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/prone/crawl_ff_loop_225_002__A131.png",
+      "filename": "crawl_ff_loop_225_002__A131",
+      "group": "prone",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/prone/crawl_ff_loop_225_003__A132.png",
+      "filename": "crawl_ff_loop_225_003__A132",
+      "group": "prone",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/prone/crawl_ff_start_225_R_002__A233.png",
+      "filename": "crawl_ff_start_225_R_002__A233",
+      "group": "prone",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/prone/crawl_ff_start_315_R_002__A233.png",
+      "filename": "crawl_ff_start_315_R_002__A233",
+      "group": "prone",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/quadruped/mohak_backward_stop_004__A121.png",
+      "filename": "mohak_backward_stop_004__A121",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/quadruped/on_all_fours_backward_stop_R_003__A200.png",
+      "filename": "on_all_fours_backward_stop_R_003__A200",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/quadruped/on_all_fours_forward_start_R_003__A199.png",
+      "filename": "on_all_fours_forward_start_R_003__A199",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/quadruped/on_all_fours_forward_stop_R_004__A199.png",
+      "filename": "on_all_fours_forward_stop_R_004__A199",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/quadruped/spider_crawl_R_004__A361.png",
+      "filename": "spider_crawl_R_004__A361",
+      "group": "quadruped",
+      "version": "v7",
+      "reason": "L2_review"
+    },
+    {
+      "file": "viz/stairs/stairs_climbing_down_loop_R_102__A301.png",
+      "filename": "stairs_climbing_down_loop_R_102__A301",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/stairs/stairs_climbing_jog_down_loop_R_001__A300.png",
+      "filename": "stairs_climbing_jog_down_loop_R_001__A300",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png",
+      "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/stairs/stairs_climbing_up_start_R_001__A300.png",
+      "filename": "stairs_climbing_up_start_R_001__A300",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/stairs/stairs_slip_R_003__A300.png",
+      "filename": "stairs_slip_R_003__A300",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/stairs/stairs_slip_R_004__A300.png",
+      "filename": "stairs_slip_R_004__A300",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    },
+    {
+      "file": "viz/stairs/stairs_slip_R_007__A300.png",
+      "filename": "stairs_slip_R_007__A300",
+      "group": "stairs",
+      "version": "v7",
+      "reason": "S_review"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493",
+    "group": "crouch",
+    "frames": 573,
+    "fit_seconds": 33.969,
+    "render_seconds": 75.137,
+    "total_seconds": 109.106
+  },
+  {
+    "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492",
+    "group": "crouch",
+    "frames": 573,
+    "fit_seconds": 36.164,
+    "render_seconds": 65.761,
+    "total_seconds": 101.925
+  },
+  {
+    "filename": "crouch_idle_002__A248",
+    "group": "crouch",
+    "frames": 380,
+    "fit_seconds": 33.793,
+    "render_seconds": 64.408,
+    "total_seconds": 98.201
+  },
+  {
+    "filename": "patches_crouch_R_002__A430",
+    "group": "crouch",
+    "frames": 350,
+    "fit_seconds": 38.395,
+    "render_seconds": 56.472,
+    "total_seconds": 94.867
+  },
+  {
+    "filename": "wall_leaning_idle_360_R_003__A285",
+    "group": "wall_contact",
+    "frames": 416,
+    "fit_seconds": 34.358,
+    "render_seconds": 46.675,
+    "total_seconds": 81.033
+  },
+  {
+    "filename": "kneeling_loop_001__A101",
+    "group": "kneel",
+    "frames": 403,
+    "fit_seconds": 30.577,
+    "render_seconds": 50.334,
+    "total_seconds": 80.911
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+    "group": "wall_contact",
+    "frames": 352,
+    "fit_seconds": 30.329,
+    "render_seconds": 48.357,
+    "total_seconds": 78.686
+  },
+  {
+    "filename": "crouch_idle_right_R_002__A245",
+    "group": "crouch",
+    "frames": 331,
+    "fit_seconds": 27.906,
+    "render_seconds": 49.506,
+    "total_seconds": 77.412
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_090_R_004__A291",
+    "group": "wall_contact",
+    "frames": 330,
+    "fit_seconds": 25.626,
+    "render_seconds": 48.447,
+    "total_seconds": 74.073
+  },
+  {
+    "filename": "crouch_idle_right_R_003__A245",
+    "group": "crouch",
+    "frames": 286,
+    "fit_seconds": 22.385,
+    "render_seconds": 50.649,
+    "total_seconds": 73.034
+  }
+]

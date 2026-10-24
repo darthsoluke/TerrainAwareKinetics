@@ -1,0 +1,123 @@
+{
+  "name": "S",
+  "command": [
+    "${PFNN_PROJECT}/env/bin/python",
+    "-u",
+    "runs/bones_fit_v7_coord/timed_runner.py",
+    "--screen-run",
+    "runs/bones_screen_v1_full",
+    "--output",
+    "runs/bones_fit_v7_S",
+    "--viz-per-stem",
+    "2",
+    "--variants",
+    "4",
+    "--skin-stride",
+    "2",
+    "--groups",
+    "known_dimension_support",
+    "box_support",
+    "stairs",
+    "obstacle_clearance",
+    "ladder",
+    "flat_control",
+    "--worst-per-group",
+    "3",
+    "--gif",
+    "--workers",
+    "20"
+  ],
+  "output": "runs/bones_fit_v7_S",
+  "exit_code": 0,
+  "wall_seconds": 1616.6,
+  "fit_elapsed_seconds": 1615.4,
+  "fitted": 2907,
+  "failed": 0,
+  "rendered": 108,
+  "render_failures": [],
+  "minimum_available_bytes": 397219565568,
+  "peak_unavailable_bytes": 138498301952,
+  "timing_rows": 2907,
+  "slowest10": [
+    {
+      "filename": "Turn_Start_Jog_0180_001__A019",
+      "group": "flat_control",
+      "frames": 2727,
+      "fit_seconds": 176.018,
+      "render_seconds": 0.0,
+      "total_seconds": 176.018
+    },
+    {
+      "filename": "Turn_Start_Jog_0135_001__A018",
+      "group": "flat_control",
+      "frames": 2919,
+      "fit_seconds": 150.255,
+      "render_seconds": 0.0,
+      "total_seconds": 150.255
+    },
+    {
+      "filename": "Turn_Start_Jog_0000_001__A018",
+      "group": "flat_control",
+      "frames": 2444,
+      "fit_seconds": 106.805,
+      "render_seconds": 0.0,
+      "total_seconds": 106.805
+    },
+    {
+      "filename": "Turn_Start_Jog_0360_001__A020",
+      "group": "flat_control",
+      "frames": 2120,
+      "fit_seconds": 89.756,
+      "render_seconds": 0.0,
+      "total_seconds": 89.756
+    },
+    {
+      "filename": "ladder_climbing_idle_R_101__A301",
+      "group": "ladder",
+      "frames": 419,
+      "fit_seconds": 34.135,
+      "render_seconds": 46.095,
+      "total_seconds": 80.23
+    },
+    {
+      "filename": "neutral_idle_loop_002__A105",
+      "group": "flat_control",
+      "frames": 406,
+      "fit_seconds": 27.947,
+      "render_seconds": 39.273,
+      "total_seconds": 67.22
+    },
+    {
+      "filename": "stairs_slip_R_004__A300",
+      "group": "stairs",
+      "frames": 202,
+      "fit_seconds": 30.015,
+      "render_seconds": 36.858,
+      "total_seconds": 66.873
+    },
+    {
+      "filename": "neutral_idle_loop_003__A104",
+      "group": "flat_control",
+      "frames": 356,
+      "fit_seconds": 25.425,
+      "render_seconds": 38.497,
+      "total_seconds": 63.922
+    },
+    {
+      "filename": "jump_on_box_230cm_102__A305",
+      "group": "known_dimension_support",
+      "frames": 234,
+      "fit_seconds": 26.581,
+      "render_seconds": 36.22,
+      "total_seconds": 62.801
+    },
+    {
+      "filename": "walk_backward_loop_003__A039",
+      "group": "flat_control",
+      "frames": 420,
+      "fit_seconds": 28.191,
+      "render_seconds": 33.941,
+      "total_seconds": 62.132
+    }
+  ]
+}

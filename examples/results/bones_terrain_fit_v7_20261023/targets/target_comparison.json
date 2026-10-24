@@ -1,0 +1,7388 @@
+[
+  {
+    "filename": "change_idle_crawl_to_idle_crawl_right_002__A129",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 4,
+        "kept": 4,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.012640770291909575,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06494704557582737
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.015348270069807768,
+          "p99_m": 0.015342280697077514,
+          "frames_over_report": 0,
+          "frames": 64
+        },
+        "maximal": {
+          "max_m": 0.01654380513355136,
+          "p99_m": 0.016146234702318907,
+          "frames_over_report": 0,
+          "frames": 64
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 4,
+        "kept": 0,
+        "dropped": 4,
+        "dropped_by": {
+          "body_rests_lower": 4
+        },
+        "median_foot_drop_median_m": 0.012640770291909575,
+        "median_body_drop_median_m": 0.06598418555222452
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 64
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 64
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A053",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "known_dimension_support",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 3,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.004164010286331177,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.6949355418910272
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.005526989698410034,
+          "p99_m": 0.005504697561264038,
+          "frames_over_report": 0,
+          "frames": 56
+        },
+        "maximal": {
+          "max_m": 0.005526989698410034,
+          "p99_m": 0.005504697561264038,
+          "frames_over_report": 0,
+          "frames": 56
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "known_dimension_support",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 3,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.004164010286331177,
+        "median_body_drop_median_m": -0.07635211944580078
+      },
+      "levels_m": [
+        0.0,
+        0.6949355418910272
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.005526989698410034,
+          "p99_m": 0.005504697561264038,
+          "frames_over_report": 0,
+          "frames": 56
+        },
+        "maximal": {
+          "max_m": 0.005526989698410034,
+          "p99_m": 0.005504697561264038,
+          "frames_over_report": 0,
+          "frames": 56
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_225_004__A131",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 8,
+        "maximal": 8
+      },
+      "patch_checks": {
+        "checked": 11,
+        "kept": 11,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.0073815323412418365,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06667512349784374
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01893731951713562,
+          "p99_m": 0.01732983186841011,
+          "frames_over_report": 0,
+          "frames": 154
+        },
+        "maximal": {
+          "max_m": 0.019404945895075798,
+          "p99_m": 0.018297256287187338,
+          "frames_over_report": 0,
+          "frames": 154
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 3
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 8,
+        "maximal": 8
+      },
+      "patch_checks": {
+        "checked": 11,
+        "kept": 0,
+        "dropped": 11,
+        "dropped_by": {
+          "body_rests_lower": 11
+        },
+        "median_foot_drop_median_m": 0.0073815323412418365,
+        "median_body_drop_median_m": 0.047765886411070824
+      },
+      "levels_m": [
+        0.0,
+        0.06667512349784374
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019565047696232796,
+          "p99_m": 0.018724799621850252,
+          "frames_over_report": 0,
+          "frames": 154
+        },
+        "maximal": {
+          "max_m": 0.019565047696232796,
+          "p99_m": 0.019157103914767503,
+          "frames_over_report": 0,
+          "frames": 154
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 3
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_001__A215",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 14,
+        "maximal": 14
+      },
+      "patch_checks": {
+        "checked": 9,
+        "kept": 9,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.006968067958950996,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06480643514543771
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018837894313037395,
+          "p99_m": 0.016826984900981185,
+          "frames_over_report": 0,
+          "frames": 134
+        },
+        "maximal": {
+          "max_m": 0.019935867749154568,
+          "p99_m": 0.01901797920465469,
+          "frames_over_report": 0,
+          "frames": 134
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 5
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 6,
+        "maximal": 6
+      },
+      "patch_checks": {
+        "checked": 9,
+        "kept": 0,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9
+        },
+        "median_foot_drop_median_m": 0.006968067958950996,
+        "median_body_drop_median_m": 0.05219567660242319
+      },
+      "levels_m": [
+        0.0,
+        0.06480643514543771
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01685450319200754,
+          "p99_m": 0.01654534384608268,
+          "frames_over_report": 0,
+          "frames": 134
+        },
+        "maximal": {
+          "max_m": 0.019935867749154568,
+          "p99_m": 0.018884406941942863,
+          "frames_over_report": 0,
+          "frames": 134
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 5
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_003__A233",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "patch_checks": {
+        "checked": 14,
+        "kept": 14,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.013227162882685661,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.0713125303387642
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01995426043868065,
+          "p99_m": 0.018920112662017343,
+          "frames_over_report": 0,
+          "frames": 162
+        },
+        "maximal": {
+          "max_m": 0.01995426043868065,
+          "p99_m": 0.019283213987946506,
+          "frames_over_report": 0,
+          "frames": 162
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 7
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 14,
+        "kept": 0,
+        "dropped": 14,
+        "dropped_by": {
+          "body_rests_lower": 14
+        },
+        "median_foot_drop_median_m": 0.013227162882685661,
+        "median_body_drop_median_m": 0.05020351707935333
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 162
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 162
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 7
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_270_R_001__A216",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 143
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 143
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 15
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 143
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 143
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 15
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_315_005__A131",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 160
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 160
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 160
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 160
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_360_R_002__A230",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 9,
+        "maximal": 9
+      },
+      "patch_checks": {
+        "checked": 11,
+        "kept": 11,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.006546621676534414,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06697538875043392
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01943502388894558,
+          "p99_m": 0.019304638728499413,
+          "frames_over_report": 0,
+          "frames": 127
+        },
+        "maximal": {
+          "max_m": 0.019945641979575157,
+          "p99_m": 0.01940318875014782,
+          "frames_over_report": 0,
+          "frames": 127
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 4
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 5,
+        "maximal": 5
+      },
+      "patch_checks": {
+        "checked": 11,
+        "kept": 0,
+        "dropped": 11,
+        "dropped_by": {
+          "body_rests_lower": 11
+        },
+        "median_foot_drop_median_m": 0.006546621676534414,
+        "median_body_drop_median_m": 0.05387023836374283
+      },
+      "levels_m": [
+        0.0,
+        0.06697538875043392
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01943502388894558,
+          "p99_m": 0.019304638728499413,
+          "frames_over_report": 0,
+          "frames": 127
+        },
+        "maximal": {
+          "max_m": 0.019945641979575157,
+          "p99_m": 0.01940318875014782,
+          "frames_over_report": 0,
+          "frames": 127
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 4
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "crawl_ff_loop_360_R_003__A230",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "patch_checks": {
+        "checked": 18,
+        "kept": 18,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.008904802612960339,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.07227092310786247
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018533093854784966,
+          "p99_m": 0.01842518523335457,
+          "frames_over_report": 0,
+          "frames": 134
+        },
+        "maximal": {
+          "max_m": 0.019961228594183922,
+          "p99_m": 0.019291626363992675,
+          "frames_over_report": 0,
+          "frames": 134
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 1
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 7,
+        "maximal": 7
+      },
+      "patch_checks": {
+        "checked": 18,
+        "kept": 0,
+        "dropped": 18,
+        "dropped_by": {
+          "body_rests_lower": 18
+        },
+        "median_foot_drop_median_m": 0.008904802612960339,
+        "median_body_drop_median_m": 0.058310008607804775
+      },
+      "levels_m": [
+        0.0,
+        0.07227092310786247
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018533093854784966,
+          "p99_m": 0.01842518523335457,
+          "frames_over_report": 0,
+          "frames": 134
+        },
+        "maximal": {
+          "max_m": 0.019961228594183922,
+          "p99_m": 0.019291626363992675,
+          "frames_over_report": 0,
+          "frames": 134
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 1
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "crawl_ff_start_180_R_001__A214",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "patch_checks": {
+        "checked": 27,
+        "kept": 27,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.010191760957241058,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06792365096509456
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01842679549008608,
+          "p99_m": 0.017896126192063093,
+          "frames_over_report": 0,
+          "frames": 174
+        },
+        "maximal": {
+          "max_m": 0.019524069037288427,
+          "p99_m": 0.019033820624463266,
+          "frames_over_report": 0,
+          "frames": 174
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 5
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 27,
+        "kept": 0,
+        "dropped": 27,
+        "dropped_by": {
+          "body_rests_lower": 27
+        },
+        "median_foot_drop_median_m": 0.010191760957241058,
+        "median_body_drop_median_m": 0.05783781222999096
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 174
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 174
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 5
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_180_R_004__A127",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 6,
+        "maximal": 6
+      },
+      "patch_checks": {
+        "checked": 10,
+        "kept": 10,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.009253435768187046,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.061933514699339866
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01966373436152935,
+          "p99_m": 0.019642559271305798,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.01966373436152935,
+          "p99_m": 0.019642559271305798,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 17
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 5,
+        "maximal": 5
+      },
+      "patch_checks": {
+        "checked": 10,
+        "kept": 1,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9
+        },
+        "median_foot_drop_median_m": 0.009253435768187046,
+        "median_body_drop_median_m": 0.040588592644780874
+      },
+      "levels_m": [
+        0.0,
+        0.061933514699339866
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01966373436152935,
+          "p99_m": 0.01926094256341457,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.01966373436152935,
+          "p99_m": 0.019642559271305798,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 17
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_225_002__A133",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 5,
+        "maximal": 5
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 6,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.009275197982788086,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06042086631059647
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01933475397527218,
+          "p99_m": 0.019311976730823518,
+          "frames_over_report": 0,
+          "frames": 99
+        },
+        "maximal": {
+          "max_m": 0.01933475397527218,
+          "p99_m": 0.019311976730823518,
+          "frames_over_report": 0,
+          "frames": 99
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 16
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 6,
+        "maximal": 6
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6
+        },
+        "median_foot_drop_median_m": 0.009275197982788086,
+        "median_body_drop_median_m": 0.05704345926642418
+      },
+      "levels_m": [
+        0.0,
+        0.06042086631059647
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01933475397527218,
+          "p99_m": 0.019311976730823518,
+          "frames_over_report": 0,
+          "frames": 99
+        },
+        "maximal": {
+          "max_m": 0.01933475397527218,
+          "p99_m": 0.019311976730823518,
+          "frames_over_report": 0,
+          "frames": 99
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 16
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_225_R_001__A230",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 9,
+        "maximal": 9
+      },
+      "patch_checks": {
+        "checked": 19,
+        "kept": 17,
+        "dropped": 2,
+        "dropped_by": {
+          "body_under_sole": 2,
+          "foot_lower_than_sole": 1
+        },
+        "median_foot_drop_median_m": 0.016004737466573715,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.09352020896971226
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01988598145544529,
+          "p99_m": 0.01875111532397567,
+          "frames_over_report": 0,
+          "frames": 159
+        },
+        "maximal": {
+          "max_m": 0.01988598145544529,
+          "p99_m": 0.019517911747097966,
+          "frames_over_report": 0,
+          "frames": 159
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 4
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 19,
+        "kept": 0,
+        "dropped": 19,
+        "dropped_by": {
+          "body_rests_lower": 19,
+          "body_under_sole": 2,
+          "foot_lower_than_sole": 1
+        },
+        "median_foot_drop_median_m": 0.016004737466573715,
+        "median_body_drop_median_m": 0.0791331734508276
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 159
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 159
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 4
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "crawl_ff_start_270_R_002__A233",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "patch_checks": {
+        "checked": 14,
+        "kept": 14,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.008088049478828907,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.09733821224421263
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018528546206653118,
+          "p99_m": 0.018192979842424385,
+          "frames_over_report": 0,
+          "frames": 134
+        },
+        "maximal": {
+          "max_m": 0.019843767397105694,
+          "p99_m": 0.01935307897627352,
+          "frames_over_report": 0,
+          "frames": 134
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 14,
+        "kept": 0,
+        "dropped": 14,
+        "dropped_by": {
+          "body_rests_lower": 14
+        },
+        "median_foot_drop_median_m": 0.008088049478828907,
+        "median_body_drop_median_m": 0.050793799106031656
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 134
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 134
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_315_001__A130",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 5,
+        "kept": 5,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.008034244179725647,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06828341014683247
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.013111075386404991,
+          "p99_m": 0.012822617329657077,
+          "frames_over_report": 0,
+          "frames": 132
+        },
+        "maximal": {
+          "max_m": 0.019329892471432686,
+          "p99_m": 0.018789584711194036,
+          "frames_over_report": 0,
+          "frames": 132
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 13
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 5,
+        "kept": 2,
+        "dropped": 3,
+        "dropped_by": {
+          "body_rests_lower": 3
+        },
+        "median_foot_drop_median_m": 0.008034244179725647,
+        "median_body_drop_median_m": 0.03890812397003174
+      },
+      "levels_m": [
+        0.0,
+        0.06828341014683247
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.013111075386404991,
+          "p99_m": 0.012822617329657077,
+          "frames_over_report": 0,
+          "frames": 132
+        },
+        "maximal": {
+          "max_m": 0.019329892471432686,
+          "p99_m": 0.018789584711194036,
+          "frames_over_report": 0,
+          "frames": 132
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 13
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_315_001__A132",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 5,
+        "maximal": 5
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 6,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.008110914379358292,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06608489289879799
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019559837877750397,
+          "p99_m": 0.01938384234905243,
+          "frames_over_report": 0,
+          "frames": 133
+        },
+        "maximal": {
+          "max_m": 0.019559837877750397,
+          "p99_m": 0.01938384234905243,
+          "frames_over_report": 0,
+          "frames": 133
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6
+        },
+        "median_foot_drop_median_m": 0.008110914379358292,
+        "median_body_drop_median_m": 0.05558715295046568
+      },
+      "levels_m": [
+        0.0,
+        0.06608489289879799
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019559837877750397,
+          "p99_m": 0.01938384234905243,
+          "frames_over_report": 0,
+          "frames": 133
+        },
+        "maximal": {
+          "max_m": 0.019559837877750397,
+          "p99_m": 0.01938384234905243,
+          "frames_over_report": 0,
+          "frames": 133
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_315_R_003__A232",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "patch_checks": {
+        "checked": 11,
+        "kept": 11,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.005870266351848841,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.07238871401175856
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019031306263059378,
+          "p99_m": 0.018303127344697714,
+          "frames_over_report": 0,
+          "frames": 139
+        },
+        "maximal": {
+          "max_m": 0.019746651407331228,
+          "p99_m": 0.019668799322098494,
+          "frames_over_report": 0,
+          "frames": 139
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 5
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 5,
+        "maximal": 5
+      },
+      "patch_checks": {
+        "checked": 11,
+        "kept": 1,
+        "dropped": 10,
+        "dropped_by": {
+          "body_rests_lower": 10
+        },
+        "median_foot_drop_median_m": 0.005870266351848841,
+        "median_body_drop_median_m": 0.050128161907196045
+      },
+      "levels_m": [
+        0.0,
+        0.07238871401175856
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.016016082372516394,
+          "p99_m": 0.015109436344355348,
+          "frames_over_report": 0,
+          "frames": 139
+        },
+        "maximal": {
+          "max_m": 0.019239579793065786,
+          "p99_m": 0.019045361038297418,
+          "frames_over_report": 0,
+          "frames": 139
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 5
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_start_360_002__A130",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 6,
+        "maximal": 6
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 8,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.010371429845690727,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06442122325301171
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019803572446107864,
+          "p99_m": 0.019707512781023978,
+          "frames_over_report": 0,
+          "frames": 117
+        },
+        "maximal": {
+          "max_m": 0.019803572446107864,
+          "p99_m": 0.019707512781023978,
+          "frames_over_report": 0,
+          "frames": 117
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 17
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 7,
+        "maximal": 7
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 3,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": 5
+        },
+        "median_foot_drop_median_m": 0.010371429845690727,
+        "median_body_drop_median_m": 0.032964788377285004
+      },
+      "levels_m": [
+        0.0,
+        0.06442122325301171
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019803572446107864,
+          "p99_m": 0.019707512781023978,
+          "frames_over_report": 0,
+          "frames": 117
+        },
+        "maximal": {
+          "max_m": 0.019803572446107864,
+          "p99_m": 0.019707512781023978,
+          "frames_over_report": 0,
+          "frames": 117
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 17
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_stop_180_R_001__A230",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "patch_checks": {
+        "checked": 13,
+        "kept": 12,
+        "dropped": 1,
+        "dropped_by": {
+          "body_under_sole": 1,
+          "foot_lower_than_sole": 1
+        },
+        "median_foot_drop_median_m": 0.02114647999405861,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.09519468441605568
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019898969680070877,
+          "p99_m": 0.019416398704051974,
+          "frames_over_report": 0,
+          "frames": 152
+        },
+        "maximal": {
+          "max_m": 0.019898969680070877,
+          "p99_m": 0.01947295106947422,
+          "frames_over_report": 0,
+          "frames": 152
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 13,
+        "kept": 0,
+        "dropped": 13,
+        "dropped_by": {
+          "body_rests_lower": 13,
+          "body_under_sole": 1,
+          "foot_lower_than_sole": 1
+        },
+        "median_foot_drop_median_m": 0.02114647999405861,
+        "median_body_drop_median_m": 0.08151247352361679
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 152
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 152
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_stop_225_006__A131",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 9,
+        "maximal": 9
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 7,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.010563412681221962,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06013818233273924
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01774991094134748,
+          "p99_m": 0.01773324859328568,
+          "frames_over_report": 0,
+          "frames": 160
+        },
+        "maximal": {
+          "max_m": 0.01904981001280248,
+          "p99_m": 0.017745752139016985,
+          "frames_over_report": 0,
+          "frames": 160
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 13
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 0,
+        "dropped": 7,
+        "dropped_by": {
+          "body_rests_lower": 7
+        },
+        "median_foot_drop_median_m": 0.010563412681221962,
+        "median_body_drop_median_m": 0.05228562606498599
+      },
+      "levels_m": [
+        0.0,
+        0.06013818233273924
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01774991094134748,
+          "p99_m": 0.01773324859328568,
+          "frames_over_report": 0,
+          "frames": 160
+        },
+        "maximal": {
+          "max_m": 0.01904981001280248,
+          "p99_m": 0.017741290694102643,
+          "frames_over_report": 0,
+          "frames": 160
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 13
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_003__A215",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 8,
+        "maximal": 8
+      },
+      "patch_checks": {
+        "checked": 9,
+        "kept": 9,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.006521563045680523,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.07087490562349558
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019480694783851504,
+          "p99_m": 0.019325173241086305,
+          "frames_over_report": 0,
+          "frames": 169
+        },
+        "maximal": {
+          "max_m": 0.019480694783851504,
+          "p99_m": 0.019325173241086305,
+          "frames_over_report": 0,
+          "frames": 169
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 1,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 9,
+        "kept": 0,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9
+        },
+        "median_foot_drop_median_m": 0.006521563045680523,
+        "median_body_drop_median_m": 0.05376499518752098
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 169
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 169
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "crouch_ff_start_180_R_001__A147",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 75
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 75
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "lean",
+      "walls": 1,
+      "contact_drift_m": 0.017162370581917608,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 75
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 75
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "lean",
+      "walls": 1,
+      "contact_drift_m": 0.017162370581917608,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crouch_ff_start_270_R_001__A246",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 100
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 100
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.06578251413623859,
+      "wall_rejection_reasons": {
+        "feet_at_the_plane": 1,
+        "no_trunk_or_bracing_hand_contact": 18,
+        "plane_must_move_to_clear_body": 4
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 100
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 100
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.06578251413623859,
+      "wall_rejection_reasons": {
+        "feet_at_the_plane": 1,
+        "no_trunk_or_bracing_hand_contact": 18,
+        "plane_must_move_to_clear_body": 4
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crouch_ff_stop_180_R_001__A247",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 105
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 105
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.02860435332555178,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 17,
+        "feet_at_the_plane": 1,
+        "contact_slides_along_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 105
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 105
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.02860435332555178,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 17,
+        "feet_at_the_plane": 1,
+        "contact_slides_along_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crouch_ff_stop_225_R_001__A244",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 119
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 119
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.03122757926490216,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 20,
+        "feet_at_the_plane": 1,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_partly_explained": 4
+      }
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 119
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 119
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.03122757926490216,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 20,
+        "feet_at_the_plane": 1,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_partly_explained": 4
+      }
+    }
+  },
+  {
+    "filename": "crouch_ff_stop_225_R_003__A195",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 127
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 127
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.018542364330506933,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_partly_explained": 4
+      }
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 127
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 127
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.018542364330506933,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_partly_explained": 4
+      }
+    }
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_001__A247",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.03192879924370162,
+      "wall_rejection_reasons": {
+        "contact_slides_along_plane": 1,
+        "no_trunk_or_bracing_hand_contact": 19
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.03192879924370162,
+      "wall_rejection_reasons": {
+        "contact_slides_along_plane": 1,
+        "no_trunk_or_bracing_hand_contact": 19
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_002__A197",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 80
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 80
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.07207946245033092,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 15,
+        "feet_at_the_plane": 2,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 80
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 80
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.07207946245033092,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 15,
+        "feet_at_the_plane": 2,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "crouch_ff_stop_315_R_002__A194",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.05868601383116134,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 15,
+        "feet_at_the_plane": 2,
+        "plane_must_move_to_clear_body": 6
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.05868601383116134,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 15,
+        "feet_at_the_plane": 2,
+        "plane_must_move_to_clear_body": 6
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "wall_contact",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 176
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 176
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.018453455814301634,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "wall_contact",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 176
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 176
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.018453455814301634,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_360_R_003__A282",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "wall_contact",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 117
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 117
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "lean",
+      "walls": 1,
+      "contact_drift_m": 0.07846051289246736,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 21,
+        "feet_at_the_plane": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "wall_contact",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 117
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 117
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "lean",
+      "walls": 1,
+      "contact_drift_m": 0.07846051289246736,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 21,
+        "feet_at_the_plane": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "idle_crawl_right_to_idle_crawl_R_003__A229",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 3,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.018092937767505646,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.07011772990226746
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01993481069803238,
+          "p99_m": 0.019918251782655716,
+          "frames_over_report": 0,
+          "frames": 71
+        },
+        "maximal": {
+          "max_m": 0.01993481069803238,
+          "p99_m": 0.019918251782655716,
+          "frames_over_report": 0,
+          "frames": 71
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 0,
+        "dropped": 3,
+        "dropped_by": {
+          "body_rests_lower": 3
+        },
+        "median_foot_drop_median_m": 0.018092937767505646,
+        "median_body_drop_median_m": 0.06964889168739319
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 71
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 71
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "idle_crawl_start_001__A233",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 7,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.007415551692247391,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.13020479641854762
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01656441204249859,
+          "p99_m": 0.0163764039054513,
+          "frames_over_report": 0,
+          "frames": 109
+        },
+        "maximal": {
+          "max_m": 0.018777159973978996,
+          "p99_m": 0.018732001185417176,
+          "frames_over_report": 0,
+          "frames": 109
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 2,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": 5
+        },
+        "median_foot_drop_median_m": 0.007415551692247391,
+        "median_body_drop_median_m": 0.07805486023426056
+      },
+      "levels_m": [
+        0.0,
+        0.13020479641854762
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01656441204249859,
+          "p99_m": 0.0163764039054513,
+          "frames_over_report": 0,
+          "frames": 109
+        },
+        "maximal": {
+          "max_m": 0.018777159973978996,
+          "p99_m": 0.018732001185417176,
+          "frames_over_report": 0,
+          "frames": 109
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "idle_crawl_stop_001__A128",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 4,
+        "kept": 4,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.005111612263135612,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.08748000438325107
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.015553365228697658,
+          "p99_m": 0.01528246442787349,
+          "frames_over_report": 0,
+          "frames": 137
+        },
+        "maximal": {
+          "max_m": 0.015553365228697658,
+          "p99_m": 0.01528246442787349,
+          "frames_over_report": 0,
+          "frames": 137
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 4,
+        "kept": 2,
+        "dropped": 2,
+        "dropped_by": {
+          "body_rests_lower": 2
+        },
+        "median_foot_drop_median_m": 0.005111612263135612,
+        "median_body_drop_median_m": 0.0002573429374024272
+      },
+      "levels_m": [
+        0.0,
+        0.08748000438325107
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.015553365228697658,
+          "p99_m": 0.01528246442787349,
+          "frames_over_report": 0,
+          "frames": 137
+        },
+        "maximal": {
+          "max_m": 0.015975525369867682,
+          "p99_m": 0.015492845205590126,
+          "frames_over_report": 0,
+          "frames": 137
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "idle_crawl_stop_002__A232",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 3,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.01567482203245163,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.13682918697595597
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 109
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 109
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 0,
+        "dropped": 3,
+        "dropped_by": {
+          "body_rests_lower": 3
+        },
+        "median_foot_drop_median_m": 0.01567482203245163,
+        "median_body_drop_median_m": 0.08817882835865021
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 109
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 109
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 2,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.013601361308246851,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06895836899057031
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.007592170033603907,
+          "p99_m": 0.007557170484215021,
+          "frames_over_report": 0,
+          "frames": 77
+        },
+        "maximal": {
+          "max_m": 0.016465208027511835,
+          "p99_m": 0.016444981787353753,
+          "frames_over_report": 0,
+          "frames": 77
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 0,
+        "dropped": 2,
+        "dropped_by": {
+          "body_rests_lower": 2
+        },
+        "median_foot_drop_median_m": 0.013601361308246851,
+        "median_body_drop_median_m": 0.06830700347200036
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 77
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 77
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "idle_to_wall_leaning_idle_360_R_002__A289",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "wall_contact",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "lean",
+      "walls": 1,
+      "contact_drift_m": 0.0517043077867283,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "wall_contact",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "lean",
+      "walls": 1,
+      "contact_drift_m": 0.0517043077867283,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "jog_backward_loop_002__A036",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "flat_control",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "flat_control",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "jump_over_obstacle_2m_L_003__A415",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "obstacle_clearance",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 3,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.004755299538373947,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.0907322111306712,
+        2.313380569103174
+      ],
+      "flags": [
+        "merged_small_steps",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        },
+        "maximal": {
+          "max_m": 0.010705279186367989,
+          "p99_m": 0.002464818768203262,
+          "frames_over_report": 0,
+          "frames": 123
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_partly_explained": 4
+      }
+    },
+    "v7": {
+      "group": "obstacle_clearance",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 2,
+        "dropped": 1,
+        "dropped_by": {
+          "body_rests_lower": 1
+        },
+        "median_foot_drop_median_m": 0.004755299538373947,
+        "median_body_drop_median_m": -0.0718928761780262
+      },
+      "levels_m": [
+        0.0,
+        0.0907322111306712
+      ],
+      "flags": [
+        "merged_small_steps",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        },
+        "maximal": {
+          "max_m": 0.010705279186367989,
+          "p99_m": 0.002464818768203262,
+          "frames_over_report": 0,
+          "frames": 123
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "excluded_unmodelled_geometry",
+      "eligibility_before_exclusion": "rejected",
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_partly_explained": 4
+      }
+    }
+  },
+  {
+    "filename": "kneeling_start_003__A167",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 0,
+        "dropped": 2,
+        "dropped_by": {
+          "body_under_sole": 2,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.02961830608546734,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.08393687609350309
+      ],
+      "flags": [
+        "merged_small_steps",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 49
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 49
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 0,
+        "dropped": 2,
+        "dropped_by": {
+          "body_rests_lower": 2,
+          "body_under_sole": 2,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.02961830608546734,
+        "median_body_drop_median_m": 0.0873790206387639
+      },
+      "levels_m": [
+        0.0,
+        0.08393687609350309
+      ],
+      "flags": [
+        "merged_small_steps",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 49
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 49
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "kneeling_start_R_003__A408",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 96
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 96
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 96
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 96
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "kneeling_stop_003__A051",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 1,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.004008010029792786,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 56
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 56
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 0,
+        "dropped": 1,
+        "dropped_by": {
+          "body_rests_lower": 1
+        },
+        "median_foot_drop_median_m": 0.004008010029792786,
+        "median_body_drop_median_m": 0.05485026445239782
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 56
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 56
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "kneeling_stop_003__A167",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 0,
+        "dropped": 1,
+        "dropped_by": {
+          "body_under_sole": 1,
+          "foot_lower_than_sole": 1
+        },
+        "median_foot_drop_median_m": 0.03288048505783081,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "kneel",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 0,
+        "dropped": 1,
+        "dropped_by": {
+          "body_rests_lower": 1,
+          "body_under_sole": 1,
+          "foot_lower_than_sole": 1
+        },
+        "median_foot_drop_median_m": 0.03288048505783081,
+        "median_body_drop_median_m": 0.07804719917476177
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "ladder_slide_down_R_303__A302",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "ladder",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 1,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.011938214302062988,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        1.93874408013653
+      ],
+      "flags": [
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "ladder",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 1,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.011938214302062988,
+        "median_body_drop_median_m": -0.08657145500183105
+      },
+      "levels_m": [
+        0.0,
+        1.93874408013653
+      ],
+      "flags": [
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 22
+      },
+      "eligibility": "excluded_unmodelled_geometry",
+      "eligibility_before_exclusion": "rejected",
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "mohak_backward_loop_001__A030",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 5,
+        "maximal": 5
+      },
+      "patch_checks": {
+        "checked": 12,
+        "kept": 5,
+        "dropped": 7,
+        "dropped_by": {
+          "body_under_sole": 7,
+          "foot_lower_than_sole": 3
+        },
+        "median_foot_drop_median_m": 0.028681619092822075,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.07843918219208718
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019472893327474594,
+          "p99_m": 0.011675585359334937,
+          "frames_over_report": 0,
+          "frames": 160
+        },
+        "maximal": {
+          "max_m": 0.019472893327474594,
+          "p99_m": 0.017448889836668965,
+          "frames_over_report": 0,
+          "frames": 160
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4,
+        "low_posture_unexplained": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 12,
+        "kept": 0,
+        "dropped": 12,
+        "dropped_by": {
+          "body_rests_lower": 12,
+          "body_under_sole": 7,
+          "foot_lower_than_sole": 3
+        },
+        "median_foot_drop_median_m": 0.028681619092822075,
+        "median_body_drop_median_m": 0.06976613588631153
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 160
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 160
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    }
+  },
+  {
+    "filename": "mohak_backward_loop_001__A127",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "patch_checks": {
+        "checked": 13,
+        "kept": 13,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.015514232218265533,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.1125894919037819
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018041690345853567,
+          "p99_m": 0.017688127160072325,
+          "frames_over_report": 0,
+          "frames": 179
+        },
+        "maximal": {
+          "max_m": 0.018041690345853567,
+          "p99_m": 0.017688127160072325,
+          "frames_over_report": 0,
+          "frames": 179
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 2
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 13,
+        "kept": 0,
+        "dropped": 13,
+        "dropped_by": {
+          "body_rests_lower": 13
+        },
+        "median_foot_drop_median_m": 0.015514232218265533,
+        "median_body_drop_median_m": 0.10120322555303574
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 179
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 179
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_loop_002__A127",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "patch_checks": {
+        "checked": 16,
+        "kept": 16,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.015094628557562828,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11450532458722591
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019715300295501947,
+          "p99_m": 0.019350656494498252,
+          "frames_over_report": 0,
+          "frames": 257
+        },
+        "maximal": {
+          "max_m": 0.019715300295501947,
+          "p99_m": 0.019350656494498252,
+          "frames_over_report": 0,
+          "frames": 257
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 1
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 16,
+        "kept": 0,
+        "dropped": 16,
+        "dropped_by": {
+          "body_rests_lower": 16
+        },
+        "median_foot_drop_median_m": 0.015094628557562828,
+        "median_body_drop_median_m": 0.10171259939670563
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 257
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 257
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_loop_003__A127",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 16,
+        "kept": 16,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.012228071689605713,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.10329174980521202
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018739204853773117,
+          "p99_m": 0.017616342119872567,
+          "frames_over_report": 0,
+          "frames": 275
+        },
+        "maximal": {
+          "max_m": 0.019903022795915604,
+          "p99_m": 0.018120106458663937,
+          "frames_over_report": 0,
+          "frames": 275
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 2
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 16,
+        "kept": 0,
+        "dropped": 16,
+        "dropped_by": {
+          "body_rests_lower": 16
+        },
+        "median_foot_drop_median_m": 0.012228071689605713,
+        "median_body_drop_median_m": 0.09316622093319893
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 275
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 275
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_start_001__A029",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 1,
+        "dropped": 1,
+        "dropped_by": {
+          "body_under_sole": 1
+        },
+        "median_foot_drop_median_m": 0.026810767129063606,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.16721045330166817
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 0,
+        "dropped": 2,
+        "dropped_by": {
+          "body_rests_lower": 2,
+          "body_under_sole": 1
+        },
+        "median_foot_drop_median_m": 0.026810767129063606,
+        "median_body_drop_median_m": 0.1233771089464426
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 88
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_start_003__A029",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 2,
+        "dropped": 1,
+        "dropped_by": {
+          "body_under_sole": 1
+        },
+        "median_foot_drop_median_m": 0.024962496012449265,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.1455103626102209
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01606733165681362,
+          "p99_m": 0.007445822954177851,
+          "frames_over_report": 0,
+          "frames": 90
+        },
+        "maximal": {
+          "max_m": 0.01606733165681362,
+          "p99_m": 0.007445822954177851,
+          "frames_over_report": 0,
+          "frames": 90
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 10
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 0,
+        "dropped": 3,
+        "dropped_by": {
+          "body_rests_lower": 3,
+          "body_under_sole": 1
+        },
+        "median_foot_drop_median_m": 0.024962496012449265,
+        "median_body_drop_median_m": 0.1467089131474495
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 90
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 90
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 10
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_start_003__A035",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 9,
+        "kept": 9,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.015296787023544312,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.10192276060581207
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 9,
+        "kept": 0,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9
+        },
+        "median_foot_drop_median_m": 0.015296787023544312,
+        "median_body_drop_median_m": 0.0917755737900734
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 97
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_start_004__A030",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 5,
+        "kept": 2,
+        "dropped": 3,
+        "dropped_by": {
+          "body_under_sole": 3,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.02927655354142189,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.10024394676089286
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019473951309919357,
+          "p99_m": 0.018563926517963403,
+          "frames_over_report": 0,
+          "frames": 83
+        },
+        "maximal": {
+          "max_m": 0.019473951309919357,
+          "p99_m": 0.018563926517963403,
+          "frames_over_report": 0,
+          "frames": 83
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 5,
+        "kept": 0,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": 5,
+          "body_under_sole": 3,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.02927655354142189,
+        "median_body_drop_median_m": 0.08601503819227219
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 83
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 83
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_backward_stop_002__A031",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 3,
+        "dropped": 4,
+        "dropped_by": {
+          "body_under_sole": 4,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.02863973379135132,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.09945507749915122
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.014382399618625641,
+          "p99_m": 0.012780078239738943,
+          "frames_over_report": 0,
+          "frames": 123
+        },
+        "maximal": {
+          "max_m": 0.014382399618625641,
+          "p99_m": 0.012780078239738943,
+          "frames_over_report": 0,
+          "frames": 123
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "feet_at_the_plane": 1,
+        "no_trunk_or_bracing_hand_contact": 21,
+        "plane_must_move_to_clear_body": 2
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 0,
+        "dropped": 7,
+        "dropped_by": {
+          "body_rests_lower": 7,
+          "body_under_sole": 4,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.02863973379135132,
+        "median_body_drop_median_m": 0.08777675032615662
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 123
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "feet_at_the_plane": 1,
+        "no_trunk_or_bracing_hand_contact": 21,
+        "plane_must_move_to_clear_body": 2
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_forward_loop_003__A127",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "patch_checks": {
+        "checked": 12,
+        "kept": 8,
+        "dropped": 4,
+        "dropped_by": {
+          "body_under_sole": 4
+        },
+        "median_foot_drop_median_m": 0.01858603209257126,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11711291879415513
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.010777540504932404,
+          "p99_m": 0.00761352583765984,
+          "frames_over_report": 0,
+          "frames": 168
+        },
+        "maximal": {
+          "max_m": 0.01732512004673481,
+          "p99_m": 0.01216799821704627,
+          "frames_over_report": 0,
+          "frames": 168
+        }
+      },
+      "wall_status": "no_still_segment",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 12,
+        "kept": 0,
+        "dropped": 12,
+        "dropped_by": {
+          "body_rests_lower": 12,
+          "body_under_sole": 4
+        },
+        "median_foot_drop_median_m": 0.01858603209257126,
+        "median_body_drop_median_m": 0.10646028444170952
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 168
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 168
+        }
+      },
+      "wall_status": "no_still_segment",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {},
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_forward_start_001__A129",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 6,
+        "maximal": 6
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 6,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.01554069109261036,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.06999932907521725
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019198497757315636,
+          "p99_m": 0.01876218743622303,
+          "frames_over_report": 0,
+          "frames": 119
+        },
+        "maximal": {
+          "max_m": 0.019198497757315636,
+          "p99_m": 0.01876218743622303,
+          "frames_over_report": 0,
+          "frames": 119
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 16
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6
+        },
+        "median_foot_drop_median_m": 0.01554069109261036,
+        "median_body_drop_median_m": 0.06261554919183254
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 119
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 119
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 16
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_forward_stop_001__A120",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 2,
+        "maximal": 2
+      },
+      "patch_checks": {
+        "checked": 4,
+        "kept": 4,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.015586581081151962,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.10647559195756912
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019791923463344574,
+          "p99_m": 0.019619971811771393,
+          "frames_over_report": 0,
+          "frames": 87
+        },
+        "maximal": {
+          "max_m": 0.019791923463344574,
+          "p99_m": 0.019619971811771393,
+          "frames_over_report": 0,
+          "frames": 87
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 4,
+        "kept": 0,
+        "dropped": 4,
+        "dropped_by": {
+          "body_rests_lower": 4
+        },
+        "median_foot_drop_median_m": 0.015586581081151962,
+        "median_body_drop_median_m": 0.09637535363435745
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 87
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_loop_002__A029",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 3,
+        "dropped": 5,
+        "dropped_by": {
+          "body_under_sole": 4,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.027827654965221882,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.15838948115706444
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 291
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 291
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 0,
+        "dropped": 8,
+        "dropped_by": {
+          "body_rests_lower": 8,
+          "body_under_sole": 4,
+          "foot_lower_than_sole": 2
+        },
+        "median_foot_drop_median_m": 0.027827654965221882,
+        "median_body_drop_median_m": 0.059885744005441666
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 291
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 291
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_loop_002__A031",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 28,
+        "kept": 12,
+        "dropped": 16,
+        "dropped_by": {
+          "body_under_sole": 15,
+          "foot_lower_than_sole": 15
+        },
+        "median_foot_drop_median_m": 0.03293276159092784,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11068917792290449
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.018276427872478962,
+          "p99_m": 0.015318255051970472,
+          "frames_over_report": 0,
+          "frames": 298
+        },
+        "maximal": {
+          "max_m": 0.018276427872478962,
+          "p99_m": 0.015633009709417816,
+          "frames_over_report": 0,
+          "frames": 298
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 28,
+        "kept": 0,
+        "dropped": 28,
+        "dropped_by": {
+          "body_rests_lower": 28,
+          "body_under_sole": 15,
+          "foot_lower_than_sole": 15
+        },
+        "median_foot_drop_median_m": 0.03293276159092784,
+        "median_body_drop_median_m": 0.08871040027588606
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 298
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 298
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_loop_003__A029",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 3,
+        "dropped": 3,
+        "dropped_by": {
+          "body_under_sole": 2,
+          "foot_lower_than_sole": 3
+        },
+        "median_foot_drop_median_m": 0.02840521838515997,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.1395893484354019
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 236
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 236
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6,
+          "body_under_sole": 2,
+          "foot_lower_than_sole": 3
+        },
+        "median_foot_drop_median_m": 0.02840521838515997,
+        "median_body_drop_median_m": 0.06715845316648483
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 236
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 236
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_start_001__A031",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 3,
+        "dropped": 3,
+        "dropped_by": {
+          "body_under_sole": 3,
+          "foot_lower_than_sole": 3
+        },
+        "median_foot_drop_median_m": 0.031216305680572987,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11456326585263014
+      ],
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.016513421200215816,
+          "p99_m": 0.01645684730261564,
+          "frames_over_report": 0,
+          "frames": 93
+        },
+        "maximal": {
+          "max_m": 0.01688495185226202,
+          "p99_m": 0.01654314365237951,
+          "frames_over_report": 0,
+          "frames": 93
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6,
+          "body_under_sole": 3,
+          "foot_lower_than_sole": 3
+        },
+        "median_foot_drop_median_m": 0.031216305680572987,
+        "median_body_drop_median_m": 0.09499881230294704
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 93
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 93
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_turn_000_004__A030",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 1,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.02494118921458721,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.09433921426534653
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.012617736589163542,
+          "p99_m": 0.012586785829626024,
+          "frames_over_report": 0,
+          "frames": 126
+        },
+        "maximal": {
+          "max_m": 0.013867668807506561,
+          "p99_m": 0.012610197416506708,
+          "frames_over_report": 0,
+          "frames": 126
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 1,
+        "kept": 0,
+        "dropped": 1,
+        "dropped_by": {
+          "body_rests_lower": 1
+        },
+        "median_foot_drop_median_m": 0.02494118921458721,
+        "median_body_drop_median_m": 0.09244617074728012
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 126
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 126
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_turn_090_003__A029",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 2,
+        "maximal": 2
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 3,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.02448788285255432,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11706287149339914
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01818538922816515,
+          "p99_m": 0.018166770227253437,
+          "frames_over_report": 0,
+          "frames": 99
+        },
+        "maximal": {
+          "max_m": 0.01818538922816515,
+          "p99_m": 0.018166770227253437,
+          "frames_over_report": 0,
+          "frames": 99
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 3,
+        "kept": 0,
+        "dropped": 3,
+        "dropped_by": {
+          "body_rests_lower": 3
+        },
+        "median_foot_drop_median_m": 0.02448788285255432,
+        "median_body_drop_median_m": 0.12383861467242241
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "mohak_turn_360_001__A120",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 2,
+        "maximal": 2
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 6,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.014910519123077393,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11170311570167542
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.016216129064559937,
+          "p99_m": 0.015130731165409092,
+          "frames_over_report": 0,
+          "frames": 103
+        },
+        "maximal": {
+          "max_m": 0.01746799796819687,
+          "p99_m": 0.017208591848611836,
+          "frames_over_report": 0,
+          "frames": 103
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 21
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6
+        },
+        "median_foot_drop_median_m": 0.014910519123077393,
+        "median_body_drop_median_m": 0.09865452349185944
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 103
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 103
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 21
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "on_all_fours_idle_loop_001__A202",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 2,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.011941105127334595,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.11325551569461823
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.016680896282196045,
+          "p99_m": 0.01666210725903511,
+          "frames_over_report": 0,
+          "frames": 247
+        },
+        "maximal": {
+          "max_m": 0.01842983067035675,
+          "p99_m": 0.018426298797130584,
+          "frames_over_report": 0,
+          "frames": 247
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 2,
+        "kept": 0,
+        "dropped": 2,
+        "dropped_by": {
+          "body_rests_lower": 2
+        },
+        "median_foot_drop_median_m": 0.011941105127334595,
+        "median_body_drop_median_m": 0.1121828705072403
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 247
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 247
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_003__A202",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "patch_checks": {
+        "checked": 5,
+        "kept": 5,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.01005316898226738,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.09752546727657319
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.013587519526481628,
+          "p99_m": 0.01345495879650116,
+          "frames_over_report": 0,
+          "frames": 65
+        },
+        "maximal": {
+          "max_m": 0.016085341572761536,
+          "p99_m": 0.01587327778339386,
+          "frames_over_report": 0,
+          "frames": 65
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 5,
+        "kept": 0,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": 5
+        },
+        "median_foot_drop_median_m": 0.01005316898226738,
+        "median_body_drop_median_m": 0.0887557715177536
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 65
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 65
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "on_all_fours_turn_360_R_002__A201",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 8,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.02309233509004116,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.12449115991592408
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 177
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 177
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "quadruped",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 0,
+        "dropped": 8,
+        "dropped_by": {
+          "body_rests_lower": 8
+        },
+        "median_foot_drop_median_m": 0.02309233509004116,
+        "median_body_drop_median_m": 0.10837040096521378
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 177
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 177
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 23,
+        "plane_must_move_to_clear_body": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "stairs_climbing_up_start_R_101__A301",
+    "selection_reasons": [
+      "v5_target"
+    ],
+    "v6": {
+      "group": "stairs",
+      "support_boxes": {
+        "minimal": 7,
+        "maximal": 7
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 7,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.005188055336475372,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.19360464497003704,
+        0.39147070480976254,
+        0.5843542410293594,
+        0.7549264921108261,
+        0.9466554118553177,
+        1.114163894788362,
+        1.3059064341941848
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.015240609645843506,
+          "p99_m": 0.014728437066078183,
+          "frames_over_report": 0,
+          "frames": 74
+        },
+        "maximal": {
+          "max_m": 0.015240609645843506,
+          "p99_m": 0.014872720837593077,
+          "frames_over_report": 0,
+          "frames": 74
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 7,
+        "feet_at_the_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "stairs",
+      "support_boxes": {
+        "minimal": 7,
+        "maximal": 7
+      },
+      "patch_checks": {
+        "checked": 7,
+        "kept": 7,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.005188055336475372,
+        "median_body_drop_median_m": -0.07475247234106064
+      },
+      "levels_m": [
+        0.0,
+        0.19360464497003704,
+        0.39147070480976254,
+        0.5843542410293594,
+        0.7549264921108261,
+        0.9466554118553177,
+        1.114163894788362,
+        1.3059064341941848
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.015240609645843506,
+          "p99_m": 0.014728437066078183,
+          "frames_over_report": 0,
+          "frames": 74
+        },
+        "maximal": {
+          "max_m": 0.015240609645843506,
+          "p99_m": 0.014872720837593077,
+          "frames_over_report": 0,
+          "frames": 74
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 7,
+        "feet_at_the_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "turn_crawl_270_R_003__A217",
+    "selection_reasons": [
+      "v5_environment_explained_4plus_boxes_seed0"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 6,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.009373116306960583,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.08050389681011438
+      ],
+      "flags": [
+        "ground_from_skin"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.01867817807942629,
+          "p99_m": 0.018359582312405108,
+          "frames_over_report": 0,
+          "frames": 121
+        },
+        "maximal": {
+          "max_m": 0.01971739251166582,
+          "p99_m": 0.01968853697180748,
+          "frames_over_report": 0,
+          "frames": 121
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 6,
+        "kept": 0,
+        "dropped": 6,
+        "dropped_by": {
+          "body_rests_lower": 6
+        },
+        "median_foot_drop_median_m": 0.009373116306960583,
+        "median_body_drop_median_m": 0.04971753340214491
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 121
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 121
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 24
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "turn_crawl_270_R_003__A229",
+    "selection_reasons": [
+      "v5_L2_review"
+    ],
+    "v6": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 8,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": 0.012819193303585052,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0,
+        0.08183802073588595
+      ],
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.019348728412296623,
+          "p99_m": 0.018720397555734965,
+          "frames_over_report": 0,
+          "frames": 120
+        },
+        "maximal": {
+          "max_m": 0.019348728412296623,
+          "p99_m": 0.018720397555734965,
+          "frames_over_report": 0,
+          "frames": 120
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 13
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      }
+    },
+    "v7": {
+      "group": "prone",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 8,
+        "kept": 0,
+        "dropped": 8,
+        "dropped_by": {
+          "body_rests_lower": 8
+        },
+        "median_foot_drop_median_m": 0.012819193303585052,
+        "median_body_drop_median_m": 0.06872742343693972
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120
+        }
+      },
+      "wall_status": "no_contact_plane",
+      "wall_kind": null,
+      "walls": 0,
+      "contact_drift_m": null,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 13
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "turn_crouch_270_R_002__A195",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 41
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 41
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.042847800363823685,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 12,
+        "feet_at_the_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 41
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 41
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.042847800363823685,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 12,
+        "feet_at_the_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  },
+  {
+    "filename": "turn_crouch_360_R_002__A197",
+    "selection_reasons": [
+      "v5_crouch_kept_wall_review"
+    ],
+    "v6": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 67
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 67
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.02468286507187796,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18,
+        "feet_at_the_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    },
+    "v7": {
+      "group": "crouch",
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "patch_checks": {
+        "checked": 0,
+        "kept": 0,
+        "dropped": 0,
+        "dropped_by": {},
+        "median_foot_drop_median_m": null,
+        "median_body_drop_median_m": null
+      },
+      "levels_m": [
+        0.0
+      ],
+      "flags": [],
+      "skin_support": {
+        "minimal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 67
+        },
+        "maximal": {
+          "max_m": 0.0,
+          "p99_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 67
+        }
+      },
+      "wall_status": "fitted",
+      "wall_kind": "brace",
+      "walls": 1,
+      "contact_drift_m": 0.02468286507187796,
+      "wall_rejection_reasons": {
+        "no_trunk_or_bracing_hand_contact": 18,
+        "feet_at_the_plane": 1
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "rejection_reasons": {}
+    }
+  }
+]

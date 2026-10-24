@@ -1,0 +1,11 @@
+{
+  "clips": 6788,
+  "skin_vertices": 18056,
+  "skin_frame_stride": 2,
+  "skin_support_clips_over_2cm": {
+    "minimal": 0,
+    "maximal": 0
+  },
+  "kept_walls_clips_over_2cm": 0,
+  "fitted_ceiling_clips_over_2cm": 0
+}

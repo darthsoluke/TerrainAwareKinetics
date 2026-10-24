@@ -1,0 +1,120 @@
+{
+  "name": "P48",
+  "command": [
+    "${PFNN_PROJECT}/env/bin/python",
+    "-u",
+    "runs/bones_fit_v7_coord/timed_runner.py",
+    "--screen-run",
+    "runs/bones_screen_v1_full",
+    "--output",
+    "runs/bones_fit_v7_pilot_48",
+    "--viz-per-stem",
+    "2",
+    "--variants",
+    "4",
+    "--skin-stride",
+    "2",
+    "--limit-per-stem",
+    "2",
+    "--workers",
+    "48"
+  ],
+  "output": "runs/bones_fit_v7_pilot_48",
+  "exit_code": 0,
+  "wall_seconds": 93.4,
+  "fit_elapsed_seconds": 92.4,
+  "fitted": 196,
+  "failed": 0,
+  "rendered": 196,
+  "render_failures": [],
+  "minimum_available_bytes": 415563390976,
+  "peak_unavailable_bytes": 120154476544,
+  "timing_rows": 196,
+  "slowest10": [
+    {
+      "filename": "mohak_loop_002__A031",
+      "group": "quadruped",
+      "frames": 595,
+      "fit_seconds": 23.905,
+      "render_seconds": 24.2,
+      "total_seconds": 48.105
+    },
+    {
+      "filename": "mohak_idle_loop_001__A125",
+      "group": "quadruped",
+      "frames": 540,
+      "fit_seconds": 20.278,
+      "render_seconds": 21.63,
+      "total_seconds": 41.908
+    },
+    {
+      "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492",
+      "group": "crouch",
+      "frames": 573,
+      "fit_seconds": 17.68,
+      "render_seconds": 19.336,
+      "total_seconds": 37.016
+    },
+    {
+      "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493",
+      "group": "crouch",
+      "frames": 573,
+      "fit_seconds": 18.708,
+      "render_seconds": 16.868,
+      "total_seconds": 35.576
+    },
+    {
+      "filename": "ladder_climbing_idle_R_101__A301",
+      "group": "ladder",
+      "frames": 419,
+      "fit_seconds": 18.217,
+      "render_seconds": 15.818,
+      "total_seconds": 34.035
+    },
+    {
+      "filename": "neutral_idle_loop_002__A105",
+      "group": "flat_control",
+      "frames": 406,
+      "fit_seconds": 16.833,
+      "render_seconds": 14.924,
+      "total_seconds": 31.757
+    },
+    {
+      "filename": "stairs_slip_R_004__A300",
+      "group": "stairs",
+      "frames": 202,
+      "fit_seconds": 17.179,
+      "render_seconds": 14.296,
+      "total_seconds": 31.475
+    },
+    {
+      "filename": "idle_crawl_stop_001__A128",
+      "group": "prone",
+      "frames": 274,
+      "fit_seconds": 15.585,
+      "render_seconds": 15.454,
+      "total_seconds": 31.039
+    },
+    {
+      "filename": "stairs_slip_R_003__A300",
+      "group": "stairs",
+      "frames": 198,
+      "fit_seconds": 15.654,
+      "render_seconds": 13.478,
+      "total_seconds": 29.132
+    },
+    {
+      "filename": "spider_crawl_R_001__A362",
+      "group": "quadruped",
+      "frames": 398,
+      "fit_seconds": 12.789,
+      "render_seconds": 15.345,
+      "total_seconds": 28.134
+    }
+  ],
+  "gate": {
+    "max_seconds": 185.8,
+    "max_failures": 0,
+    "passed": true
+  }
+}

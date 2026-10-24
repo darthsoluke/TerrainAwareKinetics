@@ -1,0 +1,183 @@
+{
+  "maximal_over_2cm_zero": {
+    "passed": true,
+    "bug_clips": []
+  },
+  "low_posture": {
+    "prone": {
+      "v5": {
+        "eligible_clips": 464,
+        "eligible_share": 0.5048966267682263,
+        "S": 0,
+        "F": 1834,
+        "clips_with_4plus_support_boxes": 381,
+        "max_support_boxes": 18
+      },
+      "v6": {
+        "eligible_clips": 469,
+        "eligible_share": 0.5103373231773667,
+        "S": 0,
+        "F": 1815,
+        "clips_with_4plus_support_boxes": 381,
+        "max_support_boxes": 18
+      },
+      "v7": {
+        "eligible_clips": 775,
+        "eligible_share": 0.8433079434167573,
+        "S": 0,
+        "F": 582,
+        "clips_with_4plus_support_boxes": 150,
+        "max_support_boxes": 16
+      },
+      "eligible_share_increased": true,
+      "F_limit_exclusive": 544.5,
+      "F_passed": false,
+      "F_reduction_fraction": 0.6793388429752066,
+      "four_plus_limit_exclusive": 38.1,
+      "four_plus_passed": false,
+      "four_plus_reduction_fraction": 0.6062992125984252,
+      "passed": false
+    },
+    "quadruped": {
+      "v5": {
+        "eligible_clips": 279,
+        "eligible_share": 0.33574007220216606,
+        "S": 0,
+        "F": 2211,
+        "clips_with_4plus_support_boxes": 82,
+        "max_support_boxes": 21
+      },
+      "v6": {
+        "eligible_clips": 280,
+        "eligible_share": 0.3369434416365824,
+        "S": 0,
+        "F": 2207,
+        "clips_with_4plus_support_boxes": 82,
+        "max_support_boxes": 21
+      },
+      "v7": {
+        "eligible_clips": 722,
+        "eligible_share": 0.8688327316486161,
+        "S": 0,
+        "F": 436,
+        "clips_with_4plus_support_boxes": 21,
+        "max_support_boxes": 21
+      },
+      "eligible_share_increased": true,
+      "F_limit_exclusive": 662.1,
+      "F_passed": true,
+      "F_reduction_fraction": 0.8024467603081106,
+      "four_plus_limit_exclusive": 8.200000000000001,
+      "four_plus_passed": false,
+      "four_plus_reduction_fraction": 0.7439024390243902,
+      "passed": false
+    }
+  },
+  "kneel_F": {
+    "v5": 424,
+    "v6": 420,
+    "v7": 140,
+    "limit_exclusive": 420,
+    "passed": true
+  },
+  "normal_group_body_rests_lower_drops": {
+    "known_dimension_support": {
+      "checked_patches": 3615,
+      "dropped_patches": 82,
+      "unique_dropped_patches": 84,
+      "patch_fraction": 0.02268326417704011,
+      "affected_clips": 76,
+      "clip_fraction": 0.04318181818181818,
+      "passed": false
+    },
+    "box_support": {
+      "checked_patches": 161,
+      "dropped_patches": 14,
+      "unique_dropped_patches": 15,
+      "patch_fraction": 0.08695652173913043,
+      "affected_clips": 7,
+      "clip_fraction": 0.14583333333333334,
+      "passed": false
+    },
+    "stairs": {
+      "checked_patches": 242,
+      "dropped_patches": 3,
+      "unique_dropped_patches": 3,
+      "patch_fraction": 0.012396694214876033,
+      "affected_clips": 3,
+      "clip_fraction": 0.061224489795918366,
+      "passed": false
+    }
+  },
+  "unmodelled_geometry_exclusion": {
+    "ladder": {
+      "clips": 64,
+      "excluded_unmodelled_geometry": {
+        "clips": 64,
+        "seconds": 332.769
+      },
+      "eligibility_before_exclusion": {
+        "environment_explained": {
+          "clips": 47,
+          "seconds": 246.502
+        },
+        "geometry_only_low_posture_unexplained": {
+          "clips": 9,
+          "seconds": 50.568
+        },
+        "rejected": {
+          "clips": 8,
+          "seconds": 35.699
+        }
+      },
+      "excluded_fraction": 1.0,
+      "training_eligible_clips": 0,
+      "passed": true
+    },
+    "obstacle_clearance": {
+      "clips": 86,
+      "excluded_unmodelled_geometry": {
+        "clips": 86,
+        "seconds": 457.838
+      },
+      "eligibility_before_exclusion": {
+        "environment_explained": {
+          "clips": 73,
+          "seconds": 353.037
+        },
+        "geometry_only_low_posture_unexplained": {
+          "clips": 4,
+          "seconds": 26.634
+        },
+        "rejected": {
+          "clips": 9,
+          "seconds": 78.167
+        }
+      },
+      "excluded_fraction": 1.0,
+      "training_eligible_clips": 0,
+      "passed": true
+    }
+  },
+  "crouch_walls": {
+    "v5": 58,
+    "v6": 55,
+    "v7": 55,
+    "limit_inclusive": 58,
+    "passed": true
+  },
+  "wall_contact": {
+    "walls": 106,
+    "clips": 350,
+    "fraction": 0.3028571428571429,
+    "passed": true
+  },
+  "flat_control": {
+    "environment_explained": 900,
+    "clips": 900,
+    "walls": 3,
+    "wall_fraction": 0.0033333333333333335,
+    "passed": true
+  },
+  "passed": false
+}

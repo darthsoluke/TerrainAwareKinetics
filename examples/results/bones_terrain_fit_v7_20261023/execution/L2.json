@@ -1,0 +1,119 @@
+{
+  "name": "L2",
+  "command": [
+    "${PFNN_PROJECT}/env/bin/python",
+    "-u",
+    "runs/bones_fit_v7_coord/timed_runner.py",
+    "--screen-run",
+    "runs/bones_screen_v1_full",
+    "--output",
+    "runs/bones_fit_v7_L2",
+    "--viz-per-stem",
+    "2",
+    "--variants",
+    "4",
+    "--skin-stride",
+    "2",
+    "--groups",
+    "quadruped",
+    "prone",
+    "--worst-per-group",
+    "3",
+    "--gif",
+    "--workers",
+    "20"
+  ],
+  "output": "runs/bones_fit_v7_L2",
+  "exit_code": 0,
+  "wall_seconds": 1674.7,
+  "fit_elapsed_seconds": 1673.7,
+  "fitted": 1750,
+  "failed": 0,
+  "rendered": 38,
+  "render_failures": [],
+  "minimum_available_bytes": 397219565568,
+  "peak_unavailable_bytes": 138498301952,
+  "timing_rows": 1750,
+  "slowest10": [
+    {
+      "filename": "mohak_loop_001__A030",
+      "group": "quadruped",
+      "frames": 541,
+      "fit_seconds": 158.508,
+      "render_seconds": 0.0,
+      "total_seconds": 158.508
+    },
+    {
+      "filename": "crawl_ff_loop_225_001__A133",
+      "group": "prone",
+      "frames": 598,
+      "fit_seconds": 86.623,
+      "render_seconds": 0.0,
+      "total_seconds": 86.623
+    },
+    {
+      "filename": "mohak_loop_002__A031",
+      "group": "quadruped",
+      "frames": 595,
+      "fit_seconds": 47.734,
+      "render_seconds": 35.245,
+      "total_seconds": 82.979
+    },
+    {
+      "filename": "mohak_idle_loop_001__A125",
+      "group": "quadruped",
+      "frames": 540,
+      "fit_seconds": 47.022,
+      "render_seconds": 35.552,
+      "total_seconds": 82.574
+    },
+    {
+      "filename": "crawl_ff_stop_360_R_001__A230",
+      "group": "prone",
+      "frames": 431,
+      "fit_seconds": 72.639,
+      "render_seconds": 0.0,
+      "total_seconds": 72.639
+    },
+    {
+      "filename": "crawl_ff_stop_360_R_001__A233",
+      "group": "prone",
+      "frames": 432,
+      "fit_seconds": 72.099,
+      "render_seconds": 0.0,
+      "total_seconds": 72.099
+    },
+    {
+      "filename": "crawl_ff_start_225_R_002__A232",
+      "group": "prone",
+      "frames": 388,
+      "fit_seconds": 72.037,
+      "render_seconds": 0.0,
+      "total_seconds": 72.037
+    },
+    {
+      "filename": "crawl_ff_loop_180_R_004__A214",
+      "group": "prone",
+      "frames": 525,
+      "fit_seconds": 69.657,
+      "render_seconds": 0.0,
+      "total_seconds": 69.657
+    },
+    {
+      "filename": "crawl_ff_start_225_R_002__A233",
+      "group": "prone",
+      "frames": 388,
+      "fit_seconds": 65.496,
+      "render_seconds": 0.0,
+      "total_seconds": 65.496
+    },
+    {
+      "filename": "crawl_ff_stop_315_R_003__A232",
+      "group": "prone",
+      "frames": 360,
+      "fit_seconds": 65.197,
+      "render_seconds": 0.0,
+      "total_seconds": 65.197
+    }
+  ]
+}

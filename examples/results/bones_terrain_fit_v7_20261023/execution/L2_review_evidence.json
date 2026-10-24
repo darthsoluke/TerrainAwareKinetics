@@ -1,0 +1,5770 @@
+{
+  "name": "L2",
+  "source_commit": "c4b776a920d69fc3f997f8e38821f1300837f177",
+  "fitted": 1750,
+  "examples": [
+    {
+      "filename": "crawl_ff_loop_225_001__A133",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 19.933,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "levels_m": [
+        0.0,
+        0.06260095767676829
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 15,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.10704467862844466,
+          "side": "left",
+          "area_m2": 0.00087978721085058,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.024594925343990326,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.08519690856337547,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.10305069804191588,
+          "side": "left",
+          "area_m2": 0.0018124613545125179,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.019306741654872894,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.09398779273033142,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.060696699172258374,
+          "side": "left",
+          "area_m2": 0.0032498852482825136,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009206626564264297,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04801251366734505,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08190655380487441,
+          "side": "left",
+          "area_m2": 0.0037532794884941323,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009312726557254791,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06255850195884705,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07066955089569091,
+          "side": "left",
+          "area_m2": 0.004017626039829025,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00592629611492157,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0512060821056366,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0670059923827648,
+          "side": "left",
+          "area_m2": 0.003484620681042827,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00660020112991333,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05107436701655388,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08741566956043242,
+          "side": "right",
+          "area_m2": 0.0013490368240907102,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.015757523477077484,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06928937137126923,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06994822293519973,
+          "side": "right",
+          "area_m2": 0.00011070242807242892,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009714080020785332,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05952596105635166,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06370701126754283,
+          "side": "right",
+          "area_m2": 0.0005125121219777817,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009792482480406761,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.053960440680384636,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07882117152214049,
+          "side": "right",
+          "area_m2": 0.0012573203245249687,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.008421756327152252,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06682965159416199,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08859620288014411,
+          "side": "right",
+          "area_m2": 0.00018226325250481068,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014922622591257095,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06324053183197975,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.062458821088075635,
+          "side": "right",
+          "area_m2": 0.0006440048930773656,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00798429548740387,
+          "body_below_fraction": 0.6153846153846154,
+          "body_drop_median_m": 0.03137092664837837,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06274309426546096,
+          "side": "right",
+          "area_m2": 0.0001803134356954672,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004212506115436554,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05285896360874176,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08900489330291747,
+          "side": "right",
+          "area_m2": 0.0010028825485921544,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.016334690153598785,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07573111727833748,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06579564929008483,
+          "side": "right",
+          "area_m2": 0.00028355458436379877,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014392927289009094,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04659057967364788,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 15,
+        "kept": 0,
+        "dropped": 15,
+        "dropped_by": {
+          "body_rests_lower": 15
+        }
+      },
+      "median_foot_drop_median_m": 0.009714080020785332,
+      "median_body_drop_median_m": 0.05952596105635166,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.00814126759767533,
+          "penetration_p99_m": 0.005705592185258868,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 71,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01016690768301487,
+          "skin": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.01895410947501659,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_support": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.01895410947501659,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_ground": {
+            "max_m": 0.009573023319244388,
+            "p99_m": 0.00775426030158995,
+            "frames_over_report": 0,
+            "frames": 299
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.00814126759767533,
+          "penetration_p99_m": 0.005856600031256674,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 71,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.01016690768301487,
+          "skin": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.019826594330370425,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_support": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.019826594330370425,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_ground": {
+            "max_m": 0.009573023319244388,
+            "p99_m": 0.00775426030158995,
+            "frames_over_report": 0,
+            "frames": 299
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 13,
+        "maximal": 13
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 199,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 299,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 299,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 299,
+        "frames": 299,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 6,
+          "prone": 293
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 502,
+        "core_cells": 496,
+        "status": "fitted",
+        "tight_m": 0.653971610069275,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.06078078269958496,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "crawl_ff_loop_225_002__A131",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 8.233,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06497203007340431
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 9,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.09111346125602722,
+          "side": "left",
+          "area_m2": 0.0009544702748804923,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01841418817639351,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07874651625752449,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07074959397315979,
+          "side": "left",
+          "area_m2": 0.0001565821393594291,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006441809237003326,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.036672547459602356,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07303019084967673,
+          "side": "left",
+          "area_m2": 0.001115143100578064,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012320041889324784,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06292333477176726,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07137338824570179,
+          "side": "left",
+          "area_m2": 0.00016394837399275053,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010563574731349945,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06323096714913845,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06380699023604393,
+          "side": "left",
+          "area_m2": 0.0003387795700502405,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.005602419376373291,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0423140712082386,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08027786955237388,
+          "side": "left",
+          "area_m2": 0.00016784114971557518,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009371008723974228,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.055007204413414,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0720034559071064,
+          "side": "left",
+          "area_m2": 0.0002763129658993613,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004980228841304779,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.049610475078225136,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.061593978740274904,
+          "side": "right",
+          "area_m2": 0.0044374818083877665,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": -0.001630541868507862,
+          "body_below_fraction": 0.4090909090909091,
+          "body_drop_median_m": 0.025140459649264812,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06296494051814079,
+          "side": "right",
+          "area_m2": 0.0029694262749959677,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": -0.0012224465608596802,
+          "body_below_fraction": 0.48,
+          "body_drop_median_m": 0.02704250067472458,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.062307739704847334,
+          "side": "right",
+          "area_m2": 0.0003898126169838978,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00568053126335144,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05413065850734711,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06870425686240196,
+          "side": "right",
+          "area_m2": 0.0005375906810165532,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010716669261455536,
+          "body_below_fraction": 0.7619047619047619,
+          "body_drop_median_m": 0.04611189290881157,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06497203007340431,
+          "side": "right",
+          "area_m2": 0.00035717386581879396,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0035484060645103455,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.0076314895413815975,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 12,
+        "kept": 3,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9
+        }
+      },
+      "median_foot_drop_median_m": 0.006061170250177383,
+      "median_body_drop_median_m": 0.04786118399351835,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.012959299348294737,
+          "penetration_p99_m": 0.0072372746095061315,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 68,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006998829543590546,
+          "skin": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018585772477090357,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_support": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018585772477090357,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_ground": {
+            "max_m": 0.0010064522922039049,
+            "p99_m": 0.0006793617457151406,
+            "frames_over_report": 0,
+            "frames": 124
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.012959299348294737,
+          "penetration_p99_m": 0.00850273951888083,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 68,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006998829543590546,
+          "skin": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018585772477090357,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_support": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018585772477090357,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_ground": {
+            "max_m": 0.0010064522922039049,
+            "p99_m": 0.0006793617457151406,
+            "frames_over_report": 0,
+            "frames": 124
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 7,
+        "maximal": 7
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 55,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 14
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 124,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 124,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 124,
+        "frames": 124,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 124
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 402,
+        "core_cells": 402,
+        "status": "fitted",
+        "tight_m": 0.6234151451289655,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.07383888408541679,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "crawl_ff_loop_225_003__A132",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 11.967,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.07425193548202515
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 22,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.09530309647321701,
+          "side": "left",
+          "area_m2": 0.00036182538139684084,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013094943016767502,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.048540547490119934,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.10155784025788307,
+          "side": "left",
+          "area_m2": 0.0003709438462093928,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01263614371418953,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06388417258858681,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07790455281734467,
+          "side": "left",
+          "area_m2": 0.0001161666989076271,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010669872164726257,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0416647344827652,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07318108960986137,
+          "side": "left",
+          "area_m2": 0.00042351398919848737,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003097319044172764,
+          "body_below_fraction": 0.25,
+          "body_drop_median_m": 0.028464910574257374,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09837860673666,
+          "side": "left",
+          "area_m2": 0.00272020690965713,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0157502219080925,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0700790211558342,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07941591799259186,
+          "side": "left",
+          "area_m2": 0.00026222922881036226,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011809894815087318,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07606543600559235,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0986825680732727,
+          "side": "left",
+          "area_m2": 0.004442737285115683,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012467138469219208,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06171675957739353,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08090403735637665,
+          "side": "left",
+          "area_m2": 0.00022089636676980717,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0113941989839077,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.055076733231544495,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07574016660451889,
+          "side": "left",
+          "area_m2": 0.0009730857196572629,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010747268795967102,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06726502627134323,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07844904683530331,
+          "side": "left",
+          "area_m2": 0.0019106405857201025,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004877337254583836,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04376085475087166,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.10418088793754578,
+          "side": "left",
+          "area_m2": 0.001208565943670692,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013919442892074585,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07844427227973938,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06941147208213806,
+          "side": "left",
+          "area_m2": 0.0001071791076867612,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007060553878545761,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04632723331451416,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07278133243322372,
+          "side": "right",
+          "area_m2": 0.0005043009645135932,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011915653944015503,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.046831898391246796,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.086179338991642,
+          "side": "right",
+          "area_m2": 0.001962018975752322,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01816411316394806,
+          "body_below_fraction": 0.8,
+          "body_drop_median_m": 0.04825577884912491,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07425193548202515,
+          "side": "right",
+          "area_m2": 0.00037679387667743924,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01071443036198616,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04648211598396301,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0667781388759613,
+          "side": "right",
+          "area_m2": 0.002915986488690736,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0029427995905280113,
+          "body_below_fraction": 0.95,
+          "body_drop_median_m": 0.06015440821647644,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08031143307685852,
+          "side": "right",
+          "area_m2": 0.0005497630498076944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012998580932617188,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04570379480719566,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07012458950281143,
+          "side": "right",
+          "area_m2": 0.0009356930379702533,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0036299899220466614,
+          "body_below_fraction": 0.2857142857142857,
+          "body_drop_median_m": 0.028095729649066925,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07587792783975601,
+          "side": "right",
+          "area_m2": 0.0019570448143113595,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003635622560977936,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05048675090074539,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07189649403095245,
+          "side": "right",
+          "area_m2": 0.00297514692977785,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006151435896754265,
+          "body_below_fraction": 0.8125,
+          "body_drop_median_m": 0.03153572976589203,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07163372695446014,
+          "side": "right",
+          "area_m2": 0.0015990218260171218,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.002743467688560486,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06332845985889435,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07774357929825783,
+          "side": "right",
+          "area_m2": 0.0006202065528242429,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011850785464048386,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05371917970478535,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06841708034276962,
+          "side": "right",
+          "area_m2": 0.0014277221558955944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0053149498999118805,
+          "body_below_fraction": 0.75,
+          "body_drop_median_m": 0.03250797837972641,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06379393547773361,
+          "side": "right",
+          "area_m2": 0.0015885518256339992,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0021407529711723328,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04962273687124252,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 24,
+        "kept": 2,
+        "dropped": 22,
+        "dropped_by": {
+          "body_rests_lower": 22
+        }
+      },
+      "median_foot_drop_median_m": 0.010730849578976631,
+      "median_body_drop_median_m": 0.04908164218068123,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.007884092032909396,
+          "penetration_p99_m": 0.0031140582531690745,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 18,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004127345979213715,
+          "skin": {
+            "max_m": 0.019784115254878998,
+            "p99_m": 0.01944060018286109,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_support": {
+            "max_m": 0.019784115254878998,
+            "p99_m": 0.01944060018286109,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_ground": {
+            "max_m": 0.00994442343711853,
+            "p99_m": 0.0027824884653091424,
+            "frames_over_report": 0,
+            "frames": 180
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.007884092032909396,
+          "penetration_p99_m": 0.0031140582531690745,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 18,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004127345979213715,
+          "skin": {
+            "max_m": 0.019784115254878998,
+            "p99_m": 0.019694776870310307,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_support": {
+            "max_m": 0.019784115254878998,
+            "p99_m": 0.019694776870310307,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_ground": {
+            "max_m": 0.00994442343711853,
+            "p99_m": 0.0027824884653091424,
+            "frames_over_report": 0,
+            "frames": 180
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 9,
+        "maximal": 9
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 62,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 6
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 180,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 180,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 180,
+        "frames": 180,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 10,
+          "prone": 170
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 614,
+        "core_cells": 612,
+        "status": "fitted",
+        "tight_m": 0.6538118064403534,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.07571871638298035,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "crawl_ff_start_225_R_002__A233",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 12.933,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.08051503106951713
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 24,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.07030548185110091,
+          "side": "left",
+          "area_m2": 0.000636797019271107,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003226332366466522,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05094534903764725,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07244924671947955,
+          "side": "left",
+          "area_m2": 0.00031658512150023466,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.008759178221225739,
+          "body_below_fraction": 0.5,
+          "body_drop_median_m": 0.029955105856060982,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06790606707334518,
+          "side": "left",
+          "area_m2": 0.0007338187822933939,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.002631343901157379,
+          "body_below_fraction": 0.6666666666666666,
+          "body_drop_median_m": 0.034134529531002045,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07483433216810226,
+          "side": "left",
+          "area_m2": 0.0003952033051515258,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013621479272842407,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04712124913930893,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0778295400738716,
+          "side": "left",
+          "area_m2": 0.003148936491037979,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004242368042469025,
+          "body_below_fraction": 0.8571428571428571,
+          "body_drop_median_m": 0.04419461637735367,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07050385355949401,
+          "side": "left",
+          "area_m2": 0.000551331781233344,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0029756128787994385,
+          "body_below_fraction": 0.5714285714285714,
+          "body_drop_median_m": 0.03269678354263306,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07381131529808044,
+          "side": "left",
+          "area_m2": 0.0008353603472670557,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014092467725276947,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04147028177976608,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06892313838005065,
+          "side": "left",
+          "area_m2": 0.0017574178287773634,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006027713418006897,
+          "body_below_fraction": 0.7857142857142857,
+          "body_drop_median_m": 0.03857681155204773,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08051503106951713,
+          "side": "left",
+          "area_m2": 0.00047206116104803186,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014494240283966064,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.059937816113233566,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08198247879743575,
+          "side": "left",
+          "area_m2": 0.0034590973756394305,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0031620413064956665,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05343382805585861,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07118872582912444,
+          "side": "left",
+          "area_m2": 0.0012302338445948635,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006044268608093262,
+          "body_below_fraction": 0.6666666666666666,
+          "body_drop_median_m": 0.03792482241988182,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07880752190947532,
+          "side": "left",
+          "area_m2": 0.0005094331221044968,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014645729213953018,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06207629665732384,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08306396782398223,
+          "side": "left",
+          "area_m2": 0.003195667765936605,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0041159167885780334,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0474078506231308,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08344911813735961,
+          "side": "right",
+          "area_m2": 0.001285306509410944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02291274629533291,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.043905043974518776,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08238133817911147,
+          "side": "right",
+          "area_m2": 0.0007362628153924078,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01615501195192337,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07002563029527664,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.09368713416159152,
+          "side": "right",
+          "area_m2": 0.0007783575956179511,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02846839465200901,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06668826378881931,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08862653404474258,
+          "side": "right",
+          "area_m2": 0.0019476502599382606,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.024532340466976166,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0406419113278389,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08235077589750289,
+          "side": "right",
+          "area_m2": 0.0005056529654647868,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017257019877433777,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04720204696059227,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08998889598995446,
+          "side": "right",
+          "area_m2": 0.0005156859799839708,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017070006113499403,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06509451661258936,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07692697674036025,
+          "side": "right",
+          "area_m2": 0.0002315686442528886,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014687798917293549,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.019486114382743835,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07933875203132629,
+          "side": "right",
+          "area_m2": 0.0007611567578145184,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01305697113275528,
+          "body_below_fraction": 0.25,
+          "body_drop_median_m": 0.02186567895114422,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0869833606481552,
+          "side": "right",
+          "area_m2": 0.0007592402356664252,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01785886287689209,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.049805773422122,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08054866671562194,
+          "side": "right",
+          "area_m2": 0.00017744277388942464,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013397661969065666,
+          "body_below_fraction": 0.3333333333333333,
+          "body_drop_median_m": 0.025155379436910152,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08894782543182372,
+          "side": "right",
+          "area_m2": 0.001234583506388276,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01716972142457962,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.03970933333039284,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.09719061136245727,
+          "side": "right",
+          "area_m2": 0.0006918114521212715,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01911059021949768,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0643029659986496,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.10730207741260528,
+          "side": "right",
+          "area_m2": 0.003925343353969879,
+          "body_points_under": 1,
+          "foot_below_fraction": 1.0,
+          "foot_drop_median_m": 0.0437958762049675,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.08416019007563591,
+          "dropped": [
+            "foot_lower_than_sole",
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07981640875339507,
+          "side": "right",
+          "area_m2": 0.0001319350400166286,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014751233160495758,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.023795196786522865,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08481305867433547,
+          "side": "right",
+          "area_m2": 0.0010628239605807721,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01363777369260788,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.03948537725955248,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 28,
+        "kept": 4,
+        "dropped": 24,
+        "dropped_by": {
+          "body_rests_lower": 24,
+          "foot_lower_than_sole": 1
+        }
+      },
+      "median_foot_drop_median_m": 0.014293354004621506,
+      "median_body_drop_median_m": 0.04404983017593622,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.00832772970199586,
+          "penetration_p99_m": 0.00701815351843834,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 46,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0035880543291568756,
+          "skin": {
+            "max_m": 0.019840354099869728,
+            "p99_m": 0.0188550329208374,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_support": {
+            "max_m": 0.019840354099869728,
+            "p99_m": 0.0188550329208374,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_ground": {
+            "max_m": 0.008532680273056037,
+            "p99_m": 0.002387690544128394,
+            "frames_over_report": 0,
+            "frames": 194
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.00832772970199586,
+          "penetration_p99_m": 0.00701815351843834,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 46,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0035880543291568756,
+          "skin": {
+            "max_m": 0.01999809965491295,
+            "p99_m": 0.01979399362578988,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_support": {
+            "max_m": 0.01999809965491295,
+            "p99_m": 0.01979399362578988,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_ground": {
+            "max_m": 0.008532680273056037,
+            "p99_m": 0.002387690544128394,
+            "frames_over_report": 0,
+            "frames": 194
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 9,
+        "maximal": 9
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 68,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 3
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 194,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 194,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 194,
+        "frames": 194,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 194
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 669,
+        "core_cells": 669,
+        "status": "fitted",
+        "tight_m": 0.6339278829097748,
+        "loose_m": 0.6542058944702147,
+        "floor_m": -0.07749237895011901,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "crawl_ff_start_315_R_002__A233",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 9.667,
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "levels_m": [
+        0.0,
+        0.08240188419818878
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 9,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.09947392106056213,
+          "side": "left",
+          "area_m2": 0.0004743162937224099,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01868288964033127,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.08946359157562256,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07495277136564255,
+          "side": "left",
+          "area_m2": 0.00011435985809704619,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004896797239780426,
+          "body_below_fraction": 0.6666666666666666,
+          "body_drop_median_m": 0.033749423921108246,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07857611536979675,
+          "side": "left",
+          "area_m2": 0.0008976238170026463,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006263419985771179,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04618785344064236,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08597558125853538,
+          "side": "left",
+          "area_m2": 0.00045832735653661416,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01571149006485939,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.026241477578878403,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0796397602558136,
+          "side": "left",
+          "area_m2": 0.0004470291464890863,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007041275501251221,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04491183161735535,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08813798672286793,
+          "side": "left",
+          "area_m2": 0.0006271013859269203,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012410340073984116,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.02297217136947438,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0771072632074356,
+          "side": "left",
+          "area_m2": 0.0014159447282509063,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006029993295669556,
+          "body_below_fraction": 0.5555555555555556,
+          "body_drop_median_m": 0.031170979142189026,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.09308349847793579,
+          "side": "left",
+          "area_m2": 0.000731779613218464,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014163628220558167,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.040939025580883026,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08013513445854187,
+          "side": "right",
+          "area_m2": 0.001191888762296145,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003634840250015259,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0471668541431427,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07688282936811447,
+          "side": "right",
+          "area_m2": 0.001827545297743427,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.005472905933856964,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.021894894540309906,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08085253596305847,
+          "side": "right",
+          "area_m2": 0.00012305229775932958,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0026451945304870605,
+          "body_below_fraction": 0.3333333333333333,
+          "body_drop_median_m": 0.027329202741384506,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0905904138367623,
+          "side": "right",
+          "area_m2": 0.0005740391760085117,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010078224120661616,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.025906829861924052,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08378067374229431,
+          "side": "right",
+          "area_m2": 0.00024886239501853424,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.005090594291687012,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.018614858388900757,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08848110720515251,
+          "side": "right",
+          "area_m2": 0.0008832999737222735,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012292560189962387,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05998178571462631,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08102309465408325,
+          "side": "right",
+          "area_m2": 0.0006743621353137996,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0030230283737182617,
+          "body_below_fraction": 0.0,
+          "body_drop_median_m": 0.02877453714609146,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09822635114192962,
+          "side": "right",
+          "area_m2": 0.0008416086042473125,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017854556441307068,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05695624276995659,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 16,
+        "kept": 7,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9
+        }
+      },
+      "median_foot_drop_median_m": 0.0066523477435112,
+      "median_body_drop_median_m": 0.032460201531648636,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.012275295853614813,
+          "penetration_p99_m": 0.006570111960172682,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 70,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.008188529638573527,
+          "skin": {
+            "max_m": 0.018435049802064896,
+            "p99_m": 0.01715345397591591,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_support": {
+            "max_m": 0.018435049802064896,
+            "p99_m": 0.01715345397591591,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_ground": {
+            "max_m": 0.012676002979278567,
+            "p99_m": 0.006023812294006357,
+            "frames_over_report": 0,
+            "frames": 145
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.012275295853614813,
+          "penetration_p99_m": 0.008247829127311732,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 70,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.008188529638573527,
+          "skin": {
+            "max_m": 0.019584760069847107,
+            "p99_m": 0.01942589581012726,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_support": {
+            "max_m": 0.019584760069847107,
+            "p99_m": 0.01942589581012726,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_ground": {
+            "max_m": 0.012676002979278567,
+            "p99_m": 0.006023812294006357,
+            "frames_over_report": 0,
+            "frames": 145
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 8,
+        "maximal": 8
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 51,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 2
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 145,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 145,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 145,
+        "frames": 145,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 145
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 442,
+        "core_cells": 442,
+        "status": "fitted",
+        "tight_m": 0.6263302922248841,
+        "loose_m": 0.6542058944702149,
+        "floor_m": -0.08627366781234741,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 0.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "mohak_backward_stop_004__A121",
+      "group": "quadruped",
+      "stem": "mohak_backward",
+      "seconds": 7.633,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body"
+      ],
+      "levels_m": [
+        0.0,
+        0.06519013524055481
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 5,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06598242625594139,
+          "side": "left",
+          "area_m2": 0.0017221579421540234,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007460203021764755,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.060671743005514145,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06519013524055481,
+          "side": "right",
+          "area_m2": 0.001542747351050755,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.019109278917312622,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05003717541694641,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07393209517002106,
+          "side": "right",
+          "area_m2": 0.003240672189896099,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0077146440744400024,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0634547621011734,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0771758246421814,
+          "side": "right",
+          "area_m2": 0.0023803941221931524,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010270457714796066,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07022204995155334,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08851246416568756,
+          "side": "right",
+          "area_m2": 0.005483814549327448,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014716938138008118,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.08284272253513336,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 5,
+        "kept": 0,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": 5
+        }
+      },
+      "median_foot_drop_median_m": 0.010270457714796066,
+      "median_body_drop_median_m": 0.0634547621011734,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.010334710329771044,
+          "penetration_p99_m": 0.0028542143821716336,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 39,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007698517292737961,
+          "skin": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018084204047918318,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_support": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018084204047918318,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_ground": {
+            "max_m": 0.0027588319778442394,
+            "p99_m": 0.0017103183269500733,
+            "frames_over_report": 0,
+            "frames": 115
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.016026968806982043,
+          "penetration_p99_m": 0.0142880966514349,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 39,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007698517292737961,
+          "skin": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018132074177265166,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_support": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018132074177265166,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_ground": {
+            "max_m": 0.0027588319778442394,
+            "p99_m": 0.0017103183269500733,
+            "frames_over_report": 0,
+            "frames": 115
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 3,
+        "maximal": 3
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 54,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 115,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 115,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 115,
+        "frames": 115,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 115,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 158,
+        "core_cells": 158,
+        "status": "fitted",
+        "tight_m": 0.8130521249771119,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.05738022804260254,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "on_all_fours_backward_stop_R_003__A200",
+      "group": "quadruped",
+      "stem": "on_all_fours_backward",
+      "seconds": 6.6,
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 9,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.07965967953205108,
+          "side": "left",
+          "area_m2": 0.001673919552413583,
+          "body_points_under": 6,
+          "foot_below_fraction": 0.0625,
+          "foot_drop_median_m": 0.02637307718396187,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0667046457529068,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0792336143553257,
+          "side": "left",
+          "area_m2": 0.0014672565955864414,
+          "body_points_under": 45,
+          "foot_below_fraction": 0.25,
+          "foot_drop_median_m": 0.027478110045194626,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06184360757470131,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07750658094882965,
+          "side": "left",
+          "area_m2": 0.0008871749464955947,
+          "body_points_under": 5,
+          "foot_below_fraction": 0.14285714285714285,
+          "foot_drop_median_m": 0.024628128856420517,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05849854648113251,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07493358254432678,
+          "side": "left",
+          "area_m2": 0.00013129069519379755,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02461971342563629,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.059853583574295044,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08585255369544029,
+          "side": "right",
+          "area_m2": 0.004063879924770308,
+          "body_points_under": 246,
+          "foot_below_fraction": 0.3333333333333333,
+          "foot_drop_median_m": 0.027600977569818497,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07661434635519981,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07972292751073837,
+          "side": "right",
+          "area_m2": 0.001072654730708944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.027214936912059784,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06169002503156662,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08964636698365211,
+          "side": "right",
+          "area_m2": 0.0015077016407070154,
+          "body_points_under": 27,
+          "foot_below_fraction": 0.14285714285714285,
+          "foot_drop_median_m": 0.026266787201166153,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0787159837782383,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08598667532205581,
+          "side": "right",
+          "area_m2": 0.0026691854926119696,
+          "body_points_under": 52,
+          "foot_below_fraction": 0.1875,
+          "foot_drop_median_m": 0.02807534486055374,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0723605528473854,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0866123080253601,
+          "side": "right",
+          "area_m2": 0.002548591155735913,
+          "body_points_under": 61,
+          "foot_below_fraction": 0.3,
+          "foot_drop_median_m": 0.027928225696086884,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.07239481806755066,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 9,
+        "kept": 0,
+        "dropped": 9,
+        "dropped_by": {
+          "body_rests_lower": 9,
+          "body_under_sole": 5
+        }
+      },
+      "median_foot_drop_median_m": 0.027214936912059784,
+      "median_body_drop_median_m": 0.0667046457529068,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0005412459373474142,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 0,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": null,
+          "skin": {
+            "max_m": 0.0016024470329284654,
+            "p99_m": 6.625533103942109e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_ground": {
+            "max_m": 0.0016024470329284654,
+            "p99_m": 6.625533103942109e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0005412459373474142,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 0,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": null,
+          "skin": {
+            "max_m": 0.0016024470329284654,
+            "p99_m": 6.625533103942109e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_ground": {
+            "max_m": 0.0016024470329284654,
+            "p99_m": 6.625533103942109e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 32,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 3
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 99,
+        "frames": 99,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 99,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 194,
+        "core_cells": 194,
+        "status": "fitted",
+        "tight_m": 0.9168341183662415,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.042341971397399904,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "on_all_fours_forward_start_R_003__A199",
+      "group": "quadruped",
+      "stem": "on_all_fours_forward",
+      "seconds": 11.867,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06624031525105238
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 11,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06683629371225834,
+          "side": "left",
+          "area_m2": 0.00016285235590030034,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007233170792460442,
+          "body_below_fraction": 0.8536585365853658,
+          "body_drop_median_m": 0.033764222636818886,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06296638205647469,
+          "side": "left",
+          "area_m2": 0.0009473224398395264,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006591404788196087,
+          "body_below_fraction": 0.8888888888888888,
+          "body_drop_median_m": 0.04340778663754463,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06062938824295998,
+          "side": "left",
+          "area_m2": 0.00010348243648117261,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007554192095994949,
+          "body_below_fraction": 0.8,
+          "body_drop_median_m": 0.043693725019693375,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06237643390893936,
+          "side": "left",
+          "area_m2": 0.0007627766641071787,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013028398156166077,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05507583171129227,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08895510613918305,
+          "side": "right",
+          "area_m2": 0.0009489272224956213,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01589418202638626,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05597083270549774,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08612684339284897,
+          "side": "right",
+          "area_m2": 0.0010693072569653572,
+          "body_points_under": 2,
+          "foot_below_fraction": 0.05263157894736842,
+          "foot_drop_median_m": 0.02470361441373825,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0629596933722496,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07258748441934586,
+          "side": "right",
+          "area_m2": 0.0009335578928078014,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012087240815162659,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05032084137201309,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07153666943311691,
+          "side": "right",
+          "area_m2": 0.001119114793081799,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012210529297590256,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.053677670657634735,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.069553801715374,
+          "side": "right",
+          "area_m2": 0.0012398020752311112,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011922352015972137,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05052422732114792,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07375914037227631,
+          "side": "right",
+          "area_m2": 0.0009067243361897681,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01369379460811615,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.055587396025657654,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06564433678984642,
+          "side": "right",
+          "area_m2": 0.0013578686586512845,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01219557598233223,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05628209933638573,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 11,
+        "kept": 0,
+        "dropped": 11,
+        "dropped_by": {
+          "body_rests_lower": 11
+        }
+      },
+      "median_foot_drop_median_m": 0.01219557598233223,
+      "median_body_drop_median_m": 0.053677670657634735,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.010428295470774177,
+          "penetration_p99_m": 0.00031295910477638085,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 23,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.009549888782203197,
+          "skin": {
+            "max_m": 0.018757239915430546,
+            "p99_m": 0.01771094573661684,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_support": {
+            "max_m": 0.018757239915430546,
+            "p99_m": 0.01771094573661684,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_ground": {
+            "max_m": 0.003405733108520506,
+            "p99_m": 0.001476072669029228,
+            "frames_over_report": 0,
+            "frames": 178
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.023756197653710846,
+          "penetration_p99_m": 0.012666354700922948,
+          "penetration_frames_over_report": 2,
+          "support_evidence_points": 23,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.009549888782203197,
+          "skin": {
+            "max_m": 0.01880424004048109,
+            "p99_m": 0.018558753021061417,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_support": {
+            "max_m": 0.01880424004048109,
+            "p99_m": 0.018558753021061417,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_ground": {
+            "max_m": 0.003405733108520506,
+            "p99_m": 0.001476072669029228,
+            "frames_over_report": 0,
+            "frames": 178
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 36,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 178,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 178,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 178,
+        "frames": 178,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 178,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 397,
+        "core_cells": 397,
+        "status": "fitted",
+        "tight_m": 0.9792654466629028,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.0775346326828003,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "on_all_fours_forward_stop_R_004__A199",
+      "group": "quadruped",
+      "stem": "on_all_fours_forward",
+      "seconds": 11.433,
+      "flags": [
+        "ground_from_skin",
+        "inverted_foot_level_dropped",
+        "foot_patches_rest_on_body"
+      ],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 7,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06701883912086487,
+          "side": "left",
+          "area_m2": 0.001258758135810778,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.023848354816436768,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05772104859352112,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06635458260774613,
+          "side": "left",
+          "area_m2": 0.0015800871692654983,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02267853170633316,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.051771827042102814,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06776810675859452,
+          "side": "left",
+          "area_m2": 0.0008767896868582259,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.024291232228279114,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.0625397339463234,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07376009464263916,
+          "side": "left",
+          "area_m2": 0.0005507338046422117,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02560870349407196,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.06841105222702026,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06580384314060211,
+          "side": "right",
+          "area_m2": 0.0009456746015745754,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02806374430656433,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05308134853839874,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06775419652462006,
+          "side": "right",
+          "area_m2": 0.0019106445443287517,
+          "body_points_under": 58,
+          "foot_below_fraction": 0.18518518518518517,
+          "foot_drop_median_m": 0.027910448610782623,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.052290961146354675,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06514810264110565,
+          "side": "right",
+          "area_m2": 0.001199143864108354,
+          "body_points_under": 16,
+          "foot_below_fraction": 0.19230769230769232,
+          "foot_drop_median_m": 0.028635412454605103,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05517388880252838,
+          "dropped": [
+            "body_under_sole",
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 7,
+        "kept": 0,
+        "dropped": 7,
+        "dropped_by": {
+          "body_rests_lower": 7,
+          "body_under_sole": 2
+        }
+      },
+      "median_foot_drop_median_m": 0.02560870349407196,
+      "median_body_drop_median_m": 0.05517388880252838,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 0,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": null,
+          "skin": {
+            "max_m": 0.0010109519958496072,
+            "p99_m": 0.00045619845390319227,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_ground": {
+            "max_m": 0.0010109519958496072,
+            "p99_m": 0.00045619845390319227,
+            "frames_over_report": 0,
+            "frames": 172
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 0,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": null,
+          "skin": {
+            "max_m": 0.0010109519958496072,
+            "p99_m": 0.00045619845390319227,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_ground": {
+            "max_m": 0.0010109519958496072,
+            "p99_m": 0.00045619845390319227,
+            "frames_over_report": 0,
+            "frames": 172
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 112,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 172,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 172,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 172,
+        "frames": 172,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 172,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 180,
+        "core_cells": 180,
+        "status": "fitted",
+        "tight_m": 0.876988570690155,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.06314903736114502,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    },
+    {
+      "filename": "spider_crawl_R_004__A361",
+      "group": "quadruped",
+      "stem": "spider_crawl",
+      "seconds": 10.6,
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06234697021543979
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 5,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06037101849913597,
+          "side": "left",
+          "area_m2": 0.004225297176110102,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017589930444955826,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.04563027247786522,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06171702921390533,
+          "side": "left",
+          "area_m2": 0.0009486638122226942,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012471560388803482,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.041321590542793274,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06600863255560398,
+          "side": "right",
+          "area_m2": 0.001489535153643029,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012462958693504333,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05090912617743015,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06297691121697425,
+          "side": "right",
+          "area_m2": 0.0033533564892676004,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010636935010552406,
+          "body_below_fraction": 0.96875,
+          "body_drop_median_m": 0.03989044204354286,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0670718490332365,
+          "side": "right",
+          "area_m2": 0.0033435898865539215,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.018415851518511772,
+          "body_below_fraction": 1.0,
+          "body_drop_median_m": 0.05421109311282635,
+          "dropped": [
+            "body_rests_lower"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 5,
+        "kept": 0,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": 5
+        }
+      },
+      "median_foot_drop_median_m": 0.012471560388803482,
+      "median_body_drop_median_m": 0.04563027247786522,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.00861490190029145,
+          "penetration_p99_m": 0.0030181042104959533,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 22,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007883632555603981,
+          "skin": {
+            "max_m": 0.016226353123784065,
+            "p99_m": 0.01606838624924421,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_support": {
+            "max_m": 0.016226353123784065,
+            "p99_m": 0.01606838624924421,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_ground": {
+            "max_m": 0.008906204700469975,
+            "p99_m": 0.0028393757343291755,
+            "frames_over_report": 0,
+            "frames": 159
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.00861490190029145,
+          "penetration_p99_m": 0.0030181042104959533,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 22,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007883632555603981,
+          "skin": {
+            "max_m": 0.01858646422624588,
+            "p99_m": 0.018184753619134426,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_support": {
+            "max_m": 0.01858646422624588,
+            "p99_m": 0.018184753619134426,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_ground": {
+            "max_m": 0.008906204700469975,
+            "p99_m": 0.0028393757343291755,
+            "frames_over_report": 0,
+            "frames": 159
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 75,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 20
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 159,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 159,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 159,
+        "frames": 159,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 51,
+          "prone": 108
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 279,
+        "core_cells": 279,
+        "status": "fitted",
+        "tight_m": 0.6313454699516297,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.07195804595947265,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "eligibility_before_exclusion": null,
+      "training_eligible": true,
+      "rejection_reasons": {},
+      "F": 0
+    }
+  ],
+  "previous_v6_examples": [
+    {
+      "filename": "crawl_ff_loop_225_001__A133",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 19.933,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "levels_m": [
+        0.0,
+        0.06260095767676829
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.10704467862844466,
+          "side": "left",
+          "area_m2": 0.00087978721085058,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.024594925343990326,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.10305069804191588,
+          "side": "left",
+          "area_m2": 0.0018124613545125179,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.019306741654872894,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.060696699172258374,
+          "side": "left",
+          "area_m2": 0.0032498852482825136,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009206626564264297,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08190655380487441,
+          "side": "left",
+          "area_m2": 0.0037532794884941323,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009312726557254791,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07066955089569091,
+          "side": "left",
+          "area_m2": 0.004017626039829025,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00592629611492157,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0670059923827648,
+          "side": "left",
+          "area_m2": 0.003484620681042827,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00660020112991333,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08741566956043242,
+          "side": "right",
+          "area_m2": 0.0013490368240907102,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.015757523477077484,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06994822293519973,
+          "side": "right",
+          "area_m2": 0.00011070242807242892,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009714080020785332,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06370701126754283,
+          "side": "right",
+          "area_m2": 0.0005125121219777817,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009792482480406761,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07882117152214049,
+          "side": "right",
+          "area_m2": 0.0012573203245249687,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.008421756327152252,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08859620288014411,
+          "side": "right",
+          "area_m2": 0.00018226325250481068,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014922622591257095,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.062458821088075635,
+          "side": "right",
+          "area_m2": 0.0006440048930773656,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00798429548740387,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06274309426546096,
+          "side": "right",
+          "area_m2": 0.0001803134356954672,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004212506115436554,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08900489330291747,
+          "side": "right",
+          "area_m2": 0.0010028825485921544,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.016334690153598785,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06579564929008483,
+          "side": "right",
+          "area_m2": 0.00028355458436379877,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014392927289009094,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 15,
+        "kept": 15,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.009714080020785332,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.00814126759767533,
+          "penetration_p99_m": 0.005705592185258868,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 242,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08190655380487441,
+          "skin": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.01895410947501659,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_support": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.01895410947501659,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_ground": {
+            "max_m": 0.009573023319244388,
+            "p99_m": 0.00775426030158995,
+            "frames_over_report": 0,
+            "frames": 299
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.00814126759767533,
+          "penetration_p99_m": 0.005856600031256674,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 242,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07882117152214049,
+          "skin": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.019614680632948876,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_support": {
+            "max_m": 0.01996820978820324,
+            "p99_m": 0.019614680632948876,
+            "frames_over_report": 0,
+            "frames": 299
+          },
+          "skin_ground": {
+            "max_m": 0.009573023319244388,
+            "p99_m": 0.00775426030158995,
+            "frames_over_report": 0,
+            "frames": 299
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 11,
+        "maximal": 11
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 199,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 299,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 299,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 299,
+        "frames": 299,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 6,
+          "prone": 293
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 502,
+        "core_cells": 496,
+        "status": "fitted",
+        "tight_m": 0.653971610069275,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.06078078269958496,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "crawl_ff_loop_225_002__A131",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 8.233,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06497203007340431
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.09111346125602722,
+          "side": "left",
+          "area_m2": 0.0009544702748804923,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01841418817639351,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07074959397315979,
+          "side": "left",
+          "area_m2": 0.0001565821393594291,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006441809237003326,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07303019084967673,
+          "side": "left",
+          "area_m2": 0.001115143100578064,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012320041889324784,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07137338824570179,
+          "side": "left",
+          "area_m2": 0.00016394837399275053,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010563574731349945,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06380699023604393,
+          "side": "left",
+          "area_m2": 0.0003387795700502405,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.005602419376373291,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08027786955237388,
+          "side": "left",
+          "area_m2": 0.00016784114971557518,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.009371008723974228,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0720034559071064,
+          "side": "left",
+          "area_m2": 0.0002763129658993613,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004980228841304779,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.061593978740274904,
+          "side": "right",
+          "area_m2": 0.0044374818083877665,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": -0.001630541868507862,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06296494051814079,
+          "side": "right",
+          "area_m2": 0.0029694262749959677,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": -0.0012224465608596802,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.062307739704847334,
+          "side": "right",
+          "area_m2": 0.0003898126169838978,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.00568053126335144,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06870425686240196,
+          "side": "right",
+          "area_m2": 0.0005375906810165532,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010716669261455536,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06497203007340431,
+          "side": "right",
+          "area_m2": 0.00035717386581879396,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0035484060645103455,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 12,
+        "kept": 12,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.006061170250177383,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.012959299348294737,
+          "penetration_p99_m": 0.0072372746095061315,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 169,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08027786955237388,
+          "skin": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018585772477090357,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_support": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018585772477090357,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_ground": {
+            "max_m": 0.0010064522922039049,
+            "p99_m": 0.0006793617457151406,
+            "frames_over_report": 0,
+            "frames": 124
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.012959299348294737,
+          "penetration_p99_m": 0.0072372746095061315,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 169,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08027786955237388,
+          "skin": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018820670172572135,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_support": {
+            "max_m": 0.019273333251476288,
+            "p99_m": 0.018820670172572135,
+            "frames_over_report": 0,
+            "frames": 124
+          },
+          "skin_ground": {
+            "max_m": 0.0010064522922039049,
+            "p99_m": 0.0006793617457151406,
+            "frames_over_report": 0,
+            "frames": 124
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 7,
+        "maximal": 7
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 55,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 14
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 124,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 124,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 124,
+        "frames": 124,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 124
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 402,
+        "core_cells": 402,
+        "status": "fitted",
+        "tight_m": 0.6234151451289655,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.07383888408541679,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "crawl_ff_loop_225_003__A132",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 11.967,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.07425193548202515
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.09530309647321701,
+          "side": "left",
+          "area_m2": 0.00036182538139684084,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013094943016767502,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.10155784025788307,
+          "side": "left",
+          "area_m2": 0.0003709438462093928,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01263614371418953,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07790455281734467,
+          "side": "left",
+          "area_m2": 0.0001161666989076271,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010669872164726257,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07318108960986137,
+          "side": "left",
+          "area_m2": 0.00042351398919848737,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003097319044172764,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09837860673666,
+          "side": "left",
+          "area_m2": 0.00272020690965713,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0157502219080925,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07941591799259186,
+          "side": "left",
+          "area_m2": 0.00026222922881036226,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011809894815087318,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0986825680732727,
+          "side": "left",
+          "area_m2": 0.004442737285115683,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012467138469219208,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08090403735637665,
+          "side": "left",
+          "area_m2": 0.00022089636676980717,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0113941989839077,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07574016660451889,
+          "side": "left",
+          "area_m2": 0.0009730857196572629,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010747268795967102,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07844904683530331,
+          "side": "left",
+          "area_m2": 0.0019106405857201025,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004877337254583836,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.10418088793754578,
+          "side": "left",
+          "area_m2": 0.001208565943670692,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013919442892074585,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06941147208213806,
+          "side": "left",
+          "area_m2": 0.0001071791076867612,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007060553878545761,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07278133243322372,
+          "side": "right",
+          "area_m2": 0.0005043009645135932,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011915653944015503,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.086179338991642,
+          "side": "right",
+          "area_m2": 0.001962018975752322,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01816411316394806,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07425193548202515,
+          "side": "right",
+          "area_m2": 0.00037679387667743924,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01071443036198616,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0667781388759613,
+          "side": "right",
+          "area_m2": 0.002915986488690736,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0029427995905280113,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08031143307685852,
+          "side": "right",
+          "area_m2": 0.0005497630498076944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012998580932617188,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07012458950281143,
+          "side": "right",
+          "area_m2": 0.0009356930379702533,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0036299899220466614,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07587792783975601,
+          "side": "right",
+          "area_m2": 0.0019570448143113595,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003635622560977936,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07189649403095245,
+          "side": "right",
+          "area_m2": 0.00297514692977785,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006151435896754265,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07163372695446014,
+          "side": "right",
+          "area_m2": 0.0015990218260171218,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.002743467688560486,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07774357929825783,
+          "side": "right",
+          "area_m2": 0.0006202065528242429,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011850785464048386,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06841708034276962,
+          "side": "right",
+          "area_m2": 0.0014277221558955944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0053149498999118805,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06379393547773361,
+          "side": "right",
+          "area_m2": 0.0015885518256339992,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0021407529711723328,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 24,
+        "kept": 24,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.010730849578976631,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.007884092032909396,
+          "penetration_p99_m": 0.0023587836593389868,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 264,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07941591799259186,
+          "skin": {
+            "max_m": 0.019784115254878998,
+            "p99_m": 0.018902886472642426,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_support": {
+            "max_m": 0.019784115254878998,
+            "p99_m": 0.018902886472642426,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_ground": {
+            "max_m": 0.00994442343711853,
+            "p99_m": 0.0027824884653091424,
+            "frames_over_report": 0,
+            "frames": 180
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.007884092032909396,
+          "penetration_p99_m": 0.0023621713280678126,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 264,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07941591799259186,
+          "skin": {
+            "max_m": 0.019819803535938263,
+            "p99_m": 0.01975171599537134,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_support": {
+            "max_m": 0.019819803535938263,
+            "p99_m": 0.01975171599537134,
+            "frames_over_report": 0,
+            "frames": 180
+          },
+          "skin_ground": {
+            "max_m": 0.00994442343711853,
+            "p99_m": 0.0027824884653091424,
+            "frames_over_report": 0,
+            "frames": 180
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 14,
+        "maximal": 14
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 62,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 6
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 180,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 180,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 180,
+        "frames": 180,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 10,
+          "prone": 170
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 614,
+        "core_cells": 612,
+        "status": "fitted",
+        "tight_m": 0.6538118064403534,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.07571871638298035,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "crawl_ff_start_225_R_002__A233",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 12.933,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.08051503106951713
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 1,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.07030548185110091,
+          "side": "left",
+          "area_m2": 0.000636797019271107,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003226332366466522,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07244924671947955,
+          "side": "left",
+          "area_m2": 0.00031658512150023466,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.008759178221225739,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06790606707334518,
+          "side": "left",
+          "area_m2": 0.0007338187822933939,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.002631343901157379,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07483433216810226,
+          "side": "left",
+          "area_m2": 0.0003952033051515258,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013621479272842407,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0778295400738716,
+          "side": "left",
+          "area_m2": 0.003148936491037979,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004242368042469025,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07050385355949401,
+          "side": "left",
+          "area_m2": 0.000551331781233344,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0029756128787994385,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07381131529808044,
+          "side": "left",
+          "area_m2": 0.0008353603472670557,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014092467725276947,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06892313838005065,
+          "side": "left",
+          "area_m2": 0.0017574178287773634,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006027713418006897,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08051503106951713,
+          "side": "left",
+          "area_m2": 0.00047206116104803186,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014494240283966064,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08198247879743575,
+          "side": "left",
+          "area_m2": 0.0034590973756394305,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0031620413064956665,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07118872582912444,
+          "side": "left",
+          "area_m2": 0.0012302338445948635,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006044268608093262,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07880752190947532,
+          "side": "left",
+          "area_m2": 0.0005094331221044968,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014645729213953018,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08306396782398223,
+          "side": "left",
+          "area_m2": 0.003195667765936605,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0041159167885780334,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08344911813735961,
+          "side": "right",
+          "area_m2": 0.001285306509410944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02291274629533291,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08238133817911147,
+          "side": "right",
+          "area_m2": 0.0007362628153924078,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01615501195192337,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09368713416159152,
+          "side": "right",
+          "area_m2": 0.0007783575956179511,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02846839465200901,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08862653404474258,
+          "side": "right",
+          "area_m2": 0.0019476502599382606,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.024532340466976166,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08235077589750289,
+          "side": "right",
+          "area_m2": 0.0005056529654647868,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017257019877433777,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08998889598995446,
+          "side": "right",
+          "area_m2": 0.0005156859799839708,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017070006113499403,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07692697674036025,
+          "side": "right",
+          "area_m2": 0.0002315686442528886,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014687798917293549,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07933875203132629,
+          "side": "right",
+          "area_m2": 0.0007611567578145184,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01305697113275528,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0869833606481552,
+          "side": "right",
+          "area_m2": 0.0007592402356664252,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01785886287689209,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08054866671562194,
+          "side": "right",
+          "area_m2": 0.00017744277388942464,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013397661969065666,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08894782543182372,
+          "side": "right",
+          "area_m2": 0.001234583506388276,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01716972142457962,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09719061136245727,
+          "side": "right",
+          "area_m2": 0.0006918114521212715,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01911059021949768,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.10730207741260528,
+          "side": "right",
+          "area_m2": 0.003925343353969879,
+          "body_points_under": 1,
+          "foot_below_fraction": 1.0,
+          "foot_drop_median_m": 0.0437958762049675,
+          "dropped": [
+            "foot_lower_than_sole"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07981640875339507,
+          "side": "right",
+          "area_m2": 0.0001319350400166286,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014751233160495758,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08481305867433547,
+          "side": "right",
+          "area_m2": 0.0010628239605807721,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01363777369260788,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 28,
+        "kept": 27,
+        "dropped": 1,
+        "dropped_by": {
+          "body_rests_lower": null,
+          "foot_lower_than_sole": 1
+        }
+      },
+      "median_foot_drop_median_m": 0.014293354004621506,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.00832772970199586,
+          "penetration_p99_m": 0.004608873724937439,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 311,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08998889598995446,
+          "skin": {
+            "max_m": 0.019840354099869728,
+            "p99_m": 0.019625869877636433,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_support": {
+            "max_m": 0.019840354099869728,
+            "p99_m": 0.019625869877636433,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_ground": {
+            "max_m": 0.008532680273056037,
+            "p99_m": 0.002387690544128394,
+            "frames_over_report": 0,
+            "frames": 194
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.00832772970199586,
+          "penetration_p99_m": 0.004608873724937439,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 311,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.08894782543182372,
+          "skin": {
+            "max_m": 0.019840354099869728,
+            "p99_m": 0.019662372320890426,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_support": {
+            "max_m": 0.019840354099869728,
+            "p99_m": 0.019662372320890426,
+            "frames_over_report": 0,
+            "frames": 194
+          },
+          "skin_ground": {
+            "max_m": 0.008532680273056037,
+            "p99_m": 0.002387690544128394,
+            "frames_over_report": 0,
+            "frames": 194
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 12,
+        "maximal": 12
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 68,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 3
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 194,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 194,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 194,
+        "frames": 194,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 194
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 669,
+        "core_cells": 669,
+        "status": "fitted",
+        "tight_m": 0.6339278829097748,
+        "loose_m": 0.6542058944702147,
+        "floor_m": -0.07749237895011901,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "crawl_ff_start_315_R_002__A233",
+      "group": "prone",
+      "stem": "crawl",
+      "seconds": 9.667,
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "levels_m": [
+        0.0,
+        0.08240188419818878
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.09947392106056213,
+          "side": "left",
+          "area_m2": 0.0004743162937224099,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01868288964033127,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07495277136564255,
+          "side": "left",
+          "area_m2": 0.00011435985809704619,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.004896797239780426,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07857611536979675,
+          "side": "left",
+          "area_m2": 0.0008976238170026463,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006263419985771179,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08597558125853538,
+          "side": "left",
+          "area_m2": 0.00045832735653661416,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01571149006485939,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0796397602558136,
+          "side": "left",
+          "area_m2": 0.0004470291464890863,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007041275501251221,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08813798672286793,
+          "side": "left",
+          "area_m2": 0.0006271013859269203,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012410340073984116,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0771072632074356,
+          "side": "left",
+          "area_m2": 0.0014159447282509063,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006029993295669556,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09308349847793579,
+          "side": "left",
+          "area_m2": 0.000731779613218464,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014163628220558167,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08013513445854187,
+          "side": "right",
+          "area_m2": 0.001191888762296145,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.003634840250015259,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07688282936811447,
+          "side": "right",
+          "area_m2": 0.001827545297743427,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.005472905933856964,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08085253596305847,
+          "side": "right",
+          "area_m2": 0.00012305229775932958,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0026451945304870605,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0905904138367623,
+          "side": "right",
+          "area_m2": 0.0005740391760085117,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010078224120661616,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08378067374229431,
+          "side": "right",
+          "area_m2": 0.00024886239501853424,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.005090594291687012,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08848110720515251,
+          "side": "right",
+          "area_m2": 0.0008832999737222735,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012292560189962387,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08102309465408325,
+          "side": "right",
+          "area_m2": 0.0006743621353137996,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0030230283737182617,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.09822635114192962,
+          "side": "right",
+          "area_m2": 0.0008416086042473125,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017854556441307068,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 16,
+        "kept": 16,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.0066523477435112,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.012275295853614813,
+          "penetration_p99_m": 0.006570111960172682,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 181,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.09822635114192962,
+          "skin": {
+            "max_m": 0.01721935346722603,
+            "p99_m": 0.016150601506233216,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_support": {
+            "max_m": 0.01721935346722603,
+            "p99_m": 0.016150601506233216,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_ground": {
+            "max_m": 0.012676002979278567,
+            "p99_m": 0.006023812294006357,
+            "frames_over_report": 0,
+            "frames": 145
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.012275295853614813,
+          "penetration_p99_m": 0.008247829127311732,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 181,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.09822635114192962,
+          "skin": {
+            "max_m": 0.019993409514427185,
+            "p99_m": 0.01942589581012726,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_support": {
+            "max_m": 0.019993409514427185,
+            "p99_m": 0.01942589581012726,
+            "frames_over_report": 0,
+            "frames": 145
+          },
+          "skin_ground": {
+            "max_m": 0.012676002979278567,
+            "p99_m": 0.006023812294006357,
+            "frames_over_report": 0,
+            "frames": 145
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 10,
+        "maximal": 10
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 51,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 2
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 145,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 145,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 145,
+        "frames": 145,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 145
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 442,
+        "core_cells": 442,
+        "status": "fitted",
+        "tight_m": 0.6263302922248841,
+        "loose_m": 0.6542058944702149,
+        "floor_m": -0.08627366781234741,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 0.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "mohak_backward_stop_004__A121",
+      "group": "quadruped",
+      "stem": "mohak_backward",
+      "seconds": 7.633,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict"
+      ],
+      "levels_m": [
+        0.0,
+        0.06519013524055481
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06598242625594139,
+          "side": "left",
+          "area_m2": 0.0017221579421540234,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007460203021764755,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06519013524055481,
+          "side": "right",
+          "area_m2": 0.001542747351050755,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.019109278917312622,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07393209517002106,
+          "side": "right",
+          "area_m2": 0.003240672189896099,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.0077146440744400024,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0771758246421814,
+          "side": "right",
+          "area_m2": 0.0023803941221931524,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010270457714796066,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08851246416568756,
+          "side": "right",
+          "area_m2": 0.005483814549327448,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.014716938138008118,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 5,
+        "kept": 5,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.010270457714796066,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.010334710329771044,
+          "penetration_p99_m": 0.0042014355957508106,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 120,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.06519013524055481,
+          "skin": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018084204047918318,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_support": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018084204047918318,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_ground": {
+            "max_m": 0.0027588319778442394,
+            "p99_m": 0.0017103183269500733,
+            "frames_over_report": 0,
+            "frames": 115
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.016026968806982043,
+          "penetration_p99_m": 0.0142880966514349,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 120,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.06519013524055481,
+          "skin": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018132074177265166,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_support": {
+            "max_m": 0.01944074034690857,
+            "p99_m": 0.018132074177265166,
+            "frames_over_report": 0,
+            "frames": 115
+          },
+          "skin_ground": {
+            "max_m": 0.0027588319778442394,
+            "p99_m": 0.0017103183269500733,
+            "frames_over_report": 0,
+            "frames": 115
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 54,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 115,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 115,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 115,
+        "frames": 115,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 115,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 158,
+        "core_cells": 158,
+        "status": "fitted",
+        "tight_m": 0.8130521249771119,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.05738022804260254,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "on_all_fours_backward_stop_R_003__A200",
+      "group": "quadruped",
+      "stem": "on_all_fours_backward",
+      "seconds": 6.6,
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.07972292751073837
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 5,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.07965967953205108,
+          "side": "left",
+          "area_m2": 0.001673919552413583,
+          "body_points_under": 6,
+          "foot_below_fraction": 0.0625,
+          "foot_drop_median_m": 0.02637307718396187,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0792336143553257,
+          "side": "left",
+          "area_m2": 0.0014672565955864414,
+          "body_points_under": 45,
+          "foot_below_fraction": 0.25,
+          "foot_drop_median_m": 0.027478110045194626,
+          "dropped": [
+            "body_under_sole"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07750658094882965,
+          "side": "left",
+          "area_m2": 0.0008871749464955947,
+          "body_points_under": 5,
+          "foot_below_fraction": 0.14285714285714285,
+          "foot_drop_median_m": 0.024628128856420517,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07493358254432678,
+          "side": "left",
+          "area_m2": 0.00013129069519379755,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02461971342563629,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08585255369544029,
+          "side": "right",
+          "area_m2": 0.004063879924770308,
+          "body_points_under": 246,
+          "foot_below_fraction": 0.3333333333333333,
+          "foot_drop_median_m": 0.027600977569818497,
+          "dropped": [
+            "body_under_sole"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.07972292751073837,
+          "side": "right",
+          "area_m2": 0.001072654730708944,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.027214936912059784,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08964636698365211,
+          "side": "right",
+          "area_m2": 0.0015077016407070154,
+          "body_points_under": 27,
+          "foot_below_fraction": 0.14285714285714285,
+          "foot_drop_median_m": 0.026266787201166153,
+          "dropped": [
+            "body_under_sole"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.08598667532205581,
+          "side": "right",
+          "area_m2": 0.0026691854926119696,
+          "body_points_under": 52,
+          "foot_below_fraction": 0.1875,
+          "foot_drop_median_m": 0.02807534486055374,
+          "dropped": [
+            "body_under_sole"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.0866123080253601,
+          "side": "right",
+          "area_m2": 0.002548591155735913,
+          "body_points_under": 61,
+          "foot_below_fraction": 0.3,
+          "foot_drop_median_m": 0.027928225696086884,
+          "dropped": [
+            "body_under_sole"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 9,
+        "kept": 4,
+        "dropped": 5,
+        "dropped_by": {
+          "body_rests_lower": null,
+          "body_under_sole": 5
+        }
+      },
+      "median_foot_drop_median_m": 0.027214936912059784,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0018730126321315765,
+          "penetration_p99_m": 0.0001960235834121729,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 49,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07972292751073837,
+          "skin": {
+            "max_m": 0.003599785268306732,
+            "p99_m": 0.0016423937976360228,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_support": {
+            "max_m": 0.003599785268306732,
+            "p99_m": 7.199570536612032e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_ground": {
+            "max_m": 0.0016024470329284654,
+            "p99_m": 6.625533103942109e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.01818305626511574,
+          "penetration_p99_m": 0.015220834556967025,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 49,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07972292751073837,
+          "skin": {
+            "max_m": 0.01642443984746933,
+            "p99_m": 0.013588744103908527,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_support": {
+            "max_m": 0.01642443984746933,
+            "p99_m": 0.013588744103908527,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_ground": {
+            "max_m": 0.0016024470329284654,
+            "p99_m": 6.625533103942109e-05,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 1,
+        "maximal": 1
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 32,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 3
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 99,
+        "frames": 99,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 99,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 194,
+        "core_cells": 194,
+        "status": "fitted",
+        "tight_m": 0.9168341183662415,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.042341971397399904,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "on_all_fours_forward_start_R_003__A199",
+      "group": "quadruped",
+      "stem": "on_all_fours_forward",
+      "seconds": 11.867,
+      "flags": [
+        "merged_small_steps",
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06624031525105238
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06683629371225834,
+          "side": "left",
+          "area_m2": 0.00016285235590030034,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007233170792460442,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06296638205647469,
+          "side": "left",
+          "area_m2": 0.0009473224398395264,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.006591404788196087,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06062938824295998,
+          "side": "left",
+          "area_m2": 0.00010348243648117261,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.007554192095994949,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06237643390893936,
+          "side": "left",
+          "area_m2": 0.0007627766641071787,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.013028398156166077,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08895510613918305,
+          "side": "right",
+          "area_m2": 0.0009489272224956213,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01589418202638626,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.08612684339284897,
+          "side": "right",
+          "area_m2": 0.0010693072569653572,
+          "body_points_under": 2,
+          "foot_below_fraction": 0.05263157894736842,
+          "foot_drop_median_m": 0.02470361441373825,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07258748441934586,
+          "side": "right",
+          "area_m2": 0.0009335578928078014,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012087240815162659,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07153666943311691,
+          "side": "right",
+          "area_m2": 0.001119114793081799,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012210529297590256,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.069553801715374,
+          "side": "right",
+          "area_m2": 0.0012398020752311112,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.011922352015972137,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07375914037227631,
+          "side": "right",
+          "area_m2": 0.0009067243361897681,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01369379460811615,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06564433678984642,
+          "side": "right",
+          "area_m2": 0.0013578686586512845,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.01219557598233223,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 11,
+        "kept": 11,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.01219557598233223,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0012362357974052447,
+          "penetration_p99_m": 4.867620766162786e-05,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 165,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07375914037227631,
+          "skin": {
+            "max_m": 0.018757239915430546,
+            "p99_m": 0.01771094573661684,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_support": {
+            "max_m": 0.018757239915430546,
+            "p99_m": 0.01771094573661684,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_ground": {
+            "max_m": 0.003405733108520506,
+            "p99_m": 0.001476072669029228,
+            "frames_over_report": 0,
+            "frames": 178
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.023756197653710846,
+          "penetration_p99_m": 0.0012258395887911344,
+          "penetration_frames_over_report": 2,
+          "support_evidence_points": 165,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.07375914037227631,
+          "skin": {
+            "max_m": 0.018757239915430546,
+            "p99_m": 0.01771094573661684,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_support": {
+            "max_m": 0.018757239915430546,
+            "p99_m": 0.01771094573661684,
+            "frames_over_report": 0,
+            "frames": 178
+          },
+          "skin_ground": {
+            "max_m": 0.003405733108520506,
+            "p99_m": 0.001476072669029228,
+            "frames_over_report": 0,
+            "frames": 178
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 36,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 178,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 178,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 178,
+        "frames": 178,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 178,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 397,
+        "core_cells": 397,
+        "status": "fitted",
+        "tight_m": 0.9792654466629028,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.0775346326828003,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "on_all_fours_forward_stop_R_004__A199",
+      "group": "quadruped",
+      "stem": "on_all_fours_forward",
+      "seconds": 11.433,
+      "flags": [
+        "ground_from_skin",
+        "foot_patches_rest_on_body",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06701883912086487
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 2,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06701883912086487,
+          "side": "left",
+          "area_m2": 0.001258758135810778,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.023848354816436768,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06635458260774613,
+          "side": "left",
+          "area_m2": 0.0015800871692654983,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02267853170633316,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06776810675859452,
+          "side": "left",
+          "area_m2": 0.0008767896868582259,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.024291232228279114,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.07376009464263916,
+          "side": "left",
+          "area_m2": 0.0005507338046422117,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02560870349407196,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06580384314060211,
+          "side": "right",
+          "area_m2": 0.0009456746015745754,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.02806374430656433,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06775419652462006,
+          "side": "right",
+          "area_m2": 0.0019106445443287517,
+          "body_points_under": 58,
+          "foot_below_fraction": 0.18518518518518517,
+          "foot_drop_median_m": 0.027910448610782623,
+          "dropped": [
+            "body_under_sole"
+          ]
+        },
+        {
+          "height_above_ground_m": 0.06514810264110565,
+          "side": "right",
+          "area_m2": 0.001199143864108354,
+          "body_points_under": 16,
+          "foot_below_fraction": 0.19230769230769232,
+          "foot_drop_median_m": 0.028635412454605103,
+          "dropped": [
+            "body_under_sole"
+          ]
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 7,
+        "kept": 5,
+        "dropped": 2,
+        "dropped_by": {
+          "body_rests_lower": null,
+          "body_under_sole": 2
+        }
+      },
+      "median_foot_drop_median_m": 0.02560870349407196,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 82,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.06776810675859452,
+          "skin": {
+            "max_m": 0.019355028867721558,
+            "p99_m": 0.019152821749448774,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_support": {
+            "max_m": 0.019355028867721558,
+            "p99_m": 0.019152821749448774,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_ground": {
+            "max_m": 0.0010109519958496072,
+            "p99_m": 0.00045619845390319227,
+            "frames_over_report": 0,
+            "frames": 172
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.015640864148736004,
+          "penetration_p99_m": 0.003649067641049513,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 82,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.06776810675859452,
+          "skin": {
+            "max_m": 0.019355028867721558,
+            "p99_m": 0.019152821749448774,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_support": {
+            "max_m": 0.019355028867721558,
+            "p99_m": 0.019152821749448774,
+            "frames_over_report": 0,
+            "frames": 172
+          },
+          "skin_ground": {
+            "max_m": 0.0010109519958496072,
+            "p99_m": 0.00045619845390319227,
+            "frames_over_report": 0,
+            "frames": 172
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 4,
+        "maximal": 4
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 112,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 172,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 172,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 172,
+        "frames": 172,
+        "dominant": "quadruped",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 172,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.041519136428833,
+        "low_cells": 180,
+        "core_cells": 180,
+        "status": "fitted",
+        "tight_m": 0.876988570690155,
+        "loose_m": 1.041519136428833,
+        "floor_m": -0.06314903736114502,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    },
+    {
+      "filename": "spider_crawl_R_004__A361",
+      "group": "quadruped",
+      "stem": "spider_crawl",
+      "seconds": 10.6,
+      "flags": [
+        "ground_from_skin",
+        "evidence_reduced_for_body_conflict",
+        "support_rejected"
+      ],
+      "levels_m": [
+        0.0,
+        0.06234697021543979
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [
+        {
+          "height_above_ground_m": 0.06037101849913597,
+          "side": "left",
+          "area_m2": 0.004225297176110102,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.017589930444955826,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06171702921390533,
+          "side": "left",
+          "area_m2": 0.0009486638122226942,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012471560388803482,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06600863255560398,
+          "side": "right",
+          "area_m2": 0.001489535153643029,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.012462958693504333,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.06297691121697425,
+          "side": "right",
+          "area_m2": 0.0033533564892676004,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.010636935010552406,
+          "dropped": []
+        },
+        {
+          "height_above_ground_m": 0.0670718490332365,
+          "side": "right",
+          "area_m2": 0.0033435898865539215,
+          "body_points_under": 0,
+          "foot_below_fraction": 0.0,
+          "foot_drop_median_m": 0.018415851518511772,
+          "dropped": []
+        }
+      ],
+      "raised_sole_patches": {
+        "checked": 5,
+        "kept": 5,
+        "dropped": 0,
+        "dropped_by": {
+          "body_rests_lower": null
+        }
+      },
+      "median_foot_drop_median_m": 0.012471560388803482,
+      "median_body_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.00861490190029145,
+          "penetration_p99_m": 0.0030181042104959533,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 114,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.06171702921390533,
+          "skin": {
+            "max_m": 0.01858646422624588,
+            "p99_m": 0.018184753619134426,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_support": {
+            "max_m": 0.01858646422624588,
+            "p99_m": 0.018184753619134426,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_ground": {
+            "max_m": 0.008906204700469975,
+            "p99_m": 0.0028393757343291755,
+            "frames_over_report": 0,
+            "frames": 159
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.00861490190029145,
+          "penetration_p99_m": 0.0030181042104959533,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 114,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.06171702921390533,
+          "skin": {
+            "max_m": 0.01858646422624588,
+            "p99_m": 0.018184753619134426,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_support": {
+            "max_m": 0.01858646422624588,
+            "p99_m": 0.018184753619134426,
+            "frames_over_report": 0,
+            "frames": 159
+          },
+          "skin_ground": {
+            "max_m": 0.008906204700469975,
+            "p99_m": 0.0028393757343291755,
+            "frames_over_report": 0,
+            "frames": 159
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 6,
+        "maximal": 6
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 75,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 20
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 159,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 159,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 159,
+        "frames": 159,
+        "dominant": "prone",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 0,
+          "quadruped": 51,
+          "prone": 108
+        },
+        "bound_above_floor_m": 0.6542058944702148,
+        "low_cells": 279,
+        "core_cells": 279,
+        "status": "fitted",
+        "tight_m": 0.6313454699516297,
+        "loose_m": 0.6542058944702148,
+        "floor_m": -0.07195804595947265,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "rejected",
+      "eligibility_before_exclusion": null,
+      "training_eligible": false,
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 4
+      },
+      "F": 4
+    }
+  ],
+  "normal_group_body_rests_lower_drops": [],
+  "maximal_over_2cm_bug_clips": [],
+  "floating_slab_clips": [],
+  "selected_pngs": 10,
+  "previous_v6_pngs": 0
+}

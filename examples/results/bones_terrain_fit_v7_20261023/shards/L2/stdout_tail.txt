@@ -1,0 +1,100 @@
+  "support_boxes_distribution": {
+   "0": 720,
+   "1": 64,
+   "2": 14,
+   "3": 12,
+   "4": 7,
+   "5": 3,
+   "6": 2,
+   "7": 3,
+   "8": 1,
+   "9": 1,
+   "10": 2,
+   "12": 1,
+   "21": 1
+  },
+  "minimal": {
+   "clips_with_frames_over_2cm": 0,
+   "penetration_max_p95_m": 0.0169
+  },
+  "maximal": {
+   "clips_with_frames_over_2cm": 0,
+   "penetration_max_p95_m": 0.0188
+  },
+  "unsupported_evidence_points": 0,
+  "flags": {
+   "evidence_reduced_for_body_conflict": 129,
+   "foot_patches_rest_on_body": 665,
+   "ground_from_skin": 801,
+   "inverted_foot_level_dropped": 465,
+   "merged_small_steps": 133,
+   "support_rejected": 107
+  },
+  "ground_source": {
+   "lowest_foot_level": 30,
+   "skin_lowest_contacts": 801
+  },
+  "raised_sole_patches": {
+   "checked": 4306,
+   "kept": 222,
+   "dropped_by": {
+    "body_rests_lower": 4075,
+    "body_under_sole": 755,
+    "foot_lower_than_sole": 270
+   }
+  },
+  "ground_skin_depth_m": {
+   "p50": 0.0013,
+   "p95": 0.0134,
+   "p99": 0.0296
+  },
+  "scene": {
+   "eligibility": {
+    "geometry_only_low_posture_unexplained": {
+     "clips": 86,
+     "seconds": 546.12
+    },
+    "rejected": {
+     "clips": 109,
+     "seconds": 717.16
+    },
+    "environment_explained": {
+     "clips": 636,
+     "seconds": 5162.99
+    }
+   },
+   "rejection_reasons": {
+    "foot_evidence_not_supported": 436,
+    "low_posture_partly_explained": 32,
+    "low_posture_unexplained": 556
+   },
+   "wall_status": {
+    "dropped_penetrates_skin": 37,
+    "fitted": 33,
+    "no_contact_plane": 751,
+    "no_still_segment": 10
+   },
+   "wall_kind": {
+    "lean": 33
+   },
+   "ceiling_status": {
+    "unexplainable_in_place_transition": 121,
+    "unexplainable_tight_above_bound": 9,
+    "fitted": 692,
+    "no_conflict_free_rectangle": 9
+   },
+   "explanation_tight_p50": 1.0,
+   "explanation_tight_p10": 1.0,
+   "walls_fitted": 33,
+   "fitted_ceilings_with_frames_over_2cm": 0,
+   "variants": 3324,
+   "variants_accepted": 2544,
+   "upright_ceiling_variants": 0,
+   "clutter_mean": 2.038,
+   "ground_skin_penetration_p95_m": 0.0135
+  }
+ }
+}
+EXIT_CODE=0
+DONE_L2
+{"name": "L2", "command": ["${PFNN_PROJECT}/env/bin/python", "-u", "runs/bones_fit_v7_coord/timed_runner.py", "--screen-run", "runs/bones_screen_v1_full", "--output", "runs/bones_fit_v7_L2", "--viz-per-stem", "2", "--variants", "4", "--skin-stride", "2", "--groups", "quadruped", "prone", "--worst-per-group", "3", "--gif", "--workers", "20"], "output": "runs/bones_fit_v7_L2", "exit_code": 0, "wall_seconds": 1674.7, "fit_elapsed_seconds": 1673.7, "fitted": 1750, "failed": 0, "rendered": 38, "render_failures": [], "minimum_available_bytes": 397219565568, "peak_unavailable_bytes": 138498301952, "timing_rows": 1750, "slowest10": [{"filename": "mohak_loop_001__A030", "group": "quadruped", "frames": 541, "fit_seconds": 158.508, "render_seconds": 0.0, "total_seconds": 158.508}, {"filename": "crawl_ff_loop_225_001__A133", "group": "prone", "frames": 598, "fit_seconds": 86.623, "render_seconds": 0.0, "total_seconds": 86.623}, {"filename": "mohak_loop_002__A031", "group": "quadruped", "frames": 595, "fit_seconds": 47.734, "render_seconds": 35.245, "total_seconds": 82.979}, {"filename": "mohak_idle_loop_001__A125", "group": "quadruped", "frames": 540, "fit_seconds": 47.022, "render_seconds": 35.552, "total_seconds": 82.574}, {"filename": "crawl_ff_stop_360_R_001__A230", "group": "prone", "frames": 431, "fit_seconds": 72.639, "render_seconds": 0.0, "total_seconds": 72.639}, {"filename": "crawl_ff_stop_360_R_001__A233", "group": "prone", "frames": 432, "fit_seconds": 72.099, "render_seconds": 0.0, "total_seconds": 72.099}, {"filename": "crawl_ff_start_225_R_002__A232", "group": "prone", "frames": 388, "fit_seconds": 72.037, "render_seconds": 0.0, "total_seconds": 72.037}, {"filename": "crawl_ff_loop_180_R_004__A214", "group": "prone", "frames": 525, "fit_seconds": 69.657, "render_seconds": 0.0, "total_seconds": 69.657}, {"filename": "crawl_ff_start_225_R_002__A233", "group": "prone", "frames": 388, "fit_seconds": 65.496, "render_seconds": 0.0, "total_seconds": 65.496}, {"filename": "crawl_ff_stop_315_R_003__A232", "group": "prone", "frames": 360, "fit_seconds": 65.197, "render_seconds": 0.0, "total_seconds": 65.197}]}

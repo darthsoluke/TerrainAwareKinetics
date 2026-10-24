@@ -1,0 +1,1523 @@
+[
+  {
+    "filename": "come_down_50cm_box_R_001__A281",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "ff0fc94e00ff33f9ddd95aa7b4100978f3ead93ac67ee2ba4076fea1f77b592e",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_001__A281.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_001__A330",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "cd6eb96b8f1f7297bf0b89e8c4dfa4f636d205b81bbc944dd441487805231d0b",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_001__A330.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_001__A359",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "e0b16c4dcf81415e134440b03afa874f5f714ce1719497cd91ed14d8550bd434",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_001__A359.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_001__A371",
+    "group": "known_dimension_support",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "005f902a69018daa167aba4fdb06661efc5b7b15576463a986a8e5c6bd556b2d",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_001__A371.png",
+    "previous_v6_png": "../previous_v6/viz/known_dimension_support/come_down_50cm_box_R_001__A371.png"
+  },
+  {
+    "filename": "come_down_50cm_box_R_001__A474",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "01d325078e84e8fd1855112d99153ac45260644412587393375af22d152b51d8",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_001__A474.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A049",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "a6655bca83c72651810626ca4c98e259faa4417fd8266be10fb29583859beadf",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A049.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A107",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "0cb8dc93a268cf6b9e52459675fff133dd626bd3fc5f36ade8e12e15b344c1a4",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A107.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A219",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "e7c8d11ad97f7c025fe143346f93703d184141ee772480d49ea36c94c7bbc40f",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A219.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A249",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "8c3894d69b12d8b682a5e401532e62a71321eebbe7a5d691aca13b1b8dc578d5",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A249.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A320",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "184ec8d561b0090a78e2bacbbe301ec3300e8f913442546044bf9d6fc504fe3a",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A320.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A341",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "8a173465cc463fc69893677a972675d63e38d28f7d22afb7b4dd24884397a0da",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A341.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A342",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "3788514d3c9577fb67a2bdcadb895f5a5cd3cac4b1fd86e208d8eb459c132c9d",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A342.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A344",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "324d2f84167f90869021b97c939bf3c8457e8a5cd0413bda70d3588fbc8e4d9b",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A344.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_002__A359",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "c9b3778e33d6e1ca4cd3c0aaa6aa827135f2972aeba6f99466904e3faee6230f",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_002__A359.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A045",
+    "group": "known_dimension_support",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "0075386ffc8d6d75a2d5cf8e2496d68be6db931eea3936d0ce4104dea53e80a1",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A045.png",
+    "previous_v6_png": "../previous_v6/viz/known_dimension_support/come_down_50cm_box_R_003__A045.png"
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A048",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "9d1d977988a085fb4905b2b495d8ac3438a1dd82fecaea62e7b9aaf0320c8003",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A048.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A088",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "480ea467deccb1d0c1a3aa0895736689ef262a491f936812f94ac7d53ab18a8f",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A088.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A109",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "2fe92c1405ca468ab18c737590ceb9c8184a5904de4f55d5ee654907825b3952",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A109.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A144",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "a9716f4220f524ff59a8fcd698fd06993a432b6adfd56dd4a11c634f9530ce30",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A144.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A150",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "1087956479cd257b86cf788ad81996526bdcb22a58dc7f23096f6ee4a46cbc56",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A150.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A202",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "fdc79df304b77e256d02e937e1abd49ec575f40f6a31d47fd5d12bef057c93d6",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A202.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A219",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "1fec477044901fc100965791d577a43c20c288123b5fff7b92e7ff1257f22fdb",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A219.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A220",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "5b69ce348bef9db1399ba4db3cfefd619a82130f45cf1a803f79ddbac995b2a9",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A220.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A242",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "7289880ea139e7666482817c7bb3eb71d2b97a7770b0bb219c80f987f7ffd9e5",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A242.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A322",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "8fe3d841623975af3b970fa777c85cc5a36fd833f6f3e9685c1317d527bf6aa1",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A322.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A359",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "2f87c2bf829b7df79c9bd030a42dba761d7a395182b4c04bbbf03b0251f03896",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A359.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A378",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "fd8c15706b96447e78adc8a27a348d5f8d66c8649a41c8c2fe2555f0368402a9",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A378.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A393",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "a28dfc09d50961062fd8e59f266e243ce1e393ae1234a59b2b61dfc500b7e47c",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A393.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_003__A481",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "2c888a75678ecf5836ba0e7dcd523ec53868729768ff628dd876b7080ca3f24c",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_003__A481.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_004__A219",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "ef1716237583997b59613db395a2ce8050bb27e78ba87a620c6ff8f2bfef1b9a",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_004__A219.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_004__A222",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "6c3ac7148877309e832aa9b1cbfbb21146002cdc1be709597cc96a8fe1cb0721",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_004__A222.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_004__A249",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "64306809c6840d0bd6937730fa407646bdad6e62fc0cd4f4e975ccb52545f248",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_004__A249.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_004__A250",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "38649d1033366a9814751c79329e8e96187c006c06815b14d398fac4ac6c5baf",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_004__A250.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_004__A251",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "807ecac9d362cb60764d411553146cff06c8ee17c9e38f8d7dd0b4d73f26d275",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_004__A251.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_004__A252",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "d364c5536c9c69349dfd99b843a201623f2fdd065cb31d1ac12e5d6c36efd9e8",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_004__A252.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_down_50cm_box_R_005__A056",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "36a8141b5afbbe7957707b80de815367fafdb0bb9e3e23e2a551060edb537fcb",
+    "png": "../viz/known_dimension_support/come_down_50cm_box_R_005__A056.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_001__A206",
+    "group": "known_dimension_support",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "0033dfff670f431fec5e8d9edbaf29805e9b76f980ec252f0ac51691f0f0020d",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_001__A206.png",
+    "previous_v6_png": "../previous_v6/viz/known_dimension_support/come_up_50cm_box_R_001__A206.png"
+  },
+  {
+    "filename": "come_up_50cm_box_R_001__A458",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "8d49ca1c99abc32e46e23f34fbfd5612dc3576c5dd897b2652b8c470952a3bc9",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_001__A458.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A065",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "1632fb1359f55fa91b99839084e681fa778d244e73602049edb0d3f815376933",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A065.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A067",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "54bd2de6f6b0a7610f7ef5a8c5538deaaaca5c3db74811238a68e2b04a6389cb",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A067.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A068",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "3d71b38d569714555da56903943264372a9ff433ecddc51f0d72c04b1426a04d",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A068.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A072",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "56833ef708067f97604cc94cdc73fc30246bf4098ef5a237f3e5a85bc3a7f034",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A072.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A160",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "676724f6ca1cc1ae5e438f6520bfa0ab1802599e209162476d11bb30adbbe722",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A160.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A188",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "4f58f1dad1c1bcbd1be4dc7ca1e13e78a51d7cb6eef8498d8c4284e57706638c",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A188.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A252",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "b8f94da25687d96dbd8e94a8fef0c9434fa0f24adf5504bf7228db8a946953b8",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A252.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_002__A282",
+    "group": "known_dimension_support",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "003ec3a32394d6074b192113a7d1ceb444a178d011802469be122e8567d5eeba",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_002__A282.png",
+    "previous_v6_png": "../previous_v6/viz/known_dimension_support/come_up_50cm_box_R_002__A282.png"
+  },
+  {
+    "filename": "come_up_50cm_box_R_003__A053",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "3935f8f34637e32f14ecce12aafd55210082541939cb0920d8a7be229232fd9f",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_003__A053.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_003__A065",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "0f2dd169dae3b8297e2505361510bd649481da9a42e279e7d97a6c509a58e087",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_003__A065.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_003__A252",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "7bf0efe84a632bd3e9ca9483275fd8610d3848dabd46ffc29d46de5e05c076ed",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_003__A252.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_004__A047",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "aff2b5ddcd6eab376ec22407f2e87ec1db39f1acf4b248cab546d4dab66514e2",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_004__A047.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_004__A065",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "3b2baefbb11cead8d3bac285a96c203c46229e0b441f11f9cb25729df79e188a",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_004__A065.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "come_up_50cm_box_R_004__A067",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "221810c2b420d608e64f5b9f49c8800234badfa508077d2037bc5680b3d547db",
+    "png": "../viz/known_dimension_support/come_up_50cm_box_R_004__A067.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_180_R_001__A500",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "463bce12649dd43af3b8e7d3850c36b2f084f1eace3336b0ed25e93132bec7be",
+    "png": "../viz/box_support/jump_form_box_to_safety_roll_180_R_001__A500.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_180_R_001__A501",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "ba3fa9c8e953905b4f71b7edd55693edc606a75e4ae1317e593d964e547b4977",
+    "png": "../viz/box_support/jump_form_box_to_safety_roll_180_R_001__A501.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_360_R_001__A501",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 4,
+      "maximal": 4
+    },
+    "filename_sha256": "39bbeb2faef67e19b7e94bc4cd11a86761a5b8005684f639a6d4c07d736fc455",
+    "png": "../viz/box_support/jump_form_box_to_safety_roll_360_R_001__A501.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_360_R_001__A502",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 3,
+      "maximal": 3
+    },
+    "filename_sha256": "ea0c7d5d4e057083ffac1e6ede819698221d2d7b80db16fd5a14c36c3c5ee210",
+    "png": "../viz/box_support/jump_form_box_to_safety_roll_360_R_001__A502.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_360_R_001__A503",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "e88a5b038d6af30a2922ff12b36c2c05247d947f8b93638417768438d1586597",
+    "png": "../viz/box_support/jump_form_box_to_safety_roll_360_R_001__A503.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_off_front_50cm_002__A416",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "68616b4172a97ccbdc9d2337fd9cc38beea401fc5aaa26ec1665b444bae1301e",
+    "png": "../viz/known_dimension_support/jump_off_front_50cm_002__A416.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_to_shoulder_roll_R_001__A305",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 3,
+      "maximal": 3
+    },
+    "filename_sha256": "0c77e0b3db40e981eaa609d5033183e450134d9912693cad3cb8b5951c6a58ca",
+    "png": "../viz/box_support/jump_to_shoulder_roll_R_001__A305.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "jump_to_shoulder_roll_R_002__A305",
+    "group": "box_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "1671de706a3d72fb1b24c68857afd7cfeab131a8dd358bc5b594929722ff03b7",
+    "png": "../viz/box_support/jump_to_shoulder_roll_R_002__A305.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_down_50cm_box_R_002__A143",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "1c9ceab587e84b2ebad4fd48c3fd7538c86bb5af30e605961f00d128e4dadab6",
+    "png": "../viz/known_dimension_support/lift_crate_come_down_50cm_box_R_002__A143.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_down_50cm_box_R_002__A162",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "cfae1e0d82494e9964330be0289a43e65120bd63d664ab4417ae815de4575988",
+    "png": "../viz/known_dimension_support/lift_crate_come_down_50cm_box_R_002__A162.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_001__A159",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "99c9a2fdf4de79094c8738240669c80814028e4893103a89057602cc4c197b0e",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A159.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_001__A160",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "1304aecec8ba4574bf148d989d6af45f951b1339e705b8c7faa4f7d531c6f8d3",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A160.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_001__A161",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "ae56bb12acbf5cc8e1dbc1b491db7fa698e869dd52d0dab917cd73e341fe5340",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A161.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_001__A162",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "bf7280d089c77ac0e7e224b94a56b5a5a29837f573434ec87ee61afe70fcdbde",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A162.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_001__A202",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "8336c3f50e00ac4cc09f689eaf70e8cbc5fe6cd14d1945c26b63540c99f216ad",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_001__A202.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A140",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "aee1c91c9a9aa8a3e03ce79c989a840a759ac539f9f60df4d420f28e8b090ecb",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A140.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A142",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "791b8dc427d1ced86363846537d7c1ee69e1f5c1d666b5046fafe1bad17f750e",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A142.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A160",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "f28d4542c712df8684103174057c06886b83c8a270250969a1cbfa74e23b642e",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A160.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A199",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "f4feffdf593549d393f43d5434e6a7840dbfa9f47af87577ee467afc97afaad4",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A199.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A202",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "5c1bb44a1741dd74b175bb66d31d30d643f43ace762c7dbf104ad65361355f79",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A202.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A249",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "80d7a2e74c2057bcf5964f63b24ee51ba76c736c14ffe1ed731bdd6eda3cdf01",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A249.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A250",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "b91a5c5f5615c3537cf4a7a3ee95eafc9f3078f715327b676c3dde957b62164b",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A250.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_002__A251",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "6b66b52578dd68235b20f38f96b73f78666ad75e69064af6e659bb3d2c94b1fe",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_002__A251.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A140",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "ebce2eb482ab6ff252ba97d5dc77beef2f95d2b45d92ea366d09131ef1916cbe",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A140.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A159",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "9638aee711e013aeea56b1077355314fc9865e21f004234f42123938adc0bc45",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A159.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A160",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "6f344b521144feabd1504a0152c18a3226ab71ac2008c6fb29c71fd3de112d79",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A160.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A161",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "f2f58a0b544f91dbe838c78f9dd4a6f595a61e42765c71881124142c2b7ab9ce",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A161.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A202",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "abb69ef903ee05b4de710eaef8b1edddf3d49ca02b7d4567dcc23ff985d8af4c",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A202.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A250",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "3e8dd2807b98c80b7e3d2d15093f7ca2a39815d9d1cc6998599a9b5ce38d1679",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A250.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A251",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 2,
+      "maximal": 2
+    },
+    "filename_sha256": "83e9c56435e8d4198e6e309b53fe267a77f5416b0b648a0e747df1813796227d",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A251.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_003__A253",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "e9f14257b4f9f78d27d85d6581ea80f5a8475abb204db2c8ddbf8be1d58e02e8",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_003__A253.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_004__A140",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "e11ef1a166aec804f03f70cdd011f9bf2f938692d7489bc6519d4ba569bb2d40",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_004__A140.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+    "group": "known_dimension_support",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "000e8eb7b7ad3b5cf8d7c8501d6d1870576acbd0c132505dbd076bcb91510e1f",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png",
+    "previous_v6_png": "../previous_v6/viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A249.png"
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_005__A251",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "fb9184e457b8f0a2cde4d7d6ce425817f2fd636efb26cd46cd32a4ff57b8d756",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A251.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_005__A252",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "877f1aa8bf8419447c4d44ca12e192311d51d445837e48e93194bb9325ae1b44",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A252.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_005__A253",
+    "group": "known_dimension_support",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "5884289f1f1e1d1bab09fdbd8e1d262646fa9d2fc50766e4bcf8ea14c678c0da",
+    "png": "../viz/known_dimension_support/lift_crate_come_up_50cm_box_R_005__A253.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "stairs_climbing_down_loop_R_102__A301",
+    "group": "stairs",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 5,
+      "maximal": 5
+    },
+    "filename_sha256": "1c08a16832340bdfda8c8e1ad004567e2a8309d71f69b046f23cbc5fc9bb9cbf",
+    "png": "../viz/stairs/stairs_climbing_down_loop_R_102__A301.png",
+    "previous_v6_png": "../previous_v6/viz/stairs/stairs_climbing_down_loop_R_102__A301.png"
+  },
+  {
+    "filename": "stairs_climbing_jog_down_loop_R_001__A300",
+    "group": "stairs",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "1d596d1f5c4557881f24427945a9031fce403246e785179510117de71de7bddd",
+    "png": "../viz/stairs/stairs_climbing_jog_down_loop_R_001__A300.png",
+    "previous_v6_png": "../previous_v6/viz/stairs/stairs_climbing_jog_down_loop_R_001__A300.png"
+  },
+  {
+    "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+    "group": "stairs",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "filename_sha256": "128834cdcaaf74aa06f5c8d9757a7a63f8bf157a2e6789d536ad40eac07f770b",
+    "png": "../viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png",
+    "previous_v6_png": "../previous_v6/viz/stairs/stairs_climbing_jog_down_stop_R_003__A300.png"
+  },
+  {
+    "filename": "stairs_climbing_up_start_R_001__A300",
+    "group": "stairs",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 4,
+      "maximal": 4
+    },
+    "filename_sha256": "83850d356f5ee46c1a56fff6ff701fd701f037704843dd7f6cd1f01f2f56b422",
+    "png": "../viz/stairs/stairs_climbing_up_start_R_001__A300.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "stairs_slip_R_003__A300",
+    "group": "stairs",
+    "reasons": [
+      "normal_group_hash_sample"
+    ],
+    "v6_eligibility": "environment_explained",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 7,
+      "maximal": 7
+    },
+    "filename_sha256": "0b3dd05ccf142ed187f6a2c88faaefde6efbf28d9458fb51a3aae5044f62f58b",
+    "png": "../viz/stairs/stairs_slip_R_003__A300.png",
+    "previous_v6_png": "../previous_v6/viz/stairs/stairs_slip_R_003__A300.png"
+  },
+  {
+    "filename": "stairs_slip_R_004__A300",
+    "group": "stairs",
+    "reasons": [
+      "normal_group_hash_sample",
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 7,
+      "maximal": 7
+    },
+    "filename_sha256": "21d26fed809533b623c8eda0f840ac97a20e575308f2492286c8e566f91755fc",
+    "png": "../viz/stairs/stairs_slip_R_004__A300.png",
+    "previous_v6_png": "../previous_v6/viz/stairs/stairs_slip_R_004__A300.png"
+  },
+  {
+    "filename": "stairs_slip_R_007__A300",
+    "group": "stairs",
+    "reasons": [
+      "requested_normal_group_body_rests_lower_drop"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "rejected",
+    "v7_support_boxes": {
+      "minimal": 4,
+      "maximal": 4
+    },
+    "filename_sha256": "8221c55a24c8dc2d6e9415007249b7ff810b8b7b5dd380a307fbc85f87de57a3",
+    "png": "../viz/stairs/stairs_slip_R_007__A300.png",
+    "previous_v6_png": null
+  }
+]

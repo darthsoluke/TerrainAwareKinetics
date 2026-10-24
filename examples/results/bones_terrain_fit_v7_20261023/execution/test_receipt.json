@@ -1,0 +1,16 @@
+{
+  "terrain": {
+    "tests": 55,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "required_test_passed": "test_skin_vertices_uses_official_skinner_interface"
+  },
+  "ray": {
+    "tests": 6,
+    "skipped": 0,
+    "failures": 0,
+    "errors": 0,
+    "required_test_passed": "test_torch_matches_numpy_reference"
+  }
+}

@@ -1,0 +1,162 @@
+[
+  {
+    "filename": "crawl_ff_loop_225_001__A133",
+    "group": "prone",
+    "reasons": [
+      "requested_prone_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 13,
+      "maximal": 13
+    },
+    "filename_sha256": "1302a46694b484615a18c611b9915dcdc9be9a2e5e02a8ffa59a0d6ef9b452fd",
+    "png": "../viz/prone/crawl_ff_loop_225_001__A133.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "crawl_ff_loop_225_002__A131",
+    "group": "prone",
+    "reasons": [
+      "requested_prone_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 7,
+      "maximal": 7
+    },
+    "filename_sha256": "31291b5c62275edd150c3f771b01d76843bbbbbfd0c67732ec71e931f12fd897",
+    "png": "../viz/prone/crawl_ff_loop_225_002__A131.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "crawl_ff_loop_225_003__A132",
+    "group": "prone",
+    "reasons": [
+      "requested_prone_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 9,
+      "maximal": 9
+    },
+    "filename_sha256": "9f98786462f7ee87e665d6550cd995d191bef2d62f4364de920dfbb7b35aba55",
+    "png": "../viz/prone/crawl_ff_loop_225_003__A132.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "crawl_ff_start_225_R_002__A233",
+    "group": "prone",
+    "reasons": [
+      "requested_prone_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 9,
+      "maximal": 9
+    },
+    "filename_sha256": "c9a130db9a895878d849f507dba4191f1d35347eba8c63273462ec126acedf4d",
+    "png": "../viz/prone/crawl_ff_start_225_R_002__A233.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "crawl_ff_start_315_R_002__A233",
+    "group": "prone",
+    "reasons": [
+      "requested_prone_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 8,
+      "maximal": 8
+    },
+    "filename_sha256": "05a64ec056be5a8097588c1a39b047668b121aeeea82167dc00cc373e287009d",
+    "png": "../viz/prone/crawl_ff_start_315_R_002__A233.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "mohak_backward_stop_004__A121",
+    "group": "quadruped",
+    "reasons": [
+      "requested_quadruped_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 3,
+      "maximal": 3
+    },
+    "filename_sha256": "786da076d7e9b335f3ada721afab23303a4fca28cf193863f37f59d545d3ccf4",
+    "png": "../viz/quadruped/mohak_backward_stop_004__A121.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "on_all_fours_backward_stop_R_003__A200",
+    "group": "quadruped",
+    "reasons": [
+      "requested_quadruped_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "018d5690976cedb9fe0917ba55540f7043ea33f7501dec01603e51f57db81344",
+    "png": "../viz/quadruped/on_all_fours_backward_stop_R_003__A200.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_003__A199",
+    "group": "quadruped",
+    "reasons": [
+      "requested_quadruped_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 10,
+      "maximal": 10
+    },
+    "filename_sha256": "c8d284e687e90800bc3179c61e4e52d017dd0a7d25c8839f23159c4ed0d0a32a",
+    "png": "../viz/quadruped/on_all_fours_forward_start_R_003__A199.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A199",
+    "group": "quadruped",
+    "reasons": [
+      "requested_quadruped_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "02852c1c242c90de7d299cffd0337b2c666e2c97ac76729e6790545558fc0c05",
+    "png": "../viz/quadruped/on_all_fours_forward_stop_R_004__A199.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "spider_crawl_R_004__A361",
+    "group": "quadruped",
+    "reasons": [
+      "requested_quadruped_now_E_previously_non_E_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 4,
+      "maximal": 4
+    },
+    "filename_sha256": "9299d46375b7a8199fa387122b5405ef6da8a4a679b185de698901678ef7f73b",
+    "png": "../viz/quadruped/spider_crawl_R_004__A361.png",
+    "previous_v6_png": null
+  }
+]

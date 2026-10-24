@@ -1,0 +1,555 @@
+{
+  "source_commit": "c4b776a920d69fc3f997f8e38821f1300837f177",
+  "method": "Read existing fit JSON only; no refit, geometry modification or motion payload.",
+  "clips": [
+    {
+      "filename": "crawl_ff_loop_225_004__A131",
+      "v6": {
+        "checked": 11,
+        "dropped_unique": 0,
+        "dropped_by": {},
+        "support_boxes": 8,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.05956313267350197,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.007111990824341774
+          },
+          {
+            "height_above_ground_m": 0.07000233486294746,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": -0.0033272113651037216
+          },
+          {
+            "height_above_ground_m": 0.0607488813996315,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.005926242098212242
+          },
+          {
+            "height_above_ground_m": 0.06972494229674339,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": -0.0030498187988996506
+          },
+          {
+            "height_above_ground_m": 0.06306974470615387,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.0036053787916898727
+          },
+          {
+            "height_above_ground_m": 0.07318481311202049,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": -0.00650968961417675
+          },
+          {
+            "height_above_ground_m": 0.06414443880319595,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.002530684694647789
+          },
+          {
+            "height_above_ground_m": 0.06950065560638904,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": -0.0028255321085453033
+          },
+          {
+            "height_above_ground_m": 0.04596352085471153,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.02071160264313221
+          },
+          {
+            "height_above_ground_m": 0.07143765883054584,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": -0.0047625353327021
+          },
+          {
+            "height_above_ground_m": 0.07311606287956238,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": -0.0064409393817186356
+          },
+          {
+            "height_above_ground_m": 0.06667512349784374,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.0
+          },
+          {
+            "height_above_ground_m": 0.06377072885632515,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.002904394641518593
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06667512349784374,
+            "foot_patches": 13,
+            "palm_events": 0,
+            "knee_events": 22,
+            "clusters": 8,
+            "fitted_clusters_by_kinds": {
+              "foot": 3,
+              "foot+knee": 4,
+              "knee": 1
+            },
+            "cluster_statuses": {
+              "fitted": 8
+            }
+          }
+        ]
+      },
+      "v7": {
+        "checked": 11,
+        "dropped_unique": 11,
+        "dropped_by": {
+          "body_rests_lower": 11
+        },
+        "support_boxes": 8,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.05956313267350197,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.007111990824341774
+          },
+          {
+            "height_above_ground_m": 0.04596352085471153,
+            "assigned_level_above_ground_m": 0.06667512349784374,
+            "assigned_upward_m": 0.02071160264313221
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06667512349784374,
+            "foot_patches": 2,
+            "palm_events": 0,
+            "knee_events": 22,
+            "clusters": 9,
+            "fitted_clusters_by_kinds": {
+              "foot": 1,
+              "knee": 7
+            },
+            "cluster_statuses": {
+              "fitted": 8,
+              "rejected_conflicts_with_body": 1
+            }
+          }
+        ]
+      }
+    },
+    {
+      "filename": "crawl_ff_start_225_002__A133",
+      "v6": {
+        "checked": 6,
+        "dropped_unique": 0,
+        "dropped_by": {},
+        "support_boxes": 5,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.08844303265213967,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": -0.028022166341543198
+          },
+          {
+            "height_above_ground_m": 0.050378494150936606,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.010042372159659863
+          },
+          {
+            "height_above_ground_m": 0.07418474294245243,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": -0.013763876631855965
+          },
+          {
+            "height_above_ground_m": 0.04732194468379021,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.01309892162680626
+          },
+          {
+            "height_above_ground_m": 0.05471041444689036,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.005710451863706112
+          },
+          {
+            "height_above_ground_m": 0.07134944498538971,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": -0.010928578674793243
+          },
+          {
+            "height_above_ground_m": 0.06042086631059647,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.0
+          },
+          {
+            "height_above_ground_m": 0.06989482343196869,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": -0.009473957121372223
+          },
+          {
+            "height_above_ground_m": 0.06482140272855759,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": -0.004400536417961121
+          },
+          {
+            "height_above_ground_m": 0.05031596422195435,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.01010490208864212
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06042086631059647,
+            "foot_patches": 10,
+            "palm_events": 0,
+            "knee_events": 7,
+            "clusters": 5,
+            "fitted_clusters_by_kinds": {
+              "foot": 1,
+              "foot+knee": 3,
+              "knee": 1
+            },
+            "cluster_statuses": {
+              "fitted": 5
+            }
+          }
+        ]
+      },
+      "v7": {
+        "checked": 6,
+        "dropped_unique": 6,
+        "dropped_by": {
+          "body_rests_lower": 6
+        },
+        "support_boxes": 6,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.050378494150936606,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.010042372159659863
+          },
+          {
+            "height_above_ground_m": 0.04732194468379021,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.01309892162680626
+          },
+          {
+            "height_above_ground_m": 0.05471041444689036,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.005710451863706112
+          },
+          {
+            "height_above_ground_m": 0.05031596422195435,
+            "assigned_level_above_ground_m": 0.06042086631059647,
+            "assigned_upward_m": 0.01010490208864212
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06042086631059647,
+            "foot_patches": 4,
+            "palm_events": 0,
+            "knee_events": 7,
+            "clusters": 6,
+            "fitted_clusters_by_kinds": {
+              "foot+knee": 2,
+              "foot": 1,
+              "knee": 3
+            },
+            "cluster_statuses": {
+              "fitted": 6
+            }
+          }
+        ]
+      }
+    },
+    {
+      "filename": "crawl_ff_stop_225_006__A131",
+      "v6": {
+        "checked": 7,
+        "dropped_unique": 0,
+        "dropped_by": {},
+        "support_boxes": 9,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.057687513381242755,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.002450668951496482
+          },
+          {
+            "height_above_ground_m": 0.05277603104710579,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.007362151285633445
+          },
+          {
+            "height_above_ground_m": 0.06380514040589333,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.003666958073154092
+          },
+          {
+            "height_above_ground_m": 0.054581742584705356,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.005556439748033881
+          },
+          {
+            "height_above_ground_m": 0.06994731523096562,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.00980913289822638
+          },
+          {
+            "height_above_ground_m": 0.05388380199670792,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.006254380336031318
+          },
+          {
+            "height_above_ground_m": 0.06455866232514382,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.00442047999240458
+          },
+          {
+            "height_above_ground_m": 0.06258885128423572,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.002450668951496482
+          },
+          {
+            "height_above_ground_m": 0.07267252061516047,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.012534338282421231
+          },
+          {
+            "height_above_ground_m": 0.0545457860827446,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.005592396249994636
+          },
+          {
+            "height_above_ground_m": 0.06757596120238304,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.007437778869643807
+          },
+          {
+            "height_above_ground_m": 0.05024416357278824,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.009894018759950995
+          },
+          {
+            "height_above_ground_m": 0.05342471212148667,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.00671347021125257
+          },
+          {
+            "height_above_ground_m": 0.06886972285807133,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": -0.008731540525332093
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06013818233273924,
+            "foot_patches": 14,
+            "palm_events": 0,
+            "knee_events": 13,
+            "clusters": 11,
+            "fitted_clusters_by_kinds": {
+              "foot": 5,
+              "foot+knee": 2,
+              "knee": 2
+            },
+            "cluster_statuses": {
+              "fitted": 9,
+              "rejected_conflicts_with_body": 2
+            }
+          }
+        ]
+      },
+      "v7": {
+        "checked": 7,
+        "dropped_unique": 7,
+        "dropped_by": {
+          "body_rests_lower": 7
+        },
+        "support_boxes": 10,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.057687513381242755,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.002450668951496482
+          },
+          {
+            "height_above_ground_m": 0.05277603104710579,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.007362151285633445
+          },
+          {
+            "height_above_ground_m": 0.054581742584705356,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.005556439748033881
+          },
+          {
+            "height_above_ground_m": 0.05388380199670792,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.006254380336031318
+          },
+          {
+            "height_above_ground_m": 0.0545457860827446,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.005592396249994636
+          },
+          {
+            "height_above_ground_m": 0.05024416357278824,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.009894018759950995
+          },
+          {
+            "height_above_ground_m": 0.05342471212148667,
+            "assigned_level_above_ground_m": 0.06013818233273924,
+            "assigned_upward_m": 0.00671347021125257
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06013818233273924,
+            "foot_patches": 7,
+            "palm_events": 0,
+            "knee_events": 13,
+            "clusters": 13,
+            "fitted_clusters_by_kinds": {
+              "foot": 5,
+              "foot+knee": 1,
+              "knee": 4
+            },
+            "cluster_statuses": {
+              "fitted": 10,
+              "rejected_conflicts_with_body": 3
+            }
+          }
+        ]
+      }
+    },
+    {
+      "filename": "crawl_ff_start_360_002__A130",
+      "v6": {
+        "checked": 8,
+        "dropped_unique": 0,
+        "dropped_by": {},
+        "support_boxes": 6,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.07748581260442734,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": -0.013064589351415634
+          },
+          {
+            "height_above_ground_m": 0.05949231028556824,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.004928912967443466
+          },
+          {
+            "height_above_ground_m": 0.06533082365989686,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": -0.0009096004068851471
+          },
+          {
+            "height_above_ground_m": 0.05744535639882088,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.006975866854190826
+          },
+          {
+            "height_above_ground_m": 0.06351162284612656,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.0009096004068851471
+          },
+          {
+            "height_above_ground_m": 0.0733352766931057,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": -0.008914053440093994
+          },
+          {
+            "height_above_ground_m": 0.0674751976132393,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": -0.003053974360227585
+          },
+          {
+            "height_above_ground_m": 0.06543458510190249,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": -0.0010133618488907814
+          },
+          {
+            "height_above_ground_m": 0.06214446365833283,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.002276759594678879
+          },
+          {
+            "height_above_ground_m": 0.06342012226581574,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.0010011009871959686
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06442122325301171,
+            "foot_patches": 10,
+            "palm_events": 2,
+            "knee_events": 9,
+            "clusters": 6,
+            "fitted_clusters_by_kinds": {
+              "foot": 2,
+              "foot+knee": 1,
+              "palm": 1,
+              "knee": 2
+            },
+            "cluster_statuses": {
+              "fitted": 6
+            }
+          }
+        ]
+      },
+      "v7": {
+        "checked": 8,
+        "dropped_unique": 5,
+        "dropped_by": {
+          "body_rests_lower": 5
+        },
+        "support_boxes": 7,
+        "retained_foot_evidence": [
+          {
+            "height_above_ground_m": 0.05949231028556824,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.004928912967443466
+          },
+          {
+            "height_above_ground_m": 0.05744535639882088,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.006975866854190826
+          },
+          {
+            "height_above_ground_m": 0.06351162284612656,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.0009096004068851471
+          },
+          {
+            "height_above_ground_m": 0.06543458510190249,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": -0.0010133618488907814
+          },
+          {
+            "height_above_ground_m": 0.06342012226581574,
+            "assigned_level_above_ground_m": 0.06442122325301171,
+            "assigned_upward_m": 0.0010011009871959686
+          }
+        ],
+        "levels": [
+          {
+            "height_above_ground_m": 0.06442122325301171,
+            "foot_patches": 5,
+            "palm_events": 2,
+            "knee_events": 9,
+            "clusters": 7,
+            "fitted_clusters_by_kinds": {
+              "foot": 3,
+              "foot+knee": 1,
+              "palm": 1,
+              "knee": 2
+            },
+            "cluster_statuses": {
+              "fitted": 7
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

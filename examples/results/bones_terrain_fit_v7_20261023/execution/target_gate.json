@@ -1,0 +1,12 @@
+{
+  "source_commit": "c4b776a920d69fc3f997f8e38821f1300837f177",
+  "clips": 71,
+  "fitted": 71,
+  "failed": 0,
+  "rendered": 71,
+  "elapsed_seconds": 91.0,
+  "maximal_over_2cm_bug_clips": [],
+  "required_clips_losing_support": [],
+  "known_size_or_stairs_body_rests_lower_drops": [],
+  "passed": true
+}

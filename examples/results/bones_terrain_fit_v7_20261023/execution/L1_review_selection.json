@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "kneeling_loop_001__A409",
+    "group": "kneel",
+    "reasons": [
+      "requested_kneel_previously_G_or_R_v6"
+    ],
+    "v6_eligibility": "rejected",
+    "v7_eligibility": "environment_explained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "02a9f72c7a8d597c0a29588f3f22548bc891af80ce844fd28d1e5145199ee972",
+    "png": "../viz/kneel/kneeling_loop_001__A409.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "kneeling_start_003__A184",
+    "group": "kneel",
+    "reasons": [
+      "requested_kneel_previously_G_or_R_v6"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "0321f6c2abf672bc7da53ee39b4f558795407237b824c6e31e7a0120ba1adfdb",
+    "png": "../viz/kneel/kneeling_start_003__A184.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "kneeling_stop_002__A023",
+    "group": "kneel",
+    "reasons": [
+      "requested_kneel_previously_G_or_R_v6"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "02b615982fdc8b1d66c74bc1b988cec6808d1bf4d3666bb40a178821e4434d57",
+    "png": "../viz/kneel/kneeling_stop_002__A023.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "kneeling_stop_002__A037",
+    "group": "kneel",
+    "reasons": [
+      "requested_kneel_previously_G_or_R_v6"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "022c84befb1e625b3c85513442899554fcaef234c5761058609151ff6ee8a923",
+    "png": "../viz/kneel/kneeling_stop_002__A037.png",
+    "previous_v6_png": null
+  },
+  {
+    "filename": "kneeling_stop_003__A097",
+    "group": "kneel",
+    "reasons": [
+      "requested_kneel_previously_G_or_R_v6"
+    ],
+    "v6_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_eligibility": "geometry_only_low_posture_unexplained",
+    "v7_support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "filename_sha256": "00fb952c4e6bd39d0e22e55f14620454cd13b26052f23b7b05b445427e535e1a",
+    "png": "../viz/kneel/kneeling_stop_003__A097.png",
+    "previous_v6_png": null
+  }
+]
