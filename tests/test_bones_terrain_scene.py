@@ -123,6 +123,19 @@ def test_hand_near_the_hips_or_feet_at_the_plane_do_not_make_a_wall():
     assert walls == [] and report["rejected"].get("feet_at_the_plane", 0) > 0
 
 
+def test_contact_sliding_along_the_plane_is_not_a_wall():
+    skin, hips, parts = leaning_body()
+    flat = parts == PART_TRUNK
+    slide = np.linspace(-0.3, 0.3, len(skin))
+    skin = skin.copy()
+    skin[:, flat, 2] += slide[:, None]          # the touching trunk skin moves along the plane
+    walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
+    assert walls == [] and report["rejected"].get("contact_slides_along_plane", 0) > 0
+    skin, hips, parts = leaning_body()
+    walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
+    assert report["contact_drift_m"] == pytest.approx(0.0, abs=1e-9)
+
+
 def test_part_codes_follow_rig_joint_names():
     names = ["Hips", "Spine1", "Chest", "LeftShoulder", "LeftArm", "LeftForeArm", "LeftHand",
              "LeftHandIndex1", "RightFoot", "RightToeBase", "Head", "LeftLeg"]

@@ -28,7 +28,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from motionbricks.data.bones_terrain_fit import (  # noqa: E402
-    SCHEMA_VERSION, FitConfig, actor_scale_report, fit_support,
+    SCHEMA_VERSION, FitConfig, actor_scale_report, fit_support, foot_vertices_by_side,
 )
 from motionbricks.data.bones_terrain_scene import (  # noqa: E402
     PART_FOOT, PART_HAND, PART_TRUNK, SceneConfig, scene_for_clip, vertex_part_codes,
@@ -58,14 +58,20 @@ def _init():
         bind = bind.detach().cpu().numpy() if hasattr(bind, "detach") else np.asarray(bind)
         screen._STATE["standing_top"] = float(bind[:, 1].max() - bind[:, 1].min())
         screen._STATE["vertex_parts"] = skin_vertex_parts(skinner, screen._STATE["names"], bind)
+        screen._STATE["foot_vertices"] = foot_vertices_by_side(dominant_joints(skinner), screen._STATE["names"])
+
+
+def dominant_joints(skinner):
+    """Index of the largest-weight LBS joint of each skin vertex."""
+    indices, weights = skinner.lbs_indices, skinner.lbs_weights
+    indices = indices.detach().cpu().numpy() if hasattr(indices, "detach") else np.asarray(indices)
+    weights = weights.detach().cpu().numpy() if hasattr(weights, "detach") else np.asarray(weights)
+    return np.take_along_axis(indices, weights.argmax(axis=1)[:, None], axis=1)[:, 0]
 
 
 def skin_vertex_parts(skinner, names, bind):
     """Trunk/hand/foot code per skin vertex from its dominant LBS joint, checked on the bind pose."""
-    indices, weights = skinner.lbs_indices, skinner.lbs_weights
-    indices = indices.detach().cpu().numpy() if hasattr(indices, "detach") else np.asarray(indices)
-    weights = weights.detach().cpu().numpy() if hasattr(weights, "detach") else np.asarray(weights)
-    dominant = np.take_along_axis(indices, weights.argmax(axis=1)[:, None], axis=1)[:, 0]
+    dominant = dominant_joints(skinner)
     parts = vertex_part_codes(dominant, names)
     height = bind[:, 1] - bind[:, 1].min()
     counts = {code: int((parts == code).sum()) for code in (PART_TRUNK, PART_HAND, PART_FOOT)}
@@ -104,7 +110,7 @@ def _process(item, render, skin_stride=2, variants=4):
     _, support, posture = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
                                              dimension_tokens=item.get("dimension_tokens", ()), return_posture=True)
     fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin,
-                      skin_frame_stride=max(1, skin_stride))
+                      skin_frame_stride=max(1, skin_stride), foot_vertices=screen._STATE.get("foot_vertices"))
     if skin is not None:
         fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
         fit["scene"] = scene_for_clip(skin, posture[::skin_stride], joints["Hips"][::skin_stride][:, [0, 2]], fit,
@@ -233,6 +239,9 @@ def group_summary(results):
             entry["unsupported_evidence_points"] = int(sum(f["metrics"]["minimal"]["support_evidence_unsupported"] for f in ok))
             entry["flags"] = _count(flag for f in ok for flag in f["flags"])
             entry["ground_source"] = _count(f.get("ground_source", "unknown") for f in ok)
+            checks = [c for f in ok for c in f.get("patch_checks", [])]
+            entry["raised_sole_patches"] = {"checked": len(checks), "kept": sum(not c["dropped"] for c in checks),
+                                            "dropped_by": _count(r for c in checks for r in c["dropped"])}
             ground_skin = [f["metrics"]["minimal"]["skin_ground"]["max_m"] for f in ok
                            if "skin_ground" in f["metrics"]["minimal"]]
             if ground_skin:

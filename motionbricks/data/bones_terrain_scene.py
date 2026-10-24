@@ -26,7 +26,7 @@ import numpy as np
 
 from .bones_terrain_fit import _grow, _local, oriented_rectangle
 
-SCHEMA_VERSION = "bones-terrain-scene-v3"
+SCHEMA_VERSION = "bones-terrain-scene-v4"
 LOW_POSTURES = ("crouch", "other_low", "quadruped", "prone")
 
 
@@ -53,6 +53,7 @@ class SceneConfig:
     wall_hand_min_height_m: float = 0.85     # bracing hand at least this high (hands on knees are not walls)
     wall_min_feet_distance_m: float = 0.15
     wall_max_shift_m: float = 0.05
+    wall_contact_drift_m: float = 0.10       # touching skin stays at one place on the plane (P10-P90 range)
     wall_height_m: float = 2.5
     wall_thickness_m: float = 0.20
     wall_growth_m: float = 1.0
@@ -317,6 +318,22 @@ def vertex_part_codes(dominant_joint, joint_names):
     return codes[dominant_joint]
 
 
+def _contact_drift(touching, tangent, height):
+    """P10-P90 range of the per-frame centroid of touching skin on the plane (tangent, height).
+
+    A hand or back pressed on a wall stays put on it; the outer edge of a turning or
+    walking body slides along the plane. None when fewer than half the frames touch.
+    """
+    counts = touching.sum(axis=1)
+    frames = counts > 0
+    if frames.mean() < 0.5:
+        return None
+    t = (np.where(touching, tangent, 0).sum(axis=1)[frames] / counts[frames])
+    y = (np.where(touching, height, 0).sum(axis=1)[frames] / counts[frames])
+    spread = [float(np.percentile(v, 90) - np.percentile(v, 10)) for v in (t, y)]
+    return max(spread)
+
+
 def fit_walls(skin, hips_xz, ground, fps, config=None, box_id=200, directions=24, vertex_parts=None):
     """Vertical walls where the still body leans on, or reaches out to, one plane.
 
@@ -371,21 +388,27 @@ def fit_walls(skin, hips_xz, ground, fps, config=None, box_id=200, directions=24
                        and hips_distance >= config.wall_hand_reach_m)
             kind = "lean" if leaning else "brace" if bracing else None
             score = float(np.median(trunk) + np.median(hand))
+            touching = contact & ((parts == PART_TRUNK) if kind == "lean" else
+                                  (parts == PART_HAND) & (height >= config.wall_hand_min_height_m))
         else:
             bands = [((height >= lo) & (height < hi) & contact)[stable].sum(axis=1) >= 30
                      for lo, hi in ((0.2, 0.8), (0.8, 1.4), (1.4, 2.0))]
             two_bands = (np.stack(bands).sum(axis=0) >= 2).mean() >= 0.5
             kind = "contact" if two_bands and np.median(contact[stable].sum(axis=1)) >= config.wall_min_contact_vertices else None
             score = float(np.median(contact[stable].sum(axis=1)))
+            touching = contact
+        drift = _contact_drift(touching[stable], xz[stable] @ np.array([-d[1], d[0]]), height[stable])
         reason = None
         if kind is None:
             reason = "no_trunk_or_bracing_hand_contact"
         elif feet_distance < config.wall_min_feet_distance_m:
             reason = "feet_at_the_plane"
+        elif drift is None or drift > config.wall_contact_drift_m:
+            reason = "contact_slides_along_plane"
         if reason:
             report["rejected"][reason] = report["rejected"].get(reason, 0) + 1
             continue
-        candidates.append({"direction": d, "offset": median, "score": score, "kind": kind,
+        candidates.append({"direction": d, "offset": median, "score": score, "kind": kind, "contact_drift_m": drift,
                            "stable_seconds": float(stable.sum() / fps), "feet_distance_m": feet_distance,
                            "hips_distance_m": hips_distance})
     for best in sorted(candidates, key=lambda c: -c["score"]):
@@ -408,7 +431,7 @@ def fit_walls(skin, hips_xz, ground, fps, config=None, box_id=200, directions=24
         center_xz = d * (plane + config.wall_thickness_m / 2)
         rect = (-config.wall_thickness_m / 2, config.wall_thickness_m / 2, t0_grown, t1_grown)
         wall = make_box(box_id, "wall_1", "wall", center_xz, d, rect, ground - 0.2, ground + config.wall_height_m)
-        report.update(status="fitted", kind=best["kind"], score=best["score"],
+        report.update(status="fitted", kind=best["kind"], score=best["score"], contact_drift_m=best["contact_drift_m"],
                       stable_seconds=best["stable_seconds"], feet_distance_m=best["feet_distance_m"],
                       contact_span_m=t1 - t0, length_m=t1_grown - t0_grown, plane_shift_m=plane - best["offset"])
         return [wall], report

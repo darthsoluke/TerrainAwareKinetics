@@ -242,6 +242,41 @@ def test_tucked_toes_beside_the_sole_also_mark_a_resting_foot():
     assert fit["patches_resting_on_body"] > 0 and fit["levels_m"] == [0.0]
 
 
+def test_toes_far_behind_a_raised_sole_mark_the_foot_as_not_plantar():
+    soles, joints, root = step_up(top=0.0)
+    for side in soles:
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.07      # sole hovers, toes point back
+    support = support_of(soles, joints, root)
+    toes = {side: soles[side].copy() for side in soles}
+    for side in toes:
+        toes[side][..., 2] -= 0.20       # toe tips 20 cm behind the sole outline, on the floor
+        toes[side][..., 1] = 0.0
+    skin = np.concatenate([soles["left"], soles["right"], toes["left"], toes["right"]], axis=1)
+    feet = {"left": np.r_[0:4, 8:12], "right": np.r_[4:8, 12:16]}
+    without = fit_support(soles, joints, root, FPS, support, skin_vertices=skin)
+    assert without["levels_m"] != [0.0]                                    # the outline test alone misses it
+    fit = fit_support(soles, joints, root, FPS, support, skin_vertices=skin, foot_vertices=feet)
+    assert fit["levels_m"] == [0.0] and fit["patches_resting_on_body"] > 0
+    assert all("foot_lower_than_sole" in c["dropped"] for c in fit["patch_checks"])
+    assert [b["role"] for b in fit["boxes"]["minimal"]] == ["ground"]
+
+
+def test_plantar_sole_on_a_box_is_kept_with_foot_vertices():
+    soles, joints, root = step_up()
+    skin = np.concatenate([soles["left"], soles["right"]], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin,
+                      foot_vertices={"left": np.arange(4), "right": np.arange(4, 8)})
+    assert any(b["role"] == "support" for b in fit["boxes"]["minimal"])
+    assert fit["patch_checks"] and not any(c["dropped"] for c in fit["patch_checks"])
+
+
+def test_foot_vertices_by_side_uses_foot_and_toe_joints():
+    from motionbricks.data.bones_terrain_fit import foot_vertices_by_side
+    names = ["Hips", "LeftFoot", "LeftToeBase", "RightFoot", "RightToeEnd", "LeftHand"]
+    sides = foot_vertices_by_side(np.array([0, 1, 2, 3, 4, 5, 1]), names)
+    assert sides["left"].tolist() == [1, 2, 6] and sides["right"].tolist() == [3, 4]
+
+
 def test_support_with_body_passing_beneath_becomes_a_floating_slab():
     soles, joints, root = step_up(top=1.0)
     # Early on, a hand sweeps under the place the feet later stand (a ledge or rung).
