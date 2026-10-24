@@ -79,13 +79,13 @@ def test_low_posture_in_place_of_a_standing_body_is_unexplainable():
     assert report["low_hips_on_blocked_cells"] == pytest.approx(1.0)
 
 
-def leaning_body(contact_x=0.3, contact_part=PART_TRUNK, feet_radius=0.1, frames=30):
+def leaning_body(contact_x=0.3, contact_part=PART_TRUNK, feet_radius=0.1, frames=30, contact_heights=(0.8, 1.4)):
     """Feet near the origin, a body column, and a flat patch of one body part at x = contact_x."""
     feet = np.array([[feet_radius * np.cos(a), h, feet_radius * np.sin(a)]
                      for h in (0.02, 0.06, 0.1) for a in np.linspace(0, 2 * np.pi, 16, endpoint=False)])
     column = body((0.0, 0.0), 1.7)
     column = column[column[:, 1] > 0.15]
-    flat = np.array([[contact_x, y, z] for y in np.linspace(0.8, 1.4, 20) for z in np.linspace(-0.2, 0.2, 9)])
+    flat = np.array([[contact_x, y, z] for y in np.linspace(*contact_heights, 20) for z in np.linspace(-0.2, 0.2, 9)])
     points = np.concatenate([feet, column, flat])
     parts = np.concatenate([np.full(len(feet), PART_FOOT), np.full(len(column), PART_OTHER),
                             np.full(len(flat), contact_part)])
@@ -116,6 +116,8 @@ def test_hand_near_the_hips_or_feet_at_the_plane_do_not_make_a_wall():
     skin, hips, parts = leaning_body(contact_x=0.5, contact_part=PART_HAND)
     walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
     assert len(walls) == 1 and report["kind"] == "brace"
+    skin, hips, parts = leaning_body(contact_x=0.5, contact_part=PART_HAND, contact_heights=(0.3, 0.6))
+    assert fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)[0] == []      # hands resting low, e.g. on knees
     skin, hips, parts = leaning_body(contact_x=0.3, feet_radius=0.25)
     walls, report = fit_walls(skin, hips, 0.0, FPS, vertex_parts=parts)
     assert walls == [] and report["rejected"].get("feet_at_the_plane", 0) > 0

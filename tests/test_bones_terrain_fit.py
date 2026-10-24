@@ -229,6 +229,45 @@ def test_raised_soles_on_a_real_box_are_kept_with_skin():
                for p in fit["evidence_patches"])
 
 
+def test_tucked_toes_beside_the_sole_also_mark_a_resting_foot():
+    soles, joints, root = step_up(top=0.0)
+    for side in soles:
+        soles[side][..., 1] = np.maximum(soles[side][..., 1], 0) + 0.10
+    support = support_of(soles, joints, root)
+    toes = np.concatenate([soles["left"], soles["right"]], axis=1).copy()
+    toes[..., 2] += 0.10            # toe tips 2 cm beyond the sole outline, on the floor
+    toes[..., 1] = 0.01
+    skin = np.concatenate([soles["left"], soles["right"], toes], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support, skin_vertices=skin)
+    assert fit["patches_resting_on_body"] > 0 and fit["levels_m"] == [0.0]
+
+
+def test_support_with_body_passing_beneath_becomes_a_floating_slab():
+    soles, joints, root = step_up(top=1.0)
+    # Early on, a hand sweeps under the place the feet later stand (a ledge or rung).
+    sweep = np.zeros((len(root), 6, 3))
+    sweep[:] = np.nan
+    for frame in range(12):
+        sweep[frame] = [[x, 0.5, 0.6] for x in np.linspace(-0.15, 0.15, 6)]
+    rest = np.where(np.isnan(sweep), np.array([3.0, 0.5, -3.0]), sweep)   # parked far away later
+    skin = np.concatenate([soles["left"], soles["right"], rest], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin)
+    slab = [b for b in fit["boxes"]["minimal"] if b["role"] == "support"]
+    assert slab and "floating_slab" in fit["flags"]
+    assert slab[0]["bottom_m"] == pytest.approx(0.53, abs=1e-6)
+    for variant in ("minimal", "maximal"):
+        assert fit["metrics"][variant]["skin_support"]["frames_over_report"] == 0
+
+
+def test_maximal_box_never_holds_skin_deeper_than_the_tolerance():
+    soles, joints, root = step_up()
+    heel = np.repeat(np.array([[[0.0, 0.2, 0.25]]]), len(root), axis=0)   # a shin just behind the box
+    skin = np.concatenate([soles["left"], soles["right"], heel], axis=1)
+    fit = fit_support(soles, joints, root, FPS, support_of(soles, joints, root), skin_vertices=skin)
+    assert any(b["role"] == "support" for b in fit["boxes"]["maximal"])
+    assert fit["metrics"]["maximal"]["skin_support"]["frames_over_report"] == 0
+
+
 def test_skin_vertices_uses_official_skinner_interface():
     torch = pytest.importorskip("torch")
     import scripts.fit_bones_terrain_support as fit_script

@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass
 
 import numpy as np
 
-SCHEMA_VERSION = "bones-terrain-fit-v4"
+SCHEMA_VERSION = "bones-terrain-fit-v5"
 
 #: Landmark sphere radii in metres; conservative body volume for free-space checks.
 LANDMARK_RADII = {
@@ -55,8 +55,10 @@ class FitConfig:
     min_step_m: float = 0.06
     skin_ground_percentile: float = 2.0
     ground_mismatch_m: float = 0.03
-    skin_probe_stride: float = 6.0
-    inverted_min_points: int = 10            # skin samples under a sole patch that mark the foot as upside down
+    skin_probe_stride: float = 1.0           # every skin vertex is a free-space probe (boxes are exact w.r.t. the metric)
+    resting_min_points: int = 10             # skin points under a sole patch during its own contact -> foot rests on body
+    slab_clearance_m: float = 0.03           # floating slab bottom above the highest skin that passes beneath it
+    min_slab_thickness_m: float = 0.05
     cluster_link_m: float = 0.30
     palm_below_hips_m: float = 0.35
     kneel_shin_drop_m: float = 0.25
@@ -271,31 +273,64 @@ def _conflicts(points_xz, radius, rect_points, margin=0.0):
     return int(inside.sum()), (center, axis_u, half_u, half_v), u, v, inside
 
 
-def _skin_below_patch(points, polygon_xz, below_height):
-    """Number of skin points inside a patch polygon (XZ) and lower than below_height."""
-    polygon = np.asarray(polygon_xz, dtype=np.float64)
-    low = points[points[:, 1] < below_height]
-    if len(low) == 0 or len(polygon) < 3:
-        return 0
-    lo, hi = polygon.min(axis=0), polygon.max(axis=0)
-    xz = low[:, [0, 2]]
-    xz = xz[np.all((xz >= lo) & (xz <= hi), axis=1)]
-    if len(xz) == 0:
-        return 0
+def _near_polygon(xz, polygon, margin):
+    """Points inside a convex polygon or within margin of its boundary."""
+    polygon = np.asarray(polygon, dtype=np.float64)
     inside = np.zeros(len(xz), dtype=bool)
+    near = np.zeros(len(xz), dtype=bool)
     for (x0, z0), (x1, z1) in zip(polygon, np.roll(polygon, -1, axis=0)):
         crosses = (z0 > xz[:, 1]) != (z1 > xz[:, 1])
         with np.errstate(divide="ignore", invalid="ignore"):
             x_cross = x0 + (xz[:, 1] - z0) * (x1 - x0) / (z1 - z0)
         inside ^= crosses & (xz[:, 0] < x_cross)
-    return int(inside.sum())
+        edge = np.array([x1 - x0, z1 - z0])
+        t = np.clip(((xz - [x0, z0]) @ edge) / max(float(edge @ edge), 1e-12), 0, 1)
+        near |= np.linalg.norm(xz - ([x0, z0] + t[:, None] * edge), axis=1) <= margin
+    return inside | near
 
 
-def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_vertices=None):
+def _patch_rests_on_body(patch, skin, events, frame_stride, config):
+    """Skin points below a sole patch, inside its footprint, during the patch's own contact.
+
+    If the body lies under the sole while that sole is "standing", the foot is resting on
+    its top, toes or on another body part (prone, kneeling), not on a raised surface.
+    Any box under such a patch would contain the body, so the patch is not support evidence.
+    """
+    frames = set()
+    for event_id in patch.get("event_ids", []):
+        event = events.get(event_id)
+        if event is not None:
+            frames.update(range(event["start_frame"] // frame_stride,
+                                -(-event["end_frame_exclusive"] // frame_stride)))
+    frames = sorted(f for f in frames if f < len(skin))
+    if not frames:
+        return 0
+    points = skin[frames].reshape(-1, 3)
+    points = points[points[:, 1] < patch["height_m"] - config.level_match_m]
+    polygon = np.asarray(patch["polygon_xz_m"], dtype=np.float64)
+    lo, hi = polygon.min(axis=0) - config.evidence_margin_m, polygon.max(axis=0) + config.evidence_margin_m
+    xz = points[:, [0, 2]]
+    xz = xz[np.all((xz >= lo) & (xz <= hi), axis=1)]
+    if len(xz) == 0 or len(polygon) < 3:
+        return 0
+    return int(_near_polygon(xz, polygon, config.evidence_margin_m).sum())
+
+
+def _inside_rect(u, v, rect, clearance):
+    u0, u1, v0, v1 = rect
+    return (u > u0 - clearance) & (u < u1 + clearance) & (v > v0 - clearance) & (v < v1 + clearance)
+
+
+def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_vertices=None,
+                skin_frame_stride=1):
     """Fit ground and support boxes to one clip; returns a JSON-ready dict.
 
-    skin_vertices, when given ([frames, vertices, 3], same frames as soles), is used
-    for the authoritative penetration metric; landmark spheres are reported too.
+    skin_vertices, when given ([skin frames, vertices, 3], every skin_frame_stride-th
+    frame of soles), is the authoritative free space and penetration metric: every box
+    is grown against all skin points below its top, so no fitted box holds skin deeper
+    than the sole tolerance in the measured frames. A support whose footprint has body
+    beneath it at some other time becomes a floating slab above that body (ladder rungs,
+    ledges); landmark spheres are reported for reference.
     """
     config = config or FitConfig()
     soles = {side: np.asarray(value, dtype=np.float64) for side, value in soles.items()}
@@ -321,17 +356,24 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
             levels = [skin_ground] + [level for level in levels if level >= skin_ground + config.min_step_m]
             ground, ground_source = skin_ground, "skin_lowest_contacts"
 
-    inverted_levels = []
+    resting = []
     if skin is not None:
-        # A foot "level" with body skin below it inside its own sole footprint is a foot lying
-        # on its top or toes (prone, kneeling), not a sole standing on a raised surface.
-        sample = skin[:, ::max(1, int(config.skin_probe_stride))].reshape(-1, 3)
-        for level in [l for l in levels if l > ground]:
-            own = [q for q in patches if abs(q["height_m"] - level) < config.min_step_m]
-            if own and all(_skin_below_patch(sample, q["polygon_xz_m"], level - config.level_match_m)
-                           >= config.inverted_min_points for q in own):
-                inverted_levels.append(level)
-        levels = [l for l in levels if l not in inverted_levels]
+        events = {event["id"]: event for event in support_report.get("events", [])}
+        kept = []
+        for patch in patches:
+            count = (_patch_rests_on_body(patch, skin, events, max(1, int(skin_frame_stride)), config)
+                     if patch["height_m"] - ground >= config.min_step_m else 0)
+            (resting if count >= config.resting_min_points else kept).append(patch)
+        patches = kept
+
+        def nearest(height):
+            return min(levels, key=lambda level: abs(level - height))
+        backed = {nearest(p["height_m"]) for p in patches}
+        inverted_levels = [level for level in levels if level > ground and level not in backed
+                           and any(nearest(p["height_m"]) == level for p in resting)]
+        levels = [level for level in levels if level not in inverted_levels]
+    else:
+        inverted_levels = []
 
     def level_of(height):
         if not levels:
@@ -369,6 +411,7 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         sole_points = np.concatenate([soles["left"], soles["right"]], axis=1).reshape(-1, 3)
         skin_points = skin[:, ::max(1, int(config.skin_probe_stride))].reshape(-1, 3)
         flat_points = np.concatenate([sole_points, skin_points])
+        skin_flat = skin.reshape(-1, 3)
         flat_radii = np.zeros(len(flat_points))
         flat_tolerance = np.full(len(flat_points), config.sole_tolerance_m)
     else:
@@ -387,8 +430,18 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
             report["status"] = "no_evidence"
             level_reports.append(report)
             continue
-        below_xz, below_radius = _below_probes(flat_points, flat_radii, flat_tolerance, level)
+        level_xz, level_radius = _below_probes(flat_points, flat_radii, flat_tolerance, level)
+        if skin is not None:
+            level_body = skin_flat[skin_flat[:, 1] < level - config.sole_tolerance_m]
         for cluster in _clusters(items[level], config.cluster_link_m):
+            # Only probes that a box grown from this cluster could reach matter.
+            evidence = np.concatenate([i["points"] for i in cluster])
+            reach = config.max_growth_m + config.evidence_margin_m + 0.25
+            lo, hi = evidence.min(axis=0) - reach, evidence.max(axis=0) + reach
+            near = np.all((level_xz >= lo) & (level_xz <= hi), axis=1)
+            below_xz, below_radius = level_xz[near], level_radius[near]
+            if skin is not None:
+                body_below = level_body[np.all((level_body[:, [0, 2]] >= lo) & (level_body[:, [0, 2]] <= hi), axis=1)]
             attempts = [("all_evidence", cluster),
                         ("foot_only", [i for i in cluster if i["kind"] == "foot"])]
             attempts += [(f"single_item_{k}", [item]) for k, item in enumerate(cluster)]
@@ -399,27 +452,50 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
                 points = np.concatenate([i["points"] for i in subset])
                 count, rect, u, v, inside = _conflicts(below_xz, below_radius, points)
                 if count == 0:
-                    chosen = (label, subset, rect, u, v)
+                    chosen = (label, subset, rect, u, v, below_radius, bottom)
+                    break
+                if skin is None:
+                    continue
+                # Body passes beneath this footprint: a floating slab above the highest such skin.
+                center, axis_u, half_u, half_v = rect
+                bu, bv = _local(body_below[:, [0, 2]], center, axis_u)
+                under = _inside_rect(bu, bv, (-half_u, half_u, -half_v, half_v), config.evidence_margin_m)
+                if not under.any():
+                    continue
+                slab_bottom = float(body_below[under, 1].max()) + config.slab_clearance_m
+                if level - slab_bottom >= config.min_slab_thickness_m:
+                    above = body_below[:, 1] >= slab_bottom
+                    chosen = (f"{label}_slab", subset, rect, bu[above], bv[above],
+                              np.zeros(int(above.sum())), slab_bottom)
                     break
             entry = {"items": len(cluster), "kinds": sorted({i["kind"] for i in cluster})}
             if chosen is None:
                 entry["status"] = "rejected_conflicts_with_body"
                 report["clusters"].append(entry)
                 continue
-            label, subset, (center, axis_u, half_u, half_v), u, v = chosen
+            label, subset, (center, axis_u, half_u, half_v), u, v, probe_radius, box_bottom = chosen
+            if skin is not None and not label.endswith("_slab"):
+                # Exact free space: all skin below the top (sparse probes can miss a heel).
+                u, v = _local(body_below[:, [0, 2]], center, axis_u)
+                probe_radius = np.zeros(len(u))
             evidence_rect = (-half_u, half_u, -half_v, half_v)
             margin_limit = {"u0": -half_u - config.evidence_margin_m, "u1": half_u + config.evidence_margin_m,
                             "v0": -half_v - config.evidence_margin_m, "v1": half_v + config.evidence_margin_m}
             far_limit = {"u0": -half_u - config.max_growth_m, "u1": half_u + config.max_growth_m,
                          "v0": -half_v - config.max_growth_m, "v1": half_v + config.max_growth_m}
-            rect_min = _grow(evidence_rect, u, v, below_radius, margin_limit, config.side_clearance_m)
-            rect_max = _grow(rect_min, u, v, below_radius, far_limit, config.side_clearance_m)
+            rect_min = _grow(evidence_rect, u, v, probe_radius, margin_limit, config.side_clearance_m)
+            rect_max = _grow(rect_min, u, v, probe_radius, far_limit, config.side_clearance_m)
+            if skin is not None and _inside_rect(u, v, rect_min, -config.side_clearance_m / 2).any():
+                entry = {"items": len(cluster), "kinds": sorted({i["kind"] for i in cluster}),
+                         "status": "rejected_conflicts_with_body"}
+                report["clusters"].append(entry)
+                continue
             name = f"support_{len(minimal)}"
             frame = {"center_xz": [float(c) for c in center], "axis_u": [float(a) for a in axis_u]}
-            box_min = _box_record(len(minimal) + 1, name, "support", center, axis_u, rect_min, level, bottom)
-            box_max = _box_record(len(maximal) + 1, name, "support", center, axis_u, rect_max, level, bottom)
-            box_min.update(bottom_m=float(bottom), frame=dict(frame, rect=[float(r) for r in rect_min]))
-            box_max.update(bottom_m=float(bottom), frame=dict(frame, rect=[float(r) for r in rect_max]),
+            box_min = _box_record(len(minimal) + 1, name, "support", center, axis_u, rect_min, level, box_bottom)
+            box_max = _box_record(len(maximal) + 1, name, "support", center, axis_u, rect_max, level, box_bottom)
+            box_min.update(bottom_m=float(box_bottom), frame=dict(frame, rect=[float(r) for r in rect_min]))
+            box_max.update(bottom_m=float(box_bottom), frame=dict(frame, rect=[float(r) for r in rect_max]),
                            frame_max_rect=[float(r) for r in rect_max],
                            evidence_rect=[float(r) for r in evidence_rect])
             minimal.append(box_min)
@@ -457,6 +533,10 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         flags.append("ground_from_skin")
     if inverted_levels:
         flags.append("inverted_foot_level_dropped")
+    if resting:
+        flags.append("foot_patches_rest_on_body")
+    if any(c.get("evidence_used", "").endswith("_slab") for r in level_reports for c in r["clusters"]):
+        flags.append("floating_slab")
     if any(c["status"] != "fitted" or c.get("evidence_used") != "all_evidence"
            for r in level_reports for c in r["clusters"]):
         flags.append("evidence_reduced_for_body_conflict")
@@ -469,6 +549,7 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
         "levels_m": [level - ground for level in levels], "merged_levels_m": [m - ground for m in merged_levels],
         "ground_source": ground_source, "dropped_ghost_levels_m": [g - ground for g in dropped_ghost_levels],
         "inverted_foot_levels_m": [g - ground for g in inverted_levels],
+        "patches_resting_on_body": len(resting),
         "evidence_patches": [{"height_m": float(p["height_m"]), "level_m": float(level_of(p["height_m"])),
                               "polygon_xz_m": p["polygon_xz_m"]} for p in used],
         "levels": level_reports, "limb_events": limb_events, "boxes": {"minimal": minimal, "maximal": maximal},
@@ -480,7 +561,10 @@ def fit_support(soles, joints, root, fps, support_report, *, config=None, skin_v
 
 
 def measure_points(points, boxes, tolerance, report_threshold):
-    """Depth of points below the top of any box whose footprint contains them."""
+    """Vertical depth of points inside any box: distance to the nearer of its top and bottom.
+
+    Boxes standing on the ground reduce to depth below the top; for a floating slab a
+    point passing beneath it is outside and does not count."""
     frame_depth = np.full(points.shape[0], -np.inf)
     for box in boxes:
         center = np.asarray(box["center_xyz_m"])
@@ -490,7 +574,10 @@ def measure_points(points, boxes, tolerance, report_threshold):
             chunk = points[start:start + 64]
             local = (chunk - center) @ rotation
             within = (np.abs(local[..., 0]) <= half[0]) & (np.abs(local[..., 2]) <= half[2])
-            depth = np.where(within, box["top_m"] - chunk[..., 1] - tolerance, -np.inf).max(axis=1)
+            bottom = box.get("bottom_m", -np.inf)
+            within &= chunk[..., 1] >= bottom
+            depth = np.where(within, np.minimum(box["top_m"] - chunk[..., 1], chunk[..., 1] - bottom) - tolerance,
+                             -np.inf).max(axis=1)
             frame_depth[start:start + 64] = np.maximum(frame_depth[start:start + 64], depth)
     frame_depth = np.maximum(frame_depth, 0.0)
     return {"max_m": float(frame_depth.max(initial=0.0)),

@@ -26,7 +26,7 @@ import numpy as np
 
 from .bones_terrain_fit import _grow, _local, oriented_rectangle
 
-SCHEMA_VERSION = "bones-terrain-scene-v2"
+SCHEMA_VERSION = "bones-terrain-scene-v3"
 LOW_POSTURES = ("crouch", "other_low", "quadruped", "prone")
 
 
@@ -50,6 +50,7 @@ class SceneConfig:
     wall_min_trunk_vertices: float = 60.0
     wall_min_hand_vertices: float = 25.0
     wall_hand_reach_m: float = 0.35
+    wall_hand_min_height_m: float = 0.85     # bracing hand at least this high (hands on knees are not walls)
     wall_min_feet_distance_m: float = 0.15
     wall_max_shift_m: float = 0.05
     wall_height_m: float = 2.5
@@ -364,7 +365,7 @@ def fit_walls(skin, hips_xz, ground, fps, config=None, box_id=200, directions=24
         hips_distance = float(np.median(median - hips_xz[stable] @ d))
         if parts is not None:
             trunk = (contact & (parts == PART_TRUNK))[stable].sum(axis=1)
-            hand = (contact & (parts == PART_HAND))[stable].sum(axis=1)
+            hand = (contact & (parts == PART_HAND) & (height >= config.wall_hand_min_height_m))[stable].sum(axis=1)
             leaning = np.median(trunk) >= config.wall_min_trunk_vertices
             bracing = (np.median(hand) >= config.wall_min_hand_vertices
                        and hips_distance >= config.wall_hand_reach_m)

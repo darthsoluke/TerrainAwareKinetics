@@ -103,7 +103,8 @@ def _process(item, render, skin_stride=2, variants=4):
         skin = None
     _, support, posture = screen.screen_clip(soles, joints, root, screen.FPS, screen._STATE["standing_hip"],
                                              dimension_tokens=item.get("dimension_tokens", ()), return_posture=True)
-    fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin)
+    fit = fit_support(soles, joints, root, screen.FPS, support, skin_vertices=skin,
+                      skin_frame_stride=max(1, skin_stride))
     if skin is not None:
         fit["skin"] = {"vertices": int(skin.shape[1]), "frame_stride": skin_stride}
         fit["scene"] = scene_for_clip(skin, posture[::skin_stride], joints["Hips"][::skin_stride][:, [0, 2]], fit,
