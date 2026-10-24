@@ -12,6 +12,7 @@
 - [BONES-SEED Training Execution](bones_seed_training_execution_20261004.md)
 - [BONES-SEED 地形拟合：阶段计划与第一步](bones_terrain_fitting_plan_20261022.md)
 - [BONES-SEED 动作—环境配对方法 v2](bones_terrain_method_v2_20261023.md)
+- [骨骼射线观测与性能约定](skeleton_ray_observation_20261023.md)
 - [BONES-SEED 几何筛查：PRO6000 试运行与全量结果](bones_terrain_screen_pro6000_20261023.md)
 - [BONES-SEED 支撑几何拟合与可视化：PRO6000 执行结果](bones_terrain_fit_pro6000_20261023.md)
 - [BONES-SEED 地形 v3：四路执行、场景变体与校准](bones_terrain_fit_v3_pro6000_20261023.md)
