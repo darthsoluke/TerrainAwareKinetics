@@ -1,0 +1,4087 @@
+[
+  {
+    "filename": "come_down_50cm_box_R_002__A049",
+    "group": "known_dimension_support",
+    "flags": [
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_180_R_001__A501",
+    "group": "box_support",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_270_R_003__A501",
+    "group": "box_support",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "jump_off_1m_R_102__A301",
+    "group": "known_dimension_support",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "jump_off_1m_R_103__A301",
+    "group": "known_dimension_support",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "ladder_slip_R_104__A301",
+    "group": "ladder",
+    "flags": [
+      "ground_from_skin",
+      "floating_slab",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 0,
+    "slabs": [
+      {
+        "variant": "minimal",
+        "name": "support_1",
+        "thickness_m": 0.0729161214828491,
+        "bottom_above_ground_m": 0.290915766209364,
+        "top_m": 0.38725125789642334,
+        "bottom_m": 0.31433513641357425
+      },
+      {
+        "variant": "maximal",
+        "name": "support_1",
+        "thickness_m": 0.0729161214828491,
+        "bottom_above_ground_m": 0.290915766209364,
+        "top_m": 0.38725125789642334,
+        "bottom_m": 0.31433513641357425
+      }
+    ]
+  },
+  {
+    "filename": "h_b_w_crouch_to_stand_270_start_003__A342",
+    "group": "wall_contact",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_001__A048",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_001__A164",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_001__A165",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_002__A164",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_002__A165",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_003__A164",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_loop_003__A165",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_001__A023",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_001__A046",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_001__A048",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_001__A049",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_001__A165",
+    "group": "kneel",
+    "flags": [
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_002__A026",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_002__A031",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_002__A045",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_002__A049",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_002__A099",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_002__A165",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A031",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A045",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A047",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A048",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A049",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A099",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A165",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A166",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_003__A167",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_004__A031",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_004__A099",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_R_002__A406",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_start_R_003__A406",
+    "group": "kneel",
+    "flags": [
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A038",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A046",
+    "group": "kneel",
+    "flags": [
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A049",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A097",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A098",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A100",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A101",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A164",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A165",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_001__A167",
+    "group": "kneel",
+    "flags": [
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_002__A031",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_002__A033",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_002__A048",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_002__A049",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_002__A164",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_002__A165",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_003__A048",
+    "group": "kneel",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_003__A049",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_003__A164",
+    "group": "kneel",
+    "flags": [
+      "merged_small_steps",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_003__A167",
+    "group": "kneel",
+    "flags": [
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "kneeling_stop_R_003__A406",
+    "group": "kneel",
+    "flags": [
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "patches_crouch_R_001__A429",
+    "group": "crouch",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "change_idle_crawl_to_idle_crawl_right_002__A125",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_180_R_001__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_180_R_001__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_180_R_002__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_180_R_002__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_180_R_003__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_180_R_003__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_001__A130",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_003__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_003__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_004__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_004__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_005__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_225_R_005__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_loop_360_R_002__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_180_R_001__A125",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_180_R_001__A229",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_180_R_003__A125",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_180_R_004__A125",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_001__A229",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_001__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_001__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_002__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_002__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_003__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_225_R_003__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_start_360_R_002__A216",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_180_R_001__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_180_R_002__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_001__A229",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_001__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_001__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_002__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_003__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_003__A230",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_225_R_003__A233",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_270_R_002__A218",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "crawl_ff_stop_270_R_003__A218",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_right_loop_001__A125",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_right_loop_002__A125",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_right_loop_003__A125",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_right_to_idle_crawl_R_002__A231",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_right_to_idle_crawl_R_003__A218",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_right_to_idle_crawl_R_003__A231",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_start_004__A129",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_to_idle_crawl_right_R_004__A216",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "idle_crawl_to_idle_crawl_right_R_004__A217",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_001__A030",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_001__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_001__A034",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 10,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_002__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 12,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_003__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 6,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_004__A029",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_004__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_004__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_loop_004__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_001__A029",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_001__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_001__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 8,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_003__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_003__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_004__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_004__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 6,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_start_004__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_001__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_001__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_001__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A029",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A035",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 6,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_003__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_003__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_backward_stop_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_001__A034",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_001__A127",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_002__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_003__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_003__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_loop_003__A127",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_002__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_003__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_003__A035",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_start_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_001__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_003__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_003__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_004__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_004__A034",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_forward_stop_004__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_idle_001__A029",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_idle_start_001__A127",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_idle_start_002__A127",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_idle_start_003__A127",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_001__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_001__A030",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 8,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 12,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_001__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 13,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_002__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_002__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 16,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_002__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 11,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_003__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 9,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 18,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_003__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 12,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_loop_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_off_001__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_off_002__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_off_002__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_off_004__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_off_005__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_off_005__A031",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_001__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_001__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_003__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_003__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_004__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_005__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_005__A030",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_005__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_start_005__A032",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_001__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_001__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_001__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_002__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_002__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_002__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_002__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_003__A029",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_003__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_004__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_004__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 6,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_stop_004__A032",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_001__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_004__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_004__A033",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_004__A035",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_000_004__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_002__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_002__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_002__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_002__A035",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_045_004__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_001__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_002__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_003__A031",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_004__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_005__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_090_005__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_001__A036",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_002__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_002__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_003__A029",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_003__A030",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_003__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_004__A030",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_004__A033",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_135_004__A036",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "inverted_foot_level_dropped",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "mohak_turn_270_004__A128",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_001__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 6,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_001__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_001__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_003__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 10,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_003__A201",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_003__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_004__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 10,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_loop_R_004__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_001__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_001__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 11,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_001__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_001__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_002__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 8,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_002__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_002__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_start_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_stop_R_002__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_stop_R_002__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 8,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_stop_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_stop_R_003__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_backward_stop_R_004__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_001__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_001__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_001__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_001__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_002__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_002__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_002__A201",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 6,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_003__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_loop_R_003__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_001__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_001__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_002__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_002__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 7,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_002__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 9,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_003__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_003__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_002__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_002__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_002__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 5,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_003__A201",
+    "group": "quadruped",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_003__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 4,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A201",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 3,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_idle_start_001__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_idle_stop_001__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_idle_stop_002__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_002__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_003__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_004__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_270_R_004__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_360_R_001__A199",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_360_R_003__A200",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "on_all_fours_turn_360_R_003__A203",
+    "group": "quadruped",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 2,
+    "slabs": []
+  },
+  {
+    "filename": "turn_crawl_270_005__A130",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "turn_crawl_270_R_001__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "turn_crawl_270_R_002__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "turn_crawl_270_R_003__A231",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "turn_crawl_360_R_001__A230",
+    "group": "prone",
+    "flags": [
+      "merged_small_steps",
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  },
+  {
+    "filename": "turn_crawl_360_R_003__A229",
+    "group": "prone",
+    "flags": [
+      "ground_from_skin",
+      "foot_patches_rest_on_body",
+      "evidence_reduced_for_body_conflict",
+      "support_rejected"
+    ],
+    "patches_resting_on_body": 1,
+    "slabs": []
+  }
+]

@@ -1,0 +1,156 @@
+[
+  {
+    "filename": "crouch_ff_start_315_R_001__A195",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_start_315_R_003__A246",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_180_R_002__A195",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_180_R_003__A195",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_001__A197",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_003__A196",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "crouch_ff_stop_270_R_003__A246",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_090_R_001__A285",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "drinking_wall_leaning_mug_090_R_004__A291",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "h_b_w_crouch_270_stop_001__A305",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "h_b_w_crouch_270_stop_002__A305",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "idle_crouch_loop_002__A148",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "idle_crouch_right_loop_R_002__A197",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "idle_to_wall_leaning_idle_270_R_001__A291",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "idle_to_wall_leaning_idle_360_R_002__A282",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "idle_to_wall_leaning_idle_360_R_003__A282",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "kneeling_loop_001__A101",
+    "group": "kneel",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "kneeling_stop_003__A097",
+    "group": "kneel",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "turn_crouch_360_R_003__A195",
+    "group": "crouch",
+    "reasons": [
+      "requested_crouch_wall"
+    ]
+  },
+  {
+    "filename": "wall_leaning_idle_270_R_003__A291",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "wall_leaning_idle_to_idle_270_R_001__A287",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  },
+  {
+    "filename": "wall_leaning_idle_to_idle_270_R_002__A290",
+    "group": "wall_contact",
+    "reasons": [
+      "requested_wall_contact_kept_wall"
+    ]
+  }
+]

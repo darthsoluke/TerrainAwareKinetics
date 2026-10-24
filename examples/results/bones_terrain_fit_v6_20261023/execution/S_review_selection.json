@@ -1,0 +1,72 @@
+[
+  {
+    "filename": "box_jump_down_360_002__A359",
+    "group": "box_support",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "come_up_50cm_box_R_001__A206",
+    "group": "known_dimension_support",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "idle_turn_360_001__A066",
+    "group": "flat_control",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "jump_over_obstacle_1m_R_102__A305",
+    "group": "obstacle_clearance",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "jump_to_shoulder_roll_R_102__A416",
+    "group": "box_support",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "ladder_slide_down_R_002__A300",
+    "group": "ladder",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "ladder_slip_R_002__A300",
+    "group": "ladder",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "lift_crate_come_up_50cm_box_R_005__A249",
+    "group": "known_dimension_support",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "stairs_climbing_jog_down_stop_R_003__A300",
+    "group": "stairs",
+    "reasons": [
+      "group_sample"
+    ]
+  },
+  {
+    "filename": "stairs_slip_R_003__A300",
+    "group": "stairs",
+    "reasons": [
+      "group_sample"
+    ]
+  }
+]

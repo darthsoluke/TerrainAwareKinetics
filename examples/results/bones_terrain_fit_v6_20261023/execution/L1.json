@@ -1,0 +1,120 @@
+{
+  "name": "L1",
+  "command": [
+    "${PFNN_PROJECT}/env/bin/python",
+    "-u",
+    "runs/bones_fit_v6_coord/timed_runner.py",
+    "--screen-run",
+    "runs/bones_screen_v1_full",
+    "--output",
+    "runs/bones_fit_v6_L1",
+    "--viz-per-stem",
+    "2",
+    "--variants",
+    "4",
+    "--skin-stride",
+    "2",
+    "--groups",
+    "crouch",
+    "kneel",
+    "wall_contact",
+    "--worst-per-group",
+    "3",
+    "--gif",
+    "--workers",
+    "20"
+  ],
+  "output": "runs/bones_fit_v6_L1",
+  "exit_code": 0,
+  "wall_seconds": 1588.8,
+  "fit_elapsed_seconds": 1586.7,
+  "fitted": 2131,
+  "failed": 0,
+  "rendered": 50,
+  "render_failures": [],
+  "minimum_available_bytes": 386979975168,
+  "peak_unavailable_bytes": 148737892352,
+  "timing_rows": 2131,
+  "slowest10": [
+    {
+      "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492",
+      "group": "crouch",
+      "frames": 573,
+      "fit_seconds": 35.098,
+      "render_seconds": 72.035,
+      "total_seconds": 107.133
+    },
+    {
+      "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493",
+      "group": "crouch",
+      "frames": 573,
+      "fit_seconds": 34.468,
+      "render_seconds": 70.548,
+      "total_seconds": 105.016
+    },
+    {
+      "filename": "patches_crouch_R_002__A430",
+      "group": "crouch",
+      "frames": 350,
+      "fit_seconds": 35.6,
+      "render_seconds": 58.039,
+      "total_seconds": 93.639
+    },
+    {
+      "filename": "crouch_idle_002__A248",
+      "group": "crouch",
+      "frames": 380,
+      "fit_seconds": 30.542,
+      "render_seconds": 61.102,
+      "total_seconds": 91.644
+    },
+    {
+      "filename": "kneeling_loop_001__A101",
+      "group": "kneel",
+      "frames": 403,
+      "fit_seconds": 29.653,
+      "render_seconds": 58.318,
+      "total_seconds": 87.971
+    },
+    {
+      "filename": "wall_leaning_idle_360_R_003__A285",
+      "group": "wall_contact",
+      "frames": 416,
+      "fit_seconds": 31.944,
+      "render_seconds": 50.351,
+      "total_seconds": 82.295
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+      "group": "wall_contact",
+      "frames": 352,
+      "fit_seconds": 28.195,
+      "render_seconds": 49.285,
+      "total_seconds": 77.48
+    },
+    {
+      "filename": "crouch_idle_right_R_002__A245",
+      "group": "crouch",
+      "frames": 331,
+      "fit_seconds": 26.358,
+      "render_seconds": 48.535,
+      "total_seconds": 74.893
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_090_R_004__A291",
+      "group": "wall_contact",
+      "frames": 330,
+      "fit_seconds": 25.94,
+      "render_seconds": 44.663,
+      "total_seconds": 70.603
+    },
+    {
+      "filename": "patches_crouch_R_001__A428",
+      "group": "crouch",
+      "frames": 331,
+      "fit_seconds": 22.889,
+      "render_seconds": 42.758,
+      "total_seconds": 65.647
+    }
+  ]
+}

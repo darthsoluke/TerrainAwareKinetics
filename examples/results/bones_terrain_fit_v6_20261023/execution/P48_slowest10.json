@@ -1,0 +1,82 @@
+[
+  {
+    "filename": "mohak_loop_002__A031",
+    "group": "quadruped",
+    "frames": 595,
+    "fit_seconds": 26.401,
+    "render_seconds": 22.921,
+    "total_seconds": 49.322
+  },
+  {
+    "filename": "mohak_idle_loop_001__A125",
+    "group": "quadruped",
+    "frames": 540,
+    "fit_seconds": 20.127,
+    "render_seconds": 21.237,
+    "total_seconds": 41.364
+  },
+  {
+    "filename": "spider_crawl_R_001__A362",
+    "group": "quadruped",
+    "frames": 398,
+    "fit_seconds": 20.062,
+    "render_seconds": 20.413,
+    "total_seconds": 40.475
+  },
+  {
+    "filename": "ladder_climbing_idle_R_101__A301",
+    "group": "ladder",
+    "frames": 419,
+    "fit_seconds": 20.554,
+    "render_seconds": 18.127,
+    "total_seconds": 38.681
+  },
+  {
+    "filename": "on_all_fours_forward_stop_R_004__A199",
+    "group": "quadruped",
+    "frames": 343,
+    "fit_seconds": 18.069,
+    "render_seconds": 19.451,
+    "total_seconds": 37.52
+  },
+  {
+    "filename": "spider_crawl_R_004__A362",
+    "group": "quadruped",
+    "frames": 288,
+    "fit_seconds": 17.173,
+    "render_seconds": 17.795,
+    "total_seconds": 34.968
+  },
+  {
+    "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A493",
+    "group": "crouch",
+    "frames": 573,
+    "fit_seconds": 16.749,
+    "render_seconds": 17.648,
+    "total_seconds": 34.397
+  },
+  {
+    "filename": "crouch_walk_forward_and_back_turn_360_to_idle_R_002__A492",
+    "group": "crouch",
+    "frames": 573,
+    "fit_seconds": 16.945,
+    "render_seconds": 15.454,
+    "total_seconds": 32.399
+  },
+  {
+    "filename": "on_all_fours_forward_start_R_002__A201",
+    "group": "quadruped",
+    "frames": 336,
+    "fit_seconds": 15.042,
+    "render_seconds": 16.291,
+    "total_seconds": 31.333
+  },
+  {
+    "filename": "idle_crawl_stop_001__A128",
+    "group": "prone",
+    "frames": 274,
+    "fit_seconds": 14.547,
+    "render_seconds": 16.709,
+    "total_seconds": 31.256
+  }
+]

@@ -1,0 +1,2760 @@
+{
+  "name": "L1",
+  "fitted": 2131,
+  "examples": [
+    {
+      "filename": "crouch_ff_start_315_R_001__A195",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 6.2,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 176,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006698886631056666,
+          "skin": {
+            "max_m": 0.010598067427054048,
+            "p99_m": 0.009801817322149872,
+            "frames_over_report": 0,
+            "frames": 93
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 93
+          },
+          "skin_ground": {
+            "max_m": 0.010598067427054048,
+            "p99_m": 0.009801817322149872,
+            "frames_over_report": 0,
+            "frames": 93
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 176,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006698886631056666,
+          "skin": {
+            "max_m": 0.010598067427054048,
+            "p99_m": 0.009801817322149872,
+            "frames_over_report": 0,
+            "frames": 93
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 93
+          },
+          "skin_ground": {
+            "max_m": 0.010598067427054048,
+            "p99_m": 0.009801817322149872,
+            "frames_over_report": 0,
+            "frames": 93
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 32,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 22
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 48.5,
+        "contact_drift_m": 0.0077624327608202814,
+        "stable_seconds": 2.0,
+        "feet_distance_m": 0.3746044268197418,
+        "contact_span_m": 0.10528474108409813,
+        "length_m": 2.1052847410840982,
+        "plane_shift_m": 0.011454821865422793
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 93,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 93,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 93,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 41,
+        "frames": 93,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 41,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 124,
+        "core_cells": 124,
+        "status": "fitted",
+        "tight_m": 1.4343679516669363,
+        "loose_m": 1.710514736175537,
+        "floor_m": 0.0017454440239816904,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "crouch_ff_start_315_R_003__A246",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 6.567,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 184,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00763446104247123,
+          "skin": {
+            "max_m": 0.010711494251154363,
+            "p99_m": 0.010628570332191884,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_ground": {
+            "max_m": 0.010711494251154363,
+            "p99_m": 0.010628570332191884,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 184,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00763446104247123,
+          "skin": {
+            "max_m": 0.010711494251154363,
+            "p99_m": 0.010628570332191884,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 99
+          },
+          "skin_ground": {
+            "max_m": 0.010711494251154363,
+            "p99_m": 0.010628570332191884,
+            "frames_over_report": 0,
+            "frames": 99
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 19,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 23
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 84.0,
+        "contact_drift_m": 0.04302952308237101,
+        "stable_seconds": 1.2666666666666666,
+        "feet_distance_m": 0.24464345645856728,
+        "contact_span_m": 0.2276847256138792,
+        "length_m": 2.227684725613879,
+        "plane_shift_m": 0.010788011246958273
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 99,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 60,
+        "frames": 99,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 60,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 280,
+        "core_cells": 280,
+        "status": "fitted",
+        "tight_m": 1.24562074391637,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.0011371156433597207,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "crouch_ff_stop_180_R_002__A195",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 6.933,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 213,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007265821273904294,
+          "skin": {
+            "max_m": 0.013178651395719498,
+            "p99_m": 0.013152829946484416,
+            "frames_over_report": 0,
+            "frames": 104
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 104
+          },
+          "skin_ground": {
+            "max_m": 0.013178651395719498,
+            "p99_m": 0.013152829946484416,
+            "frames_over_report": 0,
+            "frames": 104
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 213,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007265821273904294,
+          "skin": {
+            "max_m": 0.013178651395719498,
+            "p99_m": 0.013152829946484416,
+            "frames_over_report": 0,
+            "frames": 104
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 104
+          },
+          "skin_ground": {
+            "max_m": 0.013178651395719498,
+            "p99_m": 0.013152829946484416,
+            "frames_over_report": 0,
+            "frames": 104
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 23,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 16,
+          "feet_at_the_plane": 2
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 522.5,
+        "contact_drift_m": 0.0362609731663317,
+        "stable_seconds": 0.9333333333333333,
+        "feet_distance_m": 0.19895928669716723,
+        "contact_span_m": 0.2121875347603015,
+        "length_m": 2.2121875347603015,
+        "plane_shift_m": 0.04819873256931917
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 104,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 104,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 104,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 85,
+        "frames": 104,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 85,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 536,
+        "core_cells": 536,
+        "status": "fitted",
+        "tight_m": 1.5822735072788783,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.0020247556385584176,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "crouch_ff_stop_180_R_003__A195",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 8.5,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 208,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007386324519757181,
+          "skin": {
+            "max_m": 0.01287634769687429,
+            "p99_m": 0.012520192668307574,
+            "frames_over_report": 0,
+            "frames": 128
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 128
+          },
+          "skin_ground": {
+            "max_m": 0.01287634769687429,
+            "p99_m": 0.012520192668307574,
+            "frames_over_report": 0,
+            "frames": 128
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 208,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.007386324519757181,
+          "skin": {
+            "max_m": 0.01287634769687429,
+            "p99_m": 0.012520192668307574,
+            "frames_over_report": 0,
+            "frames": 128
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 128
+          },
+          "skin_ground": {
+            "max_m": 0.01287634769687429,
+            "p99_m": 0.012520192668307574,
+            "frames_over_report": 0,
+            "frames": 128
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 43,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 17,
+          "feet_at_the_plane": 2
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 1076.0,
+        "contact_drift_m": 0.028154074409098673,
+        "stable_seconds": 2.7333333333333334,
+        "feet_distance_m": 0.2110099025121892,
+        "contact_span_m": 0.12320726181862529,
+        "length_m": 2.1232072618186253,
+        "plane_shift_m": 0.018025648695511265
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 128,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 128,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 128,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 123,
+        "frames": 128,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 123,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 533,
+        "core_cells": 533,
+        "status": "fitted",
+        "tight_m": 1.4226953404932283,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.0014274352579377592,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "crouch_ff_stop_270_R_001__A197",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 7.433,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 209,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006700759055092931,
+          "skin": {
+            "max_m": 0.013238645158708096,
+            "p99_m": 0.013179576918482781,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_ground": {
+            "max_m": 0.013238645158708096,
+            "p99_m": 0.013179576918482781,
+            "frames_over_report": 0,
+            "frames": 112
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 209,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006700759055092931,
+          "skin": {
+            "max_m": 0.013238645158708096,
+            "p99_m": 0.013179576918482781,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_ground": {
+            "max_m": 0.013238645158708096,
+            "p99_m": 0.013179576918482781,
+            "frames_over_report": 0,
+            "frames": 112
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 40,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 17,
+          "feet_at_the_plane": 2,
+          "plane_must_move_to_clear_body": 3
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 352.0,
+        "contact_drift_m": 0.04554763025952857,
+        "stable_seconds": 2.0,
+        "feet_distance_m": 0.16949920391963702,
+        "contact_span_m": 0.24805400034561575,
+        "length_m": 2.2480540003456158,
+        "plane_shift_m": 0.040289003350817865
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 1,
+        "frames": 112,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "crouch_ff_stop_270_R_003__A196",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 7.7,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 207,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0069941014517098665,
+          "skin": {
+            "max_m": 0.009865846019238234,
+            "p99_m": 0.009602011600509285,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_ground": {
+            "max_m": 0.009865846019238234,
+            "p99_m": 0.009602011600509285,
+            "frames_over_report": 0,
+            "frames": 116
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 207,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0069941014517098665,
+          "skin": {
+            "max_m": 0.009865846019238234,
+            "p99_m": 0.009602011600509285,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_ground": {
+            "max_m": 0.009865846019238234,
+            "p99_m": 0.009602011600509285,
+            "frames_over_report": 0,
+            "frames": 116
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 44,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 19,
+          "feet_at_the_plane": 1
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 397.0,
+        "contact_drift_m": 0.07328586822076355,
+        "stable_seconds": 2.8666666666666667,
+        "feet_distance_m": 0.1923224637418781,
+        "contact_span_m": 0.1492813996259752,
+        "length_m": 2.149281399625975,
+        "plane_shift_m": 0.012699681220443626
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 116,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 116,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 116,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 116,
+        "frames": 116,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 116,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 491,
+        "core_cells": 491,
+        "status": "fitted",
+        "tight_m": 1.3334759329073131,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.005010075401514769,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "crouch_ff_stop_270_R_003__A246",
+      "group": "crouch",
+      "stem": "crouch",
+      "seconds": 9.233,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 215,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004782363539561629,
+          "skin": {
+            "max_m": 0.012958311475813389,
+            "p99_m": 0.012695362307131293,
+            "frames_over_report": 0,
+            "frames": 139
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 139
+          },
+          "skin_ground": {
+            "max_m": 0.012958311475813389,
+            "p99_m": 0.012695362307131293,
+            "frames_over_report": 0,
+            "frames": 139
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 215,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004782363539561629,
+          "skin": {
+            "max_m": 0.012958311475813389,
+            "p99_m": 0.012695362307131293,
+            "frames_over_report": 0,
+            "frames": 139
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 139
+          },
+          "skin_ground": {
+            "max_m": 0.012958311475813389,
+            "p99_m": 0.012695362307131293,
+            "frames_over_report": 0,
+            "frames": 139
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 33,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 18,
+          "feet_at_the_plane": 1
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 637.0,
+        "contact_drift_m": 0.057973812246233436,
+        "stable_seconds": 2.0,
+        "feet_distance_m": 0.31818856445581645,
+        "contact_span_m": 0.25566258378384044,
+        "length_m": 2.2556625837838404,
+        "plane_shift_m": 0.019248423974989715
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 139,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 139,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 139,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 35,
+        "frames": 139,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 35,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 114,
+        "core_cells": 114,
+        "status": "fitted",
+        "tight_m": 1.2567582204565406,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.0022884299978613853,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_090_R_001__A285",
+      "group": "wall_contact",
+      "stem": "drinking_wall_leaning_mug_090",
+      "seconds": 10.7,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 43,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0005199049483053386,
+          "skin": {
+            "max_m": 0.005900281423237175,
+            "p99_m": 0.0058887462480925025,
+            "frames_over_report": 0,
+            "frames": 161
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 161
+          },
+          "skin_ground": {
+            "max_m": 0.005900281423237175,
+            "p99_m": 0.0058887462480925025,
+            "frames_over_report": 0,
+            "frames": 161
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 43,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0005199049483053386,
+          "skin": {
+            "max_m": 0.005900281423237175,
+            "p99_m": 0.0058887462480925025,
+            "frames_over_report": 0,
+            "frames": 161
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 161
+          },
+          "skin_ground": {
+            "max_m": 0.005900281423237175,
+            "p99_m": 0.0058887462480925025,
+            "frames_over_report": 0,
+            "frames": 161
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 161,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 20,
+          "feet_at_the_plane": 2
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 70.0,
+        "contact_drift_m": 0.006257253033774113,
+        "stable_seconds": 10.733333333333333,
+        "feet_distance_m": 0.15210822730731033,
+        "contact_span_m": 0.09269220632745656,
+        "length_m": 2.0926922063274565,
+        "plane_shift_m": 0.006526742120380458
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 161,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 161,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_090_R_004__A291",
+      "group": "wall_contact",
+      "stem": "drinking_wall_leaning_mug_090",
+      "seconds": 11.0,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 43,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00252326182089746,
+          "skin": {
+            "max_m": 0.009898120304569602,
+            "p99_m": 0.009684014981612563,
+            "frames_over_report": 0,
+            "frames": 165
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 165
+          },
+          "skin_ground": {
+            "max_m": 0.009898120304569602,
+            "p99_m": 0.009684014981612563,
+            "frames_over_report": 0,
+            "frames": 165
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 43,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.00252326182089746,
+          "skin": {
+            "max_m": 0.009898120304569602,
+            "p99_m": 0.009684014981612563,
+            "frames_over_report": 0,
+            "frames": 165
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 165
+          },
+          "skin_ground": {
+            "max_m": 0.009898120304569602,
+            "p99_m": 0.009684014981612563,
+            "frames_over_report": 0,
+            "frames": 165
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 165,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 22,
+          "feet_at_the_plane": 1
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 66.0,
+        "contact_drift_m": 0.015412052806930948,
+        "stable_seconds": 11.0,
+        "feet_distance_m": 0.1824821978807449,
+        "contact_span_m": 0.21807386726140976,
+        "length_m": 2.2180738672614098,
+        "plane_shift_m": 0.007533972263336186
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 165,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 165,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "h_b_w_crouch_270_stop_001__A305",
+      "group": "wall_contact",
+      "stem": "h_b_w_crouch",
+      "seconds": 4.3,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 89,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0049912669928744435,
+          "skin": {
+            "max_m": 0.008767846506088972,
+            "p99_m": 0.00859737841412425,
+            "frames_over_report": 0,
+            "frames": 65
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 65
+          },
+          "skin_ground": {
+            "max_m": 0.008767846506088972,
+            "p99_m": 0.00859737841412425,
+            "frames_over_report": 0,
+            "frames": 65
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 89,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0049912669928744435,
+          "skin": {
+            "max_m": 0.008767846506088972,
+            "p99_m": 0.00859737841412425,
+            "frames_over_report": 0,
+            "frames": 65
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 65
+          },
+          "skin_ground": {
+            "max_m": 0.008767846506088972,
+            "p99_m": 0.00859737841412425,
+            "frames_over_report": 0,
+            "frames": 65
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 40,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 17,
+          "feet_at_the_plane": 4,
+          "plane_must_move_to_clear_body": 2
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 401.0,
+        "contact_drift_m": 0.04880061400019442,
+        "stable_seconds": 1.8,
+        "feet_distance_m": 0.2573940414877228,
+        "contact_span_m": 0.33178455766036885,
+        "length_m": 2.331784557660369,
+        "plane_shift_m": 0.035536757570862054
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 65,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 54,
+        "frames": 65,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 54,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 119,
+        "core_cells": 119,
+        "low_hips_on_blocked_cells": 0.0,
+        "status": "no_conflict_free_rectangle"
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    {
+      "filename": "h_b_w_crouch_270_stop_002__A305",
+      "group": "wall_contact",
+      "stem": "h_b_w_crouch",
+      "seconds": 3.933,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 80,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0038905428373254836,
+          "skin": {
+            "max_m": 0.008839255257043988,
+            "p99_m": 0.008815820107702165,
+            "frames_over_report": 0,
+            "frames": 59
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 59
+          },
+          "skin_ground": {
+            "max_m": 0.008839255257043988,
+            "p99_m": 0.008815820107702165,
+            "frames_over_report": 0,
+            "frames": 59
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 80,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0038905428373254836,
+          "skin": {
+            "max_m": 0.008839255257043988,
+            "p99_m": 0.008815820107702165,
+            "frames_over_report": 0,
+            "frames": 59
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 59
+          },
+          "skin_ground": {
+            "max_m": 0.008839255257043988,
+            "p99_m": 0.008815820107702165,
+            "frames_over_report": 0,
+            "frames": 59
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 27,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 16,
+          "feet_at_the_plane": 4,
+          "contact_slides_along_plane": 1
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 798.5,
+        "contact_drift_m": 0.03970983139006545,
+        "stable_seconds": 1.4666666666666666,
+        "feet_distance_m": 0.23586868046955645,
+        "contact_span_m": 0.14330251620318069,
+        "length_m": 2.143302516203181,
+        "plane_shift_m": 0.02556622046168555
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 59,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 59,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 59,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 58,
+        "frames": 59,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 58,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 177,
+        "core_cells": 177,
+        "status": "fitted",
+        "tight_m": 1.4877310990332626,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.0015785311697982252,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "idle_crouch_loop_002__A148",
+      "group": "crouch",
+      "stem": "idle_crouch",
+      "seconds": 7.433,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 55,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.011447048746049404,
+          "skin": {
+            "max_m": 0.019301789812743664,
+            "p99_m": 0.019211091697216034,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_ground": {
+            "max_m": 0.019301789812743664,
+            "p99_m": 0.019211091697216034,
+            "frames_over_report": 0,
+            "frames": 112
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 55,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.011447048746049404,
+          "skin": {
+            "max_m": 0.019301789812743664,
+            "p99_m": 0.019211091697216034,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 112
+          },
+          "skin_ground": {
+            "max_m": 0.019301789812743664,
+            "p99_m": 0.019211091697216034,
+            "frames_over_report": 0,
+            "frames": 112
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 112,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 23
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 77.0,
+        "contact_drift_m": 0.04206568312389247,
+        "stable_seconds": 7.266666666666667,
+        "feet_distance_m": 0.17210960760712618,
+        "contact_span_m": 0.24577851593494415,
+        "length_m": 2.245778515934944,
+        "plane_shift_m": 0.022205569893121724
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        },
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 112,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 112,
+        "frames": 112,
+        "dominant": "other_low",
+        "posture_counts": {
+          "crouch": 0,
+          "other_low": 112,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 59,
+        "core_cells": 59,
+        "status": "fitted",
+        "tight_m": 0.8885777201130987,
+        "loose_m": 1.710514736175537,
+        "floor_m": -0.013238293118774891,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "idle_crouch_right_loop_R_002__A197",
+      "group": "crouch",
+      "stem": "idle_crouch_right",
+      "seconds": 15.867,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 54,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0007931196596473455,
+          "skin": {
+            "max_m": 0.007866570493206382,
+            "p99_m": 0.007807457773014903,
+            "frames_over_report": 0,
+            "frames": 238
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 238
+          },
+          "skin_ground": {
+            "max_m": 0.007866570493206382,
+            "p99_m": 0.007807457773014903,
+            "frames_over_report": 0,
+            "frames": 238
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 54,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0007931196596473455,
+          "skin": {
+            "max_m": 0.007866570493206382,
+            "p99_m": 0.007807457773014903,
+            "frames_over_report": 0,
+            "frames": 238
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 238
+          },
+          "skin_ground": {
+            "max_m": 0.007866570493206382,
+            "p99_m": 0.007807457773014903,
+            "frames_over_report": 0,
+            "frames": 238
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 238,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 20,
+          "feet_at_the_plane": 2
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 56.5,
+        "contact_drift_m": 0.06143189894184009,
+        "stable_seconds": 10.8,
+        "feet_distance_m": 0.2230453991131127,
+        "contact_span_m": 0.13332705777784673,
+        "length_m": 2.1333270577778465,
+        "plane_shift_m": 0.04685242405582035
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 238,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 238,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "idle_to_wall_leaning_idle_270_R_001__A291",
+      "group": "wall_contact",
+      "stem": "idle_to_wall_leaning_idle",
+      "seconds": 7.1,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 71,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.009106896817684174,
+          "skin": {
+            "max_m": 0.008109447546303272,
+            "p99_m": 0.007972071133553981,
+            "frames_over_report": 0,
+            "frames": 107
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 107
+          },
+          "skin_ground": {
+            "max_m": 0.008109447546303272,
+            "p99_m": 0.007972071133553981,
+            "frames_over_report": 0,
+            "frames": 107
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 71,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.009106896817684174,
+          "skin": {
+            "max_m": 0.008109447546303272,
+            "p99_m": 0.007972071133553981,
+            "frames_over_report": 0,
+            "frames": 107
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 107
+          },
+          "skin_ground": {
+            "max_m": 0.008109447546303272,
+            "p99_m": 0.007972071133553981,
+            "frames_over_report": 0,
+            "frames": 107
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 105,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 22,
+          "feet_at_the_plane": 1
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 66.0,
+        "contact_drift_m": 0.012551985578498348,
+        "stable_seconds": 5.0,
+        "feet_distance_m": 0.15068625041599987,
+        "contact_span_m": 0.09714757637654584,
+        "length_m": 2.097147576376546,
+        "plane_shift_m": 0.008080468152842801
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 107,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 107,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "idle_to_wall_leaning_idle_360_R_002__A282",
+      "group": "wall_contact",
+      "stem": "idle_to_wall_leaning_idle",
+      "seconds": 7.7,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 44,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0055457111084251665,
+          "skin": {
+            "max_m": 0.011221178770938423,
+            "p99_m": 0.011215537470707203,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_ground": {
+            "max_m": 0.011221178770938423,
+            "p99_m": 0.011215537470707203,
+            "frames_over_report": 0,
+            "frames": 116
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 44,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.0055457111084251665,
+          "skin": {
+            "max_m": 0.011221178770938423,
+            "p99_m": 0.011215537470707203,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 116
+          },
+          "skin_ground": {
+            "max_m": 0.011221178770938423,
+            "p99_m": 0.011215537470707203,
+            "frames_over_report": 0,
+            "frames": 116
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 114,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 22
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 85.0,
+        "contact_drift_m": 0.01047901835959087,
+        "stable_seconds": 4.733333333333333,
+        "feet_distance_m": 0.1746036857366562,
+        "contact_span_m": 0.2822897210717201,
+        "length_m": 2.28228972107172,
+        "plane_shift_m": 0.03548782050609589
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 116,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 116,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "idle_to_wall_leaning_idle_360_R_003__A282",
+      "group": "wall_contact",
+      "stem": "idle_to_wall_leaning_idle",
+      "seconds": 7.967,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 54,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004239338915795088,
+          "skin": {
+            "max_m": 0.010826760437339544,
+            "p99_m": 0.010749735552817583,
+            "frames_over_report": 0,
+            "frames": 120
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 120
+          },
+          "skin_ground": {
+            "max_m": 0.010826760437339544,
+            "p99_m": 0.010749735552817583,
+            "frames_over_report": 0,
+            "frames": 120
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 54,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004239338915795088,
+          "skin": {
+            "max_m": 0.010826760437339544,
+            "p99_m": 0.010749735552817583,
+            "frames_over_report": 0,
+            "frames": 120
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 120
+          },
+          "skin_ground": {
+            "max_m": 0.010826760437339544,
+            "p99_m": 0.010749735552817583,
+            "frames_over_report": 0,
+            "frames": 120
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 112,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 19
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 106.0,
+        "contact_drift_m": 0.05527352873168678,
+        "stable_seconds": 4.066666666666666,
+        "feet_distance_m": 0.2165195345878601,
+        "contact_span_m": 0.25103629811201245,
+        "length_m": 2.2510362981120124,
+        "plane_shift_m": 0.03239736437797547
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 120,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 120,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "kneeling_loop_001__A101",
+      "group": "kneel",
+      "stem": "kneeling",
+      "seconds": 13.433,
+      "flags": [
+        "ground_from_skin"
+      ],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "skin_lowest_contacts",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0019787316396832483,
+          "penetration_p99_m": 0.0019190863892436043,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 0,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": null,
+          "skin": {
+            "max_m": 6.668311543762701e-05,
+            "p99_m": 1.7378013581039377e-06,
+            "frames_over_report": 0,
+            "frames": 202
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 202
+          },
+          "skin_ground": {
+            "max_m": 6.668311543762701e-05,
+            "p99_m": 1.7378013581039377e-06,
+            "frames_over_report": 0,
+            "frames": 202
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0019787316396832483,
+          "penetration_p99_m": 0.0019190863892436043,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 0,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": null,
+          "skin": {
+            "max_m": 6.668311543762701e-05,
+            "p99_m": 1.7378013581039377e-06,
+            "frames_over_report": 0,
+            "frames": 202
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 202
+          },
+          "skin_ground": {
+            "max_m": 6.668311543762701e-05,
+            "p99_m": 1.7378013581039377e-06,
+            "frames_over_report": 0,
+            "frames": 202
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 202,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 24
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {
+        "ceiling_tight": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 202,
+          "per_box_max_m": {
+            "ceiling_tight": 0.0
+          }
+        },
+        "ceiling_loose": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 202,
+          "per_box_max_m": {
+            "ceiling_loose": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 202,
+        "frames": 202,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 202,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 40,
+        "core_cells": 40,
+        "status": "fitted",
+        "tight_m": 1.3384811475500464,
+        "loose_m": 1.710514736175537,
+        "floor_m": 0.003957111574709416,
+        "explanation": {
+          "tight": 1.0,
+          "loose": 1.0
+        }
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "kneeling_stop_003__A097",
+      "group": "kneel",
+      "stem": "kneeling",
+      "seconds": 2.733,
+      "flags": [
+        "merged_small_steps"
+      ],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.03246931717265397,
+          "penetration_p99_m": 0.03194137222017161,
+          "penetration_frames_over_report": 16,
+          "support_evidence_points": 38,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.002176099456846714,
+          "skin": {
+            "max_m": 0.030532932374626398,
+            "p99_m": 0.029719299916177992,
+            "frames_over_report": 7,
+            "frames": 41
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 41
+          },
+          "skin_ground": {
+            "max_m": 0.030532932374626398,
+            "p99_m": 0.029719299916177992,
+            "frames_over_report": 7,
+            "frames": 41
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.03246931717265397,
+          "penetration_p99_m": 0.03194137222017161,
+          "penetration_frames_over_report": 16,
+          "support_evidence_points": 38,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.002176099456846714,
+          "skin": {
+            "max_m": 0.030532932374626398,
+            "p99_m": 0.029719299916177992,
+            "frames_over_report": 7,
+            "frames": 41
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 41
+          },
+          "skin_ground": {
+            "max_m": 0.030532932374626398,
+            "p99_m": 0.029719299916177992,
+            "frames_over_report": 7,
+            "frames": 41
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 21,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 6
+        },
+        "status": "no_contact_plane"
+      },
+      "walls": 0,
+      "kept_checks": {},
+      "ceiling_report": {
+        "low_frames": 23,
+        "frames": 41,
+        "dominant": "crouch",
+        "posture_counts": {
+          "crouch": 23,
+          "other_low": 0,
+          "quadruped": 0,
+          "prone": 0
+        },
+        "bound_above_floor_m": 1.710514736175537,
+        "low_cells": 64,
+        "core_cells": 53,
+        "low_hips_on_blocked_cells": 0.17391304347826086,
+        "status": "no_conflict_free_rectangle"
+      },
+      "eligibility": "geometry_only_low_posture_unexplained",
+      "rejection_reasons": {
+        "low_posture_unexplained": 4
+      }
+    },
+    {
+      "filename": "turn_crouch_360_R_003__A195",
+      "group": "crouch",
+      "stem": "turn_crouch",
+      "seconds": 3.633,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 93,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.005427443364169449,
+          "skin": {
+            "max_m": 0.008776921255048364,
+            "p99_m": 0.008740559804718941,
+            "frames_over_report": 0,
+            "frames": 55
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 55
+          },
+          "skin_ground": {
+            "max_m": 0.008776921255048364,
+            "p99_m": 0.008740559804718941,
+            "frames_over_report": 0,
+            "frames": 55
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 93,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.005427443364169449,
+          "skin": {
+            "max_m": 0.008776921255048364,
+            "p99_m": 0.008740559804718941,
+            "frames_over_report": 0,
+            "frames": 55
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 55
+          },
+          "skin_ground": {
+            "max_m": 0.008776921255048364,
+            "p99_m": 0.008740559804718941,
+            "frames_over_report": 0,
+            "frames": 55
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 33,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 17
+        },
+        "status": "fitted",
+        "kind": "brace",
+        "score": 963.5,
+        "contact_drift_m": 0.01846719839287103,
+        "stable_seconds": 1.7333333333333334,
+        "feet_distance_m": 0.236814939955115,
+        "contact_span_m": 0.1458517726420151,
+        "length_m": 2.1458517726420148,
+        "plane_shift_m": 0.010199909812413588
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 55,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 55,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "wall_leaning_idle_270_R_003__A291",
+      "group": "wall_contact",
+      "stem": "wall_leaning_idle",
+      "seconds": 9.1,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 45,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004494421831623185,
+          "skin": {
+            "max_m": 0.007691727667406667,
+            "p99_m": 0.007671217038587201,
+            "frames_over_report": 0,
+            "frames": 137
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 137
+          },
+          "skin_ground": {
+            "max_m": 0.007691727667406667,
+            "p99_m": 0.007671217038587201,
+            "frames_over_report": 0,
+            "frames": 137
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 45,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004494421831623185,
+          "skin": {
+            "max_m": 0.007691727667406667,
+            "p99_m": 0.007671217038587201,
+            "frames_over_report": 0,
+            "frames": 137
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 137
+          },
+          "skin_ground": {
+            "max_m": 0.007691727667406667,
+            "p99_m": 0.007671217038587201,
+            "frames_over_report": 0,
+            "frames": 137
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 137,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 22
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 77.0,
+        "contact_drift_m": 0.003734824737945175,
+        "stable_seconds": 9.133333333333333,
+        "feet_distance_m": 0.2375534117144977,
+        "contact_span_m": 0.1162965615922271,
+        "length_m": 2.116296561592227,
+        "plane_shift_m": 0.006079446162977009
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 137,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 137,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "wall_leaning_idle_to_idle_270_R_001__A287",
+      "group": "wall_contact",
+      "stem": "wall_leaning_idle_to_idle",
+      "seconds": 6.967,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 61,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006337432889267802,
+          "skin": {
+            "max_m": 0.009628868661820889,
+            "p99_m": 0.009622563170269131,
+            "frames_over_report": 0,
+            "frames": 105
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 105
+          },
+          "skin_ground": {
+            "max_m": 0.009628868661820889,
+            "p99_m": 0.009622563170269131,
+            "frames_over_report": 0,
+            "frames": 105
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 61,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.006337432889267802,
+          "skin": {
+            "max_m": 0.009628868661820889,
+            "p99_m": 0.009622563170269131,
+            "frames_over_report": 0,
+            "frames": 105
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 105
+          },
+          "skin_ground": {
+            "max_m": 0.009628868661820889,
+            "p99_m": 0.009622563170269131,
+            "frames_over_report": 0,
+            "frames": 105
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 105,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 16,
+          "feet_at_the_plane": 4
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 97.0,
+        "contact_drift_m": 0.02325588516788457,
+        "stable_seconds": 3.7333333333333334,
+        "feet_distance_m": 0.1682509794088662,
+        "contact_span_m": 0.10828453064216666,
+        "length_m": 2.108284530642167,
+        "plane_shift_m": 0.016735623924973853
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 105,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 105,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    },
+    {
+      "filename": "wall_leaning_idle_to_idle_270_R_002__A290",
+      "group": "wall_contact",
+      "stem": "wall_leaning_idle_to_idle",
+      "seconds": 5.967,
+      "flags": [],
+      "levels_m": [
+        0.0
+      ],
+      "ground_source": "lowest_foot_level",
+      "patches_resting_on_body": 0,
+      "patch_checks": [],
+      "raised_sole_patches": {
+        "checked": 0,
+        "kept": 0,
+        "dropped_by": {}
+      },
+      "median_foot_drop_median_m": null,
+      "metrics": {
+        "minimal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 71,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004453707952052355,
+          "skin": {
+            "max_m": 0.011074789334088564,
+            "p99_m": 0.011071740724146366,
+            "frames_over_report": 0,
+            "frames": 90
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 90
+          },
+          "skin_ground": {
+            "max_m": 0.011074789334088564,
+            "p99_m": 0.011071740724146366,
+            "frames_over_report": 0,
+            "frames": 90
+          }
+        },
+        "maximal": {
+          "penetration_max_m": 0.0,
+          "penetration_p99_m": 0.0,
+          "penetration_frames_over_report": 0,
+          "support_evidence_points": 71,
+          "support_evidence_unsupported": 0,
+          "support_gap_abs_p95_m": 0.004453707952052355,
+          "skin": {
+            "max_m": 0.011074789334088564,
+            "p99_m": 0.011071740724146366,
+            "frames_over_report": 0,
+            "frames": 90
+          },
+          "skin_support": {
+            "max_m": 0.0,
+            "p99_m": 0.0,
+            "frames_over_report": 0,
+            "frames": 90
+          },
+          "skin_ground": {
+            "max_m": 0.011074789334088564,
+            "p99_m": 0.011071740724146366,
+            "frames_over_report": 0,
+            "frames": 90
+          }
+        }
+      },
+      "support_boxes": {
+        "minimal": 0,
+        "maximal": 0
+      },
+      "slabs": [],
+      "wall_report": {
+        "still_frames": 90,
+        "rejected": {
+          "no_trunk_or_bracing_hand_contact": 23
+        },
+        "status": "fitted",
+        "kind": "lean",
+        "score": 91.0,
+        "contact_drift_m": 0.0395468497883098,
+        "stable_seconds": 3.2666666666666666,
+        "feet_distance_m": 0.2155949384101476,
+        "contact_span_m": 0.12720462948765904,
+        "length_m": 2.127204629487659,
+        "plane_shift_m": 0.023306412104142804
+      },
+      "walls": 1,
+      "kept_checks": {
+        "wall_1": {
+          "max_m": 0.0,
+          "frames_over_report": 0,
+          "frames": 90,
+          "per_box_max_m": {
+            "wall_1": 0.0
+          }
+        }
+      },
+      "ceiling_report": {
+        "low_frames": 0,
+        "frames": 90,
+        "status": "no_sustained_low_posture"
+      },
+      "eligibility": "environment_explained",
+      "rejection_reasons": {}
+    }
+  ],
+  "maximal_over_2cm_bug_clips": [],
+  "floating_slab_clips": [],
+  "selected_pngs": 22
+}

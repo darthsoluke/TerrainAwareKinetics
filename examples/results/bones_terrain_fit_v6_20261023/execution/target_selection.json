@@ -1,0 +1,496 @@
+{
+  "selected": 71,
+  "input_counts": {
+    "v5_targets": 41,
+    "L2_review": 10,
+    "crouch_wall_review": 10,
+    "random": 10
+  },
+  "random_seed": 0,
+  "random_population": 56,
+  "random_selected": [
+    {
+      "filename": "turn_crawl_270_R_003__A217",
+      "group": "prone",
+      "support_boxes": 4
+    },
+    {
+      "filename": "crawl_ff_start_270_R_002__A233",
+      "group": "prone",
+      "support_boxes": 10
+    },
+    {
+      "filename": "mohak_forward_start_001__A129",
+      "group": "quadruped",
+      "support_boxes": 6
+    },
+    {
+      "filename": "crawl_ff_start_315_001__A132",
+      "group": "prone",
+      "support_boxes": 5
+    },
+    {
+      "filename": "change_idle_crawl_to_idle_crawl_right_002__A129",
+      "group": "prone",
+      "support_boxes": 4
+    },
+    {
+      "filename": "crawl_ff_start_180_R_004__A127",
+      "group": "prone",
+      "support_boxes": 6
+    },
+    {
+      "filename": "crawl_ff_start_360_002__A130",
+      "group": "prone",
+      "support_boxes": 6
+    },
+    {
+      "filename": "crawl_ff_start_315_R_003__A232",
+      "group": "prone",
+      "support_boxes": 10
+    },
+    {
+      "filename": "crawl_ff_start_315_001__A130",
+      "group": "prone",
+      "support_boxes": 4
+    },
+    {
+      "filename": "crawl_ff_start_225_002__A133",
+      "group": "prone",
+      "support_boxes": 5
+    }
+  ],
+  "source_screen": "runs/bones_screen_v1_full",
+  "source_sha256": {
+    "selection.jsonl": "b7493518f2911116651b4387f22ce75096ad95e8d1004776e589e062e99422be",
+    "clips.jsonl": "c5f0aabd936a6101dfec2d91550aaffbd7f0d28230090222a891f824e98df98d"
+  },
+  "filenames": [
+    {
+      "filename": "change_idle_crawl_to_idle_crawl_right_002__A129",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "come_up_50cm_box_R_002__A053",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_225_004__A131",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_225_R_001__A215",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_225_R_003__A233",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_270_R_001__A216",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_315_005__A131",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_360_R_002__A230",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_loop_360_R_003__A230",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_180_R_001__A214",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_180_R_004__A127",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_225_002__A133",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_225_R_001__A230",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_270_R_002__A233",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_315_001__A130",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_315_001__A132",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_315_R_003__A232",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_start_360_002__A130",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "crawl_ff_stop_180_R_001__A230",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_stop_225_006__A131",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crawl_ff_stop_225_R_003__A215",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "crouch_ff_start_180_R_001__A147",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_start_270_R_001__A246",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_180_R_001__A247",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_225_R_001__A244",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_225_R_003__A195",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_270_R_001__A247",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_270_R_002__A197",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "crouch_ff_stop_315_R_002__A194",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_090_R_003__A282",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "drinking_wall_leaning_mug_360_R_003__A282",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "idle_crawl_right_to_idle_crawl_R_003__A229",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "idle_crawl_start_001__A233",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_001__A128",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "idle_crawl_stop_002__A232",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "idle_crawl_to_idle_crawl_right_R_003__A232",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "idle_to_wall_leaning_idle_360_R_002__A289",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "jog_backward_loop_002__A036",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "jump_over_obstacle_2m_L_003__A415",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "kneeling_start_003__A167",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "kneeling_start_R_003__A408",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_003__A051",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "kneeling_stop_003__A167",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "ladder_slide_down_R_303__A302",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_loop_001__A030",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_loop_001__A127",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_loop_002__A127",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_loop_003__A127",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_start_001__A029",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_start_003__A029",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_start_003__A035",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_start_004__A030",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_backward_stop_002__A031",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "mohak_forward_loop_003__A127",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_forward_start_001__A129",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "mohak_forward_stop_001__A120",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_loop_002__A029",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_loop_002__A031",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "mohak_loop_003__A029",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_start_001__A031",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "mohak_turn_000_004__A030",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_turn_090_003__A029",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "mohak_turn_360_001__A120",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "on_all_fours_idle_loop_001__A202",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "on_all_fours_turn_270_R_003__A202",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "on_all_fours_turn_360_R_002__A201",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "stairs_climbing_up_start_R_101__A301",
+      "reasons": [
+        "v5_target"
+      ]
+    },
+    {
+      "filename": "turn_crawl_270_R_003__A217",
+      "reasons": [
+        "v5_environment_explained_4plus_boxes_seed0"
+      ]
+    },
+    {
+      "filename": "turn_crawl_270_R_003__A229",
+      "reasons": [
+        "v5_L2_review"
+      ]
+    },
+    {
+      "filename": "turn_crouch_270_R_002__A195",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    },
+    {
+      "filename": "turn_crouch_360_R_002__A197",
+      "reasons": [
+        "v5_crouch_kept_wall_review"
+      ]
+    }
+  ]
+}

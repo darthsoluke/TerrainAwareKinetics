@@ -1,0 +1,33 @@
+{
+  "source_commit": "5a015448fe02321a75cb49d26a31445e10728c26",
+  "clips": 6788,
+  "groups": 11,
+  "shards": {
+    "S": {
+      "fitted": 2907,
+      "failed": 0,
+      "rendered": 108,
+      "elapsed_seconds": 1645.9
+    },
+    "L1": {
+      "fitted": 2131,
+      "failed": 0,
+      "rendered": 50,
+      "elapsed_seconds": 1586.7
+    },
+    "L2": {
+      "fitted": 1750,
+      "failed": 0,
+      "rendered": 38,
+      "elapsed_seconds": 1892.1
+    }
+  },
+  "module_sha256": {
+    "motionbricks/data/bones_terrain_fit.py": "51dc3846605e844b270e3f2cb581a1462493cc32b1251ae97bbe38c612310073",
+    "motionbricks/data/bones_terrain_viz.py": "e2cc7e21acb125c628b0cedcd497be9390c53d139f7ee523b07f62f7af7f35a7",
+    "motionbricks/data/bones_terrain_scene.py": "bd0a1d23f4be3f8b35bcc2ad36cd2173fc2367bc69ad676c15484a4fcd9ea3c3",
+    "motionbricks/data/bones_terrain_screen.py": "3d865f33a9445aef4fe68701d7dc10ffacf90d77630f3b7c69a531949605e8f5",
+    "scripts/fit_bones_terrain_support.py": "cdf1261497aa7de5f365d10d0cd0d6fb5b48bda9df455a22b830994cc05edf75"
+  },
+  "maximal_bug_clips": 0
+}

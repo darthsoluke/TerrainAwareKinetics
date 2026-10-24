@@ -1,0 +1,269 @@
+{
+  "crouch": {
+    "clips": 1143,
+    "fitted": 1143,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 1136,
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1,
+      "6": 1,
+      "7": 1,
+      "8": 1
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.0
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.0
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "evidence_reduced_for_body_conflict": 6,
+      "foot_patches_rest_on_body": 1,
+      "ground_from_skin": 27,
+      "merged_small_steps": 12,
+      "support_rejected": 2
+    },
+    "ground_source": {
+      "lowest_foot_level": 1116,
+      "skin_lowest_contacts": 27
+    },
+    "raised_sole_patches": {
+      "checked": 53,
+      "kept": 52,
+      "dropped_by": {
+        "body_under_sole": 1
+      }
+    },
+    "ground_skin_depth_m": {
+      "p50": 0.0119,
+      "p95": 0.025,
+      "p99": 0.03
+    },
+    "scene": {
+      "eligibility": {
+        "environment_explained": {
+          "clips": 1109,
+          "seconds": 6632.54
+        },
+        "geometry_only_low_posture_unexplained": {
+          "clips": 30,
+          "seconds": 274.09
+        },
+        "rejected": {
+          "clips": 4,
+          "seconds": 36.97
+        }
+      },
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 19,
+        "low_posture_partly_explained": 76,
+        "low_posture_unexplained": 52
+      },
+      "wall_status": {
+        "fitted": 55,
+        "no_contact_plane": 679,
+        "no_still_segment": 409
+      },
+      "wall_kind": {
+        "brace": 46,
+        "lean": 9
+      },
+      "ceiling_status": {
+        "fitted": 1008,
+        "no_conflict_free_rectangle": 9,
+        "no_sustained_low_posture": 122,
+        "unexplainable_in_place_transition": 4
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 55,
+      "fitted_ceilings_with_frames_over_2cm": 0,
+      "variants": 4572,
+      "variants_accepted": 4433,
+      "upright_ceiling_variants": 223,
+      "clutter_mean": 2.058,
+      "ground_skin_penetration_p95_m": 0.025
+    }
+  },
+  "kneel": {
+    "clips": 638,
+    "fitted": 638,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 566,
+      "1": 60,
+      "2": 10,
+      "3": 2
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.0137
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.016
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "evidence_reduced_for_body_conflict": 109,
+      "foot_patches_rest_on_body": 52,
+      "ground_from_skin": 495,
+      "inverted_foot_level_dropped": 10,
+      "merged_small_steps": 225,
+      "support_rejected": 78
+    },
+    "ground_source": {
+      "lowest_foot_level": 143,
+      "skin_lowest_contacts": 495
+    },
+    "raised_sole_patches": {
+      "checked": 569,
+      "kept": 506,
+      "dropped_by": {
+        "body_under_sole": 61,
+        "foot_lower_than_sole": 33
+      }
+    },
+    "ground_skin_depth_m": {
+      "p50": 0.0006,
+      "p95": 0.0284,
+      "p99": 0.0312
+    },
+    "scene": {
+      "eligibility": {
+        "environment_explained": {
+          "clips": 214,
+          "seconds": 1855.41
+        },
+        "rejected": {
+          "clips": 105,
+          "seconds": 848.95
+        },
+        "geometry_only_low_posture_unexplained": {
+          "clips": 319,
+          "seconds": 1424.41
+        }
+      },
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 420,
+        "low_posture_unexplained": 1464
+      },
+      "wall_status": {
+        "fitted": 2,
+        "no_contact_plane": 636
+      },
+      "wall_kind": {
+        "lean": 2
+      },
+      "ceiling_status": {
+        "fitted": 272,
+        "unexplainable_tight_above_bound": 12,
+        "unexplainable_in_place_transition": 243,
+        "no_conflict_free_rectangle": 111
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 1.0,
+      "walls_fitted": 2,
+      "fitted_ceilings_with_frames_over_2cm": 0,
+      "variants": 2552,
+      "variants_accepted": 856,
+      "upright_ceiling_variants": 0,
+      "clutter_mean": 2.004,
+      "ground_skin_penetration_p95_m": 0.0284
+    }
+  },
+  "wall_contact": {
+    "clips": 350,
+    "fitted": 350,
+    "failed": 0,
+    "support_boxes_distribution": {
+      "0": 327,
+      "1": 7,
+      "2": 9,
+      "3": 7
+    },
+    "minimal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.0096
+    },
+    "maximal": {
+      "clips_with_frames_over_2cm": 0,
+      "penetration_max_p95_m": 0.0102
+    },
+    "unsupported_evidence_points": 0,
+    "flags": {
+      "evidence_reduced_for_body_conflict": 13,
+      "foot_patches_rest_on_body": 1,
+      "ground_from_skin": 37,
+      "merged_small_steps": 5,
+      "support_rejected": 5
+    },
+    "ground_source": {
+      "lowest_foot_level": 313,
+      "skin_lowest_contacts": 37
+    },
+    "raised_sole_patches": {
+      "checked": 95,
+      "kept": 94,
+      "dropped_by": {
+        "body_under_sole": 1
+      }
+    },
+    "ground_skin_depth_m": {
+      "p50": 0.0095,
+      "p95": 0.0169,
+      "p99": 0.0218
+    },
+    "scene": {
+      "eligibility": {
+        "environment_explained": {
+          "clips": 315,
+          "seconds": 2440.58
+        },
+        "geometry_only_low_posture_unexplained": {
+          "clips": 28,
+          "seconds": 108.95
+        },
+        "rejected": {
+          "clips": 7,
+          "seconds": 24.93
+        }
+      },
+      "rejection_reasons": {
+        "foot_evidence_not_supported": 28,
+        "low_posture_partly_explained": 28,
+        "low_posture_unexplained": 108
+      },
+      "wall_status": {
+        "fitted": 106,
+        "no_contact_plane": 244
+      },
+      "wall_kind": {
+        "brace": 8,
+        "lean": 98
+      },
+      "ceiling_status": {
+        "no_sustained_low_posture": 246,
+        "fitted": 77,
+        "unexplainable_tight_above_bound": 10,
+        "no_conflict_free_rectangle": 8,
+        "unexplainable_in_place_transition": 9
+      },
+      "explanation_tight_p50": 1.0,
+      "explanation_tight_p10": 0.9236,
+      "walls_fitted": 106,
+      "fitted_ceilings_with_frames_over_2cm": 0,
+      "variants": 1400,
+      "variants_accepted": 1260,
+      "upright_ceiling_variants": 479,
+      "clutter_mean": 1.959,
+      "ground_skin_penetration_p95_m": 0.017
+    }
+  }
+}

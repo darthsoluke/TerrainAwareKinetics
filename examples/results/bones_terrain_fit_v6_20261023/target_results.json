@@ -1,0 +1,81 @@
+{
+  "maximal_over_2cm_zero": {
+    "passed": true,
+    "bug_clips": []
+  },
+  "low_posture": {
+    "prone": {
+      "v5": {
+        "eligible_clips": 464,
+        "eligible_share": 0.5048966267682263,
+        "S": 0,
+        "F": 1834,
+        "clips_with_4plus_support_boxes": 381
+      },
+      "v6": {
+        "eligible_clips": 469,
+        "eligible_share": 0.5103373231773667,
+        "S": 0,
+        "F": 1815,
+        "clips_with_4plus_support_boxes": 381
+      },
+      "eligible_share_increased": true,
+      "F_reduction_fraction": 0.01035986913849507,
+      "four_plus_reduction_fraction": 0.0
+    },
+    "quadruped": {
+      "v5": {
+        "eligible_clips": 279,
+        "eligible_share": 0.33574007220216606,
+        "S": 0,
+        "F": 2211,
+        "clips_with_4plus_support_boxes": 82
+      },
+      "v6": {
+        "eligible_clips": 280,
+        "eligible_share": 0.3369434416365824,
+        "S": 0,
+        "F": 2207,
+        "clips_with_4plus_support_boxes": 82
+      },
+      "eligible_share_increased": true,
+      "F_reduction_fraction": 0.0018091361374943382,
+      "four_plus_reduction_fraction": 0.0
+    }
+  },
+  "normal_group_foot_lower_drops": {
+    "known_dimension_support": {
+      "checked_patches": 3615,
+      "dropped_patches": 0,
+      "patch_fraction": 0.0,
+      "affected_clips": 0,
+      "clip_fraction": 0.0,
+      "passed": true
+    },
+    "stairs": {
+      "checked_patches": 242,
+      "dropped_patches": 0,
+      "patch_fraction": 0.0,
+      "affected_clips": 0,
+      "clip_fraction": 0.0,
+      "passed": true
+    }
+  },
+  "crouch_walls": {
+    "v5": 58,
+    "v6": 55,
+    "passed": true
+  },
+  "wall_contact": {
+    "walls": 106,
+    "clips": 350,
+    "fraction": 0.3028571428571429,
+    "passed": true
+  },
+  "flat_control": {
+    "environment_explained": 900,
+    "clips": 900,
+    "walls": 3,
+    "passed": true
+  }
+}

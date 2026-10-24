@@ -1,0 +1,26 @@
+{
+  "reference": {
+    "stems": [
+      "come_up_50cm_box",
+      "come_down_50cm_box",
+      "lift_crate_come_up_50cm_box",
+      "lift_crate_come_down_50cm_box"
+    ],
+    "size_m": 0.5
+  },
+  "actors": {
+    "A053": {
+      "clips": 1,
+      "scale": 1.3898710837820545,
+      "within_actor_std_m": 0.0
+    }
+  },
+  "scale_percentiles": {
+    "p5": 1.3898710837820545,
+    "p50": 1.3898710837820545,
+    "p95": 1.3898710837820545
+  },
+  "within_actor_std_m_p50": null,
+  "sized_stem_checks": {},
+  "note": "ratio = observed top level / (nominal size * actor scale); 1.0 means the nominal props are consistent"
+}
