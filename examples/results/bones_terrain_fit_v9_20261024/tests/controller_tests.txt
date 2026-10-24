@@ -1,0 +1,796 @@
+...F.....                                                                [100%]
+=================================== FAILURES ===================================
+____________ test_torch_sdf_matches_reference_and_pushes_points_out ____________
+
+cls = <class '_pytest.runner.CallInfo'>
+func = <function call_and_report.<locals>.<lambda> at 0x75d6af9631a0>
+when = 'call'
+reraise = (<class '_pytest.outcomes.Exit'>, <class 'KeyboardInterrupt'>)
+
+    @classmethod
+    def from_call(
+        cls,
+        func: Callable[[], TResult],
+        when: Literal["collect", "setup", "call", "teardown"],
+        reraise: type[BaseException] | tuple[type[BaseException], ...] | None = None,
+    ) -> CallInfo[TResult]:
+        """Call func, wrapping the result in a CallInfo.
+    
+        :param func:
+            The function to call. Called without arguments.
+        :type func: Callable[[], _pytest.runner.TResult]
+        :param when:
+            The phase in which the function is called.
+        :param reraise:
+            Exception or exceptions that shall propagate if raised by the
+            function, instead of being wrapped in the CallInfo.
+        """
+        excinfo = None
+        instant = timing.Instant()
+        try:
+>           result: TResult | None = func()
+                                     ^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/runner.py:361: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+>       lambda: runtest_hook(item=item, **kwds),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        when=when,
+        reraise=get_reraise_exceptions(item.config),
+    )
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/runner.py:250: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <HookCaller 'pytest_runtest_call'>
+kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+
+    def __call__(self, **kwargs: object) -> Any:
+        """Call the hook.
+    
+        Only accepts keyword arguments, which should match the hook
+        specification.
+    
+        Returns the result(s) of calling all registered plugins, see
+        :ref:`calling`.
+        """
+        assert not self.is_historic(), (
+            "Cannot directly call a historic hook - use call_historic instead."
+        )
+        self._verify_all_args_are_provided(kwargs)
+        firstresult = self.spec.opts.get("firstresult", False) if self.spec else False
+        # Copy because plugins may register other plugins during iteration (#438).
+>       return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_hooks.py:512: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.config.PytestPluginManager object at 0x75d6b41803d0>
+hook_name = 'pytest_runtest_call'
+methods = [<HookImpl plugin_name='threadexception', plugin=<module '_pytest.threadexception' from '${PFNN_PROJECT}...xture=None>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>>]
+kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = False
+
+    def _hookexec(
+        self,
+        hook_name: str,
+        methods: Sequence[HookImpl],
+        kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        # called from all hookcaller instances.
+        # enable_tracing will set its own wrapping function at self._inner_hookexec
+>       return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_manager.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_call'
+hook_impls = [<HookImpl plugin_name='threadexception', plugin=<module '_pytest.threadexception' from '${PFNN_PROJECT}...xture=None>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>>]
+caller_kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+                            teardown.throw(exception)
+                        except RuntimeError as re:
+                            # StopIteration from generator causes RuntimeError
+                            # even for coroutine usage - see #544
+                            if (
+                                isinstance(exception, StopIteration)
+                                and re.__cause__ is exception
+                            ):
+                                teardown.close()
+                                continue
+                            else:
+                                raise
+                    else:
+                        teardown.send(result)
+                    # Following is unreachable for a well behaved hook wrapper.
+                    # Try to force finalizers otherwise postponed till GC action.
+                    # Note: close() may raise if generator handles GeneratorExit.
+                    teardown.close()
+                except StopIteration as si:
+                    result = si.value
+                    exception = None
+                    continue
+                except BaseException as e:
+                    exception = e
+                    continue
+                _raise_wrapfail(teardown, "has second yield")
+    
+        if exception is not None:
+>           raise exception
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_call'
+hook_impls = [<HookImpl plugin_name='threadexception', plugin=<module '_pytest.threadexception' from '${PFNN_PROJECT}...xture=None>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>>]
+caller_kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+>                           teardown.throw(exception)
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>
+item = <Function test_torch_sdf_matches_reference_and_pushes_points_out>
+
+    @hookimpl(wrapper=True)
+    def pytest_runtest_call(self, item: nodes.Item) -> Generator[None]:
+        self.log_cli_handler.set_when("call")
+    
+        with self._runtest_for(item, "call"):
+>           yield
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/logging.py:865: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_call'
+hook_impls = [<HookImpl plugin_name='threadexception', plugin=<module '_pytest.threadexception' from '${PFNN_PROJECT}...xture=None>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>>]
+caller_kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+>                           teardown.throw(exception)
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <CaptureManager _method='fd' _global_capturing=<MultiCapture out=<FDCapture 1 oldfd=5 _state='suspended' tmpfile=<_io....xtIOWrapper name='/dev/null' mode='r' encoding='utf-8'>> _state='suspended' _in_suspended=False> _capture_fixture=None>
+item = <Function test_torch_sdf_matches_reference_and_pushes_points_out>
+
+    @hookimpl(wrapper=True)
+    def pytest_runtest_call(self, item: Item) -> Generator[None]:
+        with self.item_capture("call", item):
+>           return (yield)
+                    ^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/capture.py:900: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_call'
+hook_impls = [<HookImpl plugin_name='threadexception', plugin=<module '_pytest.threadexception' from '${PFNN_PROJECT}...xture=None>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>>]
+caller_kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+>                           teardown.throw(exception)
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+item = <Function test_torch_sdf_matches_reference_and_pushes_points_out>
+
+    @hookimpl(wrapper=True)
+    def pytest_runtest_call(item: Item) -> Generator[None]:
+        xfailed = item.stash.get(xfailed_key, None)
+        if xfailed is None:
+            item.stash[xfailed_key] = xfailed = evaluate_xfail_marks(item)
+    
+        if xfailed and not item.config.option.runxfail and not xfailed.run:
+            xfail("[NOTRUN] " + xfailed.reason)
+    
+        try:
+>           return (yield)
+                    ^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/skipping.py:268: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_runtest_call'
+hook_impls = [<HookImpl plugin_name='threadexception', plugin=<module '_pytest.threadexception' from '${PFNN_PROJECT}...xture=None>>, <HookImpl plugin_name='logging-plugin', plugin=<_pytest.logging.LoggingPlugin object at 0x75d6b2da5310>>]
+caller_kwargs = {'item': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = False
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+>                       res = hook_impl.function(*args)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+item = <Function test_torch_sdf_matches_reference_and_pushes_points_out>
+
+    def pytest_runtest_call(item: Item) -> None:
+        _update_current_test_var(item, "call")
+        try:
+            del sys.last_type
+            del sys.last_value
+            del sys.last_traceback
+            if sys.version_info >= (3, 12, 0):
+                del sys.last_exc  # type:ignore[attr-defined]
+        except AttributeError:
+            pass
+        try:
+>           item.runtest()
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/runner.py:184: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <Function test_torch_sdf_matches_reference_and_pushes_points_out>
+
+    def runtest(self) -> None:
+        """Execute the underlying test function."""
+>       self.ihook.pytest_pyfunc_call(pyfuncitem=self)
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/python.py:1707: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <HookCaller 'pytest_pyfunc_call'>
+kwargs = {'pyfuncitem': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+
+    def __call__(self, **kwargs: object) -> Any:
+        """Call the hook.
+    
+        Only accepts keyword arguments, which should match the hook
+        specification.
+    
+        Returns the result(s) of calling all registered plugins, see
+        :ref:`calling`.
+        """
+        assert not self.is_historic(), (
+            "Cannot directly call a historic hook - use call_historic instead."
+        )
+        self._verify_all_args_are_provided(kwargs)
+        firstresult = self.spec.opts.get("firstresult", False) if self.spec else False
+        # Copy because plugins may register other plugins during iteration (#438).
+>       return self._hookexec(self.name, self._hookimpls.copy(), kwargs, firstresult)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_hooks.py:512: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <_pytest.config.PytestPluginManager object at 0x75d6b41803d0>
+hook_name = 'pytest_pyfunc_call'
+methods = [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from '${PFNN_PROJECT}/en..._plugin' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/anyio/pytest_plugin.py'>>]
+kwargs = {'pyfuncitem': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = True
+
+    def _hookexec(
+        self,
+        hook_name: str,
+        methods: Sequence[HookImpl],
+        kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        # called from all hookcaller instances.
+        # enable_tracing will set its own wrapping function at self._inner_hookexec
+>       return self._inner_hookexec(hook_name, methods, kwargs, firstresult)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_manager.py:120: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_pyfunc_call'
+hook_impls = [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from '${PFNN_PROJECT}/en..._plugin' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/anyio/pytest_plugin.py'>>]
+caller_kwargs = {'pyfuncitem': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = True
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+                        res = hook_impl.function(*args)
+                        if res is not None:
+                            results.append(res)
+                            if firstresult:  # halt further impl calls
+                                break
+            except BaseException as exc:
+                exception = exc
+        finally:
+            if firstresult:  # first result hooks return a single value
+                result = results[0] if results else None
+            else:
+                result = results
+    
+            # run all wrapper post-yield blocks
+            for teardown in reversed(teardowns):
+                try:
+                    if exception is not None:
+                        try:
+                            teardown.throw(exception)
+                        except RuntimeError as re:
+                            # StopIteration from generator causes RuntimeError
+                            # even for coroutine usage - see #544
+                            if (
+                                isinstance(exception, StopIteration)
+                                and re.__cause__ is exception
+                            ):
+                                teardown.close()
+                                continue
+                            else:
+                                raise
+                    else:
+                        teardown.send(result)
+                    # Following is unreachable for a well behaved hook wrapper.
+                    # Try to force finalizers otherwise postponed till GC action.
+                    # Note: close() may raise if generator handles GeneratorExit.
+                    teardown.close()
+                except StopIteration as si:
+                    result = si.value
+                    exception = None
+                    continue
+                except BaseException as e:
+                    exception = e
+                    continue
+                _raise_wrapfail(teardown, "has second yield")
+    
+        if exception is not None:
+>           raise exception
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+hook_name = 'pytest_pyfunc_call'
+hook_impls = [<HookImpl plugin_name='python', plugin=<module '_pytest.python' from '${PFNN_PROJECT}/en..._plugin' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/anyio/pytest_plugin.py'>>]
+caller_kwargs = {'pyfuncitem': <Function test_torch_sdf_matches_reference_and_pushes_points_out>}
+firstresult = True
+
+    def _multicall(
+        hook_name: str,
+        hook_impls: Sequence[HookImpl],
+        caller_kwargs: Mapping[str, object],
+        firstresult: bool,
+    ) -> object | list[object]:
+        """Execute a call into multiple python functions/methods and return the
+        result(s).
+    
+        ``caller_kwargs`` comes from HookCaller.__call__().
+        """
+        __tracebackhide__ = True
+        results: list[object] = []
+        exception = None
+        try:  # run impl and wrapper setup functions in a loop
+            teardowns: list[Teardown] = []
+            try:
+                for hook_impl in reversed(hook_impls):
+                    try:
+                        args = [caller_kwargs[argname] for argname in hook_impl.argnames]
+                    except KeyError as e:
+                        # coverage bug - this is tested
+                        for argname in hook_impl.argnames:  # pragma: no cover
+                            if argname not in caller_kwargs:
+                                raise HookCallError(
+                                    f"hook call must provide argument {argname!r}"
+                                ) from e
+    
+                    if hook_impl.hookwrapper:
+                        function_gen = run_old_style_hookwrapper(hook_impl, hook_name, args)
+    
+                        next(function_gen)  # first yield
+                        teardowns.append(function_gen)
+    
+                    elif hook_impl.wrapper:
+                        try:
+                            # If this cast is not valid, a type error is raised below,
+                            # which is the desired response.
+                            res = hook_impl.function(*args)
+                            function_gen = cast(Generator[None, object, object], res)
+                            next(function_gen)  # first yield
+                            teardowns.append(function_gen)
+                        except StopIteration:
+                            _raise_wrapfail(function_gen, "did not yield")
+                    else:
+>                       res = hook_impl.function(*args)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/pluggy/_callers.py:121: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+pyfuncitem = <Function test_torch_sdf_matches_reference_and_pushes_points_out>
+
+    @hookimpl(trylast=True)
+    def pytest_pyfunc_call(pyfuncitem: Function) -> object | None:
+        testfunction = pyfuncitem.obj
+        if is_async_function(testfunction):
+            async_fail(pyfuncitem.nodeid)
+        funcargs = pyfuncitem.funcargs
+        testargs = {arg: funcargs[arg] for arg in pyfuncitem._fixtureinfo.argnames}
+>       result = testfunction(**testargs)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/_pytest/python.py:167: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def test_torch_sdf_matches_reference_and_pushes_points_out():
+        torch = pytest.importorskip("torch")
+        from motionbricks.controller.scene_sdf import box_sdf, penetration_cost
+        rng = np.random.default_rng(0)
+        boxes_list = [GROUND] + [box(rng.uniform(-1, 1, 3), rng.uniform(.1, .4, 3), rng.uniform(0, 3)) for _ in range(5)]
+        packed = pack_boxes(boxes_list, 8)
+        tensors = tuple(torch.as_tensor(a, dtype=torch.float64 if a.dtype != bool else torch.bool) for a in packed)
+        points = rng.uniform(-1.2, 1.2, (2, 50, 3))
+>       assert np.allclose(box_sdf(torch.as_tensor(points), tensors).numpy(), box_sdf_numpy(points, packed), atol=1e-9)
+E       AssertionError: assert False
+E        +  where False = <function allclose at 0x75d6b2d27770>(array([[-0.03399514,  0.14129053,  0.22631907,  0.73462791,  0.15975985,\n        -0.03074726,  0.19331805,  0.68283857...6745,  0.17748029,  0.05573634,  0.54251686,\n        -0.03720254,  0.26304121,  0.20666942,  0.83688409,  0.33795967]]), array([[-0.03399514,  0.14129153,  0.22632007,  0.73462891,  0.15976085,\n        -0.03074726,  0.19331905,  0.68283957...6845,  0.17748129,  0.05573734,  0.54251786,\n        -0.03720254,  0.26304221,  0.20667042,  0.83688509,  0.33796067]]), atol=1e-09)
+E        +    where <function allclose at 0x75d6b2d27770> = np.allclose
+E        +    and   array([[-0.03399514,  0.14129053,  0.22631907,  0.73462791,  0.15975985,\n        -0.03074726,  0.19331805,  0.68283857...6745,  0.17748029,  0.05573634,  0.54251686,\n        -0.03720254,  0.26304121,  0.20666942,  0.83688409,  0.33795967]]) = <built-in method numpy of Tensor object at 0x75d5aa4eb710>()
+E        +      where <built-in method numpy of Tensor object at 0x75d5aa4eb710> = tensor([[-0.0340,  0.1413,  0.2263,  0.7346,  0.1598, -0.0307,  0.1933,  0.6828,\n          0.0291,  0.1928,  0.1028,  ....0112,  0.1587,  0.1775,  0.0557,  0.5425, -0.0372,  0.2630,  0.2067,\n          0.8369,  0.3380]], dtype=torch.float64).numpy
+E        +        where tensor([[-0.0340,  0.1413,  0.2263,  0.7346,  0.1598, -0.0307,  0.1933,  0.6828,\n          0.0291,  0.1928,  0.1028,  ....0112,  0.1587,  0.1775,  0.0557,  0.5425, -0.0372,  0.2630,  0.2067,\n          0.8369,  0.3380]], dtype=torch.float64) = <function box_sdf at 0x75d6af913ba0>(tensor([[[-4.5542e-01, -3.3995e-02,  9.3477e-01],\n         [ 1.0417e+00, -3.4129e-01,  1.7167e-01],\n         [-4.2751e...      [-4.0825e-01,  1.0648e+00, -7.2168e-01],\n         [ 2.9217e-02, -1.1424e+00, -8.0792e-01]]], dtype=torch.float64), (tensor([[ 0.0000e+00, -1.0000e-01,  0.0000e+00],\n        [ 2.7392e-01, -4.6043e-01, -9.1805e-01],\n        [ 4.5899e-0... [ 0.0000,  0.0000,  1.0000]]], dtype=torch.float64), tensor([ True,  True,  True,  True,  True,  True, False, False])))
+E        +          where tensor([[[-4.5542e-01, -3.3995e-02,  9.3477e-01],\n         [ 1.0417e+00, -3.4129e-01,  1.7167e-01],\n         [-4.2751e...      [-4.0825e-01,  1.0648e+00, -7.2168e-01],\n         [ 2.9217e-02, -1.1424e+00, -8.0792e-01]]], dtype=torch.float64) = <built-in method as_tensor of type object at 0x75d6a23a8fa0>(array([[[-4.55419499e-01, -3.39951388e-02,  9.34770802e-01],\n        [ 1.04170444e+00, -3.41291528e-01,  1.71671594e-0...    [-4.08250002e-01,  1.06482664e+00, -7.21683982e-01],\n        [ 2.92167788e-02, -1.14236832e+00, -8.07916581e-01]]]))
+E        +            where <built-in method as_tensor of type object at 0x75d6a23a8fa0> = <module 'torch' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/__init__.py'>.as_tensor
+E        +    and   array([[-0.03399514,  0.14129153,  0.22632007,  0.73462891,  0.15976085,\n        -0.03074726,  0.19331905,  0.68283957...6845,  0.17748129,  0.05573734,  0.54251786,\n        -0.03720254,  0.26304221,  0.20667042,  0.83688509,  0.33796067]]) = box_sdf_numpy(array([[[-4.55419499e-01, -3.39951388e-02,  9.34770802e-01],\n        [ 1.04170444e+00, -3.41291528e-01,  1.71671594e-0...    [-4.08250002e-01,  1.06482664e+00, -7.21683982e-01],\n        [ 2.92167788e-02, -1.14236832e+00, -8.07916581e-01]]]), (array([[ 0.00000000e+00, -1.00000000e-01,  0.00000000e+00],\n       [ 2.73923375e-01, -4.60426572e-01, -9.18052952e-01...],\n        [ 0.        ,  0.        ,  1.        ]]]), array([ True,  True,  True,  True,  True,  True, False, False])))
+
+tests/test_terrain_controller.py:60: AssertionError
+=============================== warnings summary ===============================
+tests/test_terrain_controller.py::test_untrained_transformer_holds_the_pose_and_has_fixed_shapes
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/plugins/environments/xla.py:18: DeprecationWarning: `ModuleAvailableCache` is a special case of `RequirementCache`. Please use `RequirementCache(module=...)` instead.
+    from lightning_fabric.accelerators.tpu import _XLA_AVAILABLE, TPUAccelerator
+
+tests/test_terrain_controller.py::test_untrained_transformer_holds_the_pose_and_has_fixed_shapes
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/__init__.py:36: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+    __import__("pkg_resources").declare_namespace(__name__)
+
+tests/test_terrain_controller.py::test_untrained_transformer_holds_the_pose_and_has_fixed_shapes
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/__init__.py:36: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('lightning_fabric')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__("pkg_resources").declare_namespace(__name__)
+
+tests/test_terrain_controller.py::test_untrained_transformer_holds_the_pose_and_has_fixed_shapes
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/pytorch_lightning/__init__.py:36: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('pytorch_lightning')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__("pkg_resources").declare_namespace(__name__)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_terrain_controller.py::test_torch_sdf_matches_reference_and_pushes_points_out
+1 failed, 8 passed, 4 warnings in 3.98s

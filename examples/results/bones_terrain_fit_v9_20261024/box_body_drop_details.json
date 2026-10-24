@@ -1,0 +1,121 @@
+[
+  {
+    "filename": "jump_form_box_to_safety_roll_180_R_001__A501",
+    "eligibility": "geometry_only_low_posture_unexplained",
+    "support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "patches": [
+      {
+        "height_above_ground_m": 0.13236209839582444,
+        "side": "left",
+        "area_m2": 0.0011368447348267807,
+        "body_points_under": 0,
+        "foot_below_fraction": 1.0,
+        "foot_drop_median_m": 0.03688636049628258,
+        "body_below_fraction": 1.0,
+        "body_drop_median_m": 0.12609045952558517,
+        "dropped": [
+          "foot_lower_than_sole",
+          "body_rests_lower"
+        ]
+      }
+    ]
+  },
+  {
+    "filename": "jump_form_box_to_safety_roll_360_R_001__A501",
+    "eligibility": "geometry_only_low_posture_unexplained",
+    "support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "patches": [
+      {
+        "height_above_ground_m": 0.12745463967323303,
+        "side": "right",
+        "area_m2": 0.0008546000110669638,
+        "body_points_under": 0,
+        "foot_below_fraction": 0.0,
+        "foot_drop_median_m": 0.014560878276824951,
+        "body_below_fraction": 1.0,
+        "body_drop_median_m": 0.07056057453155518,
+        "dropped": [
+          "body_rests_lower"
+        ]
+      },
+      {
+        "height_above_ground_m": 0.10606561347842217,
+        "side": "right",
+        "area_m2": 0.007210819670138591,
+        "body_points_under": 0,
+        "foot_below_fraction": 0.0,
+        "foot_drop_median_m": 0.006764437071979046,
+        "body_below_fraction": 0.6666666666666666,
+        "body_drop_median_m": 0.05498369783163071,
+        "dropped": [
+          "body_rests_lower"
+        ]
+      }
+    ]
+  },
+  {
+    "filename": "jump_to_shoulder_roll_R_001__A305",
+    "eligibility": "geometry_only_low_posture_unexplained",
+    "support_boxes": {
+      "minimal": 1,
+      "maximal": 1
+    },
+    "patches": [
+      {
+        "height_above_ground_m": 0.11082850903272629,
+        "side": "right",
+        "area_m2": 0.006000694573315535,
+        "body_points_under": 0,
+        "foot_below_fraction": 0.0,
+        "foot_drop_median_m": 0.005018111318349838,
+        "body_below_fraction": 0.6,
+        "body_drop_median_m": 0.07650292664766312,
+        "dropped": [
+          "body_rests_lower"
+        ]
+      }
+    ]
+  },
+  {
+    "filename": "jump_to_shoulder_roll_R_002__A305",
+    "eligibility": "rejected",
+    "support_boxes": {
+      "minimal": 0,
+      "maximal": 0
+    },
+    "patches": [
+      {
+        "height_above_ground_m": 0.10764088422060013,
+        "side": "left",
+        "area_m2": 0.0042941867577308696,
+        "body_points_under": 0,
+        "foot_below_fraction": 0.0,
+        "foot_drop_median_m": 0.005513966083526611,
+        "body_below_fraction": 0.5,
+        "body_drop_median_m": -0.01532602310180664,
+        "dropped": [
+          "body_rests_lower"
+        ]
+      },
+      {
+        "height_above_ground_m": 0.11486012801527977,
+        "side": "right",
+        "area_m2": 0.006906560362314629,
+        "body_points_under": 0,
+        "foot_below_fraction": 0.0,
+        "foot_drop_median_m": 0.005680825561285019,
+        "body_below_fraction": 0.5714285714285714,
+        "body_drop_median_m": 0.061398591846227646,
+        "dropped": [
+          "body_rests_lower"
+        ]
+      }
+    ]
+  }
+]

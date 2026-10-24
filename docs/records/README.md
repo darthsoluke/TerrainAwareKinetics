@@ -21,6 +21,8 @@
 - [BONES-SEED 地形 v5：支撑零超限、低姿态缺口与 77 张图审查](bones_terrain_fit_v5_pro6000_20261023.md)
 - [BONES-SEED 地形 v6：同脚判据、墙接触漂移与全量对照](bones_terrain_fit_v6_pro6000_20261023.md)
 - [BONES-SEED 地形 v7：身体高度判据、未建模组排除与全量对照](bones_terrain_fit_v7_pro6000_20261023.md)
+- [BONES-SEED 地形 v9：开发集对照与60张图审查（已恢复UTF-8文字）](bones_terrain_fit_v9_dev_pro6000_20261024.md)
+- [BONES-SEED 地形 v9：6,788条全量拟合、75张图审查与controller测试](bones_terrain_fit_v9_pro6000_20261024.md)
 - [BONES-SEED 地形候选调查：PRO6000 执行结果](bones_terrain_survey_pro6000_20261023.md)
 - [BONES-SEED survey v2：词干清单与原始BVH迁移](bones_terrain_survey_v2_pro6000_20261023.md)
 - [Training Asset Inventory: taku-g3](dataset_inventory_takug3.md)
