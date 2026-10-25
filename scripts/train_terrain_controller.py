@@ -42,6 +42,20 @@ def parse_phases(values):
     return phases
 
 
+def phase_position(update, phases):
+    """(phase index, updates done in it) after `update` total updates of this phase list.
+
+    Resume derives its position from the update counter, not from the saved phase index,
+    so a run resumed with a longer phase (or extra phases) continues where it stopped.
+    """
+    done = 0
+    for index, (_, _, updates) in enumerate(phases):
+        if update < done + updates:
+            return index, update - done
+        done += updates
+    return len(phases), 0
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--dataset", type=Path, required=True)
@@ -125,7 +139,11 @@ def main(argv=None):
         optimizer.load_state_dict(checkpoint["optimizer"])
         critic_optimizer.load_state_dict(checkpoint["critic_optimizer"])
         schedule.load_state_dict(checkpoint["schedule"])
-        state = checkpoint["state"]
+        state = dict(checkpoint["state"])
+        state["phase_index"], state["phase_update"] = phase_position(state["update"], phases)
+        if rank == 0:
+            print(json.dumps({"resumed_at_update": state["update"], "phase_index": state["phase_index"],
+                              "phase_update": state["phase_update"]}), flush=True)
 
     def average_gradients(parameters):
         if not distributed:
