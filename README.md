@@ -43,6 +43,8 @@
 
 [pilot v2](examples/results/terrain_controller_pilot_v2_a100_20261025/README.md)从同一教师checkpoint新增1,500次更新，耗时26分48秒，六项验收通过5项。一步误差改善45.95%，穿透超限比例降至0.195%；着地脚速度仍未达标，wall_contact分组出现穿透退步。源动作基线、分组结果和v1/v2对照已发布，模型未部署。
 
+[pilot v3](examples/results/terrain_controller_pilot_v3_a100_20261025/README.md)使用几何滑步代价，新增1,500次更新后穿透超限降至0，但几何着地比例仅2.12%，一步拟合也退步，验收通过4/6。两张源动作/v2/v3足底曲线显示抬脚和支撑流失；完整对照已发布，未追加训练或部署。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |
