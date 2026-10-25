@@ -42,6 +42,10 @@ def parse_phases(values):
     return phases
 
 
+class RolloutDefaults:
+    penetration = 100.0
+
+
 def phase_position(update, phases):
     """(phase index, updates done in it) after `update` total updates of this phase list.
 
@@ -64,6 +68,10 @@ def main(argv=None):
     parser.add_argument("--batch", type=int, default=256, help="Per-rank batch size")
     parser.add_argument("--lr", type=float, default=3e-4)
     parser.add_argument("--critic-lr", type=float, default=1e-3)
+    parser.add_argument("--teacher-mix", type=float, default=0.0,
+                        help="Weight of the one-step teacher loss added to every closed-loop update (0 = off)")
+    parser.add_argument("--penetration-weight", type=float, default=RolloutDefaults.penetration,
+                        help="Closed-loop penetration cost weight (cost is weight * depth^2, depth in m)")
     parser.add_argument("--max-hours", type=float, required=True, help="Hard wall-clock budget")
     parser.add_argument("--eval-every", type=int, default=250)
     parser.add_argument("--log-every", type=int, default=25)
@@ -125,7 +133,8 @@ def main(argv=None):
     def loop_for(horizon):
         if horizon not in loops:
             loops[horizon] = ClosedLoop(model, rep, names, sampler, table, prober,
-                                        RolloutConfig(horizon=max(1, horizon)), sole_offsets=default_sole_offsets(rep_cpu))
+                                        RolloutConfig(horizon=max(1, horizon), penetration=args.penetration_weight),
+                                        sole_offsets=default_sole_offsets(rep_cpu))
         return loops[horizon]
 
     loop_for(16)
@@ -232,6 +241,10 @@ def main(argv=None):
                     loss.backward()
                 else:
                     loss, critic_loss, terms = closed_loop_step(loop, batch, critic, horizon)
+                    if args.teacher_mix > 0:
+                        teacher_loss, teacher_terms = teacher_step(loop_for(16), batch)
+                        loss = loss + args.teacher_mix * teacher_loss
+                        terms.update({f"teacher_{k}": v for k, v in teacher_terms.items()})
                     loss.backward()
                     critic_optimizer.zero_grad(set_to_none=True)
                     critic_loss.backward()

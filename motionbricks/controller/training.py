@@ -57,12 +57,31 @@ def closed_loop_step(loop, batch, critic, horizon):
     return result["policy_loss"], result["critic_loss"], terms
 
 
+def _penetration_frames(loop, joints, boxes):
+    """[B, H] deepest joint-sphere penetration per frame (joints [B, H, J, 3])."""
+    batch, horizon = joints.shape[:2]
+    depth = (-box_sdf(joints.flatten(1, 2), boxes) - loop.radii.to(joints).repeat(horizon)).clamp_min(0)
+    return depth.reshape(batch, horizon, -1).amax(-1)
+
+
+def _planted_sole_speed(loop, joints, previous, contacts):
+    """[B, H, 4] horizontal sole speed (m/s), and the mask of frames the SOURCE marks as contact."""
+    soles = loop.soles(joints.flatten(0, 1)).reshape(*joints.shape[:2], 4, 3)
+    before = torch.cat((loop.soles(previous)[:, None], soles[:, :-1]), 1)
+    speed = (soles - before)[..., [0, 2]].norm(dim=-1) * 30
+    return speed, contacts > 0.5
+
+
 @torch.no_grad()
 def evaluate(loop, batch, horizon=16):
-    """Diagnostics on one validation batch (model in eval mode by the caller)."""
+    """Diagnostics on one validation batch (model in eval mode by the caller).
+
+    Penetration and planted-foot speed are reported for the generated closed loop AND for
+    the source motion on the same windows, so gates compare against what the data does
+    (an untrained model that holds still trivially neither penetrates nor slides).
+    """
     rep, history, targets = loop.rep, batch["history"], batch["targets"]
     boxes = boxes_of(batch)
-    # One step on real history, and the hold-the-last-pose baseline.
     command = batch["commands"][:, 0]
     _, part_rays, _ = loop.observe(history, command, boxes)
     plan = loop.model.plan(history, batch["history_mask"], command, part_rays)
@@ -79,20 +98,41 @@ def evaluate(loop, batch, horizon=16):
         return j - j[:, root:root + 1]
     one_step = (relative(joints) - relative(truth)).norm(dim=-1).mean(-1)
     persistence = (relative(last) - relative(truth)).norm(dim=-1).mean(-1)
-    # Closed loop on the model's own outputs.
     result = loop.rollout(history, batch["history_mask"], batch["commands"][:, :horizon], boxes)
     generated = result["history"][:, -horizon:]
     generated_joints = posed_joints(rep, generated)
     source_joints = posed_joints(rep, targets[:, :horizon])
     drift = (generated[:, -1, [0, 2]] - targets[:, horizon - 1, [0, 2]]).norm(dim=-1)
-    depth = (-box_sdf(generated_joints.flatten(1, 2), boxes) - loop.radii.to(generated).repeat(horizon)).clamp_min(0)
+    depth = _penetration_frames(loop, generated_joints, boxes)
+    source_depth = _penetration_frames(loop, source_joints, boxes)
     pelvis = (generated_joints[:, :, root, 1] - source_joints[:, :, root, 1]).abs().mean(-1)
-    return {
+    contacts = batch["contacts"][:, :horizon]
+    speed, planted = _planted_sole_speed(loop, generated_joints, last, contacts)
+    source_speed, _ = _planted_sole_speed(loop, source_joints, last, contacts)
+
+    def planted_median(values):
+        chosen = values[planted]
+        return float(chosen.median()) if chosen.numel() else float("nan")
+    report = {
         "one_step_body_cm": float(one_step.mean() * 100), "persistence_body_cm": float(persistence.mean() * 100),
         "closed_loop_root_drift_cm_p50": float(drift.median() * 100),
         "closed_loop_root_drift_cm_p90": float(drift.quantile(0.9) * 100),
-        "closed_loop_joint_penetration_over_2cm_frames": float((depth.reshape(len(drift), horizon, -1)
-                                                                .amax(-1) > 0.02).float().mean()),
+        "closed_loop_joint_penetration_over_2cm_frames": float((depth > 0.02).float().mean()),
+        "source_joint_penetration_over_2cm_frames": float((source_depth > 0.02).float().mean()),
         "closed_loop_pelvis_height_error_cm": float(pelvis.mean() * 100),
+        "closed_loop_planted_sole_speed_mps_p50": planted_median(speed),
+        "source_planted_sole_speed_mps_p50": planted_median(source_speed),
         "closed_loop_terms": {k: float(v) for k, v in result["terms"].items()},
     }
+    groups = batch.get("group")
+    if groups is not None:
+        by_group = {}
+        for name in sorted(set(groups)):
+            rows = torch.tensor([g == name for g in groups], device=drift.device)
+            by_group[name] = {"windows": int(rows.sum()),
+                              "drift_cm_p50": float(drift[rows].median() * 100),
+                              "penetration_frames": float((depth[rows] > 0.02).float().mean()),
+                              "source_penetration_frames": float((source_depth[rows] > 0.02).float().mean()),
+                              "pelvis_cm": float(pelvis[rows].mean() * 100)}
+        report["by_group"] = by_group
+    return report

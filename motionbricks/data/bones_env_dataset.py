@@ -197,7 +197,7 @@ class BonesEnvWindows:
             "box_half": torch.from_numpy(shard["box_half"][variant]),
             "box_rotation": torch.from_numpy(shard["box_rotation"][variant]),
             "box_mask": torch.from_numpy(shard["box_mask"][variant]),
-            "clip": clip, "start": start, "variant": variant,
+            "clip": clip, "start": start, "variant": variant, "group": self.rows[clip].get("group", ""),
         }
 
 
