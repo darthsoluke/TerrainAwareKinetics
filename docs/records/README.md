@@ -21,6 +21,8 @@
 - [第 7 步pilot v2执行：源基线、分组对照与独立账本](terrain_controller_pilot_v2_a100_20261025.md)
 - [第 7 步pilot v3计划：几何滑步代价与着地比例（已批准、已执行）](terrain_controller_pilot_v3_plan_20261025.md)
 - [第 7 步pilot v3执行：固定验证批次、几何着地与足底曲线](terrain_controller_pilot_v3_a100_20261025.md)
+- [第 7 步pilot v4计划：从零训练与源接触支撑（已执行，运行失败）](terrain_controller_pilot_v4_plan_20261025.md)
+- [第 7 步pilot v4执行：教师阶段门槛、四版对照与足底曲线](terrain_controller_pilot_v4_a100_20261025.md)
 - [第 6 步执行：BONES训练集构建、演员划分与GPU3审计](bones_env_v1_pro6000_20261024.md)
 - [BONES-SEED 几何筛查：PRO6000 试运行与全量结果](bones_terrain_screen_pro6000_20261023.md)
 - [BONES-SEED 支撑几何拟合与可视化：PRO6000 执行结果](bones_terrain_fit_pro6000_20261023.md)

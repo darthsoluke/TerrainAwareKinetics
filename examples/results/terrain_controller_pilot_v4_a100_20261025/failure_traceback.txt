@@ -1,0 +1,39 @@
+Traceback (most recent call last):
+  File "${TAK_ROOT}/runs/tmt_v4_coord/measure_training.py", line 172, in <module>
+    runpy.run_path(str(source), run_name='__main__')
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "${TAK_ROOT}/scripts/train_terrain_controller.py", line 297, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "${TAK_ROOT}/scripts/train_terrain_controller.py", line 279, in main
+    run_eval()
+  File "${TAK_ROOT}/scripts/train_terrain_controller.py", line 221, in run_eval
+    record.update(evaluate(loop_for(16), eval_batch, horizon=16))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/runs/tmt_v4_coord/measure_training.py", line 120, in evaluate
+    result = original_evaluate(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/controller/training.py", line 131, in evaluate
+    result = loop.rollout(history, batch["history_mask"], batch["commands"][:, :horizon], boxes)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/controller/closed_loop.py", line 218, in rollout
+    pred, new_history, history_mask, state = self.step(history, history_mask, command, boxes, volume)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/controller/closed_loop.py", line 135, in step
+    appended = advance(self.rep, history[:, -4:], pred)[:, -1:]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/data/pfnn_frame_actor.py", line 154, in advance
+    canonical, origin = rep(dict(local_joint_rots=rotations, translation=roots - planar_origin,
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/motionlib/core/motion_reps/motion_reps_base/seperate_root_local_body.py", line 393, in __call__
+    features = compute_motion_features(
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/motionlib/core/motion_reps/tools/motion_features.py", line 836, in compute_motion_features
+    assert (
+           ^
+AssertionError
