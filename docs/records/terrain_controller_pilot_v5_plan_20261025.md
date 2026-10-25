@@ -1,6 +1,8 @@
-# 第 7 步 pilot v5 计划（待批准）
+# 第 7 步 pilot v5 计划（已批准，反向预检失败）
 
-2026-10-25。依据 [pilot v4 结果](terrain_controller_pilot_v4_a100_20261025.md)。需用户批准后启动。
+2026-10-25。依据 [pilot v4 结果](terrain_controller_pilot_v4_a100_20261025.md)。用户已批准本计划，2026-10-26 执行准备与测试。
+
+执行状态：84 项测试通过；补充 CPU 零更新检查发现 normalized critic 的 `scale` 原地更新破坏 bootstrap 反向传播，后续预检与正式训练停止。新增训练消耗为 0，详见 [v5 执行记录](terrain_controller_pilot_v5_a100_20261025.md)。
 
 ## 1. v4 说明了什么
 

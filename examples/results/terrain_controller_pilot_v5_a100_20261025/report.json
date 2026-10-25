@@ -1,0 +1,111 @@
+{
+  "source_commit": "2c41613f0a96bcb4cc1bf8f773b9520848b5476f",
+  "executed_date": "2026-10-26",
+  "timezone": "Asia/Singapore",
+  "status": "stopped_at_supplemental_cpu_backward_preflight",
+  "tests": {
+    "wall_seconds": 9.79,
+    "passed": 84,
+    "skipped": 0,
+    "warnings": 11,
+    "failures": 0,
+    "last_line": "84 passed, 11 warnings in 9.79s",
+    "errors": 0
+  },
+  "environment": {
+    "device": "cpu",
+    "cuda_visible_devices": "",
+    "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+    "torch": "2.5.1+cu124",
+    "cuda_runtime": "12.4"
+  },
+  "input_identity": {
+    "dataset_manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+    "teacher_copy_sha256_matches": true,
+    "teacher_checkpoint": "runs/tmt_pilot_v4/phase0_teacher.pt",
+    "prior_checkpoints_verified": 16,
+    "prior_checkpoints_changed": 0,
+    "teacher_sha256": "5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423",
+    "teacher_state": {
+      "update": 1500,
+      "exposures": 1536000,
+      "phase_index": 0,
+      "phase_update": 1500
+    },
+    "validation_digest_verified_in_new_evaluation": false,
+    "reference_validation_digest": "29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da"
+  },
+  "resources": {
+    "free_gpu_count_at_initial_scan": 0,
+    "gpu_jobs_started": 0,
+    "waiting_process_left_running": false,
+    "scanned_gpu_count": 8
+  },
+  "preflight": {
+    "critic_load_missing_keys": "not_measured_by_resume_smoke",
+    "requested_two_gpu_forced_evaluation_failure": "not_run",
+    "requested_one_gpu_resume_smoke": "not_run",
+    "normalized_critic_backward": {
+      "error": "RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation",
+      "device": "cpu",
+      "scale_version_observed": 2,
+      "artifact": "normalized_backward_check.log",
+      "scale_version_expected": 0,
+      "status": "failed",
+      "exit_code": 1
+    }
+  },
+  "pilot": {
+    "guard_fired": null,
+    "diverged_checkpoint": null,
+    "status": "not_started",
+    "output_directory_exists": false,
+    "new_checkpoint": null
+  },
+  "budget": {
+    "training_wall_seconds_used": 0,
+    "new_updates_used": 0,
+    "approved_wall_seconds": 7200,
+    "approved_new_updates": 1500
+  },
+  "ledger": {
+    "pilot_policy_updates": 0,
+    "evaluation_generated_frames": 0,
+    "preflight_optimizer_updates": 0,
+    "pilot_critic_updates": 0,
+    "note": "Synthetic CPU backward reproduction creates no optimizer and consumes no dataset windows.",
+    "inherited_teacher_update_in_source": 1500,
+    "review_generated_frames": 0,
+    "training_windows": 0,
+    "inherited_teacher_exposures_in_source": 1536000,
+    "training_generated_frames": 0
+  },
+  "gates": {
+    "one_step": "not_evaluated",
+    "grounded_sole": "not_evaluated",
+    "penetration": "not_evaluated",
+    "no_divergence_guard": "not_evaluated",
+    "pelvis_height": "not_evaluated",
+    "root_drift": "not_evaluated",
+    "last_250_normalized_critic_median_below_10": "not_evaluated"
+  },
+  "planned_artifacts_not_generated": [
+    "v5 evaluation table",
+    "gradient and critic curves",
+    "v1-v5 matching updates",
+    "v5 final groups",
+    "six contact sheets",
+    "two sole plots"
+  ],
+  "raw_artifact_sha256": {
+    "final_integrity.json": "4099d8f4c402aeaa43f9651936bc77925ac742a3675bbb113f455c7da54ab87f",
+    "input_proof.json": "3d4ce8506dc0b6acf798a2d37bda676be6c703a6f84a3ada983ec692b099b552",
+    "preflight_gpu_scan.txt": "c3d3cd7576ab3cb076b1513f03f4f34d4eed4092147c278acb2e5644baa9e131",
+    "tests.xml": "fc67952e3ada6155b0cc3f0b59fef63f774959dc768ce615bb10317fc1984cd9",
+    "tests.log": "b153797cda7ee4762aa05651b49de6a46c1c2ca7f7e2518e1c2fa5945b42e1b5",
+    "normalized_backward_check.log": "63c0bccd33145d5ab58e2f39e5aaaeea48f18343d5eb4e72bebde10037668f28"
+  },
+  "public_log_transformation": "Replace only private environment prefix with ${PFNN_PROJECT}.",
+  "training_source_modified": false,
+  "deployed": false
+}

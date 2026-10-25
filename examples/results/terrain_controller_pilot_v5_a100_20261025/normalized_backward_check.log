@@ -1,0 +1,13 @@
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/__init__.py:36: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__("pkg_resources").declare_namespace(__name__)
+device=cpu optimizer_updates=0 scale_version=2
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/_tensor.py", line 581, in backward
+    torch.autograd.backward(
+  File "${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/autograd/__init__.py", line 347, in backward
+    _engine_run_backward(
+  File "${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/autograd/graph.py", line 825, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: one of the variables needed for gradient computation has been modified by an inplace operation: [torch.FloatTensor []] is at version 2; expected version 0 instead. Hint: enable anomaly detection to find the operation that failed to compute its gradient, with torch.autograd.set_detect_anomaly(True).

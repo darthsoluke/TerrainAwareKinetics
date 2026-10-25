@@ -1,0 +1,54 @@
+{
+  "source_commit": "2c41613f0a96bcb4cc1bf8f773b9520848b5476f",
+  "prior_checkpoints_sha256": {
+    "runs/tmt_pilot_v1/latest.pt": "7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c",
+    "runs/tmt_pilot_v1/phase0_teacher.pt": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+    "runs/tmt_pilot_v1/phase1_loop4.pt": "db3c440198d7860f4d74a6fdfe792a5a2d6f54dced92681705066d84d4d2ff33",
+    "runs/tmt_pilot_v1/phase2_loop8.pt": "52a1c9ef146989973d5e59544fa8603f736c8b4429b7b175bb735246e248a85a",
+    "runs/tmt_pilot_v1/phase3_loop16.pt": "10e1e93f32c618ec2b4116c26638739d7f32aeec3c13297b9b82504a47016853",
+    "runs/tmt_pilot_v2/latest.pt": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+    "runs/tmt_pilot_v2/phase1_loop4.pt": "9c4c9bcb0e0195c17f86a216a1abed5a8f55e13f077c1dfce913c682764e870e",
+    "runs/tmt_pilot_v2/phase2_loop8.pt": "9f1fc584c202053572466608e77173c995b533a70fd24ffe1948ec1f19b4af5e",
+    "runs/tmt_pilot_v2/phase3_loop16.pt": "79d0d13765505e2d03518c3ea9d414a3cf796685a7e2e9905d8ffd5a62c53ecf",
+    "runs/tmt_pilot_v3/latest.pt": "fc4afd691fc8d7e1c2645de5185c80d0c75b1dbc68a677d413a5ba05c2bb7220",
+    "runs/tmt_pilot_v3/phase1_loop4.pt": "91694fef2cc6eaad7a0bbc1c1a483c10eede3a0d7cc79b6d8d7cb26cf8cffef7",
+    "runs/tmt_pilot_v3/phase2_loop8.pt": "b821d6de7a178000ec606909fbac598156207dd19084fc817c1c6c256d137231",
+    "runs/tmt_pilot_v3/phase3_loop16.pt": "88960c5480a12553379336f1bfd58a441068a0ace3108a8bd061fd00cad11b3d",
+    "runs/tmt_pilot_v4/latest.pt": "24920171c931a22995bf8e2662e3933510ceb8b531245179fc6fd7b101b7d067",
+    "runs/tmt_pilot_v4/phase0_teacher.pt": "5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423",
+    "runs/tmt_pilot_v4/phase1_loop4.pt": "69de1da43999c7771353fdd389062e61e6f643f4af4e98bd82b9efd47b8cc092"
+  },
+  "teacher_checkpoint": "runs/tmt_pilot_v4/phase0_teacher.pt",
+  "teacher_sha256": "5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423",
+  "initial_state": {
+    "update": 1500,
+    "exposures": 1536000,
+    "phase_index": 0,
+    "phase_update": 1500
+  },
+  "validation_batch_sha256": "29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da",
+  "manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+  "sole_curve_windows": [
+    {
+      "filename": "walk_sideway_045_stop_002__A030",
+      "group": "flat_control",
+      "actor": "A030",
+      "dataset_index": 9684,
+      "start_frame": 60,
+      "variant_array_index": 3,
+      "split": "validation"
+    },
+    {
+      "filename": "come_up_50cm_box_R_002__A224",
+      "group": "known_dimension_support",
+      "actor": "A224",
+      "dataset_index": 660,
+      "start_frame": 24,
+      "variant_array_index": 0,
+      "split": "validation"
+    }
+  ],
+  "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+  "torch": "2.5.1+cu124",
+  "cuda": "12.4"
+}

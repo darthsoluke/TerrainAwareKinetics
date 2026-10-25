@@ -47,6 +47,8 @@
 
 [pilot v4](examples/results/terrain_controller_pilot_v4_a100_20261025/README.md)从零加入支撑脚教师项和源接触约束，1500次教师滑步门通过；闭环随后严重退化，在2500次评估中断言退出。已计入2500次消耗，checkpoint保存到2250次，完整失败记录和诊断图已发布，未恢复或部署。
 
+[pilot v5预检](examples/results/terrain_controller_pilot_v5_a100_20261025/README.md)的84项测试通过；补充CPU检查发现归一化critic的尺度原地更新破坏反向传播，后续预检和正式训练停止。新增训练消耗为0，复现命令与完整错误已发布。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |
