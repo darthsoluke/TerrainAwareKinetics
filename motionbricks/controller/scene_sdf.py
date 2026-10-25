@@ -45,9 +45,11 @@ def box_sdf_numpy(points, boxes):
     return component.min(-1)
 
 
-def penetration_cost(points, boxes, radius=0.0, weight=None):
-    """Mean squared depth by which spheres (points with radius) enter any solid."""
+def penetration_cost(points, boxes, radius=0.0, weight=None, max_depth=None):
+    """Mean squared depth by which spheres (points with radius) enter any solid (depth capped at max_depth)."""
     depth = (radius - box_sdf(points, boxes)).clamp_min(0)
+    if max_depth is not None:
+        depth = depth.clamp_max(max_depth)
     cost = depth.square()
     if weight is not None:
         cost = cost * weight

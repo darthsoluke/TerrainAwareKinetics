@@ -248,9 +248,13 @@ def test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch():
     policy, _, terms = closed_loop_step(geometric, batch, critic, horizon=4)
     assert torch.isfinite(policy) and terms["skating"] >= 0
     anchored = ClosedLoop(model, rep, names, sampler, table, prober,
-                          RolloutConfig(horizon=4, contact_source="source", support=2500.0, skating=100.0))
-    policy, _, terms = closed_loop_step(anchored, batch, critic, horizon=4)
-    assert torch.isfinite(policy) and terms["support"] >= 0
+                          RolloutConfig(horizon=4, contact_source="source", support=2500.0, skating=100.0,
+                                        support_gap_clip_m=0.1, penetration_depth_clip_m=0.1,
+                                        skating_speed_clip_mps=1.0, bootstrap_cap=50.0))
+    normalized = Critic(loop.critic_input_dim(), normalized=True)
+    policy, critic_loss, terms = closed_loop_step(anchored, batch, normalized, horizon=4)
+    assert torch.isfinite(policy) and torch.isfinite(critic_loss) and terms["support"] >= 0
+    assert float(normalized.scale) != 1.0                      # running scale moved toward |targets|
     model.train()
     loss, terms = teacher_step(loop, batch, foot_weight=1.0)
     assert torch.isfinite(loss) and terms["planted_foot"] >= 0

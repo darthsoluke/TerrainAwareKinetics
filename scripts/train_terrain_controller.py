@@ -76,6 +76,16 @@ def main(argv=None):
     parser.add_argument("--contact-source", choices=("predicted", "source"), default="predicted",
                         help="Contacts weighting closed-loop support/skating: model prediction or source labels")
     parser.add_argument("--support-weight", type=float, default=20.0)
+    parser.add_argument("--support-gap-clip", type=float, default=float("inf"), help="m; caps the support gap")
+    parser.add_argument("--penetration-depth-clip", type=float, default=float("inf"), help="m; caps penetration depth")
+    parser.add_argument("--skating-speed-clip", type=float, default=float("inf"), help="m/s; caps planted speed")
+    parser.add_argument("--bootstrap-cap", type=float, default=float("inf"), help="caps the bootstrapped value")
+    parser.add_argument("--critic-normalized", action="store_true", help="Critic learns value / running scale")
+    parser.add_argument("--critic-warmup", type=int, default=0,
+                        help="Closed-loop updates that train the critic before its value is bootstrapped")
+    parser.add_argument("--abort-grad-norm", type=float, default=float("inf"),
+                        help="Stop as 'diverged' when the pre-clip gradient norm stays above this ...")
+    parser.add_argument("--abort-patience", type=int, default=25, help="... for this many consecutive updates")
     parser.add_argument("--foot-weight", type=float, default=0.0,
                         help="Weight of the planted-foot displacement term in every teacher step (0 = off)")
     parser.add_argument("--skating-weight", type=float, default=1.0,
@@ -143,18 +153,24 @@ def main(argv=None):
             loops[horizon] = ClosedLoop(model, rep, names, sampler, table, prober,
                                         RolloutConfig(horizon=max(1, horizon), penetration=args.penetration_weight,
                                                       skating=args.skating_weight, skating_mode=args.skating_mode,
-                                                      contact_source=args.contact_source, support=args.support_weight),
+                                                      contact_source=args.contact_source, support=args.support_weight,
+                                                      support_gap_clip_m=args.support_gap_clip,
+                                                      penetration_depth_clip_m=args.penetration_depth_clip,
+                                                      skating_speed_clip_mps=args.skating_speed_clip,
+                                                      bootstrap_cap=args.bootstrap_cap),
                                         sole_offsets=default_sole_offsets(rep_cpu))
         return loops[horizon]
 
     loop_for(16)
-    critic = Critic(loops[16].critic_input_dim()).to(device)
+    critic = Critic(loops[16].critic_input_dim(), normalized=args.critic_normalized).to(device)
     critic_optimizer = torch.optim.AdamW(critic.parameters(), lr=args.critic_lr)
     state = {"update": 0, "exposures": 0, "phase_index": 0, "phase_update": 0}
     if args.resume:
         checkpoint = torch.load(args.resume, map_location=device)
         model.load_state_dict(checkpoint["model"])
-        critic.load_state_dict(checkpoint["critic"])
+        missing = critic.load_state_dict(checkpoint["critic"], strict=False)
+        if missing.unexpected_keys or set(missing.missing_keys) - {"scale"}:
+            raise SystemExit(f"Critic checkpoint mismatch: {missing}")
         optimizer.load_state_dict(checkpoint["optimizer"])
         critic_optimizer.load_state_dict(checkpoint["critic_optimizer"])
         schedule.load_state_dict(checkpoint["schedule"])
@@ -214,17 +230,29 @@ def main(argv=None):
     eval_batch = {k: (v.to(device) if torch.is_tensor(v) else v) for k, v in next(iter(eval_loader)).items()}
 
     def run_eval():
+        """Evaluate on rank 0; every rank learns whether it succeeded (a failure stops all ranks)."""
         model.eval()
         record = {"update": state["update"], "exposures": state["exposures"],
                   "rank_parameter_disagreement": parameters_agree()}
+        ok = torch.ones((), device=device)
         if rank == 0:
-            record.update(evaluate(loop_for(16), eval_batch, horizon=16))
+            try:
+                record.update(evaluate(loop_for(16), eval_batch, horizon=16))
+            except Exception as error:  # noqa: BLE001 - recorded, then the run stops cleanly
+                import traceback
+                record.update(evaluation_error=f"{type(error).__name__}: {error}",
+                              traceback=traceback.format_exc(limit=8))
+                ok.zero_()
             log("eval.jsonl", record)
+        if distributed:
+            dist.broadcast(ok, src=0)
         model.train()
-        return record
+        return bool(ok.item())
 
     if state["update"] == 0:
         run_eval()
+    loop_updates = 0
+    high_gradient_streak = 0
     epoch = 0
     budget = started + args.max_hours * 3600
     stopped = "complete"
@@ -250,7 +278,10 @@ def main(argv=None):
                     loss, terms = teacher_step(loop, batch, foot_weight=args.foot_weight)
                     loss.backward()
                 else:
+                    import dataclasses
+                    loop.config = dataclasses.replace(loop.config, bootstrap=loop_updates >= args.critic_warmup)
                     loss, critic_loss, terms = closed_loop_step(loop, batch, critic, horizon)
+                    loop_updates += 1
                     if args.teacher_mix > 0:
                         teacher_loss, teacher_terms = teacher_step(loop_for(16), batch, foot_weight=args.foot_weight)
                         loss = loss + args.teacher_mix * teacher_loss
@@ -266,6 +297,11 @@ def main(argv=None):
                 if not np.isfinite(norm):
                     stopped = "non_finite_gradient"
                     break
+                high_gradient_streak = high_gradient_streak + 1 if norm > args.abort_grad_norm else 0
+                if high_gradient_streak >= args.abort_patience:
+                    stopped = "diverged_gradient_norm"
+                    save("diverged.pt")
+                    break
                 optimizer.step()
                 schedule.step()
                 state["update"] += 1
@@ -276,7 +312,10 @@ def main(argv=None):
                                            "exposures": state["exposures"], "lr": schedule.get_last_lr()[0],
                                            "grad_norm": norm, "elapsed_s": round(time.time() - started, 1), **terms})
                 if state["update"] % args.eval_every == 0:
-                    run_eval()
+                    if not run_eval():
+                        stopped = "evaluation_failed"
+                        save("diverged.pt")
+                        break
                     save("latest.pt")
             if stopped != "complete":
                 break

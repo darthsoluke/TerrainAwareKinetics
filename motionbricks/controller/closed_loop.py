@@ -58,6 +58,12 @@ class RolloutConfig:
                                              # a source frame is a valid target; predicted elsewhere)
     smoothness: float = 0.01
     bootstrap: bool = True
+    # Robustness (v5). Defaults keep v1-v4 behaviour. Caps bound every per-step cost when the
+    # rollout has drifted far from the data, so one bad sample cannot dominate the batch.
+    support_gap_clip_m: float = float("inf")
+    penetration_depth_clip_m: float = float("inf")
+    skating_speed_clip_mps: float = float("inf")
+    bootstrap_cap: float = float("inf")       # upper bound on the bootstrapped cost-to-go
 
 
 def forward_xz(history):
@@ -84,22 +90,42 @@ def joint_radii(joint_names, config):
 
 
 class Critic(nn.Module):
-    """Cost-to-go of a state: last normalized frame, heading-frame command, body rays."""
+    """Cost-to-go of a state: last normalized frame, heading-frame command, body rays.
 
-    def __init__(self, input_dim, width=256):
+    With normalized=True the network predicts value / scale, where scale is a running mean
+    of |target| updated from each batch of TD targets; the loss is computed in that unit,
+    so large or growing costs do not blow up the critic's own gradients.
+    """
+
+    def __init__(self, input_dim, width=256, normalized=False, momentum=0.99):
         super().__init__()
         self.net = nn.Sequential(nn.Linear(input_dim, width), nn.GELU(), nn.Linear(width, width), nn.GELU(),
                                  nn.Linear(width, 1))
+        self.normalized, self.momentum = normalized, momentum
+        self.register_buffer("scale", torch.ones(()))
 
     def forward(self, state):
-        return self.net(state)[:, 0]
+        out = self.net(state)[:, 0]
+        return out * self.scale if self.normalized else out
 
     def frozen(self, state):
         """Value with detached weights: gradients reach the state (the policy), not the critic."""
         out = state
         for layer in self.net:
             out = F.linear(out, layer.weight.detach(), layer.bias.detach()) if isinstance(layer, nn.Linear) else layer(out)
-        return out[:, 0]
+        out = out[:, 0]
+        return out * self.scale.detach() if self.normalized else out
+
+    def loss(self, states, targets):
+        """Regression loss on detached states [list of B x D] against targets [B, H]."""
+        if self.normalized:
+            with torch.no_grad():
+                observed = targets.abs().mean().clamp_min(1e-3)
+                self.scale.mul_(self.momentum).add_((1 - self.momentum) * observed)
+            predicted = torch.stack([self.net(s.detach())[:, 0] for s in states], 1)
+            return F.mse_loss(predicted, targets / self.scale)
+        predicted = torch.stack([self(s.detach()) for s in states], 1)
+        return F.mse_loss(predicted, targets)
 
 
 class ClosedLoop:
@@ -177,10 +203,14 @@ class ClosedLoop:
         parts = {
             "command_velocity": (velocity_body - command_body[:, :2]).square().sum(-1),
             "command_heading": 1 - (facing * target_facing).sum(-1),
-            "penetration": penetration_cost(joints, boxes, self.radii.to(joints)),
-            "support": (contact * box_sdf(soles, boxes).square()).mean(-1),
+            "penetration": penetration_cost(joints, boxes, self.radii.to(joints),
+                                            max_depth=None if config.penetration_depth_clip_m == float("inf")
+                                            else config.penetration_depth_clip_m),
+            "support": (contact * box_sdf(soles, boxes).clamp(-config.support_gap_clip_m,
+                                                               config.support_gap_clip_m).square()).mean(-1),
             "skating": (self._planted_weight(contact, soles, soles_before, boxes)
-                        * ((soles - soles_before)[..., [0, 2]] * FPS).square().sum(-1)).mean(-1),
+                        * ((soles - soles_before)[..., [0, 2]] * FPS).square().sum(-1)
+                        .clamp_max(config.skating_speed_clip_mps ** 2)).mean(-1),
             # Joint acceleration in units of 10 m/s^2.
             "smoothness": ((joints - 2 * joints_before + joints_two_back) * FPS * FPS / 10).square().sum(-1).mean(-1),
         }
@@ -236,11 +266,11 @@ class ClosedLoop:
                   "terms": {name: torch.stack(v).mean() for name, v in logs.items()}}
         if critic is not None:
             if config.bootstrap:
-                objective = objective + config.gamma ** horizon * critic.frozen(final_state)
+                value = critic.frozen(final_state).clamp(0.0, config.bootstrap_cap)
+                objective = objective + config.gamma ** horizon * value
             with torch.no_grad():
                 values = torch.stack([critic(s.detach()) for s in states], 1)          # [B, H+1]
                 targets_td = lambda_returns(costs.detach(), values, config.gamma, config.lam)
-            predicted = torch.stack([critic(s.detach()) for s in states[:-1]], 1)
-            result["critic_loss"] = F.mse_loss(predicted, targets_td)
+            result["critic_loss"] = critic.loss(states[:-1], targets_td)
         result["policy_loss"] = objective.mean()
         return result
