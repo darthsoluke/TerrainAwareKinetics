@@ -72,6 +72,9 @@ def main(argv=None):
                         help="Weight of the one-step teacher loss added to every closed-loop update (0 = off)")
     parser.add_argument("--penetration-weight", type=float, default=RolloutDefaults.penetration,
                         help="Closed-loop penetration cost weight (cost is weight * depth^2, depth in m)")
+    parser.add_argument("--skating-mode", choices=("contact", "geometric"), default="contact")
+    parser.add_argument("--skating-weight", type=float, default=1.0,
+                        help="Closed-loop skating weight (cost is weight * planted sole speed^2, m/s)")
     parser.add_argument("--max-hours", type=float, required=True, help="Hard wall-clock budget")
     parser.add_argument("--eval-every", type=int, default=250)
     parser.add_argument("--log-every", type=int, default=25)
@@ -133,7 +136,8 @@ def main(argv=None):
     def loop_for(horizon):
         if horizon not in loops:
             loops[horizon] = ClosedLoop(model, rep, names, sampler, table, prober,
-                                        RolloutConfig(horizon=max(1, horizon), penetration=args.penetration_weight),
+                                        RolloutConfig(horizon=max(1, horizon), penetration=args.penetration_weight,
+                                                      skating=args.skating_weight, skating_mode=args.skating_mode),
                                         sole_offsets=default_sole_offsets(rep_cpu))
         return loops[horizon]
 

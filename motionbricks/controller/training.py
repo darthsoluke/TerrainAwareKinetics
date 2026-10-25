@@ -64,12 +64,19 @@ def _penetration_frames(loop, joints, boxes):
     return depth.reshape(batch, horizon, -1).amax(-1)
 
 
-def _planted_sole_speed(loop, joints, previous, contacts):
-    """[B, H, 4] horizontal sole speed (m/s), and the mask of frames the SOURCE marks as contact."""
+def _planted_sole_speed(loop, joints, previous, contacts, boxes=None, height=0.03):
+    """[B, H, 4] horizontal sole speed (m/s), the SOURCE contact mask, and (with boxes) the
+    geometric mask: the sole is within `height` of a surface in this and the previous frame."""
     soles = loop.soles(joints.flatten(0, 1)).reshape(*joints.shape[:2], 4, 3)
     before = torch.cat((loop.soles(previous)[:, None], soles[:, :-1]), 1)
     speed = (soles - before)[..., [0, 2]].norm(dim=-1) * 30
-    return speed, contacts > 0.5
+    near = None
+    if boxes is not None:
+        batch, horizon = soles.shape[:2]
+        now = box_sdf(soles.reshape(batch, -1, 3), boxes).reshape(batch, horizon, 4) <= height
+        then = box_sdf(before.reshape(batch, -1, 3), boxes).reshape(batch, horizon, 4) <= height
+        near = now & then
+    return speed, contacts > 0.5, near
 
 
 @torch.no_grad()
@@ -107,11 +114,11 @@ def evaluate(loop, batch, horizon=16):
     source_depth = _penetration_frames(loop, source_joints, boxes)
     pelvis = (generated_joints[:, :, root, 1] - source_joints[:, :, root, 1]).abs().mean(-1)
     contacts = batch["contacts"][:, :horizon]
-    speed, planted = _planted_sole_speed(loop, generated_joints, last, contacts)
-    source_speed, _ = _planted_sole_speed(loop, source_joints, last, contacts)
+    speed, planted, near = _planted_sole_speed(loop, generated_joints, last, contacts, boxes)
+    source_speed, _, source_near = _planted_sole_speed(loop, source_joints, last, contacts, boxes)
 
-    def planted_median(values):
-        chosen = values[planted]
+    def planted_median(values, mask=None):
+        chosen = values[planted if mask is None else mask]
         return float(chosen.median()) if chosen.numel() else float("nan")
     report = {
         "one_step_body_cm": float(one_step.mean() * 100), "persistence_body_cm": float(persistence.mean() * 100),
@@ -122,6 +129,11 @@ def evaluate(loop, batch, horizon=16):
         "closed_loop_pelvis_height_error_cm": float(pelvis.mean() * 100),
         "closed_loop_planted_sole_speed_mps_p50": planted_median(speed),
         "source_planted_sole_speed_mps_p50": planted_median(source_speed),
+        # Each motion judged on its own feet: speed of soles resting on a surface.
+        "closed_loop_grounded_sole_speed_mps_p50": planted_median(speed, near),
+        "source_grounded_sole_speed_mps_p50": planted_median(source_speed, source_near),
+        "closed_loop_grounded_sole_fraction": float(near.float().mean()),
+        "source_grounded_sole_fraction": float(source_near.float().mean()),
         "closed_loop_terms": {k: float(v) for k, v in result["terms"].items()},
     }
     groups = batch.get("group")

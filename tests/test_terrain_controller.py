@@ -243,3 +243,7 @@ def test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch():
     assert 0 <= report["closed_loop_joint_penetration_over_2cm_frames"] <= 1
     assert 0 <= report["source_joint_penetration_over_2cm_frames"] <= 1
     assert report["source_planted_sole_speed_mps_p50"] >= 0 and set(report["by_group"]) == {"flat_control", "crouch"}
+    assert 0 <= report["source_grounded_sole_fraction"] <= 1 and "closed_loop_grounded_sole_speed_mps_p50" in report
+    geometric = ClosedLoop(model, rep, names, sampler, table, prober, RolloutConfig(horizon=4, skating_mode="geometric"))
+    policy, _, terms = closed_loop_step(geometric, batch, critic, horizon=4)
+    assert torch.isfinite(policy) and terms["skating"] >= 0

@@ -13,7 +13,9 @@ Per step costs (all per sample, [B]):
 * command: planar velocity and facing against the left/right stick command;
 * penetration: FK joints (as spheres) entering any solid;
 * support: soles of feet the model says are in contact, kept on the nearest surface;
-* skating: horizontal sole speed weighted by predicted contact;
+* skating: horizontal sole speed, weighted either by predicted contact ("contact", v1/v2)
+  or by how close the sole is to a surface in this and the previous frame ("geometric":
+  the model cannot avoid it by predicting no contact);
 * smoothness: joint acceleration.
 
 The policy minimises sum_t gamma^t c_t + gamma^H V(s_H), with gradients through every
@@ -49,6 +51,9 @@ class RolloutConfig:
     penetration: float = 100.0
     support: float = 20.0
     skating: float = 1.0
+    skating_mode: str = "contact"            # "contact" or "geometric"
+    skating_height_m: float = 0.03           # geometric: sole within this of a surface counts as planted
+    skating_softness_m: float = 0.01
     smoothness: float = 0.01
     bootstrap: bool = True
 
@@ -130,6 +135,16 @@ class ClosedLoop:
         new_mask = torch.cat((history_mask[:, 1:], history_mask.new_ones(history_mask.shape[0], 1)), 1)
         return pred, new_history, new_mask, state
 
+    def _planted_weight(self, contact, soles, soles_before, boxes):
+        config = self.config
+        if config.skating_mode == "contact":
+            return contact
+        if config.skating_mode != "geometric":
+            raise ValueError(f"Unknown skating mode {config.skating_mode!r}")
+        near = [torch.sigmoid((config.skating_height_m - box_sdf(points, boxes)) / config.skating_softness_m)
+                for points in (soles, soles_before)]
+        return near[0] * near[1]
+
     def soles(self, joints):
         return joints[:, self.foot_index.to(joints.device)] + self.sole_offsets.to(joints)
 
@@ -151,7 +166,8 @@ class ClosedLoop:
             "command_heading": 1 - (facing * target_facing).sum(-1),
             "penetration": penetration_cost(joints, boxes, self.radii.to(joints)),
             "support": (contact * box_sdf(soles, boxes).square()).mean(-1),
-            "skating": (contact * ((soles - soles_before)[..., [0, 2]] * FPS).square().sum(-1)).mean(-1),
+            "skating": (self._planted_weight(contact, soles, soles_before, boxes)
+                        * ((soles - soles_before)[..., [0, 2]] * FPS).square().sum(-1)).mean(-1),
             # Joint acceleration in units of 10 m/s^2.
             "smoothness": ((joints - 2 * joints_before + joints_two_back) * FPS * FPS / 10).square().sum(-1).mean(-1),
         }
