@@ -1,0 +1,1088 @@
+{
+  "source_commit": "62e72d5a75d2f500360cf9ae88efdbe0b00c7462",
+  "status": "complete",
+  "tests": {
+    "tests": 84,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 84
+  },
+  "tests_last_line": "84 passed, 11 warnings in 14.97s",
+  "input_proof": {
+    "source_commit": "62e72d5a75d2f500360cf9ae88efdbe0b00c7462",
+    "v1_checkpoints_sha256": {
+      "runs/tmt_pilot_v1/latest.pt": "7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c",
+      "runs/tmt_pilot_v1/phase0_teacher.pt": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+      "runs/tmt_pilot_v1/phase1_loop4.pt": "db3c440198d7860f4d74a6fdfe792a5a2d6f54dced92681705066d84d4d2ff33",
+      "runs/tmt_pilot_v1/phase2_loop8.pt": "52a1c9ef146989973d5e59544fa8603f736c8b4429b7b175bb735246e248a85a",
+      "runs/tmt_pilot_v1/phase3_loop16.pt": "10e1e93f32c618ec2b4116c26638739d7f32aeec3c13297b9b82504a47016853"
+    },
+    "resume_checkpoint": "runs/tmt_pilot_v1/phase0_teacher.pt",
+    "smoke_copy": "runs/tmt_v2_coord/phase0_teacher.copy.pt",
+    "smoke_copy_sha256": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+    "inherited_state": {
+      "update": 1500,
+      "exposures": 1536000,
+      "phase_index": 0,
+      "phase_update": 1500
+    },
+    "dataset_manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+    "python": "3.11.17",
+    "packages": {
+      "torch": "2.5.1+cu124",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "pytest": "9.1.1",
+      "matplotlib": "3.11.2"
+    },
+    "source_sha256": {
+      "scripts/train_terrain_controller.py": "f2010e89cead1764900b44d432723b0f3aa37f295954e1e27b32a3bb1f191c6e",
+      "motionbricks/controller/training.py": "4ac02957e4a4f0189b87192b2841c3bdcb031ac71ba444da777c4431001addf9",
+      "motionbricks/controller/closed_loop.py": "b4bb8622d47991ff8e69f3ad5a5acad4a839c27ef353f4e5a6971ca096984990",
+      "motionbricks/controller/terrain_motion_transformer.py": "23420bc19047a2572c86992a813c2dac121b3ad7f818f1fa7e5a452630d1ab6c",
+      "motionbricks/data/bones_env_dataset.py": "4f1e2345e99e4acf17da041e391b969a88a0304841d7a72ee2c23c5e65a8ab73"
+    }
+  },
+  "preflight": {
+    "stage": "smoke",
+    "source_commit": "62e72d5a75d2f500360cf9ae88efdbe0b00c7462",
+    "world_size": 1,
+    "batch_per_rank": 32,
+    "global_batch": 32,
+    "wall_cap_seconds": 720,
+    "started_utc": "2026-10-25T11:21:19.326102+00:00",
+    "ended_utc": "2026-10-25T11:21:31.199562+00:00",
+    "wall_seconds": 11.85,
+    "exit_code": 0,
+    "passed": true,
+    "gates": {
+      "resume_position": true,
+      "counters": true,
+      "rank_updates": true,
+      "teacher_terms": true,
+      "evaluation_fields": true,
+      "finite": true,
+      "rank_agreement_all_zero": true,
+      "checkpoint_matches_ranks": true,
+      "rank0_only_writer": true,
+      "v1_checkpoints_unchanged": true
+    },
+    "resume_checkpoint_sha256": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+    "inherited_state": {
+      "update": 1500,
+      "exposures": 1536000,
+      "phase_index": 0,
+      "phase_update": 1500
+    },
+    "checkpoint_state": {
+      "update": 1502,
+      "exposures": 1536256,
+      "phase_index": 2,
+      "phase_update": 0
+    },
+    "checkpoint_sha256": "943ecc0a62fd28ee34c26932c12a27d18734349add3c423a35e705a7a798c293",
+    "checkpoint_files": [
+      "latest.pt",
+      "phase1_loop4.pt"
+    ],
+    "checkpoint_matches_rank_parameters": [
+      true
+    ],
+    "original_v1_checkpoints_unchanged": true,
+    "gpu_physical_indices": [
+      0
+    ],
+    "gpu_model": "NVIDIA A100 80GB PCIe",
+    "driver_version": "555.42.06",
+    "rank_reports": [
+      {
+        "rank": 0,
+        "exit_code": 0,
+        "wall_seconds": 6.25915676204022,
+        "updates_measured": 2,
+        "critic_updates_measured": 2,
+        "teacher_calls_measured": 2,
+        "last_completed_update": 1502,
+        "final_trainer_state": {
+          "update": 1502,
+          "exposures": 1536256,
+          "phase_index": 2,
+          "phase_update": 0
+        },
+        "checkpoint_writes": [
+          {
+            "filename": "latest.pt",
+            "update": 1501,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 1502,
+            "rank": 0
+          },
+          {
+            "filename": "phase1_loop4.pt",
+            "update": 1502,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 1502,
+            "rank": 0
+          }
+        ],
+        "peak_allocated_bytes": 267742720,
+        "capacity_bytes": 85100068864,
+        "phase_seconds_per_update": {
+          "loop:4": {
+            "updates": 2,
+            "mean": 0.7917917919985484,
+            "median": 0.7917917919985484,
+            "max": 1.1449751739855856,
+            "total": 1.5835835839970969
+          }
+        },
+        "measurement": "Closed-loop forward, mixed teacher forward, backward and both optimizers; CUDA synchronized; excludes loading/evaluation/hashes.",
+        "initial_parameters": {
+          "model": {
+            "sha256": "573d2821ac77414ab91b2afd64ed6ca68361da41944a5adc6ed8ab8f79cc16ba",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+            "tensor_count": 6
+          }
+        },
+        "final_parameters": {
+          "model": {
+            "sha256": "12caa114fa52a6a60cb9a93ff87604f44c04bde5f1656c34f5880acfadafb70b",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "be01ad317607a1d10873d5636eacc4dde1290a3fcbc82af7ebfd5662ade56d64",
+            "tensor_count": 6
+          }
+        }
+      }
+    ]
+  },
+  "pilot": {
+    "stage": "pilot",
+    "source_commit": "62e72d5a75d2f500360cf9ae88efdbe0b00c7462",
+    "world_size": 2,
+    "batch_per_rank": 512,
+    "global_batch": 1024,
+    "wall_cap_seconds": 7200,
+    "started_utc": "2026-10-25T11:24:27.108561+00:00",
+    "ended_utc": "2026-10-25T11:51:15.207327+00:00",
+    "wall_seconds": 1608.076,
+    "exit_code": 0,
+    "passed": true,
+    "gates": {
+      "resume_position": true,
+      "counters": true,
+      "rank_updates": true,
+      "teacher_terms": true,
+      "evaluation_fields": true,
+      "finite": true,
+      "rank_agreement_all_zero": true,
+      "checkpoint_matches_ranks": true,
+      "rank0_only_writer": true,
+      "v1_checkpoints_unchanged": true,
+      "initial_parameters_identical": true,
+      "final_parameters_identical": true
+    },
+    "resume_checkpoint_sha256": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+    "inherited_state": {
+      "update": 1500,
+      "exposures": 1536000,
+      "phase_index": 0,
+      "phase_update": 1500
+    },
+    "checkpoint_state": {
+      "update": 3000,
+      "exposures": 15872000,
+      "phase_index": 4,
+      "phase_update": 0
+    },
+    "checkpoint_sha256": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+    "checkpoint_files": [
+      "latest.pt",
+      "phase1_loop4.pt",
+      "phase2_loop8.pt",
+      "phase3_loop16.pt"
+    ],
+    "checkpoint_matches_rank_parameters": [
+      true,
+      true
+    ],
+    "original_v1_checkpoints_unchanged": true,
+    "gpu_physical_indices": [
+      0,
+      3
+    ],
+    "gpu_model": "NVIDIA A100 80GB PCIe",
+    "driver_version": "555.42.06",
+    "rank_reports": [
+      {
+        "rank": 0,
+        "exit_code": 0,
+        "wall_seconds": 1600.324345787987,
+        "updates_measured": 1500,
+        "critic_updates_measured": 1500,
+        "teacher_calls_measured": 1500,
+        "last_completed_update": 3000,
+        "final_trainer_state": {
+          "update": 3000,
+          "exposures": 15872000,
+          "phase_index": 4,
+          "phase_update": 0
+        },
+        "checkpoint_writes": [
+          {
+            "filename": "latest.pt",
+            "update": 1750,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2000,
+            "rank": 0
+          },
+          {
+            "filename": "phase1_loop4.pt",
+            "update": 2000,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2250,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2500,
+            "rank": 0
+          },
+          {
+            "filename": "phase2_loop8.pt",
+            "update": 2500,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2750,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 3000,
+            "rank": 0
+          },
+          {
+            "filename": "phase3_loop16.pt",
+            "update": 3000,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 3000,
+            "rank": 0
+          }
+        ],
+        "peak_allocated_bytes": 12710927360,
+        "capacity_bytes": 85100068864,
+        "phase_seconds_per_update": {
+          "loop:16": {
+            "updates": 500,
+            "mean": 1.5460533786894521,
+            "median": 1.5369373135035858,
+            "max": 2.3810430850135162,
+            "total": 773.026689344726
+          },
+          "loop:4": {
+            "updates": 500,
+            "mean": 0.7074010062646121,
+            "median": 0.7169978760066442,
+            "max": 1.3602166550117545,
+            "total": 353.70050313230604
+          },
+          "loop:8": {
+            "updates": 500,
+            "mean": 0.896000773400534,
+            "median": 0.815356956969481,
+            "max": 2.2645668920013122,
+            "total": 448.000386700267
+          }
+        },
+        "measurement": "Closed-loop forward, mixed teacher forward, backward and both optimizers; CUDA synchronized; excludes loading/evaluation/hashes.",
+        "initial_parameters": {
+          "model": {
+            "sha256": "573d2821ac77414ab91b2afd64ed6ca68361da41944a5adc6ed8ab8f79cc16ba",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+            "tensor_count": 6
+          }
+        },
+        "final_parameters": {
+          "model": {
+            "sha256": "83e8c03658aa386b2ef4c08c9d932bd3e8e2ebfea6d24d3e3003b91fc1b1d652",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "94095b3d4108dc71f3327fcd3b451775f0c66eadd8b286e665426a3ba9de27ec",
+            "tensor_count": 6
+          }
+        }
+      },
+      {
+        "rank": 1,
+        "exit_code": 0,
+        "wall_seconds": 1599.5470700930455,
+        "updates_measured": 1500,
+        "critic_updates_measured": 1500,
+        "teacher_calls_measured": 1500,
+        "last_completed_update": 3000,
+        "final_trainer_state": {
+          "update": 3000,
+          "exposures": 15872000,
+          "phase_index": 4,
+          "phase_update": 0
+        },
+        "checkpoint_writes": [],
+        "peak_allocated_bytes": 12716841984,
+        "capacity_bytes": 85100068864,
+        "phase_seconds_per_update": {
+          "loop:16": {
+            "updates": 500,
+            "mean": 1.5433610199267278,
+            "median": 1.5343534105049912,
+            "max": 2.3786274640006013,
+            "total": 771.6805099633639
+          },
+          "loop:4": {
+            "updates": 500,
+            "mean": 0.7062668507454218,
+            "median": 0.7161666804749984,
+            "max": 1.358289620024152,
+            "total": 353.1334253727109
+          },
+          "loop:8": {
+            "updates": 500,
+            "mean": 0.8945630147341872,
+            "median": 0.8140013089869171,
+            "max": 2.264576857967768,
+            "total": 447.2815073670936
+          }
+        },
+        "measurement": "Closed-loop forward, mixed teacher forward, backward and both optimizers; CUDA synchronized; excludes loading/evaluation/hashes.",
+        "initial_parameters": {
+          "model": {
+            "sha256": "573d2821ac77414ab91b2afd64ed6ca68361da41944a5adc6ed8ab8f79cc16ba",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+            "tensor_count": 6
+          }
+        },
+        "final_parameters": {
+          "model": {
+            "sha256": "83e8c03658aa386b2ef4c08c9d932bd3e8e2ebfea6d24d3e3003b91fc1b1d652",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "94095b3d4108dc71f3327fcd3b451775f0c66eadd8b286e665426a3ba9de27ec",
+            "tensor_count": 6
+          }
+        }
+      }
+    ]
+  },
+  "reference_new_evaluation": {
+    "passed": true,
+    "source_commit": "62e72d5a75d2f500360cf9ae88efdbe0b00c7462",
+    "optimizer_updates": 0,
+    "generated_diagnostic_frames": 8192,
+    "eval_batch_sha256": "29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da",
+    "eval_batch": 256,
+    "horizon": 16,
+    "gpu_index": 0,
+    "wall_seconds": 3.0833143269992433,
+    "peak_allocated_bytes": 495185920,
+    "evaluations": {
+      "teacher_1500": {
+        "checkpoint": "runs/tmt_pilot_v1/phase0_teacher.pt",
+        "checkpoint_sha256": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+        "update": 1500,
+        "one_step_body_cm": 0.3384400010108948,
+        "persistence_body_cm": 0.9381700158119202,
+        "closed_loop_root_drift_cm_p50": 1.2491179704666138,
+        "closed_loop_root_drift_cm_p90": 4.210441589355469,
+        "closed_loop_joint_penetration_over_2cm_frames": 0.111083984375,
+        "source_joint_penetration_over_2cm_frames": 0.0,
+        "closed_loop_pelvis_height_error_cm": 3.1914937496185303,
+        "closed_loop_planted_sole_speed_mps_p50": 0.17895789444446564,
+        "source_planted_sole_speed_mps_p50": 0.01206144131720066,
+        "closed_loop_terms": {
+          "command_velocity": 0.004819076508283615,
+          "command_heading": 0.018317708745598793,
+          "penetration": 4.801780232810415e-05,
+          "support": 0.000376888201572001,
+          "skating": 0.03685940057039261,
+          "smoothness": 0.6573893427848816
+        },
+        "by_group": {
+          "crouch": {
+            "windows": 48,
+            "drift_cm_p50": 1.3902534246444702,
+            "penetration_frames": 0.2630208432674408,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 6.5223774909973145
+          },
+          "flat_control": {
+            "windows": 43,
+            "drift_cm_p50": 2.329226493835449,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 4.344310283660889
+          },
+          "kneel": {
+            "windows": 35,
+            "drift_cm_p50": 0.38140198588371277,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 0.949528694152832
+          },
+          "known_dimension_support": {
+            "windows": 20,
+            "drift_cm_p50": 0.6002364754676819,
+            "penetration_frames": 0.13750000298023224,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 5.2724995613098145
+          },
+          "prone": {
+            "windows": 13,
+            "drift_cm_p50": 0.7240839600563049,
+            "penetration_frames": 0.04326923191547394,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 1.6539722681045532
+          },
+          "quadruped": {
+            "windows": 90,
+            "drift_cm_p50": 1.424580693244934,
+            "penetration_frames": 0.1354166716337204,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 1.4998390674591064
+          },
+          "wall_contact": {
+            "windows": 7,
+            "drift_cm_p50": 1.9607346057891846,
+            "penetration_frames": 0.0446428582072258,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 3.1388959884643555
+          }
+        }
+      },
+      "v1_final": {
+        "checkpoint": "runs/tmt_pilot_v1/latest.pt",
+        "checkpoint_sha256": "7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c",
+        "update": 3000,
+        "one_step_body_cm": 0.6639965772628784,
+        "persistence_body_cm": 0.9381700158119202,
+        "closed_loop_root_drift_cm_p50": 0.8524075150489807,
+        "closed_loop_root_drift_cm_p90": 2.513716459274292,
+        "closed_loop_joint_penetration_over_2cm_frames": 0.015380859375,
+        "source_joint_penetration_over_2cm_frames": 0.0,
+        "closed_loop_pelvis_height_error_cm": 1.2776304483413696,
+        "closed_loop_planted_sole_speed_mps_p50": 0.24622215330600739,
+        "source_planted_sole_speed_mps_p50": 0.01206144131720066,
+        "closed_loop_terms": {
+          "command_velocity": 0.00047693963279016316,
+          "command_heading": 0.006136818788945675,
+          "penetration": 2.3917161797726294e-06,
+          "support": 2.403317580501607e-07,
+          "skating": 1.329050246567931e-05,
+          "smoothness": 0.1460271179676056
+        },
+        "by_group": {
+          "crouch": {
+            "windows": 48,
+            "drift_cm_p50": 1.1904617547988892,
+            "penetration_frames": 0.0559895858168602,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 2.3435864448547363
+          },
+          "flat_control": {
+            "windows": 43,
+            "drift_cm_p50": 1.1070947647094727,
+            "penetration_frames": 0.029069766402244568,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 1.4474546909332275
+          },
+          "kneel": {
+            "windows": 35,
+            "drift_cm_p50": 0.14920714497566223,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 0.5374318361282349
+          },
+          "known_dimension_support": {
+            "windows": 20,
+            "drift_cm_p50": 0.9978642463684082,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 1.0566269159317017
+          },
+          "prone": {
+            "windows": 13,
+            "drift_cm_p50": 0.2064661830663681,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 0.6400978565216064
+          },
+          "quadruped": {
+            "windows": 90,
+            "drift_cm_p50": 1.0329220294952393,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 0.836787760257721
+          },
+          "wall_contact": {
+            "windows": 7,
+            "drift_cm_p50": 0.24359846115112305,
+            "penetration_frames": 0.0,
+            "source_penetration_frames": 0.0,
+            "pelvis_cm": 4.109409332275391
+          }
+        }
+      }
+    }
+  },
+  "v1_re_evaluation_common_metric_deltas": {
+    "one_step_body_cm": 0.0,
+    "persistence_body_cm": 0.0,
+    "closed_loop_root_drift_cm_p50": 0.0,
+    "closed_loop_root_drift_cm_p90": 0.0,
+    "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+    "closed_loop_pelvis_height_error_cm": 0.0
+  },
+  "rank_parameter_checks": {
+    "initial_parameters": {
+      "model": {
+        "tensor_count": 134,
+        "different_tensors": 0,
+        "rank0_sha256": "573d2821ac77414ab91b2afd64ed6ca68361da41944a5adc6ed8ab8f79cc16ba",
+        "rank1_sha256": "573d2821ac77414ab91b2afd64ed6ca68361da41944a5adc6ed8ab8f79cc16ba"
+      },
+      "critic": {
+        "tensor_count": 6,
+        "different_tensors": 0,
+        "rank0_sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+        "rank1_sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0"
+      }
+    },
+    "final_parameters": {
+      "model": {
+        "tensor_count": 134,
+        "different_tensors": 0,
+        "rank0_sha256": "83e8c03658aa386b2ef4c08c9d932bd3e8e2ebfea6d24d3e3003b91fc1b1d652",
+        "rank1_sha256": "83e8c03658aa386b2ef4c08c9d932bd3e8e2ebfea6d24d3e3003b91fc1b1d652"
+      },
+      "critic": {
+        "tensor_count": 6,
+        "different_tensors": 0,
+        "rank0_sha256": "94095b3d4108dc71f3327fcd3b451775f0c66eadd8b286e665426a3ba9de27ec",
+        "rank1_sha256": "94095b3d4108dc71f3327fcd3b451775f0c66eadd8b286e665426a3ba9de27ec"
+      }
+    }
+  },
+  "evaluation": {
+    "batch": 256,
+    "horizon": 16,
+    "native_rows": 7,
+    "batch_sha256": "29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da",
+    "source_baselines_stable": true,
+    "teacher_reference": {
+      "checkpoint": "runs/tmt_pilot_v1/phase0_teacher.pt",
+      "checkpoint_sha256": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+      "update": 1500,
+      "one_step_body_cm": 0.3384400010108948,
+      "persistence_body_cm": 0.9381700158119202,
+      "closed_loop_root_drift_cm_p50": 1.2491179704666138,
+      "closed_loop_root_drift_cm_p90": 4.210441589355469,
+      "closed_loop_joint_penetration_over_2cm_frames": 0.111083984375,
+      "source_joint_penetration_over_2cm_frames": 0.0,
+      "closed_loop_pelvis_height_error_cm": 3.1914937496185303,
+      "closed_loop_planted_sole_speed_mps_p50": 0.17895789444446564,
+      "source_planted_sole_speed_mps_p50": 0.01206144131720066,
+      "closed_loop_terms": {
+        "command_velocity": 0.004819076508283615,
+        "command_heading": 0.018317708745598793,
+        "penetration": 4.801780232810415e-05,
+        "support": 0.000376888201572001,
+        "skating": 0.03685940057039261,
+        "smoothness": 0.6573893427848816
+      },
+      "by_group": {
+        "crouch": {
+          "windows": 48,
+          "drift_cm_p50": 1.3902534246444702,
+          "penetration_frames": 0.2630208432674408,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 6.5223774909973145
+        },
+        "flat_control": {
+          "windows": 43,
+          "drift_cm_p50": 2.329226493835449,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 4.344310283660889
+        },
+        "kneel": {
+          "windows": 35,
+          "drift_cm_p50": 0.38140198588371277,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 0.949528694152832
+        },
+        "known_dimension_support": {
+          "windows": 20,
+          "drift_cm_p50": 0.6002364754676819,
+          "penetration_frames": 0.13750000298023224,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 5.2724995613098145
+        },
+        "prone": {
+          "windows": 13,
+          "drift_cm_p50": 0.7240839600563049,
+          "penetration_frames": 0.04326923191547394,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 1.6539722681045532
+        },
+        "quadruped": {
+          "windows": 90,
+          "drift_cm_p50": 1.424580693244934,
+          "penetration_frames": 0.1354166716337204,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 1.4998390674591064
+        },
+        "wall_contact": {
+          "windows": 7,
+          "drift_cm_p50": 1.9607346057891846,
+          "penetration_frames": 0.0446428582072258,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 3.1388959884643555
+        }
+      }
+    },
+    "final": {
+      "update": 3000,
+      "exposures": 15872000,
+      "rank_parameter_disagreement": 0.0,
+      "one_step_body_cm": 0.50709068775177,
+      "persistence_body_cm": 0.9381700158119202,
+      "closed_loop_root_drift_cm_p50": 0.8877002000808716,
+      "closed_loop_root_drift_cm_p90": 2.6220781803131104,
+      "closed_loop_joint_penetration_over_2cm_frames": 0.001953125,
+      "source_joint_penetration_over_2cm_frames": 0.0,
+      "closed_loop_pelvis_height_error_cm": 1.472524881362915,
+      "closed_loop_planted_sole_speed_mps_p50": 0.17443691194057465,
+      "source_planted_sole_speed_mps_p50": 0.01206144131720066,
+      "closed_loop_terms": {
+        "command_velocity": 0.0007603946141898632,
+        "command_heading": 0.011563948355615139,
+        "penetration": 5.096848099128692e-07,
+        "support": 5.206864898354979e-06,
+        "skating": 0.00039283744990825653,
+        "smoothness": 0.135871022939682
+      },
+      "by_group": {
+        "crouch": {
+          "windows": 48,
+          "drift_cm_p50": 1.2487459182739258,
+          "penetration_frames": 0.00390625,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 3.001070737838745
+        },
+        "flat_control": {
+          "windows": 43,
+          "drift_cm_p50": 1.4744704961776733,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 1.6819473505020142
+        },
+        "kneel": {
+          "windows": 35,
+          "drift_cm_p50": 0.2230910360813141,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 0.6717529892921448
+        },
+        "known_dimension_support": {
+          "windows": 20,
+          "drift_cm_p50": 0.9362934231758118,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 1.218448281288147
+        },
+        "prone": {
+          "windows": 13,
+          "drift_cm_p50": 0.1574186235666275,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 0.7433419227600098
+        },
+        "quadruped": {
+          "windows": 90,
+          "drift_cm_p50": 1.1156450510025024,
+          "penetration_frames": 0.0,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 0.8769903182983398
+        },
+        "wall_contact": {
+          "windows": 7,
+          "drift_cm_p50": 0.41861847043037415,
+          "penetration_frames": 0.0446428582072258,
+          "source_penetration_frames": 0.0,
+          "pelvis_cm": 3.445481538772583
+        }
+      }
+    },
+    "duplicate_final_preserved": true
+  },
+  "plan_section4_gates": {
+    "numeric_and_ranks": {
+      "passed": true
+    },
+    "one_step": {
+      "passed": true,
+      "improvement_fraction": 0.45948956030861987,
+      "model_cm": 0.50709068775177,
+      "persistence_cm": 0.9381700158119202
+    },
+    "root_drift": {
+      "passed": true,
+      "p50_cm": 0.8877002000808716
+    },
+    "penetration": {
+      "passed": true,
+      "generated_fraction": 0.001953125,
+      "source_fraction": 0.0,
+      "limit_fraction": 0.005
+    },
+    "planted_sole_speed": {
+      "passed": false,
+      "generated_mps": 0.17443691194057465,
+      "source_mps": 0.01206144131720066,
+      "limit_mps": 0.068092161975801
+    },
+    "pelvis_height": {
+      "passed": true,
+      "error_cm": 1.472524881362915
+    }
+  },
+  "all_quality_gates_passed": false,
+  "matching_updates": [
+    {
+      "update": 1750,
+      "v1_one_step_body_cm": 0.9863906502723694,
+      "v2_one_step_body_cm": 0.5351303815841675,
+      "v1_persistence_body_cm": 0.9381700158119202,
+      "v2_persistence_body_cm": 0.9381700158119202,
+      "v1_closed_loop_root_drift_cm_p50": 1.230596899986267,
+      "v2_closed_loop_root_drift_cm_p50": 1.0625916719436646,
+      "v1_closed_loop_root_drift_cm_p90": 3.581331729888916,
+      "v2_closed_loop_root_drift_cm_p90": 3.4948275089263916,
+      "v1_closed_loop_joint_penetration_over_2cm_frames": 0.3876953125,
+      "v2_closed_loop_joint_penetration_over_2cm_frames": 0.060546875,
+      "v1_closed_loop_pelvis_height_error_cm": 2.1841351985931396,
+      "v2_closed_loop_pelvis_height_error_cm": 1.952518105506897
+    },
+    {
+      "update": 2000,
+      "v1_one_step_body_cm": 0.7909082174301147,
+      "v2_one_step_body_cm": 0.533043622970581,
+      "v1_persistence_body_cm": 0.9381700158119202,
+      "v2_persistence_body_cm": 0.9381700158119202,
+      "v1_closed_loop_root_drift_cm_p50": 1.1112637519836426,
+      "v2_closed_loop_root_drift_cm_p50": 1.3528759479522705,
+      "v1_closed_loop_root_drift_cm_p90": 3.870840311050415,
+      "v2_closed_loop_root_drift_cm_p90": 3.3429906368255615,
+      "v1_closed_loop_joint_penetration_over_2cm_frames": 0.126708984375,
+      "v2_closed_loop_joint_penetration_over_2cm_frames": 0.05224609375,
+      "v1_closed_loop_pelvis_height_error_cm": 2.465324640274048,
+      "v2_closed_loop_pelvis_height_error_cm": 1.9653327465057373
+    },
+    {
+      "update": 2500,
+      "v1_one_step_body_cm": 0.7241286039352417,
+      "v2_one_step_body_cm": 0.5393826365470886,
+      "v1_persistence_body_cm": 0.9381700158119202,
+      "v2_persistence_body_cm": 0.9381700158119202,
+      "v1_closed_loop_root_drift_cm_p50": 0.9267480969429016,
+      "v2_closed_loop_root_drift_cm_p50": 1.162503719329834,
+      "v1_closed_loop_root_drift_cm_p90": 2.9319615364074707,
+      "v2_closed_loop_root_drift_cm_p90": 3.4535844326019287,
+      "v1_closed_loop_joint_penetration_over_2cm_frames": 0.047607421875,
+      "v2_closed_loop_joint_penetration_over_2cm_frames": 0.00390625,
+      "v1_closed_loop_pelvis_height_error_cm": 1.605430245399475,
+      "v2_closed_loop_pelvis_height_error_cm": 1.6732113361358643
+    },
+    {
+      "update": 3000,
+      "v1_one_step_body_cm": 0.6639965772628784,
+      "v2_one_step_body_cm": 0.50709068775177,
+      "v1_persistence_body_cm": 0.9381700158119202,
+      "v2_persistence_body_cm": 0.9381700158119202,
+      "v1_closed_loop_root_drift_cm_p50": 0.8524075150489807,
+      "v2_closed_loop_root_drift_cm_p50": 0.8877002000808716,
+      "v1_closed_loop_root_drift_cm_p90": 2.513716459274292,
+      "v2_closed_loop_root_drift_cm_p90": 2.6220781803131104,
+      "v1_closed_loop_joint_penetration_over_2cm_frames": 0.015380859375,
+      "v2_closed_loop_joint_penetration_over_2cm_frames": 0.001953125,
+      "v1_closed_loop_pelvis_height_error_cm": 1.2776304483413696,
+      "v2_closed_loop_pelvis_height_error_cm": 1.472524881362915
+    }
+  ],
+  "ledger": {
+    "new_pilot": {
+      "controller_global_updates": 1500,
+      "windows": 1536000,
+      "training_generated_frames": 14336000,
+      "mixed_teacher_one_step_windows": 1536000,
+      "controller_rank_optimizer_steps": 3000,
+      "critic_global_updates": 1500,
+      "phases": {
+        "loop:4": {
+          "controller_global_updates": 500,
+          "windows": 512000,
+          "training_generated_frames": 2048000,
+          "mixed_teacher_one_step_windows": 512000
+        },
+        "loop:8": {
+          "controller_global_updates": 500,
+          "windows": 512000,
+          "training_generated_frames": 4096000,
+          "mixed_teacher_one_step_windows": 512000
+        },
+        "loop:16": {
+          "controller_global_updates": 500,
+          "windows": 512000,
+          "training_generated_frames": 8192000,
+          "mixed_teacher_one_step_windows": 512000
+        }
+      }
+    },
+    "new_smoke": {
+      "controller_global_updates": 2,
+      "windows": 64,
+      "training_generated_frames": 256,
+      "mixed_teacher_one_step_windows": 64,
+      "controller_rank_optimizer_steps": 2,
+      "critic_global_updates": 2,
+      "phases": {
+        "loop:4": {
+          "controller_global_updates": 2,
+          "windows": 64,
+          "training_generated_frames": 256,
+          "mixed_teacher_one_step_windows": 64
+        }
+      }
+    },
+    "inherited_teacher": {
+      "controller_global_updates": 1500,
+      "windows": 1536000,
+      "training_generated_frames": 0
+    },
+    "native_checkpoint_update": 3000,
+    "native_checkpoint_mixed_exposures": 15872000,
+    "native_exposures_note": "Inherited teacher windows plus new loop-generated frames; mixed teacher forward is counted separately.",
+    "pilot_evaluation_generated_frames": 28672,
+    "reference_evaluation_generated_frames": 8192,
+    "smoke_evaluation_generated_frames": 3072,
+    "review_generated_frames": 96
+  },
+  "review": {
+    "checkpoint_update": 3000,
+    "checkpoint_sha256": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+    "device": "cpu",
+    "rendered_windows": 6,
+    "generated_diagnostic_frames": 96,
+    "source_and_scene_modified": false,
+    "source_joints_equal_v1": true,
+    "selection": {
+      "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+      "selected_utc": "2026-10-25T09:17:17.869101+00:00",
+      "rule": "Filename SHA-256 order within group; distinct actors within each pair; middle valid window; no model metrics used.",
+      "validation_stairs_clips": 0,
+      "validation_box_support_clips": 0,
+      "box_category": "known_dimension_support",
+      "windows": [
+        {
+          "filename": "turn_jog_270_R_003__A255",
+          "group": "flat_control",
+          "actor": "A255",
+          "dataset_index": 8946,
+          "start_frame": 40,
+          "variant_array_index": 0,
+          "split": "validation"
+        },
+        {
+          "filename": "walk_sideway_045_stop_002__A030",
+          "group": "flat_control",
+          "actor": "A030",
+          "dataset_index": 9684,
+          "start_frame": 60,
+          "variant_array_index": 3,
+          "split": "validation"
+        },
+        {
+          "filename": "item_pick_up_crouch_walk_R_003__A412",
+          "group": "crouch",
+          "actor": "A412",
+          "dataset_index": 3720,
+          "start_frame": 32,
+          "variant_array_index": 0,
+          "split": "validation"
+        },
+        {
+          "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+          "group": "prone",
+          "actor": "A129",
+          "dataset_index": 12,
+          "start_frame": 48,
+          "variant_array_index": 1,
+          "split": "validation"
+        },
+        {
+          "filename": "come_up_50cm_box_R_002__A224",
+          "group": "known_dimension_support",
+          "actor": "A224",
+          "dataset_index": 660,
+          "start_frame": 24,
+          "variant_array_index": 0,
+          "split": "validation"
+        },
+        {
+          "filename": "come_up_50cm_box_R_003__A164",
+          "group": "known_dimension_support",
+          "actor": "A164",
+          "dataset_index": 859,
+          "start_frame": 24,
+          "variant_array_index": 2,
+          "split": "validation"
+        }
+      ]
+    },
+    "windows": [
+      {
+        "filename": "turn_jog_270_R_003__A255",
+        "group": "flat_control",
+        "actor": "A255",
+        "dataset_index": 8946,
+        "start_frame": 40,
+        "variant_array_index": 0,
+        "split": "validation",
+        "png": "turn_jog_270_R_003__A255__s40.png",
+        "frames": 16,
+        "boxes": 6,
+        "root_drift_cm_end": 2.6527924463152885,
+        "pelvis_height_error_cm": 1.8717531114816666
+      },
+      {
+        "filename": "walk_sideway_045_stop_002__A030",
+        "group": "flat_control",
+        "actor": "A030",
+        "dataset_index": 9684,
+        "start_frame": 60,
+        "variant_array_index": 3,
+        "split": "validation",
+        "png": "walk_sideway_045_stop_002__A030__s60.png",
+        "frames": 16,
+        "boxes": 2,
+        "root_drift_cm_end": 2.165597677230835,
+        "pelvis_height_error_cm": 1.3279445469379425
+      },
+      {
+        "filename": "item_pick_up_crouch_walk_R_003__A412",
+        "group": "crouch",
+        "actor": "A412",
+        "dataset_index": 3720,
+        "start_frame": 32,
+        "variant_array_index": 0,
+        "split": "validation",
+        "png": "item_pick_up_crouch_walk_R_003__A412__s32.png",
+        "frames": 16,
+        "boxes": 4,
+        "root_drift_cm_end": 0.7438401225954294,
+        "pelvis_height_error_cm": 1.2883145362138748
+      },
+      {
+        "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+        "group": "prone",
+        "actor": "A129",
+        "dataset_index": 12,
+        "start_frame": 48,
+        "variant_array_index": 1,
+        "split": "validation",
+        "png": "change_idle_crawl_to_idle_crawl_right_001__A129__s48.png",
+        "frames": 16,
+        "boxes": 3,
+        "root_drift_cm_end": 0.31396900303661823,
+        "pelvis_height_error_cm": 1.0699979029595852
+      },
+      {
+        "filename": "come_up_50cm_box_R_002__A224",
+        "group": "known_dimension_support",
+        "actor": "A224",
+        "dataset_index": 660,
+        "start_frame": 24,
+        "variant_array_index": 0,
+        "split": "validation",
+        "png": "come_up_50cm_box_R_002__A224__s24.png",
+        "frames": 16,
+        "boxes": 4,
+        "root_drift_cm_end": 1.7162347212433815,
+        "pelvis_height_error_cm": 1.8236584961414337
+      },
+      {
+        "filename": "come_up_50cm_box_R_003__A164",
+        "group": "known_dimension_support",
+        "actor": "A164",
+        "dataset_index": 859,
+        "start_frame": 24,
+        "variant_array_index": 2,
+        "split": "validation",
+        "png": "come_up_50cm_box_R_003__A164__s24.png",
+        "frames": 16,
+        "boxes": 4,
+        "root_drift_cm_end": 1.8728047609329224,
+        "pelvis_height_error_cm": 0.520632416009903
+      }
+    ]
+  },
+  "checkpoint": {
+    "path": "runs/tmt_pilot_v2/latest.pt",
+    "bytes": 22342389,
+    "sha256": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+    "state": {
+      "update": 3000,
+      "exposures": 15872000,
+      "phase_index": 4,
+      "phase_update": 0
+    }
+  },
+  "measurement_helpers_sha256": {
+    "measure_training.py": "e443f99a6842b3a5f7a9ae3301ac35f6c59152038668ec9324ac09c30998be55",
+    "run_stage.py": "1c1edab53b5aea483d01725da6d739339587526a252b3a261647a1455de45866",
+    "evaluate_reference.py": "3a2acc2c022512fd25df40cc27844d56726c5033cfd95f0e8d6c1311c61224aa",
+    "render_review.py": "cf14852c50ad569c488ac1872f2c975928deab23078e7964d80f3da6adcc2034",
+    "package_results.py": "1318160b4bb712543b9a774b8a4daf7937bb682c5b2169500b82d43f82685dd2"
+  },
+  "resume_sampler_behavior": "The approved trainer resumes optimizer/scheduler state and starts its sampler epoch counter at zero.",
+  "deployment": "not_performed"
+}

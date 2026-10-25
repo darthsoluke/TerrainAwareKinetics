@@ -28,6 +28,10 @@
 
 [ee4db6f续跑](terrain_controller_pilot_a100_20261024/continuation_ee4db6f/README.md)通过84项测试，resume正确达到12次更新。双卡完成运行，但2个checkpoint文件和两rank参数不一致使检查未通过；旧记录保留，新证据追加发布。
 
+随后完成的[v1正式pilot](terrain_controller_pilot_a100_20261024/pilot_be5fc1f/README.md)包含3,000次更新、14行评估和六窗口对照图，质量验收通过3/6。
+
+[v2正式pilot](terrain_controller_pilot_v2_a100_20261025/README.md)新增1,500次闭环更新，引入混合一步监督及更强穿透代价，验收通过5/6。提供源动作基线、最终分组表和匹配更新对照；着地脚速度仍未通过，模型未部署。
+
 ## A/B/C 架构对照
 
 这些JSON只包含小规模A/B/C实验的聚合结果和版本信息，没有动作轨迹、场景或权重。
