@@ -1,0 +1,420 @@
+{
+  "status": "stopped_at_resume_gate",
+  "source_commit": "9785c012cfd51b113fd8dc245034a6e46f98d36f",
+  "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+  "packages": {
+    "torch": "2.5.1+cu124",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pytz": "2025.2",
+    "tzdata": "2025.2",
+    "pytest": "9.1.1"
+  },
+  "tests": {
+    "tests": 82,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 82
+  },
+  "tests_last_line": "82 passed, 11 warnings in 7.96s",
+  "transfer": {
+    "source_files": 5652,
+    "source_bytes": 1711809448,
+    "archive_bytes": 1399488336,
+    "archive_sha256": "2998ba8131aba43976083cb02c6d01a2186e9d26e955f57abefa7b8923c4872c",
+    "files_manifest_sha256": "5aaa9e1ada746ad02d61a5c499ba896213f52fba0d75200e7104ec90d4497e5a",
+    "source_dataset_manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+    "pack_seconds": 45.502,
+    "verified_files": 5652,
+    "mismatches": [],
+    "destination_bytes": 1711809448,
+    "destination_dataset_manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+    "receive_verify_seconds": 50.221
+  },
+  "selected_gpu_indices": [
+    0,
+    1
+  ],
+  "smokes": {
+    "a": {
+      "stage": "a",
+      "source_commit": "9785c012cfd51b113fd8dc245034a6e46f98d36f",
+      "command": [
+        "timeout",
+        "--signal=TERM",
+        "--kill-after=15",
+        "750",
+        "${PFNN_PROJECT}/env/bin/python",
+        "runs/tmt_pilot_coord/measure_training.py",
+        "a",
+        "--dataset",
+        "runs/bones_env_v1",
+        "--output",
+        "runs/tmt_smoke_1gpu",
+        "--phases",
+        "teacher:5",
+        "loop:4:5",
+        "--batch",
+        "16",
+        "--max-hours",
+        "0.2",
+        "--log-every",
+        "1",
+        "--eval-batch",
+        "32",
+        "--eval-every",
+        "5"
+      ],
+      "world_size": 1,
+      "gpu_indices": [
+        0
+      ],
+      "exit_code": 0,
+      "wall_seconds": 13.109,
+      "passed": true,
+      "state": {
+        "update": 10,
+        "exposures": 400,
+        "phase_index": 2,
+        "phase_update": 0
+      },
+      "expected_update": 10,
+      "expected_exposures": 400,
+      "finite": true,
+      "checkpoint_files": [
+        "latest.pt",
+        "phase0_teacher.pt",
+        "phase1_loop4.pt"
+      ],
+      "rank_reports": [
+        {
+          "stage": "a",
+          "rank": 0,
+          "exit_code": 0,
+          "wall_seconds": 7.681803028972354,
+          "updates_measured": 10,
+          "update_timings": [
+            {
+              "update": 1,
+              "phase": "teacher:0",
+              "seconds": 0.27917935798177496
+            },
+            {
+              "update": 2,
+              "phase": "teacher:0",
+              "seconds": 0.07277591997990385
+            },
+            {
+              "update": 3,
+              "phase": "teacher:0",
+              "seconds": 0.07206056796712801
+            },
+            {
+              "update": 4,
+              "phase": "teacher:0",
+              "seconds": 0.07016039796872064
+            },
+            {
+              "update": 5,
+              "phase": "teacher:0",
+              "seconds": 0.06747491197893396
+            },
+            {
+              "update": 6,
+              "phase": "loop:4",
+              "seconds": 0.339143177960068
+            },
+            {
+              "update": 7,
+              "phase": "loop:4",
+              "seconds": 0.30116165400249884
+            },
+            {
+              "update": 8,
+              "phase": "loop:4",
+              "seconds": 0.3178224790026434
+            },
+            {
+              "update": 9,
+              "phase": "loop:4",
+              "seconds": 0.31757324101636186
+            },
+            {
+              "update": 10,
+              "phase": "loop:4",
+              "seconds": 0.3256463290308602
+            }
+          ],
+          "error": null,
+          "measurement": "Forward/loss through the model optimizer step; CUDA synchronized at both ends. Evaluation and loading excluded.",
+          "peak_allocated_bytes": 136466432,
+          "capacity_bytes": 85100068864,
+          "gpu_name": "NVIDIA A100 80GB PCIe",
+          "phase_seconds_per_update": {
+            "loop:4": {
+              "updates": 5,
+              "mean": 0.32026937620248647,
+              "median": 0.3178224790026434,
+              "max": 0.339143177960068
+            },
+            "teacher:0": {
+              "updates": 5,
+              "mean": 0.11233023117529228,
+              "median": 0.07206056796712801,
+              "max": 0.27917935798177496
+            }
+          }
+        }
+      ],
+      "final_progress": {
+        "final": true,
+        "stopped": "complete",
+        "update": 10,
+        "exposures": 400,
+        "phase_index": 2,
+        "phase_update": 0,
+        "elapsed_s": 7.3
+      },
+      "evaluations": [
+        {
+          "update": 0,
+          "exposures": 0,
+          "one_step_body_cm": 0.9286593794822693,
+          "persistence_body_cm": 0.9286592602729797,
+          "closed_loop_root_drift_cm_p50": 13.466064453125,
+          "closed_loop_root_drift_cm_p90": 52.799137115478516,
+          "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+          "closed_loop_pelvis_height_error_cm": 2.6959128379821777,
+          "closed_loop_terms": {
+            "command_velocity": 0.41770368814468384,
+            "command_heading": 0.02584994025528431,
+            "penetration": 1.719061870630867e-08,
+            "support": 0.005321738310158253,
+            "skating": 7.022935618467008e-12,
+            "smoothness": 0.4182984232902527
+          }
+        },
+        {
+          "update": 5,
+          "exposures": 80,
+          "one_step_body_cm": 0.9590571522712708,
+          "persistence_body_cm": 0.9286592602729797,
+          "closed_loop_root_drift_cm_p50": 13.413723945617676,
+          "closed_loop_root_drift_cm_p90": 52.74578857421875,
+          "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+          "closed_loop_pelvis_height_error_cm": 2.6969406604766846,
+          "closed_loop_terms": {
+            "command_velocity": 0.41730037331581116,
+            "command_heading": 0.025811009109020233,
+            "penetration": 2.3254050063314935e-07,
+            "support": 0.0052006663754582405,
+            "skating": 0.0001594276400282979,
+            "smoothness": 0.41553357243537903
+          }
+        },
+        {
+          "update": 10,
+          "exposures": 400,
+          "one_step_body_cm": 0.9758930802345276,
+          "persistence_body_cm": 0.9286592602729797,
+          "closed_loop_root_drift_cm_p50": 13.390214920043945,
+          "closed_loop_root_drift_cm_p90": 52.71173858642578,
+          "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+          "closed_loop_pelvis_height_error_cm": 2.7007393836975098,
+          "closed_loop_terms": {
+            "command_velocity": 0.4170036017894745,
+            "command_heading": 0.025827448815107346,
+            "penetration": 4.01225548785078e-07,
+            "support": 0.004865102469921112,
+            "skating": 0.00022121281654108316,
+            "smoothness": 0.41435059905052185
+          }
+        },
+        {
+          "update": 10,
+          "exposures": 400,
+          "one_step_body_cm": 0.9758930802345276,
+          "persistence_body_cm": 0.9286592602729797,
+          "closed_loop_root_drift_cm_p50": 13.390214920043945,
+          "closed_loop_root_drift_cm_p90": 52.71173858642578,
+          "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+          "closed_loop_pelvis_height_error_cm": 2.7007393836975098,
+          "closed_loop_terms": {
+            "command_velocity": 0.4170036017894745,
+            "command_heading": 0.025827448815107346,
+            "penetration": 4.01225548785078e-07,
+            "support": 0.004865102469921112,
+            "skating": 0.00022121281654108316,
+            "smoothness": 0.41435059905052185
+          }
+        }
+      ]
+    },
+    "b": {
+      "stage": "b",
+      "source_commit": "9785c012cfd51b113fd8dc245034a6e46f98d36f",
+      "command": [
+        "timeout",
+        "--signal=TERM",
+        "--kill-after=15",
+        "750",
+        "${PFNN_PROJECT}/env/bin/python",
+        "runs/tmt_pilot_coord/measure_training.py",
+        "b",
+        "--dataset",
+        "runs/bones_env_v1",
+        "--output",
+        "runs/tmt_smoke_resume",
+        "--phases",
+        "teacher:5",
+        "loop:4:7",
+        "--batch",
+        "16",
+        "--max-hours",
+        "0.2",
+        "--log-every",
+        "1",
+        "--eval-batch",
+        "32",
+        "--eval-every",
+        "5",
+        "--resume",
+        "runs/tmt_smoke_1gpu/latest.pt"
+      ],
+      "world_size": 1,
+      "gpu_indices": [
+        0
+      ],
+      "exit_code": 0,
+      "wall_seconds": 8.262,
+      "passed": false,
+      "state": {
+        "update": 10,
+        "exposures": 400,
+        "phase_index": 2,
+        "phase_update": 0
+      },
+      "expected_update": 12,
+      "expected_exposures": 528,
+      "finite": true,
+      "checkpoint_files": [
+        "latest.pt"
+      ],
+      "rank_reports": [
+        {
+          "stage": "b",
+          "rank": 0,
+          "exit_code": 0,
+          "wall_seconds": 3.025984366016928,
+          "updates_measured": 0,
+          "update_timings": [],
+          "error": null,
+          "measurement": "Forward/loss through the model optimizer step; CUDA synchronized at both ends. Evaluation and loading excluded.",
+          "peak_allocated_bytes": 100966912,
+          "capacity_bytes": 85100068864,
+          "gpu_name": "NVIDIA A100 80GB PCIe",
+          "phase_seconds_per_update": {}
+        }
+      ],
+      "final_progress": {
+        "final": true,
+        "stopped": "complete",
+        "update": 10,
+        "exposures": 400,
+        "phase_index": 2,
+        "phase_update": 0,
+        "elapsed_s": 2.6
+      },
+      "evaluations": [
+        {
+          "update": 10,
+          "exposures": 400,
+          "one_step_body_cm": 0.9758930802345276,
+          "persistence_body_cm": 0.9286592602729797,
+          "closed_loop_root_drift_cm_p50": 13.390214920043945,
+          "closed_loop_root_drift_cm_p90": 52.71173858642578,
+          "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+          "closed_loop_pelvis_height_error_cm": 2.7007393836975098,
+          "closed_loop_terms": {
+            "command_velocity": 0.4170036017894745,
+            "command_heading": 0.025827448815107346,
+            "penetration": 4.01225548785078e-07,
+            "support": 0.004865102469921112,
+            "skating": 0.00022121281654108316,
+            "smoothness": 0.41435059905052185
+          }
+        }
+      ],
+      "resume_initial_state": {
+        "update": 10,
+        "exposures": 400,
+        "phase_index": 2,
+        "phase_update": 0
+      },
+      "new_updates": 0,
+      "new_exposures": 0
+    }
+  },
+  "resume_weights_identical": {
+    "model": true,
+    "critic": true
+  },
+  "checkpoints_on_a100": [
+    {
+      "path": "runs/tmt_smoke_1gpu/latest.pt",
+      "bytes": 22340661,
+      "sha256": "578fa4ef6dbb6ac4175b9e987126583e10168d3f39cdc9fdf09828f4f76630cf"
+    },
+    {
+      "path": "runs/tmt_smoke_1gpu/phase0_teacher.pt",
+      "bytes": 20105771,
+      "sha256": "17c4c8bac81176bf8e28d203d7554d25768015943590bbf7e05acb36325c1180"
+    },
+    {
+      "path": "runs/tmt_smoke_1gpu/phase1_loop4.pt",
+      "bytes": 22344215,
+      "sha256": "d2ce2d7aa88981adfc9162c7928b45ee7b3fed657593ba6a38c8201d99ff1458"
+    },
+    {
+      "path": "runs/tmt_smoke_resume/latest.pt",
+      "bytes": 22342325,
+      "sha256": "80ca8d35de4d26ad5a56c3a2dd8597bd6a607ddcd3d592a28bf9883cf3c2065c"
+    }
+  ],
+  "ledger": {
+    "preflight_updates": 10,
+    "preflight_critic_updates": 5,
+    "resume_additional_critic_updates": 0,
+    "teacher_windows": 80,
+    "loop_windows": 80,
+    "windows": 160,
+    "training_generated_frames": 320,
+    "script_exposures": 400,
+    "validation_evaluations": 5,
+    "validation_window_visits": 160,
+    "validation_rollout_frames": 2560,
+    "validation_one_step_frames": 160,
+    "pilot_updates": 0,
+    "pilot_critic_updates": 0,
+    "pilot_windows": 0,
+    "pilot_generated_frames": 0
+  },
+  "remaining_stages": {
+    "two_gpu_smoke": "not_run",
+    "memory_h16_batch512": "not_run",
+    "pilot": "not_started",
+    "six_validation_contact_sheets": "not_rendered"
+  },
+  "module_sha256": {
+    "scripts/train_terrain_controller.py": "d085ebb4e5ee54429510baf978a81e3e03c7a7ae7b5b967f46df31ef8c5c7b95",
+    "motionbricks/controller/training.py": "9d9e1be586c34439537d024349b0b3b5ac64cb0c1cafbbe224d5ec64af303901",
+    "motionbricks/controller/closed_loop.py": "b4bb8622d47991ff8e69f3ad5a5acad4a839c27ef353f4e5a6971ca096984990",
+    "motionbricks/controller/terrain_motion_transformer.py": "23420bc19047a2572c86992a813c2dac121b3ad7f818f1fa7e5a452630d1ab6c",
+    "motionbricks/data/bones_env_dataset.py": "6094e9d426b940162d2d18d9457436de39b7e461b7f2f5a1a359e7505ff974ee"
+  },
+  "measurement_helpers_sha256": {
+    "measure_training.py": "a2ce72c7e3c5b1254083e24c35469adad5c0f5cf78f80574e4fb99e41794dcbd",
+    "run_smoke.py": "3ad1e8d9a95d6d03e3f120c30e9144ca507437c1ec7e75370e57883a85e1bbd8"
+  }
+}

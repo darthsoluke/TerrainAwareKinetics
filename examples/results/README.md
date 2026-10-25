@@ -24,7 +24,7 @@
 
 [第6步训练集构建与审计](bones_env_v1_20261024/README.md) 提供默认E集5,650条及单独E+G扩展集6,543条的分组/划分统计。81项测试通过，包含修复后的controller SDF对照；GPU3审计8,192个窗口，未进行训练。
 
-[第7步A100 pilot准备](terrain_controller_pilot_a100_20261024/README.md)停在82项测试门槛：81通过、1项因缺少pytz失败，保留完整traceback。数据迁移和GPU训练尚未启动，更新账本为零。
+[第7步A100 pilot预检](terrain_controller_pilot_a100_20261024/README.md)已完成依赖修复、82项测试、5,652文件迁移校验和10次单卡更新。resume未增加预期的两次更新，后续阶段停止；提供评估表、预检曲线和独立账本，正式pilot尚未启动。
 
 ## A/B/C 架构对照
 
