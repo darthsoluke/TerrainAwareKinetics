@@ -152,3 +152,130 @@ critic另执行了5次优化器更新。读取checkpoint确认，控制器optimi
 checkpoint和原始日志留在A100的`runs/tmt_smoke_1gpu/`、`runs/tmt_smoke_resume/`、`runs/tmt_pilot_coord/`。公共[结果目录](../../examples/results/terrain_controller_pilot_a100_20261024/README.md)仅发布报告、评估表和预检曲线；checkpoint只记录路径、大小与SHA-256。数据传输和结果取回均使用私有Drive。
 
 发布前检查源码哈希未改变、迁移总数一致、resume权重相等证据、账本、PNG、TSV列宽，以及仓库链接和所有变更记录的UTF-8/U+FFFD。
+
+## 9. ee4db6f 续跑
+
+以下为**2026-10-25**的追加记录，上文旧失败及其结果文件原样保留。新执行源码固定为`ee4db6f40bcd5dbe50ff56292967b5a40d8c0d2e`。
+
+**84项测试和resume2通过；双卡冒烟完成运行，但检查未通过，显存预检与正式pilot未启动。** 双卡输出了2个checkpoint文件，而要求为1个；另外，两个rank从不同的模型参数开始训练，结束时仍不一致。原始checkpoint、日志和rank记录留在A100。
+
+### 9.1 更新、测试与复用
+
+A100 checkout经`git pull --ff-only origin main`更新到上述版本，独立依赖目录、Torch2.5.1+cu124与Kimodo沿用已验证环境。运行原七个测试文件加新增的`tests/test_train_terrain_controller.py`：
+
+```bash
+$PY -m pytest tests/test_bones_env_dataset.py tests/test_terrain_controller.py \
+  tests/test_skeleton_ray_sampler.py tests/test_bones_terrain_fit.py \
+  tests/test_bones_terrain_scene.py tests/test_bones_terrain_screen.py \
+  tests/test_bones_terrain_survey.py tests/test_train_terrain_controller.py \
+  -q --full-trace --color=no --junitxml=runs/tmt_pilot_coord_v2/tests.xml
+```
+
+结果为**`84 passed, 11 warnings in 8.13s`**，0失败、0跳过。
+
+直接复用已通过的5,652文件迁移及`runs/tmt_smoke_1gpu/latest.pt`，没有重传数据或重跑单卡冒烟。再次读取旧checkpoint的SHA-256，与先前记录一致。每个新GPU任务前重新扫描全部GPU的UUID、显存、利用率与计算PID，锁定空闲的物理**GPU0和GPU1**；resume2仅使用GPU0。
+
+### 9.2 Resume2通过
+
+```bash
+$PY scripts/train_terrain_controller.py --dataset runs/bones_env_v1 \
+  --output runs/tmt_smoke_resume2 --phases teacher:5 loop:4:7 \
+  --resume runs/tmt_smoke_1gpu/latest.pt \
+  --batch 16 --max-hours 0.2 --eval-every 5 --log-every 1 --eval-batch 32
+```
+
+日志记录的恢复位置完全符合要求：
+
+```json
+{"resumed_at_update": 10, "phase_index": 1, "phase_update": 5}
+```
+
+最终**update=12、exposures=528**，较旧单卡冒烟新增**2次控制器更新、2次critic更新、32个窗口、128个H=4生成帧**。退出码0，外层耗时9.532秒，损失与评估均有限。
+
+### 9.3 双卡运行与检查
+
+```bash
+torchrun --standalone --nnodes 1 --nproc_per_node 2 \
+  scripts/train_terrain_controller.py --dataset runs/bones_env_v1 \
+  --output runs/tmt_smoke_2gpu --phases teacher:5 \
+  --batch 64 --max-hours 0.2 --log-every 1 --eval-batch 64
+```
+
+实际通过只记录计时、参数摘要和保存事件的包装器执行同一训练入口与参数。没有改变损失、随机种子、梯度平均或保存逻辑。外层耗时**13.458秒**，两个rank均退出0、各完成5次控制器更新；全局batch128，累计640窗口，exposures=640。
+
+| Rank | 退出码 | 更新 | 保存事件 |
+| --- | --- | --- | --- |
+| 0 | 0 | 5 | phase0_teacher.pt, latest.pt |
+| 1 | 0 | 5 | 无 |
+
+只有rank0写文件，实际文件为`phase0_teacher.pt`与`latest.pt`。原入口在阶段结束时保存前者，最终再次保存后者，分别见冻结源码的[阶段保存](https://github.com/darthsoluke/TerrainAwareKinetics/blob/ee4db6f40bcd5dbe50ff56292967b5a40d8c0d2e/scripts/train_terrain_controller.py#L240)与[最终保存](https://github.com/darthsoluke/TerrainAwareKinetics/blob/ee4db6f40bcd5dbe50ff56292967b5a40d8c0d2e/scripts/train_terrain_controller.py#L243)。因此“两个rank完成”通过，“恰好一个checkpoint文件”未通过。
+
+另记录了每个rank在首个训练步骤之前、训练结束之后的逐参数SHA-256。摘要计算位于更新计时区间之外，没有新增训练步骤。
+
+| 时点 | 控制器不同参数张量 | Critic不同参数张量 |
+| --- | --- | --- |
+| 训练前 | 72/134 | 6/6 |
+| 训练后 | 72/134 | 6/6 |
+
+控制器初始化摘要为：
+
+- rank0：`bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18`
+- rank1：`fc1a16fd712ef5c7146d32a97182149f3af6afcef9e8796a17d26728a660eb8a`
+
+不同的参数包括`age`、`command_in.0.weight`、`command_in.0.bias`、`command_in.2.weight`、`command_in.2.bias`和`contact_head.bias`；完整名称与摘要见[续跑报告](../../examples/results/terrain_controller_pilot_a100_20261024/continuation_ee4db6f/report.json)。这是额外的多卡一致性诊断。
+
+源码[第97行](https://github.com/darthsoluke/TerrainAwareKinetics/blob/ee4db6f40bcd5dbe50ff56292967b5a40d8c0d2e/scripts/train_terrain_controller.py#L97)使用`torch.manual_seed(args.seed + rank)`初始化各rank；随后只在[梯度平均](https://github.com/darthsoluke/TerrainAwareKinetics/blob/ee4db6f40bcd5dbe50ff56292967b5a40d8c0d2e/scripts/train_terrain_controller.py#L148)中all-reduce，没有同步初始模型或critic参数。实测两rank的模型从不同参数开始，5次平均梯度更新之后仍不同。
+
+本次不修改训练实现或保存规则。按预检失败即停止的条件，未进入H=16/batch512显存检查，未选择pilot的512/256批量，也未启动`runs/tmt_pilot_v1`。
+
+### 9.4 每阶段耗时与显存
+
+| 运行 | Rank | 阶段 | 更新 | 平均秒/更新 | 中位秒/更新 | 峰值MiB |
+| --- | --- | --- | --- | --- | --- | --- |
+| b2 | 0 | loop:4 | 2 | 0.635094 | 0.635094 | 137.267 |
+| c | 0 | teacher:0 | 5 | 0.181422 | 0.090268 | 159.279 |
+| c | 1 | teacher:0 | 5 | 0.181444 | 0.089624 | 104.179 |
+
+峰值来自`torch.cuda.max_memory_allocated`；每卡`total_memory`为85,100,068,864 bytes。表中仅为已经执行的batch16/H=4及batch64/teacher数据，计划要求的batch512/H=16峰值尚无结果。计时从前向和损失开始到模型optimizer.step结束，两端同步CUDA，不含数据加载、评估或参数摘要。
+
+### 9.5 新增评估与曲线
+
+resume2使用固定32窗验证批量，双卡运行使用64窗；下面分别保留各自的全部评估。
+
+| 运行 | 验证batch | 更新 | 一步cm | 保持基线cm | 根漂移P50cm | P90cm | 穿透超2cm帧比例 | 骨盆高度误差cm |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| resume2 | 32 | 12 | 0.976279 | 0.928659 | 13.3894 | 52.7109 | 0 | 2.70091 |
+| two_gpu | 64 | 0 | 0.967278 | 0.967277 | 14.9659 | 58.1541 | 0 | 2.81307 |
+| two_gpu | 64 | 5 | 0.975396 | 0.967277 | 14.9754 | 58.1535 | 0 | 2.81281 |
+
+| 运行/更新 | command_velocity | command_heading | penetration | support | skating | smoothness |
+| --- | --- | --- | --- | --- | --- | --- |
+| resume2/12 | 0.416996 | 0.0258266 | 3.98981e-07 | 0.00485196 | 0.000223669 | 0.414344 |
+| two_gpu/0 | 0.430068 | 0.0216219 | 8.91541e-09 | 0.00455835 | 7.00315e-12 | 0.448475 |
+| two_gpu/5 | 0.429861 | 0.0215963 | 3.56801e-08 | 0.00450555 | 5.50788e-05 | 0.446976 |
+
+完整精度数值见[评估TSV](../../examples/results/terrain_controller_pilot_a100_20261024/continuation_ee4db6f/evaluation_table.tsv)。
+
+![ee4db6f预检续跑曲线](../../examples/results/terrain_controller_pilot_a100_20261024/continuation_ee4db6f/preflight_curves.png)
+
+图表均从已经保存的progress/eval日志生成。没有执行额外闭环推理；六个验证窗口的source/闭环接触图仍未生成。计划第4节正式pilot的数值、一步误差、漂移、穿透、骨盆高度以及滑步/支撑验收均为**未评估**，本次停止位置在预检。
+
+### 9.6 新增及累计账本
+
+| 范围 | 控制器全局迭代 | Critic更新 | 窗口曝光 | 训练闭环生成帧 |
+| --- | ---: | ---: | ---: | ---: |
+| resume2新增 | 2 | 2 | 32 | 128 |
+| 双卡teacher冒烟 | 5 | 0 | 640 | 0 |
+| 本次续跑合计 | **7** | **2** | **672** | **128** |
+| 含旧单卡冒烟的全部预检 | **17** | **7** | **832** | **448** |
+| 正式pilot | **0** | **0** | **0** | **0** |
+
+双卡每一轮按一个全局迭代计，两个rank各执行5次optimizer.step。本次控制器optimizer调用合计12次，全部预检合计22次。`resume2`checkpoint累计update=12；双卡任务是另一个新初始化运行，checkpoint update=5，不把它们描述成单个模型的17次连续训练。
+
+正式3,000更新/3小时预算未启动，没有恢复或增加pilot预算。后续需要处理checkpoint保存数量，并使两rank的控制器和critic初始化一致，再继续剩余预检。
+
+### 9.7 产物与发布
+
+旧记录和旧结果文件保留。新公共结果位于[continuation_ee4db6f](../../examples/results/terrain_controller_pilot_a100_20261024/continuation_ee4db6f/README.md)，包括结构化报告、评估表与预检曲线；原始日志、rank记录和checkpoint保留在A100的`runs/tmt_pilot_coord_v2/`、`runs/tmt_smoke_resume2/`、`runs/tmt_smoke_2gpu/`。结果经私有Drive取回，没有导出checkpoint。
+
+发布前核对新增源码哈希、84项测试、resume计数与日志、双rank保存记录和参数摘要、账本、图表与表格，并确认本节之前的Markdown逐字节不变，再运行仓库及UTF-8/U+FFFD检查。

@@ -26,6 +26,8 @@
 
 [第7步A100 pilot预检](terrain_controller_pilot_a100_20261024/README.md)已完成依赖修复、82项测试、5,652文件迁移校验和10次单卡更新。resume未增加预期的两次更新，后续阶段停止；提供评估表、预检曲线和独立账本，正式pilot尚未启动。
 
+[ee4db6f续跑](terrain_controller_pilot_a100_20261024/continuation_ee4db6f/README.md)通过84项测试，resume正确达到12次更新。双卡完成运行，但2个checkpoint文件和两rank参数不一致使检查未通过；旧记录保留，新证据追加发布。
+
 ## A/B/C 架构对照
 
 这些JSON只包含小规模A/B/C实验的聚合结果和版本信息，没有动作轨迹、场景或权重。
