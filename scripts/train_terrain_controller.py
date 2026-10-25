@@ -94,7 +94,7 @@ def main(argv=None):
     world = dist.get_world_size() if distributed else 1
     device = torch.device("cuda", int(os.environ.get("LOCAL_RANK", 0)))
     torch.cuda.set_device(device)
-    torch.manual_seed(args.seed + rank)
+    torch.manual_seed(args.seed)          # identical initialisation on every rank (also broadcast below)
     started = time.time()
 
     config = {"arguments": {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()},
@@ -145,6 +145,28 @@ def main(argv=None):
             print(json.dumps({"resumed_at_update": state["update"], "phase_index": state["phase_index"],
                               "phase_update": state["phase_update"]}), flush=True)
 
+    def synchronize_parameters():
+        """Copy rank 0's model and critic weights to every rank."""
+        if distributed:
+            for module in (model, critic):
+                for tensor in list(module.parameters()) + list(module.buffers()):
+                    dist.broadcast(tensor.data, src=0)
+
+    def parameters_agree():
+        """Largest difference between ranks of a per-tensor checksum (0 when synchronized)."""
+        if not distributed:
+            return 0.0
+        sums = torch.stack([t.detach().double().sum() for m in (model, critic) for t in m.parameters()])
+        low, high = sums.clone(), sums.clone()
+        dist.all_reduce(low, op=dist.ReduceOp.MIN)
+        dist.all_reduce(high, op=dist.ReduceOp.MAX)
+        return float((high - low).abs().max())
+
+    synchronize_parameters()
+    torch.manual_seed(args.seed + 1000 * rank)   # per-rank randomness from here on (data order, noise)
+    if parameters_agree() != 0.0:
+        raise SystemExit("Model parameters differ between ranks after broadcast")
+
     def average_gradients(parameters):
         if not distributed:
             return
@@ -174,7 +196,8 @@ def main(argv=None):
 
     def run_eval():
         model.eval()
-        record = {"update": state["update"], "exposures": state["exposures"]}
+        record = {"update": state["update"], "exposures": state["exposures"],
+                  "rank_parameter_disagreement": parameters_agree()}
         if rank == 0:
             record.update(evaluate(loop_for(16), eval_batch, horizon=16))
             log("eval.jsonl", record)
