@@ -54,6 +54,8 @@ class RolloutConfig:
     skating_mode: str = "contact"            # "contact" or "geometric"
     skating_height_m: float = 0.03           # geometric: sole within this of a surface counts as planted
     skating_softness_m: float = 0.01
+    contact_source: str = "predicted"        # "predicted" (model's contact) or "source" (source labels where
+                                             # a source frame is a valid target; predicted elsewhere)
     smoothness: float = 0.01
     bootstrap: bool = True
 
@@ -135,6 +137,9 @@ class ClosedLoop:
         new_mask = torch.cat((history_mask[:, 1:], history_mask.new_ones(history_mask.shape[0], 1)), 1)
         return pred, new_history, new_mask, state
 
+    def _contact_index(self, device):
+        return torch.as_tensor(self.rep.indices["foot_contacts"], device=device).long().flatten()
+
     def _planted_weight(self, contact, soles, soles_before, boxes):
         config = self.config
         if config.skating_mode == "contact":
@@ -160,6 +165,14 @@ class ClosedLoop:
         facing = history_after[:, -1, 3:5]
         target_facing = command[:, 2:4]
         contact = pred["contact_logits"].sigmoid()
+        if config.contact_source == "source" and target is not None:
+            # Source heel/toe contacts anchor support and skating to what the actor did; the
+            # model cannot lower these costs by lifting its feet or predicting no contact.
+            labels = target.index_select(-1, self._contact_index(target.device))
+            valid = imitation_mask[:, None]
+            contact = valid * labels + (1 - valid) * contact
+        elif config.contact_source not in ("predicted", "source"):
+            raise ValueError(f"Unknown contact source {config.contact_source!r}")
         soles, soles_before = self.soles(joints), self.soles(joints_before)
         parts = {
             "command_velocity": (velocity_body - command_body[:, :2]).square().sum(-1),

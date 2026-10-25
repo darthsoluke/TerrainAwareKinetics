@@ -247,3 +247,10 @@ def test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch():
     geometric = ClosedLoop(model, rep, names, sampler, table, prober, RolloutConfig(horizon=4, skating_mode="geometric"))
     policy, _, terms = closed_loop_step(geometric, batch, critic, horizon=4)
     assert torch.isfinite(policy) and terms["skating"] >= 0
+    anchored = ClosedLoop(model, rep, names, sampler, table, prober,
+                          RolloutConfig(horizon=4, contact_source="source", support=2500.0, skating=100.0))
+    policy, _, terms = closed_loop_step(anchored, batch, critic, horizon=4)
+    assert torch.isfinite(policy) and terms["support"] >= 0
+    model.train()
+    loss, terms = teacher_step(loop, batch, foot_weight=1.0)
+    assert torch.isfinite(loss) and terms["planted_foot"] >= 0

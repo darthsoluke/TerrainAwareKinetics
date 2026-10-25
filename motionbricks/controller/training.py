@@ -35,7 +35,27 @@ def path_loss(plan, history, targets):
     return F.smooth_l1_loss(proposed / .3, truth / .3)
 
 
-def teacher_step(loop, batch, path_weight=0.25):
+def planted_foot_loss(loop, pred, history, target):
+    """Sole displacement of the emitted frame vs the source's, on the source's contact channels.
+
+    source_one_step_loss compares joints relative to the root and the root displacement
+    separately, so their small errors can combine into a sliding stance foot. This term
+    compares world-frame sole displacement directly where the source foot is planted.
+    """
+    from motionbricks.data.pfnn_frame_actor import advance
+    emitted = advance(loop.rep, history[:, -4:], pred)[:, -1:]
+    joints = posed_joints(loop.rep, emitted)[:, 0]
+    last = posed_joints(loop.rep, history[:, -1:])[:, 0]
+    with torch.no_grad():
+        truth = posed_joints(loop.rep, target[:, None])[:, 0]
+        labels = target.index_select(-1, loop._contact_index(target.device))
+    moved = (loop.soles(joints) - loop.soles(last))[..., [0, 2]]
+    source_moved = (loop.soles(truth) - loop.soles(last))[..., [0, 2]]
+    error = F.smooth_l1_loss(moved / .01, source_moved / .01, reduction="none").sum(-1)
+    return (labels * error).sum() / labels.sum().clamp_min(1.0)
+
+
+def teacher_step(loop, batch, path_weight=0.25, foot_weight=0.0):
     """One-step supervised losses on real history; returns (total, logged terms)."""
     history, mask, boxes = batch["history"], batch["history_mask"], boxes_of(batch)
     command = batch["commands"][:, 0]
@@ -46,6 +66,9 @@ def teacher_step(loop, batch, path_weight=0.25):
     losses = source_one_step_loss(loop.rep, pred, batch["targets"][:, 0], history[:, -4:])
     losses["path"] = path_loss(plan, history, batch["targets"])
     total = losses["total"] + path_weight * losses["path"]
+    if foot_weight > 0:
+        losses["planted_foot"] = planted_foot_loss(loop, pred, history, batch["targets"][:, 0])
+        total = total + foot_weight * losses["planted_foot"]
     return total, {k: float(v.detach()) for k, v in losses.items()}
 
 

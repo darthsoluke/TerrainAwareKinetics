@@ -73,6 +73,11 @@ def main(argv=None):
     parser.add_argument("--penetration-weight", type=float, default=RolloutDefaults.penetration,
                         help="Closed-loop penetration cost weight (cost is weight * depth^2, depth in m)")
     parser.add_argument("--skating-mode", choices=("contact", "geometric"), default="contact")
+    parser.add_argument("--contact-source", choices=("predicted", "source"), default="predicted",
+                        help="Contacts weighting closed-loop support/skating: model prediction or source labels")
+    parser.add_argument("--support-weight", type=float, default=20.0)
+    parser.add_argument("--foot-weight", type=float, default=0.0,
+                        help="Weight of the planted-foot displacement term in every teacher step (0 = off)")
     parser.add_argument("--skating-weight", type=float, default=1.0,
                         help="Closed-loop skating weight (cost is weight * planted sole speed^2, m/s)")
     parser.add_argument("--max-hours", type=float, required=True, help="Hard wall-clock budget")
@@ -137,7 +142,8 @@ def main(argv=None):
         if horizon not in loops:
             loops[horizon] = ClosedLoop(model, rep, names, sampler, table, prober,
                                         RolloutConfig(horizon=max(1, horizon), penetration=args.penetration_weight,
-                                                      skating=args.skating_weight, skating_mode=args.skating_mode),
+                                                      skating=args.skating_weight, skating_mode=args.skating_mode,
+                                                      contact_source=args.contact_source, support=args.support_weight),
                                         sole_offsets=default_sole_offsets(rep_cpu))
         return loops[horizon]
 
@@ -241,12 +247,12 @@ def main(argv=None):
                 batch = {k: (v.to(device, non_blocking=True) if torch.is_tensor(v) else v) for k, v in raw.items()}
                 optimizer.zero_grad(set_to_none=True)
                 if kind == "teacher":
-                    loss, terms = teacher_step(loop, batch)
+                    loss, terms = teacher_step(loop, batch, foot_weight=args.foot_weight)
                     loss.backward()
                 else:
                     loss, critic_loss, terms = closed_loop_step(loop, batch, critic, horizon)
                     if args.teacher_mix > 0:
-                        teacher_loss, teacher_terms = teacher_step(loop_for(16), batch)
+                        teacher_loss, teacher_terms = teacher_step(loop_for(16), batch, foot_weight=args.foot_weight)
                         loss = loss + args.teacher_mix * teacher_loss
                         terms.update({f"teacher_{k}": v for k, v in teacher_terms.items()})
                     loss.backward()
