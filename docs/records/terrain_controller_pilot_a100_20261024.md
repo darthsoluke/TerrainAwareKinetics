@@ -279,3 +279,174 @@ resume2使用固定32窗验证批量，双卡运行使用64窗；下面分别保
 旧记录和旧结果文件保留。新公共结果位于[continuation_ee4db6f](../../examples/results/terrain_controller_pilot_a100_20261024/continuation_ee4db6f/README.md)，包括结构化报告、评估表与预检曲线；原始日志、rank记录和checkpoint保留在A100的`runs/tmt_pilot_coord_v2/`、`runs/tmt_smoke_resume2/`、`runs/tmt_smoke_2gpu/`。结果经私有Drive取回，没有导出checkpoint。
 
 发布前核对新增源码哈希、84项测试、resume计数与日志、双rank保存记录和参数摘要、账本、图表与表格，并确认本节之前的Markdown逐字节不变，再运行仓库及UTF-8/U+FFFD检查。
+
+## 10. be5fc1f pilot
+
+本节记录2026-10-25从双卡冒烟继续执行的结果，源码固定为`be5fc1fc23526200d9ee604a14fea317748499b3`。第1至9节保留原文。本次复用已经通过的5,652文件数据迁移、单卡冒烟和resume2，不重复这些步骤。
+
+**正式pilot完成3,000次更新，耗时47分12.48秒。执行与两卡同步检查通过；计划第4节六项验收中3项通过、3项未通过。** 未通过的是一步误差改善幅度、关节穿透帧比例，以及滑步/支撑联合门中的滑步条件。结果保留，没有追加训练或部署。
+
+### 10.1 更新、测试与数据身份
+
+该版本在初始化后广播模型和critic参数，并在每次评估时记录两rank的参数摘要差异。模型结构、损失权重、学习率、训练阶段和数据划分均按批准计划执行。
+
+```bash
+git pull --ff-only
+$PY -m pytest tests/test_bones_env_dataset.py tests/test_terrain_controller.py \
+  tests/test_skeleton_ray_sampler.py tests/test_bones_terrain_fit.py \
+  tests/test_bones_terrain_scene.py tests/test_bones_terrain_screen.py \
+  tests/test_bones_terrain_survey.py tests/test_train_terrain_controller.py \
+  -q --full-trace --color=no --junitxml=runs/tmt_pilot_coord_v3/tests.xml
+```
+
+结果为**`84 passed, 11 warnings in 20.92s`，0失败、0跳过**。Python为3.11.17，Torch为2.5.1+cu124；沿用项目独立环境和Kimodo资源，OMP/OpenBLAS/MKL均为单线程。准备与报告步骤使用CPU。
+
+默认E集仍为`runs/bones_env_v1`。沿用的迁移校验覆盖5,652个文件、1,711,809,448字节，差异为0；dataset manifest SHA-256为`67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d`。源数据、既有运行和旧模型未改动。
+
+### 10.2 双卡同步与显存预检
+
+```bash
+torchrun --standalone --nnodes 1 --nproc_per_node 2 \
+  scripts/train_terrain_controller.py --dataset runs/bones_env_v1 \
+  --output runs/tmt_smoke_2gpu_v2 --phases teacher:5 --batch 64 \
+  --max-hours 0.2 --log-every 1 --eval-batch 64
+
+$PY scripts/train_terrain_controller.py --dataset runs/bones_env_v1 \
+  --output runs/tmt_memory_1gpu --phases loop:16:2 --batch 512 \
+  --max-hours 0.2 --log-every 1 --eval-batch 32
+```
+
+实际命令通过协调目录的测量包装器调用同一训练入口，记录optimizer更新、计时、参数SHA-256和保存事件。双卡冒烟耗时**19.123秒**，两个rank均退出0、各完成5次更新；两次评估的`rank_parameter_disagreement`都为**0.0**。训练前后，两个rank的控制器和critic逐参数SHA-256一致，`latest.pt`逐参数与两个rank都一致。
+
+只有rank0写出`phase0_teacher.pt`和`latest.pt`。按本次用户明确的判据，这两个文件是正常的阶段保存与最终保存，预检通过。
+
+显存预检耗时**15.782秒**，完成2次H=16更新。`torch.cuda.max_memory_allocated`为**12,234,071,040 bytes**，卡容量为**85,100,068,864 bytes**，占**14.3761%**，低于80%上限。因此正式pilot使用**每卡batch512、全局batch1024**。
+
+### 10.3 正式命令与边界
+
+```bash
+torchrun --standalone --nnodes 1 --nproc_per_node 2 \
+  scripts/train_terrain_controller.py --dataset runs/bones_env_v1 \
+  --output runs/tmt_pilot_v1 \
+  --phases teacher:1500 loop:4:500 loop:8:500 loop:16:500 \
+  --batch 512 --max-hours 3 --eval-every 250 --eval-batch 256
+```
+
+每个GPU步骤启动前扫描全部GPU的index、UUID、显存、利用率和计算PID；正式pilot固定到启动时空闲的**物理GPU1、GPU3**。使用`nohup`主管和独立进程组，外层`timeout`为10,800秒，训练入口同时执行3小时预算。启动时间为**2026-10-25 09:24:12.495 UTC**。
+
+测量包装器在原评估函数开始前检查`rank_parameter_disagreement`；一旦非零，保留失败记录并抛出异常，由torchrun停止其他rank。optimizer事件按rank逐次落盘，因而可以区分实际完成更新与checkpoint中保存的更新。没有恢复、补跑或扩预算。
+
+### 10.4 固定验证与展示窗口
+
+正式评估使用同一批**256个validation窗口**，每250次更新执行一次16帧闭环；最终再次评估，保留原日志中的重复终点行。一步误差计算去除root平移后的关节位置误差。穿透按原实现计算每个关节的`max(0, -SDF - radius)`，每帧取所有关节的最大值，超过0.02m即计为超限帧。
+
+展示窗口在训练启动前的**09:17:17.869 UTC**固定：按文件名SHA-256排序，每对使用不同演员，选择各片段中间的有效窗口。共2个平地、1个蹲行、1个匍匐、2个已知尺寸箱体窗口。验证集中stairs和box_support均为0条，因此箱体使用`known_dimension_support`组。
+
+对照图使用最终checkpoint在CPU上生成16帧，蓝色为源动作、橙色为闭环输出、灰色为该窗口对应的拟合场景。闭环只读取历史、指令和场景，源未来姿态用于对照。六个窗口额外生成96帧，单列为展示推理，不计入训练曝光。
+
+### 10.5 完成状态、耗时与参数核对
+
+主管在**10:11:24.976 UTC**结束，退出码0；外层壁钟**2,832.480秒**，未触发3小时上限。两个rank均完成3,000次控制器更新和1,500次critic更新。14行评估中的`rank_parameter_disagreement`全部为**0.0**。
+
+初始和最终的控制器134个参数张量、critic 6个参数张量，两rank逐一SHA-256相同；最终`latest.pt`与两个rank也逐一相同。只有rank0执行保存，最终有`phase0_teacher.pt`、`phase1_loop4.pt`、`phase2_loop8.pt`、`phase3_loop16.pt`和`latest.pt`。
+
+最终checkpoint保存的update为**3000**，exposures为**15,872,000**，文件大小为22,340,725字节，SHA-256为`7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c`。
+
+| 运行 / 阶段 | 全局更新 | rank0平均秒/更新 | rank1平均秒/更新 | rank0中位秒/更新 |
+| --- | ---: | ---: | ---: | ---: |
+| 双卡冒烟 / teacher | 5 | 0.187340 | 0.188434 | 0.083384 |
+| 显存预检 / H16 | 2 | 1.703538 | 单卡 | 1.703538 |
+| pilot / teacher | 1,500 | 0.225475 | 0.225042 | 0.185424 |
+| pilot / H4 | 500 | 1.051419 | 1.050787 | 0.742907 |
+| pilot / H8 | 500 | 1.571640 | 1.571346 | 1.109025 |
+| pilot / H16 | 500 | 2.172779 | 2.172551 | 2.153028 |
+
+计时区间为前向/损失计算至模型optimizer.step结束，包含闭环阶段的critic更新和两卡梯度通信，两端同步CUDA；不含数据加载、评估或参数哈希。正式pilot的GPU峰值为rank0 **12,264,128,000 bytes**、rank1 **12,266,700,288 bytes**，最高占卡容量**14.4144%**。运行使用NVIDIA A100 80GB PCIe，驱动555.42.06。完成后主管和训练进程均已退出。
+
+### 10.6 全部评估与验收
+
+下表来自同一批256窗口，每次闭环16帧。表中穿透列以百分比显示；[完整精度TSV](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/evaluation_table.tsv)同时列出每次的指令速度、朝向、穿透、支撑、滑步和平滑代价。
+
+| 更新 | 一步误差cm | 保持基线cm | 根漂移P50 cm | 根漂移P90 cm | 穿透超2cm帧比例 | 骨盆高度误差cm |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 0 | 0.938170 | 0.938170 | 13.770324 | 57.559715 | 0.000000% | 2.474805 |
+| 250 | 0.962659 | 0.938170 | 4.218843 | 8.239785 | 13.281250% | 2.225265 |
+| 500 | 0.581897 | 0.938170 | 2.039013 | 4.566839 | 14.672852% | 4.311455 |
+| 750 | 0.449627 | 0.938170 | 1.555945 | 3.883108 | 11.694336% | 2.977942 |
+| 1000 | 0.395228 | 0.938170 | 1.292623 | 4.470850 | 13.208008% | 3.946154 |
+| 1250 | 0.364998 | 0.938170 | 1.452610 | 4.305073 | 8.349609% | 4.240174 |
+| 1500 | 0.338440 | 0.938170 | 1.249118 | 4.210442 | 11.108398% | 3.191494 |
+| 1750 | 0.986391 | 0.938170 | 1.230597 | 3.581332 | 38.769531% | 2.184135 |
+| 2000 | 0.790908 | 0.938170 | 1.111264 | 3.870840 | 12.670898% | 2.465325 |
+| 2250 | 0.729328 | 0.938170 | 1.010587 | 3.661466 | 3.833008% | 1.557270 |
+| 2500 | 0.724129 | 0.938170 | 0.926748 | 2.931962 | 4.760742% | 1.605430 |
+| 2750 | 0.687572 | 0.938170 | 0.876815 | 2.579068 | 2.075195% | 1.338081 |
+| 3000 | 0.663997 | 0.938170 | 0.852408 | 2.513716 | 1.538086% | 1.277630 |
+| 3000最终重复评估 | 0.663997 | 0.938170 | 0.852408 | 2.513716 | 1.538086% | 1.277630 |
+
+| 计划第4节判据 | 最终证据 | 判定 |
+| --- | --- | --- |
+| 数值有限，正常结束或到时保存 | 记录值均有限，`stopped=complete`，checkpoint保存到3000 | 通过 |
+| 一步误差比保持基线改善至少30% | 0.663997 / 0.938170 cm，改善**29.2243%**；要求≤0.656719 cm | **未通过** |
+| 根漂移P50低于初始且<10cm | 13.770324降至**0.852408 cm** | 通过 |
+| 穿透超2cm的帧比例≤1% | **1.538086%**，即4096帧中的63帧 | **未通过** |
+| 骨盆高度误差<5cm | **1.277630 cm** | 通过 |
+| 滑步与支撑代价都低于初始 | 支撑下降；滑步未低于初始，详见下表 | **未通过** |
+
+| 闭环代价 | 初始化 | 最终 | 是否下降 |
+| --- | ---: | ---: | --- |
+| command_velocity | 0.441904 | 0.000476940 | 是 |
+| command_heading | 0.0249327 | 0.00613682 | 是 |
+| penetration | 8.10186e-7 | 2.39172e-6 | 否 |
+| support | 0.00497645 | 2.40332e-7 | 是 |
+| skating | 6.61440e-12 | 1.32905e-5 | 否 |
+| smoothness | 0.419256 | 0.146027 | 是 |
+
+教师监督阶段的一步误差在1500次更新时达到0.338440cm；切换到H4后，一步误差和穿透比例先变差，后续H8/H16逐步改善。最终根漂移和骨盆高度通过，但一步拟合未恢复到教师监督阶段水平，穿透和滑步也没有满足全部门槛。判定使用最终模型，保留各阶段checkpoint供后续分析。
+
+![正式pilot训练与固定验证曲线](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/training_curves.png)
+
+训练损失图采用可显示负数的对称对数轴：1875和1900次更新的policy loss分别为-0.016268和-0.246854，均完整保留。其余面板的指标和训练记录没有改动。
+
+### 10.7 六个窗口的逐图检查
+
+已逐张检查每张图中的全部16帧。图内保持同一相机和坐标范围，地面显示范围按窗口取景；人物、箱体、墙体和顶棚来自该窗口的数据，没有修改姿态或场景几何。
+
+| 窗口 / PNG | 末帧根漂移cm | 骨盆高度平均误差cm | 逐图观察 |
+| --- | ---: | ---: | --- |
+| [平地转跑 A255](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/contact_sheets/turn_jog_270_R_003__A255__s40.png) | 1.6153 | 1.9357 | 前几帧接近重合，后半段手臂与摆动腿逐渐分开，整体行进方向一致。 |
+| [侧移收步 A030](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/contact_sheets/walk_sideway_045_stop_002__A030__s60.png) | 1.5707 | 1.7742 | 直立姿态与收步方向接近，后半段手脚有持续的小偏移，未出现高度塌陷。 |
+| [蹲行 A412](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/contact_sheets/item_pick_up_crouch_walk_R_003__A412__s32.png) | 1.9934 | 0.7067 | 保持低头屈膝姿态；后半段源动作抬脚明显，生成腿更直、足点更低。 |
+| [匍匐转换 A129](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/contact_sheets/change_idle_crawl_to_idle_crawl_right_001__A129__s48.png) | 0.0446 | 0.9387 | 低顶下的匍匐姿态保持，躯干接近重合，手脚仍有小偏移。 |
+| [50cm上箱 A224](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/contact_sheets/come_up_50cm_box_R_002__A224__s24.png) | 1.7308 | 1.1304 | 抬身、收腿和上箱结束姿态基本跟随，末段头部和腿端出现小偏移。 |
+| [50cm上箱 A164](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/contact_sheets/come_up_50cm_box_R_003__A164__s24.png) | 1.8986 | 0.4228 | 上箱过程中头部逼近顶板，源与生成骨架大体重合，脚端仍有细小偏差。 |
+
+### 10.8 精确账本
+
+这里的“更新”按一次全局参数更新计数，两rank各执行一次optimizer.step不算两次全局更新。“窗口”是输入给训练器的一段历史；“生成帧”只统计闭环训练实际展开的帧。
+
+| 正式pilot阶段 | 控制器全局更新 | 窗口曝光 | 训练闭环生成帧 |
+| --- | ---: | ---: | ---: |
+| teacher | 1,500 | 1,536,000 | 0 |
+| H4 | 500 | 512,000 | 2,048,000 |
+| H8 | 500 | 512,000 | 4,096,000 |
+| H16 | 500 | 512,000 | 8,192,000 |
+| **正式pilot合计** | **3,000** | **3,072,000** | **14,336,000** |
+| 本轮新增预检：双卡v2＋显存 | 7 | 1,664 | 16,384 |
+| 含旧单卡、resume2与旧双卡的全部预检 | 24 | 2,496 | 16,832 |
+
+正式pilot的控制器optimizer调用合计6,000次，critic为1,500次全局更新、两rank合计3,000次调用；全部预检另有34次控制器optimizer调用及9次critic更新。预检不与正式模型合并成连续训练，也不并入历史38.4M账本。
+
+脚本`exposures=15,872,000`等于**1,536,000教师窗口＋14,336,000闭环生成帧**，是两种单位的累计字段，不等同于3,072,000个窗口。正式评估额外生成57,344帧，六窗口展示额外生成96帧，均单列为推理，未增加optimizer更新。
+
+### 10.9 产物与发布检查
+
+公共结果位于[pilot_be5fc1f](../../examples/results/terrain_controller_pilot_a100_20261024/pilot_be5fc1f/README.md)：结构化报告、全部14行评估TSV、训练曲线、六张对照图和图表修订说明。数据、模型、checkpoint和原始日志留在A100：
+
+- `runs/tmt_pilot_v1/`：config、progress、eval及五个checkpoint。
+- `runs/tmt_pilot_coord_v3/`：主管记录、JUnit、逐rank计时和参数摘要、预选窗口、渲染记录。
+- `runs/tmt_pilot_coord_v3/review_motion_private.npz`：六窗口的原始对照关节数组。
+
+小型结果经私有Drive和PRO6000既有M78链路取回。原始结果包5,871,472字节，SHA-256为`7c4b36d82c54184b2845cdbe63b10b6faf43047d1bd6731ce32ec97f4d469031`，A100、PRO6000和本地一致；随后单独取回保留负损失点的曲线，修订PNG哈希见`plot_revision.json`。
+
+发布前核对冻结源码、84项测试结果、逐rank计数与哈希、最终checkpoint状态、账本、14行表格、六张对照图和训练曲线；检查旧记录前19,151字节逐字节不变，再执行仓库及UTF-8/U+FFFD检查。没有修改训练实现、超参数、源BVH、既有运行或已批准模型。

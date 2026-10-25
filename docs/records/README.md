@@ -16,7 +16,7 @@
 - [地形感知动作 Transformer 与可微闭环训练：代码说明](terrain_motion_transformer_20261024.md)
 - [第 6 步：BONES 动作—场景训练集与在线观测](bones_env_training_set_20261024.md)
 - [第 7 步：地形感知动作 Transformer 小规模训练计划（已批准）](terrain_controller_pilot_plan_20261024.md)
-- [第 7 步A100执行与续跑：resume修复、双卡保存和参数一致性检查](terrain_controller_pilot_a100_20261024.md#9-ee4db6f-续跑)
+- [第 7 步A100双卡pilot：预检历史、训练账本与验收](terrain_controller_pilot_a100_20261024.md#10-be5fc1f-pilot)
 - [第 6 步执行：BONES训练集构建、演员划分与GPU3审计](bones_env_v1_pro6000_20261024.md)
 - [BONES-SEED 几何筛查：PRO6000 试运行与全量结果](bones_terrain_screen_pro6000_20261023.md)
 - [BONES-SEED 支撑几何拟合与可视化：PRO6000 执行结果](bones_terrain_fit_pro6000_20261023.md)

@@ -1,0 +1,966 @@
+{
+  "status": "complete",
+  "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+  "tests": {
+    "tests": 84,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "passed": 84
+  },
+  "tests_last_line": "84 passed, 11 warnings in 20.92s",
+  "python": "3.11.17",
+  "packages": {
+    "torch": "2.5.1+cu124",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "pytest": "9.1.1",
+    "matplotlib": "3.11.2"
+  },
+  "source_sha256": {
+    "scripts/train_terrain_controller.py": "d546aefb06e68c7d3835c9849925acaaf77480e1f046a4a19b9a1c7f777adc71",
+    "motionbricks/controller/training.py": "9d9e1be586c34439537d024349b0b3b5ac64cb0c1cafbbe224d5ec64af303901",
+    "motionbricks/controller/terrain_motion_transformer.py": "23420bc19047a2572c86992a813c2dac121b3ad7f818f1fa7e5a452630d1ab6c",
+    "motionbricks/controller/closed_loop.py": "b4bb8622d47991ff8e69f3ad5a5acad4a839c27ef353f4e5a6971ca096984990",
+    "motionbricks/data/bones_env_dataset.py": "6094e9d426b940162d2d18d9457436de39b7e461b7f2f5a1a359e7505ff974ee"
+  },
+  "measurement_helpers_sha256": {
+    "run_stage_v3.py": "9b8d6b66225a76fc0097473ee8b72b099a4d59be8968d4e117202024aefa7ec6",
+    "measure_training_v3.py": "8e9410ee7d44e253f4e9c2299968c39e0bb83de48d9e765d31d0be242b49e8fe",
+    "select_review_v3.py": "07e06afab303060548a49bf37316c201389660c3ed5b91bbff7edd8b12dbd378",
+    "render_pilot_review_v3.py": "285a582c6f93156bae0130b6d4e100f6bd0f43310d900d39a1565cf44bc48f68",
+    "package_pilot_v3.py": "95e64f53d86c30130bef5bc5a9b540c768ddd57359dd0994d63e5a64bd507ac6"
+  },
+  "transfer_reference": {
+    "source_files": 5652,
+    "source_bytes": 1711809448,
+    "archive_bytes": 1399488336,
+    "archive_sha256": "2998ba8131aba43976083cb02c6d01a2186e9d26e955f57abefa7b8923c4872c",
+    "files_manifest_sha256": "5aaa9e1ada746ad02d61a5c499ba896213f52fba0d75200e7104ec90d4497e5a",
+    "source_dataset_manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+    "pack_seconds": 45.502,
+    "verified_files": 5652,
+    "mismatches": [],
+    "destination_bytes": 1711809448,
+    "destination_dataset_manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+    "receive_verify_seconds": 50.221
+  },
+  "reused_without_repeating": [
+    "data_transfer",
+    "single_gpu_smoke",
+    "resume2"
+  ],
+  "preflight": {
+    "c2": {
+      "stage": "c2",
+      "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+      "world_size": 2,
+      "batch_per_rank": 64,
+      "global_batch": 128,
+      "wall_cap_seconds": 750,
+      "started_utc": "2026-10-25T09:17:18.571700+00:00",
+      "ended_utc": "2026-10-25T09:17:37.695293+00:00",
+      "wall_seconds": 19.123,
+      "exit_code": 0,
+      "passed": true,
+      "gates": {
+        "counters": true,
+        "finite": true,
+        "ranks_finished": true,
+        "rank_agreement_all_zero": true,
+        "checkpoint_matches_ranks": true,
+        "rank0_only_writer": true,
+        "initial_parameters_identical": true,
+        "final_parameters_identical": true
+      },
+      "checkpoint_state": {
+        "update": 5,
+        "exposures": 640,
+        "phase_index": 1,
+        "phase_update": 0
+      },
+      "checkpoint_files": [
+        "latest.pt",
+        "phase0_teacher.pt"
+      ],
+      "checkpoint_matches_rank_parameters": [
+        true,
+        true
+      ],
+      "rank_agreement_all_zero": true,
+      "rank_reports": [
+        {
+          "rank": 0,
+          "exit_code": 0,
+          "wall_seconds": 10.087819033011328,
+          "updates_measured": 5,
+          "critic_updates_measured": 0,
+          "last_completed_update": 5,
+          "final_trainer_state": {
+            "update": 5,
+            "exposures": 640,
+            "phase_index": 1,
+            "phase_update": 0
+          },
+          "checkpoint_writes": [
+            {
+              "filename": "phase0_teacher.pt",
+              "update": 5,
+              "rank": 0
+            },
+            {
+              "filename": "latest.pt",
+              "update": 5,
+              "rank": 0
+            }
+          ],
+          "peak_allocated_bytes": 167016448,
+          "capacity_bytes": 85100068864,
+          "phase_seconds_per_update": {
+            "teacher:0": {
+              "updates": 5,
+              "mean": 0.18733961881371214,
+              "median": 0.08338403201196343,
+              "max": 0.5998051490169019,
+              "total": 0.9366980940685607
+            }
+          },
+          "measurement": "Forward/loss through model optimizer step; CUDA synchronized; parameter hashes outside update timer.",
+          "initial_parameters": {
+            "model": {
+              "sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18",
+              "tensor_count": 134
+            },
+            "critic": {
+              "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+              "tensor_count": 6
+            }
+          },
+          "final_parameters": {
+            "model": {
+              "sha256": "594e26de61158c73bba7379f47f19976fe31026533f02a9d4ed07d82f13feef5",
+              "tensor_count": 134
+            },
+            "critic": {
+              "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+              "tensor_count": 6
+            }
+          }
+        },
+        {
+          "rank": 1,
+          "exit_code": 0,
+          "wall_seconds": 9.58190435601864,
+          "updates_measured": 5,
+          "critic_updates_measured": 0,
+          "last_completed_update": 5,
+          "final_trainer_state": {
+            "update": 5,
+            "exposures": 640,
+            "phase_index": 1,
+            "phase_update": 0
+          },
+          "checkpoint_writes": [],
+          "peak_allocated_bytes": 109239296,
+          "capacity_bytes": 85100068864,
+          "phase_seconds_per_update": {
+            "teacher:0": {
+              "updates": 5,
+              "mean": 0.18843388858949767,
+              "median": 0.08414266799809411,
+              "max": 0.6026221689535305,
+              "total": 0.9421694429474883
+            }
+          },
+          "measurement": "Forward/loss through model optimizer step; CUDA synchronized; parameter hashes outside update timer.",
+          "initial_parameters": {
+            "model": {
+              "sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18",
+              "tensor_count": 134
+            },
+            "critic": {
+              "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+              "tensor_count": 6
+            }
+          },
+          "final_parameters": {
+            "model": {
+              "sha256": "594e26de61158c73bba7379f47f19976fe31026533f02a9d4ed07d82f13feef5",
+              "tensor_count": 134
+            },
+            "critic": {
+              "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+              "tensor_count": 6
+            }
+          }
+        }
+      ],
+      "gpu_physical_indices": [
+        1,
+        3
+      ],
+      "gpu_model": "NVIDIA A100 80GB PCIe",
+      "driver_version": "555.42.06"
+    },
+    "d": {
+      "stage": "d",
+      "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+      "world_size": 1,
+      "batch_per_rank": 512,
+      "global_batch": 512,
+      "wall_cap_seconds": 750,
+      "started_utc": "2026-10-25T09:19:14.961990+00:00",
+      "ended_utc": "2026-10-25T09:19:30.744566+00:00",
+      "wall_seconds": 15.782,
+      "exit_code": 0,
+      "passed": true,
+      "gates": {
+        "counters": true,
+        "finite": true,
+        "ranks_finished": true,
+        "rank_agreement_all_zero": true,
+        "checkpoint_matches_ranks": true,
+        "rank0_only_writer": true
+      },
+      "checkpoint_state": {
+        "update": 2,
+        "exposures": 16384,
+        "phase_index": 1,
+        "phase_update": 0
+      },
+      "checkpoint_files": [
+        "latest.pt",
+        "phase0_loop16.pt"
+      ],
+      "checkpoint_matches_rank_parameters": [
+        true
+      ],
+      "rank_agreement_all_zero": true,
+      "rank_reports": [
+        {
+          "rank": 0,
+          "exit_code": 0,
+          "wall_seconds": 9.086915275023784,
+          "updates_measured": 2,
+          "critic_updates_measured": 2,
+          "last_completed_update": 2,
+          "final_trainer_state": {
+            "update": 2,
+            "exposures": 16384,
+            "phase_index": 1,
+            "phase_update": 0
+          },
+          "checkpoint_writes": [
+            {
+              "filename": "phase0_loop16.pt",
+              "update": 2,
+              "rank": 0
+            },
+            {
+              "filename": "latest.pt",
+              "update": 2,
+              "rank": 0
+            }
+          ],
+          "peak_allocated_bytes": 12234071040,
+          "capacity_bytes": 85100068864,
+          "phase_seconds_per_update": {
+            "loop:16": {
+              "updates": 2,
+              "mean": 1.7035376825078856,
+              "median": 1.7035376825078856,
+              "max": 1.905583404994104,
+              "total": 3.4070753650157712
+            }
+          },
+          "measurement": "Forward/loss through model optimizer step; CUDA synchronized; parameter hashes outside update timer.",
+          "initial_parameters": {
+            "model": {
+              "sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18",
+              "tensor_count": 134
+            },
+            "critic": {
+              "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+              "tensor_count": 6
+            }
+          },
+          "final_parameters": {
+            "model": {
+              "sha256": "a170ef56b694a6a4d7090860083fd6e2c6ddb40632fdaf66e6fcf708f5b2cb36",
+              "tensor_count": 134
+            },
+            "critic": {
+              "sha256": "47ff317fbadeccb3816e467de9e680ae782a4a7ba92cfe0a74bfda201ea6aa81",
+              "tensor_count": 6
+            }
+          }
+        }
+      ],
+      "gpu_physical_indices": [
+        1
+      ],
+      "gpu_model": "NVIDIA A100 80GB PCIe",
+      "driver_version": "555.42.06",
+      "peak_fraction": 0.14376100047053425,
+      "pilot_batch_per_rank": 512
+    }
+  },
+  "pilot": {
+    "stage": "pilot",
+    "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+    "world_size": 2,
+    "batch_per_rank": 512,
+    "global_batch": 1024,
+    "wall_cap_seconds": 10800,
+    "started_utc": "2026-10-25T09:24:12.495161+00:00",
+    "ended_utc": "2026-10-25T10:11:24.975579+00:00",
+    "wall_seconds": 2832.48,
+    "exit_code": 0,
+    "passed": true,
+    "gates": {
+      "counters": true,
+      "finite": true,
+      "ranks_finished": true,
+      "rank_agreement_all_zero": true,
+      "checkpoint_matches_ranks": true,
+      "rank0_only_writer": true,
+      "initial_parameters_identical": true,
+      "final_parameters_identical": true
+    },
+    "checkpoint_state": {
+      "update": 3000,
+      "exposures": 15872000,
+      "phase_index": 4,
+      "phase_update": 0
+    },
+    "checkpoint_files": [
+      "latest.pt",
+      "phase0_teacher.pt",
+      "phase1_loop4.pt",
+      "phase2_loop8.pt",
+      "phase3_loop16.pt"
+    ],
+    "checkpoint_matches_rank_parameters": [
+      true,
+      true
+    ],
+    "rank_agreement_all_zero": true,
+    "rank_reports": [
+      {
+        "rank": 0,
+        "exit_code": 0,
+        "wall_seconds": 2824.1709522039746,
+        "updates_measured": 3000,
+        "critic_updates_measured": 1500,
+        "last_completed_update": 3000,
+        "final_trainer_state": {
+          "update": 3000,
+          "exposures": 15872000,
+          "phase_index": 4,
+          "phase_update": 0
+        },
+        "checkpoint_writes": [
+          {
+            "filename": "latest.pt",
+            "update": 250,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 500,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 750,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 1000,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 1250,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 1500,
+            "rank": 0
+          },
+          {
+            "filename": "phase0_teacher.pt",
+            "update": 1500,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 1750,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2000,
+            "rank": 0
+          },
+          {
+            "filename": "phase1_loop4.pt",
+            "update": 2000,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2250,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2500,
+            "rank": 0
+          },
+          {
+            "filename": "phase2_loop8.pt",
+            "update": 2500,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 2750,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 3000,
+            "rank": 0
+          },
+          {
+            "filename": "phase3_loop16.pt",
+            "update": 3000,
+            "rank": 0
+          },
+          {
+            "filename": "latest.pt",
+            "update": 3000,
+            "rank": 0
+          }
+        ],
+        "peak_allocated_bytes": 12264128000,
+        "capacity_bytes": 85100068864,
+        "phase_seconds_per_update": {
+          "loop:16": {
+            "updates": 500,
+            "mean": 2.1727785231110173,
+            "median": 2.1530280010192655,
+            "max": 2.757317131035961,
+            "total": 1086.3892615555087
+          },
+          "loop:4": {
+            "updates": 500,
+            "mean": 1.0514188845179742,
+            "median": 0.7429070049838629,
+            "max": 2.1023145419894718,
+            "total": 525.7094422589871
+          },
+          "loop:8": {
+            "updates": 500,
+            "mean": 1.5716404938966735,
+            "median": 1.109024795005098,
+            "max": 3.7459690669784322,
+            "total": 785.8202469483367
+          },
+          "teacher:0": {
+            "updates": 1500,
+            "mean": 0.2254747333205305,
+            "median": 0.18542440148303285,
+            "max": 0.6709930349607021,
+            "total": 338.21209998079576
+          }
+        },
+        "measurement": "Forward/loss through model optimizer step; CUDA synchronized; parameter hashes outside update timer.",
+        "initial_parameters": {
+          "model": {
+            "sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+            "tensor_count": 6
+          }
+        },
+        "final_parameters": {
+          "model": {
+            "sha256": "0baede2879083c2a0571a4b8947b1bb765edc36b534ca811c014796c0563db53",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "493588a70568e325d17e3d078b4845df536bc51a2be1a82a7429381bd132e513",
+            "tensor_count": 6
+          }
+        }
+      },
+      {
+        "rank": 1,
+        "exit_code": 0,
+        "wall_seconds": 2822.913434262038,
+        "updates_measured": 3000,
+        "critic_updates_measured": 1500,
+        "last_completed_update": 3000,
+        "final_trainer_state": {
+          "update": 3000,
+          "exposures": 15872000,
+          "phase_index": 4,
+          "phase_update": 0
+        },
+        "checkpoint_writes": [],
+        "peak_allocated_bytes": 12266700288,
+        "capacity_bytes": 85100068864,
+        "phase_seconds_per_update": {
+          "loop:16": {
+            "updates": 500,
+            "mean": 2.172550948915654,
+            "median": 2.152836816996569,
+            "max": 2.755290871951729,
+            "total": 1086.275474457827
+          },
+          "loop:4": {
+            "updates": 500,
+            "mean": 1.0507874130147974,
+            "median": 0.7429816669900902,
+            "max": 2.103186266962439,
+            "total": 525.3937065073987
+          },
+          "loop:8": {
+            "updates": 500,
+            "mean": 1.5713462645525578,
+            "median": 1.1076463519711979,
+            "max": 3.746852535987273,
+            "total": 785.6731322762789
+          },
+          "teacher:0": {
+            "updates": 1500,
+            "mean": 0.2250421405985253,
+            "median": 0.18519544851733372,
+            "max": 0.696456803008914,
+            "total": 337.56321089778794
+          }
+        },
+        "measurement": "Forward/loss through model optimizer step; CUDA synchronized; parameter hashes outside update timer.",
+        "initial_parameters": {
+          "model": {
+            "sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+            "tensor_count": 6
+          }
+        },
+        "final_parameters": {
+          "model": {
+            "sha256": "0baede2879083c2a0571a4b8947b1bb765edc36b534ca811c014796c0563db53",
+            "tensor_count": 134
+          },
+          "critic": {
+            "sha256": "493588a70568e325d17e3d078b4845df536bc51a2be1a82a7429381bd132e513",
+            "tensor_count": 6
+          }
+        }
+      }
+    ],
+    "gpu_physical_indices": [
+      1,
+      3
+    ],
+    "gpu_model": "NVIDIA A100 80GB PCIe",
+    "driver_version": "555.42.06"
+  },
+  "checkpoint": {
+    "path": "runs/tmt_pilot_v1/latest.pt",
+    "bytes": 22340725,
+    "sha256": "7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c",
+    "state": {
+      "update": 3000,
+      "exposures": 15872000,
+      "phase_index": 4,
+      "phase_update": 0
+    }
+  },
+  "rank_parameter_checks": {
+    "initial_parameters": {
+      "model": {
+        "tensor_count": 134,
+        "different_tensors": 0,
+        "rank0_sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18",
+        "rank1_sha256": "bf930a301bd4e6db089189680dadbb0520be223901f16c3b86a97d55441e1e18"
+      },
+      "critic": {
+        "tensor_count": 6,
+        "different_tensors": 0,
+        "rank0_sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0",
+        "rank1_sha256": "00469a3521815f2dd8a9ca942de198596f43f961bfb0626fece5d049a622abb0"
+      }
+    },
+    "final_parameters": {
+      "model": {
+        "tensor_count": 134,
+        "different_tensors": 0,
+        "rank0_sha256": "0baede2879083c2a0571a4b8947b1bb765edc36b534ca811c014796c0563db53",
+        "rank1_sha256": "0baede2879083c2a0571a4b8947b1bb765edc36b534ca811c014796c0563db53"
+      },
+      "critic": {
+        "tensor_count": 6,
+        "different_tensors": 0,
+        "rank0_sha256": "493588a70568e325d17e3d078b4845df536bc51a2be1a82a7429381bd132e513",
+        "rank1_sha256": "493588a70568e325d17e3d078b4845df536bc51a2be1a82a7429381bd132e513"
+      }
+    }
+  },
+  "rank_parameter_disagreement": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "evaluation": {
+    "batch": 256,
+    "horizon": 16,
+    "rows": 14,
+    "initial": {
+      "update": 0,
+      "exposures": 0,
+      "rank_parameter_disagreement": 0.0,
+      "one_step_body_cm": 0.9381700158119202,
+      "persistence_body_cm": 0.9381700158119202,
+      "closed_loop_root_drift_cm_p50": 13.770323753356934,
+      "closed_loop_root_drift_cm_p90": 57.559715270996094,
+      "closed_loop_joint_penetration_over_2cm_frames": 0.0,
+      "closed_loop_pelvis_height_error_cm": 2.474804639816284,
+      "closed_loop_terms": {
+        "command_velocity": 0.44190359115600586,
+        "command_heading": 0.024932745844125748,
+        "penetration": 8.101857247311273e-07,
+        "support": 0.004976445809006691,
+        "skating": 6.614401734661435e-12,
+        "smoothness": 0.419256329536438
+      }
+    },
+    "final": {
+      "update": 3000,
+      "exposures": 15872000,
+      "rank_parameter_disagreement": 0.0,
+      "one_step_body_cm": 0.6639965772628784,
+      "persistence_body_cm": 0.9381700158119202,
+      "closed_loop_root_drift_cm_p50": 0.8524075150489807,
+      "closed_loop_root_drift_cm_p90": 2.513716459274292,
+      "closed_loop_joint_penetration_over_2cm_frames": 0.015380859375,
+      "closed_loop_pelvis_height_error_cm": 1.2776304483413696,
+      "closed_loop_terms": {
+        "command_velocity": 0.00047693963279016316,
+        "command_heading": 0.006136818788945675,
+        "penetration": 2.3917161797726294e-06,
+        "support": 2.403317580501607e-07,
+        "skating": 1.329050246567931e-05,
+        "smoothness": 0.1460271179676056
+      }
+    },
+    "same_persistence_each_time": true,
+    "duplicate_final_preserved": true,
+    "one_step_measure": "Mean root-relative joint position error on one frame",
+    "penetration_measure": "Frame maximum of max(0, -SDF(joint) - joint_radius), threshold 2 cm"
+  },
+  "plan_section4_gates": {
+    "numeric": {
+      "passed": true,
+      "stopped": "complete",
+      "logged_values_finite": true
+    },
+    "one_step": {
+      "passed": false,
+      "improvement_fraction": 0.29224280666416724,
+      "final_cm": 0.6639965772628784,
+      "persistence_cm": 0.9381700158119202,
+      "required_max_cm": 0.6567190110683441
+    },
+    "root_drift": {
+      "passed": true,
+      "initial_p50_cm": 13.770323753356934,
+      "final_p50_cm": 0.8524075150489807,
+      "final_p90_cm": 2.513716459274292
+    },
+    "joint_penetration": {
+      "passed": false,
+      "final_frame_fraction": 0.015380859375,
+      "maximum_allowed_fraction": 0.01
+    },
+    "pelvis_height": {
+      "passed": true,
+      "final_cm": 1.2776304483413696
+    },
+    "skating_and_support": {
+      "passed": false,
+      "skating": {
+        "initial": 6.614401734661435e-12,
+        "final": 1.329050246567931e-05,
+        "passed": false
+      },
+      "support": {
+        "initial": 0.004976445809006691,
+        "final": 2.403317580501607e-07,
+        "passed": true
+      }
+    }
+  },
+  "all_quality_gates_passed": false,
+  "ledger": {
+    "pilot": {
+      "controller_global_updates": 3000,
+      "controller_rank_optimizer_steps": 6000,
+      "critic_global_updates": 1500,
+      "windows": 3072000,
+      "teacher_windows": 1536000,
+      "loop_windows": 1536000,
+      "training_generated_frames": 14336000,
+      "phases": {
+        "teacher:0": {
+          "controller_global_updates": 1500,
+          "windows": 1536000,
+          "training_generated_frames": 0
+        },
+        "loop:4": {
+          "controller_global_updates": 500,
+          "windows": 512000,
+          "training_generated_frames": 2048000
+        },
+        "loop:8": {
+          "controller_global_updates": 500,
+          "windows": 512000,
+          "training_generated_frames": 4096000
+        },
+        "loop:16": {
+          "controller_global_updates": 500,
+          "windows": 512000,
+          "training_generated_frames": 8192000
+        }
+      },
+      "script_mixed_exposures": 15872000
+    },
+    "all_preflights": {
+      "controller_global_updates": 24,
+      "controller_rank_optimizer_steps": 34,
+      "critic_global_updates": 9,
+      "windows": 2496,
+      "teacher_windows": 1360,
+      "loop_windows": 1136,
+      "training_generated_frames": 16832
+    },
+    "new_preflights": {
+      "two_gpu_v2": {
+        "controller_global_updates": 5,
+        "controller_rank_optimizer_steps": 10,
+        "critic_global_updates": 0,
+        "windows": 640,
+        "teacher_windows": 640,
+        "loop_windows": 0,
+        "training_generated_frames": 0,
+        "phases": {
+          "teacher:0": {
+            "controller_global_updates": 5,
+            "windows": 640,
+            "training_generated_frames": 0
+          }
+        },
+        "script_mixed_exposures": 640
+      },
+      "memory": {
+        "controller_global_updates": 2,
+        "controller_rank_optimizer_steps": 2,
+        "critic_global_updates": 2,
+        "windows": 1024,
+        "teacher_windows": 0,
+        "loop_windows": 1024,
+        "training_generated_frames": 16384,
+        "phases": {
+          "loop:16": {
+            "controller_global_updates": 2,
+            "windows": 1024,
+            "training_generated_frames": 16384
+          }
+        },
+        "script_mixed_exposures": 16384
+      }
+    },
+    "pilot_evaluation_generated_frames": 57344,
+    "review_generated_frames": 96
+  },
+  "review": {
+    "checkpoint_update": 3000,
+    "checkpoint_sha256": "7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c",
+    "device": "cpu",
+    "rendered_windows": 6,
+    "generated_diagnostic_frames": 96,
+    "source_and_scene_modified": false,
+    "selection": {
+      "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+      "selected_utc": "2026-10-25T09:17:17.869101+00:00",
+      "rule": "Filename SHA-256 order within group; distinct actors within each pair; middle valid window; no model metrics used.",
+      "validation_stairs_clips": 0,
+      "validation_box_support_clips": 0,
+      "box_category": "known_dimension_support",
+      "windows": [
+        {
+          "filename": "turn_jog_270_R_003__A255",
+          "group": "flat_control",
+          "actor": "A255",
+          "dataset_index": 8946,
+          "start_frame": 40,
+          "variant_array_index": 0,
+          "split": "validation"
+        },
+        {
+          "filename": "walk_sideway_045_stop_002__A030",
+          "group": "flat_control",
+          "actor": "A030",
+          "dataset_index": 9684,
+          "start_frame": 60,
+          "variant_array_index": 3,
+          "split": "validation"
+        },
+        {
+          "filename": "item_pick_up_crouch_walk_R_003__A412",
+          "group": "crouch",
+          "actor": "A412",
+          "dataset_index": 3720,
+          "start_frame": 32,
+          "variant_array_index": 0,
+          "split": "validation"
+        },
+        {
+          "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+          "group": "prone",
+          "actor": "A129",
+          "dataset_index": 12,
+          "start_frame": 48,
+          "variant_array_index": 1,
+          "split": "validation"
+        },
+        {
+          "filename": "come_up_50cm_box_R_002__A224",
+          "group": "known_dimension_support",
+          "actor": "A224",
+          "dataset_index": 660,
+          "start_frame": 24,
+          "variant_array_index": 0,
+          "split": "validation"
+        },
+        {
+          "filename": "come_up_50cm_box_R_003__A164",
+          "group": "known_dimension_support",
+          "actor": "A164",
+          "dataset_index": 859,
+          "start_frame": 24,
+          "variant_array_index": 2,
+          "split": "validation"
+        }
+      ]
+    },
+    "windows": [
+      {
+        "filename": "turn_jog_270_R_003__A255",
+        "group": "flat_control",
+        "actor": "A255",
+        "dataset_index": 8946,
+        "start_frame": 40,
+        "variant_array_index": 0,
+        "split": "validation",
+        "png": "turn_jog_270_R_003__A255__s40.png",
+        "frames": 16,
+        "boxes": 6,
+        "root_drift_cm_end": 1.615302450954914,
+        "pelvis_height_error_cm": 1.9357196986675262
+      },
+      {
+        "filename": "walk_sideway_045_stop_002__A030",
+        "group": "flat_control",
+        "actor": "A030",
+        "dataset_index": 9684,
+        "start_frame": 60,
+        "variant_array_index": 3,
+        "split": "validation",
+        "png": "walk_sideway_045_stop_002__A030__s60.png",
+        "frames": 16,
+        "boxes": 2,
+        "root_drift_cm_end": 1.5707379207015038,
+        "pelvis_height_error_cm": 1.7741944640874863
+      },
+      {
+        "filename": "item_pick_up_crouch_walk_R_003__A412",
+        "group": "crouch",
+        "actor": "A412",
+        "dataset_index": 3720,
+        "start_frame": 32,
+        "variant_array_index": 0,
+        "split": "validation",
+        "png": "item_pick_up_crouch_walk_R_003__A412__s32.png",
+        "frames": 16,
+        "boxes": 4,
+        "root_drift_cm_end": 1.993425376713276,
+        "pelvis_height_error_cm": 0.7066875696182251
+      },
+      {
+        "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+        "group": "prone",
+        "actor": "A129",
+        "dataset_index": 12,
+        "start_frame": 48,
+        "variant_array_index": 1,
+        "split": "validation",
+        "png": "change_idle_crawl_to_idle_crawl_right_001__A129__s48.png",
+        "frames": 16,
+        "boxes": 3,
+        "root_drift_cm_end": 0.04462350043468177,
+        "pelvis_height_error_cm": 0.9386605583131313
+      },
+      {
+        "filename": "come_up_50cm_box_R_002__A224",
+        "group": "known_dimension_support",
+        "actor": "A224",
+        "dataset_index": 660,
+        "start_frame": 24,
+        "variant_array_index": 0,
+        "split": "validation",
+        "png": "come_up_50cm_box_R_002__A224__s24.png",
+        "frames": 16,
+        "boxes": 4,
+        "root_drift_cm_end": 1.7308467999100685,
+        "pelvis_height_error_cm": 1.1304043233394623
+      },
+      {
+        "filename": "come_up_50cm_box_R_003__A164",
+        "group": "known_dimension_support",
+        "actor": "A164",
+        "dataset_index": 859,
+        "start_frame": 24,
+        "variant_array_index": 2,
+        "split": "validation",
+        "png": "come_up_50cm_box_R_003__A164__s24.png",
+        "frames": 16,
+        "boxes": 4,
+        "root_drift_cm_end": 1.898648589849472,
+        "pelvis_height_error_cm": 0.42277127504348755
+      }
+    ]
+  },
+  "deployment": "not_performed"
+}

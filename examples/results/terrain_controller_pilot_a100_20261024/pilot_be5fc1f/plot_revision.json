@@ -1,0 +1,17 @@
+{
+  "training_loss_axis": "symlog",
+  "linear_threshold": 0.001,
+  "reason": "Show negative policy losses without dropping points",
+  "negative_policy_points": [
+    {
+      "update": 1875,
+      "policy": -0.01626795530319214
+    },
+    {
+      "update": 1900,
+      "policy": -0.2468535155057907
+    }
+  ],
+  "source_plot_helper_sha256": "95e64f53d86c30130bef5bc5a9b540c768ddd57359dd0994d63e5a64bd507ac6",
+  "png_sha256": "489dca8bb6387dff1b1d2bef193edfb216f6991b9c3d5f4e4e14d491b2a01c20"
+}
