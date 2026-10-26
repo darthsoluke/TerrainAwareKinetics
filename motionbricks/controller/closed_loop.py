@@ -106,7 +106,7 @@ class Critic(nn.Module):
 
     def forward(self, state):
         out = self.net(state)[:, 0]
-        return out * self.scale if self.normalized else out
+        return out * self.scale.clone() if self.normalized else out
 
     def frozen(self, state):
         """Value with detached weights: gradients reach the state (the policy), not the critic."""
@@ -114,7 +114,9 @@ class Critic(nn.Module):
         for layer in self.net:
             out = F.linear(out, layer.weight.detach(), layer.bias.detach()) if isinstance(layer, nn.Linear) else layer(out)
         out = out[:, 0]
-        return out * self.scale.detach() if self.normalized else out
+        # A snapshot, not a view: loss() updates self.scale in place before the policy's
+        # backward pass, and autograd needs the value used in this forward pass.
+        return out * self.scale.detach().clone() if self.normalized else out
 
     def loss(self, states, targets):
         """Regression loss on detached states [list of B x D] against targets [B, H]."""

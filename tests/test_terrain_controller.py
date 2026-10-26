@@ -64,6 +64,19 @@ def test_torch_sdf_matches_reference_and_pushes_points_out():
     assert inside.grad[0, 0, 1] < 0          # descending the cost moves the point up, out of the ground
 
 
+def test_normalized_critic_bootstrap_backward_survives_the_scale_update():
+    torch = pytest.importorskip("torch")
+    from motionbricks.controller.closed_loop import Critic
+    torch.manual_seed(0)
+    critic = Critic(4, normalized=True)
+    state = torch.randn(2, 4, requires_grad=True)
+    policy = critic.frozen(state).clamp(0.0, 50.0).sum()       # bootstrap term of the policy loss
+    critic_loss = critic.loss([state], torch.ones(2, 1))        # updates scale in place
+    policy.backward()                                          # must not see the in-place update
+    critic_loss.backward()
+    assert state.grad is not None and critic.net[0].weight.grad is not None
+
+
 def test_batched_boxes_match_shared_boxes():
     torch = pytest.importorskip("torch")
     from motionbricks.data.skeleton_ray_sampler import cast_rays
@@ -254,6 +267,10 @@ def test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch():
     normalized = Critic(loop.critic_input_dim(), normalized=True)
     policy, critic_loss, terms = closed_loop_step(anchored, batch, normalized, horizon=4)
     assert torch.isfinite(policy) and torch.isfinite(critic_loss) and terms["support"] >= 0
+    model.zero_grad(set_to_none=True)
+    policy.backward()                                          # the order the trainer uses
+    critic_loss.backward()
+    assert model.rotation_head.weight.grad is not None
     assert float(normalized.scale) != 1.0                      # running scale moved toward |targets|
     model.train()
     loss, terms = teacher_step(loop, batch, foot_weight=1.0)
