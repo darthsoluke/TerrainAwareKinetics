@@ -116,3 +116,52 @@ CPU 合成张量检查不构成训练数据曝光。已读取的 v4 教师状态
 [精简结果目录](../../examples/results/terrain_controller_pilot_v5_a100_20261025/README.md) 包含机器可读报告、84 项测试日志、完整反向错误和输入身份记录。服务器 `runs/tmt_v5_coord/` 保留原始 JUnit、日志、输入快照和教师副本；16 个旧检查点逐文件校验未变。
 
 正式训练未启动，所以本轮没有 v5 评估表、梯度/critic 曲线、匹配更新行、最终分组结果、六张接触图或两张足底图。既有 v1–v4 结果保留原样。
+
+## 6. 2026-10-27 修复后续跑
+
+以上第 1～5 节保留 2026-10-26 的失败记录。本节对应用户批准的修复后执行，源码为 `e88523d5088d34effb2a79dccbb3fcaeab150b3f`，训练计划、1500 次新增更新和 2 小时上限均保持不变。
+
+### 测试与原始复现
+
+在 A100 的独立 Python 3.11.17 / PyTorch 2.5.1+cu124 环境，以 `CUDA_VISIBLE_DEVICES=''` 执行整个测试目录：
+
+```bash
+$PY -m pytest tests -q --continue-on-collection-errors \
+  --junitxml=runs/tmt_v5_fixed_coord/tests_full.xml
+```
+
+完整结果：**3124 passed、280 failed、275 errors、33 skipped，482 warnings，142.45 秒**。失败主要来自旧 MotionBricks 模型配置、PARC、SONIC 等私有依赖或资产缺失；另有旧模块的 `PRIVATE_STORAGE` 未定义、`governor_state` 属性缺失等代码错误。完整仓库测试没有全部通过，原始日志及 JUnit 保留于服务器协调目录。
+
+本轮相关的八个测试文件另行执行，结果为 **85 passed，0 skipped，11 warnings，8.08 秒**。下面两个测试在全仓库运行和相关文件运行中都实际执行且通过：
+
+- `test_normalized_critic_bootstrap_backward_survives_the_scale_update`。
+- `test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch`，包含 normalized critic、bootstrap cap，以及连续的 `policy.backward()` 和 `critic_loss.backward()`。
+
+第 3 节的零更新 CPU 复现也重跑成功，退出码 0：
+
+```text
+device=cpu optimizer_updates=0 scale_version=2
+policy_backward=passed
+```
+
+新日志为 `runs/tmt_v5_coord/normalized_backward_check_e88523d.log`，与旧的 `normalized_backward_check.log` 同目录保存。源教师检查点仍为第 1500 次、SHA-256 `5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423`，16 个历史检查点哈希一致。
+
+### 双卡两步预检
+
+2026-10-27 22:39:37～22:40:01（Asia/Singapore），确认物理 GPU 0、1 空闲后按 UUID 固定分配。每卡 512，恢复原 v4 教师副本，执行两次 `loop:4` 更新；归一化、250 次预热、bootstrap cap 50、三项代价封顶及梯度退出阈值均与正式 v5 相同。两步仍处于预热期；启用 bootstrap 的反向另由已通过的单元测试覆盖。
+
+| 检查 | 结果 |
+| --- | --- |
+| 每个 rank 的策略 / critic 更新 | 2 / 2，两个反向均完成 |
+| 各卡参数 | 逐张量摘要一致；评估中的 `rank_parameter_disagreement=0` |
+| critic 恢复 | 仅缺新增的 `scale` 缓冲区 |
+| `critic.scale` | rank 0：1.03441155；rank 1：1.03611860，均从 1.0 改变 |
+| 全部逐次记录与评估值 | 有限 |
+| 每卡峰值已分配显存 | 3,475,231,744 字节 |
+| 壁钟 / GPU-hours | 23.7516 秒 / 0.0131953 |
+| 保存状态 | update 1502；exposures 1,544,192 |
+| 输出处理 | 通过后删除 `runs/tmt_v5_fixed_gpu_preflight/`；测量日志与检查结果保留于协调目录 |
+
+这两次更新单列为预检消耗：2048 个窗口、8192 个闭环帧和 2048 个混合教师预测。正式训练仍从原 v4 第 1500 次教师检查点开始，不继承这两次更新。GPU-hours 按“进程壁钟 × 分配卡数 ÷ 3600”计算，不含等待资源的时间。
+
+修复后的测试、输入身份和失败清单见 [continuation_e88523d 结果目录](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)。

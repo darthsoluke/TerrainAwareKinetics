@@ -1,10 +1,12 @@
-# 第 7 步 pilot v5 计划（已批准；反向预检失败，已修复待重跑）
+# 第 7 步 pilot v5 计划（已批准；修复后双卡两步预检通过）
 
 2026-10-25。依据 [pilot v4 结果](terrain_controller_pilot_v4_a100_20261025.md)。用户已批准本计划，2026-10-26 执行准备与测试。
 
 执行状态：84 项测试通过；补充 CPU 零更新检查发现 normalized critic 的 `scale` 原地更新破坏 bootstrap 反向传播，后续预检与正式训练停止。新增训练消耗为 0，详见 [v5 执行记录](terrain_controller_pilot_v5_a100_20261025.md)。
 
 修复（2026-10-26）：这是控制器代码的错误，不是数据或计划的问题。`Critic.frozen()` 用 `self.scale.detach()` 作乘数，它与缓冲区共享存储；`loss()` 随后原地更新 `scale`，策略反向时版本号不符。现在 `frozen()` 与 `forward()` 都乘以 `scale` 的快照（`clone()`），本次前向用到的尺度不再被后续更新改动。新增测试按训练器的实际顺序运行 `frozen → loss → policy.backward() → critic_loss.backward()`，以及开启 normalized critic 与 bootstrap 的完整 `closed_loop_step` 反向。计划、预算与验收不变，修复后重新执行预检与本计划。
+
+2026-10-27：`e88523d` 上的 85 项相关测试、两个指定反向检查及原 CPU 复现通过；双卡每卡 512 的两步预检也通过，测试输出已删除。其余阶段等待空闲 GPU，正式 pilot 尚未启动；[续跑记录](terrain_controller_pilot_v5_a100_20261025.md#6-2026-10-27-修复后续跑)保留全仓库测试的失败清单及独立预检消耗。
 
 ## 1. v4 说明了什么
 

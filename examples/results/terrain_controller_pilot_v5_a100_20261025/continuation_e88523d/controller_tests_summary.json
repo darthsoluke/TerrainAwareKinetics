@@ -1,0 +1,11 @@
+{
+  "junit_counts": {
+    "passed": 85
+  },
+  "pytest_last_line": "85 passed, 11 warnings in 8.08s",
+  "required_tests": {
+    "test_normalized_critic_bootstrap_backward_survives_the_scale_update": "passed",
+    "test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch": "passed"
+  },
+  "failures": []
+}

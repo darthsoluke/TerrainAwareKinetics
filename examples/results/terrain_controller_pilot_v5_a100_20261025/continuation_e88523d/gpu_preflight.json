@@ -1,0 +1,132 @@
+{
+  "stage": "gpu_preflight",
+  "source_commit": "e88523d5088d34effb2a79dccbb3fcaeab150b3f",
+  "world_size": 2,
+  "batch_per_rank": 512,
+  "global_batch": 1024,
+  "started_utc": "2026-10-27T22:39:37.910876+08:00",
+  "ended_utc": "2026-10-27T22:40:01.662666+08:00",
+  "wall_seconds": 23.751566814025864,
+  "gpu_hours": 0.013195314896681036,
+  "passed": true,
+  "gates": {
+    "two_or_one_rank_receipts": true,
+    "critic_missing_only_scale": true,
+    "checkpoint_matches_ranks": true,
+    "only_rank0_writes": true,
+    "prior_checkpoints_unchanged": true,
+    "complete": true,
+    "finite": true,
+    "rank_agreement": true,
+    "resume_update": true,
+    "exposure_counter": true,
+    "both_backward_passes": true,
+    "scale_moved": true,
+    "every_update_finite": true,
+    "rank_parameters_identical": true
+  },
+  "checkpoint_state": {
+    "update": 1502,
+    "exposures": 1544192,
+    "phase_index": 2,
+    "phase_update": 0
+  },
+  "checkpoint_sha256": "24031e58429ee8a12aa5200d3f8acdcc889dbecafac1deb56804111d039093d0",
+  "checkpoint_files": [
+    "latest.pt",
+    "phase1_loop4.pt"
+  ],
+  "prior_checkpoints_unchanged": true,
+  "checkpoint_matches_ranks": [
+    true,
+    true
+  ],
+  "output_discarded": true,
+  "discarded_files": [
+    "config.json",
+    "eval.jsonl",
+    "latest.pt",
+    "phase1_loop4.pt",
+    "progress.jsonl"
+  ],
+  "physical_gpu_indices": [
+    0,
+    1
+  ],
+  "ranks": [
+    {
+      "rank": 0,
+      "exit_code": 0,
+      "updates_measured": 2,
+      "critic_updates_measured": 2,
+      "teacher_calls_measured": 2,
+      "final_trainer_state": {
+        "update": 1502,
+        "exposures": 1544192,
+        "phase_index": 2,
+        "phase_update": 0
+      },
+      "critic_loads": [
+        {
+          "missing": [
+            "scale"
+          ],
+          "unexpected": []
+        }
+      ],
+      "final_critic_scale": 1.0344115495681763,
+      "peak_allocated_bytes": 3475231744,
+      "capacity_bytes": 85100068864,
+      "checkpoint_writes": [
+        {
+          "filename": "latest.pt",
+          "update": 1502,
+          "rank": 0
+        },
+        {
+          "filename": "phase1_loop4.pt",
+          "update": 1502,
+          "rank": 0
+        },
+        {
+          "filename": "latest.pt",
+          "update": 1502,
+          "rank": 0
+        }
+      ],
+      "parameter_hashes": {
+        "critic": "b90a49446b9e454d63ce81999e3bfc36b5e73777eedb110232d7e44a204e904b",
+        "model": "07f631e94026230e77bb5212177e5679589c957932a5b3253830c5e1c2510cea"
+      }
+    },
+    {
+      "rank": 1,
+      "exit_code": 0,
+      "updates_measured": 2,
+      "critic_updates_measured": 2,
+      "teacher_calls_measured": 2,
+      "final_trainer_state": {
+        "update": 1502,
+        "exposures": 1544192,
+        "phase_index": 2,
+        "phase_update": 0
+      },
+      "critic_loads": [
+        {
+          "missing": [
+            "scale"
+          ],
+          "unexpected": []
+        }
+      ],
+      "final_critic_scale": 1.0361859798431396,
+      "peak_allocated_bytes": 3475231744,
+      "capacity_bytes": 85100068864,
+      "checkpoint_writes": [],
+      "parameter_hashes": {
+        "critic": "b90a49446b9e454d63ce81999e3bfc36b5e73777eedb110232d7e44a204e904b",
+        "model": "07f631e94026230e77bb5212177e5679589c957932a5b3253830c5e1c2510cea"
+      }
+    }
+  ]
+}

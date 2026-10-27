@@ -49,6 +49,8 @@
 
 [pilot v5预检](examples/results/terrain_controller_pilot_v5_a100_20261025/README.md)的84项测试通过；补充CPU检查发现归一化critic的尺度原地更新破坏反向传播，后续预检和正式训练停止。新增训练消耗为0，复现命令与完整错误已发布。
 
+2026-10-27 的 [v5修复后续跑](examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)已通过85项相关测试、CPU复现和双卡两步预检。原失败记录保留，全仓库测试失败清单单列；其余预检和正式训练等待空闲GPU。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

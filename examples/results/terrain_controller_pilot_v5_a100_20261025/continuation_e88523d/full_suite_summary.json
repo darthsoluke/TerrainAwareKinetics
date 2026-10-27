@@ -1,0 +1,2790 @@
+{
+  "junit_counts": {
+    "error": 275,
+    "skipped": 33,
+    "passed": 3124,
+    "failure": 280
+  },
+  "pytest_last_line": "280 failed, 3124 passed, 33 skipped, 482 warnings, 275 errors in 142.45s (0:02:22)",
+  "required_tests": {
+    "test_normalized_critic_bootstrap_backward_survives_the_scale_update": "passed",
+    "test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch": "passed"
+  },
+  "failures": [
+    {
+      "test": "::tests.test_bvh_heightfield",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_deploy_parc_remote_batch",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_continuous_reference",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_fixed_reference_live",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_protomotions_contract",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_protomotions_policy",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_reference_ground",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_reference_stream",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_root_velocity_task",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_columnar_physics",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_constrained_reference",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_lab_protocol",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_planner_ipc",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_runtime",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_sphere_bvh",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_sonic_tracker_wiring",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_mb_trajectory_reference",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_parc_collection_summary",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_parc_collection_workflow",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_parc_local_queue",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_parc_physics_comparison",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_parc_result_collection",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_profile_mb_sonic_ipc",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_scene_control_v2_data",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_scene_control_v2_geometry",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_scene_control_v2_integration",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "::tests.test_scene_control_v3_geometry",
+      "status": "error",
+      "message": "collection failure"
+    },
+    {
+      "test": "tests.test_bones_control::test_native_root_stage_matches_training_derivatives_without_partial_prefix_override",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_pose_real_training_updates_backbone_and_freezes_tokenizer",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_pose_predictions_ignore_unavailable_future_body",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_root_last_history_velocity_uses_past_and_no_future_height",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_control_models_complete_official_inference_with_soma_contract[1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_control_models_complete_official_inference_with_soma_contract[2]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_rollout_retains_only_executed_history_and_never_rewrites_output",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_adjacent_history_training_updates_pose_without_future_body_inputs[teacher]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_adjacent_history_training_updates_pose_without_future_body_inputs[generated]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_target_transport_is_common_rigid_transform_and_keeps_ground_height",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_padded_tokens_cannot_change_valid_decoded_motion",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_stop_goal_brakes_ahead_instead_of_returning_to_current_position",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_bones_control::test_input_goal_acceleration_is_bounded_without_imposing_generated_root",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_control_evaluation::test_free_metrics_use_physical_units_and_report_coverage",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_control_evaluation::test_skinning_receives_full_joint_positions_not_only_root",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_decoded_factual_history::test_prefix_gradient_only_covers_observed_root_and_body",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_decoded_factual_history::test_prefix_objective_updates_decoder_not_frozen_predictors_or_actor_state",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_decoded_factual_history::test_independent_root_normalization_leaves_body_scale_and_future_unchanged",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_decoded_factual_history::test_independent_factual_root_loss_only_reaches_decoder",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_decoded_history_root_objective::test_observed_prefix_loss_has_no_future_or_unobserved_boundary_velocity_gradient",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_decoded_history_root_objective::test_history_loss_reaches_adapters_without_changing_actor_or_frozen_codec",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_zero_initialization_causal_targets_and_forward_modes",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_terrain_enters_pose_before_transformer_and_native_noise_loss_trains_it",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_independent_episode_lengths_and_sampler_resume",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_sdf_features_are_invariant_to_training_coordinate_augmentation",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_live_backend_default_options_match_training_forward",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_native_codec_auxiliary_uses_its_own_source_boundary_and_leaves_actor_output_unchanged",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_controller::test_native_root_and_pose_receive_gradients_when_separately_unfrozen",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_history_gradients::test_history_reencoding_preserves_values_and_finite_authoritative_gradients",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_history_gradients::test_training_history_gradient_changes_no_forward_values_and_resets_by_default",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_history_gradients::test_next_primitive_loss_reaches_previous_generated_state_only_with_opt_in",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_sdf_history_gradients::test_two_primitive_backward_keeps_native_parameters_finite",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_terrain_controls::test_horizon_denoising_refinement_and_refresh_reach_real_model_and_buffer",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_terrain_controls::test_input_only_refinement_has_no_fabricated_route_patch",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_terrain_live::test_live_backend_emits_exact_model_prefix_and_uses_shared_rolling_controls",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_joint_terrain_live::test_committed_prefetch_is_identical_to_serial_and_waits_for_playback_commit",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_mb_reference_jitter::test_native_interpolation_uses_so3_and_removes_root_translation",
+      "status": "failure",
+      "message": "ValueError: Expected last dimension of `angles` to match number of sequence axes specified, got 3."
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_construction_rejects_cpu_without_initializing_cuda",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_native_query_trace_preserves_dynamic_inputs_and_unknowns[False-False]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_native_query_trace_preserves_dynamic_inputs_and_unknowns[False-True]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_native_query_trace_preserves_dynamic_inputs_and_unknowns[True-False]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_native_query_trace_preserves_dynamic_inputs_and_unknowns[True-True]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_fk_trace_is_exact_native_inverse_and_preserves_state[28]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_fk_trace_is_exact_native_inverse_and_preserves_state[32]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_fk_trace_is_exact_native_inverse_and_preserves_state[52]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_geometry_execution::test_cpu_observer_trace_reencodes_native_played_fk_not_raw_channels",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/000/scene_manifest.json'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_released_walking_schema_and_preserved_signals",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_root_angular_velocity_uses_mujoco_local_tangent",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_exact_official_ten_frame_stride_five_window",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_shifted_origin_and_accumulated_runtime_clock",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_finite_tail_never_repeats_extrapolates_or_resets",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_raw_decoder_edges_do_not_expand_trusted_coverage",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_reference_arrays_are_immutable_snapshots",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428/metadata.txt'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_mirrored_release_has_the_same_explicit_schema",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic_deploy/reference/example/walking_quip_360_R_002__A428_M/metadata.txt'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_real_native_seed_decodes_without_gpu_or_model",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_lossless_native_reference_artifact_roundtrip",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_real_native_geometry_observations_are_audited_without_modification",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_native_history_requires_explicit_embodiment_provenance_and_30hz",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_trained_compact_parent_hashes_and_completed_stages",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/acceptance.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_untrained_probe_receipt_is_rejected_before_model_loading",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/acceptance.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_native_and_dual_global_inverse_have_identical_semantics",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_scene_registration_moves_root_and_body_together_without_rewriting_motion",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_cpu_reference_decode_profiles_measured_transfer_fk_and_snapshot",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_native_grid_history_reuses_official_reencoding_without_changing_source",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_fractional_clock_history_uses_reference_root_and_so3",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_reference_history_never_extrapolates[-0.02]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_reference_history_never_extrapolates[1.61]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_reference_history_never_extrapolates[nan]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_provenance_requires_declared_mode_and_query_origin",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_actual_query_samples_keep_local_geometry_and_register_world_points[000]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_actual_query_samples_keep_local_geometry_and_register_world_points[001]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_native_dtype_payload_is_bitwise_lossless_for_mixed_outputs",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_raw_global_block_retains_declared_input_without_eager_fk",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/raw_block_00.npz'"
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_rolling_actual_anchor_uses_reference_displacement_without_root_changes",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.02]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.04]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.18]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.22]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.37]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[0.8]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[1.5]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_all366_contacts_and_source_identity_on_actual_npzs[1.6]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_v1/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_native_coordinate_heading_cases_have_identical_all366_and_fk[-3.13]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_native_coordinate_heading_cases_have_identical_all366_and_fk[-1.5707963267948966]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_native_coordinate_heading_cases_have_identical_all366_and_fk[0.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_native_coordinate_heading_cases_have_identical_all366_and_fk[1.5707963267948966]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_prepared_b1_native_coordinate_heading_cases_have_identical_all366_and_fk[3.13]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/mb_proposal_compiled_v2/proposal.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_cpu_b1_preparation_and_calls_preserve_rng_assets_and_explicit_execution",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/pfnn_mixed_20261015/final_acceptance_flat_v1/scene.npz'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_reference::test_b1_oracle_body_matches_the_preserved_actual_v1_source",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/motionbricks/out/mb_sonic_e0_e3_20261018/e3_b1_physical_smoke_v1/sources/mb_reference.py'"
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_pure_fk_matches_official_csv_and_native_xml",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'"
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_native_foot_bank_reaches_supported_g1_ankle_without_state_writes[Left-10.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_native_foot_bank_reaches_supported_g1_ankle_without_state_writes[Right--10.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_calibration_has_actual_hashes_no_mirror_fit_or_optimizer",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_saved_calibration_identity_roundtrip",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_legacy_rotation_gauge_algebra_roundtrip_is_not_native_forward_validation",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_actual_physics_history_has_inferred_masks_measured_contacts_and_no_state_writes",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_force_contacts_follow_actual_force_and_spatial_split",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_pair_diagnostic_uses_actual_markers_and_retains_root_path_scale_difference[-0.05251242179]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_pair_diagnostic_uses_actual_markers_and_retains_root_path_scale_difference[_M-0.05190319479]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_genuine_full_mb_proposal_matches_calibration_gauge_without_limit_clipping",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_explicit_short_covered_proposal_resamples_without_clock_rebase",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_quaternion_signs_remain_continuous_through_pi",
+      "status": "failure",
+      "message": "ValueError: Expected last dimension of `angles` to match number of sequence axes specified, got 4."
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_uniform_one_second_packet_is_legal_and_preserves_failed_raw_tail[0.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_uniform_one_second_packet_is_legal_and_preserves_failed_raw_tail[0.18]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_fixed_packet_rejects_insufficient_guard_and_preserves_legacy_failure",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_public_audit_does_not_drop_tail_when_view_has_shorter_trust",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_short_packet_requires_explicit_short_tracker_contract_and_retains_raw_audit",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_explicit_one_second_horizon_preserves_default_v1_contract",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_explicit_reserved_packet_is_legal_and_keeps_full_failed_tail[0.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_explicit_reserved_packet_is_legal_and_keeps_full_failed_tail[0.005]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_explicit_reserved_packet_is_legal_and_keeps_full_failed_tail[0.095]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_explicit_reserved_packet_is_legal_and_keeps_full_failed_tail[0.1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_reserved_packet_rejects_insufficient_coverage_and_preserves_legacy_failure",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_consumer_horizon_requires_finite_full_50hz_interval_contract[0.9]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_consumer_horizon_requires_finite_full_50hz_interval_contract[0.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_consumer_horizon_requires_finite_full_50hz_interval_contract[nan]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_consumer_horizon_requires_finite_full_50hz_interval_contract[inf]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_consumer_horizon_requires_finite_full_50hz_interval_contract[1.121]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_actual_seed_has_calibrated_hip_gauge_and_exact_legacy_root",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_unobserved_raw_global_twist_does_not_reenter_runtime_mapping",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_all_preserved_mb_proposal_frames_and_velocities_are_checked[mb_proposal_v1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_all_preserved_mb_proposal_frames_and_velocities_are_checked[mb_proposal_compiled_v2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_all_preserved_mb_proposal_frames_and_velocities_are_checked[mb_proposal_full_plan_v1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_genuine_failed_f07d_packet_retains_legacy_ankle_failure",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_true_velocity_violation_is_rejected_without_time_stretch",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_true_anatomical_position_violation_is_rejected_without_clipping",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_authorized_constrained_reference_repairs_real_waist_failure_and_retains_raw_audit",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_retarget::test_authorized_constraints_do_not_change_a_healthy_dense_reference",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic'\""
+    },
+    {
+      "test": "tests.test_mb_sonic_scene::test_actual_catalog_has_all_fifteen_original_metric_sources",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/catalog.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene::test_include_compiles_with_official_g1_without_extra_floor",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${PFNN_PROJECT}/tak-step7-20261025/gear_sonic/data/robot_model/model_data/g1/g1_29dof_with_hand.xml'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_backend_is_explicit_and_native_remains_default",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_existing_fifteen_proofs_bind_actual_full_resolution_canonical_sources",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/catalog.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[passed-False]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[passed-1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[scene_sha256-other-map]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[implementation_sha256-other-helper]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[points_checked-61]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[distance_max_abs-1e-08]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[normal_max_abs-1e-08]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[valid_equal-False]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[valid_equal-1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_proof_changes_are_rejected_without_geometry_work[actual_optimizer_updates-1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/pfnn_mixed_20261015/pfnn_map_catalog_v1/000/geometry_query_review.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_opted_in_flat_scene_retains_exact_native_plane_and_rng",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_rough_optin_never_falls_back_to_native[cpu]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/001/source_scene.npz'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_rough_optin_never_falls_back_to_native[fp64]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/001/source_scene.npz'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_rough_optin_never_falls_back_to_native[unknown]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/scenes/001/source_scene.npz'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_native_and_compiled_construction_use_same_pinned_field_after_cache_removal",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_live_bindings_detect_scene_field_or_handle_identity_changes[BVHHeightfieldPrismSDF]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_live_bindings_detect_scene_field_or_handle_identity_changes[SphereBVHHeightfieldPrismSDF]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_sphere_optin_reuses_actual_000_plane_proof_without_id_scope",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_scene_binding::test_release_unprepared_scene_keeps_shared_model_other_scenes_and_external_owners",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_mb_sonic_short_full_plan::test_payload_generation_layout_times_and_provenance_follow_count[1]",
+      "status": "failure",
+      "message": "TypeError: test_payload_generation_layout_times_and_provenance_follow_count.<locals>.audit() got an unexpected keyword argument 'model_to_scene_translation'"
+    },
+    {
+      "test": "tests.test_mb_sonic_short_full_plan::test_payload_generation_layout_times_and_provenance_follow_count[2]",
+      "status": "failure",
+      "message": "TypeError: test_payload_generation_layout_times_and_provenance_follow_count.<locals>.audit() got an unexpected keyword argument 'model_to_scene_translation'"
+    },
+    {
+      "test": "tests.test_mb_sonic_short_full_plan::test_adapter_prepare_forwards_count_and_generate_requires_same_contract[None]",
+      "status": "failure",
+      "message": "AttributeError: 'types.SimpleNamespace' object has no attribute 'source'"
+    },
+    {
+      "test": "tests.test_mb_sonic_short_full_plan::test_adapter_prepare_forwards_count_and_generate_requires_same_contract[1]",
+      "status": "failure",
+      "message": "AttributeError: 'types.SimpleNamespace' object has no attribute 'source'"
+    },
+    {
+      "test": "tests.test_mb_sonic_short_full_plan::test_adapter_prepare_forwards_count_and_generate_requires_same_contract[2]",
+      "status": "failure",
+      "message": "AttributeError: 'types.SimpleNamespace' object has no attribute 'source'"
+    },
+    {
+      "test": "tests.test_mb_sonic_sphere_proof::test_parent_probe_emits_the_exact_required_field_names",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/probe_wasd_sphere_queries_v1.py'"
+    },
+    {
+      "test": "tests.test_mb_sonic_sphere_proof::test_actual_all_fifteen_parent_proofs_admit_offline_without_kernel_work",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/wasd_sphere_query_v2/complete.json'"
+    },
+    {
+      "test": "tests.test_mb_sonic_sphere_proof::test_actual_001_internal_id_differences_are_outside_native_certainty",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/mb_sonic_e0_e3_20261018/wasd_sphere_id_diagnosis_v1/failed-001/active_ids.npz'"
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_zero_error_preserves_full_native_pose_not_neutral_filling",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_measured_translation_heading_and_joint_errors_enter_history",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_bootstrap_uses_measured_frames_and_cannot_extend_initial_prior",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_fixed_observer_does_not_reinterpret_history_when_plan_identity_changes",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_fixed_observer_preserves_seed_pose_and_observes_actual_leg_motion",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_reference_phase_uses_full_g1_joint_hierarchy_and_immutable_causal_samples",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_later_measurements_cannot_change_an_existing_history_window",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_unobserved_local_pose_and_physical_input_arrays_are_preserved",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_feedback_uses_actual_contact_force_without_distance_labels",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_root_torso_feedback_preserves_reference_limb_phase",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_reference_constraints_do_not_hide_real_orientation_from_native_feedback",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_recorded_reference_boundary_roundoff_is_solved_with_original_limits",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_feedback_never_extrapolates_physical_history[0.08]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_mb_state_feedback::test_feedback_never_extrapolates_physical_history[0.23]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${PROJECT_ROOT}/out/mb_sonic_e0_e3_20261018/protomotions_g1_v1/calibration.json'\""
+    },
+    {
+      "test": "tests.test_native_codec_fidelity::test_source_identity_and_decoded_root_gradient_coordinates",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_codec_height::test_config_adapter_preserves_native_training_configuration",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_codec_height::test_rigid_vertical_pair_shifts_root_and_absolute_ric_y_for_fk_and_ric",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_codec_height::test_expanded_decoder_starts_at_exact_legacy_parity",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_codec_height::test_expansion_handles_optional_last_fusion_layer",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_codec_height::test_decoder_only_step_trains_height_columns_and_preserves_frozen_state",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_control_runner::test_native_pose_keeps_supporting_tokenizer_frozen_across_two_updates",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_ddp_efficiency::test_matmul_applies_official_high_without_changing_native_config_or_training_precision",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_height_inference::test_dense_decoder_consumes_predicted_root_height_not_future_truth[native_random]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_height_inference::test_dense_decoder_consumes_predicted_root_height_not_future_truth[played_context4]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_models::test_native_configs_keep_official_training_shape_and_expose_horizon",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_models::test_tokenizer_is_original_model_with_soma_feature_dimensions_and_no_extra_loss",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_models::test_root_factory_keeps_original_root_model_and_learned_decoder",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_models::test_root_decoder_output_is_learned_and_differentiable",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_models::test_native_factory_rejects_non_30hz_representation",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_actual_root_training_uses_components_and_no_future_pose",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_actual_pose_training_uses_predicted_root_not_teacher_future_height",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_complete_online_inference_masks_unknown_nan_and_preserves_native_decoder",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_online_rejects_output_and_ground_truth_substitutions[override0]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_online_rejects_output_and_ground_truth_substitutions[override1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_online_rejects_output_and_ground_truth_substitutions[override2]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_online_pose_missing_frozen_predictor_fails_not_gt_fallback",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_frozen_root_prediction_is_invariant_to_teacher_future_y_and_body",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_online_nan_unknowns_have_no_effect_and_codec_only_has_one_observed_keyframe",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_online_conditions::test_config_is_explicit_extension_without_loss_or_optimizer_changes",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_paper_scalars_preserve_every_other_release_setting[tokenizer]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_paper_scalars_preserve_every_other_release_setting[root]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_paper_scalars_preserve_every_other_release_setting[pose]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_public_optimizer_callable_is_adam_and_scheduler_reaches_paper_endpoints[tokenizer]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_public_optimizer_callable_is_adam_and_scheduler_reaches_paper_endpoints[root]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_public_optimizer_callable_is_adam_and_scheduler_reaches_paper_endpoints[pose]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.optimizer._target_-adam_atan2_pytorch.AdamAtan2]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.optimizer.lr-0.0001]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.optimizer.weight_decay-0.01]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.scheduler._target_-other.Scheduler]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.scheduler.num_warmup_steps-1000]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.scheduler.num_training_steps-2000001]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_mismatched_profile_fails_before_replacing_optimizer[model.scheduler.final_lr-4e-06]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_paper_protocol::test_cli_validation_does_not_import_torch",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: PosixPath('${PFNN_PROJECT}/tak-step7-20261025/motionbricks')"
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_legacy_and_full_component_mask_have_exact_parity",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_unknown_height_is_sanitized_and_known_height_conditions_output",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_component_mask_scatter_tracks_variable_duration_end_slots",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_component_mask_embeddings_receive_gradients",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_component_mask_rejects_shape_and_dtype_mismatch[invalid_mask0-shape]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_component_mask_rejects_shape_and_dtype_mismatch[invalid_mask1-bool dtype]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_root_components::test_component_mask_rejects_presence_mismatch_and_disabled_mode",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_stage_training::test_native_root_training_step_backpropagates_root_and_duration_losses",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_stage_training::test_native_pose_training_step_runs_original_mask_mix_with_frozen_tokenizer",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_stage_training::test_paper_pose_training_step_accepts_twelve_frame_window",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_stair_review_export::test_native_stair_review_export_contract",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/native_mb_stairs_20261007/plant-v4-whole-warm/report.json'"
+    },
+    {
+      "test": "tests.test_native_mb_stair_review_export::test_v2_fixture_ue_fk_matches_reference_with_zero_order_sampling",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/native_mb_stairs_20261007/plant-v4-whole-warm/report.json'"
+    },
+    {
+      "test": "tests.test_native_mb_stair_sequence::test_declared_runtime_condition_counts_come_from_original_curriculum",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_stair_tokenizer::test_reconstruct_matches_original_native_tokenizer_index_decode",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_disabled_state_dict_and_forward_compatibility[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_disabled_state_dict_and_forward_compatibility[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_disabled_mode_rejects_explicit_terrain_observation[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_disabled_mode_rejects_explicit_terrain_observation[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_terrain_gate_zero_is_exact_parity_and_nonzero_gate_conditions_output[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_terrain_gate_zero_is_exact_parity_and_nonzero_gate_conditions_output[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_all_unknown_and_nan_observations_are_finite_and_do_not_change_output[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_all_unknown_and_nan_observations_are_finite_and_do_not_change_output[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_terrain_branch_gets_backbone_gradients_but_observation_does_not[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_terrain_branch_gets_backbone_gradients_but_observation_does_not[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_local_terrain_change_changes_conditioned_output[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_local_terrain_change_changes_conditioned_output[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_enabled_state_dict_round_trip[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_enabled_state_dict_round_trip[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_terrain_observation_shape_validation[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_terrain_observation_shape_validation[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_remote_valid_terrain_point_is_rejected[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_remote_valid_terrain_point_is_rejected[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_pose_root_height_gate_zero_parity_and_height_sensitivity[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_pose_root_height_gate_zero_parity_and_height_sensitivity[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_pose_root_height_bridge_validates_mode_shape_and_finiteness[root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_backbone::test_pose_root_height_bridge_validates_mode_shape_and_finiteness[pose]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_native_mb_terrain_integration::test_real_training_step_uses_terrain_and_backpropagates[root]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_terrain_integration::test_real_training_step_uses_terrain_and_backpropagates[pose]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_terrain_integration::test_missing_scene_fails_in_real_training_path",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_terrain_integration::test_flat_warmstart_only_allows_new_terrain_keys_and_preserves_original_config",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_terrain_integration::test_complete_native_inference_passes_same_current_scene_and_predicted_root_height",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_upstream_parity::test_base_tokenizer_loss_and_prediction_gradient_match_committed_head_without_custom_keys",
+      "status": "failure",
+      "message": "subprocess.CalledProcessError: Command '['git', 'show', 'HEAD:motionbricks/motionbricks/vqvae/models/motion_vqvae.py']' returned non-zero exit status 128."
+    },
+    {
+      "test": "tests.test_native_mb_upstream_parity::test_segment_sampling_matches_committed_head_and_metadata_tracks_sampled_rows",
+      "status": "failure",
+      "message": "subprocess.CalledProcessError: Command '['git', 'show', 'HEAD:motionbricks/motionbricks/helper/data_training_util.py']' returned non-zero exit status 128."
+    },
+    {
+      "test": "tests.test_native_mb_velocity_goal::test_real_velocity_root_training_masks_positions_and_trains_the_new_projection",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_velocity_goal::test_velocity_pose_root_cannot_read_teacher_future_xyz_height_or_pose",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_velocity_goal::test_real_velocity_inference_ignores_nan_unknown_height_and_uses_native_decoder",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_velocity_goal::test_amp_preserves_motion_targets_and_frozen_pose_labels[root]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_velocity_goal::test_amp_preserves_motion_targets_and_frozen_pose_labels[pose]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_complete_pipeline_is_equivariant_with_observed_vertical_frame[observed-pelvis-y-v1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_complete_pipeline_is_equivariant_with_observed_vertical_frame[observed-terrain-y-v1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_native_duration_prediction_remains_bounded_and_keeps_unknown_future",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_official_training_path_centers_only_after_sampling_and_backpropagates[tokenizer]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_official_training_path_centers_only_after_sampling_and_backpropagates[root]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_official_training_path_centers_only_after_sampling_and_backpropagates[pose]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_observed_terrain_frame_retains_body_height_error_and_whole_world_equivariance",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_terrain_frame_uses_sampled_scene_and_original_training_objective[tokenizer]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_terrain_frame_uses_sampled_scene_and_original_training_objective[root]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_native_mb_vertical_frame::test_terrain_frame_uses_sampled_scene_and_original_training_objective[pose]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_catalog_maps_remote_paths_and_includes_unreported_candidate",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_report_rows_without_motion_and_disk_candidates_are_retained",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_catalog_only_writes_static_gallery_with_caveat_labels",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_gallery_uses_midframe_poster_and_pauses_hidden_clips",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_render_limit_keeps_full_catalog_and_continues_after_clip_failure",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_existing_cache_requires_matching_source_renderer_and_strict_manifest",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_render_existing_reuses_verified_cache_without_loading_renderer",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_render_all_bypasses_a_valid_cache",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_limit_must_be_positive[0]",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_batch_gallery::test_limit_must_be_positive[-1]",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_codec_height_training::test_native_random_default_keeps_old_keyframe_path_gradient_and_frozen_state",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_codec_height_training::test_played_context4_passes_true_prefix_and_detached_source_fk",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_codec_height_training::test_context_policy_survives_tokenizer_config_artifact_roundtrip[native_random]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_codec_height_training::test_context_policy_survives_tokenizer_config_artifact_roundtrip[played_context4]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_codec_height_training::test_executed_history_exposes_constant_height_boundary_and_finite_gradient",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_collection_budget::test_next_wave_is_balanced_preflighted_and_uses_fresh_immutable_groups",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_decoder_height_response::test_meter_ramp_changes_only_derived_external_root_y[1.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_parc_decoder_height_response::test_meter_ramp_changes_only_derived_external_root_y[-1.0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_parc_decoder_height_response::test_feature_indices_make_planar_y_gain_unavailable_not_zero",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_parc_decoder_height_response::test_gain_reads_root_y_from_full_decoder_output_not_target_condition_layout",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_scene_and_route_are_independent_of_motion_rng[gaps]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_scene_and_route_are_independent_of_motion_rng[stairs]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_scene_and_route_are_independent_of_motion_rng[mixed]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_official_astar_jump_guides_are_not_mistaken_for_support_surfaces",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_expanded_geometry_and_reverse_route[stairs]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_expanded_geometry_and_reverse_route[platforms]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_expanded_geometry_and_reverse_route[blocks]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_expanded_geometry_and_reverse_route[gaps]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_expanded_geometry_and_reverse_route[rough]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_diverse_course::test_expanded_geometry_and_reverse_route[mixed]",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_long_generation::test_course_passage_rejects_endpoint_shortcut_and_requires_order",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_long_generation::test_official_score_chunk_parity",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_long_generation::test_route_milestones_reject_isolated_summits_and_skipped_descent",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_long_generation::test_sampling_uses_released_generation_settings_not_training_test_stride",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/vendor/PARC/data/configs/parc_2_kin_gen_default.yaml'"
+    },
+    {
+      "test": "tests.test_parc_long_generation::test_loader_selects_ema_weights_and_never_silently_falls_back",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_long_mixed_course::test_independent_sections_form_one_long_route",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_long_mixed_course::test_long_geometry_is_repeatable_and_does_not_depend_on_motion_rng",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_all_route_nodes_are_surface_nodes_and_jump_is_a_discrete_edge[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_route_is_bounded_unique_and_only_jump_edge_skips_grid_cells[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_obstacle_blocks_direct_lane_and_route_uses_clear_detour[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_course_contains_all_requested_terrain_families_without_claiming_success[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_official_parc_astar_creates_course_jump_edge_between_gap_support_nodes[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_stair_and_ledge_profiles_are_bounded_and_join_exactly[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_existing_static_save_contract_round_trips[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_all_route_nodes_are_surface_nodes_and_jump_is_a_discrete_edge[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_route_is_bounded_unique_and_only_jump_edge_skips_grid_cells[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_obstacle_blocks_direct_lane_and_route_uses_clear_detour[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_course_contains_all_requested_terrain_families_without_claiming_success[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_official_parc_astar_creates_course_jump_edge_between_gap_support_nodes[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_stair_and_ledge_profiles_are_bounded_and_join_exactly[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_existing_static_save_contract_round_trips[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_all_route_nodes_are_surface_nodes_and_jump_is_a_discrete_edge[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_route_is_bounded_unique_and_only_jump_edge_skips_grid_cells[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_obstacle_blocks_direct_lane_and_route_uses_clear_detour[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_course_contains_all_requested_terrain_families_without_claiming_success[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_official_parc_astar_creates_course_jump_edge_between_gap_support_nodes[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_stair_and_ledge_profiles_are_bounded_and_join_exactly[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_existing_static_save_contract_round_trips[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_climb_challenge_uses_high_ledge_and_narrow_gap_as_unverified_candidates",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_easy_and_medium_keep_low_ledge_curriculum",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_seed_reproducibility_and_terrain_diversity",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_mixed_course::test_difficulty_is_bounded_and_changes_geometry",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_online_evaluation::test_evaluation_generates_without_future_pose_height_and_writes_world_motion[False]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_online_evaluation::test_evaluation_generates_without_future_pose_height_and_writes_world_motion[True]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_physics_batch.ParcPhysicsBatchTests::test_builds_hash_recorded_bundle_with_raw_motions_and_id_showcase",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_physics_batch.ParcPhysicsBatchTests::test_bundle_limit_is_checked_before_creating_output",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_physics_batch.ParcPhysicsBatchTests::test_catalog_hash_mismatch_fails_before_output_creation",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_physics_batch.ParcPhysicsBatchTests::test_rejects_duplicate_candidate_ids_and_traversal",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_physics_batch.ParcPhysicsBatchTests::test_rejects_existing_output_without_modifying_it",
+      "status": "failure",
+      "message": "NameError: name 'PRIVATE_STORAGE' is not defined"
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_returns_official_subterrain_and_path_samples_actual_heightfield[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_route_is_four_connected_unique_and_within_length_limits[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_exact_height_levels_and_bounded_vertical_steps[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_stair_metadata_matches_route_profiles_and_minimum_width[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_segments_waypoints_and_rasterization_invariants[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_s_route_keeps_parallel_legs_separated[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_terrace_endpoint_has_same_height_support_beyond_route[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_extension_uses_existing_static_save_and_preview_conventions[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_variants_are_reproducible_and_distinct[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_returns_official_subterrain_and_path_samples_actual_heightfield[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_route_is_four_connected_unique_and_within_length_limits[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_exact_height_levels_and_bounded_vertical_steps[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_stair_metadata_matches_route_profiles_and_minimum_width[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_segments_waypoints_and_rasterization_invariants[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_s_route_keeps_parallel_legs_separated[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_terrace_endpoint_has_same_height_support_beyond_route[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_extension_uses_existing_static_save_and_preview_conventions[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_variants_are_reproducible_and_distinct[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_returns_official_subterrain_and_path_samples_actual_heightfield[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_route_is_four_connected_unique_and_within_length_limits[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_exact_height_levels_and_bounded_vertical_steps[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_stair_metadata_matches_route_profiles_and_minimum_width[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_segments_waypoints_and_rasterization_invariants[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_s_route_keeps_parallel_legs_separated[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_terrace_endpoint_has_same_height_support_beyond_route[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_extension_uses_existing_static_save_and_preview_conventions[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_platform_extensions::test_variants_are_reproducible_and_distinct[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_recovery_bridge::test_inverse_task_calibration_recovers_native_parc_fk_without_projection",
+      "status": "failure",
+      "message": "ModuleNotFoundError: No module named 'PARC'"
+    },
+    {
+      "test": "tests.test_parc_root_height_review::test_prepared_inputs_match_online_masks_and_predict_normalization",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_root_height_review::test_terrain_observation_is_current_and_changes_only_with_direction",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_root_height_review::test_direct_root_forecast_is_eight_tokens_and_reports_non_support_lookups",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_parc_soma_retarget::test_all_soma_tasks_have_distinct_aliases_and_source_body_assignments",
+      "status": "error",
+      "message": "failed on setup with \"ModuleNotFoundError: No module named 'PARC'\""
+    },
+    {
+      "test": "tests.test_parc_soma_retarget::test_foot_frames_use_surface_forward_not_sloping_toe_bone",
+      "status": "error",
+      "message": "failed on setup with \"ModuleNotFoundError: No module named 'PARC'\""
+    },
+    {
+      "test": "tests.test_parc_soma_retarget::test_foot_task_exactly_maps_reference_surface_anchor_under_arbitrary_rotation",
+      "status": "error",
+      "message": "failed on setup with \"ModuleNotFoundError: No module named 'PARC'\""
+    },
+    {
+      "test": "tests.test_parc_soma_retarget::test_unobserved_joints_inherit_reference_parent_orientation",
+      "status": "error",
+      "message": "failed on setup with \"ModuleNotFoundError: No module named 'PARC'\""
+    },
+    {
+      "test": "tests.test_parc_soma_retarget::test_official_sdf_includes_step_side_and_correct_interior_distance",
+      "status": "error",
+      "message": "failed on setup with \"ModuleNotFoundError: No module named 'PARC'\""
+    },
+    {
+      "test": "tests.test_parc_soma_retarget::test_opposite_rotation_steps_cannot_hide_behind_equal_magnitudes",
+      "status": "failure",
+      "message": "ValueError: Expected last dimension of `angles` to match number of sequence axes specified, got 2."
+    },
+    {
+      "test": "tests.test_parc_stair64::test_eight_distinct_courses_have_real_up_and_down",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_stair64::test_command_stop_keeps_current_history_and_resumes",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_stair64::test_zero_input_does_not_certify_a_stopped_body",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_uses_official_subterrain_and_verified_xyz_path_contract",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_course_is_four_connected_non_crossing_and_starts_ends_flat",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_three_spaced_flights_have_exact_risers_treads_and_flat_landings",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_every_vertical_route_change_is_a_designated_stair_riser",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_course_is_reproducible",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_saves_npz_manifest_and_static_preview",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_route_is_on_discrete_top_and_inside_wide_rectangle[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_stairs_and_summit_metadata_match_passage_consumer[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_waypoints_capture_ordered_corners_and_wide_u_turns[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_variants_are_reproducible_and_identifiably_distinct[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_cli_serializes_route_tasks_and_preview[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_route_is_on_discrete_top_and_inside_wide_rectangle[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_stairs_and_summit_metadata_match_passage_consumer[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_waypoints_capture_ordered_corners_and_wide_u_turns[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_variants_are_reproducible_and_identifiably_distinct[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_cli_serializes_route_tasks_and_preview[1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_route_is_on_discrete_top_and_inside_wide_rectangle[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_stairs_and_summit_metadata_match_passage_consumer[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_waypoints_capture_ordered_corners_and_wide_u_turns[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_variants_are_reproducible_and_identifiably_distinct[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_platform_cli_serializes_route_tasks_and_preview[2]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC\""
+    },
+    {
+      "test": "tests.test_parc_stair_course::test_cli_defaults_keep_stairs_and_platform_outputs_separate",
+      "status": "failure",
+      "message": "FileNotFoundError: Official PARC checkout not found: ${TAK_ROOT}/out/vendor/PARC"
+    },
+    {
+      "test": "tests.test_pfnn_soma_retarget::test_resampling_preserves_original_quarter_rate_samples_during_fast_rotation",
+      "status": "failure",
+      "message": "ValueError: Expected last dimension of `angles` to match number of sequence axes specified, got 97."
+    },
+    {
+      "test": "tests.test_pfnn_tuning::test_internal_replanning_keeps_all_eight_frames_and_does_not_advance_live_history[1]",
+      "status": "failure",
+      "message": "AttributeError: 'TunablePFNNBackend' object has no attribute 'governor_state'"
+    },
+    {
+      "test": "tests.test_pfnn_tuning::test_internal_replanning_keeps_all_eight_frames_and_does_not_advance_live_history[2]",
+      "status": "failure",
+      "message": "AttributeError: 'TunablePFNNBackend' object has no attribute 'governor_state'"
+    },
+    {
+      "test": "tests.test_pfnn_tuning::test_internal_replanning_keeps_all_eight_frames_and_does_not_advance_live_history[4]",
+      "status": "failure",
+      "message": "AttributeError: 'TunablePFNNBackend' object has no attribute 'governor_state'"
+    },
+    {
+      "test": "tests.test_pfnn_tuning::test_failed_internal_replan_preserves_live_history_and_existing_buffer",
+      "status": "failure",
+      "message": "AttributeError: 'TunablePFNNBackend' object has no attribute 'governor_state'"
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_portable_online_roundtrip_preserves_predictions_and_no_future_clip",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_portable_online_rejects_changed_or_future_conditions[future_history]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_portable_online_rejects_changed_or_future_conditions[root_dependency]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_portable_online_rejects_changed_or_future_conditions[statistics]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_portable_online_rejects_changed_or_future_conditions[reference]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_played_context_decoder_binding_matches_training_and_rejects_policy_changes",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_rejects_mixed_or_unbound_vertical_representation[only_root]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_rejects_mixed_or_unbound_vertical_representation[no_training_binding]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_portable_parc_online_soma::test_rejects_mixed_or_unbound_vertical_representation[stale_pose_dictionary]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_root/version_1/hparams.yaml'\""
+    },
+    {
+      "test": "tests.test_reciprocal_source_training::test_decoder_control_preserves_frozen_predictors_and_future_isolation",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_reciprocal_source_training::test_coordinated_supervision_reaches_all_three_components_not_vocabulary",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_reciprocal_source_training::test_native_source_optimizer_and_rng_resume_matches_next_cpu_step",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_scene_control_v2_provider::test_paths_are_relative_to_project_not_caller_cwd",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'"
+    },
+    {
+      "test": "tests.test_scene_control_v2_provider::test_real_train_source_world_frame_and_continuous_endpoints",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v2_provider::test_window_scene_and_ric_height_translate_together[8]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v2_provider::test_window_scene_and_ric_height_translate_together[12]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v2_provider::test_window_scene_and_ric_height_translate_together[16]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v2_provider::test_source_read_failure_does_not_create_retarget_or_fallback",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v2_runtime::test_server_static_config_command_and_ack_order",
+      "status": "failure",
+      "message": "asyncio.exceptions.CancelledError"
+    },
+    {
+      "test": "tests.test_scene_control_v2_runtime::test_socket_can_receive_new_intent_while_ack_waits_for_slow_speculative_inference",
+      "status": "failure",
+      "message": "asyncio.exceptions.CancelledError"
+    },
+    {
+      "test": "tests.test_scene_control_v2_runtime::test_socket_reports_failed_future_only_after_published_packet_played_receipt",
+      "status": "failure",
+      "message": "asyncio.exceptions.CancelledError"
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_actor_root_and_global_rotations_are_authoritative",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_official_full18056_skin_and_lossless_rig_packet",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_recurrent_state_uses_predicted_frames_only",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_real646_source_bridge_preserves_root_and_official_fullskin",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_unknown_actor_scene_is_rejected_at_publication",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_batch_flattened_lbs_matches_official_frames_exactly",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_experiment_failure_preserves_partial_receipt",
+      "status": "failure",
+      "message": "importlib.metadata.PackageNotFoundError: No package metadata was found for warp-lang"
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_shared_pipeline_commits_only_matching_rendered_ack_once",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_pipeline_unknown_scene_does_not_publish_or_advance_state",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_pipeline_visual_asset_is_the_actual_query_mesh",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_root_plan_seed_uses_only_observed_history_velocity",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_committed_plan_and_opposite_latest_intent_have_distinct_query_sources",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_native::test_root_preview_native_yaw_and_query_world_frame_covariance",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_server::test_capacity_new_connection_uses_shared_pipeline_without_rebuilding_static_resources",
+      "status": "failure",
+      "message": "ModuleNotFoundError: No module named 'warp'"
+    },
+    {
+      "test": "tests.test_scene_control_v3_server::test_actual_async_pump_failure_is_logged_archived_and_sent_as_close_reason",
+      "status": "failure",
+      "message": "ValueError: '${TAK_ROOT}/web/full_corpus_lab/vendor' does not exist"
+    },
+    {
+      "test": "tests.test_scene_control_v3_server::test_read_only_routes_and_same_origin_loopback_admission_without_binding",
+      "status": "failure",
+      "message": "ValueError: '${TAK_ROOT}/web/full_corpus_lab/vendor' does not exist"
+    },
+    {
+      "test": "tests.test_scene_control_v3_server::test_real_websocket_with_actual_frontend_fakeclock_on_temporary_cpu_test_port[False]",
+      "status": "failure",
+      "message": "ValueError: '${TAK_ROOT}/web/full_corpus_lab/vendor' does not exist"
+    },
+    {
+      "test": "tests.test_scene_control_v3_server::test_real_websocket_with_actual_frontend_fakeclock_on_temporary_cpu_test_port[True]",
+      "status": "failure",
+      "message": "ValueError: '${TAK_ROOT}/web/full_corpus_lab/vendor' does not exist"
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_sample_count[0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_sample_count[-1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_sample_count[18057]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_sample_count[1.5]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_sample_count[True]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_explicit_selection[rank-one-dimensional]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_explicit_selection[count-sample_count entries]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_explicit_selection[negative-range]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_explicit_selection[upper_bound-range]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_explicit_selection[duplicate-unique]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_constructor_rejects_invalid_explicit_selection[floating-integer indices]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_real_source_0_315_645_and_nonorigin_rigs_match_full_official_skin",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_explicit_vertices_keep_all_official_influences_including_beyond_four",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_forward_uses_only_selected_buffers_and_does_not_mutate_inputs_or_skin",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_zero_parameter_frozen_buffers_follow_cpu_dtype_and_device[dtype0]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_scene_control_v3_surface::test_zero_parameter_frozen_buffers_follow_cpu_dtype_and_device[dtype1]",
+      "status": "error",
+      "message": "failed on setup with \"FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out'\""
+    },
+    {
+      "test": "tests.test_soma_continuation::test_predicted_tokens_cannot_read_source_future_body",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_continuation::test_real_decoder_training_path_has_gradients_and_weighted_temporal_terms",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_continuation::test_straight_through_forward_is_exact_native_hard_token_decode",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_continuation::test_native_pose_supervision_reaches_transformer_not_frozen_decoder",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_decoder_refinement::test_root_overwrite_reproducer_and_native_root_gradient[provided_velocity-0.0]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_decoder_refinement::test_root_overwrite_reproducer_and_native_root_gradient[learned_refinement-1.0]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_decoder_refinement::test_source_future_not_transported_to_generated_drift_or_ground",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_decoder_refinement::test_captured_request_is_exact_deployment_and_ignores_future_body",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_decoder_refinement::test_native_decoder_gradient_with_actual_request_frozen_encoder_and_ema",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_native_forward_gradient_and_frozen_tokenizer[False]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_native_forward_gradient_and_frozen_tokenizer[True]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_decoded_motion_itself_reaches_both_backbones_without_token_ce",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_future_body_and_height_are_not_request_inputs",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_source_targets_do_not_receive_gradients_and_total_contains_decoded_loss",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_hooks_removed_when_native_prediction_raises",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_non_eval_and_wrong_publication_contract_are_rejected",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_official_sole_supervision_graph_and_empty_evidence[False]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_official_sole_supervision_graph_and_empty_evidence[True]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_joint_rollout::test_saved_joint_bundle_carries_trained_root_and_preserves_original",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observation_uses_executed_fk_not_auxiliary_predictions",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observation_preserves_world_pose_at_nonzero_heading_and_origin[0.7]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observation_preserves_world_pose_at_nonzero_heading_and_origin[-1.8]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observation_preserves_world_pose_at_nonzero_heading_and_origin[3.0]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observation_does_not_depend_on_predicted_heading_or_6d_scale",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_legacy_history_is_unchanged_and_unknown_policy_rejected",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observation_is_differentiable_and_has_no_time_shift",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_observed_history::test_observed_geometry_uses_same_native_forward_and_gradients_in_training",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_training_conditions_one_endpoint_and_no_hidden_middle",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_external_goal_not_source_future_even_for_goal_trained_model",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_reference_library_uses_native_heading_and_never_mutates_source",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_reference_library_rejects_non_training_provenance[validation]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_reference_library_rejects_non_training_provenance[test]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_control_goals_reach_root_pose_and_official_decoder[1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_control_goals_reach_root_pose_and_official_decoder[2]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_native_training_objectives_update_root_pose_and_freeze_tokenizer",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_external_goal_requires_mask_and_rejects_dense_four_frame_targets",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_evaluation_skin_contact_path_uses_all_source_joints_and_shared_masks[cpu]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_goals::test_evaluation_skin_contact_path_uses_all_source_joints_and_shared_masks[cuda]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_captured_pose_call_matches_deployed_argmax_and_restores_hook",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_straight_through_is_native_hard_code_forward_with_finite_logit_gradient",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_no_future_body_or_height_leaks_into_captured_pose_inputs",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_decoded_objective_changes_pose_gradient_but_not_frozen_tokenizer_or_root",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_capture_hook_removed_even_when_runtime_fails",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_padding_logits_do_not_affect_masked_decoder_or_active_token_check",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_training_surrogate_preserves_actual_deployed_choice_at_numerical_ties",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_pose_rollout::test_ue_eight_frame_handoff_uses_last_four_of_published_prefix",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_generated_translation_cannot_invent_groundtruth_velocity",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_generated_body_pose_and_height_are_never_copied_to_targets",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_shared_world_translation_changes_neither_input_nor_target",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_real_loss_preserves_world_position_error_and_uses_actual_boundary",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_native_training_path_contains_rotation_term_and_preserves_forward",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_invalid_supervision_policy_fails_before_inference",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_soma_rollout_supervision::test_decoder_can_learn_through_native_path_without_changing_encoder_or_codebooks",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_pose/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_decoder_pilot::test_actual_native_request_replay_parity_gradient_and_frozen_vocabulary[None]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_decoder_pilot::test_actual_native_request_replay_parity_gradient_and_frozen_vocabulary[observed-pelvis-y-v1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_decoder_pilot::test_actual_native_request_replay_parity_gradient_and_frozen_vocabulary[observed-terrain-y-v1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_decoder_pilot::test_generated_history_changes_origin_but_never_replaces_source_future",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_detail_adapter::test_detail_initialization_preserves_actual_native_prediction",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_inference_encoding_cache::test_complete_native_four_iteration_prediction_is_identical_with_cache",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_model_v3::test_final_fk_gradients_reach_root_pose_decoder_but_not_labels_or_vocabulary[1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_model_v3::test_final_fk_gradients_reach_root_pose_decoder_but_not_labels_or_vocabulary[2]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_model_v3::test_adapter_warmup_trains_new_height_columns_and_keeps_pretrained_columns_exact",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_root_supervision::test_source_history_matches_original_native_root_loss_and_gradient[None]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_root_supervision::test_source_history_matches_original_native_root_loss_and_gradient[observed-pelvis-y-v1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_root_supervision::test_source_history_matches_original_native_root_loss_and_gradient[observed-terrain-y-v1]",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    },
+    {
+      "test": "tests.test_terrain_root_supervision::test_only_observed_root_labels_change_without_touching_future_or_pose_targets",
+      "status": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: '${TAK_ROOT}/out/motionbricks_vqvae/version_1/hparams.yaml'"
+    }
+  ]
+}
