@@ -64,6 +64,11 @@ class RolloutConfig:
     penetration_depth_clip_m: float = float("inf")
     skating_speed_clip_mps: float = float("inf")
     bootstrap_cap: float = float("inf")       # upper bound on the bootstrapped cost-to-go
+    # v6. Phase-free contact anchor: per window and channel, the squared difference between the
+    # model's mean predicted contact and the source's contact rate over the valid steps. With
+    # contact_source="predicted" the model chooses WHEN a foot is planted (no penalty for being
+    # out of phase with the source) but cannot avoid the foot costs by never planting.
+    contact_rate: float = 0.0
 
 
 def forward_xz(history):
@@ -244,6 +249,7 @@ class ClosedLoop:
         joints_before = posed_joints(self.rep, history[:, -1:])[:, 0]
         joints_two_back = posed_joints(self.rep, history[:, -2:-1])[:, 0]
         costs, states, logs = [], [], {}
+        predicted_contacts, source_contacts, valid_steps = [], [], []
         target_previous = history[:, -1]
         for t in range(horizon):
             command = commands[:, t]
@@ -254,6 +260,10 @@ class ClosedLoop:
                 None if imitation_mask is None else imitation_mask[:, t].to(history.dtype))
             if targets is not None:
                 target_previous = targets[:, t]
+                if config.contact_rate > 0:
+                    predicted_contacts.append(pred["contact_logits"].sigmoid())
+                    source_contacts.append(targets[:, t].index_select(-1, self._contact_index(targets.device)))
+                    valid_steps.append(imitation_mask[:, t].to(history.dtype))
             costs.append(total)
             states.append(state)
             for name, value in parts.items():
@@ -264,8 +274,16 @@ class ClosedLoop:
         costs = torch.stack(costs, 1)                                                  # [B, H]
         discount = config.gamma ** torch.arange(horizon, device=costs.device, dtype=costs.dtype)
         objective = (costs * discount).sum(1)
-        result = {"costs": costs.detach(), "history": history, "history_mask": history_mask,
-                  "terms": {name: torch.stack(v).mean() for name, v in logs.items()}}
+        terms = {name: torch.stack(v).mean() for name, v in logs.items()}
+        if predicted_contacts:
+            valid = torch.stack(valid_steps, 1)[..., None]                             # [B, H, 1]
+            count = valid.sum(1).clamp_min(1.0)
+            rate = (torch.stack(predicted_contacts, 1) * valid).sum(1) / count
+            source_rate = (torch.stack(source_contacts, 1) * valid).sum(1) / count
+            rate_cost = (rate - source_rate.detach()).square().sum(-1)                 # [B]
+            objective = objective + config.contact_rate * rate_cost
+            terms["contact_rate"] = rate_cost.detach().mean()
+        result = {"costs": costs.detach(), "history": history, "history_mask": history_mask, "terms": terms}
         if critic is not None:
             if config.bootstrap:
                 value = critic.frozen(final_state).clamp(0.0, config.bootstrap_cap)

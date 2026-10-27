@@ -81,6 +81,10 @@ def main(argv=None):
     parser.add_argument("--skating-speed-clip", type=float, default=float("inf"), help="m/s; caps planted speed")
     parser.add_argument("--bootstrap-cap", type=float, default=float("inf"), help="caps the bootstrapped value")
     parser.add_argument("--critic-normalized", action="store_true", help="Critic learns value / running scale")
+    parser.add_argument("--contact-rate-weight", type=float, default=0.0,
+                        help="Weight of the phase-free contact-rate anchor (use with --contact-source predicted)")
+    parser.add_argument("--no-bootstrap", action="store_true",
+                        help="Never add the critic's value to the policy objective (the critic still trains)")
     parser.add_argument("--critic-warmup", type=int, default=0,
                         help="Closed-loop updates that train the critic before its value is bootstrapped")
     parser.add_argument("--abort-grad-norm", type=float, default=float("inf"),
@@ -157,7 +161,8 @@ def main(argv=None):
                                                       support_gap_clip_m=args.support_gap_clip,
                                                       penetration_depth_clip_m=args.penetration_depth_clip,
                                                       skating_speed_clip_mps=args.skating_speed_clip,
-                                                      bootstrap_cap=args.bootstrap_cap),
+                                                      bootstrap_cap=args.bootstrap_cap,
+                                                      contact_rate=args.contact_rate_weight),
                                         sole_offsets=default_sole_offsets(rep_cpu))
         return loops[horizon]
 
@@ -279,7 +284,8 @@ def main(argv=None):
                     loss.backward()
                 else:
                     import dataclasses
-                    loop.config = dataclasses.replace(loop.config, bootstrap=loop_updates >= args.critic_warmup)
+                    loop.config = dataclasses.replace(
+                        loop.config, bootstrap=not args.no_bootstrap and loop_updates >= args.critic_warmup)
                     loss, critic_loss, terms = closed_loop_step(loop, batch, critic, horizon)
                     loop_updates += 1
                     if args.teacher_mix > 0:

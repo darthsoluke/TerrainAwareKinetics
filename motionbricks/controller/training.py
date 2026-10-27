@@ -102,14 +102,100 @@ def _planted_sole_speed(loop, joints, previous, contacts, boxes=None, height=0.0
     return speed, contacts > 0.5, near
 
 
+#: A window counts as locomotion when the source root moves at least this far (m) over the horizon.
+MOVING_M = 0.10
+
+
+def _median(values):
+    return float(values.median()) if values.numel() else float("nan")
+
+
+@torch.no_grad()
+def motion_metrics(loop, batch, generated, horizon):
+    """Closed-loop diagnostics of generated frames [B, H, 366] against the source window.
+
+    Penetration and planted-foot speed are reported for the generated motion AND for the
+    source motion on the same windows, so gates compare against what the data does (an
+    untrained model that holds still trivially neither penetrates nor slides). The
+    progress ratio (generated / source root displacement on windows whose source moves at
+    least MOVING_M) catches a model that satisfies the foot costs by not walking.
+    """
+    rep, history, targets = loop.rep, batch["history"], batch["targets"]
+    boxes = boxes_of(batch)
+    root = rep.skeleton.root_idx
+    last2 = posed_joints(rep, history[:, -2:])
+    last = last2[:, -1]
+    generated_joints = posed_joints(rep, generated)
+    source_joints = posed_joints(rep, targets[:, :horizon])
+    origin = history[:, -1, [0, 2]]
+    drift = (generated[:, -1, [0, 2]] - targets[:, horizon - 1, [0, 2]]).norm(dim=-1)
+    source_move = (targets[:, horizon - 1, [0, 2]] - origin).norm(dim=-1)
+    generated_move = (generated[:, -1, [0, 2]] - origin).norm(dim=-1)
+    moving = source_move >= MOVING_M
+    progress = generated_move / source_move.clamp_min(1e-6)
+    depth = _penetration_frames(loop, generated_joints, boxes)
+    source_depth = _penetration_frames(loop, source_joints, boxes)
+    pelvis = (generated_joints[:, :, root, 1] - source_joints[:, :, root, 1]).abs().mean(-1)
+    contacts = batch["contacts"][:, :horizon]
+    speed, planted, near = _planted_sole_speed(loop, generated_joints, last, contacts, boxes)
+    source_speed, _, source_near = _planted_sole_speed(loop, source_joints, last, contacts, boxes)
+
+    def acceleration(joints):
+        sequence = torch.cat((last2, joints), 1)
+        return ((sequence[:, 2:] - 2 * sequence[:, 1:-1] + sequence[:, :-2]) * 900).norm(dim=-1).mean(-1)   # [B, H]
+    accel, source_accel = acceleration(generated_joints), acceleration(source_joints)
+
+    def masked_median(values, mask):
+        return _median(values[mask])
+    report = {
+        "closed_loop_root_drift_cm_p50": float(drift.median() * 100),
+        "closed_loop_root_drift_cm_p90": float(drift.quantile(0.9) * 100),
+        "closed_loop_joint_penetration_over_2cm_frames": float((depth > 0.02).float().mean()),
+        "source_joint_penetration_over_2cm_frames": float((source_depth > 0.02).float().mean()),
+        "closed_loop_pelvis_height_error_cm": float(pelvis.mean() * 100),
+        "closed_loop_planted_sole_speed_mps_p50": masked_median(speed, planted),
+        "source_planted_sole_speed_mps_p50": masked_median(source_speed, planted),
+        # Each motion judged on its own feet: speed of soles resting on a surface.
+        "closed_loop_grounded_sole_speed_mps_p50": masked_median(speed, near),
+        "source_grounded_sole_speed_mps_p50": masked_median(source_speed, source_near),
+        "closed_loop_grounded_sole_fraction": float(near.float().mean()),
+        "source_grounded_sole_fraction": float(source_near.float().mean()),
+        "moving_windows": int(moving.sum()),
+        "closed_loop_progress_ratio_p50": masked_median(progress, moving),
+        "closed_loop_progress_ratio_p10": float(progress[moving].quantile(0.1)) if moving.any() else float("nan"),
+        "closed_loop_joint_accel_mps2_mean": float(accel.mean()),
+        "source_joint_accel_mps2_mean": float(source_accel.mean()),
+    }
+    groups = batch.get("group")
+    if groups is not None:
+        by_group = {}
+        for name in sorted(set(groups)):
+            rows = torch.tensor([g == name for g in groups], device=drift.device)
+            frames = rows[:, None, None].expand_as(speed)
+            by_group[name] = {
+                "windows": int(rows.sum()),
+                "drift_cm_p50": float(drift[rows].median() * 100),
+                "penetration_frames": float((depth[rows] > 0.02).float().mean()),
+                "source_penetration_frames": float((source_depth[rows] > 0.02).float().mean()),
+                "pelvis_cm": float(pelvis[rows].mean() * 100),
+                "moving_windows": int((rows & moving).sum()),
+                "progress_ratio_p50": masked_median(progress, rows & moving),
+                "planted_sole_speed_mps_p50": masked_median(speed, planted & frames),
+                "source_planted_sole_speed_mps_p50": masked_median(source_speed, planted & frames),
+                "grounded_sole_speed_mps_p50": masked_median(speed, near & frames),
+                "source_grounded_sole_speed_mps_p50": masked_median(source_speed, source_near & frames),
+                "grounded_sole_fraction": float(near[rows].float().mean()),
+                "joint_accel_mps2_mean": float(accel[rows].mean()),
+            }
+        report["by_group"] = by_group
+    return report
+
+
 @torch.no_grad()
 def evaluate(loop, batch, horizon=16):
-    """Diagnostics on one validation batch (model in eval mode by the caller).
-
-    Penetration and planted-foot speed are reported for the generated closed loop AND for
-    the source motion on the same windows, so gates compare against what the data does
-    (an untrained model that holds still trivially neither penetrates nor slides).
-    """
+    """Diagnostics on one validation batch (model in eval mode by the caller): the
+    one-step body error against the persistence baseline, then motion_metrics on a
+    closed-loop rollout of ``horizon`` frames."""
     rep, history, targets = loop.rep, batch["history"], batch["targets"]
     boxes = boxes_of(batch)
     command = batch["commands"][:, 0]
@@ -129,45 +215,7 @@ def evaluate(loop, batch, horizon=16):
     one_step = (relative(joints) - relative(truth)).norm(dim=-1).mean(-1)
     persistence = (relative(last) - relative(truth)).norm(dim=-1).mean(-1)
     result = loop.rollout(history, batch["history_mask"], batch["commands"][:, :horizon], boxes)
-    generated = result["history"][:, -horizon:]
-    generated_joints = posed_joints(rep, generated)
-    source_joints = posed_joints(rep, targets[:, :horizon])
-    drift = (generated[:, -1, [0, 2]] - targets[:, horizon - 1, [0, 2]]).norm(dim=-1)
-    depth = _penetration_frames(loop, generated_joints, boxes)
-    source_depth = _penetration_frames(loop, source_joints, boxes)
-    pelvis = (generated_joints[:, :, root, 1] - source_joints[:, :, root, 1]).abs().mean(-1)
-    contacts = batch["contacts"][:, :horizon]
-    speed, planted, near = _planted_sole_speed(loop, generated_joints, last, contacts, boxes)
-    source_speed, _, source_near = _planted_sole_speed(loop, source_joints, last, contacts, boxes)
-
-    def planted_median(values, mask=None):
-        chosen = values[planted if mask is None else mask]
-        return float(chosen.median()) if chosen.numel() else float("nan")
-    report = {
-        "one_step_body_cm": float(one_step.mean() * 100), "persistence_body_cm": float(persistence.mean() * 100),
-        "closed_loop_root_drift_cm_p50": float(drift.median() * 100),
-        "closed_loop_root_drift_cm_p90": float(drift.quantile(0.9) * 100),
-        "closed_loop_joint_penetration_over_2cm_frames": float((depth > 0.02).float().mean()),
-        "source_joint_penetration_over_2cm_frames": float((source_depth > 0.02).float().mean()),
-        "closed_loop_pelvis_height_error_cm": float(pelvis.mean() * 100),
-        "closed_loop_planted_sole_speed_mps_p50": planted_median(speed),
-        "source_planted_sole_speed_mps_p50": planted_median(source_speed),
-        # Each motion judged on its own feet: speed of soles resting on a surface.
-        "closed_loop_grounded_sole_speed_mps_p50": planted_median(speed, near),
-        "source_grounded_sole_speed_mps_p50": planted_median(source_speed, source_near),
-        "closed_loop_grounded_sole_fraction": float(near.float().mean()),
-        "source_grounded_sole_fraction": float(source_near.float().mean()),
-        "closed_loop_terms": {k: float(v) for k, v in result["terms"].items()},
-    }
-    groups = batch.get("group")
-    if groups is not None:
-        by_group = {}
-        for name in sorted(set(groups)):
-            rows = torch.tensor([g == name for g in groups], device=drift.device)
-            by_group[name] = {"windows": int(rows.sum()),
-                              "drift_cm_p50": float(drift[rows].median() * 100),
-                              "penetration_frames": float((depth[rows] > 0.02).float().mean()),
-                              "source_penetration_frames": float((source_depth[rows] > 0.02).float().mean()),
-                              "pelvis_cm": float(pelvis[rows].mean() * 100)}
-        report["by_group"] = by_group
+    report = {"one_step_body_cm": float(one_step.mean() * 100), "persistence_body_cm": float(persistence.mean() * 100)}
+    report.update(motion_metrics(loop, batch, result["history"][:, -horizon:], horizon))
+    report["closed_loop_terms"] = {k: float(v) for k, v in result["terms"].items()}
     return report

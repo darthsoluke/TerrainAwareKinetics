@@ -25,6 +25,7 @@
 - [第 7 步pilot v4执行：教师阶段门槛、四版对照与足底曲线](terrain_controller_pilot_v4_a100_20261025.md)
 - [第 7 步pilot v5计划：代价封顶、归一化critic与发散保护（已执行，验收7/8）](terrain_controller_pilot_v5_plan_20261025.md)
 - [第 7 步pilot v5执行：反向修复、1500次更新、分组验收与GPU-hours](terrain_controller_pilot_v5_a100_20261025.md)
+- [第 7 步v6计划：运行时脚锁评估（A）与相位无关接触的闭环对照（B）](terrain_controller_v6_plan_20261027.md)
 - [第 6 步执行：BONES训练集构建、演员划分与GPU3审计](bones_env_v1_pro6000_20261024.md)
 - [BONES-SEED 几何筛查：PRO6000 试运行与全量结果](bones_terrain_screen_pro6000_20261023.md)
 - [BONES-SEED 支撑几何拟合与可视化：PRO6000 执行结果](bones_terrain_fit_pro6000_20261023.md)
