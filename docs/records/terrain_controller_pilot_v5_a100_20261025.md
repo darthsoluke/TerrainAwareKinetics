@@ -1,4 +1,8 @@
-# 第 7 步 pilot v5：归一化 critic 的反向预检失败
+# 第 7 步 pilot v5：反向修复、完整训练与验收
+
+最新结果（2026-10-28）：修复后完成全部 **1500 次新增更新**，正式训练耗时 **63 分 8 秒**，八项验收通过七项。训练全程有限、没有触发发散保护，末 250 次归一化 critic loss 中位数为 0.2477；一步误差 1.136cm，仍高于保持上一帧的 0.938cm。模型未部署。完整结果从[第 7 节](#7-正式运行与训练曲线)开始，[小型结果目录](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)包含表格和九张图。
+
+第 1～5 节保留首次预检失败记录，第 6 节记录修复后的测试与双卡预检。
 
 执行日期：2026-10-26（Asia/Singapore）。[批准的计划](terrain_controller_pilot_v5_plan_20261025.md)规定从 v4 的第 1500 次教师检查点继续，新增最多 1500 次更新、2 小时。执行源码为 `2c41613f0a96bcb4cc1bf8f773b9520848b5476f`。
 
@@ -165,3 +169,114 @@ policy_backward=passed
 这两次更新单列为预检消耗：2048 个窗口、8192 个闭环帧和 2048 个混合教师预测。正式训练仍从原 v4 第 1500 次教师检查点开始，不继承这两次更新。GPU-hours 按“进程壁钟 × 分配卡数 ÷ 3600”计算，不含等待资源的时间。
 
 修复后的测试、输入身份和失败清单见 [continuation_e88523d 结果目录](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)。
+
+### 原单卡预检与双卡故障退出检查
+
+单卡 smoke 从同一教师副本恢复到 update 1504，新增 4 次更新，耗时 20.5496 秒。critic 仅缺新增的 `scale`，全部训练和评估值有限；warmup=2，后两次更新启用 bootstrap，两个反向均完成。
+
+双卡故障检查在 update 1502 的评估入口主动抛出 `RuntimeError: v5 preflight: intentional evaluation failure after update 1502`。两张卡都在 update 1502、exposures 1,536,512 停止，各 rank 退出码为 2；torchrun 汇总退出码为 1，符合本次故障注入预期。只有 rank 0 写入 `diverged.pt` 和 `latest.pt`，各卡参数摘要与保存的检查点一致。`eval.jsonl` 记录了阶段内及结束时两次相同错误，参数差异均为 0。
+
+这个检查耗时 15.2279 秒。`diverged.pt` 保存模型、critic、两个优化器、学习率调度器、计数状态和配置。错误由测量脚本注入，仓库训练源码未改；正式 pilot 从原教师文件重新恢复。
+
+## 7. 正式运行与训练曲线
+
+源码固定为 `e88523d5088d34effb2a79dccbb3fcaeab150b3f`。2026-10-28 **00:35:11.791～01:38:14.397**（Asia/Singapore），使用确认空闲的物理 A100 0、1，按 UUID 固定分配，每卡 batch 512，全局 batch 1024。
+
+执行参数如下。实际由一次性 nohup 监督进程通过测量包装器调用同一训练器，并加外部 `timeout 7200`；包装器记录每次更新、参数摘要、显存和验证批次摘要。
+
+```bash
+torchrun --standalone --nnodes 1 --nproc_per_node 2 scripts/train_terrain_controller.py \
+  --dataset runs/bones_env_v1 --output runs/tmt_pilot_v5 \
+  --resume runs/tmt_pilot_v4/phase0_teacher.pt \
+  --phases teacher:1500 loop:4:500 loop:8:500 loop:16:500 \
+  --teacher-mix 1.0 --foot-weight 1.0 --contact-source source \
+  --support-weight 2500 --skating-mode contact --skating-weight 100 --penetration-weight 2500 \
+  --support-gap-clip 0.1 --penetration-depth-clip 0.1 --skating-speed-clip 1.0 \
+  --critic-normalized --critic-warmup 250 --bootstrap-cap 50 \
+  --abort-grad-norm 1e4 --abort-patience 25 \
+  --batch 512 --max-hours 2 --eval-every 250 --eval-batch 256
+```
+
+恢复位置为 update 1500、phase 1、phase_update 0；没有重跑教师阶段。正式进程退出码 0、`stopped=complete`，保存到 update 3000，全部新增更新均已保存。7 条评估记录的固定批次 SHA-256 均为 `29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da`，`rank_parameter_disagreement` 全为 0；最终检查点的每个参数张量与两张卡都一致。16 个旧检查点哈希未变。
+
+正式壁钟 **3788.0778 秒**；两卡峰值已分配显存分别为 **12,745,025,024 / 12,763,436,544 字节**。每阶段恰好 500 次更新，rank 0 测得的每次更新平均时间为：H4 **1.2634 秒**、H8 **2.2641 秒**、H16 **3.9443 秒**，包括闭环、混合教师、两个反向和优化器，不含数据加载与评估。
+
+[训练曲线](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/training_curves.png)和[1500 条逐次记录](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/training_updates.tsv)显示：预热结束和课程切换附近有波动，但裁剪前梯度最大值为 **1533.90625**，全程没有达到 1e4。末 250 次 critic loss 中位数：rank 0 **0.2476825**，rank 1 **0.2427863**；先按每次更新对两卡取均值、再求中位数为 **0.2549127**，三种统计均低于 10。
+
+## 8. 评估与验收
+
+评估固定使用 256 个验证窗口，每个闭环 16 帧。保持基线为 0.938170cm；源动作的穿透超限比例为 0，几何着地脚速度为 0.0136703m/s，着地比例为 32.2632%。以下“速度”和“着地比例”均按各自几何着地脚计算。
+
+| 累计更新 | 一步误差 cm | 根漂移 P50 / P90 cm | 穿透超限帧 % | 骨盆误差 cm | 着地脚速度 m/s | 着地比例 % |
+| ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| 1750 | 0.7763 | 4.286 / 19.481 | 7.3975 | 2.889 | 0.02915 | 53.5889 |
+| 2000 | 1.1374 | 3.325 / 19.051 | 1.2207 | 3.428 | 0.03456 | 39.1113 |
+| 2250 | 1.2216 | 3.698 / 30.466 | 0.6592 | 2.595 | 0.02969 | 46.0449 |
+| 2500 | 1.1039 | 2.830 / 30.041 | 0.8545 | 2.691 | 0.02396 | 39.2212 |
+| 2750 | 1.1945 | 3.201 / 38.278 | 0.6348 | 2.748 | 0.02080 | 46.2585 |
+| 3000 | 1.1358 | 3.654 / 38.957 | 0.4883 | 2.860 | 0.02118 | 45.6482 |
+
+结束评估与第 3000 次定期评估完全一致，原始[评估表](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/evaluation_table.tsv)保留两行，也包含全部闭环损失项。按源接触标记计算的最终脚速为 0.0142179m/s，源动作为 0.0120614m/s。
+
+| 验收项 | 要求 | 最终结果 | 判定 |
+| --- | --- | --- | --- |
+| 数值与各卡参数 | 全程有限，卡间差异 0 | 通过全部逐次记录与 7 次评估检查 | 通过 |
+| 一步全身误差 | 比保持基线低至少 30%，即 ≤ 0.656719cm | 1.135788cm，比基线高 21.06% | **失败** |
+| 16 帧根漂移 P50 | < 10cm | 3.654092cm | 通过 |
+| 穿透超 2cm 帧比例 | ≤ 源 + 0.5 个百分点 | 20/4096 帧，0.488281%；门槛 0.5% | 通过 |
+| 骨盆高度误差 | < 5cm | 2.860146cm | 通过 |
+| 几何着地脚 | 速度 ≤ 0.0705055m/s；比例 ≥ 16.1316% | 0.0211785m/s；45.6482% | 通过 |
+| 新门：不触发发散保护 | 全程无保护退出 | 完成，无 `diverged.pt` | 通过 |
+| 新门：末 250 次 critic loss | 归一化中位数 < 10 | 两卡分别 0.2477 / 0.2428 | 通过 |
+
+**八项通过七项，整体验收未通过。** v5 完成了稳定的闭环训练，但一步姿态拟合仍退步。没有追加训练、调整参数或部署。
+
+[v1～v5 同更新位置表](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/matching_updates.tsv)包含 1750、2000、2250、2500、2750、3000 六个位置，共 30 行。v4 在 2500 评估失败，后续位置明确标记 unavailable；旧版当时未记录的新增指标也保留 unavailable。v5 的低滑步与较高着地比例同时成立，移动动作的跟随仍需单独看下面的分组与图片。
+
+## 9. 最终分组
+
+| 组 | 窗口 | 根漂移 P50 cm | 穿透超限帧 % | 源穿透 % | 骨盆误差 cm |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| crouch | 48 | 20.450 | 1.0417 | 0 | 4.349 |
+| flat_control | 43 | 39.071 | 0 | 0 | 2.487 |
+| kneel | 35 | 1.413 | 0 | 0 | 1.451 |
+| known_dimension_support | 20 | 5.970 | 2.1875 | 0 | 5.423 |
+| prone | 13 | 1.648 | 0 | 0 | 0.609 |
+| quadruped | 90 | 2.930 | 0 | 0 | 2.543 |
+| wall_contact | 7 | 2.056 | 4.4643 | 0 | 2.913 |
+
+总 P50 为 3.65cm，但 flat_control 为 39.07cm、crouch 为 20.45cm，移动片段的跟随问题很明显。20 个穿透超限帧来自 crouch 8 帧、known_dimension_support 7 帧和 wall_contact 5 帧；wall_contact 的 7 个窗口共有 112 帧，其中 5 帧超限。精确值见[分组表](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/by_group.tsv)。
+
+## 10. 固定窗口视觉复核
+
+六个窗口沿用 v1 的文件、起点、场景变体与相机约定。蓝色是源动作，绿色是第 3000 次检查点生成的 16 帧；全部 96 帧生成完成，源 FK 数组与 v1～v4 保存的数组逐项相同。
+
+| 窗口及图片 | 逐图观察 | 末帧根漂移 cm |
+| --- | --- | ---: |
+| [转向慢跑 A255](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/contact_sheets/turn_jog_270_R_003__A255__s40.png) | 绿色腿部摆动幅度较小，后半段与蓝色源动作的位置和朝向分离。 | 41.84 |
+| [侧移停止 A030](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/contact_sheets/walk_sideway_045_stop_002__A030__s60.png) | 身体姿态保持完整，但绿色足部移动明显减少，末段未复现源动作的右脚抬起。 | 37.22 |
+| [蹲行拾物 A412](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/contact_sheets/item_pick_up_crouch_walk_R_003__A412__s32.png) | 低姿态保留，源动作继续向前、降低身体，生成动作逐渐落后且躯干偏高。 | 54.32 |
+| [匍匐转换 A129](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/contact_sheets/change_idle_crawl_to_idle_crawl_right_001__A129__s48.png) | 蓝绿骨架大体重合，保持低姿态，手脚末端有小幅差异。 | 1.27 |
+| [上箱 A224](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/contact_sheets/come_up_50cm_box_R_002__A224__s24.png) | 支撑侧较稳定，摆动脚抬升不足，后段躯干低于源动作；骨盆误差 6.91cm。 | 4.83 |
+| [上箱 A164](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/contact_sheets/come_up_50cm_box_R_003__A164__s24.png) | 上箱趋势保留，腿部轨迹与源动作未重合，末段身体偏低；骨盆误差 5.51cm。 | 8.05 |
+
+两张足底曲线同时画出源动作、v2、v3、v4 与 v5。v4 明确使用**保存于 2250 次**的数组；曲线使用对称对数纵轴，保留其失败值。
+
+- [侧移停止足底曲线](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/sole_curves/walk_sideway_045_stop_002__A030__s60__soles.png)：v5 左脚提前落下，右脚高度一直在约 -1.36～-0.13cm，未复现源动作后半段的抬脚。右脚全窗口速度 P50 为 0.01182m/s，源动作为 0.26750m/s；这个窗口显示移动不足与低脚速同时出现。
+- [上箱足底曲线](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/sole_curves/come_up_50cm_box_R_002__A224__s24__soles.png)：v5 右支撑脚高度约 0.571～0.575m，接近源动作；左摆动脚最高约 0.459m，低于源动作的 0.744m，水平移动也较少。
+
+## 11. 账本、GPU-hours 与文件
+
+| 阶段 | 新增策略更新 | 训练窗口 | 闭环生成帧 | 混合教师预测 | GPU-hours |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 双卡两步预检 | 2 | 2048 | 8192 | 2048 | 0.0131953 |
+| 单卡 smoke | 4 | 128 | 512 | 128 | 0.0057082 |
+| 双卡故障退出检查 | 2 | 128 | 512 | 128 | 0.0084600 |
+| **正式 pilot** | **1500** | **1,536,000** | **14,336,000** | **1,536,000** | **2.1044877** |
+| 合计 | 1508 | 1,538,304 | 14,345,216 | 1,538,304 | **2.1318512** |
+
+每次策略更新对应一次 critic 更新；正式 pilot 每张卡各执行 1500 次策略和 1500 次 critic 优化器步骤。表中“新增策略更新”按全局同步更新计数，不把两卡重复计为两次。正式 H4/H8/H16 各 500 次；继承的 1500 次教师更新和 1,536,000 次旧教师曝光保留原账本。
+
+原生 checkpoint 的 `exposures=15,872,000` 是继承教师曝光加本轮闭环帧数，未包含另列的混合教师预测。没有消耗但未保存的正式更新。评估另生成 39,936 个闭环帧、2496 个一步诊断帧；六窗口复核生成 96 帧，均不计入训练窗口，见[双卡统计与诊断帧账本](../../examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/rank_and_frame_summary.json)。
+
+最终 `runs/tmt_pilot_v5/latest.pt` 的 SHA-256 为 `594882aee0927fdf7a76e9af8a9ef9019a7140cc4e16a0d9a5e3d3b707570a15`。各阶段检查点、原始日志和私有动作数组留在 A100；公开目录只含聚合 JSON/TSV、九张 PNG、测试日志及本文。未进行新一轮训练、模型替换、长时控制或本地部署。

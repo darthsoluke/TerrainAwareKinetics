@@ -1,0 +1,46 @@
+{
+  "critic_by_rank": [
+    {
+      "rank": 0,
+      "last250_median": 0.24768251925706863,
+      "max_grad_norm": 1533.90625,
+      "updates": 1500,
+      "source_log_sha256": "bff4b509f38f6ffa350e0dcfd0885acdcac6a31da6c63886fc5b06915a896108"
+    },
+    {
+      "rank": 1,
+      "last250_median": 0.24278634786605835,
+      "max_grad_norm": 1533.90625,
+      "updates": 1500,
+      "source_log_sha256": "2c0648adeb46b876f91a9fbba1c4b91fdcd39faa392e9a11996f1eb4042f0235"
+    }
+  ],
+  "evaluations": {
+    "gpu_preflight": {
+      "logged": 2,
+      "successful": 2,
+      "generated_rollout_frames": 8192,
+      "one_step_frames": 512,
+      "evidence": "two eval digest entries and successful stage receipt; output discarded as requested"
+    },
+    "smoke": {
+      "logged": 3,
+      "successful": 3,
+      "generated_rollout_frames": 3072,
+      "one_step_frames": 192
+    },
+    "failure_smoke": {
+      "logged": 2,
+      "successful": 0,
+      "generated_rollout_frames": 0,
+      "one_step_frames": 0
+    },
+    "pilot": {
+      "logged": 7,
+      "successful": 7,
+      "generated_rollout_frames": 28672,
+      "one_step_frames": 1792
+    }
+  },
+  "mean_across_ranks_last250_median": 0.25491271167993546
+}

@@ -38,7 +38,7 @@
 
 [v5预检](terrain_controller_pilot_v5_a100_20261025/README.md)通过84项测试，补充CPU检查发现归一化critic尺度原地更新导致反向传播失败。正式训练未启动；发布完整错误、输入身份与零消耗账本。
 
-[e88523d修复后执行](terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)提供85项相关测试、全仓库失败清单、已通过的CPU复现及双卡两步预检结果。其余阶段等待空闲GPU，预检消耗单列。
+[e88523d修复后完整结果](terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)包含全部预检及1500次新增更新，八项验收通过七项：无发散保护退出，末250次critic loss中位数0.2477；一步误差1.136cm仍未通过。提供五版对照、分组结果、九张图及GPU-hours，保留全仓库失败清单，未部署。
 
 ## A/B/C 架构对照
 
