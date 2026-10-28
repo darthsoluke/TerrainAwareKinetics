@@ -46,6 +46,41 @@ def fixed_batch(dataset, rows, horizon, size, device):
     return batch, digest.hexdigest(), len(windows)
 
 
+def write_outputs(output, report):
+    """Write report.json, table.tsv and by_group.tsv; called after every run so a later
+    failure keeps everything finished before it (undefined statistics are written as null / empty)."""
+    import math
+    output.mkdir(parents=True, exist_ok=True)
+
+    def clean(value):
+        if isinstance(value, float) and not math.isfinite(value):
+            return None
+        if isinstance(value, dict):
+            return {k: clean(v) for k, v in value.items()}
+        if isinstance(value, list):
+            return [clean(v) for v in value]
+        return value
+
+    def cell(value):
+        return "" if value is None or (isinstance(value, float) and not math.isfinite(value)) else str(value)
+    (output / "report.json").write_text(json.dumps(clean(report), indent=2), encoding="utf-8")
+    with (output / "table.tsv").open("w", encoding="utf-8") as stream:
+        stream.write("\t".join(("checkpoint", "horizon", "mode") + FLAT_KEYS) + "\n")
+        for run in report["runs"]:
+            m = run["metrics"]
+            stream.write("\t".join([run["checkpoint"], str(run["horizon"]), run["mode"]]
+                                   + [cell(m.get(k)) for k in FLAT_KEYS]) + "\n")
+    group_keys = None
+    with (output / "by_group.tsv").open("w", encoding="utf-8") as stream:
+        for run in report["runs"]:
+            for group, values in run["metrics"].get("by_group", {}).items():
+                if group_keys is None:
+                    group_keys = list(values)
+                    stream.write("\t".join(["checkpoint", "horizon", "mode", "group"] + group_keys) + "\n")
+                stream.write("\t".join([run["checkpoint"], str(run["horizon"]), run["mode"], group]
+                                       + [cell(values[k]) for k in group_keys]) + "\n")
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--dataset", type=Path, required=True)
@@ -129,6 +164,7 @@ def main(argv=None):
                 report["runs"].append({"checkpoint": name, "path": path, "sha256": file_hash,
                                        "update": checkpoint.get("state", {}).get("update"),
                                        "horizon": horizon, "mode": mode, "metrics": metrics})
+                write_outputs(args.output, report)
                 print(json.dumps({"checkpoint": name, "horizon": horizon, "mode": mode,
                                   "drift_p50": metrics["closed_loop_root_drift_cm_p50"],
                                   "progress": metrics["closed_loop_progress_ratio_p50"],
@@ -154,23 +190,7 @@ def main(argv=None):
             times.append((time.perf_counter() - start) * 1000)
     report["single_character_lock_ms"] = {"p50": float(np.median(times)), "p99": float(np.percentile(times, 99))}
 
-    args.output.mkdir(parents=True, exist_ok=True)
-    (args.output / "report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
-    with (args.output / "table.tsv").open("w", encoding="utf-8") as stream:
-        stream.write("\t".join(("checkpoint", "horizon", "mode") + FLAT_KEYS) + "\n")
-        for run in report["runs"]:
-            m = run["metrics"]
-            stream.write("\t".join([run["checkpoint"], str(run["horizon"]), run["mode"]]
-                                   + [str(m.get(k, "")) for k in FLAT_KEYS]) + "\n")
-    group_keys = None
-    with (args.output / "by_group.tsv").open("w", encoding="utf-8") as stream:
-        for run in report["runs"]:
-            for group, values in run["metrics"].get("by_group", {}).items():
-                if group_keys is None:
-                    group_keys = list(values)
-                    stream.write("\t".join(["checkpoint", "horizon", "mode", "group"] + group_keys) + "\n")
-                stream.write("\t".join([run["checkpoint"], str(run["horizon"]), run["mode"], group]
-                                       + [str(values[k]) for k in group_keys]) + "\n")
+    write_outputs(args.output, report)
     print(json.dumps({"fk_max_error_m": fk_error, "single_character_lock_ms": report["single_character_lock_ms"]}))
     return 0
 

@@ -127,7 +127,7 @@ def test_rollout_frames_modes_and_progress_ratio():
     from motionbricks.controller.foot_lock import FootLock, rollout_frames
     from motionbricks.controller.terrain_motion_transformer import TerrainMotionTransformer
     from motionbricks.controller.tokens import PartRayTable, StationProber
-    from motionbricks.controller.training import motion_metrics
+    from motionbricks.controller.training import evaluate, motion_metrics
     from motionbricks.data.skeleton_ray_sampler import SkeletonRaySampler
     names = list(rep.skeleton.bone_order_names)
     sampler = SkeletonRaySampler(names, box_capacity=8)
@@ -136,22 +136,32 @@ def test_rollout_frames_modes_and_progress_ratio():
     model = TerrainMotionTransformer(rep, names, table.feature_dim, prober.feature_dim).eval()
     loop = ClosedLoop(model, rep, names, sampler, table, prober, RolloutConfig(horizon=4))
     g = torch.Generator().manual_seed(3)
-    rotations = _random_rotations(torch, (2, 1, rep.nbjoints), 0.3, g).expand(2, 32, rep.nbjoints, 3, 3).clone()
-    roots = torch.zeros(2, 32, 3)
+    rotations = _random_rotations(torch, (2, 1, rep.nbjoints), 0.3, g).expand(2, 36, rep.nbjoints, 3, 3).clone()
+    roots = torch.zeros(2, 36, 3)
     roots[..., 1] = 0.9
-    roots[..., 2] = torch.arange(32) / 30
+    roots[..., 2] = torch.arange(36) / 30
     frames = frames_from(rep, rotations, roots)
     packed = sampler.boxes([GROUND])
     batch = {"history": frames[:, :16], "history_mask": torch.ones(2, 16, dtype=torch.bool), "targets": frames[:, 16:],
-             "commands": torch.tensor([0.0, 1.0, 1.0, 0.0]).expand(2, 16, 4),
+             "commands": torch.tensor([0.0, 1.0, 1.0, 0.0]).expand(2, 20, 4),
              "box_centers": packed[0].expand(2, -1, -1), "box_half": packed[1].expand(2, -1, -1),
              "box_rotation": packed[2].expand(2, -1, -1, -1), "box_mask": packed[3].expand(2, -1),
-             "contacts": torch.ones(2, 16, 4), "group": ["flat_control", "crouch"]}
+             "contacts": torch.ones(2, 20, 4), "group": ["flat_control", "crouch"]}
     raw, info = rollout_frames(loop, batch, 4)
     with torch.no_grad():
         reference = loop.rollout(batch["history"], batch["history_mask"], batch["commands"][:, :4],
                                  (batch["box_centers"], batch["box_half"], batch["box_rotation"], batch["box_mask"]))
-    assert info == {} and torch.allclose(raw, reference["history"][:, -4:], atol=1e-5)
+    assert info == {} and torch.allclose(raw, reference["frames"], atol=1e-5)
+    assert torch.allclose(reference["frames"], reference["history"][:, -4:])
+    # Horizons longer than the 16-frame history buffer: every emitted frame must be returned.
+    long_raw, _ = rollout_frames(loop, batch, 20)
+    with torch.no_grad():
+        long_reference = loop.rollout(batch["history"], batch["history_mask"], batch["commands"][:, :20],
+                                      (batch["box_centers"], batch["box_half"], batch["box_rotation"], batch["box_mask"]))
+    assert long_reference["frames"].shape == (2, 20, 366) and long_reference["history"].shape == (2, 16, 366)
+    assert torch.allclose(long_raw, long_reference["frames"], atol=1e-5)
+    long_report = evaluate(loop, batch, horizon=20)
+    assert long_report["moving_windows"] == 2 and long_report["closed_loop_root_drift_cm_p50"] >= 0
     lock = FootLock(rep)
     for mode in ("display", "feedback"):
         shown, info = rollout_frames(loop, batch, 4, lock=lock, mode=mode)

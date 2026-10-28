@@ -216,6 +216,6 @@ def evaluate(loop, batch, horizon=16):
     persistence = (relative(last) - relative(truth)).norm(dim=-1).mean(-1)
     result = loop.rollout(history, batch["history_mask"], batch["commands"][:, :horizon], boxes)
     report = {"one_step_body_cm": float(one_step.mean() * 100), "persistence_body_cm": float(persistence.mean() * 100)}
-    report.update(motion_metrics(loop, batch, result["history"][:, -horizon:], horizon))
+    report.update(motion_metrics(loop, batch, result["frames"], horizon))
     report["closed_loop_terms"] = {k: float(v) for k, v in result["terms"].items()}
     return report

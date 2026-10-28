@@ -250,6 +250,7 @@ class ClosedLoop:
         joints_two_back = posed_joints(self.rep, history[:, -2:-1])[:, 0]
         costs, states, logs = [], [], {}
         predicted_contacts, source_contacts, valid_steps = [], [], []
+        generated = []                       # every emitted frame; `history` is only the last 16
         target_previous = history[:, -1]
         for t in range(horizon):
             command = commands[:, t]
@@ -266,6 +267,7 @@ class ClosedLoop:
                     valid_steps.append(imitation_mask[:, t].to(history.dtype))
             costs.append(total)
             states.append(state)
+            generated.append(new_history[:, -1:])
             for name, value in parts.items():
                 logs.setdefault(name, []).append(value.detach().mean())
             joints_two_back, joints_before, history = joints_before, joints, new_history
@@ -283,7 +285,10 @@ class ClosedLoop:
             rate_cost = (rate - source_rate.detach()).square().sum(-1)                 # [B]
             objective = objective + config.contact_rate * rate_cost
             terms["contact_rate"] = rate_cost.detach().mean()
-        result = {"costs": costs.detach(), "history": history, "history_mask": history_mask, "terms": terms}
+        # "frames" holds all H emitted frames [B, H, 366]; "history" is the model's sliding input
+        # buffer after the rollout (its length never changes, so it holds fewer than H frames when H > 16).
+        result = {"costs": costs.detach(), "frames": torch.cat(generated, 1), "history": history,
+                  "history_mask": history_mask, "terms": terms}
         if critic is not None:
             if config.bootstrap:
                 value = critic.frozen(final_state).clamp(0.0, config.bootstrap_cap)
