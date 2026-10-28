@@ -1,0 +1,81 @@
+........................................................................ [ 80%]
+.............F....                                                       [100%]
+=================================== FAILURES ===================================
+______ test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths _______
+
+    def test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths():
+        torch = pytest.importorskip("torch")
+        from motionbricks.controller.foot_lock import two_bone_ik
+        g = torch.Generator().manual_seed(0)
+        n = 512
+        a = torch.randn(n, 3, generator=g, dtype=torch.float64)
+        ga = _random_rotations(torch, (n,), 3.0, g).double()
+        lb = _random_rotations(torch, (n,), 2.0, g).double()
+        gb = ga @ lb
+        ob, oc = torch.tensor([0, -0.45, 0.0], dtype=torch.float64), torch.tensor([0, -0.43, 0.02], dtype=torch.float64)
+        b = a + ga @ ob
+        c = b + gb @ oc
+        target = a + torch.randn(n, 3, generator=g, dtype=torch.float64) * 0.3
+        new_a, new_b, reached = two_bone_ik(a, b, c, target, ga, gb, torch.tensor([0, 0, 1.0], dtype=torch.float64).expand(n, 3))
+        lab, lcb = (b - a).norm(dim=-1), (c - b).norm(dim=-1)
+        distance = (target - a).norm(dim=-1)
+        reachable = (distance < (lab + lcb) * 0.998) & (distance > (lab - lcb).abs() + 1e-3)
+        fk_c = (a + new_a @ ob) + new_b @ oc                                   # FK with the new rotations
+        assert torch.allclose(fk_c, reached, atol=1e-9)
+        assert (reached - target).norm(dim=-1)[reachable].max() < 1e-6
+>       assert torch.allclose(new_a @ new_a.transpose(-1, -2), torch.eye(3, dtype=torch.float64).expand(n, 3, 3), atol=1e-9)
+E       AssertionError: assert False
+E        +  where False = <built-in method allclose of type object at 0x7f687a05f240>((tensor([[[-0.2000, -0.5692,  0.7975],\n         [ 0.2882, -0.8121, -0.5074],\n         [ 0.9365,  0.1284,  0.3264]],\n\n  ...,  0.5159,  0.5289],\n         [ 0.3866, -0.3637,  0.8475],\n         [ 0.6295,  0.7756,  0.0457]]], dtype=torch.float64) @ tensor([[[-0.2000,  0.2882,  0.9365],\n         [-0.5692, -0.8121,  0.1284],\n         [ 0.7975, -0.5074,  0.3264]],\n\n  ...,  0.3866,  0.6295],\n         [ 0.5159, -0.3637,  0.7756],\n         [ 0.5289,  0.8475,  0.0457]]], dtype=torch.float64)), tensor([[[1., 0., 0.],\n         [0., 1., 0.],\n         [0., 0., 1.]],\n\n        [[1., 0., 0.],\n         [0., 1., 0.],\n ...],\n         [0., 0., 1.]],\n\n        [[1., 0., 0.],\n         [0., 1., 0.],\n         [0., 0., 1.]]], dtype=torch.float64), atol=1e-09)
+E        +    where <built-in method allclose of type object at 0x7f687a05f240> = <module 'torch' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/__init__.py'>.allclose
+E        +    and   tensor([[[-0.2000,  0.2882,  0.9365],\n         [-0.5692, -0.8121,  0.1284],\n         [ 0.7975, -0.5074,  0.3264]],\n\n  ...,  0.3866,  0.6295],\n         [ 0.5159, -0.3637,  0.7756],\n         [ 0.5289,  0.8475,  0.0457]]], dtype=torch.float64) = <built-in method transpose of Tensor object at 0x7f67999c52b0>(-1, -2)
+E        +      where <built-in method transpose of Tensor object at 0x7f67999c52b0> = tensor([[[-0.2000, -0.5692,  0.7975],\n         [ 0.2882, -0.8121, -0.5074],\n         [ 0.9365,  0.1284,  0.3264]],\n\n  ...,  0.5159,  0.5289],\n         [ 0.3866, -0.3637,  0.8475],\n         [ 0.6295,  0.7756,  0.0457]]], dtype=torch.float64).transpose
+E        +    and   tensor([[[1., 0., 0.],\n         [0., 1., 0.],\n         [0., 0., 1.]],\n\n        [[1., 0., 0.],\n         [0., 1., 0.],\n ...],\n         [0., 0., 1.]],\n\n        [[1., 0., 0.],\n         [0., 1., 0.],\n         [0., 0., 1.]]], dtype=torch.float64) = <built-in method expand of Tensor object at 0x7f67999c4d10>(512, 3, 3)
+E        +      where <built-in method expand of Tensor object at 0x7f67999c4d10> = tensor([[1., 0., 0.],\n        [0., 1., 0.],\n        [0., 0., 1.]], dtype=torch.float64).expand
+E        +        where tensor([[1., 0., 0.],\n        [0., 1., 0.],\n        [0., 0., 1.]], dtype=torch.float64) = <built-in method eye of type object at 0x7f687a05f240>(3, dtype=torch.float64)
+E        +          where <built-in method eye of type object at 0x7f687a05f240> = <module 'torch' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/__init__.py'>.eye
+E        +          and   torch.float64 = <module 'torch' from '${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/__init__.py'>.float64
+
+tests/test_foot_lock.py:57: AssertionError
+=============================== warnings summary ===============================
+tests/test_bones_env_dataset.py::test_native_frames_roundtrip_the_source_fk
+tests/test_terrain_controller.py::test_untrained_transformer_holds_the_pose_and_has_fixed_shapes
+tests/test_terrain_controller.py::test_transformer_is_translation_invariant_and_ignores_padded_frames
+tests/test_terrain_controller.py::test_closed_loop_rollout_is_differentiable_end_to_end
+tests/test_terrain_controller.py::test_teacher_closed_loop_and_evaluation_steps_run_on_a_batch
+tests/test_foot_lock.py::test_foot_lock_fk_matches_the_representation
+tests/test_foot_lock.py::test_foot_lock_pins_a_sliding_stance_foot_and_releases
+tests/test_foot_lock.py::test_rollout_frames_modes_and_progress_ratio
+tests/test_foot_lock.py::test_contact_rate_anchor_is_phase_free_and_reaches_the_contact_head
+  ${PFNN_PROJECT}/code/out/vendor/kimodo/kimodo/skeleton/base.py:72: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    neutral_joints = torch.load(pfolder / "joints.p").squeeze()
+
+tests/test_bones_env_dataset.py::test_native_frames_roundtrip_the_source_fk
+  ${PFNN_PROJECT}/code/out/vendor/kimodo/kimodo/skeleton/base.py:76: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    bvh_neutral_joints = torch.load(pfolder / "bvh_joints.p").squeeze()
+
+tests/test_bones_env_dataset.py::test_native_frames_roundtrip_the_source_fk
+  ${PFNN_PROJECT}/code/out/vendor/kimodo/kimodo/skeleton/base.py:81: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+    global_rot_offsets = torch.load(global_offset_path).squeeze()
+
+tests/test_terrain_controller.py::test_normalized_critic_bootstrap_backward_survives_the_scale_update
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/plugins/environments/xla.py:18: DeprecationWarning: `ModuleAvailableCache` is a special case of `RequirementCache`. Please use `RequirementCache(module=...)` instead.
+    from lightning_fabric.accelerators.tpu import _XLA_AVAILABLE, TPUAccelerator
+
+tests/test_terrain_controller.py::test_normalized_critic_bootstrap_backward_survives_the_scale_update
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/__init__.py:36: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    __import__("pkg_resources").declare_namespace(__name__)
+
+tests/test_terrain_controller.py::test_normalized_critic_bootstrap_backward_survives_the_scale_update
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/__init__.py:36: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('lightning_fabric')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__("pkg_resources").declare_namespace(__name__)
+
+tests/test_terrain_controller.py::test_normalized_critic_bootstrap_backward_survives_the_scale_update
+  ${PFNN_PROJECT}/env/lib/python3.11/site-packages/pytorch_lightning/__init__.py:36: DeprecationWarning: Deprecated call to `pkg_resources.declare_namespace('pytorch_lightning')`.
+  Implementing implicit namespace packages (as specified in PEP 420) is preferred to `pkg_resources.declare_namespace`. See https://setuptools.pypa.io/en/latest/references/keywords.html#keyword-namespace-packages
+    __import__("pkg_resources").declare_namespace(__name__)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_foot_lock.py::test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths
+1 failed, 89 passed, 15 warnings in 11.56s

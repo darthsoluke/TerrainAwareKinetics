@@ -51,6 +51,8 @@
 
 2026-10-28 完成 [v5修复后训练](examples/results/terrain_controller_pilot_v5_a100_20261025/continuation_e88523d/README.md)：1500次新增更新、63分8秒，八项验收通过七项。无发散保护退出，末250次critic loss中位数0.2477；一步误差1.136cm仍高于保持基线0.938cm。五版对照、分组结果、九张图与GPU-hours已发布，原失败记录保留，模型未部署。
 
+随后执行的 [v6测试](examples/results/terrain_controller_v6_a100_20261027/README.md)为89通过、1失败、0跳过。脚锁测试的旋转正交性断言失败，按停止条件未启动A/B实验；完整日志、源码身份与零GPU消耗账本已发布。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

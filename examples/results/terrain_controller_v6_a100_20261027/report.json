@@ -1,0 +1,128 @@
+{
+  "source_commit": "eafb71b5df2512d667fd4f6a6b4cc4db1a811b4d",
+  "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+  "torch": "2.5.1+cu124",
+  "cuda_runtime": "12.4",
+  "cuda_visible_devices": "",
+  "tests": {
+    "total": 90,
+    "passed": 89,
+    "failed": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "foot_lock_tests": [
+    {
+      "name": "test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths",
+      "passed": false
+    },
+    {
+      "name": "test_foot_lock_fk_matches_the_representation",
+      "passed": true
+    },
+    {
+      "name": "test_foot_lock_pins_a_sliding_stance_foot_and_releases",
+      "passed": true
+    },
+    {
+      "name": "test_rollout_frames_modes_and_progress_ratio",
+      "passed": true
+    },
+    {
+      "name": "test_contact_rate_anchor_is_phase_free_and_reaches_the_contact_head",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "motionbricks/controller/foot_lock.py": "81c43eda175ce5c1c9b23b10e87cbc7432afd4f0af96d9b8f62d68a9cbf2a1e9",
+    "tests/test_foot_lock.py": "15d9b67dfdc7d073168654092cf4f64a8727697fad8e381fcb57e8af51ec99ea",
+    "scripts/evaluate_foot_lock.py": "800e8ffa928a01c843eba15b4e0c80c7bedc8648401078b2459cd6251b73f9f3",
+    "scripts/train_terrain_controller.py": "9f5bdfe10e739e98d8c199ed7b1a1f5ff23e356e048190695fbdd09d77ed8930"
+  },
+  "checkpoint_sha256": {
+    "runs/tmt_pilot_v1/phase0_teacher.pt": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+    "runs/tmt_pilot_v2/latest.pt": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+    "runs/tmt_pilot_v3/latest.pt": "fc4afd691fc8d7e1c2645de5185c80d0c75b1dbc68a677d413a5ba05c2bb7220",
+    "runs/tmt_pilot_v4/phase0_teacher.pt": "5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423",
+    "runs/tmt_pilot_v5/latest.pt": "594882aee0927fdf7a76e9af8a9ef9019a7140cc4e16a0d9a5e3d3b707570a15"
+  },
+  "experiment_directories_exist": {
+    "foot_lock_eval_v6": false,
+    "tmt_v6a": false,
+    "tmt_v6b": false
+  },
+  "new_training_updates": 0,
+  "gpu_hours": 0,
+  "test_exit_code": 1,
+  "test_last_line": "1 failed, 89 passed, 15 warnings in 11.56s",
+  "status": "stopped_at_tests",
+  "executed_date": "2026-10-28",
+  "timezone": "Asia/Singapore",
+  "failure": {
+    "test": "test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths",
+    "file": "tests/test_foot_lock.py",
+    "line": 57,
+    "assertion": "torch.allclose(new_a @ new_a.transpose(-1, -2), torch.eye(3, dtype=torch.float64).expand(n, 3, 3), atol=1e-9)",
+    "error": "AssertionError: assert False",
+    "location": "rotation orthogonality",
+    "preceding_fk_and_reachable_target_assertions_passed": true,
+    "straight_leg_branch_executed": false
+  },
+  "experiments": {
+    "v6a": "not_started",
+    "A": "not_started",
+    "v6a_preflight": "not_started",
+    "v6b_preflight": "not_started",
+    "v6b": "not_started",
+    "post_B_lock_eval": "not_started"
+  },
+  "checkpoint_hashes_match_v5_record": true,
+  "checkpoint_updates_loaded_this_run": false,
+  "test_wall_seconds": 11.56,
+  "training_source_modified": false,
+  "deployed": false,
+  "raw_artifact_sha256": {
+    "test_receipt.json": "ba9d36a40be5da7067de11affd09fcd89c252bf6439a4120f901f2296acd26c2",
+    "tests.log": "6b27e6ce62afdd0bac379eac2fbeeaf02f6c7d7ae300e01bcf3ad98d474de9fc",
+    "tests.xml": "d937480e289549f32b583d1c959511e1ea00d913e65b7caf77f7620f7a100485"
+  },
+  "public_log_transformation": "Private environment prefix replaced with ${PFNN_PROJECT}; JUnit hostname replaced with A100.",
+  "gpu_hours_ledger": [
+    {
+      "stage": "A",
+      "status": "not_started",
+      "gpu_hours": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "stage": "B_v6a_preflight",
+      "status": "not_started",
+      "gpu_hours": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "stage": "B_v6a",
+      "status": "not_started",
+      "gpu_hours": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "stage": "B_v6b_preflight",
+      "status": "not_started",
+      "gpu_hours": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "stage": "B_v6b",
+      "status": "not_started",
+      "gpu_hours": 0,
+      "optimizer_updates": 0
+    },
+    {
+      "stage": "post_B_lock_eval",
+      "status": "not_started",
+      "gpu_hours": 0,
+      "optimizer_updates": 0
+    }
+  ]
+}

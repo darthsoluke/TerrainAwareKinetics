@@ -1,0 +1,7 @@
+stage	status	gpu_hours	optimizer_updates
+A	not_started	0	0
+B_v6a_preflight	not_started	0	0
+B_v6a	not_started	0	0
+B_v6b_preflight	not_started	0	0
+B_v6b	not_started	0	0
+post_B_lock_eval	not_started	0	0
