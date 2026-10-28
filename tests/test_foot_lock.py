@@ -14,11 +14,12 @@ def _rep():
     return build_representation()
 
 
-def _random_rotations(torch, shape, scale, generator):
+def _random_rotations(torch, shape, scale, generator, dtype=None):
     from motionbricks.controller.foot_lock import axis_angle_matrix
-    axis = torch.randn(*shape, 3, generator=generator)
+    dtype = dtype or torch.float32
+    axis = torch.randn(*shape, 3, generator=generator, dtype=dtype)
     axis = axis / axis.norm(dim=-1, keepdim=True)
-    angle = torch.rand(*shape, generator=generator) * scale
+    angle = torch.rand(*shape, generator=generator, dtype=dtype) * scale
     return axis_angle_matrix(axis, angle)
 
 
@@ -40,8 +41,12 @@ def test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths():
     g = torch.Generator().manual_seed(0)
     n = 512
     a = torch.randn(n, 3, generator=g, dtype=torch.float64)
-    ga = _random_rotations(torch, (n,), 3.0, g).double()
-    lb = _random_rotations(torch, (n,), 2.0, g).double()
+    # Inputs built in float64: a float32 rotation cast to float64 is only orthogonal to ~1e-7,
+    # and the IK output inherits that, so the 1e-9 checks below need float64 inputs.
+    ga = _random_rotations(torch, (n,), 3.0, g, torch.float64)
+    lb = _random_rotations(torch, (n,), 2.0, g, torch.float64)
+    eye = torch.eye(3, dtype=torch.float64).expand(n, 3, 3)
+    assert torch.allclose(ga @ ga.transpose(-1, -2), eye, atol=1e-12)
     gb = ga @ lb
     ob, oc = torch.tensor([0, -0.45, 0.0], dtype=torch.float64), torch.tensor([0, -0.43, 0.02], dtype=torch.float64)
     b = a + ga @ ob
@@ -54,7 +59,8 @@ def test_two_bone_ik_reaches_reachable_targets_and_keeps_bone_lengths():
     fk_c = (a + new_a @ ob) + new_b @ oc                                   # FK with the new rotations
     assert torch.allclose(fk_c, reached, atol=1e-9)
     assert (reached - target).norm(dim=-1)[reachable].max() < 1e-6
-    assert torch.allclose(new_a @ new_a.transpose(-1, -2), torch.eye(3, dtype=torch.float64).expand(n, 3, 3), atol=1e-9)
+    assert torch.allclose(new_a @ new_a.transpose(-1, -2), eye, atol=1e-9)
+    assert torch.allclose(new_b @ new_b.transpose(-1, -2), eye, atol=1e-9)
     # A straight leg has no bend plane; the hint supplies one.
     straight_c = b + ga @ (ob * 0.95)
     target = a + ga @ (ob * 1.5)
