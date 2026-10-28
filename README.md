@@ -55,6 +55,8 @@
 
 随后执行的 [v6测试](examples/results/terrain_controller_v6_a100_20261027/README.md)为89通过、1失败、0跳过。脚锁测试的旋转正交性断言失败，按停止条件未启动A/B实验；完整日志、源码身份与零GPU消耗账本已发布。
 
+2026-10-29 的 [v6修复后重跑](examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/README.md)通过90项测试，FK误差为0；A在64帧评估中遇到16/64帧维度不匹配并停止。已保留v1教师16帧的三模式部分结果，B未启动，未追加训练。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

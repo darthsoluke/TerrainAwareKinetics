@@ -1,0 +1,89 @@
+{
+  "source_commit": "e1793dc8429dfe343db180937f4923ada955c08e",
+  "checkpoints": {
+    "v1t": {
+      "path": "runs/tmt_pilot_v1/phase0_teacher.pt",
+      "sha256": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+      "state": {
+        "update": 1500,
+        "exposures": 1536000,
+        "phase_index": 0,
+        "phase_update": 1500
+      }
+    },
+    "v2": {
+      "path": "runs/tmt_pilot_v2/latest.pt",
+      "sha256": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+      "state": {
+        "update": 3000,
+        "exposures": 15872000,
+        "phase_index": 4,
+        "phase_update": 0
+      }
+    },
+    "v3": {
+      "path": "runs/tmt_pilot_v3/latest.pt",
+      "sha256": "fc4afd691fc8d7e1c2645de5185c80d0c75b1dbc68a677d413a5ba05c2bb7220",
+      "state": {
+        "update": 3000,
+        "exposures": 15872000,
+        "phase_index": 4,
+        "phase_update": 0
+      }
+    },
+    "v4t": {
+      "path": "runs/tmt_pilot_v4/phase0_teacher.pt",
+      "sha256": "5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423",
+      "state": {
+        "update": 1500,
+        "exposures": 1536000,
+        "phase_index": 0,
+        "phase_update": 1500
+      }
+    },
+    "v5": {
+      "path": "runs/tmt_pilot_v5/latest.pt",
+      "sha256": "594882aee0927fdf7a76e9af8a9ef9019a7140cc4e16a0d9a5e3d3b707570a15",
+      "state": {
+        "update": 3000,
+        "exposures": 15872000,
+        "phase_index": 4,
+        "phase_update": 0
+      }
+    }
+  },
+  "prior_checkpoints_sha256": {
+    "runs/tmt_pilot_v1/latest.pt": "7604f773cc87d3267dac7c00e4fb4664c2a173223d7f7d5f97369c1a01afc67c",
+    "runs/tmt_pilot_v1/phase0_teacher.pt": "0c75f4429789d619a5dfd30b86fde4fec3ff7a02ceeb76b63a15d068bd68045b",
+    "runs/tmt_pilot_v1/phase1_loop4.pt": "db3c440198d7860f4d74a6fdfe792a5a2d6f54dced92681705066d84d4d2ff33",
+    "runs/tmt_pilot_v1/phase2_loop8.pt": "52a1c9ef146989973d5e59544fa8603f736c8b4429b7b175bb735246e248a85a",
+    "runs/tmt_pilot_v1/phase3_loop16.pt": "10e1e93f32c618ec2b4116c26638739d7f32aeec3c13297b9b82504a47016853",
+    "runs/tmt_pilot_v2/latest.pt": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+    "runs/tmt_pilot_v2/phase1_loop4.pt": "9c4c9bcb0e0195c17f86a216a1abed5a8f55e13f077c1dfce913c682764e870e",
+    "runs/tmt_pilot_v2/phase2_loop8.pt": "9f1fc584c202053572466608e77173c995b533a70fd24ffe1948ec1f19b4af5e",
+    "runs/tmt_pilot_v2/phase3_loop16.pt": "79d0d13765505e2d03518c3ea9d414a3cf796685a7e2e9905d8ffd5a62c53ecf",
+    "runs/tmt_pilot_v3/latest.pt": "fc4afd691fc8d7e1c2645de5185c80d0c75b1dbc68a677d413a5ba05c2bb7220",
+    "runs/tmt_pilot_v3/phase1_loop4.pt": "91694fef2cc6eaad7a0bbc1c1a483c10eede3a0d7cc79b6d8d7cb26cf8cffef7",
+    "runs/tmt_pilot_v3/phase2_loop8.pt": "b821d6de7a178000ec606909fbac598156207dd19084fc817c1c6c256d137231",
+    "runs/tmt_pilot_v3/phase3_loop16.pt": "88960c5480a12553379336f1bfd58a441068a0ace3108a8bd061fd00cad11b3d",
+    "runs/tmt_pilot_v4/latest.pt": "24920171c931a22995bf8e2662e3933510ceb8b531245179fc6fd7b101b7d067",
+    "runs/tmt_pilot_v4/phase0_teacher.pt": "5fd0023fa92935c648e027e567746c05c9ddcd55c9235328ade318862d274423",
+    "runs/tmt_pilot_v4/phase1_loop4.pt": "69de1da43999c7771353fdd389062e61e6f643f4af4e98bd82b9efd47b8cc092",
+    "runs/tmt_pilot_v5/latest.pt": "594882aee0927fdf7a76e9af8a9ef9019a7140cc4e16a0d9a5e3d3b707570a15",
+    "runs/tmt_pilot_v5/phase1_loop4.pt": "59deb8302f5c80f20cd1f4954ecffc3cc3fd3e16b140730ed312a5edd48d6048",
+    "runs/tmt_pilot_v5/phase2_loop8.pt": "acc5e1bb8a82e24441491fc2ef33be4c9dce567a887af6e64c2f4f5b1ff61c3f",
+    "runs/tmt_pilot_v5/phase3_loop16.pt": "8201f1b0cd1bf5c8a315a02371b7e45ac527fe8d869de5a0fad9b8d58fd44d63"
+  },
+  "source_sha256": {
+    "scripts/evaluate_foot_lock.py": "800e8ffa928a01c843eba15b4e0c80c7bedc8648401078b2459cd6251b73f9f3",
+    "scripts/train_terrain_controller.py": "9f5bdfe10e739e98d8c199ed7b1a1f5ff23e356e048190695fbdd09d77ed8930",
+    "motionbricks/controller/closed_loop.py": "81c9535e81efffc1fd7b6b231cb9aa504a937b95c2e6bfd2db7941969fd4e700",
+    "motionbricks/controller/foot_lock.py": "81c43eda175ce5c1c9b23b10e87cbc7432afd4f0af96d9b8f62d68a9cbf2a1e9",
+    "motionbricks/controller/training.py": "3289a945efeac2a31c2cd89c17e13b67d51440d4e09604e54080ed838d831dba",
+    "tests/test_foot_lock.py": "4c74ad3181df17183cc7434190ef6b2ac0cef824ab194f8ab21838a27fbb5961"
+  },
+  "manifest_sha256": "67808b6813a42b676b58607b47bedc0bda9566819bee258f6ac4416c5a33c74d",
+  "python": "3.11.17 (main, Oct  7 2026, 00:02:24) [GCC 15.3.0]",
+  "torch": "2.5.1+cu124",
+  "cuda": "12.4"
+}

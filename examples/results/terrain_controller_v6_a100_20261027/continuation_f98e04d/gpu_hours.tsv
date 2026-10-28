@@ -1,0 +1,7 @@
+stage	status	gpu_count	wall_seconds	gpu_hours	optimizer_updates
+A	stopped_at_first_checkpoint_64_frame_baseline	1	14.8170643360354	0.0041158512044542775	0
+v6a_preflight	not_started	0	0	0	0
+v6a	not_started	0	0	0	0
+v6b_preflight	not_started	0	0	0	0
+v6b	not_started	0	0	0	0
+post_B_lock_evaluation	not_started	0	0	0	0

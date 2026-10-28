@@ -1,0 +1,29 @@
+${PFNN_PROJECT}/env/lib/python3.11/site-packages/lightning_fabric/__init__.py:36: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  __import__("pkg_resources").declare_namespace(__name__)
+${PFNN_PROJECT}/code/out/vendor/kimodo/kimodo/skeleton/base.py:72: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  neutral_joints = torch.load(pfolder / "joints.p").squeeze()
+${TAK_ROOT}/scripts/evaluate_foot_lock.py:105: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  checkpoint = torch.load(path, map_location=device)
+{"checkpoint": "v1t", "horizon": 16, "mode": "raw", "drift_p50": 1.2491179704666138, "progress": 0.9910122752189636, "grounded_speed": 0.17008201777935028, "planted_speed": 0.17895789444446564}
+{"checkpoint": "v1t", "horizon": 16, "mode": "display", "drift_p50": 1.2491179704666138, "progress": 0.9910122752189636, "grounded_speed": 0.03249078989028931, "planted_speed": 0.034909687936306}
+{"checkpoint": "v1t", "horizon": 16, "mode": "feedback", "drift_p50": 1.1426098346710205, "progress": 0.9902209043502808, "grounded_speed": 0.026777077466249466, "planted_speed": 0.025930175557732582}
+Traceback (most recent call last):
+  File "${TAK_ROOT}/runs/tmt_v6_rerun_coord/evaluate_measured.py", line 41, in <module>
+    code = script.main(args)
+           ^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/scripts/evaluate_foot_lock.py", line 114, in main
+    base = evaluate(loop, batch, horizon=horizon)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/controller/training.py", line 219, in evaluate
+    report.update(motion_metrics(loop, batch, result["history"][:, -horizon:], horizon))
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${PFNN_PROJECT}/env/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "${TAK_ROOT}/motionbricks/controller/training.py", line 138, in motion_metrics
+    pelvis = (generated_joints[:, :, root, 1] - source_joints[:, :, root, 1]).abs().mean(-1)
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (16) must match the size of tensor b (64) at non-singleton dimension 1

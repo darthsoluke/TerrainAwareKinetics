@@ -87,3 +87,91 @@ A 的实数据 `fk_max_error_m`、16 帧批次摘要、`raw_matches_trainer_roll
 | v5 latest | `594882aee0927fdf7a76e9af8a9ef9019a7140cc4e16a0d9a5e3d3b707570a15` |
 
 [精简结果目录](../../examples/results/terrain_controller_v6_a100_20261027/README.md)包含测试日志、JUnit、机器可读状态、源码/检查点哈希及独立 GPU-hours 账本。本次只发布测试停止记录；没有权重、动作数据、新模型或部署。
+
+## 5. 2026-10-29 修复后重跑：A 的 64 帧评估中断
+
+第 1～4 节保留 2026-10-28 的原始测试停止记录。本次执行的是 [handoff 当前任务](../../handoff/tasks/2026-10-28_v6_rerun.md)，源码固定为 `e1793dc8429dfe343db180937f4923ada955c08e`，包含 `f98e04d` 的测试输入精度修复。执行前将交接状态标为 running，以 `2257ed9` 推送；A100 使用独立、干净的固定源码 checkout。
+
+**结果：90 项 CPU 测试全部通过，FK 检查误差为 0；A 在第一个检查点的 64 帧基线评估处发生 16/64 帧维度不匹配，执行停止。B 的两个训练臂均未开始，新增训练更新为 0。**
+
+### 测试门与检查点
+
+使用第 1 节同样的九个测试文件，输出改为 `runs/tmt_v6_rerun_coord/tests.log` 和 `tests.xml`，CPU 环境及线程数保持不变。输出末行：
+
+```text
+90 passed, 15 warnings in 14.47s
+```
+
+0 失败、0 错误、0 跳过。`test_foot_lock.py` 的五项测试均实际运行，包含两骨骼测试末尾的直腿分支；`foot_lock.py` 与上次停止时完全一致。本次没有修改模型、IK、指标或测试代码。
+
+在 CPU 上逐一加载只读检查点，确认 v1t/v4t 为 update 1500，v2/v3/v5 的 `latest.pt` 均为 **update 3000**。五个文件的哈希与第 4 节一致；另对 v1～v5 共 20 个既有检查点保存前后哈希，差异为 0。结果见[检查点表](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/checkpoint_hashes.tsv)和[输入快照](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/input_proof.json)。
+
+### A 的命令、资源与停止点
+
+扫描全部 A100 的 index、UUID、显存、利用率和计算 PID 后，选定空闲的物理 **GPU 3** 并按 UUID 固定分配。执行时间为 **2026-10-29 02:10:10.394～02:10:25.211**（Asia/Singapore），外部壁钟上限 1800 秒。
+
+原评估脚本接收的参数如下；测量包装器只补充批次摘要、异常捕获及耗时记录，未替换模型计算或指标实现：
+
+```bash
+$PY scripts/evaluate_foot_lock.py --dataset runs/bones_env_v1 --output runs/foot_lock_eval_v6 \
+  --checkpoint v1t=runs/tmt_pilot_v1/phase0_teacher.pt \
+  --checkpoint v2=runs/tmt_pilot_v2/latest.pt \
+  --checkpoint v3=runs/tmt_pilot_v3/latest.pt \
+  --checkpoint v4t=runs/tmt_pilot_v4/phase0_teacher.pt \
+  --checkpoint v5=runs/tmt_pilot_v5/latest.pt
+```
+
+原程序首先通过 FK 核对，**`fk_max_error_m=0.0`**。随后完成 v1 教师检查点的 16 帧 raw、display、feedback 三种模式。进入同一检查点的 64 帧 `base = evaluate(...)` 时退出码为 1，尚未进入该长度的模式循环：
+
+```text
+File "${TAK_ROOT}/motionbricks/controller/training.py", line 138, in motion_metrics
+    pelvis = (generated_joints[:, :, root, 1] - source_joints[:, :, root, 1]).abs().mean(-1)
+RuntimeError: The size of tensor a (16) must match the size of tensor b (64) at non-singleton dimension 1
+```
+
+完整[评估日志](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/eval_a.log)和[traceback](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/failure_traceback.txt)保留在结果目录。原程序只在全部检查点结束后写输出，因此 `runs/foot_lock_eval_v6` 没有生成；异常捕获保留了当时已完成的内存报告，并据此导出下面的部分表格，没有重新跑模型。
+
+### 原因定位
+
+[ClosedLoop.step 第 169 行](../../motionbricks/controller/closed_loop.py#L169)每步删除最早一帧，再追加新帧，历史长度始终为输入的 16 帧。[rollout 第 286 行](../../motionbricks/controller/closed_loop.py#L286)返回的是这份历史缓冲区。
+
+[evaluate 第 219 行](../../motionbricks/controller/training.py#L219)使用 `result["history"][:, -horizon:]` 作为生成序列；当 `horizon=64` 时，切片仍只有 16 帧。[motion_metrics 第 129 行](../../motionbricks/controller/training.py#L129)取出 64 帧源关节，随后逐帧相减触发上述错误。当前通过的 rollout 单元测试只检查 4 帧，没有覆盖 64 帧与固定历史缓冲区的区别。
+
+本次停止于原评估流程的运行错误，没有缩短 horizon、跳过基线、补帧或更换生成序列来继续。后续需要修复评估函数如何取得完整生成序列，并覆盖长于历史缓冲区的评估长度。
+
+### 验证批次身份
+
+16 帧 batch 为 256 个窗口，validation 可用窗口共 9746；64 帧 batch 同为 256，可用窗口共 6782。两个摘要算法分别列出，避免把不同计算方法的摘要直接比较：
+
+| 长度 | 评估脚本摘要：四个张量字节串 | 历史训练器摘要格式：全部字段、名称、类型与形状 |
+| --- | --- | --- |
+| 16 帧 | `d7970772737eeb3a9c43ae37997dcb5016eb57da797d3f31592e8104e50ffc72` | `29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da` |
+| 64 帧 | `6279cb57a0cbc466add4424be8b5ba291c2e4209b7a060f544e609efd266f4e8` | `ee04aebdd00af4aaab1b73d19dc2f2f9959bd9285c36efe73dbcc2fcf3bd908c` |
+
+16 帧的训练器格式摘要与 v1～v5 固定验证批次一致。v1t、16 帧 raw 的 **`raw_matches_trainer_rollout_cm=0.0`**；其他检查点尚未进入评估，没有对应值。
+
+### 已完成的部分结果：v1 教师，16 帧
+
+| 模式 | 根漂移 P50 cm | 进度比 P50 / P10 | 穿透超 2cm 帧 % | 源接触脚速 m/s | 几何着地脚速 m/s | 锁激活比例 % | IK 残差 P95 / 最大 m |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| raw | 1.2491 | 0.9910 / 0.8900 | 11.1084 | 0.17896 | 0.17008 | — | — |
+| display | 1.2491 | 0.9910 / 0.8900 | 8.6914 | 0.03491 | 0.03249 | 34.4360 | 0.03051 / 0.23526 |
+| feedback | 1.1426 | 0.9902 / 0.8980 | 9.0332 | 0.02593 | 0.02678 | 35.8154 | 0.05499 / 0.21731 |
+
+[table.tsv](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/table.tsv)保留这三行的全部数值，[by_group.tsv](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/by_group.tsv)保留 21 行分组结果。源接触掩码为空的 prone/quadruped 脚速等 15 个统计值没有定义：JSON 写 `null`，TSV 留空，并在报告中列出具体字段位置，没有写成 0。
+
+v2 尚未评估，因此计划 §3 的 **v2+lock 候选判定未执行**。单角色加锁耗时在脚本末尾，尚未测量；六个 v2 窗口的接触图与足底曲线也未生成。v6a/v6b、各自双卡预检、125 次更新项统计、bootstrap 占比以及最终联合表全部未执行。
+
+### 独立消耗与文件
+
+| 阶段 | 状态 | GPU 数 | 壁钟秒 | GPU-hours | 新增训练更新 |
+| --- | --- | ---: | ---: | ---: | ---: |
+| CPU 测试 | 90 项通过 | 0 | 14.47 | 0 | 0 |
+| A | 64 帧基线评估中断 | 1 | 14.817064 | 0.004115851 | 0 |
+| v6a 预检 / 正式训练 | 未启动 | 0 | 0 | 0 | 0 |
+| v6b 预检 / 正式训练 | 未启动 | 0 | 0 | 0 | 0 |
+| B 后脚锁复评 | 未启动 | 0 | 0 | 0 | 0 |
+
+A 的峰值已分配显存为 **1,902,115,328 字节**；GPU-hours 按“进程壁钟 × 分配卡数 ÷ 3600”计算。未触及 30 分钟上限，没有训练、恢复、额外重跑或部署。A 的进程已退出，B 输出目录均不存在。
+
+原始测试、输入快照、批次摘要和异常保留在 A100 `runs/tmt_v6_rerun_coord/`；通过私有 Drive 取回的九个文件逐个核对 SHA-256。公开[修复后停止结果](../../examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/README.md)只含日志、聚合 JSON/TSV 和检查点哈希，旧的测试失败产物原样保留。

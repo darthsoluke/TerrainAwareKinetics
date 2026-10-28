@@ -1,0 +1,14 @@
+{
+  "16": {
+    "script_sha256": "d7970772737eeb3a9c43ae37997dcb5016eb57da797d3f31592e8104e50ffc72",
+    "trainer_format_sha256": "29c47a5525e2e0f2d97d715daee5e933387b79fb62b55363d57f009788c486da",
+    "split_windows": 9746,
+    "batch": 256
+  },
+  "64": {
+    "script_sha256": "6279cb57a0cbc466add4424be8b5ba291c2e4209b7a060f544e609efd266f4e8",
+    "trainer_format_sha256": "ee04aebdd00af4aaab1b73d19dc2f2f9959bd9285c36efe73dbcc2fcf3bd908c",
+    "split_windows": 6782,
+    "batch": 256
+  }
+}
