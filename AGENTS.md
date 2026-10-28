@@ -1,5 +1,6 @@
 # Working in TerrainAwareKinetics
 
+- Execution sessions start at `handoff/CURRENT.md`: it points to the one task file to execute. Follow `handoff/README.md` for status updates; instructions are not pasted into the chat.
 - Read `docs/START_HERE.md` and the latest result/hand-off linked by `README.md` before changing models or interpreting results.
 - This is the project source/documentation repository. Keep navigation readable and update the appropriate directory README when adding an entry point.
 - Preserve experimental provenance. Distinguish raw recordings, mirrors, windows, exposures, optimizer updates, trained checkpoints and design proposals.
