@@ -44,6 +44,8 @@
 
 [v6修复后重跑](terrain_controller_v6_a100_20261027/continuation_f98e04d/README.md)通过90项测试及FK检查，A完成v1教师的16帧三模式后，在64帧基线评估发生维度错误。部分表格与完整异常已保留，A消耗0.004116 GPU-hours，B未启动。
 
+[v6 rerun 2 的 A](terrain_controller_v6_a100_20261027/continuation_60fd119/README.md)发布30行总体、210行分组结果、十二张审查图与逐门判读。FK及确定性差异为0；v2加锁的源接触脚速仍未达到候选门槛。A累计0.031168 GPU-hours，B等待双卡，任务保持running。
+
 ## A/B/C 架构对照
 
 这些JSON只包含小规模A/B/C实验的聚合结果和版本信息，没有动作轨迹、场景或权重。

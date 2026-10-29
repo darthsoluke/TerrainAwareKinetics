@@ -57,6 +57,8 @@
 
 2026-10-29 的 [v6修复后重跑](examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/README.md)通过90项测试，FK误差为0；A在64帧评估中遇到16/64帧维度不匹配并停止。已保留v1教师16帧的三模式部分结果，B未启动，未追加训练。
 
+随后 [v6 rerun 2 的 A](examples/results/terrain_controller_v6_a100_20261027/continuation_60fd119/README.md)完成五检查点、16/64帧、三模式的全部30行评估及十二张图审阅。FK和确定性差异均为0；v2加锁的四组判读均因脚速高于0.03m/s未成为候选，其余四项通过。A累计消耗0.031168 GPU-hours，B队列等待两张空闲A100，交接保持running。
+
 ## 按你的问题阅读
 
 | 你想知道什么 | 入口 |

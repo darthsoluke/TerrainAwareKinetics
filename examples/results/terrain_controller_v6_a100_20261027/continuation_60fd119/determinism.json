@@ -1,0 +1,314 @@
+{
+  "reference": "examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/table.tsv",
+  "compared_values": 61,
+  "max_absolute_difference": 0.0,
+  "passed": true,
+  "excluded_field": "seconds (runtime)",
+  "comparisons": [
+    {
+      "mode": "raw",
+      "metric": "closed_loop_root_drift_cm_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_root_drift_cm_p90",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_joint_penetration_over_2cm_frames",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "source_joint_penetration_over_2cm_frames",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_pelvis_height_error_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_planted_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "source_planted_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_grounded_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "source_grounded_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_grounded_sole_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "source_grounded_sole_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "moving_windows",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_progress_ratio_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_progress_ratio_p10",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "closed_loop_joint_accel_mps2_mean",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "source_joint_accel_mps2_mean",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "one_step_body_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "persistence_body_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "raw",
+      "metric": "raw_matches_trainer_rollout_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_root_drift_cm_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_root_drift_cm_p90",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_joint_penetration_over_2cm_frames",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "source_joint_penetration_over_2cm_frames",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_pelvis_height_error_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_planted_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "source_planted_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_grounded_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "source_grounded_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_grounded_sole_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "source_grounded_sole_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "moving_windows",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_progress_ratio_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_progress_ratio_p10",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "closed_loop_joint_accel_mps2_mean",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "source_joint_accel_mps2_mean",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "one_step_body_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "persistence_body_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "lock_active_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "lock_reach_residual_m_p95",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "display",
+      "metric": "lock_reach_residual_m_max",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_root_drift_cm_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_root_drift_cm_p90",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_joint_penetration_over_2cm_frames",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "source_joint_penetration_over_2cm_frames",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_pelvis_height_error_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_planted_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "source_planted_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_grounded_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "source_grounded_sole_speed_mps_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_grounded_sole_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "source_grounded_sole_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "moving_windows",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_progress_ratio_p50",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_progress_ratio_p10",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "closed_loop_joint_accel_mps2_mean",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "source_joint_accel_mps2_mean",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "one_step_body_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "persistence_body_cm",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "lock_active_fraction",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "lock_reach_residual_m_p95",
+      "absolute_difference": 0.0
+    },
+    {
+      "mode": "feedback",
+      "metric": "lock_reach_residual_m_max",
+      "absolute_difference": 0.0
+    }
+  ]
+}

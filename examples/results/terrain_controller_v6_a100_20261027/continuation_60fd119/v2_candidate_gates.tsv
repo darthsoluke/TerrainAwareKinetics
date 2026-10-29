@@ -1,0 +1,5 @@
+horizon	mode	passed	planted_speed_mps	drift_relative_change	progress_relative_change	penetration_fraction_change	IK_residual_p95_m	pass_source_contact_speed	pass_drift	pass_progress	pass_penetration	pass_IK_residual
+16	display	False	0.16412872076034546	0.0	0.0	0.0	0.001177978003397584	False	True	True	True	True
+16	feedback	False	0.146778866648674	0.019317487019861135	0.0016178632565443385	0.0	0.005406462587416172	False	True	True	True	True
+64	display	False	0.1744375377893448	0.0	0.0	0.0	4.975569822818215e-07	False	True	True	True	True
+64	feedback	False	0.16790388524532318	0.009743753889573714	0.0016610799301335355	-0.0003662109375	0.0004531082813628018	False	True	True	True	True

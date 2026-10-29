@@ -1,0 +1,973 @@
+{
+  "checkpoint_update": 3000,
+  "checkpoint_sha256": "794d4ce660a4883b1b2d154be088b940c8995ec7d32a6fcac4d6aedf38474eba",
+  "device": "cpu",
+  "rendered_windows": 6,
+  "generated_diagnostic_frames": 288,
+  "source_and_scene_modified": false,
+  "source_joints_equal_v2": true,
+  "raw_vs_saved_v2_max_error_m": 0.0,
+  "selection": {
+    "source_commit": "be5fc1fc23526200d9ee604a14fea317748499b3",
+    "selected_utc": "2026-10-25T09:17:17.869101+00:00",
+    "rule": "Filename SHA-256 order within group; distinct actors within each pair; middle valid window; no model metrics used.",
+    "validation_stairs_clips": 0,
+    "validation_box_support_clips": 0,
+    "box_category": "known_dimension_support",
+    "windows": [
+      {
+        "filename": "turn_jog_270_R_003__A255",
+        "group": "flat_control",
+        "actor": "A255",
+        "dataset_index": 8946,
+        "start_frame": 40,
+        "variant_array_index": 0,
+        "split": "validation"
+      },
+      {
+        "filename": "walk_sideway_045_stop_002__A030",
+        "group": "flat_control",
+        "actor": "A030",
+        "dataset_index": 9684,
+        "start_frame": 60,
+        "variant_array_index": 3,
+        "split": "validation"
+      },
+      {
+        "filename": "item_pick_up_crouch_walk_R_003__A412",
+        "group": "crouch",
+        "actor": "A412",
+        "dataset_index": 3720,
+        "start_frame": 32,
+        "variant_array_index": 0,
+        "split": "validation"
+      },
+      {
+        "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+        "group": "prone",
+        "actor": "A129",
+        "dataset_index": 12,
+        "start_frame": 48,
+        "variant_array_index": 1,
+        "split": "validation"
+      },
+      {
+        "filename": "come_up_50cm_box_R_002__A224",
+        "group": "known_dimension_support",
+        "actor": "A224",
+        "dataset_index": 660,
+        "start_frame": 24,
+        "variant_array_index": 0,
+        "split": "validation"
+      },
+      {
+        "filename": "come_up_50cm_box_R_003__A164",
+        "group": "known_dimension_support",
+        "actor": "A164",
+        "dataset_index": 859,
+        "start_frame": 24,
+        "variant_array_index": 2,
+        "split": "validation"
+      }
+    ]
+  },
+  "windows": [
+    {
+      "filename": "turn_jog_270_R_003__A255",
+      "group": "flat_control",
+      "actor": "A255",
+      "dataset_index": 8946,
+      "start_frame": 40,
+      "variant_array_index": 0,
+      "split": "validation",
+      "png": "turn_jog_270_R_003__A255__s40.png",
+      "frames": 16,
+      "boxes": 6,
+      "by_mode": {
+        "raw": {
+          "root_drift_cm_end": 2.6527924463152885,
+          "pelvis_height_error_cm": 1.8717531114816666
+        },
+        "display": {
+          "root_drift_cm_end": 2.6527924463152885,
+          "pelvis_height_error_cm": 1.8717531114816666
+        },
+        "feedback": {
+          "root_drift_cm_end": 3.135710582137108,
+          "pelvis_height_error_cm": 1.9766658544540405
+        }
+      }
+    },
+    {
+      "filename": "walk_sideway_045_stop_002__A030",
+      "group": "flat_control",
+      "actor": "A030",
+      "dataset_index": 9684,
+      "start_frame": 60,
+      "variant_array_index": 3,
+      "split": "validation",
+      "png": "walk_sideway_045_stop_002__A030__s60.png",
+      "frames": 16,
+      "boxes": 2,
+      "by_mode": {
+        "raw": {
+          "root_drift_cm_end": 2.165597677230835,
+          "pelvis_height_error_cm": 1.3279445469379425
+        },
+        "display": {
+          "root_drift_cm_end": 2.165597677230835,
+          "pelvis_height_error_cm": 1.3279445469379425
+        },
+        "feedback": {
+          "root_drift_cm_end": 2.263230085372925,
+          "pelvis_height_error_cm": 1.3054817914962769
+        }
+      }
+    },
+    {
+      "filename": "item_pick_up_crouch_walk_R_003__A412",
+      "group": "crouch",
+      "actor": "A412",
+      "dataset_index": 3720,
+      "start_frame": 32,
+      "variant_array_index": 0,
+      "split": "validation",
+      "png": "item_pick_up_crouch_walk_R_003__A412__s32.png",
+      "frames": 16,
+      "boxes": 4,
+      "by_mode": {
+        "raw": {
+          "root_drift_cm_end": 0.7438401225954294,
+          "pelvis_height_error_cm": 1.2883145362138748
+        },
+        "display": {
+          "root_drift_cm_end": 0.7438401225954294,
+          "pelvis_height_error_cm": 1.2883145362138748
+        },
+        "feedback": {
+          "root_drift_cm_end": 0.7438214495778084,
+          "pelvis_height_error_cm": 1.288321614265442
+        }
+      }
+    },
+    {
+      "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+      "group": "prone",
+      "actor": "A129",
+      "dataset_index": 12,
+      "start_frame": 48,
+      "variant_array_index": 1,
+      "split": "validation",
+      "png": "change_idle_crawl_to_idle_crawl_right_001__A129__s48.png",
+      "frames": 16,
+      "boxes": 3,
+      "by_mode": {
+        "raw": {
+          "root_drift_cm_end": 0.31396900303661823,
+          "pelvis_height_error_cm": 1.0699979029595852
+        },
+        "display": {
+          "root_drift_cm_end": 0.31396900303661823,
+          "pelvis_height_error_cm": 1.0699979029595852
+        },
+        "feedback": {
+          "root_drift_cm_end": 0.31397317070513964,
+          "pelvis_height_error_cm": 1.0699808597564697
+        }
+      }
+    },
+    {
+      "filename": "come_up_50cm_box_R_002__A224",
+      "group": "known_dimension_support",
+      "actor": "A224",
+      "dataset_index": 660,
+      "start_frame": 24,
+      "variant_array_index": 0,
+      "split": "validation",
+      "png": "come_up_50cm_box_R_002__A224__s24.png",
+      "frames": 16,
+      "boxes": 4,
+      "by_mode": {
+        "raw": {
+          "root_drift_cm_end": 1.7162347212433815,
+          "pelvis_height_error_cm": 1.8236584961414337
+        },
+        "display": {
+          "root_drift_cm_end": 1.7162347212433815,
+          "pelvis_height_error_cm": 1.8236584961414337
+        },
+        "feedback": {
+          "root_drift_cm_end": 1.7046399414539337,
+          "pelvis_height_error_cm": 1.923038810491562
+        }
+      }
+    },
+    {
+      "filename": "come_up_50cm_box_R_003__A164",
+      "group": "known_dimension_support",
+      "actor": "A164",
+      "dataset_index": 859,
+      "start_frame": 24,
+      "variant_array_index": 2,
+      "split": "validation",
+      "png": "come_up_50cm_box_R_003__A164__s24.png",
+      "frames": 16,
+      "boxes": 4,
+      "by_mode": {
+        "raw": {
+          "root_drift_cm_end": 1.8728047609329224,
+          "pelvis_height_error_cm": 0.520632416009903
+        },
+        "display": {
+          "root_drift_cm_end": 1.8728047609329224,
+          "pelvis_height_error_cm": 0.520632416009903
+        },
+        "feedback": {
+          "root_drift_cm_end": 1.8765857443213463,
+          "pelvis_height_error_cm": 0.5122117698192596
+        }
+      }
+    }
+  ],
+  "sole_curves": [
+    {
+      "filename": "turn_jog_270_R_003__A255",
+      "group": "flat_control",
+      "actor": "A255",
+      "dataset_index": 8946,
+      "start_frame": 40,
+      "variant_array_index": 0,
+      "split": "validation",
+      "png": "turn_jog_270_R_003__A255__s40__soles.png",
+      "frames": 16,
+      "point_names": [
+        "LeftFoot",
+        "LeftToeBase",
+        "RightFoot",
+        "RightToeBase"
+      ],
+      "summary": {
+        "LeftFoot": {
+          "Source": {
+            "height_min_m": 0.00026056915521621704,
+            "height_max_m": 0.16483661532402039,
+            "speed_p50_mps": 0.8919142484664917,
+            "speed_max_mps": 5.432977199554443
+          },
+          "raw": {
+            "height_min_m": -0.038519106805324554,
+            "height_max_m": 0.1298157274723053,
+            "speed_p50_mps": 0.9296907186508179,
+            "speed_max_mps": 5.05757474899292
+          },
+          "display": {
+            "height_min_m": -0.038518987596035004,
+            "height_max_m": 0.12981566786766052,
+            "speed_p50_mps": 0.9296942949295044,
+            "speed_max_mps": 5.057567596435547
+          },
+          "feedback": {
+            "height_min_m": -0.040662072598934174,
+            "height_max_m": 0.12981566786766052,
+            "speed_p50_mps": 1.062272548675537,
+            "speed_max_mps": 5.121834754943848
+          }
+        },
+        "LeftToeBase": {
+          "Source": {
+            "height_min_m": 0.0016688406467437744,
+            "height_max_m": 0.07726898789405823,
+            "speed_p50_mps": 0.39954930543899536,
+            "speed_max_mps": 6.133416652679443
+          },
+          "raw": {
+            "height_min_m": 0.0004897415637969971,
+            "height_max_m": 0.07545104622840881,
+            "speed_p50_mps": 0.8768491148948669,
+            "speed_max_mps": 5.716065406799316
+          },
+          "display": {
+            "height_min_m": 0.0004897415637969971,
+            "height_max_m": 0.07545098662376404,
+            "speed_p50_mps": 0.8768527507781982,
+            "speed_max_mps": 5.716064929962158
+          },
+          "feedback": {
+            "height_min_m": 0.005971699953079224,
+            "height_max_m": 0.07545098662376404,
+            "speed_p50_mps": 1.028634786605835,
+            "speed_max_mps": 5.716064929962158
+          }
+        },
+        "RightFoot": {
+          "Source": {
+            "height_min_m": 0.003675989806652069,
+            "height_max_m": 0.21074503660202026,
+            "speed_p50_mps": 2.8832974433898926,
+            "speed_max_mps": 5.55505895614624
+          },
+          "raw": {
+            "height_min_m": 0.015805773437023163,
+            "height_max_m": 0.12547987699508667,
+            "speed_p50_mps": 3.1050381660461426,
+            "speed_max_mps": 4.291934013366699
+          },
+          "display": {
+            "height_min_m": 0.015805773437023163,
+            "height_max_m": 0.12547993659973145,
+            "speed_p50_mps": 3.1248974800109863,
+            "speed_max_mps": 4.291927337646484
+          },
+          "feedback": {
+            "height_min_m": -0.010084159672260284,
+            "height_max_m": 0.09168427437543869,
+            "speed_p50_mps": 2.5621261596679688,
+            "speed_max_mps": 4.1287522315979
+          }
+        },
+        "RightToeBase": {
+          "Source": {
+            "height_min_m": -0.0008884761482477188,
+            "height_max_m": 0.1202545091509819,
+            "speed_p50_mps": 2.6653552055358887,
+            "speed_max_mps": 6.317157745361328
+          },
+          "raw": {
+            "height_min_m": 0.006676902994513512,
+            "height_max_m": 0.04800199717283249,
+            "speed_p50_mps": 3.0311548709869385,
+            "speed_max_mps": 4.639138221740723
+          },
+          "display": {
+            "height_min_m": -0.0017939899116754532,
+            "height_max_m": 0.048002056777477264,
+            "speed_p50_mps": 3.031151294708252,
+            "speed_max_mps": 4.639145374298096
+          },
+          "feedback": {
+            "height_min_m": -0.02761889435350895,
+            "height_max_m": 0.027373483404517174,
+            "speed_p50_mps": 2.4656009674072266,
+            "speed_max_mps": 4.5717620849609375
+          }
+        }
+      }
+    },
+    {
+      "filename": "walk_sideway_045_stop_002__A030",
+      "group": "flat_control",
+      "actor": "A030",
+      "dataset_index": 9684,
+      "start_frame": 60,
+      "variant_array_index": 3,
+      "split": "validation",
+      "png": "walk_sideway_045_stop_002__A030__s60__soles.png",
+      "frames": 16,
+      "point_names": [
+        "LeftFoot",
+        "LeftToeBase",
+        "RightFoot",
+        "RightToeBase"
+      ],
+      "summary": {
+        "LeftFoot": {
+          "Source": {
+            "height_min_m": 0.0033358708024024963,
+            "height_max_m": 0.13369742035865784,
+            "speed_p50_mps": 0.2518353760242462,
+            "speed_max_mps": 2.6887686252593994
+          },
+          "raw": {
+            "height_min_m": 0.010187841951847076,
+            "height_max_m": 0.13845160603523254,
+            "speed_p50_mps": 0.6772725582122803,
+            "speed_max_mps": 2.960645914077759
+          },
+          "display": {
+            "height_min_m": 0.010187961161136627,
+            "height_max_m": 0.13845160603523254,
+            "speed_p50_mps": 0.6772712469100952,
+            "speed_max_mps": 2.960645914077759
+          },
+          "feedback": {
+            "height_min_m": 0.01002291589975357,
+            "height_max_m": 0.13779321312904358,
+            "speed_p50_mps": 0.6592428684234619,
+            "speed_max_mps": 2.960645914077759
+          }
+        },
+        "LeftToeBase": {
+          "Source": {
+            "height_min_m": 0.0003922879695892334,
+            "height_max_m": 0.06558236479759216,
+            "speed_p50_mps": 0.05762077122926712,
+            "speed_max_mps": 2.934220314025879
+          },
+          "raw": {
+            "height_min_m": 0.013501197099685669,
+            "height_max_m": 0.07410171627998352,
+            "speed_p50_mps": 0.4753950238227844,
+            "speed_max_mps": 3.1184582710266113
+          },
+          "display": {
+            "height_min_m": 0.013501077890396118,
+            "height_max_m": 0.07410171627998352,
+            "speed_p50_mps": 0.4753955602645874,
+            "speed_max_mps": 3.1184587478637695
+          },
+          "feedback": {
+            "height_min_m": 0.013754695653915405,
+            "height_max_m": 0.07345393300056458,
+            "speed_p50_mps": 0.4657582640647888,
+            "speed_max_mps": 3.1184587478637695
+          }
+        },
+        "RightFoot": {
+          "Source": {
+            "height_min_m": 0.0005528256297111511,
+            "height_max_m": 0.09120004624128342,
+            "speed_p50_mps": 0.2674974799156189,
+            "speed_max_mps": 3.357940912246704
+          },
+          "raw": {
+            "height_min_m": -0.001210041344165802,
+            "height_max_m": 0.07580970972776413,
+            "speed_p50_mps": 1.1080806255340576,
+            "speed_max_mps": 2.2473793029785156
+          },
+          "display": {
+            "height_min_m": -0.001210041344165802,
+            "height_max_m": 0.07580970972776413,
+            "speed_p50_mps": 1.1080806255340576,
+            "speed_max_mps": 2.247382164001465
+          },
+          "feedback": {
+            "height_min_m": -0.001210041344165802,
+            "height_max_m": 0.060305289924144745,
+            "speed_p50_mps": 1.1644959449768066,
+            "speed_max_mps": 2.2490451335906982
+          }
+        },
+        "RightToeBase": {
+          "Source": {
+            "height_min_m": 0.0010654237121343613,
+            "height_max_m": 0.06289999932050705,
+            "speed_p50_mps": 0.17817729711532593,
+            "speed_max_mps": 3.653184413909912
+          },
+          "raw": {
+            "height_min_m": -0.007001111283898354,
+            "height_max_m": 0.020484378561377525,
+            "speed_p50_mps": 1.1392391920089722,
+            "speed_max_mps": 2.407116413116455
+          },
+          "display": {
+            "height_min_m": -0.007000872865319252,
+            "height_max_m": 0.0204844381660223,
+            "speed_p50_mps": 1.1403330564498901,
+            "speed_max_mps": 2.407118558883667
+          },
+          "feedback": {
+            "height_min_m": -0.01143164373934269,
+            "height_max_m": 0.00956200622022152,
+            "speed_p50_mps": 1.1950085163116455,
+            "speed_max_mps": 2.383580446243286
+          }
+        }
+      }
+    },
+    {
+      "filename": "item_pick_up_crouch_walk_R_003__A412",
+      "group": "crouch",
+      "actor": "A412",
+      "dataset_index": 3720,
+      "start_frame": 32,
+      "variant_array_index": 0,
+      "split": "validation",
+      "png": "item_pick_up_crouch_walk_R_003__A412__s32__soles.png",
+      "frames": 16,
+      "point_names": [
+        "LeftFoot",
+        "LeftToeBase",
+        "RightFoot",
+        "RightToeBase"
+      ],
+      "summary": {
+        "LeftFoot": {
+          "Source": {
+            "height_min_m": -0.002670787274837494,
+            "height_max_m": 0.18038278818130493,
+            "speed_p50_mps": 2.3882787227630615,
+            "speed_max_mps": 5.087718486785889
+          },
+          "raw": {
+            "height_min_m": 0.01192937046289444,
+            "height_max_m": 0.16809874773025513,
+            "speed_p50_mps": 2.6468894481658936,
+            "speed_max_mps": 2.990363121032715
+          },
+          "display": {
+            "height_min_m": 0.01192937046289444,
+            "height_max_m": 0.16809865832328796,
+            "speed_p50_mps": 2.646893262863159,
+            "speed_max_mps": 2.990363121032715
+          },
+          "feedback": {
+            "height_min_m": 0.011929668486118317,
+            "height_max_m": 0.16809865832328796,
+            "speed_p50_mps": 2.6468896865844727,
+            "speed_max_mps": 2.990355968475342
+          }
+        },
+        "LeftToeBase": {
+          "Source": {
+            "height_min_m": -0.0026765763759613037,
+            "height_max_m": 0.105736643075943,
+            "speed_p50_mps": 3.249668598175049,
+            "speed_max_mps": 5.66732120513916
+          },
+          "raw": {
+            "height_min_m": -0.023628979921340942,
+            "height_max_m": 0.08821967244148254,
+            "speed_p50_mps": 3.000030755996704,
+            "speed_max_mps": 3.6992948055267334
+          },
+          "display": {
+            "height_min_m": -0.02362886071205139,
+            "height_max_m": 0.088219553232193,
+            "speed_p50_mps": 3.000030517578125,
+            "speed_max_mps": 3.6993019580841064
+          },
+          "feedback": {
+            "height_min_m": -0.023628443479537964,
+            "height_max_m": 0.088219553232193,
+            "speed_p50_mps": 3.000030517578125,
+            "speed_max_mps": 3.6993019580841064
+          }
+        },
+        "RightFoot": {
+          "Source": {
+            "height_min_m": 0.0028123781085014343,
+            "height_max_m": 0.19070884585380554,
+            "speed_p50_mps": 0.40432098507881165,
+            "speed_max_mps": 3.313040018081665
+          },
+          "raw": {
+            "height_min_m": -0.005284734070301056,
+            "height_max_m": 0.044012777507305145,
+            "speed_p50_mps": 0.7395795583724976,
+            "speed_max_mps": 1.5737837553024292
+          },
+          "display": {
+            "height_min_m": -0.0052846744656562805,
+            "height_max_m": 0.04401283711194992,
+            "speed_p50_mps": 0.7395795583724976,
+            "speed_max_mps": 1.5737836360931396
+          },
+          "feedback": {
+            "height_min_m": -0.005284197628498077,
+            "height_max_m": 0.04401319473981857,
+            "speed_p50_mps": 0.739579439163208,
+            "speed_max_mps": 1.5737906694412231
+          }
+        },
+        "RightToeBase": {
+          "Source": {
+            "height_min_m": 0.006648888811469078,
+            "height_max_m": 0.11606936901807785,
+            "speed_p50_mps": 0.05957784503698349,
+            "speed_max_mps": 4.597506999969482
+          },
+          "raw": {
+            "height_min_m": -0.024854907765984535,
+            "height_max_m": 0.01698618195950985,
+            "speed_p50_mps": 0.6699779033660889,
+            "speed_max_mps": 1.4922629594802856
+          },
+          "display": {
+            "height_min_m": -0.024854788556694984,
+            "height_max_m": 0.016986479982733727,
+            "speed_p50_mps": 0.6699779033660889,
+            "speed_max_mps": 1.4922558069229126
+          },
+          "feedback": {
+            "height_min_m": -0.024854371324181557,
+            "height_max_m": 0.016986479982733727,
+            "speed_p50_mps": 0.6699742078781128,
+            "speed_max_mps": 1.4922701120376587
+          }
+        }
+      }
+    },
+    {
+      "filename": "change_idle_crawl_to_idle_crawl_right_001__A129",
+      "group": "prone",
+      "actor": "A129",
+      "dataset_index": 12,
+      "start_frame": 48,
+      "variant_array_index": 1,
+      "split": "validation",
+      "png": "change_idle_crawl_to_idle_crawl_right_001__A129__s48__soles.png",
+      "frames": 16,
+      "point_names": [
+        "LeftFoot",
+        "LeftToeBase",
+        "RightFoot",
+        "RightToeBase"
+      ],
+      "summary": {
+        "LeftFoot": {
+          "Source": {
+            "height_min_m": 0.16488444805145264,
+            "height_max_m": 0.18706676363945007,
+            "speed_p50_mps": 0.1355372965335846,
+            "speed_max_mps": 0.24380804598331451
+          },
+          "raw": {
+            "height_min_m": 0.18575692176818848,
+            "height_max_m": 0.22788172960281372,
+            "speed_p50_mps": 0.04083245247602463,
+            "speed_max_mps": 0.13885566592216492
+          },
+          "display": {
+            "height_min_m": 0.1857568621635437,
+            "height_max_m": 0.22788172960281372,
+            "speed_p50_mps": 0.040835149586200714,
+            "speed_max_mps": 0.13885436952114105
+          },
+          "feedback": {
+            "height_min_m": 0.1857568621635437,
+            "height_max_m": 0.22787964344024658,
+            "speed_p50_mps": 0.040833987295627594,
+            "speed_max_mps": 0.13885436952114105
+          }
+        },
+        "LeftToeBase": {
+          "Source": {
+            "height_min_m": 0.116453155875206,
+            "height_max_m": 0.12318694591522217,
+            "speed_p50_mps": 0.07302425801753998,
+            "speed_max_mps": 0.12059352546930313
+          },
+          "raw": {
+            "height_min_m": 0.12313374876976013,
+            "height_max_m": 0.1713300198316574,
+            "speed_p50_mps": 0.047273073345422745,
+            "speed_max_mps": 0.07980519533157349
+          },
+          "display": {
+            "height_min_m": 0.12313376367092133,
+            "height_max_m": 0.1713300347328186,
+            "speed_p50_mps": 0.04727652668952942,
+            "speed_max_mps": 0.07980328798294067
+          },
+          "feedback": {
+            "height_min_m": 0.12313376367092133,
+            "height_max_m": 0.17132778465747833,
+            "speed_p50_mps": 0.04726947844028473,
+            "speed_max_mps": 0.07980328798294067
+          }
+        },
+        "RightFoot": {
+          "Source": {
+            "height_min_m": 0.04431246966123581,
+            "height_max_m": 0.07847463339567184,
+            "speed_p50_mps": 0.022476667538285255,
+            "speed_max_mps": 0.33127203583717346
+          },
+          "raw": {
+            "height_min_m": 0.06858561187982559,
+            "height_max_m": 0.09084414690732956,
+            "speed_p50_mps": 0.11211645603179932,
+            "speed_max_mps": 0.14846955239772797
+          },
+          "display": {
+            "height_min_m": 0.06858561187982559,
+            "height_max_m": 0.09084417670965195,
+            "speed_p50_mps": 0.11211786419153214,
+            "speed_max_mps": 0.14846423268318176
+          },
+          "feedback": {
+            "height_min_m": 0.06858565658330917,
+            "height_max_m": 0.09084417670965195,
+            "speed_p50_mps": 0.1121152862906456,
+            "speed_max_mps": 0.14846423268318176
+          }
+        },
+        "RightToeBase": {
+          "Source": {
+            "height_min_m": 0.07381939888000488,
+            "height_max_m": 0.10656186193227768,
+            "speed_p50_mps": 0.033374443650245667,
+            "speed_max_mps": 0.2955412268638611
+          },
+          "raw": {
+            "height_min_m": 0.09050214290618896,
+            "height_max_m": 0.11482255905866623,
+            "speed_p50_mps": 0.12896497547626495,
+            "speed_max_mps": 0.15427076816558838
+          },
+          "display": {
+            "height_min_m": 0.09050215035676956,
+            "height_max_m": 0.11482258886098862,
+            "speed_p50_mps": 0.12896299362182617,
+            "speed_max_mps": 0.15426844358444214
+          },
+          "feedback": {
+            "height_min_m": 0.09050215035676956,
+            "height_max_m": 0.11482258886098862,
+            "speed_p50_mps": 0.12896212935447693,
+            "speed_max_mps": 0.15426893532276154
+          }
+        }
+      }
+    },
+    {
+      "filename": "come_up_50cm_box_R_002__A224",
+      "group": "known_dimension_support",
+      "actor": "A224",
+      "dataset_index": 660,
+      "start_frame": 24,
+      "variant_array_index": 0,
+      "split": "validation",
+      "png": "come_up_50cm_box_R_002__A224__s24__soles.png",
+      "frames": 16,
+      "point_names": [
+        "LeftFoot",
+        "LeftToeBase",
+        "RightFoot",
+        "RightToeBase"
+      ],
+      "summary": {
+        "LeftFoot": {
+          "Source": {
+            "height_min_m": 0.28513196110725403,
+            "height_max_m": 0.743809163570404,
+            "speed_p50_mps": 0.9346121549606323,
+            "speed_max_mps": 1.258284091949463
+          },
+          "raw": {
+            "height_min_m": 0.27674564719200134,
+            "height_max_m": 0.6821963787078857,
+            "speed_p50_mps": 0.6608619093894958,
+            "speed_max_mps": 1.059434175491333
+          },
+          "display": {
+            "height_min_m": 0.27674564719200134,
+            "height_max_m": 0.682196319103241,
+            "speed_p50_mps": 0.6608647108078003,
+            "speed_max_mps": 1.0594327449798584
+          },
+          "feedback": {
+            "height_min_m": 0.27674564719200134,
+            "height_max_m": 0.6835749745368958,
+            "speed_p50_mps": 0.6563338041305542,
+            "speed_max_mps": 1.0639073848724365
+          }
+        },
+        "LeftToeBase": {
+          "Source": {
+            "height_min_m": 0.1965513527393341,
+            "height_max_m": 0.671387791633606,
+            "speed_p50_mps": 1.2051985263824463,
+            "speed_max_mps": 1.7297990322113037
+          },
+          "raw": {
+            "height_min_m": 0.19111552834510803,
+            "height_max_m": 0.6126184463500977,
+            "speed_p50_mps": 0.8201349973678589,
+            "speed_max_mps": 1.3940708637237549
+          },
+          "display": {
+            "height_min_m": 0.19111552834510803,
+            "height_max_m": 0.6126184463500977,
+            "speed_p50_mps": 0.8201366662979126,
+            "speed_max_mps": 1.3940695524215698
+          },
+          "feedback": {
+            "height_min_m": 0.19111552834510803,
+            "height_max_m": 0.6132303476333618,
+            "speed_p50_mps": 0.8134955763816833,
+            "speed_max_mps": 1.401003122329712
+          }
+        },
+        "RightFoot": {
+          "Source": {
+            "height_min_m": 0.5745331048965454,
+            "height_max_m": 0.5756984353065491,
+            "speed_p50_mps": 0.01368793100118637,
+            "speed_max_mps": 0.030598416924476624
+          },
+          "raw": {
+            "height_min_m": 0.5608797073364258,
+            "height_max_m": 0.5905030369758606,
+            "speed_p50_mps": 0.13234122097492218,
+            "speed_max_mps": 0.18027867376804352
+          },
+          "display": {
+            "height_min_m": 0.5608797669410706,
+            "height_max_m": 0.5851476192474365,
+            "speed_p50_mps": 0.1320473700761795,
+            "speed_max_mps": 0.19388291239738464
+          },
+          "feedback": {
+            "height_min_m": 0.5591793656349182,
+            "height_max_m": 0.5829911231994629,
+            "speed_p50_mps": 0.09594829380512238,
+            "speed_max_mps": 0.17075814306735992
+          }
+        },
+        "RightToeBase": {
+          "Source": {
+            "height_min_m": 0.5706729292869568,
+            "height_max_m": 0.5719906687736511,
+            "speed_p50_mps": 0.008747493848204613,
+            "speed_max_mps": 0.027149556204676628
+          },
+          "raw": {
+            "height_min_m": 0.5716124176979065,
+            "height_max_m": 0.586510956287384,
+            "speed_p50_mps": 0.14726540446281433,
+            "speed_max_mps": 0.22839021682739258
+          },
+          "display": {
+            "height_min_m": 0.5716124773025513,
+            "height_max_m": 0.5816285014152527,
+            "speed_p50_mps": 0.1472657024860382,
+            "speed_max_mps": 0.23340608179569244
+          },
+          "feedback": {
+            "height_min_m": 0.5727775692939758,
+            "height_max_m": 0.5823797583580017,
+            "speed_p50_mps": 0.13252899050712585,
+            "speed_max_mps": 0.2171907126903534
+          }
+        }
+      }
+    },
+    {
+      "filename": "come_up_50cm_box_R_003__A164",
+      "group": "known_dimension_support",
+      "actor": "A164",
+      "dataset_index": 859,
+      "start_frame": 24,
+      "variant_array_index": 2,
+      "split": "validation",
+      "png": "come_up_50cm_box_R_003__A164__s24__soles.png",
+      "frames": 16,
+      "point_names": [
+        "LeftFoot",
+        "LeftToeBase",
+        "RightFoot",
+        "RightToeBase"
+      ],
+      "summary": {
+        "LeftFoot": {
+          "Source": {
+            "height_min_m": 0.4791112244129181,
+            "height_max_m": 0.7701925039291382,
+            "speed_p50_mps": 1.0474679470062256,
+            "speed_max_mps": 1.387800693511963
+          },
+          "raw": {
+            "height_min_m": 0.4762163460254669,
+            "height_max_m": 0.7551906704902649,
+            "speed_p50_mps": 1.0639474391937256,
+            "speed_max_mps": 1.336227297782898
+          },
+          "display": {
+            "height_min_m": 0.4762163460254669,
+            "height_max_m": 0.7551906704902649,
+            "speed_p50_mps": 1.0639441013336182,
+            "speed_max_mps": 1.336222529411316
+          },
+          "feedback": {
+            "height_min_m": 0.4762163460254669,
+            "height_max_m": 0.7545848488807678,
+            "speed_p50_mps": 1.0590670108795166,
+            "speed_max_mps": 1.3008979558944702
+          }
+        },
+        "LeftToeBase": {
+          "Source": {
+            "height_min_m": 0.3895702064037323,
+            "height_max_m": 0.6852989196777344,
+            "speed_p50_mps": 1.3224055767059326,
+            "speed_max_mps": 1.8733906745910645
+          },
+          "raw": {
+            "height_min_m": 0.38591745495796204,
+            "height_max_m": 0.6819822788238525,
+            "speed_p50_mps": 1.3581417798995972,
+            "speed_max_mps": 1.7245985269546509
+          },
+          "display": {
+            "height_min_m": 0.38591745495796204,
+            "height_max_m": 0.6819822788238525,
+            "speed_p50_mps": 1.3581428527832031,
+            "speed_max_mps": 1.7245935201644897
+          },
+          "feedback": {
+            "height_min_m": 0.38591745495796204,
+            "height_max_m": 0.6808933019638062,
+            "speed_p50_mps": 1.3439137935638428,
+            "speed_max_mps": 1.6779460906982422
+          }
+        },
+        "RightFoot": {
+          "Source": {
+            "height_min_m": 0.5847348570823669,
+            "height_max_m": 0.5867916941642761,
+            "speed_p50_mps": 0.005987085402011871,
+            "speed_max_mps": 0.010791492648422718
+          },
+          "raw": {
+            "height_min_m": 0.5792871117591858,
+            "height_max_m": 0.5939633250236511,
+            "speed_p50_mps": 0.12595197558403015,
+            "speed_max_mps": 0.20473428070545197
+          },
+          "display": {
+            "height_min_m": 0.5792871117591858,
+            "height_max_m": 0.5909886956214905,
+            "speed_p50_mps": 0.11059781163930893,
+            "speed_max_mps": 0.30927029252052307
+          },
+          "feedback": {
+            "height_min_m": 0.5793805122375488,
+            "height_max_m": 0.5904014706611633,
+            "speed_p50_mps": 0.09600678831338882,
+            "speed_max_mps": 0.1811211258172989
+          }
+        },
+        "RightToeBase": {
+          "Source": {
+            "height_min_m": 0.5865067839622498,
+            "height_max_m": 0.5873310565948486,
+            "speed_p50_mps": 0.004935853183269501,
+            "speed_max_mps": 0.014193469658493996
+          },
+          "raw": {
+            "height_min_m": 0.5859682559967041,
+            "height_max_m": 0.5992867350578308,
+            "speed_p50_mps": 0.14102143049240112,
+            "speed_max_mps": 0.2433137446641922
+          },
+          "display": {
+            "height_min_m": 0.5859682559967041,
+            "height_max_m": 0.5992867350578308,
+            "speed_p50_mps": 0.12706835567951202,
+            "speed_max_mps": 0.34563276171684265
+          },
+          "feedback": {
+            "height_min_m": 0.5855032801628113,
+            "height_max_m": 0.5996509790420532,
+            "speed_p50_mps": 0.11214014142751694,
+            "speed_max_mps": 0.21515803039073944
+          }
+        }
+      }
+    }
+  ],
+  "sole_curve_definition": "Official four sole offsets added to FK joint positions; world y height and consecutive-frame horizontal speed. All three v2 modes use identical source history, commands and scenes."
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "${TAK_ROOT}/runs/tmt_v6_rerun2_coord/evaluate_measured.py", line 21, in <module>
+    with previous_path.open(newline='') as handle:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "${PFNN_PROJECT}/env/lib/python3.11/pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'examples/results/terrain_controller_v6_a100_20261027/continuation_f98e04d/table.tsv'
